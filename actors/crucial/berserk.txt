@@ -11,6 +11,7 @@ actor BerserkPlayer : Player {
 	player.morphweapon "BerserkFists"
 	damagefactor "ChemicalRed", 2.25 // aaahhh
 	damagefactor "ChemicalBlue", 2.25
+	damagefactor "MechStomp", 0.35
 	
 	states {
 	Death:

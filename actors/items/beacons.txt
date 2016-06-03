@@ -11,11 +11,11 @@ actor IonCannonBeacon : InventoryItem {
 		TNT1 A 0 A_JumpIfInventory ("BeaconUseToken", 1, 1)
 			goto SafetyLock
 		TNT1 A 0 A_Stop
-		TNT1 A 0 A_PlaySound ("ion/place")
-		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 0) // actually deploy the beacon - in ACS as this cannot have delays
+		// TNT1 A 0 A_PlaySound ("ion/place")
+		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 0)
 		stop
 	SafetyLock:
-		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 0)
+		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 1)
 		fail
 	}
 }
@@ -32,17 +32,18 @@ actor NuclearStrikeBeacon : InventoryItem {
 		TNT1 A 0 A_JumpIfInventory ("BeaconUseToken", 1, 1)
 			goto SafetyLock
 		TNT1 A 0 A_Stop
-		TNT1 A 0 A_PlaySound ("nuke/place")
-		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 1)
+		// TNT1 A 0 A_PlaySound ("nuke/place")
+		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 0)
 		stop
 	SafetyLock:
-		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 0)
+		TNT1 A 0 ACS_ExecuteAlways (951, 0, 0, 1)
 		fail
 	}
 }
 
 // safety lock
 actor BeaconUseToken : Boolean {}
+actor PlantingBeacon : Boolean {}
 
 actor IonCannonPlaced {
 	Obituary "$OB_IONCANNON" // "%o was obliterated by %k's \cHIon Cannon."

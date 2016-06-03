@@ -15,12 +15,7 @@ Actor TiberiumRifleCooldown : Powerup
 	Powerup.Duration 15
 }
 
-Actor BazookaPrimCooldown : Powerup
-{
-	Powerup.Duration 68
-}
-
-Actor BazookaAltCooldown : Powerup
+Actor BazookaCooldown : Powerup
 {
 	Powerup.Duration 68
 }
@@ -49,13 +44,6 @@ Actor MoveBackwardsThreshold : Inventory //Adds or cleats when the momentum is 0
 
 //-----------------------------------------------------------------------
 
-
-Actor A_CheckRailReload : Inventory //This is used to simulate Skulltag's railgun reloading.
-{
-	Game Doom
-	Inventory.Amount 1
-	Inventory.MaxAmount 4
-}
 
 // [Dusk] Is the marine spawned because of compensation?
 actor IsCompensationMarine : Boolean {}

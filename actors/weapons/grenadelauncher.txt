@@ -38,7 +38,6 @@ actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 		goto Ready
 	AltFire:
 		TNT1 A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "Ready")
-		goto Ready
 		GREN A 7
 		GREN A 4 A_PlayWeaponSound ("grenade/fire")
 		GREN GH 1

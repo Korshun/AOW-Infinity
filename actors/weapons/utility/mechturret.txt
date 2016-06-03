@@ -3,12 +3,16 @@ actor Utility_MechTurretRed : Utility_TurretBase {
 	obituary "%o was owned by a \cgRed \c-anti-Mech turret."
 	health 500
 	painchance 50
+	damagefactor "ExplosionRed", 0.75
+  damagefactor "ExplosionBlue", 0.75
+  damagefactor "MassDriverRed", 0.75
+  damagefactor "MassDriverBlue", 0.75
 	//seesound "turret/sight"
 	attacksound "rifle/fire"
 	activesound "turret/sight"
 	states {
 	Spawn:
-		CIGN A 0
+		CIGN AA 0 A_CheckSight("Death.Deconstruction")
 		CIGN A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_RED)
 	Idle:
 		CIGN A 0 A_GiveInventory("MechReloading",12)
@@ -21,7 +25,7 @@ actor Utility_MechTurretRed : Utility_TurretBase {
 		CIGN A 2 A_JumpIfTargetInLOS("Missile")
 		CIGN A 0 A_TakeInventory("MechReloading",12)
 		CIGN A 2 A_ClearTarget
-		goto Spawn+2
+		goto Idle+1
 	Clear:
 		CIGN A 2 A_ClearTarget
 		goto See
@@ -76,13 +80,17 @@ actor Utility_MechTurretBlue : Utility_TurretBase
 	obituary "%o was owned by a \chBlue \c-anti-Mech turret."
 	health 500
 	painchance 50
+	damagefactor "ExplosionRed", 0.75
+  damagefactor "ExplosionBlue", 0.75
+  damagefactor "MassDriverRed", 0.75
+  damagefactor "MassDriverBlue", 0.75
 	//seesound "turret/sight"
 	attacksound "rifle/fire"
 	activesound "turret/sight"
 	states
 	{
 	Spawn:
-		CIGN A 0
+		CIGN AA 0 A_CheckSight("Death.Deconstruction")
 		CIGN A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_BLUE)
 	Idle:
 		CIGN A 0 A_GiveInventory("MechReloading",12)
@@ -95,7 +103,7 @@ actor Utility_MechTurretBlue : Utility_TurretBase
 		CIGN A 2 A_JumpIfTargetInLOS("Missile")
 		CIGN A 0 A_TakeInventory("MechReloading",12)
 		CIGN A 2 A_ClearTarget
-		goto Spawn+2
+		goto Idle+1
 	Clear:
 		CIGN A 2 A_ClearTarget
 		goto See
@@ -159,7 +167,7 @@ actor MechTurretProjectile : FastProjectile {
 		TNT1 A -1
 		stop
 	Death:
-		TNT1 A 5 A_SpawnItemEx ("HHBulletPuff")
+		TNT1 A 5 A_SpawnItemEx ("ExplosionPuffSmall")
 		stop
 	}
 }

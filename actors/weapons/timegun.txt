@@ -9,7 +9,7 @@ actor TimeGun : AOWWeapon {
 	Weapon.AmmoType "TimeGunAmmo"
 	Weapon.AmmoUse 0
 	Weapon.Kickback 25
-	Weapon.PreferredSkin "MarinePlasma"
+	Weapon.PreferredSkin "MarineTimegun"
 	attacksound "mech/gauss"
 
 	states {
@@ -124,6 +124,8 @@ actor TimeGun : AOWWeapon {
 		goto Ready
 	Fire.Teleport:
 		PSNG C 27 BRIGHT A_PlayWeaponSound ("plasmacannon/fire")
+		// needed to prevent idiots from using timegun to run midfield without a class
+		PSNG C 0 A_JumpIfInventory ("HasClass", 1, 1)
 		goto Nope
 		PSNG C 0 A_JumpIfInventory ("TimeGunAmmo", 100, 1)
 		goto OutOfAmmo
@@ -135,6 +137,7 @@ actor TimeGun : AOWWeapon {
 		PSNG C 0 A_GiveInventory ("GoldHue", 1)
 		PSNG C 0 A_SpawnItemEx ("TimeGunFlareCluster")
 		PSNG C 35 BRIGHT A_GiveInventory ("IsTeleporting", 1)
+		PSNG C 0 A_JumpIfInventory ("HasClass", 1, 1)
 		goto Nope
 		PSNG C 0 A_TakeInventory ("IsInSpawnRoom", 1)
 		PSNG A 3 BRIGHT ACS_ExecuteAlways (94, 0, random (0, 1))

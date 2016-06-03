@@ -1,7 +1,7 @@
 // TERMINALS
 actor BaseTerminal {
 	damagefactor "FistRed", 0.0
-	damagefactor "FistBlue", 0.2
+	damagefactor "FistBlue", 0.3
 	damagefactor "BulletRed", 0.0
 	damagefactor "BulletBlue", 0.5
 	damagefactor "RifleRed", 0.0
@@ -106,7 +106,7 @@ actor BaseTerminal {
 }
 
 actor BaseTerminalBlue : BaseTerminal {
-	damagefactor "FistRed", 0.2
+	damagefactor "FistRed", 0.3
 	damagefactor "FistBlue", 0.0
 	damagefactor "BulletRed", 0.5
 	damagefactor "BulletBlue", 0.0

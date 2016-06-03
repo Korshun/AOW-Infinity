@@ -55,4 +55,12 @@ actor InventoryItem : CustomInventory {
 	}
 }
 
-actor Boolean : Inventory {inventory.maxamount 1}
+actor Boolean : Inventory {
+	+NOBLOCKMAP
+	inventory.maxamount 1
+	states {
+	Spawn:
+		TNT1 A 0
+		stop
+	}
+}
