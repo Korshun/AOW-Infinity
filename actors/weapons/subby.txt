@@ -1,3 +1,9 @@
+actor SubMachineGunClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 30
+}
+
 actor SubMachineGun : AOWWeapon 21043 {
 	//$Category Weapons
 	tag "Sub-Machine Gun"

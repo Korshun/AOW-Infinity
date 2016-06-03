@@ -1,4 +1,11 @@
 // MACHINE GUN
+
+actor MachineGunClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 30
+}
+
 actor MachineGun : AOWWeapon {
 	obituary "$OB_MACHINEGUN"
 	attacksound "ak47/fire"

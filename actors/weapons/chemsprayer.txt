@@ -1,4 +1,11 @@
 // Chemical sprayer
+
+actor ChemicalSprayerClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 25
+}
+
 actor ChemicalSprayer : AOWWeapon 21066 {
 	+ALT_AMMO_OPTIONAL
 	inventory.pickupmessage "You got the chemical sprayer!"

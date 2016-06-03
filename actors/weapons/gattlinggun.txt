@@ -1,4 +1,11 @@
 // Gatling gun
+
+actor GatlingGunClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 100
+}
+
 actor GatlingGun : AOWWeapon replaces Minigun 21045 {
 	obituary "$OB_GATLING" // "%o was perforated by %k's gatling gun."
 	inventory.pickupmessage "You got the gatling gun!"

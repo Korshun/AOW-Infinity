@@ -1,4 +1,11 @@
 // Gauss Rifle
+
+actor GaussRifleClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 5
+}
+
 actor GaussRifle : AOWWeapon replaces Railgun 21049 {
 	inventory.pickupmessage "You got the gauss rifle!"
 	obituary "$OB_GAUSS" // "%o got %p torso busted by %k's gauss rifle."

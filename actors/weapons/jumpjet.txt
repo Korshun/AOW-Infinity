@@ -1,4 +1,11 @@
 // Jumpjet Gatling gun
+
+actor JumpJetGatlingGunClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 100 
+}
+
 actor JumpJetGatlingGun : GatlingGun {
 	obituary "$OB_GATLING_JET" // "%o was perforated by a flying %k's gatling gun."
 	weapon.ammotype2 "JumpJetFuel"

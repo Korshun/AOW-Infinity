@@ -1,4 +1,11 @@
 // Shock rifle
+
+actor ShockRifleClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 40
+}
+
 actor ShockRifle : AOWWeapon 21068 {
 	obituary "%o felt %k's surge."
 	inventory.pickupmessage "You got the shock rifle!"

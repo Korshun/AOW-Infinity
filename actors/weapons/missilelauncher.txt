@@ -1,4 +1,11 @@
 // Missile Launcher
+
+actor MissileLauncherClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 6
+}
+
 actor MissileLauncher : AOWWeapon {
 	+NOAUTOFIRE
 	Inventory.PickupMessage "You got the missile laucher!"

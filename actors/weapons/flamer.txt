@@ -1,4 +1,11 @@
 // Flamethrower
+
+actor FlamethrowerClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 50
+}
+
 actor Flamer : AOWWeapon 21047 {
 	+ALT_AMMO_OPTIONAL
 	obituary "$OB_FLAMER"

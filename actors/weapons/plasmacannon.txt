@@ -1,4 +1,11 @@
 // PLASMA CANNON
+
+actor PlasmaCannonClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 5
+}
+
 actor PlasmaCannon : AOWWeapon {
 	weapon.selectionorder 1
 	weapon.kickback 100

@@ -1,4 +1,11 @@
 // Sniper rifle
+
+actor SniperRifleClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 5
+}
+
 actor SniperRifle : AOWWeapon {
 	obituary "$OB_SNIPER" // "%o found %k's bullet in %p head."
 	attacksound "rc50/fire"

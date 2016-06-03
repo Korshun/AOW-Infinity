@@ -1,4 +1,11 @@
 // LASER RIFLE
+
+actor StealthLaserRifleClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 10
+}
+
 actor StealthLaserRifle : AOWWeapon {
 	+NOEXTREMEDEATH
 	+ALT_AMMO_OPTIONAL

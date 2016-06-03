@@ -1,4 +1,11 @@
 // Shotgun
+
+actor BoomstickClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 8
+}
+
 actor Boomstick : AOWWeapon {
 	obituary "%o was smacked down by %k's shotgun."
 	inventory.pickupmessage "You got the shotgun!"

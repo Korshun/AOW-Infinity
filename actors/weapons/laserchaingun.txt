@@ -1,4 +1,11 @@
 // Laser Chaingun
+
+actor LaserChaingunClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 50
+}
+
 actor LaserChaingun : AOWWeapon {
 	obituary "$OB_LASERCHAINGUN" // "%o was incinerated by %k's laser chaingun."
 	attacksound "lchaingun/fire"

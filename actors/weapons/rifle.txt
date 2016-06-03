@@ -1,4 +1,11 @@
 // Rifle
+
+actor RifleClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 10
+}
+
 actor Rifle : AOWWeapon 21042 {
 	+NOEXTREMEDEATH
 	+ALT_AMMO_OPTIONAL

@@ -1,4 +1,11 @@
 // TIBERIUM AUTORIFLE
+
+actor TiberiumAutorifleWeakClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 30
+}
+
 actor TiberiumAutorifleWeak : AOWWeapon {
 	+AMMO_OPTIONAL
 	inventory.pickupmessage "You got the Tiberium Autorifle!"

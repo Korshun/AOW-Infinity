@@ -1,4 +1,11 @@
 // Grenade launcher
+
+actor Grenade_LauncherClip : Ammo 
+{
+	+INVENTORY.IGNORESKILL
+	Inventory.MaxAmount 6
+}
+
 actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 	+WEAPON.NOAUTOAIM
 	obituary "$OB_GRENADE" // "%o ate %k's grenade."
