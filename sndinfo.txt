@@ -80,6 +80,8 @@ c4/remote			c4remote
 c4/remote2			c4detona
 c4/proxy			c4plant1
 
+phosnade/fire			dsgrenf
+
 mech/step			mechstep
 $limit				mech/step		0
 $rolloff 			mech/step	400 1800

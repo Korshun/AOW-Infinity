@@ -1,22 +1,14 @@
 remap m_doom m_doomhi
 
-remap FLMXA0 FLMXA0H
-remap FLMXB0 FLMXA0H
-remap FLMXC0 FLMXA0H
-remap FLMXD0 FLMXA0H
-remap FLMXE0 FLMXA0H
-remap FLMXF0 FLMXA0H
-remap FLMXG0 FLMXA0H
-remap FLMXH0 FLMXA0H
-remap FLMXI0 FLMXA0H
-remap FLMXJ0 FLMXA0H
-remap FLMXK0 FLMXA0H
-remap FLMXL0 FLMXA0H
-remap FLMXM0 FLMXA0H
-remap FLMXN0 FLMXA0H
-remap FLMXO0 FLMXA0H
-remap FLMXP0 FLMXA0H
-remap FLMXQ0 FLMXA0H
+//Volt sparks
+remap VOLXA0 VHRXA0
+remap VOLXB0 VHRXB0
+remap VOLXC0 VHRXC0
+remap VOLXD0 VHRXD0
+remap VOLXE0 VHRXE0
+remap VOLXF0 VHRXF0
+
+//Fire sprites
 remap FLMBA0 FLMBA0H
 remap FLMBB0 FLMBB0H
 remap FLMBC0 FLMBC0H
@@ -100,6 +92,7 @@ remap NKE1S0 NKE2S0
 remap NKE1T0 NKE2T0
 remap NKE1U0 NKE2U0
 
+//Gauss rifle
 remap gausa0 gausa0
 remap gausb0 gausb0
 remap gausc0 gausc0
