@@ -1,0 +1,72 @@
+warp Flat SINKINSA
+
+warp texture BIOF1
+warp texture SPWLAVA
+
+cameratexture CAMTEX1 256 256 fit 256 256
+cameratexture CAMTEX2 256 256 fit 256 256
+cameratexture CAMTEX3 256 256 fit 256 256
+cameratexture CAMTEX4 256 256 fit 256 256
+
+warp texture wnukage
+warp texture wlava
+
+switch SW1CBLU on pic SW2CBLU tics 0
+switch SW2CBLU off pic SW1CBLU tics 0
+switch SW1CRED on pic SW2CRED tics 0
+switch SW2CRED off pic SW1CRED tics 0
+switch dswtchd1 on  sound switches/normbutn pic dswtchd2 tics 0
+switch dswtchd2 off sound switches/normbutn pic dswtchd1 tics 0
+switch dswtchd3 on  sound switches/normbutn pic dswtchd4 tics 0
+switch dswtchd4 off sound switches/normbutn pic dswtchd3 tics 0
+
+texture	SLMFALL1 range SLMFALL4 tics 8
+
+texture dnstor09 range dnstor11 tics 4
+
+warp texture a14nuke
+texture dffscrbx
+	pic dffscrb2 tics 8
+	pic dffscrb1 tics 8
+
+texture ecomp06a range ecomp06d tics 4
+texture decmp04a
+	pic decmp04a tics 4
+	pic decmp04b tics 4
+	pic decmp04c tics 4
+	pic decmp04d tics 4
+	pic decmp04e tics 4
+	pic decmp04f tics 4
+	pic decmp04g tics 4
+	pic decmp04h tics 4
+	pic decmp04c tics 4
+	pic decmp04d tics 4
+	pic decmp04e tics 4
+	pic decmp04f tics 4
+	pic decmp04g tics 4
+	pic decmp04h tics 4
+	pic decmp04b tics 4
+
+texture ffieldb1
+    pic ffieldb1 tics 2
+    pic ffieldb2 tics 2
+    pic ffieldb3 tics 2
+    pic ffieldb4 tics 2
+    pic ffieldb5 tics 2
+    pic ffieldb6 tics 2
+    pic ffieldb7 tics 2
+    pic ffieldb8 tics 2
+    pic ffieldb9 tics 2
+    pic ffieldba tics 2
+
+texture ffieldr1
+    pic ffieldr1 tics 2
+    pic ffieldr2 tics 2
+    pic ffieldr3 tics 2
+    pic ffieldr4 tics 2
+    pic ffieldr5 tics 2
+    pic ffieldr6 tics 2
+    pic ffieldr7 tics 2
+    pic ffieldr8 tics 2
+    pic ffieldr9 tics 2
+    pic ffieldra tics 2

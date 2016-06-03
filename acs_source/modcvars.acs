@@ -1,0 +1,195 @@
+/////////////////////////////////////////////////
+//-----------------------------------------------
+//| /\  /\  /|_   _   MODCVARS (v2)\_   /\_   _/|
+//|/ |_/  \/   |_/ \_/        \_/    \_/   |_|  |
+//-----------------------------------------------
+//a library for writing cvars in ACS.
+//===============================================
+//
+// SetCvar(str name, int value)
+//
+// - name: the name of the cvar, MUST start with "x_" prefix.
+// - value: value for the cvar, can range -999,999 to 999,999.
+//
+// Example:
+//
+// SetCvar("x_orangesleft", 5);
+// GetCvar("x_orangesleft"); //Returns 5
+//
+// You may only use letters and numbers and "_" for the cvar name.
+//
+//
+// Credits go to VirgiL for figuring out a way to 
+// write strings with ConsoleCommand, I wouldn't 
+// have realized how to do this otherwise!
+//
+// -worst
+//////////////////////////////////////////////////
+
+#library "modcvars"
+#include "zcommon.acs"
+
+function bool SetCvar(str name,int value)
+{
+
+  //----------//
+  //Cvar name //
+  //----------//
+  ConsoleCommand("set setcvar_str x_"); //prefix must be added here, or bad things will happen.
+  
+  int len = StrLen(name);
+  For(int i = 0; i < len; i++)
+  {
+    int chr = GetChar(name,i);
+
+    if(
+       ( (i == 0) && (chr != 'x' && chr != 'X') ) ||
+       ( (i == 1) && (chr != '_') )
+      )
+    {
+      PrintBold(s:"SetCVAR: names must start with a x_ prefix!");
+      return FALSE; //failed
+    }
+
+    if(i < 2) continue; //dont add prefix twice.
+
+    switch(chr)
+    {
+      case '0': ConsoleCommand("eval + $setcvar_str 0 setcvar_str"); break;
+      case '1': ConsoleCommand("eval + $setcvar_str 1 setcvar_str"); break;
+      case '2': ConsoleCommand("eval + $setcvar_str 2 setcvar_str"); break;
+      case '3': ConsoleCommand("eval + $setcvar_str 3 setcvar_str"); break;
+      case '4': ConsoleCommand("eval + $setcvar_str 4 setcvar_str"); break;
+      case '5': ConsoleCommand("eval + $setcvar_str 5 setcvar_str"); break;
+      case '6': ConsoleCommand("eval + $setcvar_str 6 setcvar_str"); break;
+      case '7': ConsoleCommand("eval + $setcvar_str 7 setcvar_str"); break;
+      case '8': ConsoleCommand("eval + $setcvar_str 8 setcvar_str"); break;
+      case '9': ConsoleCommand("eval + $setcvar_str 9 setcvar_str"); break;
+      case 'A': ConsoleCommand("eval + $setcvar_str A setcvar_str"); break;
+      case 'B': ConsoleCommand("eval + $setcvar_str B setcvar_str"); break;
+      case 'C': ConsoleCommand("eval + $setcvar_str C setcvar_str"); break;
+      case 'D': ConsoleCommand("eval + $setcvar_str D setcvar_str"); break;
+      case 'E': ConsoleCommand("eval + $setcvar_str E setcvar_str"); break;
+      case 'F': ConsoleCommand("eval + $setcvar_str F setcvar_str"); break;
+      case 'G': ConsoleCommand("eval + $setcvar_str G setcvar_str"); break;
+      case 'H': ConsoleCommand("eval + $setcvar_str H setcvar_str"); break;
+      case 'I': ConsoleCommand("eval + $setcvar_str I setcvar_str"); break;
+      case 'J': ConsoleCommand("eval + $setcvar_str J setcvar_str"); break;
+      case 'K': ConsoleCommand("eval + $setcvar_str K setcvar_str"); break;
+      case 'L': ConsoleCommand("eval + $setcvar_str L setcvar_str"); break;
+      case 'M': ConsoleCommand("eval + $setcvar_str M setcvar_str"); break;
+      case 'N': ConsoleCommand("eval + $setcvar_str N setcvar_str"); break;
+      case 'O': ConsoleCommand("eval + $setcvar_str O setcvar_str"); break;
+      case 'P': ConsoleCommand("eval + $setcvar_str P setcvar_str"); break;
+      case 'Q': ConsoleCommand("eval + $setcvar_str Q setcvar_str"); break;
+      case 'R': ConsoleCommand("eval + $setcvar_str R setcvar_str"); break;
+      case 'S': ConsoleCommand("eval + $setcvar_str S setcvar_str"); break;
+      case 'T': ConsoleCommand("eval + $setcvar_str T setcvar_str"); break;
+      case 'U': ConsoleCommand("eval + $setcvar_str U setcvar_str"); break;
+      case 'V': ConsoleCommand("eval + $setcvar_str V setcvar_str"); break;
+      case 'W': ConsoleCommand("eval + $setcvar_str W setcvar_str"); break;
+      case 'X': ConsoleCommand("eval + $setcvar_str X setcvar_str"); break;
+      case 'Y': ConsoleCommand("eval + $setcvar_str Y setcvar_str"); break;
+      case 'Z': ConsoleCommand("eval + $setcvar_str Z setcvar_str"); break;
+      case '_': ConsoleCommand("eval + $setcvar_str _ setcvar_str"); break;
+      case 'a': ConsoleCommand("eval + $setcvar_str a setcvar_str"); break;
+      case 'b': ConsoleCommand("eval + $setcvar_str b setcvar_str"); break;
+      case 'c': ConsoleCommand("eval + $setcvar_str c setcvar_str"); break;
+      case 'd': ConsoleCommand("eval + $setcvar_str d setcvar_str"); break;
+      case 'e': ConsoleCommand("eval + $setcvar_str e setcvar_str"); break;
+      case 'f': ConsoleCommand("eval + $setcvar_str f setcvar_str"); break;
+      case 'g': ConsoleCommand("eval + $setcvar_str g setcvar_str"); break;
+      case 'h': ConsoleCommand("eval + $setcvar_str h setcvar_str"); break;
+      case 'i': ConsoleCommand("eval + $setcvar_str i setcvar_str"); break;
+      case 'j': ConsoleCommand("eval + $setcvar_str j setcvar_str"); break;
+      case 'k': ConsoleCommand("eval + $setcvar_str k setcvar_str"); break;
+      case 'l': ConsoleCommand("eval + $setcvar_str l setcvar_str"); break;
+      case 'm': ConsoleCommand("eval + $setcvar_str m setcvar_str"); break;
+      case 'n': ConsoleCommand("eval + $setcvar_str n setcvar_str"); break;
+      case 'o': ConsoleCommand("eval + $setcvar_str o setcvar_str"); break;
+      case 'p': ConsoleCommand("eval + $setcvar_str p setcvar_str"); break;
+      case 'q': ConsoleCommand("eval + $setcvar_str q setcvar_str"); break;
+      case 'r': ConsoleCommand("eval + $setcvar_str r setcvar_str"); break;
+      case 's': ConsoleCommand("eval + $setcvar_str s setcvar_str"); break;
+      case 't': ConsoleCommand("eval + $setcvar_str t setcvar_str"); break;
+      case 'u': ConsoleCommand("eval + $setcvar_str u setcvar_str"); break;
+      case 'v': ConsoleCommand("eval + $setcvar_str v setcvar_str"); break;
+      case 'w': ConsoleCommand("eval + $setcvar_str w setcvar_str"); break;
+      case 'x': ConsoleCommand("eval + $setcvar_str x setcvar_str"); break;
+      case 'y': ConsoleCommand("eval + $setcvar_str y setcvar_str"); break;
+      case 'z': ConsoleCommand("eval + $setcvar_str z setcvar_str"); break;
+    }
+  }
+
+  //-----------//
+  //Cvar value //
+  //-----------//
+  int val = value;
+
+  //Eval only returns GetCvar -usable values if the CVAR is in the range -999,999 to 999,999.
+  if (val > 999999) val = 999999;
+  if (val < -999999) val = -999999; 
+   
+  ConsoleCommand("set setcvar_int 0");
+  
+    if(val >= 524288) { ConsoleCommand("eval + $setcvar_int 524288 setcvar_int"); val -= 524288; } //2^19
+    if(val >= 262144) { ConsoleCommand("eval + $setcvar_int 262144 setcvar_int"); val -= 262144; } //2^18
+    if(val >= 131072) { ConsoleCommand("eval + $setcvar_int 131072 setcvar_int"); val -= 131072; } //2^17
+    if(val >= 65536)  { ConsoleCommand("eval + $setcvar_int 65536 setcvar_int");  val -= 65536; } //2^16
+    if(val >= 32768)  { ConsoleCommand("eval + $setcvar_int 32768 setcvar_int");  val -= 32768; } //2^15
+    if(val >= 16384)  { ConsoleCommand("eval + $setcvar_int 16384 setcvar_int");  val -= 16384; } //2^14
+    if(val >= 8192)   { ConsoleCommand("eval + $setcvar_int 8192 setcvar_int");   val -= 8192; } //2^13
+    if(val >= 4096)   { ConsoleCommand("eval + $setcvar_int 4096 setcvar_int");   val -= 4096; } //2^12
+    if(val >= 2048)   { ConsoleCommand("eval + $setcvar_int 2048 setcvar_int");   val -= 2048; } //2^11
+    if(val >= 1024)   { ConsoleCommand("eval + $setcvar_int 1024 setcvar_int");   val -= 1024; } //2^10
+    if(val >= 512)    { ConsoleCommand("eval + $setcvar_int 512 setcvar_int");    val -= 512; } //2^9
+    if(val >= 256)    { ConsoleCommand("eval + $setcvar_int 256 setcvar_int");    val -= 256; } //2^8
+    if(val >= 128)    { ConsoleCommand("eval + $setcvar_int 128 setcvar_int");    val -= 128; } //2^7
+    if(val >= 64)     { ConsoleCommand("eval + $setcvar_int 64 setcvar_int");     val -= 64; } //2^6
+    if(val >= 32)     { ConsoleCommand("eval + $setcvar_int 32 setcvar_int");     val -= 32; } //2^5
+    if(val >= 16)     { ConsoleCommand("eval + $setcvar_int 16 setcvar_int");     val -= 16; } //2^4
+    if(val >= 8)      { ConsoleCommand("eval + $setcvar_int 8 setcvar_int");      val -= 8; } //2^3
+    if(val >= 4)      { ConsoleCommand("eval + $setcvar_int 4 setcvar_int");      val -= 4; } //2^2
+    if(val >= 2)      { ConsoleCommand("eval + $setcvar_int 2 setcvar_int");      val -= 2; } //2^1
+    if(val >= 1)      { ConsoleCommand("eval + $setcvar_int 1 setcvar_int");      val -= 1; } //2^0
+
+    if(val <= -524288) { ConsoleCommand("eval - $setcvar_int 524288 setcvar_int"); val += 524288; } //2^19
+    if(val <= -262144) { ConsoleCommand("eval - $setcvar_int 262144 setcvar_int"); val += 262144; } //2^18
+    if(val <= -131072) { ConsoleCommand("eval - $setcvar_int 131072 setcvar_int"); val += 131072; } //2^17
+    if(val <= -65536)  { ConsoleCommand("eval - $setcvar_int 65536 setcvar_int");  val += 65536; } //2^16
+    if(val <= -32768)  { ConsoleCommand("eval - $setcvar_int 32768 setcvar_int");  val += 32768; } //2^15
+    if(val <= -16384)  { ConsoleCommand("eval - $setcvar_int 16384 setcvar_int");  val += 16384; } //2^14
+    if(val <= -8192)   { ConsoleCommand("eval - $setcvar_int 8192 setcvar_int");   val += 8192; } //2^13
+    if(val <= -4096)   { ConsoleCommand("eval - $setcvar_int 4096 setcvar_int");   val += 4096; } //2^12
+    if(val <= -2048)   { ConsoleCommand("eval - $setcvar_int 2048 setcvar_int");   val += 2048; } //2^11
+    if(val <= -1024)   { ConsoleCommand("eval - $setcvar_int 1024 setcvar_int");   val += 1024; } //2^10
+    if(val <= -512)    { ConsoleCommand("eval - $setcvar_int 512 setcvar_int");    val += 512; } //2^9
+    if(val <= -256)    { ConsoleCommand("eval - $setcvar_int 256 setcvar_int");    val += 256; } //2^8
+    if(val <= -128)    { ConsoleCommand("eval - $setcvar_int 128 setcvar_int");    val += 128; } //2^7
+    if(val <= -64)     { ConsoleCommand("eval - $setcvar_int 64 setcvar_int");     val += 64; } //2^6
+    if(val <= -32)     { ConsoleCommand("eval - $setcvar_int 32 setcvar_int");     val += 32; } //2^5
+    if(val <= -16)     { ConsoleCommand("eval - $setcvar_int 16 setcvar_int");     val += 16; } //2^4
+    if(val <= -8)      { ConsoleCommand("eval - $setcvar_int 8 setcvar_int");      val += 8; } //2^3
+    if(val <= -4)      { ConsoleCommand("eval - $setcvar_int 4 setcvar_int");      val += 4; } //2^2
+    if(val <= -2)      { ConsoleCommand("eval - $setcvar_int 2 setcvar_int");      val += 2; } //2^1
+    if(val <= -1)      { ConsoleCommand("eval - $setcvar_int 1 setcvar_int");      val += 1; } //2^0
+
+   ConsoleCommand("set $setcvar_str $setcvar_int");
+   ConsoleCommand("archivecvar $setcvar_str"); //Make it stay in the ini after closing the game.
+
+   //cleanup
+   ConsoleCommand("unset setcvar_str");
+   ConsoleCommand("unset setcvar_int");
+
+   return TRUE; //success
+}
+
+
+/*
+//Test script
+script 1 (int value)
+{
+  SetCvar("x_testcvar_1", value);
+  print(s:"value: ",d:GetCvar("x_testcvar_1"));
+}
+*/
