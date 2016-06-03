@@ -68,3 +68,9 @@ alias a_notarget "puke 402 15"
 alias a_exit "puke 402 16"
 alias a_health "puke 402 17 %1"
 alias a_fly "puke 402 18"
+
+// RELOADING
+alias +aow_reload "use AOWReloadGiver"
+alias -aow_reload "use AOWReloadTaker"
+addmenukey "Reload" +aow_reload
+defaultbind R +aow_reload

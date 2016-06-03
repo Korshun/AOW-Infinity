@@ -1,0 +1,32 @@
+Actor AOWReload : Boolean {}
+
+Actor AOWReloadItem : CustomInventory
+{
+	States
+	{
+	Pickup:
+		NULL A 0 A_GiveInventory("AOWReloadGiver")
+		NULL A 0 A_GiveInventory("AOWReloadTaker")
+		Stop
+	}
+}
+
+Actor AOWReloadGiver : CustomInventory
+{
+	States
+	{
+	Use:
+		NULL A 0 A_GiveInventory("AOWReload")
+		Fail
+	}
+}
+
+Actor AOWReloadTaker : CustomInventory
+{
+	States
+	{
+	Use:
+		NULL A 0 A_TakeInventory("AOWReload")
+		Fail
+	}
+}

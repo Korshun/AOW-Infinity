@@ -1,6 +1,7 @@
 // don't edit the load order unless you know what you're doing
 #include "actors/crucial/constants.txt"
 #include "actors/crucial/skeletal.txt"
+#include "actors/crucial/reload.txt"
 
 #include "actors/effects/explosions.txt"
 #include "actors/crucial/player.txt"
