@@ -744,7 +744,7 @@ script 309 (int Crate, int Override) {
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		LocalAmbientSound ("c4/remote", 127);
 		GiveInventory ("RemoteC4", 1);
-		GiveInventory ("RemoteC4Ammo", 5);
+		GiveInventory ("RemoteC4Ammo", 4);
 		Log(n:0, s:" gets Remote C4 crate.");
 		break;
 	case 65:

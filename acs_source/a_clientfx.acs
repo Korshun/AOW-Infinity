@@ -113,3 +113,123 @@ script 400 OPEN CLIENTSIDE {
 		delay(1);
 	}
 }
+
+// Spawns a trail from activator to tid.
+#define MAX_TRAILTYPES 3
+str TrailTypes[MAX_TRAILTYPES] = {
+	"ObeliskBlastFX",
+	"ObeliskBlastBlueFX",
+	"VoltageSpark"
+};
+
+// trail -> player
+script 986 (int type, int target) CLIENTSIDE {
+	if (type == 0) {
+		if (!SpawnTrail (0, target, 2, 32, 7, 0, 0, 0, -6.0, 0, 36.0)) {
+			Log (s:"Trailing failed");
+		}
+	}
+}
+
+// [Dusk] Spawns a trail of TrailTypes[type] actors from src to dest, with interval units
+// in between (with a cap of 128 trail actors at most).
+function bool SpawnTrail (int src, int dest, int type, int interval, int rand,
+				  int xoff0, int yoff0, int zoff0, int xoff1, int yoff1, int zoff1) {
+	// The server may not do this
+	if (ConsolePlayer == -1)
+		return false;
+	
+	int x, y, z;
+	
+	// 0 means self
+	if (!src) src = ActivatorTID ();
+	if (!dest) dest = ActivatorTID ();
+	
+	// Can't trail to ourselves!
+	if (src == dest) {
+		Log (s:"Can't trail to ourselves!");
+		return false;
+	}
+	
+	// From where to where?
+	int x0 = GetActorX (src);
+	int y0 = GetActorY (src);
+	int z0 = GetActorZ (src);
+	int a0 = GetActorAngle (src);
+	int x1 = GetActorX (dest);
+	int y1 = GetActorY (dest);
+	int z1 = GetActorZ (dest);
+	int a1 = GetActorAngle (dest);
+	
+	// Apply offsets
+	x0 += FixedMul (cos (a0+0.25), xoff0) + FixedMul (cos (a0), yoff0);
+	y0 += FixedMul (sin (a0+0.25), xoff0) + FixedMul (sin (a0), yoff0);
+	z0 += zoff0;
+	x1 += FixedMul (cos (a1+0.25), xoff1) + FixedMul (cos (a1), yoff1);
+	y1 += FixedMul (sin (a1+0.25), xoff1) + FixedMul (sin (a1), yoff1);
+	z1 += zoff1;
+	
+	int d = fdistance (src, dest);
+	
+	// How many trail actors to spawn?
+	if (interval <= 32)
+		interval = 32;
+	
+	int n = (d>>16) / interval;
+	
+	if (n > 128)
+		n = 128;
+	
+	if (GetCVar ("aow_lowfx"))
+		n /= 2;
+	
+	// Nothing to spawn!
+	if (n <= 0)
+		return false;
+	
+	// Distance between current point and first flare
+	int dx0 = (x1-x0) / n;
+	int dy0 = (y1-y0) / n;
+	int dz0 = (z1-z0) / n;
+	
+	if (rand > 0) {
+		// Randomize stuff up
+		int r = random (rand/2, rand) * 0.5;
+		x0 += FixedMul (r, dx0);
+		y0 += FixedMul (r, dy0);
+		z0 += FixedMul (r, dz0);
+		
+		// If we're offsetting past halfway to first actor, clamp
+		// the last actor out so that it doesn't look odd
+		//if (r >= 0.5)
+		//	n--;
+		
+		// randomize the distance a bit
+		if (rand > 7)
+			n += random (-1, 1);
+	}
+	
+	// Validity check
+	if (type < 0 || type >= MAX_TRAILTYPES) {
+		Log (s:"SpawnTrail: Tried to spawn an unknown trail type ", d:type, s:"!");
+		return false;
+	}
+	
+	// information gathered, actually spawn the flares now
+	for (int i = 1; i <= n; i++) {
+		x = x0 + i*dx0;
+		y = y0 + i*dy0;
+		z = z0 + i*dz0;
+		
+		if (rand > 0) {
+			x += random (-rand, rand) * 0.5;
+			y += random (-rand, rand) * 0.5;
+			z += random (-rand, rand) * 0.5;
+		}
+		
+		Spawn (TrailTypes[type], x, y, z);
+		// Log (d:i, s:": ", f:x,s:", ", f:y,s:", ",f:z);
+	}
+	
+	return true;
+}

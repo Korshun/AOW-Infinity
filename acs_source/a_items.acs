@@ -8,21 +8,37 @@
 script 951 (int action, int team) {
 	switch (action) {
 	case 0:
-		// deploy superweapon beacon
-		if (ActivatorTID() < 3800 || ActivatorTID() > 3831) terminate;
-		if (!CheckInventory ("BeaconUseToken")) {
-			GiveInventory ("BeaconUseToken", 1);
-			ActivatorSound ("beacon/safetylock", 80);
-			SetFont ("BIGFONT");
-			HudMessage (s:"BEACON SAFETY LOCK DISENGAGED";
-				HUDMSG_FADEOUT, 0, CR_RED,
-				0.1, 0.95, 2.0, 0.25);
-			delay (2*35);
-			TakeInventory ("BeaconUseToken", 1);
+		// Deploy superweapon beacon
+		if (ActivatorTID() < 3800 || ActivatorTID() > 3831)
+			terminate;
+		
+		// Already planting
+		if (CheckInventory ("PlantingBeacon"))
+			terminate;
+		// Safety lock
+		if (team == 1) {
+			if (!CheckInventory ("BeaconUseToken")) {
+				GiveInventory ("BeaconUseToken", 1);
+				ActivatorSound ("beacon/safetylock", 80);
+				SetFont ("BIGFONT");
+				HudMessage (s:"BEACON SAFETY LOCK DISENGAGED";
+					HUDMSG_FADEOUT, 0, CR_RED,
+					0.1, 0.95, 2.0, 0.25);
+				delay (2*35);
+				TakeInventory ("BeaconUseToken", 1);
+			}
 			terminate;
 		}
 		
+		// Plant sound
+		if (PlayerTeam () == TEAM_BLUE)
+			ActivatorSound ("ion/place", 127);
+		else
+			ActivatorSound ("nuke/place", 127);
+		
+		
 		TakeInventory ("BeaconUseToken", 1);
+		GiveInventory ("PlantingBeacon", 1);
 		SetPlayerProperty (0, 1, PROP_TOTALLYFROZEN);
 		for (int i = 0; i < 175; i += 5) {
 			if (GetHealth () <= 0) terminate;
@@ -31,10 +47,16 @@ script 951 (int action, int team) {
 		
 		if (ActivatorTID() < 3800 || ActivatorTID() > 3831) terminate;
 		
-		if (team == TEAM_BLUE)
+		if (PlayerTeam () == TEAM_BLUE) {
 			SpawnProjectile (ActivatorTID(), "IonBeaconThrown", 0, 0, -5, 1, 0);
-		else
+			Log (n:0, s:" plants Ion Cannon Beacon.");
+		} else {
 			SpawnProjectile (ActivatorTID(), "NukeBeaconThrown", 0, 0, -5, 1, 0);
+			Log (n:0, s:" plants Nuclear Strike Beacon.");
+		}
+		
+		// Unfreeze the player
+		TakeInventory ("PlantingBeacon", 1);
 		SetPlayerProperty (0, 0, PROP_TOTALLYFROZEN);
 		break;
 	case 1:

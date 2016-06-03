@@ -178,6 +178,10 @@
 
 #define MAX_MARINES 24
 
+// MAXPLAYERS - should be the same as in the Skulltag this AOW is played in
+// TODO: make this actually used
+#define MAXPLAYERS 32
+
 bool Bots[MAX_MARINES];
 
 int BaseTIDs[18] = {

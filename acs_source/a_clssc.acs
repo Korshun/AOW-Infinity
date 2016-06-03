@@ -900,7 +900,7 @@ script 42 (int Team) {
 	GiveInventory ("ProxyMine", 6);
 	GiveInventory ("ProxyMineCount", 6);
 	GiveInventory ("RemoteC4", 1);
-	GiveInventory ("RemoteC4Ammo", 5);
+	GiveInventory ("RemoteC4Ammo", 4);
 	GiveInventory("Boomstick",1);
 	GiveInventory("ShotgunAmmo",50);
 	SetFragGrenades (4);
@@ -944,6 +944,7 @@ script 43 (int Team) {
 	GiveInventory ("ClassID", CLASS_MEDIC);
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("IsMedic",1);
+	GiveInventory("Grade0Damage",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
 	GiveInventory ("HealingRadiusItem", 1);

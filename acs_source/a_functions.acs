@@ -36,6 +36,25 @@ function int sqrt(int number)
 	return oldAns;
 }
 
+// [Dusk] from zdoom wiki:
+function int fdistance (int tid1, int tid2)
+{
+	int len;
+	int y = getactory(tid1) - getactory(tid2);
+	int x = getactorx(tid1) - getactorx(tid2);
+	int z = getactorz(tid1) - getactorz(tid2);
+
+	int ang = vectorangle(x,y);
+	if(((ang+0.125)%0.5) > 0.25) len = fixeddiv(y, sin(ang));
+	else len = fixeddiv(x, cos(ang));
+
+	ang = vectorangle(len, z);
+	if(((ang+0.125)%0.5) > 0.25) len = fixeddiv(z, sin(ang));
+	else len = fixeddiv(len, cos(ang));
+
+	return len;
+}
+
 // [Dusk] check functions
 
 // [Dusk] returns 1 if player has $price money, discount taken into account
@@ -60,7 +79,7 @@ function int CheckCredits(int price) {
 	return 1;
 }
 
-// [Dusk] returns 1 if player has no class, 0 of they have, along with error message
+// [Dusk] returns 1 if player has no class, 0 if they have, along with error message
 function int IsResigned(void) {
 	if (CheckInventory ("HasClass") == 0)
 		return 1;
@@ -89,13 +108,13 @@ function int IsSecondPress(str StatCard, int price) {
 		ACS_ExecuteAlways (956, 0);
 		return 0;
 	} else {
-		// [Dusk] clear the card out once the class is purchased
+		// Clear the card out once the class is purchased
 		HudMessage(s:""; HUDMSG_PLAIN, 2100+PlayerNumber(), CR_UNTRANSLATED, 0.0, 0.0, 0.01);
 	}
 	return 1;
 }
 
-// this bit is in its own script because custom functions cannot use latent functions
+// This bit is in its own script because custom functions cannot use latent functions
 script 956 (void) {
 	GiveInventory("PurchaseToken",1);
 	Delay(35*1);
@@ -103,13 +122,15 @@ script 956 (void) {
 	terminate;
 }
 
-// [Dusk] tick display function
+// [Dusk] Tick display
+// atm only plays the sound as the graphic GTFO'd
 function void DisplayTick (void) {
 	LocalAmbientSound ("c4/use", 255);
 	// SETFONT("TICK");
 	// HudMessage(s:"a"; HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_DarkRed, 0.5, 0.5, 2.0, 1.0);
 }
 
+// Same for cross
 function void DisplayCross (void) {
 	LocalAmbientSound ("misc/nope", 127);
 	// SETFONT("NOENTRY");
@@ -156,7 +177,7 @@ function int CheckFactory (int Team) {
 	return 1;
 }
 
-// [Dusk] Check for free hangers
+// [Dusk] Check for free hanger
 function int CheckFreeHanger (int Team) {
 	if (GettingMech[Team]) {
 		Error ("There is another mech in the hanger!");

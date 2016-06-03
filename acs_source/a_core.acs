@@ -57,10 +57,13 @@ script 999 OPEN {
 	SpawnSpotForced ("TiberiumMapMarker", TID_TIBERIUM, 0, 0);
 	
 	delay (5);
-	// wf unavailability
+	
+	// Special case: the war factory isn't present. Accommodate.
 	if (!ThingCount (T_NONE, 107) && !ThingCount (T_NONE, 207)) {
 		GotFactory[0] = 0;
 		GotFactory[1] = 0;
+		BaseLeft[0] = 4;
+		BaseLeft[1] = 4;
 		Team_GivePoints (TEAM_RED, 1, 0);
 		Team_GivePoints (TEAM_BLUE, 1, 0);
 	}
@@ -93,10 +96,7 @@ script 999 OPEN {
 	}
 }
 
-// Server settings
-script 599 OPEN {
-	delay (1);
-	
+function void ReloadSettings (void) {
 	// ==================================
 	// DMFLAGS
 	if (!GetCVAR ("sv_doubleammo")) ConsoleCommand ("sv_doubleammo 1");
@@ -160,6 +160,14 @@ script 599 OPEN {
 	// [Dusk] How much score does destroying a building award you, in addition to difference?
 	if (GetCVAR ("aow_buildingpoints") <= 0) ConsoleCommand ("set aow_buildingpoints 125");
 	
+	// [Dusk] Tiberium amounts
+	if (!GetCVAR ("aow_tiberium_self"))
+		ConsoleCommand ("set aow_tiberium_self 225");
+	if (!GetCVAR ("aow_tiberium_other"))
+		ConsoleCommand ("set aow_tiberium_other 75");
+	if (!GetCVAR ("aow_tiberium_advperc"))
+		ConsoleCommand ("set aow_tiberium_advperc 300");
+	
 	// TODO: get rid of these variables and replace with direct GetCVAR calls
 	StartCredits = GetCVAR("aow_startcredits");
 	CreditFlow = GetCVAR("aow_credflow");
@@ -179,9 +187,17 @@ script 599 OPEN {
 	BeaconPurchaseDelay = GetCVAR("aow_beaconpurchasedelay") * 60;
 	PlasmaCooldownTime = GetCVAR("aow_plasmacooldown") * 35 * 60;
 	TimedC4Delay = GetCVar ("aow_c4delay");
-	MedicBonusNeed = GetCVAR("aow_medicbonusneed");
+	MedicBonusNeed = GetCVAR ("aow_medicbonusneed");
+}
 
-	delay(35*5);
+// Server settings
+script 599 OPEN {
+	delay (1);
+	while (1) {
+		ReloadSettings ();
+		Delay (35 * 5);
+	}
+	
 	restart;
 }
 
@@ -194,12 +210,14 @@ script 4 OPEN {
 		if (GotRefinery[0] == 1) p += 50;
 		if (MiniRefinery[0] == 1) p += 75;
 		redflow = (CreditFlow * p) / 100;
+		if (!redflow) redflow = 1;
 		
 		p = 25;
 		if (GotPlant[1] == 1) p += 25;
 		if (GotRefinery[1] == 1) p += 50;
 		if (MiniRefinery[1] == 1) p += 75;
 		blueflow = (CreditFlow * p) / 100;
+		if (!blueflow) blueflow = 1;
 		
 		for (i = 0; i < 32; i++) {
 			if (PlayerInGame(i) && GetActorProperty (3800+i, APROP_HEALTH) > 0 && !IsAdmin[i]) {

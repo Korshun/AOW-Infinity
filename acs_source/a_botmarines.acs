@@ -8,6 +8,7 @@
  * of this and call it your own. Thanks!
  */
 
+// ============================================================================
 /* Get a free slot ID. Make sure you actually spawn one marine with the tid
  * (and ONLY one) when you do this! Marines will, however, call this by
  * themselves if you do not do so beforehand.
@@ -15,9 +16,12 @@
 function int AI_RequestID (void) {
 	int tid;
 	int i = 0;
+	
+	// Find a free slot
 	while (Bots[i] && i < MAX_MARINES)
 		i++;
 	
+	// Uh oh.
 	if (i >= MAX_MARINES) {
 		Log (s:"AI_RequestID: Too many AI marines!");
 		return -1;
@@ -28,6 +32,8 @@ function int AI_RequestID (void) {
 	return i;
 }
 
+// ============================================================================
+// Remove a marine from game
 function bool AI_ClearMarine (int i) {
 	if (!Bots[i]) {
 		Log (s:"AI_ClearMarine: Marine ", d:i, s:" doesn't exist.");
@@ -37,15 +43,16 @@ function bool AI_ClearMarine (int i) {
 	AIMarineCount--;
 	Bots[i] = false;
 	
-	// death script calls this as well
+	// Send to Dismiss state but only if it's still alive
 	if (GetActorHealth (TID_MARINE + i) > 0)
 		SetActorState (TID_MARINE + i, "Dismiss");
 	
-	// clear the TID
+	// Clear the TID
 	Thing_ChangeTID (TID_MARINE + i, 0);
 	return true;
 }
 
+// ============================================================================
 // What team is a marine on?
 function int AI_GetTeam (int i) {
 	if (!Bots[i]) {
@@ -56,6 +63,7 @@ function int AI_GetTeam (int i) {
 	return CheckActorInventory (TID_MARINE + i, "IsRed");
 }
 
+// ============================================================================
 // Was the marine spawned by compensation?
 function int AI_IsCompensation (int i) {
 	if (!Bots[i]) {
@@ -66,6 +74,7 @@ function int AI_IsCompensation (int i) {
 	return CheckActorInventory (TID_MARINE + i, "IsCompensationMarine");
 }
 
+// ============================================================================
 // Init a marine
 script SC_MARINE_INIT (void) {
 	GiveInventory ("IsAIMarine", 1);
@@ -79,9 +88,11 @@ script SC_MARINE_INIT (void) {
 			Thing_Remove (0); // oh gn0 we hit the limit!
 	}
 	
+	// Set proper special
 	SetThingSpecial (0, ACS_ExecuteAlways, SC_MARINE_DEATH, 0, ActivatorTID()-TID_MARINE);
 }
 
+// ============================================================================
 // ==== TEAM UNBALANCE COMPENSATION
 // [Dusk] There are clearly unbalanced teams, and the game has already started. Even despite
 // we try balance teams via the switcher, surplus remains. Therefore, the weaker team is
@@ -98,7 +109,7 @@ function void AI_ManageCompensation (void) {
 		AIMarines[TEAM_BLUE] = 0;
 	
 	if (BlueCount() > RedCount() + 1 + (BlueCount() > 7) && RedCount() != 0)
-		AIMarines[TEAM_RED] = BlueCount() - RedCount() + 1 + (BlueCount() > 7);
+		AIMarines[TEAM_RED] = BlueCount() - (RedCount() + 1 + (BlueCount() > 7));
 	else if (AIMarines[TEAM_RED] > 0)
 		AIMarines[TEAM_RED] = 0;
 	
@@ -107,59 +118,75 @@ function void AI_ManageCompensation (void) {
 	ACS_ExecuteAlways (SC_MARINE_COMPENSATION, 0, TEAM_RED);
 }
 
+// This is a script so as to be able to use latent functions.
 script SC_MARINE_COMPENSATION (int team) {
 	int AICount;
-	int AISpawner;
 	int spottid;
 	
+	str AIClass = "BlueRandomMarine";
+	if (team == TEAM_RED)
+		AIClass = "RedRandomMarine";
+	
+	// Count how many AI marines the specified team has
 	for (int i = 0; i < MAX_MARINES; i++) {
-		if (!Bots[i]) continue;
-		if (AI_GetTeam (i) == team && AI_IsCompensation (i)) AICount++;
+		if (!Bots[i])
+			continue;
+		
+		if (AI_GetTeam (i) == team && AI_IsCompensation (i))
+			AICount++;
 	}
 	
+	// Determine initial spawn spot
 	if (team == TEAM_BLUE)
 		spottid = TID_REPAIR_BLUE;
 	else
 		spottid = TID_REPAIR_RED;
 	
+	// How much marine surplus the team has?
+	// counted marines minus assigned marines.
 	int delta = AICount - AIMarines[team];
-	i = 0;
-	if (delta == 0)
+	
+	if (delta == 0) {
+		// 0, nothing to do.
 		terminate;
-	else if (delta > 0) {
-		// Too many marines - send one of them home
+	} else if (delta > 0) {
+		// Positive delta, too many AI marines - send one of them home
 		log (s:"Compensation: Removing ", d:delta, s:" marines from ", s:TeamNames[team], s:".");
-		while (i < MAX_MARINES && delta > 0) {
-			if (!Bots[i]) {
-				i++;
+		for (i = 0; i < MAX_MARINES && delta > 0; i++) {
+			// Free slot
+			if (!Bots[i])
 				continue;
-			}
 			
-			if (AI_IsCompensation (i) && AI_GetTeam (i) == team) {
-				// found one!
-				AI_ClearMarine (i);
-				delta--;
-			}
+			// Not a compensation marine
+			if (!AI_IsCompensation (i))
+				continue;
 			
-			i++;
+			// Bad team`
+			if (AI_GetTeam (i) != team)
+				continue;
+			
+			AI_ClearMarine (i);
+			delta--;
 		}
 	} else {
+		// Negative delta, team needs more marines.
 		while (AICount < AIMarines[team]) {
+			// Get a free ID
 			i = AI_RequestID ();
-			if (i == -1) break;
+			if (i == -1)
+				break;
 			
-			int spawned = 0;
+			int spawned;
 			int tries = 5;
-			int fail = 1;
 			while (tries > 0 && !spawned) {
-				// spawn the marine initially onto the repair facility
-				spawned = SpawnSpotForced (AISpawner, spottid, TID_MARINE + i, 0);
+				// Spawn the marine initially onto the repair facility
+				spawned = SpawnSpotForced (AIClass, spottid, TID_MARINE + i, 0);
 				if (spawned) {
 					AICount += spawned;
 					
 					delay (1);
 					
-					// flag the marine as compensation
+					// lFag the marine as compensation
 					GiveActorInventory (TID_MARINE + i, "IsCompensationMarine", 1);
 					
 					// move the newly-spawned bot to a random spawn in the base, but
@@ -168,15 +195,14 @@ script SC_MARINE_COMPENSATION (int team) {
 					TeleportOther (TID_MARINE + i, team+1, false);
 					SpawnSpotForced ("TeleportFog", TID_MARINE + i, 0, 0);
 				} else {
-					fail = 0;
 					tries--;
 				}
 				
 				delay (35);
 			}
 			
-			// something's seriously wrong...
-			if (fail) {
+			// Something's seriously wrong...
+			if (!spawned) {
 				Log (s:"Compensation: Couldn't spawn marines to ", s:TeamNames[team], s:"!");
 				terminate;
 			}
@@ -186,16 +212,23 @@ script SC_MARINE_COMPENSATION (int team) {
 	}
 }
 
+// ============================================================================
 // AI marine bounty
 script SC_MARINE_DEATH (int i) {
-	// no matter what happened to the marine, the slot needs to
-	// be cleared now that it's dead. save it's team first,
-	// we can't get it after the slot's clear
+	// No matter what happened to the marine, the slot needs to
+	// be cleared now that it's dead. Save it's team first,
+	// we can't get it after the slot is cleared.
 	int AITeam = AI_GetTeam (i);
 	AI_ClearMarine (i);
 	
-	if (ActivatorTID() < 3800 || ActivatorTID() > 3831) terminate;
-	if (PlayerTeam() == AITeam) terminate;
+	// No bounty if the thing was killed by a non-player
+	if (ActivatorTID() < 3800 || ActivatorTID() > 3831)
+		terminate;
+	
+	// No bounty for teamkills
+	if (PlayerTeam() == AITeam)
+		terminate;
+	
 	LocalAmbientSound ("game/boink", 127);
 	AddExperience (50);
 	AddCredits (Credits[PlayerNumber()+1], CreditFragAward);
@@ -204,7 +237,7 @@ script SC_MARINE_DEATH (int i) {
 	Team_GivePoints (PlayerTeam(), 2, false);
 }
 
-// Dumps known information about AI marines
+// Dumps known information about AI marines. Not a lot here at the moment..
 script SC_MARINE_STATS (void) {
 	for (int i = 0; i < MAX_MARINES; i++) {
 		if (!Bots[i]) {
