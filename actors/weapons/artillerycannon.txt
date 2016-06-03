@@ -7,7 +7,7 @@
  * anti-mech weapon, only Plasma Cannon surpasses this.
  */
  
-actor ArtilleryCannon_Clip : Ammo 
+actor ArtilleryCannonClip : Ammo 
 {
 	+INVENTORY.IGNORESKILL
 	Inventory.MaxAmount 5
