@@ -29,7 +29,7 @@
 #library "modcvars"
 #include "zcommon.acs"
 
-function bool SetCvar(str name,int value)
+function bool zan_SetCvar(str name,int value)
 {
 
   //----------//
