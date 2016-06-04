@@ -87,5 +87,4 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	}
 }
 
-actor HandgunPuff : HHBulletPuff {DamageType "BulletRed"}
-actor HandgunPuffBlue : HHBulletPuff {DamageType "BulletBlue"}
+actor HandgunPuff : HHBulletPuff {DamageType "Bullet"}
