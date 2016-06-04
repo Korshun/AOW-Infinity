@@ -218,7 +218,7 @@ actor ArtilleryShell {
 	height 8
 	speed 75
 	damage (15*(random(3,6)/2))
-	damageType "MassDriverRed"
+	damageType "Artillery"
 	deathsound "artillery/explosion"
 	decal "Scorch"
 	scale 0.6
@@ -247,7 +247,7 @@ actor ArtilleryShell80mm : ArtilleryShell {
 	translation "112:127=176:191", "80:111=104:111"
 	speed 50
 	damage (25*(random(16,24)/8))
-	damagetype "ExplosionMechRed"
+	damagetype "ExplosionMech"
 	scale 0.74
 	states {
 	Death:
@@ -264,7 +264,7 @@ actor ArtilleryShell80mm : ArtilleryShell {
 
 actor ArtilleryShellBlue : ArtilleryShell {
 	translation "112:120=200:207", "121:127=241:247"
-	DamageType "MassDriverBlue"
+	DamageType "Artillery"
 	states {
 	Death:
 		NULL A 0 A_NoGravity
@@ -280,7 +280,7 @@ actor ArtilleryShellBlue : ArtilleryShell {
 
 actor ArtilleryShell80mmBlue : ArtilleryShell80mm {
 	translation "112:120=200:207", "121:127=241:247", "80:111=104:111"
-	damagetype "ExplosionMechBlue"
+	damagetype "ExplosionMech"
 // I got lazy, so it just inhertits from the 80mm one.
 	states {
 	Death:

@@ -35,34 +35,34 @@ Actor RedSuperShotgunner	//Red SSGer
 
 //AOW Base DamageFactoring-----------------------------------------------------------------------
 
-	damagefactor "FistRed", 0.0
-	damagefactor "FistBlue", 1.0
-	damagefactor "BulletRed", 0.0
-	damagefactor "BulletBlue", 1.0
-	damagefactor "RifleRed", 0.0
-	damagefactor "RifleBlue", 1.0
-	damagefactor "ExplosionRed", 0.0
-	damagefactor "ExplosionBlue", 0.3
+	damagefactor "Fist", 0.0
+	damagefactor "Fist", 1.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Bullet", 1.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Rifle", 1.0
+	damagefactor "Explosion", 0.0
+	damagefactor "Explosion", 0.3
 	damagefactor "Terrorist", 2.0
 	damagefactor "Suicide", 1.0
-	damagefactor "FireRed", 0.0
-	damagefactor "FireBlue", 1.0
-	damagefactor "ChemicalRed", 0.0
-	damagefactor "ChemicalBlue", 2.0
+	damagefactor "Fire", 0.0
+	damagefactor "Fire", 1.0
+	damagefactor "Chemical", 0.0
+	damagefactor "Chemical", 2.0
 	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "LaserRed", 0.0
-	damagefactor "LaserBlue", 1.0
-	damagefactor "RazorWireRed", 0.0
-	damagefactor "RazorWireBlue", 1.0
-	damagefactor "ExplosionMechRed", 0.0
-	damagefactor "ExplosionMechBlue", 0.1
+	damagefactor "Laser", 0.0
+	damagefactor "Laser", 1.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "RazorWire", 1.0
+	damagefactor "ExplosionMech", 0.0
+	damagefactor "ExplosionMech", 0.1
 	damagefactor "TimeRed", 0.0
 	damagefactor "TimeBlue", 1.0
 	damagefactor "Repair", 0.0
 	damagefactor "Disarm", 0.0
 	damagefactor "Deconstruction", 0.0
-	damagefactor "MassDriverRed", 0.0
-	damagefactor "MassDriverBlue", 0.3
+	damagefactor "Artillery", 0.0
+	damagefactor "Artillery", 0.3
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 1.0
 
@@ -1125,8 +1125,8 @@ Actor RedSuperShotgunner	//Red SSGer
 		NULL A 0 ACS_ExecuteAlways(320, 0, 1)
 		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
-	Pain.FireRed:
-	Pain.FireBlue:
+	Pain.Fire:
+	Pain.Fire:
 		NULL A 0 ACS_ExecuteAlways(320, 0, 1)
 		NULL A 0 ACS_ExecuteAlways(360, 0)
 		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
@@ -1135,8 +1135,8 @@ Actor RedSuperShotgunner	//Red SSGer
 		NULL A 0 ACS_ExecuteAlways(320, 0, 2)
 		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
-	Pain.ChemicalRed:
-	Pain.ChemicalBlue:
+	Pain.Chemical:
+	Pain.Chemical:
 		NULL A 0 ACS_ExecuteAlways(320, 0, 2)
 		NULL A 0 ACS_ExecuteAlways(361, 0)
 		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
@@ -1222,20 +1222,20 @@ Actor RedSuperShotgunner	//Red SSGer
 		PLA9 W -1
 		stop
 
-	Death.MassDriverRed:
-	Death.MassDriverBlue:
-	Death.ExplosionMechRed:
-	Death.ExplosionMechBlue:
-	Death.ExplosionRed:
-	Death.ExplosionBlue:
+	Death.Artillery:
+	Death.Artillery:
+	Death.ExplosionMech:
+	Death.ExplosionMech:
+	Death.Explosion:
+	Death.Explosion:
 		NULL A 0 ThrustThing(angle*256/360+(random(0,192)), random(20,40), 1, 0)
 		PLA9 H 1 ThrustThingZ(0,45,0,0)
 		NULL A 0 A_Jump(128,"Death")
 		goto XDeath
 
 	Death.FireSpecial:
-	Death.FireRed:
-	Death.FireBlue:
+	Death.Fire:
+	Death.Fire:
 		// stop all sound channels
 		NULL A 0 A_StopSound (0) PLA9 A 0 A_StopSound (4)
 		NULL A 0 A_StopSound (1) PLA9 A 0 A_StopSound (5)
@@ -1248,8 +1248,8 @@ Actor RedSuperShotgunner	//Red SSGer
 		stop
 
 	Death.ChemicalSpecial:
-	Death.ChemicalRed:
-	Death.ChemicalBlue:
+	Death.Chemical:
+	Death.Chemical:
 		// stop all sound channels
 		NULL A 0 A_StopSound (0) PLA9 A 0 A_StopSound (4)
 		NULL A 0 A_StopSound (1) PLA9 A 0 A_StopSound (5)

@@ -40,7 +40,7 @@ actor LaserChaingun : AOWWeapon {
 		LCGB A 1 A_Raise
 		wait
 	Fire:
-		LCGR AA 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
+		LCGR AA 0 A_JumpIfInventory ("IsBlue", 1, "Fire")
 		LCGR A 2 Offset(1,29) A_CheckReload
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlayWeaponSound("lchaingun/fire")
@@ -63,7 +63,7 @@ actor LaserChaingun : AOWWeapon {
 		NULL A 0 A_ReFire
 		LCGR ABCABC 2
 		goto Ready
-	FireBlue:
+	Fire:
 		LCGB A 2 Offset(1,29) A_CheckReload
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlayWeaponSound("lchaingun/fire")

@@ -186,7 +186,7 @@ actor LaserRifleAmmo : Ammo {
 actor LaserPuff : HHBulletPuff {
 	-ALLOWPARTICLES +PUFFONACTORS
 	scale 0.5
-	DamageType "LaserRed"
+	DamageType "Laser"
 	translation "192:207=169:189", "240:246=45:47", "80:111=169:189"
 	renderstyle Add
 	alpha 0.75
@@ -202,7 +202,7 @@ actor LaserPuff : HHBulletPuff {
 }
 
 actor LaserPuffBlue : LaserPuff {
-	DamageType "LaserBlue"
+	DamageType "Laser"
 	translation ""
 }
 

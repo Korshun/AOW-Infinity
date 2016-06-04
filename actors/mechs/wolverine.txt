@@ -152,12 +152,12 @@ actor WolverineWeapons : AOWWeapon {
 		NULL A 0 A_TakeInventory ("MechRocketAmmo", 10)
 		NULL A 0 ACS_ExecuteAlways (319, 0, 1, 4) // reload
 		NULL A 0 Bright A_GunFlash
-		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
+		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire")
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile ("LongRangeMissile", 0, 0, 25)
 		MHUD A 20
 		MHUD A 2 A_Refire
 		Goto Ready
-	FireBlue:
+	Fire:
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile ("LongRangeMissileBlue", 0, 0, 25)
 		MHUD A 20
 		MHUD A 2 A_Refire
@@ -239,7 +239,7 @@ actor PulseBall {
 	seesound "plasma/fire"
 	deathsound "plasma/explo"
 	decal PulseScorch
-	damagetype "LaserRed"
+	damagetype "Laser"
 	
 	states {
 	Spawn:
@@ -255,7 +255,7 @@ actor PulseBall {
 	}
 }
 
-actor PulseBallBlue : PulseBall {damageType "LaserBlue"}
+actor PulseBallBlue : PulseBall {damageType "Laser"}
 
 actor MechRocketAmmo : Ammo {
 	inventory.amount 10

@@ -37,7 +37,7 @@ actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 		GREN A 5 A_PlayWeaponSound ("grenade/fire")
 		GREN GH 1
 		NULL A 0 A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire")
 		GREN I 1 A_FireCustomMissile ("GrenadeGrenade", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
@@ -55,7 +55,7 @@ actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 		GREN EDABC 1
 		NULL A 0 A_ReFire
 		goto Ready
-	FireBlue:
+	Fire:
 		GREN I 1 A_FireCustomMissile ("GrenadeGrenadeBlue", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
@@ -94,7 +94,7 @@ actor GrenadeGrenade {
 	height 8
 	speed 35
 	damage (25)
-	damagetype "RifleRed"
+	damagetype "Rifle"
 	seesound ""
 	deathsound "weapons/rocklx"
 	obituary "$OB_GRENADE" // "%o ate %k's grenade."
@@ -128,8 +128,8 @@ actor GrenadeBounce : GrenadeGrenade {
 	}
 }
 
-actor GrenadeGrenadeBlue : GrenadeGrenade {DamageType "RifleBlue"}
-actor GrenadeBounceBlue : GrenadeBounce {DamageType "RifleBlue"}
+actor GrenadeGrenadeBlue : GrenadeGrenade {DamageType "Rifle"}
+actor GrenadeBounceBlue : GrenadeBounce {DamageType "Rifle"}
 
 // Select/Deselect offset-animations
 /*

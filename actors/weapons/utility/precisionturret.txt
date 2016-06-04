@@ -163,7 +163,7 @@ actor PrecisionTurretProjectile : FastProjectile
   Projectile
   -RANDOMIZE
   Obituary "%o died."
-  DamageType "RifleRed"
+  DamageType "Rifle"
   Scale 0.0
   States
   { 
@@ -185,7 +185,7 @@ actor PrecisionTurretProjectileBlue : FastProjectile
   Projectile
   -RANDOMIZE
   Obituary "%o died."
-  DamageType "RifleBlue"
+  DamageType "Rifle"
   Scale 0.0
   States
   {

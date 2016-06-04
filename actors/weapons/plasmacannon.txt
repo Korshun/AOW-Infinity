@@ -40,7 +40,7 @@ actor PlasmaCannon : AOWWeapon {
 		loop
 	Fire:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire")
 		PC2G A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PC2G EFG 6 bright
 		NULL A 0 bright A_GunFlash
@@ -70,7 +70,7 @@ actor PlasmaCannon : AOWWeapon {
 		PC2G EF 3
 		PC2G G 5 A_Refire
 		goto Ready
-	FireBlue:
+	Fire:
 		PLCG A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PLCG EFG 6 bright
 		NULL A 0 bright A_GunFlash
@@ -133,7 +133,7 @@ actor PlasmaCannonBall {
 	renderstyle Add
 	alpha 0.75
 	deathsound "plasmacannon/explode"
-	DamageType "ExplosionRed"
+	DamageType "Explosion"
 	Scale 1.5
 	translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
 	states {
@@ -183,7 +183,7 @@ actor PlasmaCannonBallSmall : PlasmaCannonBall {
 actor PlasmaCannonBallBlue : PlasmaCannonBall {
 	translation "112:120=200:207", "121:127=241:247"
 	obituary "$OB_PLASMACANNON_BLUE" // "%o was annihilated by %k's \cNPlasma Cannon."
-	DamageType "ExplosionBlue"
+	DamageType "Explosion"
 	states {
 	Death:
 		PLE1 A 4
@@ -200,7 +200,7 @@ actor PlasmaCannonBallBlue : PlasmaCannonBall {
 actor PlasmaCannonBallSmallBlue : PlasmaCannonBallSmall {
 	translation "112:120=200:207", "121:127=241:247"
 	obituary "$OB_PLASMACANNON_ALT_BLUE" // "%o couldn't escape %k's \cnPlasma Cannon."
-	DamageType "ExplosionBlue"
+	DamageType "Explosion"
 }
 
 // =========================================
@@ -210,7 +210,7 @@ actor PlasmaFlameDecay {
 	renderstyle None
 	+NOBLOCKMAP
 	+NOGRAVITY
-	DamageType "FireRed"
+	DamageType "Fire"
 	obituary "$OB_FIREDECAY" // "%o burns in %k's firestorm."
 	states {
 	Spawn:
@@ -237,7 +237,7 @@ actor PlasmaFlameDecayFX {
 	}
 }
 
-actor PlasmaFlameDecayBlue : PlasmaFlameDecay {damagetype "FireBlue"}
+actor PlasmaFlameDecayBlue : PlasmaFlameDecay {damagetype "Fire"}
 
 actor PlasmaFlameCluster {
 	+NOBLOCKMAP +NOGRAVITY

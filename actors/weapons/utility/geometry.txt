@@ -18,8 +18,8 @@ actor Step {
 	scale 0.25
 	renderstyle Translucent
 	alpha 0.0
-	damagefactor "RazorWireRed", 0.0
-	damagefactor "RazorWireBlue", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "RazorWire", 0.0
 	damagefactor "Disarm", 0.0
 	damagefactor "Flash", 0.0
 	damagefactor "Fist", 0.1
@@ -65,12 +65,12 @@ actor SandbagWall {
 	renderstyle translucent
 	alpha 0.0
 	
-	damagefactor "LaserRed", 1.25
-	damagefactor "LaserBlue", 1.25
+	damagefactor "Laser", 1.25
+	damagefactor "Laser", 1.25
 	damagefactor "Disarm", 0.0
 	damagefactor "Flash", 0.0
-	damagefactor "RazorWireRed", 0.0
-	damagefactor "RazorWireBlue", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "RazorWire", 0.0
 	states {
 	Spawn:
 		NULL A 0

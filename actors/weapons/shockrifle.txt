@@ -67,7 +67,7 @@ actor VoltagePuff {
 	+PUFFONACTORS +ALWAYSPUFF
 	+CLIENTSIDEONLY +NOINTERACTION
 	+FORCEXYBILLBOARD
-	DamageType "LaserRed"
+	DamageType "Laser"
 	Scale 1.2
 	states {
 	Spawn:
@@ -78,7 +78,7 @@ actor VoltagePuff {
 	}
 }
 
-actor VoltagePuffBlue : VoltagePuff {damagetype "LaserBlue"}
+actor VoltagePuffBlue : VoltagePuff {damagetype "Laser"}
 
 actor VoltagePuff2 {
 	renderstyle Add
@@ -87,7 +87,7 @@ actor VoltagePuff2 {
 	+NOGRAVITY
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
-	DamageType "LaserRed"
+	DamageType "Laser"
 	Scale 1.2
 	states {
 	Spawn:
@@ -164,7 +164,7 @@ actor VoltageDecayClusterBlue {
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+NOINTERACTION
-	damagetype "LaserBlue"
+	damagetype "Laser"
 	states {
 	Spawn:
 		TNT1 AAAAAAAAAAAAAAAAAAA 5 A_Explode (5, 96)
@@ -173,7 +173,7 @@ actor VoltageDecayClusterBlue {
 }
 
 actor VoltageDecayClusterRed : VoltageDecayClusterBlue {
-	damagetype "LaserRed"
+	damagetype "Laser"
 }
 
 actor VoltageDecayClusterFX {
@@ -181,7 +181,7 @@ actor VoltageDecayClusterFX {
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+NOINTERACTION
-	damagetype "LaserBlue"
+	damagetype "Laser"
 	states {
 	Spawn:
 		TNT1 AAAAAAAAAAAAAAAAAAA 5 A_SpawnItemEx ("VoltageDecay", random (-48, 48), random (-48, 48), random (0, 96))

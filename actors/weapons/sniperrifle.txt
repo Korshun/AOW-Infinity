@@ -36,10 +36,10 @@ actor SniperRifle : AOWWeapon {
 	Fire:
 		NULL A 0 A_GunFlash
 		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "FireZoomed")
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire")
 		NULL A 0 A_FireBullets (7.2, 7.2, -1, 25, "RiflePuff")
 		goto Reload
-	FireBlue:
+	Fire:
 		NULL A 0 A_FireBullets (7.2, 7.2, -1, 25, "RiflePuffBlue")
 		goto Reload
 	Reload:
@@ -124,10 +124,10 @@ actor SniperRifleWeak : SniperRifle 21081 {
 	Fire:
 		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "FireZoomed")
 		NULL A 0 A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire")
 		NULL A 0 A_FireBullets (7.2, 7.2, -1, 17, "RiflePuff")
 		goto Reload
-	FireBlue:
+	Fire:
 		NULL A 0 A_FireBullets (7.2, 7.2, -1, 17, "RiflePuffBlue")
 		goto Reload
 	FireZoomed:

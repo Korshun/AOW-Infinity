@@ -75,7 +75,7 @@ actor TiberiumCrystalThrown {
 	radius 16 height 32
 	speed 10 damage 0
 	gravity 0.75
-	damagetype "ChemicalRed"
+	damagetype "Chemical"
 	states {
 	Spawn:
 		NULL A 0
@@ -103,7 +103,7 @@ actor TiberiumCrystalSitting {
 	radius 16 height 32
 	speed 0 damage 0
 	Mass 0x7FFFFFFF
-	damagetype "ChemicalRed"
+	damagetype "Chemical"
 	reactiontime 15
 	states {
 	Spawn:
@@ -133,7 +133,7 @@ actor TiberiumCrystalFX {
 }
 
 actor TiberiumCrystalThrownBlue : TiberiumCrystalThrown {
-	damagetype "ChemicalBlue"
+	damagetype "Chemical"
 	states {
 	Death:
 		NULL A 0 BRIGHT
@@ -143,7 +143,7 @@ actor TiberiumCrystalThrownBlue : TiberiumCrystalThrown {
 	}
 }
 
-actor TiberiumCrystalSittingBlue : TiberiumCrystalSitting {damagetype "ChemicalBlue"}
+actor TiberiumCrystalSittingBlue : TiberiumCrystalSitting {damagetype "Chemical"}
 
 actor TiberiumChemSmoke {
 	+NOSECTOR +NOCLIP +NOINTERACTION +CLIENTSIDEONLY
