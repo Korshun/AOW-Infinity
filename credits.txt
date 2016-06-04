@@ -1,0 +1,9 @@
+AOW: Infinity
+==============
+By Korshun and DJ Skaarj
+
+Based on AOW r2539-5
+
+Resources:
+Bullet puffs - Project MSX
+Mech hud - AOW 2.1
