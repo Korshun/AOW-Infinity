@@ -51,6 +51,8 @@ actor BaseTerminal {
 	deathsound "grenade/explode"
 	painchance 255
 	
+	DesignatedTeam 1
+	
 	states {
 	Spawn:
 		NULL A 0
@@ -141,6 +143,8 @@ actor BaseTerminalBlue : BaseTerminal {
 	
 	damagetype "ExplosionBlue"
 	obituary "%o was killed with a \cHBlue\c- building."
+	
+	DesignatedTeam 0
 }
 
 actor TerminalExplosion {
