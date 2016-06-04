@@ -7,6 +7,7 @@ actor Player : DoomPlayer {
 	player.displayname "Commando"
 	player.crouchsprite "PLYC"
 	player.startitem "Unarmed", 1
+	player.startitem "AOWReloadItem", 1
 	player.forwardmove 0.875
 	player.sidemove 0.875
 	player.maxhealth 100
