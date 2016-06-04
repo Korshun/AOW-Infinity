@@ -1,24 +1,15 @@
 // TERMINALS
 actor BaseTerminal {
-	damagefactor "Fist", 0.0
 	damagefactor "Fist", 0.3
-	damagefactor "Bullet", 0.0
 	damagefactor "Bullet", 0.5
-	damagefactor "Rifle", 0.0
 	damagefactor "Rifle", 0.5
-	damagefactor "Explosion", 0.0
 	damagefactor "Explosion", 0.75
-	damagefactor "Fire", 0.0
 	damagefactor "Fire", 0.6
 	damagefactor "FireSpecial", 0.0
-	damagefactor "Chemical", 0.0
 	damagefactor "Chemical", 0.75
 	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "Laser", 0.0
 	damagefactor "Laser", 1.0
 	damagefactor "RazorWire", 0.0
-	damagefactor "RazorWire", 0.0
-	damagefactor "ExplosionMech", 0.0
 	damagefactor "ExplosionMech", 0.25
 	damagefactor "TimeRed", 0.0
 	damagefactor "TimeBlue", 1.0
@@ -27,7 +18,6 @@ actor BaseTerminal {
 	damagefactor "Superweapon", 0.0
 	damagefactor "SuperweaponIon", 1.0
 	damagefactor "Slime", 0.0 //Mines
-	damagefactor "Artillery", 0.0
 	damagefactor "Artillery", 0.25
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 0.0
@@ -108,26 +98,6 @@ actor BaseTerminal {
 }
 
 actor BaseTerminalBlue : BaseTerminal {
-	damagefactor "Fist", 0.3
-	damagefactor "Fist", 0.0
-	damagefactor "Bullet", 0.5
-	damagefactor "Bullet", 0.0
-	damagefactor "Rifle", 0.5
-	damagefactor "Rifle", 0.0
-	damagefactor "Explosion", 0.75
-	damagefactor "Explosion", 0.0
-	damagefactor "Fire", 0.6
-	damagefactor "Fire", 0.0
-	damagefactor "FireSpecial", 0.0
-	damagefactor "Chemical", 0.75
-	damagefactor "Chemical", 0.0
-	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "Laser", 1.0
-	damagefactor "Laser", 0.0
-	damagefactor "RazorWire", 0.0
-	damagefactor "RazorWire", 0.0
-	damagefactor "ExplosionMech", 0.25
-	damagefactor "ExplosionMech", 0.0
 	damagefactor "TimeRed", 1.0
 	damagefactor "TimeBlue", 0.0
 	damagefactor "Disarm", 0.0
@@ -135,8 +105,6 @@ actor BaseTerminalBlue : BaseTerminal {
 	damagefactor "Superweapon", 1.0
 	damagefactor "SuperweaponIon", 0.0
 	damagefactor "Slime", 0.0 //Mines
-	damagefactor "Artillery", 0.25
-	damagefactor "Artillery", 0.0
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 0.0
 	damagefactor "Deconstruction", 0.0
