@@ -61,3 +61,4 @@ OB_BOMBPACK_WTF = "%o couldn't stand %k running around screaming.";
 
 // Weapon names
 TAG_HANDGUN = "Handgun";
+TAG_SUBBY = "Sub-Machine Gun";
