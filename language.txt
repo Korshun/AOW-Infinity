@@ -19,6 +19,7 @@ OB_GATLING_JET = "%o was drilled by a flying %k's gatling gun.";
 OB_GAUSS = "%o had %p torso busted by %k's gauss rifle.";
 OB_GRENADE = "%o ate %k's grenade.";
 OB_GRENADE_ALT = "%o played catch with %k's grenade.";
+OB_HANDGUN = "%o was capped by %k's handgun.";
 OB_IONCANNON = "%o was obliterated by %k's \chIon Cannon.";
 OB_LASERCHAINGUN = "%o was incinerated by %k's laser chaingun.";
 OB_KAMIKAZE = "%k make %o go boom!";
@@ -57,3 +58,6 @@ OB_HEALRAD = "%o couldn't operate a healing radius.";
 
 // these aren't actually meant to show up, but turrets...
 OB_BOMBPACK_WTF = "%o couldn't stand %k running around screaming.";
+
+// Weapon names
+TAG_HANDGUN = "Handgun";

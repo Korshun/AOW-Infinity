@@ -11,17 +11,22 @@ actor HandgunClip : Ammo
 
 actor Handgun : AOWWeapon replaces Pistol 21041
 {
-	+WEAPON.WIMPY_WEAPON
-	+WEAPON.NOAUTOFIRE
+	Tag "$TAG_HANDGUN"
+	Obituary "$OB_HANDGUN"
+	Inventory.PickupMessage "$TAG_HANDGUN"
+	Weapon.PreferredSkin "MarinePistol"
+	
+	AttackSound "pistol/fire"
+	
+	Weapon.AmmoType "HandgunAmmo"
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 10
-	Weapon.AmmoType "HandgunClip"
-	Weapon.AmmoType2 "HandgunAmmo"
-	Weapon.SelectionOrder 19
-	Weapon.PreferredSkin "MarinePistol"
-	Inventory.Pickupmessage "You got the handgun!"
-	Obituary "%o was capped by %k's handgun."
-	attacksound "pistol/fire"
+	
+	+WEAPON.WIMPY_WEAPON
+	+WEAPON.NOAUTOFIRE
+	
+	Weapon.SelectionOrder 19	
+	
 	States
 	{
 	Spawn:
