@@ -23,6 +23,7 @@ script 20 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HasClass",1);
 	GiveInventory("HandgunAmmo",160);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory ("TimedC4", 1);
 	GiveInventory ("TimedC4Count", 1);
@@ -57,6 +58,7 @@ script 21 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HasClass",1);
 	GiveInventory("HandgunAmmo",120);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	SetFragGrenades (1);
 	GiveInventory ("EnhancedTimedC4",1);
@@ -97,6 +99,7 @@ script 22 (int Team) {
 	GiveInventory("Refunds", cost/2);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("TimedC4",1);
@@ -136,6 +139,7 @@ script 23 (int Team) {
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
 	GiveInventory("TimedC4",2);
@@ -178,6 +182,7 @@ script 24 (int Team) {
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HandgunAmmo",120);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -217,6 +222,7 @@ script 25 (int Team) {
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("HandgunAmmo", 90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun", 1);
 	GiveInventory("TimedC4", 1);
 	GiveInventory("TimedC4Count", 1);
@@ -257,6 +263,7 @@ script 26 (int Team) {
 	GiveInventory("HasClass", 1);
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HandgunAmmo", 90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun", 1);
 	GiveInventory("SubMachineGun", 1);
 	GiveInventory("TimedC4", 1);
@@ -300,6 +307,7 @@ script 27 (int Team) {
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("Handgun",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
 	GiveInventory("Rifle",1);
@@ -344,6 +352,7 @@ script 28 (int Team) {
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
 	GiveInventory("TimedC4",1);
@@ -390,6 +399,7 @@ script 29 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetActorProperty(0,APROP_DeathSound,"stealth/death");
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -441,6 +451,7 @@ script 33 (int Team) {
 	GiveInventory("HasClass", 1);
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -487,6 +498,7 @@ script 34 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_CHEM);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -534,6 +546,7 @@ script 35 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_LASER);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("TimedC4",1);
@@ -595,6 +608,7 @@ script 36 (int Team) {
 	GiveInventory("Refunds",cost/2);
 	SetArmorGrade (2, ARMOD_NOCHANGE);
 	GiveInventory("HandgunAmmo",120);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
 	GiveInventory("TimedC4", 2);
@@ -707,6 +721,7 @@ script 38 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HasClass",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -800,6 +815,7 @@ script 40 (int Team) {
 	GiveInventory("IsSniper", 500);
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -848,6 +864,7 @@ script 41 (int Team) {
 	GiveInventory("Refunds", cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
 	GiveInventory("TimedC4",1);
@@ -891,6 +908,7 @@ script 42 (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("HasClass", 1);
 	GiveInventory("Refunds", 275);
@@ -946,6 +964,7 @@ script 43 (int Team) {
 	GiveInventory("IsMedic",1);
 	GiveInventory("Grade0Damage",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory ("HealingRadiusItem", 1);
 	GiveInventory ("HealingRadiusCount", 1);
@@ -990,6 +1009,7 @@ script 44 (int Team) {
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -1127,6 +1147,7 @@ script 52 (int Team) {
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	SetFragGrenades (2);
 	GiveInventory("MachineGunAmmo",400);
@@ -1165,6 +1186,7 @@ script 53 (int Team) {
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -1202,6 +1224,7 @@ script 54 (int Team) {
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("ShotgunAmmo",50);
 	GiveInventory("TimedC4",1);
@@ -1415,6 +1438,7 @@ script 60 (int Team) {
 	SetArmorGrade (2, ARMOD_LASER);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",90);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("PlasmaRifleAmmo",200);
 	GiveInventory("EnhancedTimedC4",1);
@@ -1460,6 +1484,7 @@ script 61 (int Team) {
 	GiveInventory("IsArtillerySoldier",1);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("HandgunAmmo",60);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
 	GiveInventory("TimedC4",1);
@@ -1530,6 +1555,7 @@ script 39 (int Team) {
 	GiveInventory ("HighUpgrade", 1);
 	GiveInventory ("Refunds", cost/2);
 	GiveInventory ("HandgunAmmo", 120);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory ("Handgun", 1);
 	GiveInventory ("EnhancedTimedC4", 1);
 	GiveInventory ("TimedC4", 2);
@@ -1584,6 +1610,7 @@ script 63 (int Team) {
 	GiveInventory("TiberiumProof",1);
 	GiveInventory("Grade0Damage",1);
 	GiveInventory("HandgunAmmo",200);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -1632,6 +1659,7 @@ script 64 (int Team) {
 	GiveInventory("TiberiumProof",1);
 	GiveInventory("Grade0Damage",1);
 	GiveInventory("HandgunAmmo",200);
+	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
