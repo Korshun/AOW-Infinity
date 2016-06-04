@@ -143,7 +143,7 @@ actor GaussRifleAmmo : Ammo {
 actor GaussPuff : HHBulletPuff {
 	-ALLOWPARTICLES
 	+PUFFONACTORS
-	DamageType "LaserRed"
+	DamageType "Laser"
 	translation "192:207=169:189", "240:246=45:47", "80:111=169:189"
 	renderstyle Add
 	alpha 0.75
@@ -158,9 +158,9 @@ actor GaussPuff : HHBulletPuff {
 }
 
 actor GaussPuffBlue : GaussPuff {
-	damagetype "LaserBlue"
+	damagetype "Laser"
 	translation ""
 }
 
-actor ExplosionMechPuff : ExplosionPuff {damagetype "ExplosionMechRed"}
-actor ExplosionMechPuffBlue : ExplosionPuff {damagetype "ExplosionMechBlue"}
+actor ExplosionMechPuff : ExplosionPuff {damagetype "ExplosionMech"}
+actor ExplosionMechPuffBlue : ExplosionPuff {damagetype "ExplosionMech"}

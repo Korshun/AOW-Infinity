@@ -71,7 +71,7 @@ actor KamikazeExplosion {
 	PROJECTILE
 	+NOGRAVITY +NOINTERACTION
 	damage 100
-	damagetype "ExplosionRed"
+	damagetype "Explosion"
 	states {
 	Spawn:
 		NULL A 0
@@ -83,7 +83,7 @@ actor KamikazeExplosion {
 	}
 }
 
-actor KamikazeExplosionBlue : KamikazeExplosion {damagetype "ExplosionBlue"}
+actor KamikazeExplosionBlue : KamikazeExplosion {damagetype "Explosion"}
 actor KamikazeExplosionFX {
 	+CLIENTSIDEONLY +NOINTERACTION +NOGRAVITY
 	states {

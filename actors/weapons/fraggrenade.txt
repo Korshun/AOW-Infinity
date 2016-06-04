@@ -188,7 +188,7 @@ actor FragGrenadeThrown1 {
 	Scale 0.22
 	gravity 0.6
 	bouncefactor 0.5
-	damagetype "RifleRed"
+	damagetype "Rifle"
 	reactiontime 1
 	states {
 	Spawn:
@@ -219,7 +219,7 @@ actor FragGrenadeShrapnel {
 	Scale 0.3
 	Gravity 0.6
 	bouncecount 10
-	Damagetype "RifleRed"
+	Damagetype "Rifle"
 	states
 	{
 	Spawn:
@@ -233,7 +233,7 @@ actor FragGrenadeShrapnel {
 	}
 }
 
-actor FragGrenadeShrapnelBlue : FragGrenadeShrapnel {damagetype "RifleBlue"}
+actor FragGrenadeShrapnelBlue : FragGrenadeShrapnel {damagetype "Rifle"}
 
 actor FragGrenadeDropped : FragGrenadeThrown1 {speed 10}
 actor FragGrenadeThrown2 : FragGrenadeThrown1 {speed 22}
@@ -242,7 +242,7 @@ actor FragGrenadeThrown4 : FragGrenadeThrown1 {speed 34}
 actor FragGrenadeThrown5 : FragGrenadeThrown1 {speed 46}
 
 actor FragGrenadeThrown1Blue : FragGrenadeThrown1 {
-	damagetype "RifleBlue"
+	damagetype "Rifle"
 	states {
 	Death:
 		NULL A 0 A_NoGravity

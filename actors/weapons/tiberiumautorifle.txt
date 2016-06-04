@@ -112,7 +112,7 @@ actor TiberiumDart : FastProjectile {
 	height 8
 	speed 60
 	damage (9)
-	damagetype "RifleRed"
+	damagetype "Rifle"
 	renderstyle add
 	alpha 0.75
 	scale 0.15
@@ -132,7 +132,7 @@ actor TiberiumDart : FastProjectile {
 }
 
 actor TiberiumDartBlue : TiberiumDart {
-	DamageType "RifleBlue"
+	DamageType "Rifle"
 	states {
 	Death:
 		NULL A 0
@@ -146,7 +146,7 @@ actor TiberiumDartBlue : TiberiumDart {
 actor TiberiumDartExplosion {
 	PROJECTILE
 	+NOCLIP
-	DamageType "ChemicalRed"
+	DamageType "Chemical"
 	states {
 	Spawn:
 		NULL A 0
@@ -155,7 +155,7 @@ actor TiberiumDartExplosion {
 	}
 }
 
-actor TiberiumDartExplosionBlue : TiberiumDartExplosion {DamageType "ChemicalBlue"}
+actor TiberiumDartExplosionBlue : TiberiumDartExplosion {DamageType "Chemical"}
 
 actor TiberiumAutoriflePickup : CustomInventory 21084 {
 	inventory.pickupmessage "You got the Tiberium autorifle!"

@@ -198,12 +198,12 @@ actor KnifePuff : BulletPuff
   +NOGRAVITY
   -ALLOWPARTICLES
   +PUFFONACTORS
-  DamageType "FistRed"
+  DamageType "Fist"
 }
 
 actor KnifePuffBlue : KnifePuff
 {
-  DamageType "FistBlue"
+  DamageType "Fist"
 }
 
 actor KnifeDisarm

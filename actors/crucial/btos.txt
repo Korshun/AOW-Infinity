@@ -5,25 +5,25 @@ actor BaseTerminalOutside {
 	health 99999
 	radius 0
 	height 512
-	damagefactor "FistRed", 0.0
-	damagefactor "FistBlue", 0.0
-	damagefactor "BulletRed", 0.0
-	damagefactor "BulletBlue", 0.0
-	damagefactor "RifleRed", 0.0
-	damagefactor "RifleBlue", 0.0
-	damagefactor "ExplosionRed", 0.0
-	damagefactor "ExplosionBlue", 0.3
-	damagefactor "FireRed", 0.0
-	damagefactor "FireBlue", 0.2
-	damagefactor "ChemicalRed", 0.0
-	damagefactor "ChemicalBlue", 0.0
+	damagefactor "Fist", 0.0
+	damagefactor "Fist", 0.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Explosion", 0.0
+	damagefactor "Explosion", 0.3
+	damagefactor "Fire", 0.0
+	damagefactor "Fire", 0.2
+	damagefactor "Chemical", 0.0
+	damagefactor "Chemical", 0.0
 	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "LaserRed", 0.0
-	damagefactor "LaserBlue", 0.0
-	damagefactor "RazorWireRed", 0.0
-	damagefactor "RazorWireBlue", 0.0
-	damagefactor "ExplosionMechRed", 0.0
-	damagefactor "ExplosionMechBlue", 0.0
+	damagefactor "Laser", 0.0
+	damagefactor "Laser", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "ExplosionMech", 0.0
+	damagefactor "ExplosionMech", 0.0
 	damagefactor "TimeRed", 0.0
 	damagefactor "TimeBlue", 0.0
 	damagefactor "Disarm", 0.0
@@ -31,8 +31,8 @@ actor BaseTerminalOutside {
 	damagefactor "Superweapon", 0.0
 	damagefactor "SuperweaponIon", 0.5
 	damagefactor "Slime", 0.0 //Mines
-	damagefactor "MassDriverRed", 0.0
-	damagefactor "MassDriverBlue", 0.3
+	damagefactor "Artillery", 0.0
+	damagefactor "Artillery", 0.3
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 0.0
 	damagefactor "Deconstruction", 0.0
@@ -69,15 +69,15 @@ actor BaseTerminalOutside {
 		NULL A 0
 		NULL A 5 ACS_ExecuteAlways (aow_script652, 0, args[0], 1)
 		goto Idle
-	Pain.FireRed:
-	Pain.FireBlue:
+	Pain.Fire:
+	Pain.Fire:
 		NULL A 0
 		NULL A 5 ACS_ExecuteAlways (aow_script652, 0, args[0], random(0,1))
 		goto Idle
-	Pain.MassDriverRed:
-	Pain.MassDriverBlue:
-	Pain.ExplosionRed:
-	Pain.ExplosionBlue:
+	Pain.Artillery:
+	Pain.Artillery:
+	Pain.Explosion:
+	Pain.Explosion:
 		NULL A 0
 		NULL A 5 ACS_ExecuteAlways (aow_script652, 0, args[0], random(20,40))
 		goto Idle
@@ -90,14 +90,14 @@ actor BaseTerminalOutside {
 }
 
 actor BaseTerminalOutsideBlue : BaseTerminalOutside {
-	damagefactor "ExplosionRed", 0.3
-	damagefactor "ExplosionBlue", 0.0
-	damagefactor "FireRed", 0.2
-	damagefactor "FireBlue", 0.0
+	damagefactor "Explosion", 0.3
+	damagefactor "Explosion", 0.0
+	damagefactor "Fire", 0.2
+	damagefactor "Fire", 0.0
 	damagefactor "Superweapon", 0.5
 	damagefactor "SuperweaponIon", 0.0
-	damagefactor "MassDriverRed", 0.3
-	damagefactor "MassDriverBlue", 0.0
+	damagefactor "Artillery", 0.3
+	damagefactor "Artillery", 0.0
 	DesignatedTeam 0
 }
 

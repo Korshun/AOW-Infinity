@@ -16,65 +16,65 @@ actor DamageTypeIndicator {
 	Spawn:
 		PPCX A -1 BRIGHT
 		stop
-	Pain.FistRed:
-		NULL A 0 A_Print ("Damage type indicator hit with FistRed")
+	Pain.Fist:
+		NULL A 0 A_Print ("Damage type indicator hit with Fist")
 		goto Spawn
-	Pain.FistBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with FistBlue")
+	Pain.Fist:
+		NULL A 0 A_Print ("Damage type indicator hit with Fist")
 		goto Spawn
-	Pain.BulletRed:
-		NULL A 0 A_Print ("Damage type indicator hit with BulletRed")
+	Pain.Bullet:
+		NULL A 0 A_Print ("Damage type indicator hit with Bullet")
 		goto Spawn
-	Pain.BulletBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with BulletBlue")
+	Pain.Bullet:
+		NULL A 0 A_Print ("Damage type indicator hit with Bullet")
 		goto Spawn
-	Pain.RifleRed:
-		NULL A 0 A_Print ("Damage type indicator hit with RifleRed")
+	Pain.Rifle:
+		NULL A 0 A_Print ("Damage type indicator hit with Rifle")
 		goto Spawn
-	Pain.RifleBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with RifleBlue")
+	Pain.Rifle:
+		NULL A 0 A_Print ("Damage type indicator hit with Rifle")
 		goto Spawn
-	Pain.ExplosionRed:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionRed")
+	Pain.Explosion:
+		NULL A 0 A_Print ("Damage type indicator hit with Explosion")
 		goto Spawn
-	Pain.ExplosionBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionBlue")
+	Pain.Explosion:
+		NULL A 0 A_Print ("Damage type indicator hit with Explosion")
 		goto Spawn
-	Pain.FireRed:
-		NULL A 0 A_Print ("Damage type indicator hit with FireRed")
+	Pain.Fire:
+		NULL A 0 A_Print ("Damage type indicator hit with Fire")
 		goto Spawn
-	Pain.FireBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with FireBlue")
+	Pain.Fire:
+		NULL A 0 A_Print ("Damage type indicator hit with Fire")
 		goto Spawn
 	Pain.FireSpecial:
 		NULL A 0 A_Print ("Damage type indicator hit with FireSpecial")
 		goto Spawn
-	Pain.ChemicalRed:
-		NULL A 0 A_Print ("Damage type indicator hit with ChemicalRed")
+	Pain.Chemical:
+		NULL A 0 A_Print ("Damage type indicator hit with Chemical")
 		goto Spawn
-	Pain.ChemicalBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with ChemicalBlue")
+	Pain.Chemical:
+		NULL A 0 A_Print ("Damage type indicator hit with Chemical")
 		goto Spawn
 	Pain.ChemicalSpecial:
 		NULL A 0 A_Print ("Damage type indicator hit with ChemicalSpecial")
 		goto Spawn
-	Pain.LaserRed:
-		NULL A 0 A_Print ("Damage type indicator hit with LaserRed")
+	Pain.Laser:
+		NULL A 0 A_Print ("Damage type indicator hit with Laser")
 		goto Spawn
-	Pain.LaserBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with LaserBlue")
+	Pain.Laser:
+		NULL A 0 A_Print ("Damage type indicator hit with Laser")
 		goto Spawn
-	Pain.RazorWireRed:
-		NULL A 0 A_Print ("Damage type indicator hit with RazorWireRed")
+	Pain.RazorWire:
+		NULL A 0 A_Print ("Damage type indicator hit with RazorWire")
 		goto Spawn
-	Pain.RazorWireBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with RazorWireBlue")
+	Pain.RazorWire:
+		NULL A 0 A_Print ("Damage type indicator hit with RazorWire")
 		goto Spawn
-	Pain.ExplosionMechRed:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMechRed")
+	Pain.ExplosionMech:
+		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMech")
 		goto Spawn
-	Pain.ExplosionMechBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMechBlue")
+	Pain.ExplosionMech:
+		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMech")
 		goto Spawn
 	Pain.TimeRed:
 		NULL A 0 A_Print ("Damage type indicator hit with TimeRed")
@@ -91,11 +91,11 @@ actor DamageTypeIndicator {
 	Pain.SuperweaponIon:
 		NULL A 0 A_Print ("Damage type indicator hit with SuperweaponIon")
 		goto Spawn
-	Pain.MassDriverRed:
-		NULL A 0 A_Print ("Damage type indicator hit with MassDriverRed")
+	Pain.Artillery:
+		NULL A 0 A_Print ("Damage type indicator hit with Artillery")
 		goto Spawn
-	Pain.MassDriverBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with MassDriverBlue")
+	Pain.Artillery:
+		NULL A 0 A_Print ("Damage type indicator hit with Artillery")
 		goto Spawn
 	Pain.Mechstomp:
 		NULL A 0 A_Print ("Damage type indicator hit with Mechstomp")

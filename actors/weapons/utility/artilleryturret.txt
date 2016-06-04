@@ -3,10 +3,10 @@ actor Utility_ArtilleryTurretRed : Utility_TurretBase {
 	health 400
 	speed 0
 	painchance 50
-	damagefactor "ExplosionRed", 0.75
-  damagefactor "ExplosionBlue", 0.75
-  damagefactor "MassDriverRed", 0.75
-  damagefactor "MassDriverBlue", 0.75
+	damagefactor "Explosion", 0.75
+  damagefactor "Explosion", 0.75
+  damagefactor "Artillery", 0.75
+  damagefactor "Artillery", 0.75
 	activesound "turret/sight"
 	deathsound "weapons/rocklx"
 	states {
@@ -72,10 +72,10 @@ actor Utility_ArtilleryTurretBlue : Utility_TurretBase {
 	painchance 50
 	activesound "turret/sight"
 	deathsound "weapons/rocklx"
-	damagefactor "ExplosionRed", 0.75
-  damagefactor "ExplosionBlue", 0.75
-  damagefactor "MassDriverRed", 0.75
-  damagefactor "MassDriverBlue", 0.75
+	damagefactor "Explosion", 0.75
+  damagefactor "Explosion", 0.75
+  damagefactor "Artillery", 0.75
+  damagefactor "Artillery", 0.75
 	states {
 	Spawn:
 		CIGN FF 0 A_CheckSight("Death.Deconstruction")
@@ -137,7 +137,7 @@ actor ArtilleryTurretShell : ArtilleryShell {
 	obituary "%o was torn to shreds by a \cGRed\c- artillery turret."
 	speed 80
 	damage (160)
-	damagetype "ExplosionMechRed"
+	damagetype "ExplosionMech"
 	states {
 	Spawn:
 		NULL A 0
@@ -156,7 +156,7 @@ actor ArtilleryTurretShell : ArtilleryShell {
 }
 
 actor ArtilleryTurretShellBlue : ArtilleryTurretShell {
-	damagetype "ExplosionMechBlue"
+	damagetype "ExplosionMech"
 	states {
 	Death:
 		NULL A 0 A_NoGravity

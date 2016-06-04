@@ -60,24 +60,24 @@ actor IonCannonPlaced {
 	-SOLID
 	+THRUGHOST
 	Mass 99999999
-	damagefactor "FistRed", 0.0
-	damagefactor "FistBlue", 0.0
-	damagefactor "BulletRed", 0.0
-	damagefactor "BulletBlue", 0.0
-	damagefactor "RifleRed", 0.0
-	damagefactor "RifleBlue", 0.0
-	damagefactor "ExplosionRed", 0.0
-	damagefactor "ExplosionBlue", 0.0
-	damagefactor "FireRed", 0.0
-	damagefactor "FireBlue", 0.0
-	damagefactor "ChemicalRed", 0.0
-	damagefactor "ChemicalBlue", 0.0
-	damagefactor "LaserRed", 0.0
-	damagefactor "LaserBlue", 0.0
-	damagefactor "RazorWireRed", 0.0
-	damagefactor "RazorWireBlue", 0.0
-	damagefactor "ExplosionMechRed", 0.0
-	damagefactor "ExplosionMechBlue", 0.0
+	damagefactor "Fist", 0.0
+	damagefactor "Fist", 0.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Explosion", 0.0
+	damagefactor "Explosion", 0.0
+	damagefactor "Fire", 0.0
+	damagefactor "Fire", 0.0
+	damagefactor "Chemical", 0.0
+	damagefactor "Chemical", 0.0
+	damagefactor "Laser", 0.0
+	damagefactor "Laser", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "ExplosionMech", 0.0
+	damagefactor "ExplosionMech", 0.0
 	damagefactor "TimeRed", 0.0
 	damagefactor "TimeBlue", 0.0
 	damagefactor "Fist", 0.0
@@ -91,8 +91,8 @@ actor IonCannonPlaced {
 	damagefactor "Normal", 0.0
 	damagefactor "Laser", 0.0
 	damagefactor "Disarm", 1.0
-	damagefactor "MassDriverRed", 0.0
-	damagefactor "MassDriverBlue", 0.0
+	damagefactor "Artillery", 0.0
+	damagefactor "Artillery", 0.0
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 0.0
 	damagetype "SuperweaponIon"
@@ -226,24 +226,24 @@ actor NuclearStrikePlaced
   -SOLID
   +THRUGHOST
   Mass 99999999
-  damagefactor "FistRed", 0.0
-  damagefactor "FistBlue", 0.0
-  damagefactor "BulletRed", 0.0
-  damagefactor "BulletBlue", 0.0
-  damagefactor "RifleRed", 0.0
-  damagefactor "RifleBlue", 0.0
-  damagefactor "ExplosionRed", 0.0
-  damagefactor "ExplosionBlue", 0.0
-  damagefactor "FireRed", 0.0
-  damagefactor "FireBlue", 0.0
-  damagefactor "ChemicalRed", 0.0
-  damagefactor "ChemicalBlue", 0.0
-  damagefactor "LaserRed", 0.0
-  damagefactor "LaserBlue", 0.0
-  damagefactor "RazorWireRed", 0.0
-  damagefactor "RazorWireBlue", 0.0
-  damagefactor "ExplosionMechRed", 0.0
-  damagefactor "ExplosionMechBlue", 0.0
+  damagefactor "Fist", 0.0
+  damagefactor "Fist", 0.0
+  damagefactor "Bullet", 0.0
+  damagefactor "Bullet", 0.0
+  damagefactor "Rifle", 0.0
+  damagefactor "Rifle", 0.0
+  damagefactor "Explosion", 0.0
+  damagefactor "Explosion", 0.0
+  damagefactor "Fire", 0.0
+  damagefactor "Fire", 0.0
+  damagefactor "Chemical", 0.0
+  damagefactor "Chemical", 0.0
+  damagefactor "Laser", 0.0
+  damagefactor "Laser", 0.0
+  damagefactor "RazorWire", 0.0
+  damagefactor "RazorWire", 0.0
+  damagefactor "ExplosionMech", 0.0
+  damagefactor "ExplosionMech", 0.0
   damagefactor "TimeRed", 0.0
   damagefactor "TimeBlue", 0.0
   damagefactor "Fist", 0.0
@@ -257,8 +257,8 @@ actor NuclearStrikePlaced
   damagefactor "Normal", 0.0
   damagefactor "Laser", 0.0
   damagefactor "Disarm", 1.0
-  damagefactor "MassDriverRed", 0.0
-  damagefactor "MassDriverBlue", 0.0
+  damagefactor "Artillery", 0.0
+  damagefactor "Artillery", 0.0
   damagefactor "Mechstomp", 0.0
   damagefactor "Monster", 0.0
   damagetype "Superweapon"

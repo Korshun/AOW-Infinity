@@ -105,7 +105,7 @@ actor GatlingGun : AOWWeapon replaces Minigun 21045 {
 actor ExplosionPuff {
 	+PUFFONACTORS
 	+CLIENTSIDEONLY
-	damagetype "ExplosionRed"
+	damagetype "Explosion"
 	states {
 	Spawn:
 		NULL A 0
@@ -114,10 +114,10 @@ actor ExplosionPuff {
 	}
 }
 
-actor ExplosionPuffBlue : ExplosionPuff {damagetype "ExplosionBlue"}
+actor ExplosionPuffBlue : ExplosionPuff {damagetype "Explosion"}
 
 actor ExplosionPuffSmall : ExplosionPuff {
-	damagetype "ExplosionRed"
+	damagetype "Explosion"
 	states {
 	Spawn:
 		NULL A 0
@@ -125,4 +125,4 @@ actor ExplosionPuffSmall : ExplosionPuff {
 		stop
 	}
 }
-actor ExplosionPuffSmallBlue : ExplosionPuffSmall {damagetype "ExplosionBlue"}
+actor ExplosionPuffSmallBlue : ExplosionPuffSmall {damagetype "Explosion"}

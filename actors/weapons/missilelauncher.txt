@@ -124,7 +124,7 @@ actor HeavyMissile {
 	damage (100)
 	obituary "$OB_MISSILELAUNCHER" // "%o was blown out of %p boots by %k's missile."
 	deathsound "weapons/rocklx"
-	damagetype "ExplosionRed"
+	damagetype "Explosion"
 	decal "Scorch"
 	states {
 	Spawn:
@@ -144,7 +144,7 @@ actor HeavyMissile {
 }
 
 actor HeavyMissileBlue : HeavyMissile {
-	damagetype "ExplosionBlue"
+	damagetype "Explosion"
 	states {
 	Spawn:
 		MISB A 2 bright
@@ -178,7 +178,7 @@ actor HeavyHomingMissile : HeavyMissile {
 actor HeavyHomingMissileBlue : HeavyMissile {
 	+SEEKERMISSILE
 	obituary "$OB_SEEKERMISSILE" // "%o was found by %k's seeker missile."
-	damagetype "ExplosionBlue"
+	damagetype "Explosion"
 	states {
 	Spawn:
 		MISB A 2 bright

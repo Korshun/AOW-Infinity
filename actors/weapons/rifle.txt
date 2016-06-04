@@ -88,6 +88,6 @@ actor RifleGrenadeAmmo : Ammo {
 }
 
 actor RifleGrenade : GrenadeGrenade {obituary "%o was popped by %k's rifle grenade."}
-actor RifleGrenadeBlue : RifleGrenade {damagetype "RifleBlue"}
-actor RiflePuff : HHBulletPuff {DamageType "RifleRed"}
-actor RiflePuffBlue : HHBulletPuff {DamageType "RifleBlue"}
+actor RifleGrenadeBlue : RifleGrenade {damagetype "Rifle"}
+actor RiflePuff : HHBulletPuff {DamageType "Rifle"}
+actor RiflePuffBlue : HHBulletPuff {DamageType "Rifle"}

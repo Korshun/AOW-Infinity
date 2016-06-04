@@ -278,7 +278,7 @@ actor ObeliskShotRed : FastProjectile
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
-	DamageType "ExplosionRed"
+	DamageType "Explosion"
 	translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
 	states
 	{
@@ -332,7 +332,7 @@ actor ObeliskShotBlue : FastProjectile
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
-	DamageType "ExplosionBlue"
+	DamageType "Explosion"
 	translation "112:120=200:207", "121:127=241:247"
 	states
 	{

@@ -126,7 +126,7 @@ actor PlasmaCannonBall {
 	renderstyle Add
 	alpha 0.75
 	deathsound "plasmacannon/explode"
-	DamageType "ExplosionRed"
+	DamageType "Explosion"
 	Scale 1.5
 	translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
 	states {
@@ -176,7 +176,7 @@ actor PlasmaCannonBallSmall : PlasmaCannonBall {
 actor PlasmaCannonBallBlue : PlasmaCannonBall {
 	translation "112:120=200:207", "121:127=241:247"
 	obituary "$OB_PLASMACANNON_BLUE" // "%o was annihilated by %k's \cNPlasma Cannon."
-	DamageType "ExplosionBlue"
+	DamageType "Explosion"
 	states {
 	Death:
 		PLE1 A 4
@@ -193,7 +193,7 @@ actor PlasmaCannonBallBlue : PlasmaCannonBall {
 actor PlasmaCannonBallSmallBlue : PlasmaCannonBallSmall {
 	translation "112:120=200:207", "121:127=241:247"
 	obituary "$OB_PLASMACANNON_ALT_BLUE" // "%o couldn't escape %k's \cnPlasma Cannon."
-	DamageType "ExplosionBlue"
+	DamageType "Explosion"
 }
 
 // =========================================
@@ -203,7 +203,7 @@ actor PlasmaFlameDecay {
 	renderstyle None
 	+NOBLOCKMAP
 	+NOGRAVITY
-	DamageType "FireRed"
+	DamageType "Fire"
 	obituary "$OB_FIREDECAY" // "%o burns in %k's firestorm."
 	states {
 	Spawn:
@@ -230,7 +230,7 @@ actor PlasmaFlameDecayFX {
 	}
 }
 
-actor PlasmaFlameDecayBlue : PlasmaFlameDecay {damagetype "FireBlue"}
+actor PlasmaFlameDecayBlue : PlasmaFlameDecay {damagetype "Fire"}
 
 actor PlasmaFlameCluster {
 	+NOBLOCKMAP +NOGRAVITY
