@@ -28,6 +28,7 @@ script 20 (int Team) {
 	GiveInventory ("TimedC4", 1);
 	GiveInventory ("TimedC4Count", 1);
 	SetFragGrenades (1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	SetWeapon("SubMachineGun");
 	ACS_ExecuteAlways(91, 0);
@@ -101,6 +102,7 @@ script 22 (int Team) {
 	GiveInventory("HandgunAmmo",90);
 	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -147,6 +149,7 @@ script 23 (int Team) {
 	GiveInventory ("ProxyMine", 4);
 	GiveInventory ("ProxyMineCount", 4);
 	SetFragGrenades (2);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("RepairGunUpgrade",1);
 	GiveInventory("RepairGun",1);
@@ -265,6 +268,7 @@ script 26 (int Team) {
 	GiveInventory("HandgunAmmo", 90);
 	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun", 1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun", 1);
 	GiveInventory("TimedC4", 1);
 	GiveInventory("TimedC4Count", 1);
@@ -502,6 +506,7 @@ script 34 (int Team) {
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("ChemicalAmmo",200);
 	GiveInventory("ChemicalGrenadeAmmo",4);
@@ -548,6 +553,7 @@ script 35 (int Team) {
 	GiveInventory("HandgunAmmo",60);
 	GiveInventory("HandgunClip", 0x7fffffff);
 	GiveInventory("Handgun",1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
@@ -1616,6 +1622,7 @@ script 63 (int Team) {
 	GiveInventory("TimedC4Count",1);
 	SetFragGrenades (2);
 	GiveInventory("MachineGunAmmo",160);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("MachineGun",1);
 	SetWeapon("MachineGun");
@@ -1664,6 +1671,7 @@ script 64 (int Team) {
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
 	SetFragGrenades (1);
+	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_HARVESTER);
