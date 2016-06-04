@@ -39,7 +39,7 @@ OB_PLASMACANNON_ALT_BLUE = "%o couldn't escape %k's \cnplasma cannon.";
 OB_RIFLE = "%o was crippled by %k's rifle.";
 OB_SEEKERMISSILE = "%o was found by %k's seeker missile.";
 OB_SNIPER = "%o found %k's bullet in %p head.";
-OB_SUBBY = "%o was tickled by %k's sub-machinegun.";
+OB_SMG = "%o was tickled by %k's sub-machinegun.";
 
 OB_ORCA = "%o was pinned down by %k's Orca.";
 OB_RAVEN = "%o was pecked by %k's Raven.";
@@ -61,4 +61,4 @@ OB_BOMBPACK_WTF = "%o couldn't stand %k running around screaming.";
 
 // Weapon names
 TAG_HANDGUN = "Handgun";
-TAG_SUBBY = "Sub-Machine Gun";
+TAG_SMG = "Sub-Machine Gun";

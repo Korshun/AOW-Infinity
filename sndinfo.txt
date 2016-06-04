@@ -4,9 +4,9 @@ misc/nope			nope
 
 pistol/fire			dspistol
 $rolloff 			100mm/fire	500 2000
-subby/fire			dssubby
-$volume subby/fire 0.6
-$limit				subby/fire	0
+smg/fire			dssmg
+$volume smg/fire 0.6
+$limit				smg/fire	0
 rifle/fire			dsrifle
 rifle/reload			dsmssgr2
 ak47/fire			dsmachgn
