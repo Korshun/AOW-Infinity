@@ -20,7 +20,6 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	Weapon.AmmoType2 "HandgunAmmo"
 	Weapon.AmmoGive2 10
 	
-	+WEAPON.AMMO_OPTIONAL
 	+WEAPON.WIMPY_WEAPON
 	+WEAPON.NOAUTOFIRE
 	

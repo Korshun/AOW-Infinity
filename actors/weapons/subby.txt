@@ -17,8 +17,6 @@ actor SubMachineGun : AOWWeapon 21043
 	Weapon.AmmoType2 "HandgunAmmo"
 	Weapon.AmmoGive2 30
 	
-	+WEAPON.AMMO_OPTIONAL
-	+WEAPON.ALT_AMMO_OPTIONAL
 	+WEAPON.WIMPY_WEAPON
 	
 	AttackSound "subby/fire"

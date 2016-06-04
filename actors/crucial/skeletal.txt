@@ -2,6 +2,8 @@
 actor AOWWeapon : Weapon {
 	+NO_AUTO_SWITCH
 	+NOAUTOAIM
+	+WEAPON.AMMO_OPTIONAL
+	+WEAPON.ALT_AMMO_OPTIONAL
 	Weapon.Kickback 50
 	weapon.selectionorder 9999
 	states {
