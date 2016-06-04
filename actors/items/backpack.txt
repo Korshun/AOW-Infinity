@@ -10,7 +10,7 @@ actor AmmoPack : CustomInventory replaces Backpack {
 		BPAK A -1
 		stop
 	Pickup:
-		TNT1 A 0 A_GiveInventory ("NewClipAmmo", 20)
+		TNT1 A 0 A_GiveInventory ("HandgunAmmo", 20)
 		TNT1 A 0 A_GiveInventory ("RifleAmmo", 5)
 		TNT1 A 0 A_GiveInventory ("RifleGrenadeAmmo", 1)
 		TNT1 A 0 A_GiveInventory ("MachineGunAmmo", 20)

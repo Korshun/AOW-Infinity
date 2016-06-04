@@ -12,10 +12,10 @@ actor SubMachineGun : AOWWeapon 21043 {
 	attacksound "subby/fire"
 	weapon.selectionorder 15
 	weapon.kickback 80
-	weapon.ammotype "NewClipAmmo"
+	weapon.ammotype "HandgunAmmo"
 	weapon.ammouse 1
 	weapon.ammogive 15
-	weapon.ammotype2 "NewClipAmmo"
+	weapon.ammotype2 "HandgunAmmo"
 	weapon.ammouse2 1
 	weapon.preferredskin "MarineSMG"
 	states {

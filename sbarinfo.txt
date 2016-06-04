@@ -89,7 +89,7 @@ statusbar normal
 	drawswitchableimage YellowCard && YellowSkull, "nullimage", "STKEYS1", "STKEYS4", "STKEYS7", 239, 181;
 	drawswitchableimage RedCard && RedSkull, "nullimage", "STKEYS2", "STKEYS5", "STKEYS8", 239, 191;
 
-	drawnumber 3, INDEXFONT, untranslated, ammo NewClipAmmo, 288, 173;
+	drawnumber 3, INDEXFONT, untranslated, ammo HandgunAmmo, 288, 173;
 	drawnumber 3, INDEXFONT, untranslated, ammo RifleAmmo, 288, 179;
 	drawnumber 3, INDEXFONT, untranslated, ammo MissileAmmo, 288, 185;
 	drawnumber 3, INDEXFONT, untranslated, ammo LaserRifleAmmo, 288, 191;
