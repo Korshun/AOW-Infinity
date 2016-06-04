@@ -7,7 +7,7 @@ actor PowerPlantSmokeGenerator 21406 {
 		TNT1 A 70 A_SpawnItemEx ("PowerPlantSmokeGeneratorFX")
 		loop
 	Death:
-		TNT1 A -1
+		NULL A -1
 		stop
 	Raise:
 		NULL A 0

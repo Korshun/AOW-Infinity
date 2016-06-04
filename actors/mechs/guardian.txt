@@ -106,7 +106,7 @@ actor Guardian : MechPlayer_Base {
 		TERM "[" 2 Bright A_SetTranslucent(0.10,1)
 		TERM "[" 2 Bright A_SetTranslucent(0.05,1)
 		TERM "[" 2 Bright A_SetTranslucent(0.00,1)
-		TNT1 A -1
+		NULL A -1
 		stop
 	Death.IonExplosion:
 		NULL A 0
@@ -350,7 +350,7 @@ actor EjectedGuardian {
 		TERM "[" 2 Bright A_SetTranslucent(0.10,1)
 		TERM "[" 2 Bright A_SetTranslucent(0.05,1)
 		TERM "[" 2 Bright A_SetTranslucent(0.00,1)
-		TNT1 A -1
+		NULL A -1
 		stop
 	}
 }

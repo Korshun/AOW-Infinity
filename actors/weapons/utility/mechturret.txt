@@ -164,7 +164,7 @@ actor MechTurretProjectile : FastProjectile {
 	DamageType "ExplosionMechRed"
 	states {
 	Spawn:
-		TNT1 A -1
+		NULL A -1
 		stop
 	Death:
 		TNT1 A 5 A_SpawnItemEx ("ExplosionPuffSmall")

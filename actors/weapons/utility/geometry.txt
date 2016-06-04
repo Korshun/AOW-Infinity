@@ -108,7 +108,7 @@ actor SandbagWallSideBlocker {
 	mass 0x7FFFFFFF
 	states {
 	Spawn:
-		TNT1 A -1
+		NULL A -1
 		stop
 	}
 }

@@ -154,7 +154,7 @@ actor ScavengerEject : CustomInventory  {
 	inventory.icon "ICO_EJCT"
 	states {
 	Spawn:
-		TNT1 A -1
+		NULL A -1
 		stop
 	Use:
 		NULL A 0 ACS_ExecuteAlways(697, 0, 7)
