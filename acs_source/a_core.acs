@@ -99,12 +99,12 @@ script 999 OPEN {
 function void ReloadSettings (void) {
 	// ==================================
 	// DMFLAGS
-	if (!GetCVAR ("sv_doubleammo")) ConsoleCommand ("sv_doubleammo 1");
-	if (!GetCVAR ("sv_nofov")) ConsoleCommand ("sv_nofov 1");
-	if (!GetCVAR ("alwaysapplydmflags")) ConsoleCommand ("alwaysapplydmflags 1");
-	if (!GetCVAR ("sv_weapondrop")) ConsoleCommand ("sv_weapondrop 1");
-	if (!GetCVAR ("sv_itemrespawn")) ConsoleCommand ("sv_itemrespawn 1");
-	if (!GetCVAR ("compat_limited_airmovement")) ConsoleCommand ("compat_limited_airmovement 1");
+	ConsoleCommand("sv_doubleammo 0");
+	ConsoleCommand("sv_nofov 1");
+	ConsoleCommand("sv_weapondrop 1");
+	ConsoleCommand("sv_itemrespawn 1");
+	ConsoleCommand("compat_limited_airmovement 1");
+	ConsoleCommand("alwaysapplydmflags 1");
 	
 	// [Dusk] the engine assumes that players stay dead for at least a second
 	if (GetCVAR ("compat_instantrespawn")) ConsoleCommand ("compat_instantrespawn 0");
