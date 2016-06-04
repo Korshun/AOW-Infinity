@@ -116,7 +116,7 @@ actor ExplosionPuff {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 14 A_SpawnItemEx ("ExplosionSmall", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
+		NULL A 14 A_SpawnItemEx ("ExplosionSmall", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
 		stop
 	}
 }
@@ -128,7 +128,7 @@ actor ExplosionPuffSmall : ExplosionPuff {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 14 A_SpawnItemEx ("ExplosionSmaller", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
+		NULL A 14 A_SpawnItemEx ("ExplosionSmaller", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
 		stop
 	}
 }

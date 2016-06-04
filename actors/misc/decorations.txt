@@ -354,7 +354,7 @@ actor A14RedTowerFX 27500 {
 	+NOINTERACTION
 	states {
 	Spawn:
-		TNT1 A 5 A_SpawnItemEx ("A14RedTowerFX2", 0,0,0,0,0,7)
+		NULL A 5 A_SpawnItemEx ("A14RedTowerFX2", 0,0,0,0,0,7)
 		wait
 	}
 }
@@ -379,7 +379,7 @@ actor A14BlueTowerFX 27501 {
 	+NOINTERACTION
 	states {
 	Spawn:
-		TNT1 A 5 A_SpawnItemEx ("A14BlueTowerFX2", 0,0,0,0,0,7)
+		NULL A 5 A_SpawnItemEx ("A14BlueTowerFX2", 0,0,0,0,0,7)
 		wait
 	}
 }

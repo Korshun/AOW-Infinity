@@ -109,14 +109,14 @@ actor ScavengerExplosion {
 		NULL A 0
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge")
 		NULL A 0 A_CustomMissile ("MechExplosionSmall", 48)
-		TNT1 A 8 A_PlaySound ("weapons/rocklx")
+		NULL A 8 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge", 12, 16, 32)
-		TNT1 A 8 A_PlaySound("weapons/rocklx")
+		NULL A 8 A_PlaySound("weapons/rocklx")
 		TNT1 AAAAA 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(64,120), random(-5,5), random(-5,5), random(9,14), 0, 0, 64)
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge", 14, 32, 64)
-		TNT1 A 8 A_PlaySound ("weapons/rocklx")
+		NULL A 8 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge", 26, 48, 96)
-		TNT1 A 8 A_PlaySound ("weapons/rocklx")
+		NULL A 8 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge", 38, 72, 128)
 		NULL A 0 A_PlaySound ("weapons/rocklx")
 		stop
@@ -233,7 +233,7 @@ actor ScavengerWeapons : AOWWeapon {
 	Deselect:
 		NULL A 0 A_JumpIfHealthLower(1,1)
 		goto Ready
-		TNT1 A 1 A_Lower
+		NULL A 1 A_Lower
 		wait
 	Select:
 		NULL A 0
@@ -275,8 +275,8 @@ actor ScavengerWeapons : AOWWeapon {
 		MHUD A 4
 		goto Ready
 	Flash:
-		TNT1 A 2 Bright A_Light2
-		TNT1 A 1 Bright A_Light1
+		NULL A 2 Bright A_Light2
+		NULL A 1 Bright A_Light1
 		goto LightDone
 	Spawn:
 		NULL A 0

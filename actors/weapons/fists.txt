@@ -197,7 +197,7 @@ actor FistHit {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 1 A_PlaySound("fist/hit")
+		NULL A 1 A_PlaySound("fist/hit")
 		stop
 	}
 }
@@ -206,7 +206,7 @@ actor FistWall : FistHit {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 1 A_PlaySound("fist/wall")
+		NULL A 1 A_PlaySound("fist/wall")
 		stop
 	}
 }

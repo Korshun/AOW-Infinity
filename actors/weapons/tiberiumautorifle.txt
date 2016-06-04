@@ -56,8 +56,8 @@ actor TiberiumAutorifleWeak : AOWWeapon {
 		NULL A 0 A_GiveInventory ("TE21Burst", 3)
 		goto Ready
 	Flash:
-		TNT1 A 2 A_Light1
-		TNT1 A 2 A_Light2
+		NULL A 2 A_Light1
+		NULL A 2 A_Light2
 		NULL A 0 A_Light0
 		stop
 	Spawn:
@@ -132,7 +132,7 @@ actor TiberiumDart : FastProjectile {
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx ("TiberiumDartExplosion", -1)
-		TNT1 A 5 A_SpawnItemEx ("ChemicalExplosionSmall")
+		NULL A 5 A_SpawnItemEx ("ChemicalExplosionSmall")
 		NULL A 0 A_SpawnItemEx("AnthraxDecay", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 160)
 		stop
 	}
@@ -144,7 +144,7 @@ actor TiberiumDartBlue : TiberiumDart {
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx ("TiberiumDartExplosionBlue", -1)
-		TNT1 A 5 A_SpawnItemEx ("ChemicalExplosionSmall")
+		NULL A 5 A_SpawnItemEx ("ChemicalExplosionSmall")
 		NULL A 0 A_SpawnItemEx("AnthraxDecayBlue", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 160)
 		stop
 	}
@@ -157,7 +157,7 @@ actor TiberiumDartExplosion {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 5 A_Explode(6, 64)
+		NULL A 5 A_Explode(6, 64)
 		stop
 	}
 }

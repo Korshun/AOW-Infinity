@@ -145,7 +145,7 @@ actor HeavyMissile {
 		NULL A 0 A_Explode (190, 256)
 		//TNT1 A 0 A_RadiusThrust(96,128,0)
 		NULL A 0 A_SpawnItemEx ("HeavyMissileQuake")
-		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
+		NULL A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
 }
@@ -208,11 +208,11 @@ actor HeavyMissileQuake {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 5 Radius_Quake (5, 5, 0, 7, 0)
-		TNT1 A 4 Radius_Quake (4, 4, 0, 7, 0)
-		TNT1 A 3 Radius_Quake (3, 3, 0, 7, 0)
-		TNT1 A 2 Radius_Quake (2, 2, 0, 7, 0)
-		TNT1 A 1 Radius_Quake (1, 1, 0, 7, 0)
+		NULL A 5 Radius_Quake (5, 5, 0, 7, 0)
+		NULL A 4 Radius_Quake (4, 4, 0, 7, 0)
+		NULL A 3 Radius_Quake (3, 3, 0, 7, 0)
+		NULL A 2 Radius_Quake (2, 2, 0, 7, 0)
+		NULL A 1 Radius_Quake (1, 1, 0, 7, 0)
 		stop
 	}
 }

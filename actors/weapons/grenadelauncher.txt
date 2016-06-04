@@ -107,7 +107,7 @@ actor GrenadeGrenade {
 		NULL A 0 bright A_NoGravity
 		NULL A 0 bright A_Explode(55,128,1)
 		NULL A 0 bright A_RadiusThrust(384,128,1) //Weeee
-		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
+		NULL A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
 }
@@ -123,7 +123,7 @@ actor GrenadeBounce : GrenadeGrenade {
 		NULL A 0 bright A_NoGravity
 		NULL A 0 bright A_Explode (40, 96, 1)
 		NULL A 0 bright A_RadiusThrust(384,128,1) //Wee
-		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
+		NULL A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
 }
@@ -162,6 +162,6 @@ actor GrenadeBounceBlue : GrenadeBounce {DamageType "RifleBlue"}
 		GREN A 1 offset (48,125)
 		GREN A 1 offset (56,154)
 		NULL A 0 offset (1,32)
-		TNT1 A 1 A_Lower
+		NULL A 1 A_Lower
 		Wait
 */
