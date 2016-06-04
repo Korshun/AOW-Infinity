@@ -29,7 +29,7 @@ actor Boomstick : AOWWeapon {
 	Fire:
 		SHTG A 3
 		NULL A 0 A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire.Blue")
 		NULL A 0 Bright A_FireBullets (5.5, 5.5, 2, 6, "HandgunPuff",0,350)
 		SHTG A 2 Bright A_FireBullets (5.5, 5.5, 6, 4, "HandgunPuff",1,1000)
 		SHTG A 3 Bright
@@ -39,7 +39,7 @@ actor Boomstick : AOWWeapon {
 		SHTG A 3
 		SHTG A 7 A_ReFire
 		goto Ready
-	Fire:
+	Fire.Blue:
 		NULL A 0 Bright A_FireBullets (5.5, 5.5, 2, 6, "HandgunPuffBlue",0,350)
 		SHTG A 2 Bright A_FireBullets (5.5, 5.5, 6, 4, "HandgunPuffBlue",1,1000)
 		goto Fire+5
