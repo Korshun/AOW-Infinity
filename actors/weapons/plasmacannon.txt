@@ -32,13 +32,13 @@ actor PlasmaCannon : AOWWeapon {
 		PC2G AAABBBCCCDDD 1 A_Raise
 		loop
 	Fire:
-		PC2G A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PC2G A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		PC2G A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PC2G EFG 6 bright
-		PC2G H 0 bright A_GunFlash
-		PC2G H 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PC2G H 0 bright A_LightInverse
+		NULL A 0 bright A_GunFlash
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 bright A_LightInverse
 		PC2G H 2 bright A_FireCustomMissile("PlasmaCannonBall")
 		PC2G H 3 bright A_Light2
 		PC2G I 2 bright A_Light1
@@ -48,13 +48,13 @@ actor PlasmaCannon : AOWWeapon {
 		PC2G G 5 A_Refire
 		goto Ready
 	AltFire:
-		PC2G A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PC2G A 0 A_JumpIfInventory("IsBlue",1,"AltFireBlue")
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"AltFireBlue")
 		PC2G A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PC2G EFG 5 bright
-		PC2G H 0 bright A_GunFlash
-		PC2G H 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PC2G H 0 bright A_LightInverse
+		NULL A 0 bright A_GunFlash
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 bright A_LightInverse
 		PC2G H 2 bright A_FireCustomMissile("PlasmaCannonBallSmall")
 		PC2G H 2 bright A_Light2
 		PC2G I 2 bright A_Light1
@@ -66,9 +66,9 @@ actor PlasmaCannon : AOWWeapon {
 	FireBlue:
 		PLCG A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PLCG EFG 6 bright
-		PLCG H 0 bright A_GunFlash
-		PLCG H 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PLCG H 0 bright A_LightInverse
+		NULL A 0 bright A_GunFlash
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 bright A_LightInverse
 		PLCG H 2 bright A_FireCustomMissile("PlasmaCannonBallBlue")
 		PLCG H 3 bright A_Light2
 		PLCG I 2 bright A_Light1
@@ -80,9 +80,9 @@ actor PlasmaCannon : AOWWeapon {
 	AltFireBlue:
 		PLCG A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PLCG EFG 5 bright
-		PLCG H 0 bright A_GunFlash
-		PLCG H 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
-		PLCG H 0 bright A_LightInverse
+		NULL A 0 bright A_GunFlash
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 bright A_LightInverse
 		PLCG H 2 bright A_FireCustomMissile("PlasmaCannonBallSmallBlue")
 		PLCG H 2 bright A_Light2
 		PLCG I 2 bright A_Light1
@@ -92,7 +92,7 @@ actor PlasmaCannon : AOWWeapon {
 		PLCG G 5 A_Refire
 		goto Ready
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -105,7 +105,7 @@ actor PlasmaCannonAmmo : Ammo {
 	+IGNORESKILL
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -137,7 +137,7 @@ actor PlasmaCannonBall {
 		PLE1 A 4
 		PLE1 A 4 bright A_Explode (300, 192)
 		PLE1 BBBB 2 bright A_SpawnItemEx("PlasmaFlameDecay", random(-32,32), random(-32,32), random(-32,32),0,0,0,0, SXF_TRANSFERTRANSLATION)
-		PLE1 C 0 A_SpawnItemEx ("PlasmaFlameCluster", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
+		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
 		PLE1 C 4 bright
 		PLE1 C 4 bright A_Explode (30, 550, 0)
 		PLE1 DEF 8 bright
@@ -157,9 +157,9 @@ actor PlasmaCannonBallSmall : PlasmaCannonBall {
 	Scale 0.9
 	states {
 	Spawn:
-		PLS1 A 0 bright A_Tracer2
+		NULL A 0 bright A_Tracer2
 		PLS1 ABA 1 bright A_SpawnItemEx("PlasmaFlameTailSmall", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
-		PLS1 B 0 bright A_Tracer2
+		NULL A 0 bright A_Tracer2
 		PLS1 BAB 1 bright A_SpawnItemEx("PlasmaFlameTailSmall", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
 		loop
 	Death:
@@ -182,7 +182,7 @@ actor PlasmaCannonBallBlue : PlasmaCannonBall {
 		PLE1 A 4
 		PLE1 A 4 bright A_Explode (300, 192)
 		PLE1 BBBB 2 bright A_SpawnItemEx("PlasmaFlameDecayBlue", random(-32,32), random(-32,32), random(-32,32),0,0,0,0, SXF_TRANSFERTRANSLATION)
-		PLE1 C 0 A_SpawnItemEx ("PlasmaFlameCluster", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
+		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
 		PLE1 C 4 bright
 		PLE1 C 4 bright A_Explode (30, 550, 0)
 		PLE1 DEF 8 bright
@@ -207,8 +207,8 @@ actor PlasmaFlameDecay {
 	obituary "$OB_FIREDECAY" // "%o burns in %k's firestorm."
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("PlasmaFlameDecayFX", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("PlasmaFlameDecayFX", 0,0,0,0,0,0,0, SXF_TRANSFERTRANSLATION)
 		TNT1 AAAAAAAAAAAAAAAAAAAAAA 15 BRIGHT A_Explode(8,96,0)
 		stop
 	}
@@ -220,12 +220,12 @@ actor PlasmaFlameDecayFX {
 	reactiontime 66
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 5 A_SpawnItemEx("PlasmaFlame", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, SXF_TRANSFERTRANSLATION, 32)
-		TNT1 A 0 A_Countdown
+		NULL A 0 A_Countdown
 		loop
 	Death:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -238,12 +238,12 @@ actor PlasmaFlameCluster {
 	reactiontime 60
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx("PlasmaFlame", 0, 0, 0, random(-9,9), random(-10,10), random(-10,10), 0, SXF_TRANSFERTRANSLATION)
-		TNT1 A 0 A_Countdown
+		NULL A 0
+		NULL A 0 A_SpawnItemEx("PlasmaFlame", 0, 0, 0, random(-9,9), random(-10,10), random(-10,10), 0, SXF_TRANSFERTRANSLATION)
+		NULL A 0 A_Countdown
 		loop
 	Death:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -254,8 +254,8 @@ actor PlasmaFlameTail {
 	+NOGRAVITY +NOINTERACTION
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("PlasmaFlame", -8, 0, 0, -6, random(-2, -3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("PlasmaFlame", -8, 0, 0, -6, random(-2, -3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
 		TNT1 A 1 A_SpawnItemEx ("PlasmaFlame", -8, 0, 0, -6, random(2, 3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
 		stop
 	}
@@ -264,8 +264,8 @@ actor PlasmaFlameTail {
 actor PlasmaFlameTailSmall : PlasmaFlameTail {
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("PlasmaFlameSmall", -8, 0, 0, -5, random(-2, -3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("PlasmaFlameSmall", -8, 0, 0, -5, random(-2, -3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
 		TNT1 A 1 A_SpawnItemEx ("PlasmaFlameSmall", -8, 0, 0, -5, random(2, 3), random(-1, 1), 0, SXF_TRANSFERTRANSLATION)
 		stop
 	}
@@ -285,7 +285,7 @@ actor PlasmaFlame {
 	scale 1.2
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		PLFX ABCDEFG 3 bright
 		PLFX FG 2 bright
 		stop
@@ -296,7 +296,7 @@ actor PlasmaFlameSmall : PlasmaFlame {
 	scale 0.8
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		PLFX ABCDEFG 2 bright
 		stop
 	}

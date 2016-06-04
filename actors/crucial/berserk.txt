@@ -36,10 +36,10 @@ actor BerserkSwitch : PowerupGiver {
 	Inventory.MaxAmount 1
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	Pickup:
-		TNT1 A 0 A_GiveInventory ("BerserkHue", 1)
+		NULL A 0 A_GiveInventory ("BerserkHue", 1)
 		TNT1 A 5
 		stop
 	}

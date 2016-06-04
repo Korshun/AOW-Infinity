@@ -13,27 +13,27 @@ actor Unarmed : AOWWeapon {
 		PUNG A 1 A_WeaponReady
 		loop
 	Deselect:
-		PUNG A 0 A_Lower
+		NULL A 0 A_Lower
 		PUNG A 1 A_Lower
 		loop
 	Select:
-		PUNG A 0 A_JumpIfInventory ("PowerBerserk", 1, "Remove")
-		PUNG A 0 A_JumpIfInventory ("FistReplaced", 1, "ReplaceCleanup")
-		PUNG A 0 A_Raise
+		NULL A 0 A_JumpIfInventory ("PowerBerserk", 1, "Remove")
+		NULL A 0 A_JumpIfInventory ("FistReplaced", 1, "ReplaceCleanup")
+		NULL A 0 A_Raise
 		PUNG A 1 A_Raise
 		goto Select+2
 	Fire:
-		PUNG B 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		PUNG B 2 A_JumpIfInventory("FistSwitch",1,6)
 		PUNG C 2
-		PUNG B 0 A_GiveInventory("FistSwitch",1)
+		NULL A 0 A_GiveInventory("FistSwitch",1)
 		PUNG D 5 A_CustomPunch(35,1,1,"FistPuff",64)
 		PUNG C 2
 		PUNG B 5 A_ReFire
 		goto Ready
 		PUNG E 2
 		PUNG F 2
-		PUNG B 0 A_TakeInventory("FistSwitch",1)
+		NULL A 0 A_TakeInventory("FistSwitch",1)
 		PUNG G 5 A_CustomPunch(35,1,1,"FistPuff",64)
 		PUNG F 2
 		PUNG E 5 A_ReFire
@@ -41,30 +41,30 @@ actor Unarmed : AOWWeapon {
 	FireBlue:
 		PUNG B 2 A_JumpIfInventory("FistSwitch",1,6)
 		PUNG C 2
-		PUNG B 0 A_GiveInventory("FistSwitch",1)
+		NULL A 0 A_GiveInventory("FistSwitch",1)
 		PUNG D 5 A_CustomPunch(35,1,1,"FistPuffBlue",64)
 		PUNG C 2
 		PUNG B 5 A_ReFire
 		goto Ready
 		PUNG E 2
 		PUNG F 2
-		PUNG B 0 A_TakeInventory("FistSwitch",1)
+		NULL A 0 A_TakeInventory("FistSwitch",1)
 		PUNG G 5 A_CustomPunch(35,1,1,"FistPuffBlue",64)
 		PUNG F 2
 		PUNG E 5 A_ReFire
 		goto Ready
 	Remove:
 		PUNG A 1 offset (1,32)
-		PUNG A 0 A_GiveInventory ("BerserkFists", 1)
-		PUNG A 0 A_SelectWeapon ("BerserkFists")
-		PUNG A 0 A_GiveInventory ("FistReplaced", 1)
+		NULL A 0 A_GiveInventory ("BerserkFists", 1)
+		NULL A 0 A_SelectWeapon ("BerserkFists")
+		NULL A 0 A_GiveInventory ("FistReplaced", 1)
 		goto Deselect
 	ReplaceCleanup:
-		BEAC B 0 A_TakeInventory ("BerserkFists", 1)
-		BEAC B 0 A_TakeInventory ("FistReplaced", 1)
+		NULL A 0 A_TakeInventory ("BerserkFists", 1)
+		NULL A 0 A_TakeInventory ("FistReplaced", 1)
 		goto Select
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -76,23 +76,23 @@ actor BerserkFists : Unarmed {
 	states {
 	Select:
 		PUNG A 5
-		PUNG A 0 A_JumpIfInventory ("PowerBerserk", 1, 1)
+		NULL A 0 A_JumpIfInventory ("PowerBerserk", 1, 1)
 		goto Remove
-		PUNG A 0 A_JumpIfInventory ("FistReplaced", 1, "ReplaceCleanup")
-		PUNG A 0 A_Raise
+		NULL A 0 A_JumpIfInventory ("FistReplaced", 1, "ReplaceCleanup")
+		NULL A 0 A_Raise
 		PUNG A 1 A_Raise
 		goto Select+4
 	Ready:
 		PUNG A 1 A_WeaponReady (WRF_NOSWITCH)
 		wait
 	Fire:
-		PUNG B 0 A_JumpIfInventory("IsBlue",1,"Fire.Blue")
-		PUNG B 0 A_JumpIfInventory("FistSwitch", 1, "Fire2")
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"Fire.Blue")
+		NULL A 0 A_JumpIfInventory("FistSwitch", 1, "Fire2")
 		PUNG B 1 Offset(-30,40)
 		PUNG B 1 Offset(-24,38)
 		//PUNG C 1 Offset(-16,36)
 		PUNG C 1 Offset(-9,35)
-		PUNG D 0 A_GiveInventory ("FistSwitch", 1)
+		NULL A 0 A_GiveInventory ("FistSwitch", 1)
 		PUNG D 1 Offset(0,33) A_CustomPunch (250, 1, 1, "BerserkPuff", 135)
 		PUNG D 1 Offset(15,32)
 		//PUNG C 1 Offset(10,37)
@@ -104,7 +104,7 @@ actor BerserkFists : Unarmed {
 		PUNG E 1 Offset(24,38)
 		//PUNG F 1 Offset(16,36)
 		PUNG F 1 Offset(9,35)
-		PUNG G 0 A_GiveInventory ("FistSwitch", 1)
+		NULL A 0 A_GiveInventory ("FistSwitch", 1)
 		PUNG G 1 Offset(0,33) A_CustomPunch (250, 1, 1, "BerserkPuff", 135)
 		PUNG G 1 Offset(-5,32)
 		//PUNG F 1 Offset(1,37)
@@ -112,12 +112,12 @@ actor BerserkFists : Unarmed {
 		PUNG E 1 Offset(10,39) A_ReFire
 		goto Ready
 	Fire.Blue:
-		PUNG B 0 A_JumpIfInventory("FistSwitch", 1, "Fire.Blue2")
+		NULL A 0 A_JumpIfInventory("FistSwitch", 1, "Fire.Blue2")
 		PUNG B 1 Offset(-30,40)
 		PUNG B 1 Offset(-24,38)
 		//PUNG C 1 Offset(-16,36)
 		PUNG C 1 Offset(-9,35)
-		PUNG D 0 A_GiveInventory ("FistSwitch", 1)
+		NULL A 0 A_GiveInventory ("FistSwitch", 1)
 		PUNG D 1 Offset(0,33) A_CustomPunch (250, 1, 1, "BerserkPuffBlue", 135)
 		PUNG D 1 Offset(15,32)
 		//PUNG C 1 Offset(10,37)
@@ -129,7 +129,7 @@ actor BerserkFists : Unarmed {
 		PUNG E 1 Offset(24,38)
 		//PUNG F 1 Offset(16,36)
 		PUNG F 1 Offset(9,35)
-		PUNG G 0 A_GiveInventory ("FistSwitch", 1)
+		NULL A 0 A_GiveInventory ("FistSwitch", 1)
 		PUNG G 1 Offset(0,33) A_CustomPunch (250, 1, 1, "BerserkPuffBlue", 135)
 		PUNG G 1 Offset(-5,32)
 		//PUNG F 1 Offset(1,37) 
@@ -138,13 +138,13 @@ actor BerserkFists : Unarmed {
 		goto Ready
 	Remove:
 		PUNG A 1 offset (1,32)
-		PUNG A 0 A_GiveInventory ("Unarmed", 1)
-		PUNG A 0 A_SelectWeapon ("Unarmed")
-		PUNG A 0 A_GiveInventory ("FistReplaced", 1)
+		NULL A 0 A_GiveInventory ("Unarmed", 1)
+		NULL A 0 A_SelectWeapon ("Unarmed")
+		NULL A 0 A_GiveInventory ("FistReplaced", 1)
 		goto Deselect
 	ReplaceCleanup:
-		BEAC B 0 A_TakeInventory ("Unarmed", 1)
-		BEAC B 0 A_TakeInventory ("FistReplaced", 1)
+		NULL A 0 A_TakeInventory ("Unarmed", 1)
+		NULL A 0 A_TakeInventory ("FistReplaced", 1)
 		goto Select
 	}
 }
@@ -161,17 +161,17 @@ actor FistPuff : BulletPuff {
 	DamageType "FistRed"
 	states {
 	Crash:
-		PUFF A 0 bright
+		NULL A 0 bright
 		PUFF A 4 bright A_SpawnItem ("FistWall")
 		PUFF B 4 
 		PUFF CD 4
 		stop
 	Melee:
-		PUFF A 0 bright
+		NULL A 0 bright
 		PUFF A 4 bright A_SpawnItem ("FistHit")
 		stop
 	Spawn:
-		PUFF A 0 bright
+		NULL A 0 bright
 		PUFF A 4 bright A_SpawnItem ("FistHit")
 		stop
 	}
@@ -182,8 +182,8 @@ actor BerserkPuff : FistPuff {
 	+EXTREMEDEATH
 	States {
 	Melee:
-		PUFF A 0
-		PUFF A 0 bright A_SpawnItem ("FistHit")
+		NULL A 0
+		NULL A 0 bright A_SpawnItem ("FistHit")
 		stop
 	}
 }
@@ -196,7 +196,7 @@ actor FistHit {
 	height 1
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 1 A_PlaySound("fist/hit")
 		stop
 	}
@@ -205,7 +205,7 @@ actor FistHit {
 actor FistWall : FistHit {
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 1 A_PlaySound("fist/wall")
 		stop
 	}

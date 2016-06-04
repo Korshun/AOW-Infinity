@@ -44,7 +44,7 @@ actor RepairBonusItem : CustomInventory
     TNT1 A 5
     stop
   Pickup:
-    TNT1 A 0 ACS_ExecuteAlways(325,0,0,0,0)
+    NULL A 0 ACS_ExecuteAlways(325,0,0,0,0)
     stop
   }
 }

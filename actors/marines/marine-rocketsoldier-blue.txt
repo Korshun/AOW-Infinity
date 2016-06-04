@@ -112,31 +112,31 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	Spawn:
-		PLA5 A 0 //Dummy frame needed.
-		PLA5 A 0 A_GiveInventory("IsBlue", 1)
-		PLA5 A 0 A_GiveInventory("PowerBlueTeamArmor")
-		PLA5 A 0 A_ChangeFlag("Friendly", 0)//Execute ACS script(s) here.
-		PLA5 A 0 ACS_ExecuteAlways (985, 0, 1, ARMOD_EXPLO)
-		PLA5 A 0 ACS_ExecuteAlways (SC_MARINE_INIT, 0)
+		NULL A 0 //Dummy frame needed.
+		NULL A 0 A_GiveInventory("IsBlue", 1)
+		NULL A 0 A_GiveInventory("PowerBlueTeamArmor")
+		NULL A 0 A_ChangeFlag("Friendly", 0)//Execute ACS script(s) here.
+		NULL A 0 ACS_ExecuteAlways (985, 0, 1, ARMOD_EXPLO)
+		NULL A 0 ACS_ExecuteAlways (SC_MARINE_INIT, 0)
 		Goto EnablePushablePreIdle
 
 	EnablePushablePreIdle: //Allows you to push marines if they are in your way while idling.
-		PLA5 A 0 A_ChangeFlag ("PUSHABLE", 1)
+		NULL A 0 A_ChangeFlag ("PUSHABLE", 1)
 		//PLA5 A 0 A_Jump (256, "Idle")
 		Goto Idle
 
 	Idle: //Check if pushed, then look for enemies. If Player out of sight, begin to wander. If underwater, sink down.
-		PLA5 A 0 A_JumpIf (momx != 0 || momy != 0, "MomentumCheck")
+		NULL A 0 A_JumpIf (momx != 0 || momy != 0, "MomentumCheck")
 
 		PLA5 A 1 A_LookEx (0, 0, 0, 1200, 360, "DisablePushablePreAlternateChase")
-		PLA5 A 0 A_CheckSight ("DisablePushablePreAlternateWander")
+		NULL A 0 A_CheckSight ("DisablePushablePreAlternateWander")
 
-		PLA5 A 0 A_JumpIf (z - floorz == 0, 4) //If non-deep water or at bottom, don't sink.
-		PLA5 A 0 A_JumpIf (waterlevel == 1, "SinkDown1")
-		PLA5 A 0 A_JumpIf (waterlevel == 2, "SinkDown2")
-		PLA5 A 0 A_JumpIf (waterlevel == 3, "SinkDown3")
-		PLA5 A 0
-		PLA5 A 0 //A_Jump (256, "Idle")
+		NULL A 0 A_JumpIf (z - floorz == 0, 4) //If non-deep water or at bottom, don't sink.
+		NULL A 0 A_JumpIf (waterlevel == 1, "SinkDown1")
+		NULL A 0 A_JumpIf (waterlevel == 2, "SinkDown2")
+		NULL A 0 A_JumpIf (waterlevel == 3, "SinkDown3")
+		NULL A 0
+		NULL A 0 //A_Jump (256, "Idle")
 		Loop
 
 
@@ -144,20 +144,20 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	MomentumCheck:
-		PLA5 A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
 		PLA5 A 4
-		PLA5 A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
 		PLA5 B 4
-		PLA5 B 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
 		PLA5 C 4
-		PLA5 C 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "Idle")
 		PLA5 D 4
 		//PLA5 D 0 A_Jump (256, "CheckIfAnyTargetsWhilePushed")
 		Goto CheckIfAnyTargetsWhilePushed
 
 
 	CheckIfAnyTargetsWhilePushed: //Look for potential targets while being pushed.
-		PLA5 A 0 A_LookEx (0, 0, 0, 1200, 0, "DisablePushablePreAlternateChase")
+		NULL A 0 A_LookEx (0, 0, 0, 1200, 0, "DisablePushablePreAlternateChase")
 		//PLA5 A 0 A_Jump (256, "Idle")
 		Goto Idle
 
@@ -166,17 +166,17 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	SinkDown1: //Ankle deep.
-		PLA5 A 0 ThrustThingZ (0, 2, 1, 1)
+		NULL A 0 ThrustThingZ (0, 2, 1, 1)
 		//PLA5 A 0 A_Jump (256, "Idle")
 		Goto Idle
 
 	SinkDown2: //Waist deep.
-		PLA5 A 0 ThrustThingZ (0, 1, 1, 1)
+		NULL A 0 ThrustThingZ (0, 1, 1, 1)
 		//PLA5 A 0 A_Jump (256, "Idle")
 		Goto Idle
 
 	SinkDown3: //Cmpletely underwater. Slower sinking.
-		PLA5 A 0 ThrustThingZ (0, 2, 1, 0)
+		NULL A 0 ThrustThingZ (0, 2, 1, 0)
 		//PLA5 A 0 A_Jump (256, "Idle")
 		Goto Idle
 
@@ -195,17 +195,17 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	See: //Simply for A_SpidRefire. Goes to "ResetTimers".
-		PLA5 A 0 //Dummy frame needed.
+		NULL A 0 //Dummy frame needed.
 		//PLA5 A 0 A_Jump (256, "ResetTimers")
 		Goto ResetTimers
 
 	DisablePushablePreAlternateChase:
-		PLA5 A 0 A_ChangeFlag ("PUSHABLE", 0)
+		NULL A 0 A_ChangeFlag ("PUSHABLE", 0)
 		//PLA5 A 0 A_Jump (256, "AlternateChase")
 		Goto AlternateChase
 
 	AlternateChase:
-		PLA5 A 0 A_Jump (85, "ChaseForwardAndLeft", "ChaseForwardAndRight") //1/3 chance of straferunning.
+		NULL A 0 A_Jump (85, "ChaseForwardAndLeft", "ChaseForwardAndRight") //1/3 chance of straferunning.
 		//PLA5 A 0 A_Jump (256, "ChaseForward")
 		Goto ChaseForward
 
@@ -219,25 +219,25 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndLeft: //Straferunning 28% faster.
-		PLA5 A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 A 4 A_Recoil (-0.504)
-		PLA5 A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (-0.504)
-		PLA5 B 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (-0.504)
-		PLA5 C 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (-0.504)
 		//PLA5 D 0 A_Jump (256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndRight:
-		PLA5 A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 A 4 A_Recoil (-0.504)
-		PLA5 A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (-0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (-0.504)
-		PLA5 C 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (-0.504)
 		//PLA5 D 0 A_Jump (256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
@@ -249,15 +249,15 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		Goto CheckIfTargetInLOS
 
 	CheckIfTargetInLOS: //Every PLA5 A frames allows for attack or backing off. This is to make the marines animate properly.
-		PLA5 A 0 A_JumpIfTargetInLOS ("TargetInLOS")
+		NULL A 0 A_JumpIfTargetInLOS ("TargetInLOS")
 		//PLA5 A 0 A_Jump (256, "CheckIfStuck")
 		Goto CheckIfStuck
 
 	TargetInLOS:
-		PLA5 A 0 A_JumpIf (health <= 39, 3) //If 39 health or lower, get more aggressive.
-		PLA5 A 0 A_JumpIfCloser (256, "AlternateBackOff") //The threshold of when to back off.
-		PLA5 A 0 A_Jump (random(0, 256), "CheckIfStuck") //Makes the marines less inhuman.
-		PLA5 A 0 A_JumpIfCloser (4096, "Missile") //Max target range.
+		NULL A 0 A_JumpIf (health <= 39, 3) //If 39 health or lower, get more aggressive.
+		NULL A 0 A_JumpIfCloser (256, "AlternateBackOff") //The threshold of when to back off.
+		NULL A 0 A_Jump (random(0, 256), "CheckIfStuck") //Makes the marines less inhuman.
+		NULL A 0 A_JumpIfCloser (4096, "Missile") //Max target range.
 		//PLA5 A 0 A_Jump (256, "CheckIfStuck")
 		Goto CheckIfStuck
 
@@ -266,18 +266,18 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	CheckIfStuck: //This state act as a "dynamic threshold timer". Checks if there is any momentum along the x- and y- axis. If false, add to the threshold timer. If true, clear the threshold timer and check if underwater instead.
-		PLA5 A 0 A_JumpIf (momx != 0 || momy != 0, "NotStuck")
+		NULL A 0 A_JumpIf (momx != 0 || momy != 0, "NotStuck")
 		//PLA5 A 0 A_Jump (256, "Stuck")
 		Goto Stuck
 
 	NotStuck:
-		PLA5 A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 0, "CheckIfUnderwater")
-		PLA5 A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 0, "CheckIfUnderwater")
+		NULL A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwater")
 		Goto CheckIfUnderwater
 
 	Stuck:
-		PLA5 A 0 A_JumpIf (momx == 0 && momy == 0, "AddToMoveBackWardsThresholdTimer")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "AddToMoveBackWardsThresholdTimer")
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwater")
 		Goto CheckIfUnderwater
 
@@ -286,27 +286,27 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	CheckIfUnderWater:
-		PLA5 A 0 A_JumpIf (waterlevel == 1, "Swim1")
-		PLA5 A 0 A_JumpIf (waterlevel == 2, "Swim2")
-		PLA5 A 0 A_JumpIf (waterlevel == 3, "Swim3")
+		NULL A 0 A_JumpIf (waterlevel == 1, "Swim1")
+		NULL A 0 A_JumpIf (waterlevel == 2, "Swim2")
+		NULL A 0 A_JumpIf (waterlevel == 3, "Swim3")
 		//PLA5 A 0 A_Jump (256, "AddToTimers") //If not underwater, add to the regular timers instead.
 		Goto AddToTimers
 
 
 	Swim1:
-		PLA5 A 0 A_JumpIf (z - floorz == 0, 2) //If non-deep water, don't swim.
-		PLA5 A 0 ThrustThingZ (0, 8, 0, 1) //Simulates jumping/swimming in water.
-		PLA5 A 0
+		NULL A 0 A_JumpIf (z - floorz == 0, 2) //If non-deep water, don't swim.
+		NULL A 0 ThrustThingZ (0, 8, 0, 1) //Simulates jumping/swimming in water.
+		NULL A 0
 		//PLA5 A 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim2:
-		PLA5 A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ (0, 16, 0, 1)
 		//PLA5 A 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim3:
-		PLA5 A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ (0, 32, 0, 1)
 		//PLA5 A 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
@@ -315,17 +315,17 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	AddToMoveBackWardsThresholdTimer:
-		PLA5 A 0 A_GiveInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_GiveInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "CheckMoveBackWardsThresholdTimer")
 		Goto CheckMoveBackWardsThresholdTimer
 
 	CheckMoveBackWardsThresholdTimer:
-		PLA5 A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 1, "ClearMoveBackWardsThresholdTimer")
+		NULL A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 1, "ClearMoveBackWardsThresholdTimer")
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwater")
 		Goto CheckIfUnderwater
 
 	ClearMoveBackWardsThresholdTimer:
-		PLA5 A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "MoveBackwardsAlternate")
 		Goto MoveBackwardsAlternate
 
@@ -334,12 +334,12 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	MoveBackwardsAlternate: //Same "A_Recoil" and "ThrustThing" values as in "BackOff" states, but with jumps to a different state.
-		PLA5 A 0 A_Jump (256, 1,2,3)
-		PLA5 A 0
+		NULL A 0 A_Jump (256, 1,2,3)
+		NULL A 0
 		Goto MoveBackwards
-		PLA5 A 0
+		NULL A 0
 		Goto MoveBackwardsAndLeft
-		PLA5 A 0
+		NULL A 0
 		Goto MoveBackwardsAndRight
 
 
@@ -348,42 +348,42 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		PLA5 B 4 A_Recoil (3.675)
 		PLA5 C 4 A_Recoil (3.675)
 		PLA5 D 4 A_Recoil (3.675)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwards")
 		Goto MoveBackwards
-		PLA5 D 0
+		NULL A 0
 		//PLA5 D 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
 	MoveBackwardsAndLeft:
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwardsAndLeft")
 		Goto MoveBackwardsAndLeft
-		PLA5 D 0
+		NULL A 0
 		//PLA5 D 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
 	MoveBackwardsAndRight:
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwardsAndRight")
 		Goto MoveBackwardsAndRight
-		PLA5 D 0
+		NULL A 0
 		//PLA5 D 0 A_Jump (256, "AddToTimers")
 		Goto AddToTimers
 
@@ -402,12 +402,12 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	DisablePushablePreAlternateWander: //Nearly identical to chase states.
-		PLA5 A 0 A_ChangeFlag ("PUSHABLE", 0)
+		NULL A 0 A_ChangeFlag ("PUSHABLE", 0)
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 	AlternateWander:
-		PLA5 A 0 A_Jump (85, "WanderForwardAndLeft", "WanderForwardAndRight")
+		NULL A 0 A_Jump (85, "WanderForwardAndLeft", "WanderForwardAndRight")
 		//PLA5 A 0 A_Jump (256, "WanderForward")
 		Goto WanderForward
 
@@ -420,25 +420,25 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndLeft:
-		PLA5 A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 A 4 A_Recoil (-0.504)
-		PLA5 A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (-0.504)
-		PLA5 B 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (-0.504)
-		PLA5 C 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (-0.504)
 		//PLA5 D 0 A_Jump (256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndRight:
-		PLA5 A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 A 4 A_Recoil (-0.504)
-		PLA5 A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (-0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (-0.504)
-		PLA5 C 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (-0.504)
 		//PLA5 D 0 A_Jump (256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
@@ -446,7 +446,7 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 	TurnAndAcquireTargetWhileWander:
 		PLA5 AAAAAAAAAAAAAAAA 0 A_Wander
-		PLA5 A 0 A_LookEx (0, 0, 0, 1200, 0, "CheckIfTargetInLOS")
+		NULL A 0 A_LookEx (0, 0, 0, 1200, 0, "CheckIfTargetInLOS")
 		//PLA5 A 0 A_Jump (256, "CheckIfStuckWhileWander")
 		Goto CheckIfStuckWhileWander
 
@@ -455,18 +455,18 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	CheckIfStuckWhileWander:
-		PLA5 A 0 A_JumpIf (momx != 0 || momy != 0, "NotStuckWhileWander")
+		NULL A 0 A_JumpIf (momx != 0 || momy != 0, "NotStuckWhileWander")
 		//PLA5 A 0 A_Jump (256, "StuckWhileWander")
 		Goto StuckWhileWander
 
 	NotStuckWhileWander:
-		PLA5 A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 0, "CheckIfUnderwaterWhileWander")
-		PLA5 A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 0, "CheckIfUnderwaterWhileWander")
+		NULL A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwaterWhileWander")
 		Goto CheckIfUnderwaterWhileWander
 
 	StuckWhileWander:
-		PLA5 A 0 A_JumpIf (momx == 0 && momy == 0, "AddToMoveBackWardsThresholdTimerWhileWander")
+		NULL A 0 A_JumpIf (momx == 0 && momy == 0, "AddToMoveBackWardsThresholdTimerWhileWander")
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwaterWhileWander")
 		Goto CheckIfUnderwaterWhileWander
 
@@ -475,27 +475,27 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	CheckIfUnderwaterWhileWander:
-		PLA5 A 0 A_JumpIf (waterlevel == 1, "SwimWhileWander1")
-		PLA5 A 0 A_JumpIf (waterlevel == 2, "SwimWhileWander2")
-		PLA5 A 0 A_JumpIf (waterlevel == 3, "SwimWhileWander3")
+		NULL A 0 A_JumpIf (waterlevel == 1, "SwimWhileWander1")
+		NULL A 0 A_JumpIf (waterlevel == 2, "SwimWhileWander2")
+		NULL A 0 A_JumpIf (waterlevel == 3, "SwimWhileWander3")
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 
 	SwimWhileWander1:
-		PLA5 A 0 A_JumpIf (z - floorz == 0, 2)
-		PLA5 A 0 ThrustThingZ (0, 8, 0, 1)
-		PLA5 A 0
+		NULL A 0 A_JumpIf (z - floorz == 0, 2)
+		NULL A 0 ThrustThingZ (0, 8, 0, 1)
+		NULL A 0
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander2:
-		PLA5 A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ (0, 16, 0, 1)
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander3:
-		PLA5 A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ (0, 32, 0, 1)
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
@@ -504,17 +504,17 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	AddToMoveBackWardsThresholdTimerWhileWander:
-		PLA5 A 0 A_GiveInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_GiveInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "CheckMoveBackWardsThresholdTimerWhileWander")
 		Goto CheckMoveBackWardsThresholdTimerWhileWander
 
 	CheckMoveBackWardsThresholdTimerWhileWander:
-		PLA5 A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 1, "ClearMoveBackWardsThresholdTimerWhileWander")
+		NULL A 0 A_JumpIfInventory ("MoveBackwardsThreshold", 1, "ClearMoveBackWardsThresholdTimerWhileWander")
 		//PLA5 A 0 A_Jump (256, "CheckIfUnderwaterWhileWander")
 		Goto CheckIfUnderwaterWhileWander
 
 	ClearMoveBackWardsThresholdTimerWhileWander:
-		PLA5 A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
+		NULL A 0 A_TakeInventory ("MoveBackwardsThreshold", 1)
 		//PLA5 A 0 A_Jump (256, "MoveBackwardsAlternateWhileWander")
 		Goto MoveBackwardsAlternateWhileWander
 
@@ -523,12 +523,12 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	MoveBackwardsAlternateWhileWander:
-		PLA5 A 0 A_Jump (256, 1,2,3)
-		PLA5 A 0
+		NULL A 0 A_Jump (256, 1,2,3)
+		NULL A 0
 		Goto MoveBackwardsWhileWander
-		PLA5 A 0
+		NULL A 0
 		Goto MoveBackwardsAndLeftWhileWander
-		PLA5 A 0
+		NULL A 0
 		Goto MoveBackwardsAndRightWhileWander
 
 
@@ -537,42 +537,42 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		PLA5 B 4 A_Recoil (3.675)
 		PLA5 C 4 A_Recoil (3.675)
 		PLA5 D 4 A_Recoil (3.675)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwardsWhileWander")
 		Goto MoveBackwardsWhileWander
-		PLA5 A 0
+		NULL A 0
 		//PLA5 A 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 	MoveBackwardsAndLeftWhileWander:
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwardsAndLeftWhileWander")
 		Goto MoveBackwardsAndLeftWhileWander
-		PLA5 D 0
+		NULL A 0
 		//PLA5 D 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
 	MoveBackwardsAndRightWhileWander:
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "MoveBackwardsAndRightWhileWander")
 		Goto MoveBackwardsAndRightWhileWander
-		PLA5 D 0
+		NULL A 0
 		//PLA5 D 0 A_Jump (256, "AlternateWander")
 		Goto AlternateWander
 
@@ -591,775 +591,775 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	AlternateBackOff: //Same formula as in the chase states, but only backwards movement and different jumps.
-		PLA5 A 0 A_Jump (256, 1,2,3)
-		PLA5 A 0
+		NULL A 0 A_Jump (256, 1,2,3)
+		NULL A 0
 		Goto BackOffBackwards
-		PLA5 A 0
+		NULL A 0
 		Goto BackOffBackwardsAndLeft
-		PLA5 A 0
+		NULL A 0
 		Goto BackOffBackwardsAndRight
 
 	BackOffBackwards:
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 A 4 A_Recoil (3.675)
 		PLA5 B 4 A_Recoil (3.675)
 		PLA5 C 4 A_Recoil (3.675)
 		PLA5 D 4 A_Recoil (3.675)
-		PLA5 D 0 A_JumpIf (health <= 50, "Missile") //A bit desperate.
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 A_JumpIf (health <= 50, "Missile") //A bit desperate.
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "BackOffBackwards")
 		Goto BackOffBackwards
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 //A_Jump (256, "Missile")
+		NULL A 0 A_SpidRefire
+		NULL A 0 //A_Jump (256, "Missile")
 		Goto Missile
 
 	BackOffBackwardsAndLeft:
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
-		PLA5 D 0 A_JumpIf (health <= 50, "Missile")
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 A_JumpIf (health <= 50, "Missile")
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "BackOffBackwardsAndLeft")
 		Goto BackOffBackwardsAndLeft
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 //A_Jump (256, "Missile")
+		NULL A 0 A_SpidRefire
+		NULL A 0 //A_Jump (256, "Missile")
 		Goto Missile
 
 	BackOffBackwardsAndRight:
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 A 4 A_Recoil (0.504)
-		PLA5 A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 B 4 A_Recoil (0.504)
-		PLA5 B 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 C 4 A_Recoil (0.504)
-		PLA5 C 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		PLA5 D 4 A_Recoil (0.504)
-		PLA5 D 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
-		PLA5 D 0 A_JumpIf (health <= 50, "Missile")
-		PLA5 D 0 A_Jump (random(128, 256), 1)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 A_JumpIf (health <= 50, "Missile")
+		NULL A 0 A_Jump (random(128, 256), 1)
 		//PLA5 D 0 A_Jump (256, "BackOffBackwardsAndRight")
 		Goto BackOffBackwardsAndRight
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 //A_Jump (256, "Missile")
+		NULL A 0 A_SpidRefire
+		NULL A 0 //A_Jump (256, "Missile")
 		Goto Missile
 
 
 	Missile:
-		PLA5 E 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
-		PLA5 E 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
-		PLA5 E 0 //A_JumpIfInTargetInventory("IsMech", 1, 4)
-		PLA5 E 0 A_Jump (256, 1, 2)
-		PLA5 E 0
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
+		NULL A 0 //A_JumpIfInTargetInventory("IsMech", 1, 4)
+		NULL A 0 A_Jump (256, 1, 2)
+		NULL A 0
 		Goto Missile2+1
-		PLA5 E 0
+		NULL A 0
 		Goto Missile3+1
 	Missile2:
-		PLA5 E 0 A_Jump (random(64, 256), 1)
+		NULL A 0 A_Jump (random(64, 256), 1)
 		Goto Missile3+1
-		PLA5 E 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
-		PLA5 E 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
-		PLA5 E 0 A_JumpIfCloser(1024, 1)
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
+		NULL A 0 A_JumpIfCloser(1024, 1)
 		Goto Missile4+3
-		PLA5 E 0 A_JumpIfInventory("BazookaCooldown", 1, "AlternateChase")
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 A_JumpIfInventory("BazookaCooldown", 1, "AlternateChase")
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
-		PLA5 E 0 A_PlayWeaponSound ("bazooka/fire")
-		PLA5 E 0 NoiseAlert (0,0)
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound ("bazooka/fire")
+		NULL A 0 NoiseAlert (0,0)
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
-		PLA5 E 0 A_CustomMissile("HeavyHomingMissileBlue", 36)
-		PLA5 E 0 A_GiveInventory("BazookaCooldown")
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_CustomMissile("HeavyHomingMissileBlue", 36)
+		NULL A 0 A_GiveInventory("BazookaCooldown")
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_ClearTarget
-		PLA5 D 0 A_Chase ("", "")
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 A_Jump (random(0, 64), 1)
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_ClearTarget
+		NULL A 0 A_Chase ("", "")
+		NULL A 0 A_SpidRefire
+		NULL A 0 A_Jump (random(0, 64), 1)
 		Goto Missile2
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_Jump (random(128, 256), 44)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 44)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_SpidRefire
 		Goto Missile2
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 A_SpidRefire
 		Goto Missile2
 	Missile3:
-		PLA5 E 0 A_Jump (random(64, 256), 1)
+		NULL A 0 A_Jump (random(64, 256), 1)
 		Goto Missile2+1
-		PLA5 E 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
-		PLA5 E 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
-		PLA5 E 0 A_JumpIfCloser(1024, 1)
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
+		NULL A 0 A_JumpIfCloser(1024, 1)
 		Goto Missile5+3
-		PLA5 E 0 A_JumpIfInventory("BazookaCooldown", 1, "AlternateChase")
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 A_JumpIfInventory("BazookaCooldown", 1, "AlternateChase")
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
-		PLA5 E 0 A_PlayWeaponSound ("bazooka/fire")
-		PLA5 E 0 NoiseAlert (0,0)
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound ("bazooka/fire")
+		NULL A 0 NoiseAlert (0,0)
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
-		PLA5 E 0 A_CustomMissile("HeavyHomingMissileBlue", 36)
-		PLA5 E 0 A_GiveInventory("BazookaCooldown")
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_CustomMissile("HeavyHomingMissileBlue", 36)
+		NULL A 0 A_GiveInventory("BazookaCooldown")
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_ClearTarget
-		PLA5 D 0 A_Chase ("", "")
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 A_Jump (random(0, 64), 1)
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_ClearTarget
+		NULL A 0 A_Chase ("", "")
+		NULL A 0 A_SpidRefire
+		NULL A 0 A_Jump (random(0, 64), 1)
 		Goto Missile3
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_Jump (random(128, 256), 44)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 44)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_SpidRefire
 		Goto Missile3
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 A_SpidRefire
 		Goto Missile3
 	Missile4:
-		PLA5 E 0 A_Jump (random(64, 256), 1)
+		NULL A 0 A_Jump (random(64, 256), 1)
 		Goto Missile5+1
-		PLA5 F 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
-		PLA5 E 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
 		//PLA5 F 0 //A_JumpIfInTargetInventory("IsMech", 1, "Missile2")
-		PLA5 F 0 A_JumpIfCloser(1024, "Missile2")
+		NULL A 0 A_JumpIfCloser(1024, "Missile2")
 		//Goto Missile2+4
-		PLA5 F 0 A_JumpIfInventory("BazookaCooldown",1,"AlternateChase")
-		PLA5 F 0 A_FaceTarget
-		PLA5 F 0 A_PlayWeaponSound ("bazooka/fire")
-		PLA5 F 0 NoiseAlert (0,0)
-		PLA5 F 0 A_CustomMissile("HeavyMissileBlue", 36)
-		PLA5 F 0 A_GiveInventory("BazookaCooldown")
+		NULL A 0 A_JumpIfInventory("BazookaCooldown",1,"AlternateChase")
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound ("bazooka/fire")
+		NULL A 0 NoiseAlert (0,0)
+		NULL A 0 A_CustomMissile("HeavyMissileBlue", 36)
+		NULL A 0 A_GiveInventory("BazookaCooldown")
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_ClearTarget
-		PLA5 D 0 A_Chase ("", "")
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 A_Jump (random(0, 64), 1)
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_ClearTarget
+		NULL A 0 A_Chase ("", "")
+		NULL A 0 A_SpidRefire
+		NULL A 0 A_Jump (random(0, 64), 1)
 		Goto Missile4
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_Jump (random(128, 256), 44)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 44)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-192, 1, 0, 0)
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 A_SpidRefire
 		Goto Missile4
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 A_SpidRefire
 		Goto Missile4
 	Missile5:
-		PLA5 E 0 A_Jump (random(64, 256), 1)
+		NULL A 0 A_Jump (random(64, 256), 1)
 		Goto Missile4+1
-		PLA5 F 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
-		PLA5 E 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
 		//PLA5 F 0 //A_JumpIfInTargetInventory("IsMech", 1, "Missile3")
-		PLA5 F 0 A_JumpIfCloser(1024, "Missile3")
+		NULL A 0 A_JumpIfCloser(1024, "Missile3")
 		//Goto Missile3+4
-		PLA5 F 0 A_JumpIfInventory("BazookaCooldown",1,"AlternateChase")
-		PLA5 F 0 A_FaceTarget
-		PLA5 F 0 A_PlayWeaponSound ("bazooka/fire")
-		PLA5 F 0 NoiseAlert (0,0)
-		PLA5 F 0 A_CustomMissile("HeavyMissileBlue", 36)
-		PLA5 F 0 A_GiveInventory("BazookaCooldown")
+		NULL A 0 A_JumpIfInventory("BazookaCooldown",1,"AlternateChase")
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound ("bazooka/fire")
+		NULL A 0 NoiseAlert (0,0)
+		NULL A 0 A_CustomMissile("HeavyMissileBlue", 36)
+		NULL A 0 A_GiveInventory("BazookaCooldown")
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 F 1 Bright A_Recoil (-0.368856)
-		PLA5 F 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 F 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 Bright A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 E 1 A_Recoil (-0.368856)
-		PLA5 E 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 E 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_ClearTarget
-		PLA5 D 0 A_Chase ("", "")
-		PLA5 D 0 A_SpidRefire
-		PLA5 D 0 A_Jump (random(0, 64), 1)
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_ClearTarget
+		NULL A 0 A_Chase ("", "")
+		NULL A 0 A_SpidRefire
+		NULL A 0 A_Jump (random(0, 64), 1)
 		Goto Missile5
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_Jump (random(128, 256), 44)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_Jump (random(128, 256), 44)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 A 1 A_Recoil (-0.368856)
-		PLA5 A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 A 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 B 1 A_Recoil (-0.368856)
-		PLA5 B 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 B 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 C 1 A_Recoil (-0.368856)
-		PLA5 C 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 C 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_FaceTarget
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_FaceTarget
 		PLA5 D 1 A_Recoil (-0.368856)
-		PLA5 D 0 ThrustThing (angle*256/360-64, 1, 0, 0)
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 A_SpidRefire
 		Goto Missile5
-		PLA5 D 0 A_SpidRefire
+		NULL A 0 A_SpidRefire
 		Goto Missile5
 //-----------------------------------------------------------------------
 //
@@ -1369,33 +1369,33 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	Pain.FireSpecial:
-		PLA5 G 0 ACS_ExecuteAlways(320, 0, 1)
-		PLA5 G 0 ACS_ExecuteAlways(310, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(320, 0, 1)
+		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
 	Pain.FireRed:
 	Pain.FireBlue:
-		PLA5 G 0 ACS_ExecuteAlways(320, 0, 1)
-		PLA5 G 0 ACS_ExecuteAlways(360, 0)
-		PLA5 G 0 ACS_ExecuteAlways(310, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(320, 0, 1)
+		NULL A 0 ACS_ExecuteAlways(360, 0)
+		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
 	Pain.ChemicalSpecial:
-		PLA5 G 0 ACS_ExecuteAlways(320, 0, 2)
-		PLA5 G 0 ACS_ExecuteAlways(310, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(320, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
 	Pain.ChemicalRed:
 	Pain.ChemicalBlue:
-		PLA5 G 0 ACS_ExecuteAlways(320, 0, 2)
-		PLA5 G 0 ACS_ExecuteAlways(361, 0)
-		PLA5 G 0 ACS_ExecuteAlways(310, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(320, 0, 2)
+		NULL A 0 ACS_ExecuteAlways(361, 0)
+		NULL A 0 ACS_ExecuteAlways(310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
 
 	Pain:
-		PLA5 G 0
-		PLA5 G 0 //A_Jump (256, "DisablePushablePreAlternatePainBackOff")
+		NULL A 0
+		NULL A 0 //A_Jump (256, "DisablePushablePreAlternatePainBackOff")
 		Goto DisablePushablePreAlternatePainBackOff
 
 	DisablePushablePreAlternatePainBackOff: //If woken up by getting hurt, clear the +PUSHABLE flag.
-		PLA5 G 0 A_ChangeFlag ("PUSHABLE", 0)
+		NULL A 0 A_ChangeFlag ("PUSHABLE", 0)
 		//PLA5 G 0 A_Jump (256, "AlternatePainBackOff")
 		Goto AlternatePainBackOff
 
@@ -1404,40 +1404,40 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	AlternatePainBackOff:
-		PLA5 G 0 A_Jump (256, 2,3)
-		PLA5 G 0
+		NULL A 0 A_Jump (256, 2,3)
+		NULL A 0
 		Goto PainBackOffBackwards
-		PLA5 G 0
+		NULL A 0
 		Goto PainBackOffBackwardsAndLeft
-		PLA5 G 0
+		NULL A 0
 		Goto PainBackOffBackwardsAndRight
 
 
 	PainBackOffBackwards:
-		PLA5 G 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 G 4 A_Recoil (3.675)
-		PLA5 G 0 A_Pain
+		NULL A 0 A_Pain
 		PLA5 G 4 A_Recoil (3.675)
 		//PLA5 G 0 A_Jump (256, "CheckIfTargetInLOS") //Try to attack right back if possible.
 		Goto CheckIfTargetInLOS
 
 	PainBackOffBackwardsAndLeft:
-		PLA5 G 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 G 4 A_Recoil (0.504)
-		PLA5 G 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
-		PLA5 G 0 A_Pain
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 A_Pain
 		PLA5 G 4 A_Recoil (0.504)
-		PLA5 G 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
 		//PLA5 G 0 A_Jump (256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
 	PainBackOffBackwardsAndRight:
-		PLA5 G 0 A_FaceTarget
+		NULL A 0 A_FaceTarget
 		PLA5 G 4 A_Recoil (0.504)
-		PLA5 G 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
-		PLA5 G 0 A_Pain
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 A_Pain
 		PLA5 G 4 A_Recoil (0.504)
-		PLA5 G 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
 		//PLA5 G 0 A_Jump (256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
@@ -1455,13 +1455,13 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 	XDeath:
 		PLA5 O 4
-		PLA5 P 0 A_NoBlocking
+		NULL A 0 A_NoBlocking
 		PLA5 PPP 0 A_SpawnItemEx("Credits1",random(-4,4),random(-4,4),random(32,48),random(-4,4),random(-4,4),random(4,8),0,0,128)
-		PLA5 P 0 A_SpawnItemEx("PowerupCrate",random(-4,4),random(-4,4),random(32,48),random(2,4),random(-2,2),random(2,4),0,0,230)
-		PLA5 P 0 A_TakeInventory("Ingame",1)
-		PLA5 P 0 A_Scream
-		PLA5 P 0 A_PlaySound ("misc/gib", 7)
-		PLA5 P 0 A_PlaySound ("misc/gib", 6)
+		NULL A 0 A_SpawnItemEx("PowerupCrate",random(-4,4),random(-4,4),random(32,48),random(2,4),random(-2,2),random(2,4),0,0,230)
+		NULL A 0 A_TakeInventory("Ingame",1)
+		NULL A 0 A_Scream
+		NULL A 0 A_PlaySound ("misc/gib", 7)
+		NULL A 0 A_PlaySound ("misc/gib", 6)
 		PLA5 P 4 A_SpawnItemEx ("MarineGoreExplosion")
 		PLA5 Q 4 A_SpawnItemEx ("MarineGoreExplosion2")
 		PLA5 R 4 A_SpawnItemEx ("MarineGoreExplosion3")
@@ -1475,22 +1475,22 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 	Death.ExplosionMechBlue:
 	Death.ExplosionRed:
 	Death.ExplosionBlue:
-		PLA5 H 0 ThrustThing(angle*256/360+(random(0,192)), random(20,40), 1, 0)
+		NULL A 0 ThrustThing(angle*256/360+(random(0,192)), random(20,40), 1, 0)
 		PLA5 H 1 ThrustThingZ(0,45,0,0)
-		PLA5 H 0 A_Jump(128,"Death")
+		NULL A 0 A_Jump(128,"Death")
 		goto XDeath
 
 	Death.FireSpecial:
 	Death.FireRed:
 	Death.FireBlue:
 		// stop all sound channels
-		PLA5 A 0 A_StopSound (0) PLA5 A 0 A_StopSound (4)
-		PLA5 A 0 A_StopSound (1) PLA5 A 0 A_StopSound (5)
-		PLA5 A 0 A_StopSound (2) PLA5 A 0 A_StopSound (6)
-		PLA5 A 0 A_StopSound (3) PLA5 A 0 A_StopSound (7)
-		PLA5 H 0 ACS_ExecuteAlways(310,0,3,0,0)
-		DISR K 0 A_SpawnItemEx("BurningCorpse",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
-		DISR K 0 A_NoBlocking
+		NULL A 0 A_StopSound (0) PLA5 A 0 A_StopSound (4)
+		NULL A 0 A_StopSound (1) PLA5 A 0 A_StopSound (5)
+		NULL A 0 A_StopSound (2) PLA5 A 0 A_StopSound (6)
+		NULL A 0 A_StopSound (3) PLA5 A 0 A_StopSound (7)
+		NULL A 0 ACS_ExecuteAlways(310,0,3,0,0)
+		NULL A 0 A_SpawnItemEx("BurningCorpse",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		NULL A 0 A_NoBlocking
 		PLA5 N -1 A_SetTranslucent(0.0,0)
 		stop
 
@@ -1498,18 +1498,18 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 	Death.ChemicalRed:
 	Death.ChemicalBlue:
 		// stop all sound channels
-		PLA5 A 0 A_StopSound (0) PLA5 A 0 A_StopSound (4)
-		PLA5 A 0 A_StopSound (1) PLA5 A 0 A_StopSound (5)
-		PLA5 A 0 A_StopSound (2) PLA5 A 0 A_StopSound (6)
-		PLA5 A 0 A_StopSound (3) PLA5 A 0 A_StopSound (7)
-		PLA5 H 0 ACS_ExecuteAlways(310,0,3,0,0)
-		DISR K 0 A_SpawnItemEx("ChemicalCorpse",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
-		DISR K 0 A_NoBlocking
+		NULL A 0 A_StopSound (0) PLA5 A 0 A_StopSound (4)
+		NULL A 0 A_StopSound (1) PLA5 A 0 A_StopSound (5)
+		NULL A 0 A_StopSound (2) PLA5 A 0 A_StopSound (6)
+		NULL A 0 A_StopSound (3) PLA5 A 0 A_StopSound (7)
+		NULL A 0 ACS_ExecuteAlways(310,0,3,0,0)
+		NULL A 0 A_SpawnItemEx("ChemicalCorpse",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		NULL A 0 A_NoBlocking
 		PLA5 N -1 A_SetTranslucent(0.0,0)
 		stop
 
 	Dismiss:
-		TNT1 A 0 A_SpawnItemEx ("TeleportFog", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
+		NULL A 0 A_SpawnItemEx ("TeleportFog", 0,0,0, 0,0,0, 0, SXF_NOCHECKPOSITION)
 		stop
 
 
@@ -1525,35 +1525,35 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	AddToTimers:
-		PLA5 A 0 A_GiveInventory ("ClearTarget", 1)
-		PLA5 A 0 A_CheckSight ("AddToNoPlayerInSightTimer") //No point in adding a counter if the Player has been out of sight for only a few frames.
+		NULL A 0 A_GiveInventory ("ClearTarget", 1)
+		NULL A 0 A_CheckSight ("AddToNoPlayerInSightTimer") //No point in adding a counter if the Player has been out of sight for only a few frames.
 
-		PLA5 A 0 A_JumpIfInventory ("NoPlayerInSight", 0, "CheckTimers")
-		PLA5 A 0 A_TakeInventory ("NoPlayerInSight", 128) //If Player in sight, clear this timer. Otherwise, the marine will sometimes suddenly stop and start idling when you go around a corner.
+		NULL A 0 A_JumpIfInventory ("NoPlayerInSight", 0, "CheckTimers")
+		NULL A 0 A_TakeInventory ("NoPlayerInSight", 128) //If Player in sight, clear this timer. Otherwise, the marine will sometimes suddenly stop and start idling when you go around a corner.
 		//PLA5 A 0 A_Jump (256, "CheckTimers")
 		Goto CheckTimers
 	//These two act as one state.
 	AddToNoPlayerInSightTimer:
-		PLA5 A 0 A_GiveInventory ("NoPlayerInSight", 1)
+		NULL A 0 A_GiveInventory ("NoPlayerInSight", 1)
 		//PLA5 A 0 A_Jump (256, "CheckTimers")
 		Goto CheckTimers
 
 	CheckTimers:
-		PLA5 A 0 A_JumpIfInventory ("ClearTarget", 1, "ClearTarget")
-		PLA5 A 0 A_JumpIfInventory ("NoPlayerInSight", 128, "CheckIfPlayerInSight")
+		NULL A 0 A_JumpIfInventory ("ClearTarget", 1, "ClearTarget")
+		NULL A 0 A_JumpIfInventory ("NoPlayerInSight", 128, "CheckIfPlayerInSight")
 		//PLA5 A 0 A_Jump (256, "AlternateChase")
 		Goto AlternateChase
 
 
 	ClearTarget:
-		PLA5 A 0 A_TakeInventory ("ClearTarget", 1)
-		PLA5 A 0 A_ClearTarget
+		NULL A 0 A_TakeInventory ("ClearTarget", 1)
+		NULL A 0 A_ClearTarget
 		//PLA5 A 0 A_Jump (256, "CheckTimers") //In case both of the timers have been reached, check again so that the other one will reset as well.
 		Goto CheckTimers
 
 	CheckIfPlayerInSight:
-		PLA5 A 0 A_TakeInventory ("NoPlayerInSight", 128)
-		PLA5 A 0 A_CheckSight ("EnablePushablePreIdle")
+		NULL A 0 A_TakeInventory ("NoPlayerInSight", 128)
+		NULL A 0 A_CheckSight ("EnablePushablePreIdle")
 		//PLA5 A 0 A_Jump (256, "CheckTimers")
 		Goto CheckTimers
 
@@ -1562,11 +1562,11 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	ResetTimers: //This is ONLY connected to "See", "Missile" and "Pain" states. Reset timers so that the marines don't all of sudden decide to idle in the middle of a battle.
-		PLA5 A 0 A_JumpIfInventory ("ClearTarget", 0, 4)
-		PLA5 A 0 A_TakeInventory ("ClearTarget", 2)
-		PLA5 A 0 A_JumpIfInventory ("NoPlayerInSight", 0, 2)
-		PLA5 A 0 A_TakeInventory ("NoPlayerInSight", 128)
-		PLA5 A 0
+		NULL A 0 A_JumpIfInventory ("ClearTarget", 0, 4)
+		NULL A 0 A_TakeInventory ("ClearTarget", 2)
+		NULL A 0 A_JumpIfInventory ("NoPlayerInSight", 0, 2)
+		NULL A 0 A_TakeInventory ("NoPlayerInSight", 128)
+		NULL A 0
 		//PLA5 A 0 A_Jump (256, "AlternateChase")
 		Goto AlternateChase
 	}

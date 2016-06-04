@@ -7,7 +7,7 @@ actor HHBlood : Blood Replaces Blood {
 	+FORCEXYBILLBOARD
 	States {
 	Spawn:
-		BLUD C 0 
+		NULL A 0 
 		BLUD C 8 A_SpawnItemEx("ActorHit", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		BLUD BA 8
 		Stop
@@ -62,7 +62,7 @@ actor ActorHit {
 	+noclip
 	States {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 1 A_PlaySound("bullet/flesh")
 		stop
 	}

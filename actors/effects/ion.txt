@@ -13,7 +13,7 @@ Actor BlueBeam
  States
  {
   Spawn:
-   SBBL A 0
+   NULL A 0
    SBBL AAAAAAAAAA 1 BRIGHT A_FadeIn (0.05)
    SBBL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 7 BRIGHT A_FadeIn(0.02)
    SBBL A 66 BRIGHT
@@ -36,7 +36,7 @@ Actor BlueBeam2
  States
  {
   Spawn:
-   SBBL A 0
+   NULL A 0
    SBBL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 7 BRIGHT A_FadeIn(0.02)
    SBBL A 69 BRIGHT
    SBBL A 1 Bright A_FadeOut(0.05)
@@ -57,7 +57,7 @@ Actor BeamFire
  {
   Spawn:
    TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
-   TNT1 A 0 A_SpawnItemEx("BeamSmoke", 0, 0, 0, momx, momy, momz, 0, 128, 0)
+   NULL A 0 A_SpawnItemEx("BeamSmoke", 0, 0, 0, momx, momy, momz, 0, 128, 0)
    ION1 A 1 Bright A_FadeOut(0.02)
    Wait
   Spawn2:
@@ -111,8 +111,8 @@ Actor BlueStrike
  States
  {
   Spawn:
-   TNT1 A 0
-   TNT1 A 0 A_SpawnItemEx ("BlueStrikeFX")
+   NULL A 0
+   NULL A 0 A_SpawnItemEx ("BlueStrikeFX")
    BBLU A 1 Bright A_SetTranslucent(0.9, 1)
    BBLU A 1 Bright A_SetTranslucent(1.0, 1)
    BBLU A 1 Bright A_FadeOut(0.01)
@@ -124,23 +124,23 @@ actor BlueStrikeFX {
 	+CLIENTSIDEONLY
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_PlaySound ("ion/strike", CHAN_BODY, 1.0, 0, ATTN_NONE)
-		TNT1 A 0 A_SpawnItemEx ("BlueFlare") // these two are same on both renderers
-		TNT1 A 0 A_SpawnItemEx ("IonPole")
-		TNT1 A 0 A_JumpIf (ACS_ExecuteWithResult (910, 0) == 0, "Software")
-		TNT1 A 0 A_SpawnItemEx  ("IonFloor")
-		TNT1 A 0 A_SpawnItemEx  ("IonSphere")
-		TNT1 A 0 A_SpawnItemEx ("IonBlasphemy")
-		TNT1 A 0 A_SpawnItemEx ("IonSmokePole")
+		NULL A 0
+		NULL A 0 A_PlaySound ("ion/strike", CHAN_BODY, 1.0, 0, ATTN_NONE)
+		NULL A 0 A_SpawnItemEx ("BlueFlare") // these two are same on both renderers
+		NULL A 0 A_SpawnItemEx ("IonPole")
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (910, 0) == 0, "Software")
+		NULL A 0 A_SpawnItemEx  ("IonFloor")
+		NULL A 0 A_SpawnItemEx  ("IonSphere")
+		NULL A 0 A_SpawnItemEx ("IonBlasphemy")
+		NULL A 0 A_SpawnItemEx ("IonSmokePole")
 		TNT1 A 2 A_SpawnItemEx ("IonDebris")
 		stop
 	Software:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("IonFloorSoftware")
-		TNT1 A 0 A_SpawnItemEx ("IonSphereSoftware")
-		TNT1 A 0 A_SpawnItemEx ("IonBlasphemySoftware")
-		TNT1 A 0 A_SpawnItemEx ("IonSmokePoleSoftware")
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("IonFloorSoftware")
+		NULL A 0 A_SpawnItemEx ("IonSphereSoftware")
+		NULL A 0 A_SpawnItemEx ("IonBlasphemySoftware")
+		NULL A 0 A_SpawnItemEx ("IonSmokePoleSoftware")
 		TNT1 A 2 A_SpawnItemEx ("IonDebrisSoftware")
 		stop
 	}
@@ -150,13 +150,13 @@ actor BlueStrikeFX {
 actor BlueStrikeFXOgl : BlueStrikeFX {
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx("BlueFlare") // these two are same on both renderers
-		TNT1 A 0 A_SpawnItemEx("IonPole")
-		TNT1 A 0 A_SpawnItemEx("IonSphere")
-		TNT1 A 0 A_SpawnItemEx("IonBlasphemy")
-		TNT1 A 0 A_SpawnItemEx("IonPole")
-		TNT1 A 0 A_SpawnItemEx("IonSmokePole")
+		NULL A 0
+		NULL A 0 A_SpawnItemEx("BlueFlare") // these two are same on both renderers
+		NULL A 0 A_SpawnItemEx("IonPole")
+		NULL A 0 A_SpawnItemEx("IonSphere")
+		NULL A 0 A_SpawnItemEx("IonBlasphemy")
+		NULL A 0 A_SpawnItemEx("IonPole")
+		NULL A 0 A_SpawnItemEx("IonSmokePole")
 		TNT1 A 2 A_SpawnItemEx("IonDebris")
 		stop
 	}
@@ -172,7 +172,7 @@ Actor BlueFlare : BlueStrike
  States
  {
   Spawn:
-   FBLU A 0 Bright
+   NULL A 0 Bright
    FBLU A 1 Bright A_FadeOut(0.01)
    Wait
  }
@@ -197,9 +197,9 @@ Actor IonBeaconFX
    BAL1 A 1 A_Countdown
    Wait
   Death:
-   BFLR A 0 A_PlaySound ("ion/warmup", CHAN_BODY, 1.0, 0, ATTN_NONE)
-   BFLR A 0 A_SpawnItemEx ("BlueBeam")
-   BFLR A 0 A_SpawnItemEx ("BlueBeam2")
+   NULL A 0 A_PlaySound ("ion/warmup", CHAN_BODY, 1.0, 0, ATTN_NONE)
+   NULL A 0 A_SpawnItemEx ("BlueBeam")
+   NULL A 0 A_SpawnItemEx ("BlueBeam2")
    BFLR A 1 A_SetTranslucent(0.8, 1)
    BFLR A 1 A_SetTranslucent(0.5, 1)
    BFLR A 1 A_SetTranslucent(0.2, 1)
@@ -248,46 +248,46 @@ Actor IonRain
  States
  {
   Spawn:
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 3 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
+   NULL A 0 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
    TNT1 A 2 A_SpawnItemEx("IonRainFlare",random(-900,900),random(-900,900),random(128,512),0,0,2,0,128,0)
-   TNT1 A 0 A_Countdown
+   NULL A 0 A_Countdown
    loop
   Death:
-   TNT1 A 0
+   NULL A 0
    stop
  }
 }
@@ -326,7 +326,7 @@ TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonSmoke2", 0, 0, 0,0.0001 * Random(-
 //TNT1 AAAAA 0 A_SpawnitemEx("IonSmoke2", 0.0001 * Random(-60000, 60000), 0.0001 * Random(-60000, 60000), 0.0001 * Random(-60000, 60000), 0, 0, 0.0001 * Random(0, 10000), 0, (128|32), 0)
 TNT1 AAAAA 0 A_SpawnitemEx("IonFire", random(-1,1), random(-1,1), 0, 0.0001 * Random(0, 100), 0.0001 * Random(0, 100), 0.0001 * Random(0, 7000), 0, (128|32), 0)
 //TNT1 AAAAAAAAAA 0 A_SpawnitemEx("IonBigSmoke", 0, 0, 16, 0.0001 * Random(0, 10000), 0.0001 * Random(0, 10000), 0.0001 * Random(0, 10000), 0, (128|32), 0)
-TNT1 A 0 
+NULL A 0 
 TNT1 A 1
 stop
 }}
@@ -405,7 +405,7 @@ Actor IonFx {
 	States {
 	Spawn:
 		ION1 ABCD 10 bright A_SpawnitemEx("IonFx2", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-		ION1 A 0 bright A_Countdown
+		NULL A 0 bright A_Countdown
 		loop
 	Death:
 		Stop
@@ -445,7 +445,7 @@ States
 {
 Spawn:
 ION1 ABCD 4 bright A_SpawnitemEx("IonFx4", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-ION1 A 0 bright A_Countdown
+NULL A 0 bright A_Countdown
 loop
 Death:
 Stop
@@ -469,8 +469,8 @@ States
 {
 Spawn:
 TNT1 A 2 A_SpawnitemEx("IonSmokeFx", 0, 0, 0, 0, 0, 0.0001 * Random(80000, 100000), 0, (128|32), 0)
-TNT1 A 0 A_Explode(255, 256, 1)
-TNT1 A 0 A_Countdown
+NULL A 0 A_Explode(255, 256, 1)
+NULL A 0 A_Countdown
 loop
 }
 }
@@ -558,10 +558,10 @@ actor IonFXSmall {
 	+CLIENTSIDEONLY
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx("BlueFlareSmall")
-		TNT1 A 0 A_SpawnItemEx("IonPoleSmall")
-		TNT1 A 0 A_SpawnItemEx("IonSmokePoleSmall")
+		NULL A 0
+		NULL A 0 A_SpawnItemEx("BlueFlareSmall")
+		NULL A 0 A_SpawnItemEx("IonPoleSmall")
+		NULL A 0 A_SpawnItemEx("IonSmokePoleSmall")
 		TNT1 A 2 A_SpawnItemEx("IonDebrisSmall")
 		stop
 	}
@@ -645,7 +645,7 @@ States
 {
 Spawn:
 ION1 ABCD 4 bright A_SpawnitemEx("IonFx4Small", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-ION1 A 0 bright A_Countdown
+NULL A 0 bright A_Countdown
 loop
 Death:
 Stop

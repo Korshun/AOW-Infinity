@@ -62,9 +62,9 @@ actor MechDeathSmoke {
 		TNT1 A 2 A_SpawnItemEx("PulseBallSmokePuff", 0, 0, 0, 0, 0, 1)
 		wait
 	Death:
-		TNT1 A 0 A_PlaySound ("mech/explode/junk")
-		TNT1 A 0 A_Explode (35, 128, 1)
-		TNT1 A 0 A_SpawnItemEx ("ExplosionMain")
+		NULL A 0 A_PlaySound ("mech/explode/junk")
+		NULL A 0 A_Explode (35, 128, 1)
+		NULL A 0 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
 }
@@ -84,9 +84,9 @@ actor MechStepDamageWeak {
 	damagetype "MechStomp"
 	states {
 	Spawn:
-		TNT1 A 0
-		ROB1 D 0 Radius_Quake(2,8,0,2,0)
-		PUFF A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		NULL A 0
+		NULL A 0 Radius_Quake(2,8,0,2,0)
+		NULL A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		TNT1 A 10 bright A_Explode(72,128,0)
 		stop
 	}  
@@ -96,9 +96,9 @@ actor MechStepDamageStrong : MechStepDamageWeak {
 	-TELESTOMP
 	states {
 	Spawn:
-		TNT1 A 0
-		ROB1 D 0 Radius_Quake(3,10,0,4,0)
-		PUFF A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		NULL A 0
+		NULL A 0 Radius_Quake(3,10,0,4,0)
+		NULL A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		TNT1 A 10 bright A_Explode(256,128,0)
 		stop
 	}  
@@ -110,8 +110,8 @@ actor MechStepGuardian : MechStepDamageWeak {
 	damagetype "MechStomp"
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 Radius_Quake (3, 10, 0, 4, 0)
+		NULL A 0
+		NULL A 0 Radius_Quake (3, 10, 0, 4, 0)
 		TNT1 A 10 bright A_Explode (384, 192, 0)
 		stop
 	}  
@@ -121,7 +121,7 @@ actor MechStepDamageOrca : MechStepDamageWeak {
 	-TELESTOMP
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 10 bright A_Explode(60,64,0)
 		stop
 	}
@@ -134,7 +134,7 @@ actor StepSound {
 	+noclip
 	States {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 1 A_PlaySound("mech/step")
 		stop
 	}
@@ -146,22 +146,22 @@ actor MechAmmoStuffSmall : CustomInventory {
 	+ALWAYSPICKUP
 	states {
 	Pickup:
-		TNT1 A 0 A_GiveInventory("MechRocketAmmo", 2)
-		TNT1 A 0 A_GiveInventory("ShortRangeMissileAmmo", 2)
-		TNT1 A 0 A_GiveInventory("Wolverine-MinigunAmmo", 4)
-		TNT1 A 0 A_GiveInventory("Titan-RocketAmmo", 2)
-		TNT1 A 0 A_GiveInventory("Titan-80mmAmmo", 1)
-		TNT1 A 0 A_GiveInventory("Titan-FlamerAmmo", 4)
-		TNT1 A 0 A_GiveInventory("Raven-RocketAmmo", 2)
-		TNT1 A 0 A_GiveInventory("RavenAC2Ammo", 5)
-		TNT1 A 0 A_GiveInventory("Orca-RocketAmmo", 1)
-		TNT1 A 0 A_GiveInventory("Orca-MinigunAmmo", 4)
-		TNT1 A 0 A_GiveInventory("FlamerAmmo", 5)
-		TNT1 A 0 A_GiveInventory("ShortRangeMissileAmmo", 2)
-		TNT1 A 0 A_GiveInventory("ArtilleryShellAmmo", 2)
-		TNT1 A 0 A_GiveInventory("MachineGunAmmo", 4)
-		TNT1 A 0 A_GiveInventory("GeneporiumCharge", 3)
-		TNT1 A 0 A_GiveInventory("NukeAmmo", 1)
+		NULL A 0 A_GiveInventory("MechRocketAmmo", 2)
+		NULL A 0 A_GiveInventory("ShortRangeMissileAmmo", 2)
+		NULL A 0 A_GiveInventory("Wolverine-MinigunAmmo", 4)
+		NULL A 0 A_GiveInventory("Titan-RocketAmmo", 2)
+		NULL A 0 A_GiveInventory("Titan-80mmAmmo", 1)
+		NULL A 0 A_GiveInventory("Titan-FlamerAmmo", 4)
+		NULL A 0 A_GiveInventory("Raven-RocketAmmo", 2)
+		NULL A 0 A_GiveInventory("RavenAC2Ammo", 5)
+		NULL A 0 A_GiveInventory("Orca-RocketAmmo", 1)
+		NULL A 0 A_GiveInventory("Orca-MinigunAmmo", 4)
+		NULL A 0 A_GiveInventory("FlamerAmmo", 5)
+		NULL A 0 A_GiveInventory("ShortRangeMissileAmmo", 2)
+		NULL A 0 A_GiveInventory("ArtilleryShellAmmo", 2)
+		NULL A 0 A_GiveInventory("MachineGunAmmo", 4)
+		NULL A 0 A_GiveInventory("GeneporiumCharge", 3)
+		NULL A 0 A_GiveInventory("NukeAmmo", 1)
 		stop
 	}
 }
@@ -173,10 +173,10 @@ actor MechEjectButton : CustomInventory {
 	tag "Eject mech"
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	Use:
-		TNT1 A 0 ACS_ExecuteAlways (697, 0)
+		NULL A 0 ACS_ExecuteAlways (697, 0)
 		stop
 	}
 }
@@ -199,9 +199,9 @@ actor LongRangeMissile {
 		MISL A -1 bright
 		stop
 	Death:
-		TNT1 A 0 A_StopSound (CHAN_BODY)
-		TNT1 A 0 A_Explode (30, 128, 0)
-		TNT1 A 0 A_SpawnItemEx ("FlameDecay", random (-16,16), random (-16,16), 4, 0, 0, 0, 0, 0, 160)
+		NULL A 0 A_StopSound (CHAN_BODY)
+		NULL A 0 A_Explode (30, 128, 0)
+		NULL A 0 A_SpawnItemEx ("FlameDecay", random (-16,16), random (-16,16), 4, 0, 0, 0, 0, 0, 160)
 		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
@@ -212,9 +212,9 @@ actor LongRangeMissileBlue : LongRangeMissile {
 	DamageType "ExplosionBlue"
 	States {
 	Death:
-		TNT1 A 0 A_StopSound (CHAN_BODY)
-		TNT1 A 0 A_Explode (30, 128, 0)
-		TNT1 A 0 A_SpawnItemEx ("FlameDecayBlue", random (-16,16), random (-16,16), 4, 0, 0, 0, 0, 0, 160)
+		NULL A 0 A_StopSound (CHAN_BODY)
+		NULL A 0 A_Explode (30, 128, 0)
+		NULL A 0 A_SpawnItemEx ("FlameDecayBlue", random (-16,16), random (-16,16), 4, 0, 0, 0, 0, 0, 160)
 		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
@@ -233,14 +233,14 @@ actor MechExplosionSmall {
 	damagetype "Monster"
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_PlaySound ("mech/explode/medium1", 1)
-		TNT1 A 0 A_PlaySound ("mech/explode/medium2", 2)
-		TNT1 A 0 A_PlaySound ("mech/explode/medium1", 3, 0.5)
-		TNT1 A 0 A_PlaySound ("mech/explode/medium2", 4, 0.5)
-		TNT1 A 0 A_Explode (50, 512)
-		TNT1 A 0 A_Explode (350, 128)
-		TNT1 A 0 A_Explode (350, 256)
+		NULL A 0
+		NULL A 0 A_PlaySound ("mech/explode/medium1", 1)
+		NULL A 0 A_PlaySound ("mech/explode/medium2", 2)
+		NULL A 0 A_PlaySound ("mech/explode/medium1", 3, 0.5)
+		NULL A 0 A_PlaySound ("mech/explode/medium2", 4, 0.5)
+		NULL A 0 A_Explode (50, 512)
+		NULL A 0 A_Explode (350, 128)
+		NULL A 0 A_Explode (350, 256)
 		TNT1 AAAAA 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(64,120), random(-5,5), random(-5,5), random(9,14), 0, 0, 64)
 		TNT1 A 8 A_SpawnItemEx ("ExplosionMainLarge")
 		TNT1 A 8 A_SpawnItemEx ("ExplosionMainLarge", 12, 16, 64)
@@ -256,14 +256,14 @@ actor MechExplosionLarge {
 	damagetype "Monster"
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_PlaySound ("mech/explode/large1", 1)
-		TNT1 A 0 A_PlaySound ("mech/explode/large2", 2)
-		TNT1 A 0 A_PlaySound ("mech/explode/large1", 3, 0.5)
-		TNT1 A 0 A_PlaySound ("mech/explode/large2", 4, 0.5)
-		TNT1 A 0 A_Explode (100, 512)
-		TNT1 A 0 A_Explode (700, 128)
-		TNT1 A 0 A_Explode (700, 256)
+		NULL A 0
+		NULL A 0 A_PlaySound ("mech/explode/large1", 1)
+		NULL A 0 A_PlaySound ("mech/explode/large2", 2)
+		NULL A 0 A_PlaySound ("mech/explode/large1", 3, 0.5)
+		NULL A 0 A_PlaySound ("mech/explode/large2", 4, 0.5)
+		NULL A 0 A_Explode (100, 512)
+		NULL A 0 A_Explode (700, 128)
+		NULL A 0 A_Explode (700, 256)
 		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(64,120), random(-5,5), random(-5,5), random(9,14), 0, 0, 64)
 		TNT1 A 8 A_SpawnItemEx ("ExplosionMainLarge")
 		TNT1 A 8 A_SpawnItemEx ("ExplosionMainLarge", 12, 16, 64)

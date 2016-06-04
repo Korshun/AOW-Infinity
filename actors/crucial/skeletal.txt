@@ -6,16 +6,16 @@ actor AOWWeapon : Weapon {
 	weapon.selectionorder 9999
 	states {
 	DeselectDie:
-		TNT1 A 0 A_Lower
+		NULL A 0 A_Lower
 		TNT1 A 1 A_Lower
 		loop
 	Flash:
 		TNT1 A 2 A_Light1
 		TNT1 A 2 A_Light2
-		TNT1 A 0 A_Light0
+		NULL A 0 A_Light0
 		stop
 	LightDone:
-		TNT1 A 0 A_Light0
+		NULL A 0 A_Light0
 		Stop
 	}
 }
@@ -31,7 +31,7 @@ actor PermanentPowerup : PowerupGiver {
 	+AUTOACTIVATE
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -41,16 +41,16 @@ actor InventoryItem : CustomInventory {
 	inventory.maxamount 1
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	Use.Mech:
-		TNT1 A 0 ACS_ExecuteAlways (697, 0)
+		NULL A 0 ACS_ExecuteAlways (697, 0)
 		fail
 	Failure:
-		TNT1 A 0
+		NULL A 0
 		fail
 	Destealth:
-		TNT1 A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
 		fail
 	}
 }
@@ -60,7 +60,7 @@ actor Boolean : Inventory {
 	inventory.maxamount 1
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
