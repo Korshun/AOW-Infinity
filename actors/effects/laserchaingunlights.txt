@@ -12,10 +12,10 @@ actor LaserChaingunLight {
   States
 {
   Spawn:
-	LR_E A 0
-	LR_E A 0 A_Jump(64,"SlowFade")
-	LR_E A 0 A_Jump(164,2)
-	LR_E A 0 A_SpawnItemEx("LCGLightBig",0,0,0,0,0,0)
+	NULL A 0
+	NULL A 0 A_Jump(64,"SlowFade")
+	NULL A 0 A_Jump(164,2)
+	NULL A 0 A_SpawnItemEx("LCGLightBig",0,0,0,0,0,0)
 	Stop
 	LR_E AAA 1 A_FadeOut(random(10,100)/1000)
 	LR_E BB 1 A_FadeOut(random(10,100)/1000)
@@ -42,10 +42,10 @@ actor LaserChaingunLightBlue : LaserChainGunLight //Oof
   States
 {
   Spawn:
-	LC_E A 0
-	LC_E A 0 A_Jump(64,"SlowFade")
-	LC_E A 0 A_Jump(164,2)
-	LC_E A 0 A_SpawnItemEx("LCGLightBigBlue",0,0,0,0,0,0)
+	NULL A 0
+	NULL A 0 A_Jump(64,"SlowFade")
+	NULL A 0 A_Jump(164,2)
+	NULL A 0 A_SpawnItemEx("LCGLightBigBlue",0,0,0,0,0,0)
 	Stop
 	LC_E AAA 1 A_FadeOut(random(10,100)/1000)
 	LC_E BB 1 A_FadeOut(random(10,100)/1000)

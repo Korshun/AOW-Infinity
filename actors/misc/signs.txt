@@ -643,7 +643,7 @@ actor Sign_Upgrade05 21462 {
   States
   {
   Spawn:
-    TNT1 A 0
+    NULL A 0
     // UPGR E -1 BRIGHT
     stop
   }

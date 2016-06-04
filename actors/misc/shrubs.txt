@@ -3,8 +3,8 @@ actor Shrub 3051 {
 	gravity 1000
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_Jump (256, "Spawn1", "Spawn2", "Spawn3", "Spawn4",
+		NULL A 0
+		NULL A 0 A_Jump (256, "Spawn1", "Spawn2", "Spawn3", "Spawn4",
 			"Spawn5", "Spawn6", "Spawn7", "Spawn8", "Spawn9")
 		goto Spawn1
 	Spawn1:

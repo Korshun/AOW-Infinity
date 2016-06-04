@@ -26,7 +26,7 @@ actor DonationMessage : CustomInventory {
 	+ALWAYSPICKUP
 	states {
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	Use:
 		TNT1 A 5 ACS_ExecuteAlways (111, 0)

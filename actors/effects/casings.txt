@@ -15,16 +15,16 @@ actor ShellCasing {
 	States {
 	Spawn:
 		CAS1 ABCDEFGH 1 
-		TNT1 A 0 A_JumpIf(waterlevel > 1, "Death")
+		NULL A 0 A_JumpIf(waterlevel > 1, "Death")
 		loop
 	Death:
-		TNT1 A 0
-		TNT1 A 0 ThrustThingZ(0,2,1,0)
-		TNT1 A 0 A_Jump (128, "death1")
-		TNT1 A 0 A_Jump (128, "death2")
-		TNT1 A 0 A_Jump (128, "death3")
-		TNT1 A 0 A_Jump (128, "death4")
-		TNT1 A 0 A_Jump (128, "death5")
+		NULL A 0
+		NULL A 0 ThrustThingZ(0,2,1,0)
+		NULL A 0 A_Jump (128, "death1")
+		NULL A 0 A_Jump (128, "death2")
+		NULL A 0 A_Jump (128, "death3")
+		NULL A 0 A_Jump (128, "death4")
+		NULL A 0 A_Jump (128, "death5")
 		goto Death6
 	Death1:
 		CAS1 I 512
@@ -58,7 +58,7 @@ actor ShotgunShellCasing : ShellCasing {
 	States {
 	Spawn:
 		CAS2 ABCDEFGH 1 
-		TNT1 A 0 A_JumpIf(waterlevel > 1, "Death")
+		NULL A 0 A_JumpIf(waterlevel > 1, "Death")
 		loop
 	Death1:
 		CAS2 I 512
@@ -92,7 +92,7 @@ actor RifleShellCasing : ShellCasing {
 	states {
 	Spawn:
 		CAS3 ABCDEFGH 1 
-		TNT1 A 0 A_JumpIf(waterlevel > 1, "Death")
+		NULL A 0 A_JumpIf(waterlevel > 1, "Death")
 		loop
 	Death1:
 		CAS3 I 512
@@ -139,8 +139,8 @@ actor CellCasing : ShellCasing {
 		CELL A 3 A_JumpIf(waterlevel > 1, "Death")
 		wait
 	Death:
-		TNT1 A 0
-		TNT1 A 0 ThrustThingZ (0, 2, 1, 0)
+		NULL A 0
+		NULL A 0 ThrustThingZ (0, 2, 1, 0)
 		CELL A 512
 		CELL A 1 A_FadeOut (0.01)
 		wait

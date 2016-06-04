@@ -54,139 +54,139 @@ actor Utility_MiniRavenRed {
 	states
 	{
 	Spawn:
-		RAVN I 0 A_JumpIfInventory("MiniRavenAwake", 1, "Idling")
-		RAVN I 0 A_GiveInventory("MiniRavenAwake", 1)
-		RAVN I 0 A_CheckSight("Death.Deconstruction")
-		RAVN I 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_RED)
+		NULL A 0 A_JumpIfInventory("MiniRavenAwake", 1, "Idling")
+		NULL A 0 A_GiveInventory("MiniRavenAwake", 1)
+		NULL A 0 A_CheckSight("Death.Deconstruction")
+		NULL A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_RED)
 	Idling:
 		RAVN I 2 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		Loop
 	Stand:
-		RAVN I 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN I 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN I 0 A_JumpIfCloser(128,"SeeFull")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfCloser(128,"SeeFull")
 		RAVN I 5 A_Jump(16,"See")
 		loop
 	//More like Wandering
 	See:
-		RAVN A 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN A 0 A_JumpIfCloser(128,"SeeFull")
-		RAVN A 0 A_Jump(64,"Stand")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfCloser(128,"SeeFull")
+		NULL A 0 A_Jump(64,"Stand")
 		RAVN AAABBBCCC 2 A_Wander
-		RAVN C 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 2 A_Wander
-		RAVN D 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		RAVN EEEFFFGGG 2 A_Wander
-		RAVN H 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		RAVN HHH 2 A_Wander
-		RAVN H 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN A 0 A_JumpIfInTargetInventory ("IsBlue", 1, "See")
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfInTargetInventory ("IsBlue", 1, "See")
 		goto SeeWander
 	SeeWander:
-		RAVN A 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN A 0 A_Jump(64,"Stand")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_Jump(64,"Stand")
 		RAVN AAABBBCCC 2 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 2 A_Chase("","")
 		RAVN EEEFFFGGG 2 A_Chase("","")
 		RAVN HHH 2 A_Chase("","")
-		RAVN H 0 A_ClearTarget
+		NULL A 0 A_ClearTarget
 		goto See
 	SeeFull:
-		RAVN A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
+		NULL A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
 		goto SeeWander
-		RAVN A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
 		RAVN AAABBBCCC 1 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Chase("","")
 		RAVN EEEFFFGGG 1 A_Chase("","")
 		RAVN HHH 1 A_Chase("","Missile")
-		RAVN H 0 A_FaceTarget
-		RAVN H 0 A_JumpIfTargetInLOS("Missile",180)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_JumpIfTargetInLOS("Missile",180)
 		goto See
 	Missile:
-		RAVN A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
+		NULL A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
 		goto SeeWander
-		RAVN A 0 A_Jump(96,"Missile2")
-		RAVN A 0 A_PlayWeaponSound("lrm/fire")
-		RAVN A 0 A_CustomMissile("MiniRaven-LRM",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_Jump(96,"Missile2")
+		NULL A 0 A_PlayWeaponSound("lrm/fire")
+		NULL A 0 A_CustomMissile("MiniRaven-LRM",48,random(-12,-16),random(-4,4),0)
 		RAVN A 1 A_Chase("","")
-		RAVN A 0 
+		NULL A 0 
 		RAVN A 1 A_Chase("","")
-		RAVN A 0 
+		NULL A 0 
 		RAVN A 1 A_Chase("","")
-		RAVN H 0 A_FaceTarget
-		RAVN B 0 A_CustomMissile("MiniRaven-LRM",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_CustomMissile("MiniRaven-LRM",48,random(-12,-16),random(-4,4),0)
 		RAVN B 1 A_Chase("","")
-		RAVN H 0 A_FaceTarget
-		RAVN B 0 
+		NULL A 0 A_FaceTarget
+		NULL A 0 
 		RAVN BB 1 A_Wander
 		RAVN CCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
 		goto Missile1Reload
 	Missile1Reload:
 		RAVN AAABBBCCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",3,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",3,1)
 		Loop
-		RAVN H 0 A_PlayWeaponSound("lrm/reload")
-		RAVN H 0 A_TakeInventory("MechReloading",6)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound("lrm/reload")
+		NULL A 0 A_TakeInventory("MechReloading",6)
+		NULL A 0 A_FaceTarget
 		goto See
 	Missile2:
-		RAVN A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
+		NULL A 0 A_JumpIfInTargetInventory ("IsBlue", 1, 1)
 		goto Missile2Reload
-		RAVN A 0 A_CustomMissile("MiniRavenAC2",48,random(-12,-16),random(-4,4),0)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_CustomMissile("MiniRavenAC2",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_FaceTarget
 		RAVN AAA 1 A_Chase("","")
 		RAVN BBB 1 A_Chase("","")
 		RAVN CCC 1 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Chase("","")
-		RAVN C 0 A_CustomMissile("MiniRavenAC2",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_CustomMissile("MiniRavenAC2",48,random(-12,-16),random(-4,4),0)
 		RAVN EEE 1 A_Chase("","")
 		RAVN FFFGGG 1 A_Chase("","")
-		RAVN H 0 A_SpawnItemEx("MechStepSmokePuff", 0, 30, 4, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_SpawnItemEx("MechStepSmokePuff", 0, 30, 4, 0, 0, 0, 0, 128, 0)
 		RAVN HHH 1 A_Chase("","")
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",3,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",3,1)
 		loop
-		RAVN H 0 A_TakeInventory("MechReloading",3)
+		NULL A 0 A_TakeInventory("MechReloading",3)
 		goto Missile2Reload
 	Missile2Reload:
 		RAVN AAABBBCCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",1,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",1,1)
 		Loop
-		RAVN H 0 A_TakeInventory("MechReloading",3)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_TakeInventory("MechReloading",3)
+		NULL A 0 A_FaceTarget
 		goto See
 	Death:
 		RAVN JKLMNOPQRS 4 A_NoBlocking
-		RAVN T 0 A_StopSoundEx("SoundSlot5")
-		RAVN T 0 A_StopSoundEx("Weapon")
-		RAVN T 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_StopSoundEx("SoundSlot5")
+		NULL A 0 A_StopSoundEx("Weapon")
+		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
 		RAVN TTT 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(16,32), random(-5,5), random(-5,5), random(4,7), 0, 0, 64)
-		RAVN T 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-		RAVN T 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 0 A_PlaySound("weapons/rocklx")
 		TNT1 T 1 // ACS_ExecuteAlways(345,0,6,0,0)
 		Stop
 	Death.Deconstruction:
 		// [NF] we be breaking down birdies
-		RAVN A 0 A_NoBlocking
+		NULL A 0 A_NoBlocking
 		RAVN A 2 A_PlaySound("weapons/timedeath")
 		RAVN AAAAAAAAAA 2 A_Fadeout(0.1) 
 		stop
@@ -243,137 +243,137 @@ actor Utility_MiniRavenBlue
 	states
 	{
 	Spawn:
-		RAVN I 0 A_JumpIfInventory("MiniRavenAwake", 1, "Idling")
-		RAVN I 0 A_GiveInventory("MiniRavenAwake", 1)
-		RAVN I 0 A_CheckSight("Death.Deconstruction")
-		RAVN I 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_BLUE)
+		NULL A 0 A_JumpIfInventory("MiniRavenAwake", 1, "Idling")
+		NULL A 0 A_GiveInventory("MiniRavenAwake", 1)
+		NULL A 0 A_CheckSight("Death.Deconstruction")
+		NULL A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_BLUE)
 	Idling:
 		RAVN I 2 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		Loop
 	Stand:
-		RAVN I 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN I 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN I 0 A_JumpIfCloser(128,"SeeFull")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfCloser(128,"SeeFull")
 		RAVN I 5 A_Jump(16,"See")
 		loop
 	//More like Wandering
 	See:
-		RAVN H 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN H 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN H 0 A_JumpIfCloser(128,"SeeFull")
-		RAVN H 0 A_Jump(64,"Stand")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfCloser(128,"SeeFull")
+		NULL A 0 A_Jump(64,"Stand")
 		RAVN AAABBBCCC 2 A_Wander
-		RAVN C 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 2 A_Wander
-		RAVN E 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		RAVN EEEFFFGGG 2 A_Wander
-		RAVN H 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
 		RAVN HHH 2 A_Wander
-		RAVN H 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
-		RAVN H 0 A_JumpIfInTargetInventory ("IsRed", 1, "See")
+		NULL A 0 A_LookEx(0,32,7072,512,180,"SeeFull") 
+		NULL A 0 A_JumpIfInTargetInventory ("IsRed", 1, "See")
 		goto SeeWander
 	SeeWander:
-		RAVN H 0 A_ChangeFlag("FRIENDLY",0)
-		RAVN H 0 A_Jump(64,"Stand")
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_Jump(64,"Stand")
 		RAVN AAABBBCCC 2 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 2 A_Chase("","")
 		RAVN EEEFFFGGG 2 A_Chase("","")
 		RAVN HHH 2 A_Chase("","")
-		RAVN H 0 A_ClearTarget
+		NULL A 0 A_ClearTarget
 		goto See
 	SeeFull:
-		RAVN A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1)
+		NULL A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1)
 		goto SeeWander
-		RAVN A 0 A_ChangeFlag("FRIENDLY",0)
+		NULL A 0 A_ChangeFlag("FRIENDLY",0)
 		RAVN AAABBBCCC 1 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Chase("","")
 		RAVN EEEFFFGGG 1 A_Chase("","")
 		RAVN HHH 1 A_Chase("","Missile")
-		RAVN H 0 A_FaceTarget
-		RAVN H 0 A_JumpIfTargetInLOS("Missile",180)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_JumpIfTargetInLOS("Missile",180)
 		goto See
 	Missile:
-		CIGN A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1) goto SeeWander
-		RAVN H 0 A_Jump(96,"Missile2")
-		RAVN A 0 A_PlayWeaponSound("lrm/fire")
-		RAVN A 0 A_CustomMissile("MiniRaven-LRMBlue",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1) goto SeeWander
+		NULL A 0 A_Jump(96,"Missile2")
+		NULL A 0 A_PlayWeaponSound("lrm/fire")
+		NULL A 0 A_CustomMissile("MiniRaven-LRMBlue",48,random(-12,-16),random(-4,4),0)
 		RAVN A 1 A_Chase("","")
-		RAVN A 0 
+		NULL A 0 
 		RAVN A 1 A_Chase("","")
-		RAVN A 0 
+		NULL A 0 
 		RAVN A 1 A_Chase("","")
-		RAVN H 0 A_FaceTarget
-		RAVN B 0 A_CustomMissile("MiniRaven-LRMBlue",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_FaceTarget
+		NULL A 0 A_CustomMissile("MiniRaven-LRMBlue",48,random(-12,-16),random(-4,4),0)
 		RAVN B 1 A_Chase("","")
-		RAVN H 0 A_FaceTarget
-		RAVN B 0 
+		NULL A 0 A_FaceTarget
+		NULL A 0 
 		RAVN BB 1 A_Wander
 		RAVN CCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
 		goto Missile1Reload
 	Missile1Reload:
 		RAVN AAABBBCCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",3,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",3,1)
 		Loop
-		RAVN H 0 A_PlayWeaponSound("lrm/reload")
-		RAVN H 0 A_TakeInventory("MechReloading",6)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_PlayWeaponSound("lrm/reload")
+		NULL A 0 A_TakeInventory("MechReloading",6)
+		NULL A 0 A_FaceTarget
 		goto See
 	Missile2:
-		CIGN A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1) goto Missile2Reload
-		RAVN A 0 A_CustomMissile("MiniRavenAC2Blue",48,random(-12,-16),random(-4,4),0)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_JumpIfInTargetInventory ("IsRed", 1, 1) goto Missile2Reload
+		NULL A 0 A_CustomMissile("MiniRavenAC2Blue",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_FaceTarget
 		RAVN AAA 1 A_Chase("","")
 		RAVN BBB 1 A_Chase("","")
 		RAVN CCC 1 A_Chase("","")
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Chase("","")
-		RAVN C 0 A_CustomMissile("MiniRavenAC2Blue",48,random(-12,-16),random(-4,4),0)
+		NULL A 0 A_CustomMissile("MiniRavenAC2Blue",48,random(-12,-16),random(-4,4),0)
 		RAVN EEE 1 A_Chase("","")
 		RAVN FFFGGG 1 A_Chase("","")
-		RAVN H 0 A_SpawnItemEx("MechStepSmokePuff", 0, 30, 4, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_SpawnItemEx("MechStepSmokePuff", 0, 30, 4, 0, 0, 0, 0, 128, 0)
 		RAVN HHH 1 A_Chase("","")
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",3,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",3,1)
 		loop
-		RAVN H 0 A_TakeInventory("MechReloading",3)
+		NULL A 0 A_TakeInventory("MechReloading",3)
 		goto Missile2Reload
 	Missile2Reload:
 		RAVN AAABBBCCC 1 A_Wander
-		RAVN D 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
+		NULL A 0 A_PlaySoundEx("mech/idle","SoundSlot5",1,-1)
 		RAVN DDD 1 A_Wander
 		RAVN EEEFFFGGG 1 A_Wander
 		RAVN HHH 1 A_Wander
-		RAVN H 0 A_GiveInventory("MechReloading",1)
-		RAVN H 0 A_JumpIfInventory("MechReloading",1,1)
+		NULL A 0 A_GiveInventory("MechReloading",1)
+		NULL A 0 A_JumpIfInventory("MechReloading",1,1)
 		Loop
-		RAVN H 0 A_TakeInventory("MechReloading",3)
-		RAVN H 0 A_FaceTarget
+		NULL A 0 A_TakeInventory("MechReloading",3)
+		NULL A 0 A_FaceTarget
 		goto See
 	Death:
-		RAVN A 0
+		NULL A 0
 		RAVN JKLMNOPQRS 4 A_NoBlocking
-		RAVN T 0 A_StopSoundEx("SoundSlot5")
-		RAVN T 0 A_StopSoundEx("Weapon")
-		RAVN T 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_StopSoundEx("SoundSlot5")
+		NULL A 0 A_StopSoundEx("Weapon")
+		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
 		RAVN TTT 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(16,32), random(-5,5), random(-5,5), random(4,7), 0, 0, 64)
-		RAVN T 0 A_SpawnItemEx("FlameWallDecayBlue", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-		RAVN T 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("FlameWallDecayBlue", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 0 A_PlaySound("weapons/rocklx")
 		TNT1 T 1 // ACS_ExecuteAlways(345,0,6,1,0)
 		Stop
 	Death.Deconstruction:
-		RAVN A 0 A_NoBlocking
+		NULL A 0 A_NoBlocking
 		RAVN A 2 A_PlaySound("weapons/timedeath")
 		RAVN AAAAAAAAAA 2 A_Fadeout(0.1) 
 		stop
@@ -399,13 +399,13 @@ actor MiniRaven-LRM {
 	{
 	Spawn:
 		MISL A 6 bright A_SeekerMissile(24,30)
-		MISL A 0 bright A_PlaySoundEx("ambient/rocket","Body",1,-1)
+		NULL A 0 bright A_PlaySoundEx("ambient/rocket","Body",1,-1)
 		loop
 	Death:
-		TNT1 B 0 A_NoGravity
-		TNT1 A 0 A_SetTranslucent(0.9,1)
-		TNT1 B 0 bright A_StopSoundEx("Body")
-		TNT1 A 0 A_SpawnItemEx("MiniRaven-LRMExplosion", -1, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 0 A_NoGravity
+		NULL A 0 A_SetTranslucent(0.9,1)
+		NULL A 0 bright A_StopSoundEx("Body")
+		NULL A 0 A_SpawnItemEx("MiniRaven-LRMExplosion", -1, 0, 0, 0, 0, 0, 0, 0, 0)
 		EXP1 ABCDEFGHIJ 3 bright 
 		stop
 	}
@@ -425,7 +425,7 @@ actor MiniRaven-LRMExplosion
 	states
 	{
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 5 bright A_Explode(10,128,0)
 		stop
 	}	
@@ -451,13 +451,13 @@ actor MiniRaven-LRMBlue
 	{
 	Spawn:
 		MISL A 6 bright A_SeekerMissile(24,30)
-		MISL A 0 bright A_PlaySoundEx("ambient/rocket","Body",1,-1)
+		NULL A 0 bright A_PlaySoundEx("ambient/rocket","Body",1,-1)
 		loop
 	Death:
-		TNT1 B 0 A_NoGravity
-		TNT1 A 0 A_SetTranslucent(0.9,1)
-		TNT1 B 0 bright A_StopSoundEx("Body")
-		TNT1 A 0 A_SpawnItemEx("MiniRaven-LRMExplosionBlue", -1, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 0 A_NoGravity
+		NULL A 0 A_SetTranslucent(0.9,1)
+		NULL A 0 bright A_StopSoundEx("Body")
+		NULL A 0 A_SpawnItemEx("MiniRaven-LRMExplosionBlue", -1, 0, 0, 0, 0, 0, 0, 0, 0)
 		EXP1 ABCDEFGHIJ 3 bright 
 		stop
 	}
@@ -477,7 +477,7 @@ actor MiniRaven-LRMExplosionBlue
 	states
 	{
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		TNT1 A 5 bright A_Explode(10,128,0)
 		stop
 	}	
@@ -490,7 +490,7 @@ actor MiniRavenAC2 : RavenAC2 {
 	scale 0.2
 	states {
 	Death:
-		TNT1 A 0 A_SpawnItemEx ("ExplosionSmall")
+		NULL A 0 A_SpawnItemEx ("ExplosionSmall")
 		stop
 	}
 }

@@ -16,33 +16,33 @@ actor RemoteC4 : AOWWeapon {
 	weapon.ammogive 5
 	states {
 	Ready:
-		RC4G B 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "ReadyFull")
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "ReadyFull")
 		RC4G B 5 A_WeaponReady (WRF_NOPRIMARY)
 		loop
 	ReadyFull:
 		RC4G A -1 A_WeaponReady
 		wait
 	Deselect:
-		RC4G B 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "DeselectFull")
-		RC4G B 0 A_Lower
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "DeselectFull")
+		NULL A 0 A_Lower
 		RC4G B 1 A_Lower
 		goto Deselect+1
 	DeselectFull:
-		RC4G A 0 A_Lower
+		NULL A 0 A_Lower
 		RC4G A 1 A_Lower
 		loop
 	Select:
-		RC4G B 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "SelectFull")
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "SelectFull")
 		RC4G B 1 A_Raise
-		RC4G B 0 A_Raise
+		NULL A 0 A_Raise
 		loop
 	SelectFull:
-		RC4G A 0 A_TakeInventory ("RemoteC4Detonator", 1)
+		NULL A 0 A_TakeInventory ("RemoteC4Detonator", 1)
 		RC4G A 1 A_Raise
-		RC4G A 0 A_Raise
+		NULL A 0 A_Raise
 		goto SelectFull+1
 	Fire:
-		TNT1 A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "ReadyFull")
+		NULL A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "ReadyFull")
 		RC4G A 1 offset (1,31)
 		RC4G A 1 offset (7,37)
 		RC4G A 1 offset (13,43)
@@ -53,14 +53,14 @@ actor RemoteC4 : AOWWeapon {
 		RC4G A 1 offset (54,84) A_PlaySound ("c4/remote", CHAN_WEAPON)
 		RC4G A 1 offset (60,90)
 		RC4G A 1 offset (40,70)
-		RC4G B 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "ReadyFull")
-		RC4G B 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
+		NULL A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "ReadyFull")
+		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
 		RC4G B 5 A_FireCustomMissile ("RemoteC4Thrown")
-		RC4G B 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "FireEndFull")
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "FireEndFull")
 		goto FireEnd
 	FireBlue:
 		TNT1 A 5 A_FireCustomMissile ("RemoteC4ThrownBlue")
-		TNT1 A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "FireEndFull")
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "FireEndFull")
 		goto FireEnd
 	FireEnd:
 		RC4G B 1 offset (30,60)
@@ -78,7 +78,7 @@ actor RemoteC4 : AOWWeapon {
 		RC4G A 1 offset(0,110)
 		goto Ready
 	AltFire:
-		RC4E A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "AltFireFull")
+		NULL A 0 A_JumpIfInventory ("RemoteC4Ammo", 1, "AltFireFull")
 		RC4E ABCDEFGH 1
 		RC4E I 2
 		RC4E J 2 A_PlayWeaponSound ("c4/remote2")
@@ -113,7 +113,7 @@ actor RemoteC4Thrown {
 		stop
 	Death:
 		RC4T A 35 A_NoGravity
-		RC4T A 0 A_SpawnItem ("RemoteC4Armed")
+		NULL A 0 A_SpawnItem ("RemoteC4Armed")
 		stop
 	}
 }
@@ -124,7 +124,7 @@ actor RemoteC4ThrownBlue : RemoteC4Thrown {
 	states {
 	Death:
 		RC4T A 35 A_NoGravity
-		RC4T A 0 A_SpawnItem ("RemoteC4ArmedBlue")
+		NULL A 0 A_SpawnItem ("RemoteC4ArmedBlue")
 		stop
 	}
 }
@@ -175,29 +175,29 @@ actor RemoteC4Armed {
 	
 	states {
 	Spawn:
-		RC4T A 0
-		RC4T A 0 A_PlaySound ("terrorist/select", CHAN_VOICE)
-		RC4T A 0 A_GiveInventory ("IsRed", 1)
+		NULL A 0
+		NULL A 0 A_PlaySound ("terrorist/select", CHAN_VOICE)
+		NULL A 0 A_GiveInventory ("IsRed", 1)
 		goto Idle
 	Idle:
-		RC4T A 0 A_JumpIfInTargetInventory ("RemoteC4Ammo", 4, "Death.Disarm")
-		RC4T A 0 A_JumpIfInTargetInventory ("C4DetonateCheck", 1, "Death")
+		NULL A 0 A_JumpIfInTargetInventory ("RemoteC4Ammo", 4, "Death.Disarm")
+		NULL A 0 A_JumpIfInTargetInventory ("C4DetonateCheck", 1, "Death")
 		RC4T A 5
 		loop
 	Death:
-		RC4T A 0 A_NoGravity
+		NULL A 0 A_NoGravity
 		RC4T A 10 A_PlaySound ("c4/detonate")
-		TNT1 A 0 A_SpawnItemEx ("ExplosionMainLarge")
-		TNT1 A 0 A_PlaySound ("weapons/rocklx")
-		TNT1 A 0 A_PlayWeaponSound ("weapons/rocklx")
-		TNT1 A 0 ACS_ExecuteAlways (978, 0, 1)
-		TNT1 A 0 A_Explode (500, 64)
-		TNT1 A 0 A_Explode (400, 196)
-		TNT1 A 0 A_Explode (500, 256)
-		TNT1 A 0 A_Explode (250, 640)
+		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge")
+		NULL A 0 A_PlaySound ("weapons/rocklx")
+		NULL A 0 A_PlayWeaponSound ("weapons/rocklx")
+		NULL A 0 ACS_ExecuteAlways (978, 0, 1)
+		NULL A 0 A_Explode (500, 64)
+		NULL A 0 A_Explode (400, 196)
+		NULL A 0 A_Explode (500, 256)
+		NULL A 0 A_Explode (250, 640)
 		goto DeathFinish
 	DeathFinish:
-		TNT1 A 0 A_SpawnItemEx ("FlameWallDecay", random(-48,48), random(-48,48), 4, 0, 0, 0, 0, 0, 160)
+		NULL A 0 A_SpawnItemEx ("FlameWallDecay", random(-48,48), random(-48,48), 4, 0, 0, 0, 0, 0, 160)
 		TNT1 A 5
 		stop
 	Death.Disarm:
@@ -212,12 +212,12 @@ actor RemoteC4ArmedBlue : RemoteC4Armed {
 	translation "16:47=112:127", "168:191=112:127"
 	states {
 	Spawn:
-		RC4T A 0
-		RC4T A 0 A_PlaySound ("terrorist/select", CHAN_VOICE)
-		RC4T A 0 A_GiveInventory ("IsBlue", 1)
+		NULL A 0
+		NULL A 0 A_PlaySound ("terrorist/select", CHAN_VOICE)
+		NULL A 0 A_GiveInventory ("IsBlue", 1)
 		goto Idle
 	DeathFinish:
-		TNT1 A 0 A_SpawnItemEx("FlameWallDecayBlue", random(-48,48), random(-48,48), 4, 0, 0, 0, 0, 0, 160)
+		NULL A 0 A_SpawnItemEx("FlameWallDecayBlue", random(-48,48), random(-48,48), 4, 0, 0, 0, 0, 0, 160)
 		TNT1 A 5
 		stop
 	}

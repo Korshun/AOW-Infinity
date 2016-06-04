@@ -14,44 +14,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_Jumpif(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingOrangeDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingOrangeDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingOrangeDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingOrangeDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingOrangeDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingOrangeDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingOrangeDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingOrangeDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -65,33 +65,33 @@ actor BoilingOrangeDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange1")
+NULL A 0 A_SpawnItemEx("BoilingOrange1")
 Goto onlikedonkeykong
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange2")
+NULL A 0 A_SpawnItemEx("BoilingOrange2")
 Goto onlikedonkeykong
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange3")
+NULL A 0 A_SpawnItemEx("BoilingOrange3")
 Goto onlikedonkeykong
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange4")
+NULL A 0 A_SpawnItemEx("BoilingOrange4")
 Goto onlikedonkeykong
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange5")
+NULL A 0 A_SpawnItemEx("BoilingOrange5")
 Goto onlikedonkeykong
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange6")
+NULL A 0 A_SpawnItemEx("BoilingOrange6")
 Goto onlikedonkeykong
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange7")
+NULL A 0 A_SpawnItemEx("BoilingOrange7")
 Goto onlikedonkeykong
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange8")
+NULL A 0 A_SpawnItemEx("BoilingOrange8")
 Goto onlikedonkeykong
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingOrange9")
+NULL A 0 A_SpawnItemEx("BoilingOrange9")
 Goto onlikedonkeykong
 onlikedonkeykong:
 TNT1 A 1 A_FadeOut(1)
@@ -104,9 +104,9 @@ actor BoilingOrange1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -160,33 +160,33 @@ actor TransparentBoilingOrangeDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange1")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange2")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange3")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange4")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange5")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange6")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange7")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange8")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingOrange9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingOrange9")
 Goto FUCKFUCKITYFUCKFUCKFUCK
 FUCKFUCKITYFUCKFUCKFUCK:
 TNT1 A 1 A_FadeOut(1)
@@ -201,9 +201,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -259,44 +259,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_JumpIf(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlueDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlueDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlueDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlueDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBlueDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBlueDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBlueDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBlueDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -310,33 +310,33 @@ actor BoilingBlueDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue1")
+NULL A 0 A_SpawnItemEx("BoilingBlue1")
 Goto SuperNintendo
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue2")
+NULL A 0 A_SpawnItemEx("BoilingBlue2")
 Goto SuperNintendo
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue3")
+NULL A 0 A_SpawnItemEx("BoilingBlue3")
 Goto SuperNintendo
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue4")
+NULL A 0 A_SpawnItemEx("BoilingBlue4")
 Goto SuperNintendo
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue5")
+NULL A 0 A_SpawnItemEx("BoilingBlue5")
 Goto SuperNintendo
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue6")
+NULL A 0 A_SpawnItemEx("BoilingBlue6")
 Goto SuperNintendo
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue7")
+NULL A 0 A_SpawnItemEx("BoilingBlue7")
 Goto SuperNintendo
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue8")
+NULL A 0 A_SpawnItemEx("BoilingBlue8")
 Goto SuperNintendo
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingBlue9")
+NULL A 0 A_SpawnItemEx("BoilingBlue9")
 Goto SuperNintendo
 SuperNintendo:
 TNT1 A 1 A_FadeOut(1)
@@ -348,9 +348,9 @@ Actor BoilingBlue1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -404,33 +404,33 @@ actor TransparentBoilingBlueDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue1")
 Goto SegaSucksAss
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue2")
 Goto SegaSucksAss
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue3")
 Goto SegaSucksAss
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue4")
 Goto SegaSucksAss
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue5")
 Goto SegaSucksAss
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue6")
 Goto SegaSucksAss
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue7")
 Goto SegaSucksAss
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue8")
 Goto SegaSucksAss
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlue9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlue9")
 Goto SegaSucksAss
 SegaSucksAss:
 TNT1 A 1 A_FadeOut(1)
@@ -445,9 +445,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -504,44 +504,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_Jumpif(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreyDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreyDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreyDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreyDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingGreyDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingGreyDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingGreyDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingGreyDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -555,33 +555,33 @@ actor BoilingGreyDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey1")
+NULL A 0 A_SpawnItemEx("BoilingGrey1")
 Goto OMGTheyKilledKennyYouBastards
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey2")
+NULL A 0 A_SpawnItemEx("BoilingGrey2")
 Goto OMGTheyKilledKennyYouBastards
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey3")
+NULL A 0 A_SpawnItemEx("BoilingGrey3")
 Goto OMGTheyKilledKennyYouBastards
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey4")
+NULL A 0 A_SpawnItemEx("BoilingGrey4")
 Goto OMGTheyKilledKennyYouBastards
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey5")
+NULL A 0 A_SpawnItemEx("BoilingGrey5")
 Goto OMGTheyKilledKennyYouBastards
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey6")
+NULL A 0 A_SpawnItemEx("BoilingGrey6")
 Goto OMGTheyKilledKennyYouBastards
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey7")
+NULL A 0 A_SpawnItemEx("BoilingGrey7")
 Goto OMGTheyKilledKennyYouBastards
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey8")
+NULL A 0 A_SpawnItemEx("BoilingGrey8")
 Goto OMGTheyKilledKennyYouBastards
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingGrey9")
+NULL A 0 A_SpawnItemEx("BoilingGrey9")
 Goto OMGTheyKilledKennyYouBastards
 OMGTheyKilledKennyYouBastards:
 TNT1 A 1 A_FadeOut(1)
@@ -594,9 +594,9 @@ actor BoilingGrey1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -650,33 +650,33 @@ actor TransparentBoilingGreyDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey1")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey2")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey3")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey4")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey5")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey6")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey7")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey8")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGrey9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGrey9")
 Goto IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA
 IAMONECANSHORTOFASIXPACKWAHAHAHAHAHA:
 TNT1 A 1 A_FadeOut(1)
@@ -691,9 +691,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -750,44 +750,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_Jumpif(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBrownDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBrownDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBrownDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBrownDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBrownDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBrownDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBrownDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBrownDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -801,33 +801,33 @@ actor BoilingBrownDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown1")
+NULL A 0 A_SpawnItemEx("BoilingBrown1")
 Goto VanHalenRules
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown2")
+NULL A 0 A_SpawnItemEx("BoilingBrown2")
 Goto VanHalenRules
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown3")
+NULL A 0 A_SpawnItemEx("BoilingBrown3")
 Goto VanHalenRules
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown4")
+NULL A 0 A_SpawnItemEx("BoilingBrown4")
 Goto VanHalenRules
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown5")
+NULL A 0 A_SpawnItemEx("BoilingBrown5")
 Goto VanHalenRules
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown6")
+NULL A 0 A_SpawnItemEx("BoilingBrown6")
 Goto VanHalenRules
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown7")
+NULL A 0 A_SpawnItemEx("BoilingBrown7")
 Goto VanHalenRules
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown8")
+NULL A 0 A_SpawnItemEx("BoilingBrown8")
 Goto VanHalenRules
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingBrown9")
+NULL A 0 A_SpawnItemEx("BoilingBrown9")
 Goto VanHalenRules
 VanHalenRules:
 TNT1 A 1 A_FadeOut(1)
@@ -840,9 +840,9 @@ Actor BoilingBrown1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -896,33 +896,33 @@ actor TransparentBoilingBrownDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown1")
 Goto TheOzzManRules
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown2")
 Goto TheOzzManRules
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown3")
 Goto TheOzzManRules
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown4")
 Goto TheOzzManRules
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown5")
 Goto TheOzzManRules
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown6")
 Goto TheOzzManRules
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown7")
 Goto TheOzzManRules
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown8")
 Goto TheOzzManRules
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBrown9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBrown9")
 Goto TheOzzManRules
 TheOzzManRules:
 TNT1 A 1 A_FadeOut(1)
@@ -937,9 +937,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -996,44 +996,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TMTT A 0 A_Jumpif(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_Jumpif(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlackDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlackDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlackDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingBlackDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBlackDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBlackDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingBlackDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingBlackDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -1047,33 +1047,33 @@ actor BoilingBlackDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack1")
+NULL A 0 A_SpawnItemEx("BoilingBlack1")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack2")
+NULL A 0 A_SpawnItemEx("BoilingBlack2")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack3")
+NULL A 0 A_SpawnItemEx("BoilingBlack3")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack4")
+NULL A 0 A_SpawnItemEx("BoilingBlack4")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack5")
+NULL A 0 A_SpawnItemEx("BoilingBlack5")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack6")
+NULL A 0 A_SpawnItemEx("BoilingBlack6")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack7")
+NULL A 0 A_SpawnItemEx("BoilingBlack7")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack8")
+NULL A 0 A_SpawnItemEx("BoilingBlack8")
 Goto SIRBELFINMAKEMEANOMMLETTE
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingBlack9")
+NULL A 0 A_SpawnItemEx("BoilingBlack9")
 Goto SIRBELFINMAKEMEANOMMLETTE
 SIRBELFINMAKEMEANOMMLETTE:
 TNT1 A 1 A_FadeOut(1)
@@ -1086,9 +1086,9 @@ actor BoilingBlack1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1142,33 +1142,33 @@ actor TransparentBoilingBlackDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack1")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack2")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack3")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack4")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack5")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack6")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack7")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack8")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingBlack9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingBlack9")
 Goto OhNoThereGoesTokyoGoGoGodzilla
 OhNoThereGoesTokyoGoGoGodzilla:
 TNT1 A 1 A_FadeOut(1)
@@ -1183,9 +1183,9 @@ alpha .5
 States
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1242,44 +1242,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_JUMPIF(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_JUMPIF(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingRedDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingRedDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingRedDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingRedDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingRedDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingRedDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingRedDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingRedDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -1293,33 +1293,33 @@ actor BoilingRedDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingRed1")
+NULL A 0 A_SpawnItemEx("BoilingRed1")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingRed2")
+NULL A 0 A_SpawnItemEx("BoilingRed2")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingRed3")
+NULL A 0 A_SpawnItemEx("BoilingRed3")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingRed4")
+NULL A 0 A_SpawnItemEx("BoilingRed4")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingRed5")
+NULL A 0 A_SpawnItemEx("BoilingRed5")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingRed6")
+NULL A 0 A_SpawnItemEx("BoilingRed6")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingRed7")
+NULL A 0 A_SpawnItemEx("BoilingRed7")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingRed8")
+NULL A 0 A_SpawnItemEx("BoilingRed8")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingRed9")
+NULL A 0 A_SpawnItemEx("BoilingRed9")
 Goto ouerthvgjhquhcghurehqiucvvbiuevbojhboia
 ouerthvgjhquhcghurehqiucvvbiuevbojhboia:
 TNT1 A 1 A_FadeOut(1)
@@ -1332,9 +1332,9 @@ Actor BoilingRed1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1388,33 +1388,33 @@ actor TransparentBoilingRedDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed1")
 Goto insertwittystatenamehere
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed2")
 Goto insertwittystatenamehere
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed3")
 Goto insertwittystatenamehere
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed4")
 Goto insertwittystatenamehere
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed5")
 Goto insertwittystatenamehere
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed6")
 Goto insertwittystatenamehere
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed7")
 Goto insertwittystatenamehere
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed8")
 Goto insertwittystatenamehere
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingRed9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingRed9")
 Goto insertwittystatenamehere
 insertwittystatenamehere:
 TNT1 A 1 A_FadeOut(1)
@@ -1429,9 +1429,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1488,44 +1488,44 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[4], "NonTransparent")
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0
+NULL A 0 A_Jumpif(args[4], "NonTransparent")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreenDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreenDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreenDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("TransparentBoilingGreenDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparent:
-TNT1 A 0
-TNT1 A 0 A_Jumpif(args[3], "NonTransparentNoSound")
-TNT1 A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentCircle")
+NULL A 0
+NULL A 0 A_Jumpif(args[3], "NonTransparentNoSound")
+NULL A 0 A_PlaySoundEx("SND_BOIL", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "NonTransparentCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingGreenDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingGreenDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NonTransparentNoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NonTransparentNoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingGreenDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NonTransparentNoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingGreenDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -1539,33 +1539,33 @@ actor BoilingGreenDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen1")
+NULL A 0 A_SpawnItemEx("BoilingGreen1")
 Goto andyetanotherpointlessstatename
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen2")
+NULL A 0 A_SpawnItemEx("BoilingGreen2")
 Goto andyetanotherpointlessstatename
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen3")
+NULL A 0 A_SpawnItemEx("BoilingGreen3")
 Goto andyetanotherpointlessstatename
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen4")
+NULL A 0 A_SpawnItemEx("BoilingGreen4")
 Goto andyetanotherpointlessstatename
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen5")
+NULL A 0 A_SpawnItemEx("BoilingGreen5")
 Goto andyetanotherpointlessstatename
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen6")
+NULL A 0 A_SpawnItemEx("BoilingGreen6")
 Goto andyetanotherpointlessstatename
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen7")
+NULL A 0 A_SpawnItemEx("BoilingGreen7")
 Goto andyetanotherpointlessstatename
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen8")
+NULL A 0 A_SpawnItemEx("BoilingGreen8")
 Goto andyetanotherpointlessstatename
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingGreen9")
+NULL A 0 A_SpawnItemEx("BoilingGreen9")
 Goto andyetanotherpointlessstatename
 andyetanotherpointlessstatename:
 TNT1 A 1 A_FadeOut(1)
@@ -1578,9 +1578,9 @@ actor BoilingGreen1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1634,33 +1634,33 @@ actor TransparentBoilingGreenDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen1")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen1")
 Goto RelaxitsCranTime
 Drop2:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen2")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen2")
 Goto RelaxitsCranTime
 Drop3:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen3")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen3")
 Goto RelaxitsCranTime
 Drop4:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen4")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen4")
 Goto RelaxitsCranTime
 Drop5:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen5")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen5")
 Goto RelaxitsCranTime
 Drop6:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen6")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen6")
 Goto RelaxitsCranTime
 Drop7:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen7")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen7")
 Goto RelaxitsCranTime
 Drop8:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen8")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen8")
 Goto RelaxitsCranTime
 Drop9:
-TNT1 A 0 A_SpawnItemEx("TransparentBoilingGreen9")
+NULL A 0 A_SpawnItemEx("TransparentBoilingGreen9")
 Goto RelaxitsCranTime
 RelaxitsCranTime:
 TNT1 A 1 A_FadeOut(1)
@@ -1675,9 +1675,9 @@ alpha .5
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)
@@ -1735,22 +1735,22 @@ states
 {
 Spawn:
 Active:
-TNT1 A 0 A_Jumpif(args[3], "NoSound")
-TNT1 A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
-TNT1 A 0 A_JumpIf(Args[1], "Circle")
+NULL A 0 A_Jumpif(args[3], "NoSound")
+NULL A 0 A_PlaySoundEx("SND_LAVA", "SoundSlot7", 1)
+NULL A 0 A_JumpIf(Args[1], "Circle")
 TNT1 A 2 A_SpawnItemEx ("BoilingLavaDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 Circle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingLavaDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 NoSound:
-TNT1 A 0
-TNT1 A 0 A_JumpIf(Args[1], "NoSoundCircle")
+NULL A 0
+NULL A 0 A_JumpIf(Args[1], "NoSoundCircle")
 TNT1 A 2 A_SpawnItemEx ("BoilingLavaDropper", random(-Args[0], Args[0]), random(-Args[0], Args[0]), 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), random(0,360), 129, Args[2]) 
 Loop
 NoSoundCircle:
-TNT1 A 0
+NULL A 0
 TNT1 A 2 A_SpawnItemEx ("BoilingLavaDropper", random(-Args[0], Args[0]), 0, 0, (0.1)*Random(1, 3), 0, (0.1)*Random(1, 10), Random(0, 360), 129, Args[2]) 
 Loop
 Inactive:
@@ -1764,33 +1764,33 @@ actor BoilingLavaDropper
 states
 {
 Spawn:
-TNT1 A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
+NULL A 0 A_Jump(256,"Drop1", "Drop2", "Drop3", "Drop4", "Drop5", "Drop6", "Drop7", "Drop8", "Drop9")
 Drop1:
-TNT1 A 0 A_SpawnItemEx("BoilingLava1")
+NULL A 0 A_SpawnItemEx("BoilingLava1")
 Goto MeGrimlockBadass // if you have no idea who grimlock is, you fail.
 Drop2:
-TNT1 A 0 A_SpawnItemEx("BoilingLava2")
+NULL A 0 A_SpawnItemEx("BoilingLava2")
 Goto MeGrimlockBadass
 Drop3:
-TNT1 A 0 A_SpawnItemEx("BoilingLava3")
+NULL A 0 A_SpawnItemEx("BoilingLava3")
 Goto MeGrimlockBadass
 Drop4:
-TNT1 A 0 A_SpawnItemEx("BoilingLava4")
+NULL A 0 A_SpawnItemEx("BoilingLava4")
 Goto MeGrimlockBadass
 Drop5:
-TNT1 A 0 A_SpawnItemEx("BoilingLava5")
+NULL A 0 A_SpawnItemEx("BoilingLava5")
 Goto MeGrimlockBadass
 Drop6:
-TNT1 A 0 A_SpawnItemEx("BoilingLava6")
+NULL A 0 A_SpawnItemEx("BoilingLava6")
 Goto MeGrimlockBadass
 Drop7:
-TNT1 A 0 A_SpawnItemEx("BoilingLava7")
+NULL A 0 A_SpawnItemEx("BoilingLava7")
 Goto MeGrimlockBadass
 Drop8:
-TNT1 A 0 A_SpawnItemEx("BoilingLava8")
+NULL A 0 A_SpawnItemEx("BoilingLava8")
 Goto MeGrimlockBadass
 Drop9:
-TNT1 A 0 A_SpawnItemEx("BoilingLava9")
+NULL A 0 A_SpawnItemEx("BoilingLava9")
 Goto MeGrimlockBadass
 MeGrimlockBadass:
 TNT1 A 1 A_FadeOut(1)
@@ -1803,9 +1803,9 @@ actor BoilingLava1
 states
 {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 A_JumpIf(Waterlevel == 0, "Bubble")
-    TNT1 A 0 A_JumpIf(Waterlevel > 0, "LiftState")
+    NULL A 0
+    NULL A 0 A_JumpIf(Waterlevel == 0, "Bubble")
+    NULL A 0 A_JumpIf(Waterlevel > 0, "LiftState")
     Loop
   LiftState:
     TNT1 A 1 ThrustThingZ(0, 4, 0, 0)

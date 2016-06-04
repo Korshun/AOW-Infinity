@@ -32,40 +32,40 @@ actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 		GREN A 1 A_WeaponReady
 		wait
 	Fire:
-		TNT1 A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
+		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
 		GREN A 6
 		GREN A 5 A_PlayWeaponSound ("grenade/fire")
 		GREN GH 1
-		GREN I 0 A_GunFlash
-		GREN I 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		GREN I 1 A_FireCustomMissile ("GrenadeGrenade", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
-		GREN A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	AltFire:
-		TNT1 A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "Ready")
+		NULL A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "Ready")
 		GREN A 7
 		GREN A 4 A_PlayWeaponSound ("grenade/fire")
 		GREN GH 1
-		GREN I 0 A_GunFlash
-		GREN I 0 A_JumpIfInventory ("IsBlue",1,"AltFireBlue")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_JumpIfInventory ("IsBlue",1,"AltFireBlue")
 		GREN I 1 A_FireCustomMissile ("GrenadeBounce", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
-		GREN A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	FireBlue:
 		GREN I 1 A_FireCustomMissile ("GrenadeGrenadeBlue", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
-		GREN A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	AltFireBlue:
 		GREN I 1 A_FireCustomMissile ("GrenadeBounceBlue", 0, 1, 12)
 		GREN DEF 2
 		GREN EDABC 1
-		GREN A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	}
 }
@@ -80,7 +80,7 @@ actor GrenadeAmmo : Ammo {
 	 Ammo.BackpackMaxAmount 40
 	 states {
 	 Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	 }
 }
@@ -104,9 +104,9 @@ actor GrenadeGrenade {
 		SGRN A 2 bright A_SpawnItemEx ("PulseBallSmokePuff", -25)
 		loop
 	Death:
-		TNT1 B 0 bright A_NoGravity
-		TNT1 B 0 bright A_Explode(55,128,1)
-		TNT1 B 0 bright A_RadiusThrust(384,128,1) //Weeee
+		NULL A 0 bright A_NoGravity
+		NULL A 0 bright A_Explode(55,128,1)
+		NULL A 0 bright A_RadiusThrust(384,128,1) //Weeee
 		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
@@ -120,9 +120,9 @@ actor GrenadeBounce : GrenadeGrenade {
 	bouncecount 2
 	states {
 	Death:
-		TNT1 A 0 bright A_NoGravity
-		TNT1 A 0 bright A_Explode (40, 96, 1)
-		TNT1 A 0 bright A_RadiusThrust(384,128,1) //Wee
+		NULL A 0 bright A_NoGravity
+		NULL A 0 bright A_Explode (40, 96, 1)
+		NULL A 0 bright A_RadiusThrust(384,128,1) //Wee
 		TNT1 A 5 A_SpawnItemEx ("ExplosionMain")
 		stop
 	}
@@ -136,7 +136,7 @@ actor GrenadeBounceBlue : GrenadeBounce {DamageType "RifleBlue"}
 	Select:
 		GREN A 1 offset (130,154)
 		GREN A 1 offset (120,139)
-		GREN A 0 A_PlaySoundEx("Bazooka/Select","Body")
+		NULL A 0 A_PlaySoundEx("Bazooka/Select","Body")
 		GREN A 1 offset (110,125)
 		GREN A 1 offset (100,112)
 		GREN A 1 offset (90,100)
@@ -161,7 +161,7 @@ actor GrenadeBounceBlue : GrenadeBounce {DamageType "RifleBlue"}
 		GREN A 1 offset (40,100)
 		GREN A 1 offset (48,125)
 		GREN A 1 offset (56,154)
-		TNT1 A 0 offset (1,32)
+		NULL A 0 offset (1,32)
 		TNT1 A 1 A_Lower
 		Wait
 */

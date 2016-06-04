@@ -132,7 +132,7 @@ ACTOR StoneTorch : SwitchableDecoration 12320
   States
   {
   Active:
-    STOR A 0 Bright A_PlaySound("Ignite")
+    NULL A 0 Bright A_PlaySound("Ignite")
   Spawn:
     STOR ABCDEFGHI 4 Bright
     Loop

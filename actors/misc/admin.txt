@@ -8,7 +8,7 @@ actor AdminPistol : AOWWeapon {
 	Weapon.PreferredSkin "MarineAdmin"
 	States {
 	Spawn:
-		TNT1 A 0 
+		NULL A 0 
 		stop
 	Ready: 
 		GPIS A 1 A_WeaponReady
@@ -20,60 +20,60 @@ actor AdminPistol : AOWWeapon {
 		GPIS A 1 A_Raise
 		Loop
 	Fire:
-		GPIS B 0 A_JumpIfInventory ("AdminPistolRotation", 2, "Fire.Deconstruction")
-		GPIS B 0 A_JumpIfInventory ("AdminPistolRotation", 1, "Fire.Repair")
+		NULL A 0 A_JumpIfInventory ("AdminPistolRotation", 2, "Fire.Deconstruction")
+		NULL A 0 A_JumpIfInventory ("AdminPistolRotation", 1, "Fire.Repair")
 		goto Fire.Normal
 	Fire.Normal:
-		GPIS B 0 A_GunFlash
-		GPIS B 0 A_PlayWeaponSound ("pistol/fire")
-		GPIS B 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
-		GPIS B 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
-		GPIS B 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("pistol/fire")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
+		NULL A 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
 		GPIS B 2 A_FireBullets (0, 0, 1, 100000, "HandgunPuffBlue")
-		GPIS C 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
-		GPIS C 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
-		GPIS C 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
+		NULL A 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
 		GPIS C 2 A_FireBullets (0, 0, 1, 100000, "HandgunPuffBlue")
-		GPIS B 0 A_GunFlash
-		GPIS B 0 A_PlayWeaponSound ("pistol/fire")
-		GPIS B 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
-		GPIS B 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
-		GPIS B 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("pistol/fire")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
+		NULL A 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
 		GPIS B 2 A_FireBullets (0, 0, 1, 100000, "HandgunPuffBlue")
-		GPIS C 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
-		GPIS C 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
-		GPIS C 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
+		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
+		NULL A 0 A_FireBullets (0, 0, 1, 100000, "HandgunPuff")
 		GPIS C 2 A_FireBullets (0, 0, 1, 100000, "HandgunPuffBlue")
-		GPIS A 0 A_Refire
+		NULL A 0 A_Refire
 		goto Ready
 	Fire.Repair:
-		GPIS A 0 A_GunFlash
-		GPIS A 0 A_PlayWeaponSound ("repairgun/fire")
-		GPIS A 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
-		GPIS A 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
-		GPIS A 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
+		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
+		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
+		NULL A 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
 		GPIS A 2 BRIGHT A_FireBullets (0, 0, 2, 500, "DisarmPuff") // disarm
-		GPIS B 0 A_GunFlash
-		GPIS B 0 A_PlayWeaponSound ("repairgun/fire")
-		GPIS B 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
-		GPIS B 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
-		GPIS B 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
+		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
+		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
+		NULL A 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
 		GPIS B 2 BRIGHT A_FireBullets (0, 0, 2, 500, "DisarmPuff") // disarm
-		GPIS A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	Fire.Deconstruction:
-		GPIS A 0 A_GunFlash
-		GPIS A 0 A_PlayWeaponSound ("repairgun/fire")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
 		GPIS A 1 A_FireBullets (0, 0, 2, 500, "DeconstructionPuff")
 		GPIS B 1 A_FireBullets (0, 0, 2, 500, "DeconstructionPuff")
-		GPIS A 0 A_GunFlash
-		GPIS A 0 A_PlayWeaponSound ("repairgun/fire")
+		NULL A 0 A_GunFlash
+		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
 		GPIS A 1 A_FireBullets (0, 0, 2, 500, "DeconstructionPuff")
 		GPIS B 1 A_FireBullets (0, 0, 2, 500, "DeconstructionPuff")
-		GPIS A 0 A_ReFire
+		NULL A 0 A_ReFire
 		goto Ready
 	AltFire:
-		GPIS B 0 A_PlayWeaponSound ("switch/shotgun")
+		NULL A 0 A_PlayWeaponSound ("switch/shotgun")
 		GPIS B 4 ACS_ExecuteAlways (402, 0, 13)
 		GPIS C 5
 		goto Ready
