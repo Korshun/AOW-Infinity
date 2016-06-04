@@ -35,33 +35,23 @@ Actor RedPlasmaGunner	//Red Tiberium Rifleman
 
 //AOW Base DamageFactoring-----------------------------------------------------------------------
 
-	damagefactor "Fist", 0.0
 	damagefactor "Fist", 1.0
-	damagefactor "Bullet", 0.0
 	damagefactor "Bullet", 1.0
-	damagefactor "Rifle", 0.0
 	damagefactor "Rifle", 1.0
-	damagefactor "Explosion", 0.0
 	damagefactor "Explosion", 0.3
 	damagefactor "Terrorist", 2.0
 	damagefactor "Suicide", 1.0
-	damagefactor "Fire", 0.0
 	damagefactor "Fire", 1.0
-	damagefactor "Chemical", 0.0
 	damagefactor "Chemical", 2.0
 	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "Laser", 0.0
 	damagefactor "Laser", 1.0
-	damagefactor "RazorWire", 0.0
 	damagefactor "RazorWire", 1.0
-	damagefactor "ExplosionMech", 0.0
 	damagefactor "ExplosionMech", 0.1
 	damagefactor "TimeRed", 0.0
 	damagefactor "TimeBlue", 1.0
 	damagefactor "Repair", 0.0
 	damagefactor "Disarm", 0.0
 	damagefactor "Deconstruction", 0.0
-	damagefactor "Artillery", 0.0
 	damagefactor "Artillery", 0.3
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 1.0
