@@ -68,7 +68,7 @@ actor Utility_MiniRefCacheRed {
 		NULL A 0 A_PlaySound ("weapons/rocklx", CHAN_ITEM)
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge", 0, 0, 32, 0, 0, 0, 0, 128)
 		TNT1 AAAA 0 A_SpawnItemEx ("AnthraxDecay", random(-48,48), random(-48,48), 4)
-		TNT1 A 4 bright 
+		NULL A 4 bright 
 		stop
 	Disapproved:
 	Death.Deconstruction:

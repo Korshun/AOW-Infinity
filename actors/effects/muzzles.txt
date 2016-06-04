@@ -9,7 +9,7 @@ ACTOR MuzzleFlashSpawner
     States
     {
     Spawn:
-        TNT1 A 1
+        NULL A 1
         NULL A 0 A_Die
         Goto Death
     Death:
@@ -24,7 +24,7 @@ ACTOR MuzzleSmokeSpawner : MuzzleFlashSpawner
     States
     {
     Spawn:
-        TNT1 A 1
+        NULL A 1
         NULL A 0 A_Die
         Goto Death
     Death:
@@ -97,7 +97,7 @@ ACTOR MuzzleSmoke
 	States
 	{
   Spawn:
-    TNT1 A 1
+    NULL A 1
     NULL A 0 A_Jump(128,"Spawn2","Spawn3","Spawn4")
     SMK1 ABCDEFGHIJKLMNOP 2 bright A_FadeOut(0.025)
     stop
@@ -118,7 +118,7 @@ ACTOR MuzzleFlashSpawnerSmall : MuzzleFlashSpawner
     States
     {
     Spawn:
-        TNT1 A 1
+        NULL A 1
         NULL A 0 A_Die
         Goto Death
     Death:
