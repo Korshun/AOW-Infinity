@@ -2,7 +2,6 @@
 actor AOWWeapon : Weapon {
 	+NO_AUTO_SWITCH
 	+NOAUTOAIM
-	+WEAPON.AMMO_OPTIONAL // To reload when out of ammo.
 	Weapon.Kickback 50
 	weapon.selectionorder 9999
 	states {

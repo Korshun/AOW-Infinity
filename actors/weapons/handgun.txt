@@ -18,10 +18,12 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	
 	AttackSound "pistol/fire"
 	
-	Weapon.AmmoType "HandgunAmmo"
+	Weapon.AmmoType "HandgunClip"
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 10
+	Weapon.AmmoType2 "HandgunAmmo"
 	
+	+WEAPON.AMMO_OPTIONAL
 	+WEAPON.WIMPY_WEAPON
 	+WEAPON.NOAUTOFIRE
 	

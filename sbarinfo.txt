@@ -25,10 +25,10 @@ statusbar fullscreen, forcescaled, fullscreenoffsets {
 	
 	IsSelected Not "GuardianWeapons" { IsSelected Not "WolverineWeapons", "TitanWeapons" {
 	IsSelected Not "MadCatWeapons" { IsSelected Not "GatlingGun", "SubMachineGun" {
-	IsSelected Not "Handgun" { IsSelected Not "MachineGun", "GaussRifle" {
+	IsSelected Not "MachineGun", "GaussRifle" {
 	IsSelected Not "PlasmaCannon", "Grenade_Launcher" {
 		drawnumber 3, INDEXFONT, White, ammo2, -17, -13, 0;
-	}}}}}
+	}}}}
 		drawnumber 3, INDEXFONT, White, ammo1, -45, -13, 0;
 	}}
 	
