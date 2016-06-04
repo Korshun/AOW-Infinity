@@ -40,8 +40,8 @@ actor Boomstick : AOWWeapon {
 		SHTG A 7 A_ReFire
 		goto Ready
 	Fire.Blue:
-		NULL A 0 Bright A_FireBullets (5.5, 5.5, 2, 6, "HandgunPuffBlue",0,350)
-		SHTG A 2 Bright A_FireBullets (5.5, 5.5, 6, 4, "HandgunPuffBlue",1,1000)
+		NULL A 0 Bright A_FireBullets (5.5, 5.5, 2, 6, "HandgunPuff",0,350)
+		SHTG A 2 Bright A_FireBullets (5.5, 5.5, 6, 4, "HandgunPuff",1,1000)
 		goto Fire+5
 	Flash:
 		SHTF A 2 Bright A_Light1
