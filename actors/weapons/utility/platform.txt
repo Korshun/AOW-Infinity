@@ -15,24 +15,24 @@ actor FloatingPlatform : InvisibleBridge {
 	
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_JumpIf (ACS_ExecuteWithResult (750, 0) == 0, "Nope")
+		NULL A 0
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (750, 0) == 0, "Nope")
 	Idle:
-		TNT1 A 0 A_JumpIfHealthLower (400, "IdleDamaged")
+		NULL A 0 A_JumpIfHealthLower (400, "IdleDamaged")
 		TNT1 A 30 A_SpawnItemEx ("FloatingPlatformVisual")
 		loop
 	IdleDamaged:
 		TNT1 A 30 A_SpawnItemEx ("FloatingPlatformVisualDamaged")
 		loop
 	Death:
-		TC4T A 0 
-		TNT1 A 0 A_NoBlocking
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformExplosion")
+		NULL A 0 
+		NULL A 0 A_NoBlocking
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformExplosion")
 		TNT1 A 4 bright 
 		stop
 	Nope:
 	Death.Deconstruction:
-		TNT1 A 0 A_NoBlocking
+		NULL A 0 A_NoBlocking
 		TNT1 A 2 A_PlaySound ("utility/deconstruct")
 		stop
 	}
@@ -43,32 +43,32 @@ actor FloatingPlatformVisual {
 	+NOBLOCKMAP +NOINTERACTION
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, 84, 0)
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -56, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 0, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 56, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -84, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", -28, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 28, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnit", 84, 84, 0)
 		stop
 	}
 }
@@ -78,32 +78,32 @@ actor FloatingPlatformVisualDamaged {
 	+NOBLOCKMAP +NOINTERACTION
 	states {
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, -84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, -56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, -28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, 0, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, 28, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, 56, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, 84, 0)
-		TNT1 A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, 84, 0)
+		NULL A 0
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, -84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, -56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, -28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, 0, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, 28, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -56, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 0, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 56, 56, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -84, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", -28, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 28, 84, 0)
+		NULL A 0 A_SpawnItemEx ("FloatingPlatformVisualUnitDamaged", 84, 84, 0)
 		stop
 	}
 }
@@ -133,20 +133,20 @@ actor FloatingPlatformExplosion {
  	reactiontime 2
 	states {
 	Spawn:
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random(-84,-48))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random(-84, 48))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random(-84, 48))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random(-32, 32))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random(-32, 32))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random(-32, 32))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random( 48, 84))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random( 48, 84))
-		TNT1 A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random( 48, 84))
-		TNT1 A 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random(-84,-48))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random(-84, 48))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random(-84, 48))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random(-32, 32))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random(-32, 32))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random(-32, 32))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-84,-48), random( 48, 84))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random( 48, 84))
+		NULL A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random( 48, 84))
+		NULL A 0 A_PlaySound("weapons/rocklx")
 		TNT1 A 10 A_CountDown
 		loop
 	Death:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }

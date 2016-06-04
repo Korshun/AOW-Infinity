@@ -9,10 +9,10 @@ actor SelfHealItem : CustomInventory {
 		SYRI X -1
 		stop
 	Use:
-		TNT1 A 0 ACS_ExecuteAlways (951, 0, 4)
+		NULL A 0 ACS_ExecuteAlways (951, 0, 4)
 		fail
 	Nope:
-		TNT1 A 0
+		NULL A 0
 		fail
 	}
 }
@@ -37,7 +37,7 @@ actor SelfHeal : AOWWeapon {
 		TNT1 A -1
 		stop
 	Select:
-		SYRI A 0 A_Raise
+		NULL A 0 A_Raise
 		Loop
 	Ready:
 		SYRU A 1 A_PlaySound ("weapons/syringeup")
@@ -45,15 +45,15 @@ actor SelfHeal : AOWWeapon {
 		SYRI BCDD 3
 		SYRI EFGHI 1
 		SYRI I 1 A_WeaponReady (WRF_NOBOB|WRF_NOSWITCH)
-		SYRI I 0 A_PlayWeaponSound ("Heal/Ready")
+		NULL A 0 A_PlayWeaponSound ("Heal/Ready")
 		SYRI J 48 A_WeaponReady (WRF_NOBOB|WRF_NOSWITCH)
 		SYRI KL 1 A_WeaponReady (WRF_NOBOB|WRF_NOSWITCH) 
 		INJE A 8 A_PlaySound ("weapons/knifehit3")
 		INJE B 2
-		INJE C 0 A_PlaySound ("weapons/syringepain")
+		NULL A 0 A_PlaySound ("weapons/syringepain")
 		INJE C 2 A_PlayWeaponSound ("weapons/syringe")
 		INJE D 2
-		INJE E 0 A_TakeInventory ("SelfHealItem", 1)
+		NULL A 0 A_TakeInventory ("SelfHealItem", 1)
 		INJE E 2 ACS_ExecuteAlways(329, 0)
 		INJE EFGHIJKKKL 2
 		INJE M 8

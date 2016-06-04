@@ -11,7 +11,7 @@ actor Credits1 : CustomInventory 21412 {
 		COIN A -1
 		stop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteAlways (321, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (321, 0, 1)
 		stop
 	}
 }
@@ -29,7 +29,7 @@ actor Credits20 : CustomInventory 21413 {
 		CRED A -1
 		stop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteAlways (321, 0, 20)
+		NULL A 0 ACS_ExecuteAlways (321, 0, 20)
 		stop
 	}
 }
@@ -49,7 +49,7 @@ actor Credits40 : CustomInventory 21414
 		SACK A -1
 		stop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteAlways (321, 0, 40)
+		NULL A 0 ACS_ExecuteAlways (321, 0, 40)
 		stop
 	}
 }
@@ -69,7 +69,7 @@ actor Credits75 : CustomInventory 21415
 		CHST A -1
 		stop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteAlways (321, 0, 75)
+		NULL A 0 ACS_ExecuteAlways (321, 0, 75)
 		stop
 	}
 }

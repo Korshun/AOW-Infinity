@@ -22,7 +22,7 @@ actor DoubleShotgun : AOWWeapon {
 		loop
 	Fire:
 		SHT2 A 3
-		SHT2 A 0 Bright A_GunFlash
+		NULL A 0 Bright A_GunFlash
 		SHT2 AA 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "HandgunPuff", 1, 512)
 		goto Reload
@@ -46,7 +46,7 @@ actor DoubleShotgun : AOWWeapon {
 		TNT1 A 28 A_Light0
 		stop
 	Spawn:
-		TNT1 A 0
+		NULL A 0
 		stop
 	}
 }
@@ -62,12 +62,12 @@ actor DoubleShotgunPickup : CustomInventory replaces SuperShotgun 21086 {
 		stop
 	Pickup:
 		TNT1 AA 0 A_JumpIfInventory ("DoubleShotgun", 1, "Failure")
-		TNT1 A 0 A_GiveInventory("DoubleShotgun", 1)
-		TNT1 A 0 A_GiveInventory("ShotgunAmmo", 8)
-		TNT1 A 0 A_GiveInventory("Refunds", 20)
+		NULL A 0 A_GiveInventory("DoubleShotgun", 1)
+		NULL A 0 A_GiveInventory("ShotgunAmmo", 8)
+		NULL A 0 A_GiveInventory("Refunds", 20)
 		stop
 	Failure:
-		TNT1 A 0
+		NULL A 0
 		fail
 	}
 }

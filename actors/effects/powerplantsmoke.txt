@@ -10,7 +10,7 @@ actor PowerPlantSmokeGenerator 21406 {
 		TNT1 A -1
 		stop
 	Raise:
-		TNT1 A 0
+		NULL A 0
 		goto Spawn
 	}
 }

@@ -20,18 +20,18 @@ actor FirestormCrate
   states
   {
   Spawn:
-    PLS1 A 0 bright
+    NULL A 0 bright
     goto Death
-    PLS1 A 0 bright A_SetShootable
-    PLS1 A 0 bright A_Die
+    NULL A 0 bright A_SetShootable
+    NULL A 0 bright A_Die
     Stop
   Death:
-    TNT1 A 0
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 0, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
-    TNT1 A 0 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 bright A_Explode(100,1024,1)
-    TNT1 A 0 bright A_Explode(800,256,1)
+    NULL A 0
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_PlayWeaponSound("weapons/rocklx")
+    NULL A 0 bright A_Explode(100,1024,1)
+    NULL A 0 bright A_Explode(800,256,1)
     TNT1 A 1 bright A_Explode(800,512,1)
     TNT1 AAAAAAAAAA 0 A_CustomMissile("FirestormDecay",0,0,random(-180,180),2,random(60,90))
     TNT1 AAAAAAAAAA 0 A_CustomMissile("FirestormDecay",0,0,random(-180,180),2,random(60,90))
@@ -61,30 +61,30 @@ actor BombCrate : BombPackKamikaze
   states
   {
   Spawn:
-    PLS1 A 0 bright
+    NULL A 0 bright
     goto Death
-    PLS1 A 0 bright A_SetShootable
-    PLS1 A 0 bright A_Die
+    NULL A 0 bright A_SetShootable
+    NULL A 0 bright A_Die
     Stop
   Death:
-    TNT1 A 0
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 32, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
-    TNT1 A 0 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 bright A_Explode(100,2024,1)
-    TNT1 A 0 bright A_Explode(800,512,1)
+    NULL A 0
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 32, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_PlayWeaponSound("weapons/rocklx")
+    NULL A 0 bright A_Explode(100,2024,1)
+    NULL A 0 bright A_Explode(800,512,1)
     TNT1 A 8 bright A_Explode(800,1024,1)
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 12, 16, 64, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 12, 16, 64, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
     TNT1 A 8 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 14, 32, 96, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 14, 32, 96, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
     TNT1 A 8 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 26, 48, 128, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 26, 48, 128, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
     TNT1 A 8 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 38, 72, 160, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 38, 72, 160, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
     TNT1 A 8 A_PlayWeaponSound("weapons/rocklx")
     stop
   }
@@ -111,18 +111,18 @@ actor BiohazardCrate
   states
   {
   Spawn:
-    PLS1 A 0 bright
+    NULL A 0 bright
     goto Death
-    PLS1 A 0 bright A_SetShootable
-    PLS1 A 0 bright A_Die
+    NULL A 0 bright A_SetShootable
+    NULL A 0 bright A_Die
     Stop
   Death:
-    TNT1 A 0
-    TNT1 A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 0, 0, 0, 0, 0, 128, 0)
-    TNT1 A 0 A_PlaySound("weapons/rocklx")
-    TNT1 A 0 A_PlayWeaponSound("weapons/rocklx")
-    TNT1 A 0 bright A_Explode(100,1024,1)
-    TNT1 A 0 bright A_Explode(800,256,1)
+    NULL A 0
+    NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+    NULL A 0 A_PlaySound("weapons/rocklx")
+    NULL A 0 A_PlayWeaponSound("weapons/rocklx")
+    NULL A 0 bright A_Explode(100,1024,1)
+    NULL A 0 bright A_Explode(800,256,1)
     TNT1 A 1 bright A_Explode(800,512,1)
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ChemicalWallDecay", random(-128,128), random(-128,128), random(4,256), 0, 0, 0, 0, 128, 0)
     TNT1 AAAAAAAAAA 0 A_SpawnItemEx("ChemicalWallDecay", random(-512,512), random(-512,512), random(4,256), 0, 0, 0, 0, 128, 0)
@@ -156,50 +156,50 @@ actor ChemicalWallDecay
   states
   {
   Spawn:
-    TNT1 A 0
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
-    TNT1 A 0 BRIGHT A_Explode(4,128,0)
+    NULL A 0 BRIGHT A_Explode(4,128,0)
     TNT1 AAA 5 A_SpawnItemEx("ChemicalDeathShot", random(-16,16), random(-16,16), random(8,16), 0, 0, random(1,3), 0, 128, 32)
     stop
   }
