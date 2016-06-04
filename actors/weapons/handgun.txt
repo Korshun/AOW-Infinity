@@ -15,9 +15,8 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	Obituary "$OB_HANDGUN"
 	Inventory.PickupMessage "$TAG_HANDGUN"
 	Weapon.PreferredSkin "MarinePistol"
-	
-	AttackSound "pistol/fire"
-	
+	Weapon.SelectionOrder 19	
+		
 	Weapon.AmmoType "HandgunClip"
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 10
@@ -27,7 +26,7 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	+WEAPON.WIMPY_WEAPON
 	+WEAPON.NOAUTOFIRE
 	
-	Weapon.SelectionOrder 19	
+	AttackSound "pistol/fire"
 	
 	States
 	{
