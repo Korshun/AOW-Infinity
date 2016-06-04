@@ -43,7 +43,7 @@ actor DoubleShotgun : AOWWeapon {
 	Flash:
 		SHT2 I 3 Bright A_Light1
 		SHT2 J 4 Bright A_Light2
-		TNT1 A 28 A_Light0
+		NULL A 28 A_Light0
 		stop
 	Spawn:
 		NULL A 0

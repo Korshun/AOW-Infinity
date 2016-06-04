@@ -98,7 +98,7 @@ actor ProxyMineRed {
 		NULL A 0 A_SpawnItemEx ("ExplosionMain")
 		NULL A 0 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_CustomMissile ("ProxyMineExplosion")
-		TNT1 A 1
+		NULL A 1
 		stop
 	Death.LaserRed:
 	Death.LaserBlue:
@@ -121,7 +121,7 @@ actor ProxyMineExplosion {
 	states {
 	Spawn:
 		NULL A 0
-		TNT1 A 1 A_Explode (50, 128, 1)
+		NULL A 1 A_Explode (50, 128, 1)
 		stop
 	}  
 }
@@ -141,7 +141,7 @@ actor ProxyMineBlue : ProxyMineRed
 		NULL A 0 A_SpawnItemEx ("ExplosionMain")
 		NULL A 0 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_CustomMissile ("ProxyMineExplosionBlue")
-		TNT1 A 1
+		NULL A 1
 		stop
 	}
 }

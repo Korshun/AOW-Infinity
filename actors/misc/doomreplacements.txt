@@ -2,7 +2,7 @@
 actor Nothing 21039 {
 	states {
 	spawn:
-		TNT1 A 1
+		NULL A 1
 		stop
 	}
 }

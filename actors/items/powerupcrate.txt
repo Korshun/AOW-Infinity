@@ -53,7 +53,7 @@ actor NukeKamikaze {
 	Spawn:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx ("Nuke", 0,0,0,0,0,0,0,160)
-		TNT1 A 5 A_Explode(7000, 1024, 1)
+		NULL A 5 A_Explode(7000, 1024, 1)
 		stop
 	}
 }
@@ -64,7 +64,7 @@ actor BlueStrikeKamikaze : NukeKamikaze {
 	Spawn:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx ("BlueStrike", 0,0,0,0,0,0,0,160)
-		TNT1 A 5 A_Explode (7000, 1024, 1)
+		NULL A 5 A_Explode (7000, 1024, 1)
 		stop
 	}
 }
@@ -108,7 +108,7 @@ actor BombCrateFXBlue1 {
 		loop
 	Clear:
 		NULL A 0
-		TNT1 A 5 A_StopSound (1)
+		NULL A 5 A_StopSound (1)
 		stop
 	Death:
 		NULL A 0
