@@ -74,24 +74,6 @@ flickerlight VSPARK
 //    frame VOLX { light VSPARK }
 //}
 
-Object HHBulletPuff
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
-Object HandgunPuff
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
-Object HandgunPuffBlue
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
 Object RiflePuff
 {
     frame PUFFA { light BPUFF1 }
