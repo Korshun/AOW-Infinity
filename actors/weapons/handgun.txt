@@ -75,7 +75,7 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 		NULL A 0 A_JumpIfInventory("HandgunAmmo", 1, 1)
 		Goto Ready
 		NULL A 0 A_JumpIfInventory("HandgunClip", 10, "Ready")
-		PISG A 35 Offset(0, 50) 
+		PISG A 35 Offset(0, 50) A_PlayWeaponSound("CLIPOUT")
 	ReloadLoop:
 		NULL A 0 A_JumpIfInventory("HandgunClip", 10, "ReloadEnd")
 		NULL A 0 A_JumpIfInventory("HandgunAmmo", 1, 1)
@@ -84,7 +84,7 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 		NULL A 0 A_GiveInventory("HandgunClip", 1)
 		Loop
 	ReloadEnd:
-		PISG A 1
+		PISG A 1 A_PlayWeaponSound("CLIPIN")
 		Goto Ready
 	}
 }
