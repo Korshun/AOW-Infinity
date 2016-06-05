@@ -252,10 +252,12 @@ actor OrcaFlash : OrcaFlame {
 	}
 }
 
+/* DUPLICATE
 actor OrcaSmokePuff : PulseBallSmokePuff {
 	alpha 0.25
 	scale 2.0
 }
+*/
 
 actor EjectedOrcaSpawner {
 	+NOINTERACTION

@@ -37,7 +37,7 @@ actor RemoteC4 : AOWWeapon {
 		NULL A 0 A_Raise
 		loop
 	SelectFull:
-		NULL A 0 A_TakeInventory ("RemoteC4Detonator", 1)
+		//NULL A 0 A_TakeInventory ("RemoteC4Detonator", 1) NOT FOUND
 		RC4G A 1 A_Raise
 		NULL A 0 A_Raise
 		goto SelectFull+1
