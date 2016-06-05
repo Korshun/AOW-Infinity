@@ -26,47 +26,46 @@ actor SubMachineGun : AOWWeapon 21043
 	Spawn:
 		SUBR X -1
 		stop
-		
-	Deselect:
-		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Deselect.Blue")
-	Deselect.Red:
-		SUBR A 1 A_Lower
-		Wait
-	Deselect.Blue:
-		SUBB A 1 A_Lower
-		Wait
-	Select:
-		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
-		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Select.Blue")
-	Select.Red:
-		SUBR A 1 A_Raise
-		Wait
-	Select.Blue:
-		SUBB A 1 A_Raise
-		Wait	
 	Ready:
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Ready.Blue")
 	Ready.Red:
 		SUBR A 1 A_WeaponReady
 		NULL A 0 A_JumpIfInventory("AOWReload", 1, "Reload")
-		Goto Ready
+		goto Ready
 	Ready.Blue:
 		SUBB A 1 A_WeaponReady
 		NULL A 0 A_JumpIfInventory("AOWReload", 1, "Reload")
-		Goto Ready
+		goto Ready
+	Deselect:
+		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Deselect.Blue")
+	Deselect.Red:
+		SUBR A 1 A_Lower
+		loop
+	Deselect.Blue:
+		SUBB A 1 A_Lower
+		loop
+	Select:
+		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
+		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Select.Blue")
+	Select.Red:
+		SUBR A 1 A_Raise
+		loop
+	Select.Blue:
+		SUBB A 1 A_Raise
+		loop	
 	Underwater:
 		NULL A 0 A_SelectWeapon("Unarmed")
-		Goto Deselect
+		goto Deselect
 		
 	Fire:
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto Reload
+		goto Reload
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "Fire.Blue")
 	Fire.Red:
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Red
+		goto FireEnd.Red
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -77,7 +76,7 @@ actor SubMachineGun : AOWWeapon 21043
 		
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Red
+		goto FireEnd.Red
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -88,7 +87,7 @@ actor SubMachineGun : AOWWeapon 21043
 		
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Red
+		goto FireEnd.Red
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -96,11 +95,11 @@ actor SubMachineGun : AOWWeapon 21043
 		SUBR A 1 Bright Offset(3, 35)
 		SUBR A 1 Offset(5, 37)
 		SUBR A 1 Offset(7, 39)
-		Goto FireEnd.Red
+		goto FireEnd.Red
 	Fire.Blue:
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Blue
+		goto FireEnd.Blue
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -111,7 +110,7 @@ actor SubMachineGun : AOWWeapon 21043
 		
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Blue
+		goto FireEnd.Blue
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -122,7 +121,7 @@ actor SubMachineGun : AOWWeapon 21043
 		
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto FireEnd.Blue
+		goto FireEnd.Blue
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -130,20 +129,20 @@ actor SubMachineGun : AOWWeapon 21043
 		SUBB A 1 Bright Offset(3, 35)
 		SUBB A 1 Offset(5, 37)
 		SUBB A 1 Offset(7, 39)
-		Goto FireEnd.Blue
+		goto FireEnd.Blue
 	FireEnd.Red:
 		SUBR A 9 Offset(1, 32)
 		SUBR A 2 A_ReFire
-		Goto Ready
+		goto Ready
 	FireEnd.Blue:
 		SUBB A 9 Offset(1, 32)
 		SUBB A 2 A_ReFire
-		Goto Ready
+		goto Ready
 		
 	AltFire:
 		NULL A 0 A_JumpIf(waterlevel >= 1, "Underwater")
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, 1)
-		Goto Reload
+		goto Reload
 		NULL A 0 A_TakeInventory("SubMachineGunClip", 1)
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "AltFire.Blue")
 	AltFire.Red:
@@ -154,7 +153,7 @@ actor SubMachineGun : AOWWeapon 21043
 		SUBR A 1 Offset(5, 37)
 		SUBR A 1 Offset(7, 39)
 		SUBR A 2 Offset(1, 32) A_ReFire
-		Goto Ready
+		goto Ready
 	AltFire.Blue:
 		NULL A 0 A_GunFlash
 		NULL A 0 Bright A_SpawnItemEx("ShellCasing",8,8,32,random(1,3),random(0,1),random(1,3),random(45,60))
@@ -163,50 +162,50 @@ actor SubMachineGun : AOWWeapon 21043
 		SUBB A 1 Offset(5, 37)
 		SUBB A 1 Offset(7, 39)
 		SUBB A 2 Offset(1, 32) A_ReFire
-		Goto Ready
+		goto Ready
 		
 	Flash:
 		NULL A 0 Bright A_SpawnItemEx("MuzzleFlashSpawner",27,5,35*(1+(-sin(pitch)*0.707)),momx*2.332*(sin(angle)*cos(angle)/2.332),momy*2.332*(sin(angle)*cos(angle)/2.332),momz*0.1415,0,SXF_ABSOLUTEMOMENTUM)
 		NULL A 2 Bright A_Light2
 		NULL A 2 Bright A_Light1
-		Goto LightDone
+		goto LightDone
 		
 	Reload:
 		NULL A 0 A_JumpIfInventory("HandgunAmmo", 1, 1)
-		Goto Ready
+		goto Ready
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 31, "Ready")
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "Reload.Blue")
 	Reload.Red:
 		SUBR A 35 Offset(0, 50)
-		Goto ReloadLoop
+		goto ReloadLoop
 	Reload.Blue:
 		SUBB A 35 Offset(0, 50)
-		//Goto ReloadLoop
+		goto ReloadLoop
 	
 	ReloadLoop:
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 1, "ReloadLoop.ExtraBullet")
 	ReloadLoop.Empty:
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 30, "ReloadEnd")
 		NULL A 0 A_JumpIfInventory("HandgunAmmo", 1, 1)
-		Goto ReloadEnd
-		NULL A 0 A_TakeInventory("HandgunAmmo", 1)
+		goto ReloadEnd
 		NULL A 0 A_GiveInventory("SubMachineGunClip", 1)
-		Loop
+		NULL A 0 A_TakeInventory("HandgunAmmo", 1)
+		loop
 	ReloadLoop.ExtraBullet:
 		NULL A 0 A_JumpIfInventory("SubMachineGunClip", 31, "ReloadEnd")
 		NULL A 0 A_JumpIfInventory("HandgunAmmo", 1, 1)
-		Goto ReloadEnd
-		NULL A 0 A_TakeInventory("HandgunAmmo", 1)
+		goto ReloadEnd
 		NULL A 0 A_GiveInventory("SubMachineGunClip", 1)
-		Loop
+		NULL A 0 A_TakeInventory("HandgunAmmo", 1)
+		loop
 		
 	ReloadEnd:
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "ReloadEnd.Blue")
 	ReloadEnd.Red:
 		SUBR A 1
-		Goto Ready
+		goto Ready
 	ReloadEnd.Blue:
 		SUBB A 1
-		Goto Ready
+		goto Ready
 	}
 }
