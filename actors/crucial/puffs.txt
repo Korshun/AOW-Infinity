@@ -1,8 +1,9 @@
 // Puff from Project MSX
-Actor HHBulletPuff replaces BulletPuff
+Actor AOWBulletPuff replaces BulletPuff
 {	
 	+PUFFGETSOWNER
 	
+	DamageType "Bullet"
 	Decal "BulletChip"
 	
 	States

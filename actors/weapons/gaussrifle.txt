@@ -147,7 +147,7 @@ actor GaussRifleAmmo : Ammo {
 	ammo.backpackmaxamount 40
 }
 
-actor GaussPuff : HHBulletPuff {
+actor GaussPuff : AOWBulletPuff {
 	-ALLOWPARTICLES
 	+PUFFONACTORS
 	DamageType "Laser"
