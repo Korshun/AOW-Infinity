@@ -772,3 +772,13 @@ $rolloff mech/explode/large2	1000 3000
 $rolloff mech/explode/medium1	800 2200
 $rolloff mech/explode/medium2	800 2200
 $rolloff mech/explode/junk	500 2000
+
+
+// Weapon sounds
+CLIPIN		CLIPIN
+CLIPOUT		CLIPOUT
+COCK		COCK
+DRYFIRE		DRYFIRE
+
+MGUNFIRE	MGUNFIRE
+MGUNUP		MGUNUP

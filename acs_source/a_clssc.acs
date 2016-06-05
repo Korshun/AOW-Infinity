@@ -277,6 +277,7 @@ script 26 (int Team) {
 	SetAmmoCapacity("FragGrenadeAmmo", 2);
 	GiveInventory("FragGrenadeAmmo", 2);
 	ACS_ExecuteAlways(91, 0);
+	GiveInventory("MachineGunClip", 0x7fffffff);
 	GiveInventory("MachineGun", 1);
 	SetWeapon("MachineGun");
 	
@@ -1570,6 +1571,7 @@ script 39 (int Team) {
 	GiveInventory ("SpawnInvulnerability", 1);
 	GiveInventory ("ClassID", CLASS_TIMECOP);
 	GiveInventory("MachineGunAmmo", 50);
+	GiveInventory("MachineGunClip", 0x7fffffff);
 	GiveInventory("MachineGun", 1);
 	GiveInventory ("TimeGun", 1);
 	GiveInventory ("TimeGunAmmo", 100);
@@ -1624,6 +1626,7 @@ script 63 (int Team) {
 	GiveInventory("MachineGunAmmo",160);
 	GiveInventory("SubMachineGunClip", 0x7fffffff);
 	GiveInventory("SubMachineGun",1);
+	GiveInventory("MachineGunClip", 0x7fffffff);
 	GiveInventory("MachineGun",1);
 	SetWeapon("MachineGun");
 	ACS_ExecuteAlways(91, 0);
