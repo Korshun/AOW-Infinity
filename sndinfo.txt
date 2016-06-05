@@ -2,11 +2,8 @@ blanksnd			blanksnd
 game/rank			veteran
 misc/nope			nope
 
-pistol/fire			dspistol
+
 $rolloff 			100mm/fire	500 2000
-smg/fire			dssmg
-$volume smg/fire 0.6
-$limit				smg/fire	0
 rifle/fire			dsrifle
 rifle/reload			dsmssgr2
 ak47/fire			dsmachgn
@@ -782,3 +779,9 @@ DRYFIRE		DRYFIRE
 
 MGUNFIRE	MGUNFIRE
 MGUNUP		MGUNUP
+
+PISTFIRE	PISTFIRE
+
+SMGFIRE		SMGFIRE
+$volume		SMGFIRE 0.6
+$limit		SMGFIRE	0

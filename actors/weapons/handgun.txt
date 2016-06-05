@@ -24,7 +24,7 @@ actor Handgun : AOWWeapon replaces Pistol 21041
 	+WEAPON.NOAUTOFIRE
 	+WEAPON.NOALERT
 	
-	AttackSound "pistol/fire"
+	AttackSound "PISTFIRE"
 	
 	States
 	{

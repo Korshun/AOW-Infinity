@@ -25,7 +25,7 @@ actor AdminPistol : AOWWeapon {
 		goto Fire.Normal
 	Fire.Normal:
 		NULL A 0 A_GunFlash
-		NULL A 0 A_PlayWeaponSound ("pistol/fire")
+		NULL A 0 A_PlayWeaponSound ("PISTFIRE")
 		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
 		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
 		NULL A 0 A_FireBullets (0, 0, 1, 100000, "BulletPuff")
@@ -35,7 +35,7 @@ actor AdminPistol : AOWWeapon {
 		NULL A 0 A_FireBullets (0, 0, 1, 100000, "BulletPuff")
 		GPIS C 2 A_FireBullets (0, 0, 1, 100000, "BulletPuff")
 		NULL A 0 A_GunFlash
-		NULL A 0 A_PlayWeaponSound ("pistol/fire")
+		NULL A 0 A_PlayWeaponSound ("PISTFIRE")
 		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuff")
 		NULL A 0 A_FireBullets (0, 0, 1, 10000, "ExplosionPuffBlue")
 		NULL A 0 A_FireBullets (0, 0, 1, 100000, "BulletPuff")
