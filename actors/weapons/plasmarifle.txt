@@ -150,7 +150,7 @@ actor PlasmaShot {
 }
 
 Actor PlasmaShotBlue : PlasmaShot {
-	translation ""
+	//translation ""
 	DamageType "Laser"
 }
 

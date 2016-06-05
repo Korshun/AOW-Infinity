@@ -166,7 +166,7 @@ actor GaussPuff : AOWBulletPuff {
 
 actor GaussPuffBlue : GaussPuff {
 	damagetype "Laser"
-	translation ""
+	//translation ""
 }
 
 actor ExplosionMechPuff : ExplosionPuff {damagetype "ExplosionMech"}

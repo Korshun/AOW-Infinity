@@ -135,7 +135,7 @@ actor DisarmPuff {
 	}
 }
 actor RepairDisarmPuff : DisarmPuff {
-	translation ""
+	//translation ""
 	states {
 	Spawn:
 		PLCX AA 1 A_Explode (9, 64)
