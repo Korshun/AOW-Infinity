@@ -28,10 +28,12 @@ secondarySize 2024
 	chance 0.25
 }
 
+/* NOT FOUND
 Object Flashbang-Flare
 {
     frame PPCX { light FLASHBANG }
 }
+*/
 
 flickerlight VPUFF
 {
@@ -341,10 +343,12 @@ object ChemicalCorpseFemale
 	frame CURNQ { light Chemical }
 }
 
+/* NOT FOUND
 object ChemFireRemains
 {
 	frame TIBX { light Chemical }
 }
+*/
 
 object ChemicalShot
 {
@@ -850,40 +854,48 @@ object RepairDisarmPuff
 	frame PLCX { light RepBlue }
 }
 
+/* NOT FOUND
 object RepairTrail
 {
 	frame PLCX { light RepBlueT }
 }
+*/
 
 object EnhancedRepairDisarmPuff
 {
 	frame CHMX { light RepPurple }
 }
 
+/* NOT FOUND
 object UpgradedRepairTrail
 {
 	frame CHMX { light RepPurpleT }
 }
+*/
 
 object MedicPuff
 {
 	frame CHMX { light RepRed }
 }
 
+/* NOT FOUND
 object HealTrail
 {
 	frame CHMX { light RepRedT }
 }
+*/
 
 object DisarmPuff
 {
 	frame CHMX { light RepYellow }
 }
 
+/* NOT FOUND
 object DisarmTrail
 {
 	frame CHMX { light RepYellowT }
 }
+*/
 
 pointlight GOLDBALL
 {
@@ -1066,10 +1078,12 @@ object PulseBallBlue
 	Frame PLGX { light PulseBall }
 }
 
+/* NOT FOUND
 object PulseBallImpact
 {
 	Frame PLGX { light PulseBall }
 }
+*/
 
 Pointlight PPCBALL
 {
@@ -1132,10 +1146,12 @@ flickerlight HealRadiusRed
 	Chance 0.2
 }
 
+/* NOT FOUND
 object MedicationFieldBall
 {
 	Frame GIZR { light HealRadiusRed }
 }
+*/
 
 pointlight MarineBeaconBlinkRed
 {
