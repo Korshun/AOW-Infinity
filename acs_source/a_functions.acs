@@ -177,10 +177,10 @@ function int CheckFactory (int Team) {
 	return 1;
 }
 
-// [Dusk] Check for free hanger
-function int CheckFreeHanger (int Team) {
+// [Dusk] Check for free hangar
+function int CheckFreeHangar (int Team) {
 	if (GettingMech[Team]) {
-		Error ("There is another mech in the hanger!");
+		Error ("There is another mech in the hangar!");
 		return 0;
 	}
 	return 1;
