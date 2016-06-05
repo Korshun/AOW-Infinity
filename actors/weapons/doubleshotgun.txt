@@ -24,10 +24,10 @@ actor DoubleShotgun : AOWWeapon {
 		SHT2 A 3
 		NULL A 0 Bright A_GunFlash
 		SHT2 AA 0 A_JumpIfInventory("IsBlue",1,"Fire")
-		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "HandgunPuff", 1, 512)
+		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "BulletPuff", 1, 512)
 		goto Reload
 	Fire:
-		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "HandgunPuff", 1, 512)
+		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "BulletPuff", 1, 512)
 		goto Reload
 	Reload:
 		SHT2 B 7
