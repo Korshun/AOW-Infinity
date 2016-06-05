@@ -219,8 +219,7 @@ actor RandomPinky : RandomSpawner {
 actor AOWBaronBall : BaronBall replaces BaronBall { damagetype "FireSpecial" }
 actor AOWDoomImpBall : DoomImpBall replaces DoomImpBall { damagetype "FireSpecial" }
 actor AOWCacodemonBall : CacodemonBall replaces CacodemonBall { damagetype "FireSpecial" }
-actor AOWBulletPuff : BulletPuff replaces BulletPuff { damagetype "Monster" }
-actor AOWArachnotronPlasma : ArachnotronPlasma { damagetype "Monster" }
+actor AOWArachnotronPlasma : ArachnotronPlasma { damagetype "Plasma" }
 
 // Decorations
 /*actor AOWBigTree : BigTree replaces BigTree { -SOLID }
