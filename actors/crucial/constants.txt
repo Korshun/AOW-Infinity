@@ -168,7 +168,6 @@ const int aow_script352 = 352;
 const int aow_script353 = 353;
 const int aow_script354 = 354;
 const int aow_script355 = 355;
-const int aow_script356 = 356;
 const int aow_script357 = 357;
 const int aow_script359 = 359;
 const int aow_script360 = 360;

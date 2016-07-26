@@ -218,15 +218,6 @@ function void GiveInventoryBold (str what, int amount) {
 	}
 }
 
-// [Dusk] not really a function but I don't know where else to categorize this o_O
-script aow_script356 (void)
-{
-	if(PlayerTeam() == TEAM_RED)
-		SetResultValue(1);
-	else if(PlayerTeam() == TEAM_BLUE)
-		SetResultValue(0);
-}
-
 script aow_script336 (int Invert) {
 	if (Invert == 0)
 	{
