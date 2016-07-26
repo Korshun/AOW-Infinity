@@ -202,8 +202,6 @@ int DeveloperSafetyLock;
 
 int EventScripts;
 
-int BodycountTimelimit;
-
 int Credits[33];
 int Experience[32];
 int Rank[32];
