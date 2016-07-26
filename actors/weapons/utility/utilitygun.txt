@@ -1141,7 +1141,7 @@ actor Utility_TurretBase {
 	}
 }
 
-// [NF] This actor is used to clear places like War Factory hanger doors, teleport
+// [NF] This actor is used to clear places like War Factory hangar doors, teleport
 // destinations and the like from utility items
 actor AntiUtilityExplosion {
 	+NOGRAVITY +NOBLOCKMAP

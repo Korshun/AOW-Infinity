@@ -321,7 +321,7 @@ int GameOver;
 bool CrateTime = True;
 
 int PlayerSpeeds[32];
-int MechGetter[2]; // which player is in the hanger?
+int MechGetter[2]; // which player is in the hangar?
 
 int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
 int PlasmaCooldown[32]; // same for plasma cannon (internal)

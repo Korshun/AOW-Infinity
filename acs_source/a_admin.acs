@@ -117,7 +117,7 @@ script aow_script402 (int Arg1, int Arg2, int Arg3) NET
 				s:"TIDs of interest:\n",
 				s:"1: blue base\t\t2: red base\n",
 				s:"70: blue spawn room\t71: red spawn room\n",
-				s:"108: blue wf hanger\t208: red wf hanger\n",
+				s:"108: blue wf hangar\t208: red wf hangar\n",
 				s:"110: blue mech room\t210: red mech room\n",
 				s:"111: blue res room\t211: red res room\n"; HUDMSG_PLAIN|HUDMSG_LOG, 9000, 0, 0, 0, 0);
 			HudMessage (s:""; HUDMSG_PLAIN, 9000, 0, 0, 0, 0.1);
