@@ -202,7 +202,7 @@ script aow_script599 OPEN {
 }
 
 // credit flow
-script aow_script4 OPEN {
+script aow_creditflow OPEN {
 	int i, p, redflow, blueflow;
 	while (1) {
 		p = 25;
