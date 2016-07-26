@@ -218,21 +218,11 @@ function void GiveInventoryBold (str what, int amount) {
 	}
 }
 
-script aow_script336 (int Invert) {
-	if (Invert == 0)
-	{
-		if(PlayerTeam() == TEAM_RED)
-			SetResultValue(0);
-		else if(PlayerTeam() == TEAM_BLUE)
-			SetResultValue(1);
-	}
-	else
-	{
-		if(PlayerTeam() == TEAM_RED)
-			SetResultValue(1);
-		else if(PlayerTeam() == TEAM_BLUE)
-			SetResultValue(0);
-	}
+script aow_isredteam (int Invert) {
+	if(PlayerTeam() == TEAM_RED)
+		SetResultValue(1);
+	else if(PlayerTeam() == TEAM_BLUE)
+		SetResultValue(0);
 }
 
 function bool MitigateDoublePress(void)

@@ -240,7 +240,7 @@ actor UtilityGun : AOWWeapon {
 		Goto EndFire
 	Done.RazorWire:
 		NULL A 0 A_SpawnItemEx("Utility_RazorWireMarker",96,0,0,0,0,0,0,32,0)
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.RazorWireBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.RazorWireBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,1,0,0) == 0, "Limit")
 		NULL A 0 A_SpawnItemEx("Utility_RazorWire",96,0,0,0,0,0,0,32,0)
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,1,0,0)
@@ -292,7 +292,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.GunTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.GunTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.GunTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,0,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,0,0,0)
@@ -328,7 +328,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.MechTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.MechTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.MechTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,3,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,4,0,0)
@@ -502,7 +502,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.MiniRef:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.MiniRefBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.MiniRefBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,3,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,2,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344, 0, 3, 0, 0)
@@ -538,7 +538,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.Regen:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.RegenBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.RegenBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,4,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,7,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,6,1,0)
@@ -574,7 +574,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.RegenAmmo:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.RegenAmmoBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.RegenAmmoBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,6,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,7,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,8,1,0)
@@ -614,7 +614,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.Mines:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.MinesBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.MinesBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,2,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,4,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,5,0,0)
@@ -670,7 +670,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.RepairTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.RepairTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.RepairTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,5,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,4,0,0)
@@ -708,7 +708,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.KlaxonTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.KlaxonTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.KlaxonTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,6,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,4,0,0)
@@ -832,7 +832,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.PrecisionTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.PrecisionTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.PrecisionTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,5,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,4,0,0)
@@ -869,7 +869,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.MiniRaven:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.MiniRavenBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.MiniRavenBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,5,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,9,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,7,0,0)
@@ -906,7 +906,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.ArtilleryTurret:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.ArtilleryTurretBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.ArtilleryTurretBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,0,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,10,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,9,0,0)
@@ -942,7 +942,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.PowerGenerator:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.PowerGeneratorBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.PowerGeneratorBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,20,0,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script695,7,0,0) == 0, "EndFire2")
 		NULL A 0 ACS_ExecuteAlways(aow_script344,0,20)
@@ -1003,7 +1003,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	Done.Portal:
-		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script336,0,0,0) == 1, "Done.PortalBlue")
+		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isredteam,0,0,0) == 1, "Done.PortalBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,21,1) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script694,250) == 0, "EndFire2")
 		UTIF A 2 ACS_ExecuteAlways (SC_PORTAL_INIT, 0)
