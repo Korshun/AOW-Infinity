@@ -20,9 +20,9 @@ script aow_script943 OPEN CLIENTSIDE {
 	ConsoleCommand ("puke 945");
 }
 
-script aow_script946 (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
+script aow_whoami (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
 
-script aow_script366 (void) NET CLIENTSIDE {
+script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
 	if (ConsolePlayerNumber() == -1) terminate;
 	

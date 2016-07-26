@@ -92,7 +92,7 @@ script aow_script999 OPEN {
 	// Activate developer mode if the proper cvar is set.
 	if (GetCVAR ("aow_developer")) {
 		DeveloperSafetyLock = 0x7FFFFFFF;
-		ACS_ExecuteAlways (aow_script404, 0);
+		ACS_ExecuteAlways (aow_activatedeveloper, 0);
 	}
 }
 

@@ -1,5 +1,5 @@
 // SURRENDER SCRIPT
-script aow_script342 (void) NET {
+script aow_surrender (void) NET {
 	if (!PlayerInGame(PlayerNumber())) {
 		DisplayCross();
 		SETFONT("BigFont");

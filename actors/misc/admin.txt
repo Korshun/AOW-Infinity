@@ -74,7 +74,7 @@ actor AdminPistol : AOWWeapon {
 		goto Ready
 	AltFire:
 		NULL A 0 A_PlayWeaponSound ("switch/shotgun")
-		GPIS B 4 ACS_ExecuteAlways (aow_script402, 0, 13)
+		GPIS B 4 ACS_ExecuteAlways (aow_gamemastercommand, 0, 13)
 		GPIS C 5
 		goto Ready
 	Flash:

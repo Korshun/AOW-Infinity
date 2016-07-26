@@ -1,5 +1,5 @@
 // [SP] This allows a spectator to spawn outside of the team selection room
-script aow_script940 (int which) NET CLIENTSIDE {
+script aow_spectatorteleport (int which) NET CLIENTSIDE {
 	if (PlayerInGame (PlayerNumber())) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -19,7 +19,7 @@ script aow_script940 (int which) NET CLIENTSIDE {
 }
 
 // [Dusk] allows players to switch to the losing team
-script aow_script942 (void) NET {
+script aow_teamswitch (void) NET {
 	// You sorta need a team first
 	if (!PlayerInGame (PlayerNumber())) {
 		DisplayCross();
@@ -118,7 +118,7 @@ script aow_script942 (void) NET {
 }
 
 // This allows players to sell weapons. Kinda like partial resign.
-script aow_script950 (void) NET {
+script aow_sellweapon (void) NET {
 	if (!PlayerInGame (PlayerNumber())) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -243,6 +243,6 @@ function int GetSpeedFactor (void) {
 	return f;
 }
 
-script aow_script921 (void) NET CLIENTSIDE {
+script aow_showspeed (void) NET CLIENTSIDE {
 	Log (s:"My speed is ", f:GetSpeedFactor ());
 }
