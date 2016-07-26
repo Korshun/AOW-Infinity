@@ -187,7 +187,7 @@ function bool zan_SetCvar(str name,int value)
 
 /*
 //Test script
-script 1 (int value)
+script aow_script1 (int value)
 {
   SetCvar("x_testcvar_1", value);
   print(s:"value: ",d:GetCvar("x_testcvar_1"));

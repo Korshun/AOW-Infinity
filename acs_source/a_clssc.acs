@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 //---------------------------GUNMAN
-script 20 (int Team) {
+script aow_script20 (int Team) {
 	int cost = 0; int speed = 1.0;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -29,7 +29,7 @@ script 20 (int Team) {
 	SetFragGrenades (1);
 	GiveInventory("SubMachineGun",1);
 	SetWeapon("SubMachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GUNMAN);
@@ -40,7 +40,7 @@ script 20 (int Team) {
 }
 
 //---------------------------ENGINEER
-script 21 (int Team) {
+script aow_script21 (int Team) {
 	int cost = 0; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -64,7 +64,7 @@ script 21 (int Team) {
 	GiveInventory ("TimedC4Count",1);
 	GiveInventory("RepairGun",1);
 	SetWeapon("RepairGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ENGINEER);
@@ -75,7 +75,7 @@ script 21 (int Team) {
 }
 
 //---------------------------MINIGUNNER
-script 22 (int Team) {
+script aow_script22 (int Team) {
 	int cost = 400; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -105,7 +105,7 @@ script 22 (int Team) {
 	GiveInventory("GatlingGun",1);
 	GiveInventory("MachineGunAmmo",400);
 	SetWeapon("GatlingGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_MINIGUNNER);
@@ -116,7 +116,7 @@ script 22 (int Team) {
 }
 
 //---------------------------TECHNICIAN
-script 23 (int Team) {
+script aow_script23 (int Team) {
 	int cost = 200; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -147,7 +147,7 @@ script 23 (int Team) {
 	GiveInventory("RepairGunUpgrade",1);
 	GiveInventory("RepairGun",1);
 	SetWeapon("RepairGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_TECHNICIAN);
@@ -157,7 +157,7 @@ script 23 (int Team) {
 }
 
 //---------------------------FLAMER
-script 24 (int Team) {
+script aow_script24 (int Team) {
 	int cost = 450; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -186,7 +186,7 @@ script 24 (int Team) {
 	GiveInventory("FlamerAmmo",400);
 	GiveInventory("PhosphorusGrenadeAmmo",4);
 	SetWeapon("Flamer");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_FLAMER);
@@ -197,7 +197,7 @@ script 24 (int Team) {
 }
 
 //---------------------------RIFLEMAN
-script 25 (int Team) {
+script aow_script25 (int Team) {
 	int cost = 200; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -222,7 +222,7 @@ script 25 (int Team) {
 	GiveInventory("TimedC4Count", 1);
 	GiveInventory("FragGrenade", 1);
 	GiveInventory("FragGrenadeAmmo", 1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("Rifle", 1);
 	GiveInventory("RifleAmmo", 30);
 	GiveInventory("RifleGrenadeAmmo", 4);
@@ -237,7 +237,7 @@ script 25 (int Team) {
 }
 
 //---------------------------SUPPORT / MACHINE GUNNER
-script 26 (int Team) {
+script aow_script26 (int Team) {
 	int cost = 300; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -265,7 +265,7 @@ script 26 (int Team) {
 	GiveInventory("FragGrenade", 1);
 	SetAmmoCapacity("FragGrenadeAmmo", 2);
 	GiveInventory("FragGrenadeAmmo", 2);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("MachineGun", 1);
 	SetWeapon("MachineGun");
 	
@@ -278,7 +278,7 @@ script 26 (int Team) {
 }
 
 //---------------------------GRENADIER
-script 27 (int Team) {
+script aow_script27 (int Team) {
 	int cost = 550; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -311,7 +311,7 @@ script 27 (int Team) {
 	GiveInventory("GrenadeAmmo",40);
 	SetWeapon("Grenade_Launcher");
 	
-	ACS_ExecuteAlways(91,0);
+	ACS_ExecuteAlways(aow_script91,0);
 		
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GRENADIER);
@@ -322,7 +322,7 @@ script 27 (int Team) {
 }
 
 //---------------------------ROCKET SOLDIER
-script 28 (int Team) {
+script aow_script28 (int Team) {
 	int cost = 500; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -356,7 +356,7 @@ script 28 (int Team) {
 	GiveInventory("MissileLauncher",1);
 	SetWeapon("MissileLauncher");
 	
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ROCKETEER);
@@ -367,7 +367,7 @@ script 28 (int Team) {
 }
 
 //---------------------------STEALTH TROOPER
-script 29 (int Team) {
+script aow_script29 (int Team) {
 	int cost = 600; int speed = 0.95;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -398,7 +398,7 @@ script 29 (int Team) {
 	GiveInventory("FragGrenadeAmmo",1);
 	GiveInventory("StealthLaserRifle",1);
 	GiveInventory("Knife",1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_STEALTH);
@@ -417,7 +417,7 @@ script 29 (int Team) {
 }
 
 //---------------------------GAUSS GUNNER
-script 33 (int Team) {
+script aow_script33 (int Team) {
 	int cost = 600; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -454,7 +454,7 @@ script 33 (int Team) {
 	GiveInventory("GaussRifle",1);
 	SetWeapon("GaussRifle");
 
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GAUSSGUNNER);
@@ -466,7 +466,7 @@ script 33 (int Team) {
 }
 
 //---------------------------CHEM WARRIOR
-script 34 (int Team) {
+script aow_script34 (int Team) {
 	int cost = 550; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -511,7 +511,7 @@ script 34 (int Team) {
 }
 
 //---------------------------SHOCK TROOPER
-script 35 (int Team) {
+script aow_script35 (int Team) {
 	int cost = 600; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -545,7 +545,7 @@ script 35 (int Team) {
 	GiveInventory("GeneporiumCharge",400);
 	SetWeapon("ShockRifle");
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_SHOCKTROOPER);
@@ -558,7 +558,7 @@ script 35 (int Team) {
 }
 
 //---------------------------COMMANDO
-script 36 (int Team) {
+script aow_script36 (int Team) {
 	int cost = 1000; int speed = 0.85;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -611,7 +611,7 @@ script 36 (int Team) {
 	SetFragGrenades (4);
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_COMMANDO);
-	ACS_ExecuteAlways(91,0,0,0,0);
+	ACS_ExecuteAlways(aow_script91,0,0,0,0);
 	
 	SetWeapon("GaussRifle");
 				
@@ -624,7 +624,7 @@ script 36 (int Team) {
 }
 
 //---------------------------PLASMA CANNON
-script 37 (int Team)
+script aow_script37 (int Team)
 {
 	int cost = 1500;
 	if (MitigateDoublePress()) terminate;
@@ -690,7 +690,7 @@ script 37 (int Team)
 }
 
 //---------------------------SHOTGUNNER
-script 38 (int Team) {
+script aow_script38 (int Team) {
 	int cost = 0; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -712,7 +712,7 @@ script 38 (int Team) {
 	GiveInventory("TimedC4Count",1);
 	GiveInventory("ShotgunAmmo",50);
 	SetFragGrenades (1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 			
 	GiveInventory("Boomstick",1);
 	SetWeapon("Boomstick");
@@ -726,7 +726,7 @@ script 38 (int Team) {
 }
 
 //---------------------------SUICIDE BOMBER
-script 62 (int Team) {
+script aow_script62 (int Team) {
 	int cost = 1750; int speed = 1.0;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -759,7 +759,7 @@ script 62 (int Team) {
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("BombPack",1);
 	SetWeapon("BombPack");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_SUICIDEBOMBER);
@@ -777,7 +777,7 @@ script 62 (int Team) {
 }
 
 //---------------------------SNIPER
-script 40 (int Team) {
+script aow_script40 (int Team) {
 	int cost = 750; int speed = 0.675;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -807,7 +807,7 @@ script 40 (int Team) {
 	SetFragGrenades (2);
 	
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91,0,0,0,0);
+	ACS_ExecuteAlways(aow_script91,0,0,0,0);
 	
 	GiveInventory("SniperRifle",1);
 	SetWeapon("SniperRifle");
@@ -824,7 +824,7 @@ script 40 (int Team) {
 }
 
 //---------------------------UTILITY GUY
-script 41 (int Team) {
+script aow_script41 (int Team) {
 	int cost = 650; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -858,7 +858,7 @@ script 41 (int Team) {
 	GiveInventory("Utility_Ammo", 75);
 	
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_UTILITYGUY);
@@ -872,7 +872,7 @@ script 41 (int Team) {
 }
 
 //---------------------------DEMO EXPERT
-script 42 (int Team) {
+script aow_script42 (int Team) {
 	int cost = 550; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -911,7 +911,7 @@ script 42 (int Team) {
 	GiveInventory ("ClassID", CLASS_DEMOEXPERT);
 
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -919,7 +919,7 @@ script 42 (int Team) {
 }
 
 // FIELD MEDIC
-script 43 (int Team) {
+script aow_script43 (int Team) {
 	int cost = 300; int speed = 0.85;
 	
 	if (MitigateDoublePress()) terminate;
@@ -954,12 +954,12 @@ script 43 (int Team) {
 	GiveInventory("Boomstick",1);
 	GiveInventory("ShotgunAmmo",50);
 	SetFragGrenades (2);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("HealGun",1);
 	SetWeapon("HealGun");
 	GiveInventory("SpawnInvulnerability",1);
 	// Medic regeneration
-	ACS_ExecuteAlways(352, 0);
+	ACS_ExecuteAlways(aow_script352, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -967,7 +967,7 @@ script 43 (int Team) {
 }
 
 //---------------------------LASER CHAINGUNNER
-script 44 (int Team) {
+script aow_script44 (int Team) {
 	int cost = 650; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -997,7 +997,7 @@ script 44 (int Team) {
 	GiveInventory("LaserChaingun",1);
 	GiveInventory("LaserChaingunAmmo",400);
 	SetWeapon("LaserChaingun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_LASERCHAINGUNNER);
@@ -1008,7 +1008,7 @@ script 44 (int Team) {
 }
 
 //---------------------------T-E 21cal RIFLE
-script 49 (int Team)
+script aow_script49 (int Team)
 {
 	int cost = 300;
 	if (MitigateDoublePress()) terminate;
@@ -1040,7 +1040,7 @@ script 49 (int Team)
 }
 
 //---------------------------CHAINSAW (was flashbangs)
-script 50 (int Team) {
+script aow_script50 (int Team) {
 	int cost = 250;
 	if (MitigateDoublePress()) terminate;
 	if (CheckInventory("EagerBeaver")) {
@@ -1070,7 +1070,7 @@ script 50 (int Team) {
 }
 
 // ARTILLERY CANNON
-script 51 (int Team) {
+script aow_script51 (int Team) {
 	int cost = 550;
 	if (MitigateDoublePress()) terminate;
 	if(CheckInventory("ArtilleryCannon")) {
@@ -1101,7 +1101,7 @@ script 51 (int Team) {
 }
 
 //---------------------------JUMPJET
-script 52 (int Team) {
+script aow_script52 (int Team) {
 	int cost = 600; int speed = 0.65;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1133,7 +1133,7 @@ script 52 (int Team) {
 	GiveInventory("JumpJetFuel",100);
 	GiveInventory("JumpJetGatlingGun",1);
 	SetWeapon("JumpJetGatlingGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_JUMPJET);
@@ -1144,7 +1144,7 @@ script 52 (int Team) {
 }
 
 //---------------------------TIBERIUM AUTORIFLEMAN
-script 53 (int Team) {
+script aow_script53 (int Team) {
 	int cost = 400; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1172,7 +1172,7 @@ script 53 (int Team) {
 	SetFragGrenades (2);
 	GiveInventory("TiberiumAutorifle",1);
 	SetWeapon("TiberiumAutorifle");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_TIBRIFLE);
@@ -1183,7 +1183,7 @@ script 53 (int Team) {
 }
 
 //---------------------------DOUBLE SHOTGUNNER
-script 54 (int Team) {
+script aow_script54 (int Team) {
 	int cost = 200; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -1207,7 +1207,7 @@ script 54 (int Team) {
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
 	SetFragGrenades (1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("DoubleShotgun",1);
 	SetWeapon("DoubleShotgun");
 	
@@ -1221,7 +1221,7 @@ script 54 (int Team) {
 
 //-------------------- BLUE TEAM SUPERWEAPON
 //---------------------------ION CANNON BEACON
-script 55 (int Team) {
+script aow_script55 (int Team) {
 	if (PlayerTeam() == TEAM_RED) {
 		// [Dusk] this message should never be displayed in casual games
 		DisplayCross();
@@ -1288,7 +1288,7 @@ script 55 (int Team) {
 
 //-------------------- RED TEAM SUPERWEAPON
 //---------------------------NUCLEAR STRIKE BEACON
-script 56 (int Team) {
+script aow_script56 (int Team) {
 	if (PlayerTeam() == TEAM_BLUE) {
 		// [Dusk] this message should never be displayed in casual games
 		DisplayCross();
@@ -1350,7 +1350,7 @@ script 56 (int Team) {
 }
 
 //---------------------------ARMOUR/DAMAGE UPGRADE
-script 57 (int Team) {
+script aow_script57 (int Team) {
 	int cost = 250;
 	if (MitigateDoublePress()) terminate;
 	
@@ -1392,7 +1392,7 @@ script 57 (int Team) {
 }
 
 //---------------------------PLASMA GUNNER
-script 60 (int Team) {
+script aow_script60 (int Team) {
 	int cost = 800; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1426,7 +1426,7 @@ script 60 (int Team) {
 	GiveInventory("PlasmaGun",1);
 	SetWeapon("PlasmaGun");
 	
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -1434,7 +1434,7 @@ script 60 (int Team) {
 }
 
 // ARTILLERY SOLDIER
-script 61 (int Team) {
+script aow_script61 (int Team) {
 	int cost = 600; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1471,7 +1471,7 @@ script 61 (int Team) {
 	SetFragGrenades (2);
 	GiveInventory("ArtilleryCannon",1);
 	SetWeapon("ArtilleryCannon");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ARTILLERY);
@@ -1482,7 +1482,7 @@ script 61 (int Team) {
 }
 
 //---------------------------TIME COP
-script 39 (int Team) {
+script aow_script39 (int Team) {
 	int cost = 2000; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(team)) terminate;
@@ -1542,7 +1542,7 @@ script 39 (int Team) {
 	GiveInventory ("TimeGun", 1);
 	GiveInventory ("TimeGunAmmo", 100);
 	SetWeapon ("TimeGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	
@@ -1555,7 +1555,7 @@ script 39 (int Team) {
 }
 
 //---------------------------TIBERIUM HARVESTER //Advanced
-script 63 (int Team) {
+script aow_script63 (int Team) {
 	int cost = 750; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckRefinery(Team)) terminate;
@@ -1592,7 +1592,7 @@ script 63 (int Team) {
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("MachineGun",1);
 	SetWeapon("MachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ADVHARVESTER);
@@ -1605,7 +1605,7 @@ script 63 (int Team) {
 }
 
 //---------------------------TIBERIUM HARVESTER //Free
-script 64 (int Team) {
+script aow_script64 (int Team) {
 	int cost = 0; int speed = 0.65;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckRefinery(Team)) terminate;
@@ -1640,7 +1640,7 @@ script 64 (int Team) {
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_HARVESTER);
 	SetWeapon("SubMachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 				
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -1649,7 +1649,7 @@ script 64 (int Team) {
 	ActivatorSound("misc/chem",255);
 }
 
-script 961 (int team) {
+script aow_script961 (int team) {
 	int tries, i;
 	bool failed = true;
 	if (GetLevelInfo (LEVELINFO_LEVELNUM) == 20 || GetLevelInfo (LEVELINFO_LEVELNUM) == 21) {

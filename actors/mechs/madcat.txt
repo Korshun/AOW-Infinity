@@ -157,7 +157,7 @@ actor MadCatWeapons : AOWWeapon {
 		//Continue firing PPCs
 		NULL A 0 A_JumpIfInventory("Reload-ShockCannon",1,"FireMissiles")
 		NULL A 0 A_PlayWeaponSound("ppc/fire")
-		NULL A 0 ACS_ExecuteAlways(319, 0, 2, 5) // reload
+		NULL A 0 ACS_ExecuteAlways(aow_script319, 0, 2, 5) // reload
 		NULL A 0 A_GunFlash
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
 		NULL A 0 A_FireCustomMissile("ShockCannonBallRed", 0, 0, 64, 0)

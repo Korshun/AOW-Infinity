@@ -1,5 +1,5 @@
 // [SP] NOTICE: This is an administrator 'puke' script. USE WITH CARE! This can be abused very easily.
-script 401 (int Player,int Action)
+script aow_script401 (int Player,int Action)
 {
 	SetActivator(3800 + Player);
 	switch(Action)
@@ -46,7 +46,7 @@ script 401 (int Player,int Action)
 		delay(1);
 		Teleport(70);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95,0,0,0,0);
+		ACS_ExecuteAlways(aow_script95,0,0,0,0);
 		TakeInventory("IsRed",1);
 		GiveInventory("IsBlue",1);
 		StartTime[Player] = -0x7FFFFFFF;
@@ -70,7 +70,7 @@ script 401 (int Player,int Action)
 		delay(1);
 		Teleport(71);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95,0,0,0,0);
+		ACS_ExecuteAlways(aow_script95,0,0,0,0);
 		TakeInventory("IsBlue",1);
 		GiveInventory("IsRed",1);
 		StartTime[Player] = -0x7FFFFFFF;
@@ -91,7 +91,7 @@ script 401 (int Player,int Action)
 		Log(s:"Unknown action!");
 	}
 }
-script 402 (int Arg1, int Arg2, int Arg3) NET
+script aow_script402 (int Arg1, int Arg2, int Arg3) NET
 {
 	if ( IsAdmin[PlayerNumber()] == false )
 		terminate;
@@ -256,7 +256,7 @@ script 402 (int Arg1, int Arg2, int Arg3) NET
 
 // TEAM SHUFFLE
 // -- only use for the grossest cases of team stack
-script 403 (void) {
+script aow_script403 (void) {
 	log (s:"[SHUFFLE] Countdown begins.");
 	for (int i = 10; i > 0; i--) {
 		SetFont ("BIGFONT");
@@ -315,7 +315,7 @@ script 403 (void) {
 // developer mode: activates all researches, knocks out money limits... 
 // basically I got tired of going past limits when testing stuff.
 
-script 404 (void) {
+script aow_script404 (void) {
 	// This is a dangerous script. RCON must call it twice, if it ever does that...
 	if (Timer() > DeveloperSafetyLock) {
 		DeveloperSafetyLock = Timer() + 10*35;

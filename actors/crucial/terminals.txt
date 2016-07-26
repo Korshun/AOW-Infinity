@@ -166,7 +166,7 @@ actor BarracksTerminalBlue : BaseTerminalBlue 21100 {
 	Pain:
 		NULL A 0
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_BLUE)
-		NULL A 0 ACS_Execute(97,0,1,1)
+		NULL A 0 ACS_Execute(aow_script97,0,1,1)
 		goto Spawn
 	}
 }
@@ -182,7 +182,7 @@ actor RefineryTerminalBlue : BaseTerminalBlue 21102 {
 	Pain:
 		NULL A 0 
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_REFINERY, TEAM_BLUE)
-		NULL A 0 ACS_Execute(97,0,2,1)
+		NULL A 0 ACS_Execute(aow_script97,0,2,1)
 		goto Idle
 	}
 }
@@ -198,7 +198,7 @@ actor PowerPlantTerminalBlue : BaseTerminalBlue 21103 {
 	Pain:
 		NULL A 0 
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_RESCENTRE, TEAM_BLUE)
-		NULL A 0 ACS_Execute(97,0,3,1)
+		NULL A 0 ACS_Execute(aow_script97,0,3,1)
 		goto Idle
 	}
 }
@@ -214,7 +214,7 @@ actor WarFactoryTerminalBlue : BaseTerminalBlue 21104 {
 	Pain:
 		NULL A 0 
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_BLUE)
-		NULL A 0 ACS_Execute(97,0,4,1)
+		NULL A 0 ACS_Execute(aow_script97,0,4,1)
 		goto Idle
 	}
 }
@@ -233,7 +233,7 @@ actor ObeliskTerminalBlue : BaseTerminalBlue 21111 {
 	Pain:
 		NULL A 0
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_BLUE)
-		NULL A 0 ACS_Execute(97,0,6,1)
+		NULL A 0 ACS_Execute(aow_script97,0,6,1)
 		goto Idle
 	}
 }
@@ -249,7 +249,7 @@ actor BarracksTerminalRed : BaseTerminal 21105 {
 	Pain:
 		NULL A 0
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_RED)
-		NULL A 0 ACS_Execute(97, 0, 1)
+		NULL A 0 ACS_Execute(aow_script97, 0, 1)
 		goto Idle
 	}
 }
@@ -298,7 +298,7 @@ actor WarFactoryTerminalRed : BaseTerminal 21108 {
 	Pain:
 		NULL A 0
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_RED)
-		NULL A 0 ACS_Execute(97, 0, 4)
+		NULL A 0 ACS_Execute(aow_script97, 0, 4)
 		goto Idle
 	}
 }
@@ -314,7 +314,7 @@ actor ObeliskTerminalRed : BaseTerminal 21112 {
 	Pain:
 		NULL A 0
 		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_RED)
-		NULL A 0 ACS_Execute(97,0,6,0)
+		NULL A 0 ACS_Execute(aow_script97,0,6,0)
 		goto Idle
 	}
 }

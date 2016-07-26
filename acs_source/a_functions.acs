@@ -115,7 +115,7 @@ function int IsSecondPress(str StatCard, int price) {
 }
 
 // This bit is in its own script because custom functions cannot use latent functions
-script 956 (void) {
+script aow_script956 (void) {
 	GiveInventory("PurchaseToken",1);
 	Delay(35*1);
 	TakeInventory("PurchaseToken",1);
@@ -219,7 +219,7 @@ function void GiveInventoryBold (str what, int amount) {
 }
 
 // [Dusk] not really a function but I don't know where else to categorize this o_O
-script 356 (void)
+script aow_script356 (void)
 {
 	if(PlayerTeam() == TEAM_RED)
 		SetResultValue(1);
@@ -227,7 +227,7 @@ script 356 (void)
 		SetResultValue(0);
 }
 
-script 336 (int Invert) {
+script aow_script336 (int Invert) {
 	if (Invert == 0)
 	{
 		if(PlayerTeam() == TEAM_RED)

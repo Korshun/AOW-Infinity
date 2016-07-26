@@ -52,7 +52,7 @@ function void ShowCurrentDonationMenu (void)
 
 
 //Donations
-script 333 (void) NET
+script aow_script333 (void) NET
 {
 	if(CheckInventory("DonateMenu") == 0)
 		terminate;
@@ -67,7 +67,7 @@ script 333 (void) NET
 	
 }
 
-script 334 (int Which) NET {
+script aow_script334 (int Which) NET {
 	int CheckValid = 1;
 
 	if(CheckInventory("InGame") == 0)
@@ -118,7 +118,7 @@ script 334 (int Which) NET {
 	}
 }
 
-script 335 (void) NET
+script aow_script335 (void) NET
 {
 	int CheckValid = 1;
 
@@ -143,6 +143,6 @@ script 335 (void) NET
 				TakeInventory("DonationName", 31);
 		}
 		ShowCurrentDonationMenu();
-		ACS_ExecuteAlways(333, 0);
+		ACS_ExecuteAlways(aow_script333, 0);
 	}
 }

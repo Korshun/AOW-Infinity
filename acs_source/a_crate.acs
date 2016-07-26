@@ -8,7 +8,7 @@
  * of this and call it your own. Thanks!
  */
 
-script 312 OPEN {
+script aow_script312 OPEN {
 	while (1) {
 		CrateNumber += random (0, MAX_CRATE);
 		CrateNumber %= MAX_CRATE;
@@ -18,7 +18,7 @@ script 312 OPEN {
 	restart;
 }
 
-script 309 (int Crate, int Override) {
+script aow_script309 (int Crate, int Override) {
 	// Crate determines which crate is given, 0 means random
 	// Override means whether all limits should be overridden. Open Deck needs this.
 	int i;
@@ -211,7 +211,7 @@ script 309 (int Crate, int Override) {
 		
 		SetFont("SMALLFONT");
 		if (TournamentMode) { // [SP] This crate is forbidden in tournament mode
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		LocalAmbientSound("powerup/kama",255);
@@ -235,7 +235,7 @@ script 309 (int Crate, int Override) {
 	case 27:
 		SetFont("SMALLFONT");
 		if (!Override && (CrateTime || CheckInventory("PlasmaCannon"))) {
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		LocalAmbientSound("powerup/plas",255);
@@ -270,7 +270,7 @@ script 309 (int Crate, int Override) {
 		else if(PlayerTeam() == TEAM_BLUE)
 			Teleport(70);
 		
-		ACS_ExecuteAlways(95, 0);
+		ACS_ExecuteAlways(aow_script95, 0);
 		Log(n:0, s:" gets Resign Crate.");
 		break;
 	case 13:
@@ -397,7 +397,7 @@ script 309 (int Crate, int Override) {
 		SetFont("SMALLFONT");
 		if(CrateTime == True)
 		{
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		AmbientSound("weapons/rocklx",255);
@@ -637,7 +637,7 @@ script 309 (int Crate, int Override) {
 	case 58:
 		SetFont("SMALLFONT");
 		GiveInventory ("ThermalCloakingTime", 90);
-		ACS_ExecuteAlways(953, 0);
+		ACS_ExecuteAlways(aow_script953, 0);
 		Log(n:0, s:" gets Thermal Cloaking.");
 		HudMessage (s:"\cUThermal cloaking!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -735,7 +735,7 @@ script 309 (int Crate, int Override) {
 	case 63:
 	case 64:
 		if (CheckInventory ("RemoteC4") && !Override) {
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		SetFont ("SMALLFONT");
@@ -800,7 +800,7 @@ script 309 (int Crate, int Override) {
 }
 
 // THERMAL CLOAKING
-script 953 (void) {
+script aow_script953 (void) {
 	int k = 0;
 	SetPlayerProperty(0,1,PROP_NOTARGET);
 	while (CheckInventory ("ThermalCloakingTime") > 0)
@@ -817,7 +817,7 @@ script 953 (void) {
 		HUDMSG_FADEOUT,8600+PlayerNumber(),CR_RED,1.0,0.0,5.0,2.0);
 }
 
-script 966 (void) CLIENTSIDE {
+script aow_script966 (void) CLIENTSIDE {
 	// [Dusk] Don't display this actor for the player who's currently
 	// getting the bomb crate - said player gets a fade instead.
 	if (ACS_ExecuteWithResult (651, 0) == ConsolePlayer) {
@@ -837,7 +837,7 @@ script 966 (void) CLIENTSIDE {
 }
 
 // target information
-script 964 (int type, int value) {
+script aow_script964 (int type, int value) {
 	SetActivatorToTarget (0);
 	SetResultValue (0);
 	switch (type) {

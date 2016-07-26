@@ -69,9 +69,9 @@ actor Scavenger : MechPlayer_Base {
 		NULL A 0 SetPlayerProperty (0, 0, 0)
 		goto Spawn
 	Pain.Flash:
-		NULL A 0 ACS_ExecuteAlways(320,0,3,0,0)
-		NULL A 0 ACS_ExecuteAlways(320,0,3,0,0)
-		NULL A 0 ACS_ExecuteAlways(310,0,4,0,0)
+		NULL A 0 ACS_ExecuteAlways(aow_script320,0,3,0,0)
+		NULL A 0 ACS_ExecuteAlways(aow_script320,0,3,0,0)
+		NULL A 0 ACS_ExecuteAlways(aow_script310,0,4,0,0)
 		goto Spawn
 	Death:
 		NULL A 0
@@ -157,7 +157,7 @@ actor ScavengerEject : CustomInventory  {
 		NULL A -1
 		stop
 	Use:
-		NULL A 0 ACS_ExecuteAlways(697, 0, 7)
+		NULL A 0 ACS_ExecuteAlways(aow_script697, 0, 7)
 		stop
 	}
 }

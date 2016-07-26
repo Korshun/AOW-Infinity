@@ -1,5 +1,5 @@
 // [SP] Plasma cannon checking script
-script 556 OPEN
+script aow_script556 OPEN
 {
 	while(1)
 	{
@@ -33,8 +33,8 @@ script 556 OPEN
 	}
 }
 
-script 905 ENTER {ACS_ExecuteAlways (906, 0);}
-script 906 RESPAWN {
+script aow_script905 ENTER {ACS_ExecuteAlways (906, 0);}
+script aow_script906 RESPAWN {
 	if (PlayerInGame (PlayerNumber())) {
 		// [SP] The following code removes redundant weapons
 		if (CheckInventory ("StealthLaserRifle")) CheckAndRemove("LaserRifle");

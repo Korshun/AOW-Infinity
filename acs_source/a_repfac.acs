@@ -5,7 +5,7 @@
 // You may use portions of this script in your project as long as you give credit where credit is
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
-script 106 (int team) {
+script aow_script106 (int team) {
 	if (team == PlayerTeam()) terminate; // inverse values, bah
 	if (CheckInventory ("InRepairs")) terminate;
 	GiveInventory("InRepairs",1);
@@ -13,7 +13,7 @@ script 106 (int team) {
 	ACS_ExecuteAlways (107, 0);
 }
 
-script 107 (void) {
+script aow_script107 (void) {
 	if (!CheckInventory("InRepairs")) terminate;
 	int hp, shp, i;
 	shp = GetSpawnHealth ();
@@ -69,4 +69,4 @@ script 107 (void) {
 	}
 }
 
-script 108 (void) TakeInventory ("InRepairs", 1);
+script aow_script108 (void) TakeInventory ("InRepairs", 1);
