@@ -362,7 +362,7 @@ actor NuclearStrikePlaced
   Water:
     BEAC C 35 A_PlaySoundEx("c4/disarm","SoundSlot6")
     NULL A 0 A_PlaySoundEx("eva/nukedisarmed","Voice",0,2)
-    NULL A 0 ACS_EXECUTEALWAYS(957,0,0,0,0)
+    NULL A 0 ACS_ExecuteALWAYS(aow_script957,0,0,0,0)
     BEAC C 1 A_Fadeout(0.1) 
     Wait
   }
