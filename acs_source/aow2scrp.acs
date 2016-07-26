@@ -199,7 +199,6 @@ str TeamNames[2] = {"Blue", "Red"};
 
 int Developer;
 int DeveloperSafetyLock;
-int ConnectionEpoch;
 
 int EventScripts;
 
