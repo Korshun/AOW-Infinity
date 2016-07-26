@@ -41,7 +41,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 	
 	if (what != -1 && tteam == team) {
 		if (repairtype != REPAIRTYPE_REPAIR) terminate;
-		if (SuddenDeath && tid < 900) terminate;
+		if (SuddenDeath && tid < TID_MINIREF_RED) terminate;
 		// k we're shooting at a terminal
 
 		hp = GetHealth ();
@@ -118,7 +118,7 @@ script aow_script651 (void) {
 	SetResultValue (0);
 	int tid = ACS_ExecuteWithResult (aow_script964, 5);
 	
-	if (SuddenDeath && tid < 900) {
+	if (SuddenDeath && tid < TID_MINIREF_RED) {
 		// It's sudden death. We can't repair here, so
 		// transform into a klaxon turret instead!
 		// SetActorState (0, "NoLongerMrNiceGuy");

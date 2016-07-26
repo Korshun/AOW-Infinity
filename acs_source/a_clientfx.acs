@@ -31,7 +31,7 @@ script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 	int teammate, i;
 	while (1) {
 		delay (32);
-		SpawnSpotForced ("TiberiumChemSmoke", 402, 0, 0);
+		SpawnSpotForced ("TiberiumChemSmoke", TID_TIBERIUM, 0, 0);
 		
 		// display smoke on tib-carrying players
 		for (i = 0; i <= 31; i++) {

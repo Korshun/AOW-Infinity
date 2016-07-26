@@ -38,7 +38,7 @@ script aow_script80 (int mech) {
 	}
 	
 	if (mech == MECH_ORCA) {
-		cost = 900;
+		cost = TID_MINIREF_RED;
 		card = "MECH05";
 		morph = "OrcaSwitch";
 		nicename = "Orca";

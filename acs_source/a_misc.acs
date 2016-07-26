@@ -124,9 +124,9 @@ script aow_script978 (int p) {
 		else if (CheckActorDistance(0, TID_FACTORY_RED, range)) hit = true;
 		else if (CheckActorDistance(0, TID_REPAIR_RED, range)) hit = true;
 		else if (CheckActorDistance(0, TID_OBELISK_RED, range)) hit = true;
-		else if (CheckActorDistance(0, 900, range)) hit = true;
-		else if (CheckActorDistance(0, 902, range)) hit = true;
-		else if (CheckActorDistance(0, 904, range)) hit = true;
+		else if (CheckActorDistance(0, TID_MINIREF_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_HEALTHREGEN_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_AMMOREGEN_RED, range)) hit = true;
 	} else {
 		if (CheckActorDistance(0, TID_BARRACKS_BLUE, range)) hit = true;
 		else if (CheckActorDistance(0, TID_REFINERY_BLUE, range)) hit = true;
@@ -134,9 +134,9 @@ script aow_script978 (int p) {
 		else if (CheckActorDistance(0, TID_FACTORY_BLUE, range)) hit = true;
 		else if (CheckActorDistance(0, TID_REPAIR_BLUE, range)) hit = true;
 		else if (CheckActorDistance(0, TID_OBELISK_BLUE, range)) hit = true;
-		else if (CheckActorDistance(0, 901, range)) hit = true;
-		else if (CheckActorDistance(0, 903, range)) hit = true;
-		else if (CheckActorDistance(0, 905, range)) hit = true;
+		else if (CheckActorDistance(0, TID_MINIREF_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_HEALTHREGEN_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_AMMOREGEN_BLUE, range)) hit = true;
 	}
 	if (hit) {
 		SetActivatorToTarget (0); // award the player the points, not the C4

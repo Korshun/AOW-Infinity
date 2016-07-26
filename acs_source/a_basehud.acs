@@ -153,12 +153,12 @@ function void DisplayBuildingHud (void) {
 		s:ColorCodeHealth(GetActorSpeed (TID_OBELISK_BLUE)), d:GetActorSpeed (TID_OBELISK_BLUE), s:"\cc%\n",
 		s:ExistsBuildingGreen (TID_REPAIR_BLUE), s:"++", s:ExistsBuilding (TID_REPAIR_BLUE), s:"Repair Facility\cc: ",
 		s:ColorCodeHealth(GetActorSpeed (TID_REPAIR_BLUE)), d:GetActorSpeed (TID_REPAIR_BLUE), s:"\cc%\n",
-		s:ExistsBuildingGreen (903), s:"++", s:ExistsBuilding (903), s:"HP Regen\cc: ",
-		s:ColorCodeHealth(GetActorSpeed (903)), d:GetActorSpeed (903), s:"\cc%\n",
-		s:ExistsBuildingGreen (905), s:"++", s:ExistsBuilding (905), s:"Ammo Regen\cc: ",
-		s:ColorCodeHealth (GetActorSpeed (905)), d:GetActorSpeed (905), s:"\cc%\n",
-		s:ExistsBuildingGreen(901), s:"++", s:ExistsBuilding (901), s:"Mini Refinery\cc: ",
-		s:ColorCodeHealth(GetActorSpeed (901)), d:GetActorSpeed (901), s:"\cc%\n",
+		s:ExistsBuildingGreen (TID_HEALTHREGEN_BLUE), s:"++", s:ExistsBuilding (TID_HEALTHREGEN_BLUE), s:"HP Regen\cc: ",
+		s:ColorCodeHealth(GetActorSpeed (TID_HEALTHREGEN_BLUE)), d:GetActorSpeed (TID_HEALTHREGEN_BLUE), s:"\cc%\n",
+		s:ExistsBuildingGreen (TID_AMMOREGEN_BLUE), s:"++", s:ExistsBuilding (TID_AMMOREGEN_BLUE), s:"Ammo Regen\cc: ",
+		s:ColorCodeHealth (GetActorSpeed (TID_AMMOREGEN_BLUE)), d:GetActorSpeed (TID_AMMOREGEN_BLUE), s:"\cc%\n",
+		s:ExistsBuildingGreen(TID_MINIREF_BLUE), s:"++", s:ExistsBuilding (TID_MINIREF_BLUE), s:"Mini Refinery\cc: ",
+		s:ColorCodeHealth(GetActorSpeed (TID_MINIREF_BLUE)), d:GetActorSpeed (TID_MINIREF_BLUE), s:"\cc%\n",
 		s:PortalLinkColor (TEAM_BLUE, 0), s:"++", s:PortalLinkColor (TEAM_BLUE, 1), s:"Portal\cc: ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_BLUE1)), d:PortalHealth (TID_PORTAL_BLUE1), s:"\cc% / ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_BLUE2)), d:PortalHealth (TID_PORTAL_BLUE2), s:"\cc%";
@@ -176,12 +176,12 @@ function void DisplayBuildingHud (void) {
 		s:ColorCodeHealth(GetActorSpeed (TID_OBELISK_RED)), d:GetActorSpeed (TID_OBELISK_RED), s:"\cc%\n",
 		s:ExistsBuildingGreen (TID_REPAIR_RED), s:"++", s:ExistsBuilding (TID_REPAIR_RED), s:"Repair Facility\cc: ",
 		s:ColorCodeHealth(GetActorSpeed (TID_REPAIR_RED)), d:GetActorSpeed (TID_REPAIR_RED), s:"\cc%\n",
-		s:ExistsBuildingGreen (902), s:"++", s:ExistsBuilding (902), s:"HP Regen\cc: ",
-		s:ColorCodeHealth(GetActorSpeed (902)), d:GetActorSpeed (902), s:"\cc%\n",
-		s:ExistsBuildingGreen (904), s:"++", s:ExistsBuilding (904), s:"Ammo Regen\cc: ",
-		s:ColorCodeHealth (GetActorSpeed (904)), d:GetActorSpeed (904), s:"\cc%\n",
-		s:ExistsBuildingGreen(900), s:"++", s:ExistsBuilding (900), s:"Mini Refinery\cc: ",
-		s:ColorCodeHealth(GetActorSpeed (900)), d:GetActorSpeed (900), s:"\cc%\n",
+		s:ExistsBuildingGreen (TID_HEALTHREGEN_RED), s:"++", s:ExistsBuilding (TID_HEALTHREGEN_RED), s:"HP Regen\cc: ",
+		s:ColorCodeHealth(GetActorSpeed (TID_HEALTHREGEN_RED)), d:GetActorSpeed (TID_HEALTHREGEN_RED), s:"\cc%\n",
+		s:ExistsBuildingGreen (TID_AMMOREGEN_RED), s:"++", s:ExistsBuilding (TID_AMMOREGEN_RED), s:"Ammo Regen\cc: ",
+		s:ColorCodeHealth (GetActorSpeed (TID_AMMOREGEN_RED)), d:GetActorSpeed (TID_AMMOREGEN_RED), s:"\cc%\n",
+		s:ExistsBuildingGreen(TID_MINIREF_RED), s:"++", s:ExistsBuilding (TID_MINIREF_RED), s:"Mini Refinery\cc: ",
+		s:ColorCodeHealth(GetActorSpeed (TID_MINIREF_RED)), d:GetActorSpeed (TID_MINIREF_RED), s:"\cc%\n",
 		s:PortalLinkColor (TEAM_RED, 0), s:"++", s:PortalLinkColor (TEAM_RED, 1), s:"Portal\cc: ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_RED1)), d:PortalHealth (TID_PORTAL_RED1), s:"\cc% / ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_RED2)), d:PortalHealth (TID_PORTAL_RED2), s:"\cc%";
@@ -234,7 +234,7 @@ function str ColorCodeHealth(int Percentage)
 }
 
 function str ExistsBuilding (int tid) {
-	if (tid <= 199 || (tid >= 900 && tid % 2 == 1)) {
+	if (tid <= 199 || (tid >= TID_MINIREF_RED && tid % 2 == 1)) {
 		if (GetActorSpeed (tid) > 0)
 			return "\cH";
 		else

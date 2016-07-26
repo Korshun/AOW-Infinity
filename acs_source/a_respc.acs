@@ -126,7 +126,7 @@ script aow_res_brokenbutton (void) {
 script aow_res_healthregencache (int Team) {
 	int cost = 2250;
 	if (MitigateDoublePress()) terminate;
-	if ((Team == 0 && ThingCount(T_NONE,902) || (Team == 1 && ThingCount(T_NONE,903)))) {
+	if ((Team == 0 && ThingCount(T_NONE,TID_HEALTHREGEN_RED) || (Team == 1 && ThingCount(T_NONE,TID_HEALTHREGEN_BLUE)))) {
 		Error ("This has already been built!");
 		terminate;
 	}
@@ -166,7 +166,7 @@ script aow_res_healthregencache (int Team) {
 script aow_res_ammoregencache (int Team) {
 	int cost = 2250;
 	if (MitigateDoublePress()) terminate;
-	if ((Team == 0 && ThingCount(T_NONE,904) || (Team == 1 && ThingCount(T_NONE,905)))) {
+	if ((Team == 0 && ThingCount(T_NONE,TID_AMMOREGEN_RED) || (Team == 1 && ThingCount(T_NONE,TID_AMMOREGEN_BLUE)))) {
 		Error ("This has already been built!");
 		terminate;
 	}
