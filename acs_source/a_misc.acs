@@ -34,7 +34,7 @@ script aow_script320 (int Which)
 }
 
 //Self heal health
-script aow_script329 (void) {
+script aow_selfheal (void) {
 	int SelfHealCooldown = 30;
 	
 	if (GetHealth () <= 0) terminate;
@@ -50,7 +50,7 @@ script aow_script329 (void) {
 }
 
 // Jumpjet fuel drain
-script aow_script331 (void) {
+script aow_jumpjetfueldrain (void) {
 	delay (35);
 	while (CheckInventory ("JumpjetSwitch") && GetHealth() > 0) {
 		TakeInventory ("JumpjetFuel", 1);
