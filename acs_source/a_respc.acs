@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 //---------------------------RESEARCH ENHANCED REFINING
-script aow_script65 (int Team) {
+script aow_res_enhancedrefining (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
 
@@ -58,7 +58,7 @@ script aow_script65 (int Team) {
 }
 
 //---------------------------ADVANCED MECH RESEARCH
-script aow_script66 (int Team) {
+script aow_res_advancedmechs (int Team) {
 	int cost = 2000;
 	if ( MitigateDoublePress() ) terminate;
 	
@@ -116,14 +116,14 @@ script aow_script66 (int Team) {
 }
 
 // [Dusk] Dummy script for a possible future research
-script aow_script67 (void) {
+script aow_res_brokenbutton (void) {
 	Error ("This button seems to have\na couple of circuits broken...");
 	terminate;
 }
 
 
 //---------------------------HEALTH REGEN CACHE
-script aow_script68 (int Team) {
+script aow_res_healthregencache (int Team) {
 	int cost = 2250;
 	if (MitigateDoublePress()) terminate;
 	if ((Team == 0 && ThingCount(T_NONE,902) || (Team == 1 && ThingCount(T_NONE,903)))) {
@@ -163,7 +163,7 @@ script aow_script68 (int Team) {
 }
 
 //---------------------------AMMO REGEN CACHE
-script aow_script69 (int Team) {
+script aow_res_ammoregencache (int Team) {
 	int cost = 2250;
 	if (MitigateDoublePress()) terminate;
 	if ((Team == 0 && ThingCount(T_NONE,904) || (Team == 1 && ThingCount(T_NONE,905)))) {
@@ -206,7 +206,7 @@ script aow_script69 (int Team) {
 
 
 //---------------------------+1 TIMED C4
-script aow_script70 (int Team) {
+script aow_res_plus1timedc4 (int Team) {
 	int cost = 200;
 	if (MitigateDoublePress()) terminate;
 	
@@ -238,7 +238,7 @@ script aow_script70 (int Team) {
 }
 
 //---------------------------REPAIR GUN UPGRADE
-script aow_script71 (int Team) {
+script aow_res_repairgunupgrade (int Team) {
 	int cost = 200;
 	if ( MitigateDoublePress() ) terminate;
 
@@ -282,7 +282,7 @@ script aow_script71 (int Team) {
 
 
 //---------------------------ADVANCED TURRETS
-script aow_script72 (int Team) {
+script aow_res_advancedturrets (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
 	if (AdvancedTurrets[Team]) {
@@ -333,7 +333,7 @@ script aow_script72 (int Team) {
 }
 
 //---------------------------MORE TURRETS
-script aow_script73 (int Team) {
+script aow_res_moreturrets (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
 	
