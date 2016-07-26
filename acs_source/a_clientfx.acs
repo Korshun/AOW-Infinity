@@ -169,7 +169,7 @@ function bool SpawnTrail (int src, int dest, int type, int interval, int rand,
 	y1 += FixedMul (sin (a1+0.25), xoff1) + FixedMul (sin (a1), yoff1);
 	z1 += zoff1;
 	
-	int d = fdistance (src, dest);
+	int d = ActorDistance (src, dest);
 	
 	// How many trail actors to spawn?
 	if (interval <= 32)

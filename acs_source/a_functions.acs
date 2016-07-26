@@ -37,7 +37,7 @@ function int zan_sqrt(int number)
 }
 
 // [Dusk] from zdoom wiki:
-function int fdistance (int tid1, int tid2)
+function int ActorDistance (int tid1, int tid2)
 {
 	int len;
 	int y = getactory(tid1) - getactory(tid2);
