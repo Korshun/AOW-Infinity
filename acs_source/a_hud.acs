@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 // display credits/experience, manage self-heal
-script aow_script5 RESPAWN {
+script aow_playerstatushud RESPAWN {
 	while (PlayerInGame (PlayerNumber()) && GetHealth() > 0) {
 		ShowStatus();
 	

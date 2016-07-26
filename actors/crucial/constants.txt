@@ -76,7 +76,7 @@ const int aow_class_tiberiumharvester = 64;
 
 const int aow_script1 = 1;
 const int aow_script4 = 4;
-const int aow_script5 = 5;
+const int aow_playerstatushud = 5;
 const int aow_script7 = 7;
 const int aow_script8 = 8;
 const int aow_script10 = 10;

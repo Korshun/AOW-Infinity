@@ -173,7 +173,7 @@ script aow_script91 (void) {
 script aow_script92 (void) {
 	if (!CheckInventory("InGame")) {
 		GiveInventory ("InGame", 1);
-		ACS_ExecuteAlways (aow_script5, 0);
+		ACS_ExecuteAlways (aow_playerstatushud, 0);
 		ACS_ExecuteAlways (aow_script10, 0);
 		Thing_ChangeTID(0,PlayerNumber()+3800);
 	}
