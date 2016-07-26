@@ -366,6 +366,48 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 	"TimeGun"
 };
 
+// Class scripts 
+#define aow_class_gunman 20
+#define aow_class_engineer 21
+#define aow_class_minigunner 22
+#define aow_class_technician 23
+#define aow_class_flamer 24
+#define aow_class_rifleman 25
+#define aow_class_machinegunner 26
+#define aow_class_grenadier 27
+#define aow_class_rocketsoldier 28
+#define aow_class_stealthtrooper 29
+
+#define aow_class_gaussgunner 33
+#define aow_class_chemwarrior 34
+#define aow_class_shocktrooper 35
+#define aow_class_commando 36
+#define aow_addon_plasmacannon 37
+#define aow_class_shotgunner 38
+#define aow_class_timecop 39
+#define aow_class_sniper 40
+#define aow_class_utilityguy 41
+#define aow_class_demoexpert 42
+#define aow_class_fieldmedic 43
+#define aow_class_laserchaingunner 44
+
+#define aow_addon_tiberiumautorifle 49
+#define aow_addon_chainsaw 50
+#define aow_addon_artillerycannon 51
+#define aow_class_jumpjet 52
+#define aow_class_tiberiumrifleman 53
+#define aow_class_supershotgunner 54
+#define aow_addon_ionbeacon 55
+#define aow_addon_nukebeacon 56
+#define aow_addon_armor 57
+
+#define aow_class_plasmagunner 60
+#define aow_class_artillerysoldier 61
+#define aow_class_suicidebomber 62
+#define aow_class_advtiberiumharvester 63
+#define aow_class_tiberiumharvester 64
+
+
 #define aow_script1 1
 #define aow_script4 4
 #define aow_script5 5
@@ -373,47 +415,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script8 8
 #define aow_script10 10
 #define aow_script11 11
-#define aow_script20 20
-#define aow_script21 21
-#define aow_script22 22
-#define aow_script23 23
-#define aow_script24 24
-#define aow_script25 25
-#define aow_script26 26
-#define aow_script27 27
-#define aow_script28 28
-#define aow_script29 29
 #define aow_script32 32
-#define aow_script33 33
-#define aow_script34 34
-#define aow_script35 35
-#define aow_script36 36
-#define aow_script37 37
-#define aow_script38 38
-#define aow_script39 39
-#define aow_script40 40
-#define aow_script41 41
-#define aow_script42 42
-#define aow_script43 43
-#define aow_script44 44
 #define aow_script45 45
 #define aow_script46 46
 #define aow_script47 47
 #define aow_script48 48
-#define aow_script49 49
-#define aow_script50 50
-#define aow_script51 51
-#define aow_script52 52
-#define aow_script53 53
-#define aow_script54 54
-#define aow_script55 55
-#define aow_script56 56
-#define aow_script57 57
 #define aow_script58 58
 #define aow_script59 59
-#define aow_script60 60
-#define aow_script61 61
-#define aow_script62 62
 #define aow_script63 63
 #define aow_script64 64
 #define aow_script65 65
