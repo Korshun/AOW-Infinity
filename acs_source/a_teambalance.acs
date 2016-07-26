@@ -27,7 +27,7 @@ script aow_script996 OPEN {
 			//Log(s:"There are too many blue");
 			CurTimeMax = 0;
 			Counter = 0;
-			while(Counter < 32) {
+			while(Counter < MAX_PLAYERS) {
 				if (CheckActorInventory(3800+Counter,"IsBlue") && !IsAdmin[Counter]) {
 					if ( ( StartTime[Counter] > CurTimeMax ) && ( Timer() - StartTime[Counter] < PlayerStayTics ) ) {
 						CurTimeMax = StartTime[Counter];
@@ -45,7 +45,7 @@ script aow_script996 OPEN {
 			//Log(s:"There are too many red");
 			CurTimeMax = 0;
 			Counter = 0;
-			while(Counter < 32) {
+			while(Counter < MAX_PLAYERS) {
 				if (CheckActorInventory(3800+Counter,"IsRed") && !IsAdmin[Counter]) {
 					if ( ( StartTime[Counter] > CurTimeMax ) && ( Timer() - StartTime[Counter] < PlayerStayTics ) ) {
 						CurTimeMax = StartTime[Counter];

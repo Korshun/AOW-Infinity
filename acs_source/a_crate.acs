@@ -555,7 +555,7 @@ script aow_script309 (int Crate, int Override) {
 		break;
 	case 49:
 	case 50:
-		for (int k = 0; k<32; k++) {
+		for (int k = 0; k<MAX_PLAYERS; k++) {
 			if ( PlayerInGame(k) && GetPlayerInfo(k,PLAYERINFO_TEAM) == PlayerTeam() )
 			{
 				if ( GetActorProperty(3800+k,APROP_Health) < GetActorProperty(3800+k,APROP_SpawnHealth) )

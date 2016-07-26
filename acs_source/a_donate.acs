@@ -8,7 +8,7 @@
  * of this and call it your own. Thanks!
  */
 
-int Donor[32];
+int Donor[MAX_PLAYERS];
 
 Function int DonateCredits (int Player, int NewCredits) {
 	Credits[PlayerNumber()+1] -= NewCredits;
@@ -82,7 +82,7 @@ script aow_donationnamegive (int Which) NET {
 				GiveInventory("DonationName",1);
 			else
 				CheckValid = 0;
-			if ( CheckInventory("DonationName") > 32 )
+			if ( CheckInventory("DonationName") > MAX_PLAYERS )
 				TakeInventory("DonationName",100);
 		}
 		ShowCurrentDonationMenu();

@@ -219,7 +219,7 @@ script aow_creditflow OPEN {
 		blueflow = (CreditFlow * p) / 100;
 		if (!blueflow) blueflow = 1;
 		
-		for (i = 0; i < 32; i++) {
+		for (i = 0; i < MAX_PLAYERS; i++) {
 			if (PlayerInGame(i) && GetActorProperty (3800+i, APROP_HEALTH) > 0 && !IsAdmin[i]) {
 				if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_RED)
 					GiveCredits (i, redflow);

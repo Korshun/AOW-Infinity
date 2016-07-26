@@ -44,7 +44,7 @@ script aow_script354 OPEN {
 	
 	while (1) {
 		if (GlobalMedic[0] || GlobalMedic[1]) {
-			for (i = 0; i < 32; i++) {
+			for (i = 0; i < MAX_PLAYERS; i++) {
 				if (GlobalMedic[1-GetPlayerInfo(i, PLAYERINFO_TEAM)]) {
 					hp = GetActorHealth (3800+i);
 					shp = GetActorSpawnHealth (3800+i);
@@ -57,7 +57,7 @@ script aow_script354 OPEN {
 		}
 		
 		if (!counter && (GlobalAmmo[0] || GlobalAmmo[1])) {
-			for (i = 0; i < 32; i++) {
+			for (i = 0; i < MAX_PLAYERS; i++) {
 				if (GlobalAmmo[1-GetPlayerInfo(i, PLAYERINFO_TEAM)])
 					GiveActorInventory (3800+i, "AmmoRegenerationPack", 1);
 			}

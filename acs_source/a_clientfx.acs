@@ -1,5 +1,5 @@
 // Clientside effects and designation actors
-int ChemSmokers[32];
+int ChemSmokers[MAX_PLAYERS];
 
 script aow_script943 OPEN CLIENTSIDE {	
 	delay (5);

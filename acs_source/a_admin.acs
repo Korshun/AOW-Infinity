@@ -343,7 +343,7 @@ script aow_activatedeveloper (void) {
 	
 	// disable limits and delays
 	ConsoleCommand ("set aow_c4limit -1");
-	ConsoleCommand ("set aow_guardianlimit 32");
+	ConsoleCommand (StrParam(s:"set aow_guardianlimit ", d:MAX_PLAYERS));
 	ConsoleCommand ("set aow_teamstaytime -1");
 	ConsoleCommand ("set aow_maxcannonsperteam -1");
 	ConsoleCommand ("set aow_plasmacooldown -1");

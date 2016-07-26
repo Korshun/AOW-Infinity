@@ -179,7 +179,7 @@
 
 // MAXPLAYERS - should be the same as in the Skulltag this AOW is played in
 // TODO: make this actually used
-#define MAXPLAYERS 32
+#define MAX_PLAYERS 32
 
 bool Bots[MAX_MARINES];
 
@@ -202,30 +202,30 @@ int DeveloperSafetyLock;
 
 int EventScripts;
 
-int Credits[33];
-int Experience[32];
-int Rank[32];
+int Credits[MAX_PLAYERS + 1];
+int Experience[MAX_PLAYERS];
+int Rank[MAX_PLAYERS];
 str RankTitles[8];
-int PlayersTeam[33];
-bool IsAdmin[33];
-bool Surrender[32];
-int LastSurrenderTime[32];
+int PlayersTeam[MAX_PLAYERS + 1];
+bool IsAdmin[MAX_PLAYERS + 1];
+bool Surrender[MAX_PLAYERS];
+int LastSurrenderTime[MAX_PLAYERS];
 
 int FirstBlood;
 
 // [SP] Keep track of when player joins game for purposes of team balance
-int StartTime[33];
+int StartTime[MAX_PLAYERS + 1];
 int PlayerNeedsSwitched;
 
 // [SP] Plasma cannon tracking
-int LastPurchasedCannon[33];
+int LastPurchasedCannon[MAX_PLAYERS + 1];
 int LastPurchasedBeacon[3];
 int NumPlasmaCannons[3];
 int MaxCannonsPerTeam;
 int CannonPurchaseDelay;
 
 // [SP] Time Cop tracking
-int LastPurchasedTimeCop[33];
+int LastPurchasedTimeCop[MAX_PLAYERS + 1];
 int NumTimeCops[3];
 int MaxTimeCopsPerTeam;
 
@@ -236,9 +236,9 @@ int UsePortals = 1;
 // a portal is considered inactive when it has no destinaton
 int Portals[4] = {0};
 // used to determine when a player has teleported in the last 18 tics. prevents teleporting multiple times.
-int HasTeleported[32];
+int HasTeleported[MAX_PLAYERS];
 
-int LastMenu[33] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
+int LastMenu[MAX_PLAYERS] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
 
 
 //Bases
@@ -310,19 +310,19 @@ int GameOver;
 
 bool CrateTime = True;
 
-int PlayerSpeeds[32];
+int PlayerSpeeds[MAX_PLAYERS];
 int MechGetter[2]; // which player is in the hangar?
 
 int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
-int PlasmaCooldown[32]; // same for plasma cannon (internal)
+int PlasmaCooldown[MAX_PLAYERS]; // same for plasma cannon (internal)
 
 int MaxRazorWire = 20;
 int MaxProxy = 50;
 int MaxMechs = 5; // mini-ravens
 int MaxCrates = 15;
 
-int RepairBonus[32];
-int MedicBonus[32];
+int RepairBonus[MAX_PLAYERS];
+int MedicBonus[MAX_PLAYERS];
 int MedicBonusNeed;
 int AIMarines[2] = {0}; // compensation-spawned only
 

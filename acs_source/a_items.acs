@@ -122,7 +122,7 @@ script aow_script951 (int action, int team) {
 #define HEALRAD_RANGE 128
 #define HEALRAD_AMOUNT 10
 #define HEALRAD_DELAY 5
-int IsBeingHealed[32];
+int IsBeingHealed[MAX_PLAYERS];
 script aow_script952 (int action, int i) {
 	int shp;
 	int n;
