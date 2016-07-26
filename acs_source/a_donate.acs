@@ -34,8 +34,8 @@ function void ShowCurrentDonationMenu (void)
 {
 	int DonationName = CheckInventory("DonationName");
 
-	if (DonationName > 31)
-		TakeInventory("DonationName", 31);
+	if (DonationName >= MAX_PLAYERS)
+		TakeInventory("DonationName", MAX_PLAYERS - 1);
 	
 	int color = CR_BLUE;
 	if (PlayerTeam() == TEAM_RED) color = CR_RED;
@@ -139,8 +139,8 @@ script aow_donationmenu (void) NET
 				GiveInventory("DonationName", 1);
 			else
 				CheckValid = 0;
-			if (CheckInventory("DonationName") > 31)
-				TakeInventory("DonationName", 31);
+			if (CheckInventory("DonationName") >= MAX_PLAYERS)
+				TakeInventory("DonationName", MAX_PLAYERS - 1);
 		}
 		ShowCurrentDonationMenu();
 		ACS_ExecuteAlways(aow_script333, 0);

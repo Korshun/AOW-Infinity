@@ -382,7 +382,7 @@ function void GivePoints (int p) {Team_GivePoints (PlayerTeam(), p, false);}
 // NOTE: this function must cater for client-side acs!
 function str DisplayName (int pn) {
 	int tid = 3800+pn;
-	if (pn < 0 || pn > 31) tid = ActivatorTID();
+	if (pn < 0 || pn >= MAX_PLAYERS) tid = ActivatorTID();
 	
 	if (CheckActorInventory (tid, "IsMech")) {
 		if (CheckActorInventory (tid, "OrcaWeapons")) return"\cCOrca";
