@@ -15,7 +15,7 @@ actor Titan : MechPlayer_Base {
 	Spawn:
 		NULL A 0
 		NULL A 0 SetPlayerProperty(0,0,3)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
 		NULL A 0 ACS_Execute(aow_script315,0,0,0,0)
 		NULL A 0 A_GiveInventory("MechEjectButton",1)
 		NULL A 0 A_GiveInventory("IsMech",1)
@@ -96,7 +96,7 @@ actor TitanSwitchPickup : CustomInventory {
 		ROB3 A -1
 		stop
 	Pickup:
-		NULL A 0 ACS_ExecuteWithResult (353, 0)
+		NULL A 0 ACS_ExecuteWithResult (aow_script353, 0)
 		stop
 	Use:
 		NULL A 0 A_GiveInventory ("TitanSwitch2", 1)
@@ -144,7 +144,7 @@ actor TitanWeapons : AOWWeapon {
 		NULL A 0 Radius_Quake (4,10,0,1,0)
 		NULL A 0 A_TakeInventory ("Titan-80mmAmmo",1)
 		NULL A 0 A_GunFlash
-		NULL A 0 ACS_ExecuteAlways (319, 0, 3, 3) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 3, 3) // reload
 		NULL A 0 A_JumpIfInventory ("IsBlue",1,"FireBlue")
 		MHUD B 2 Bright A_FireCustomMissile("TitanShell", 0, 0, -10)
 		MHUD A 35
@@ -250,7 +250,7 @@ actor TitanWeapons : AOWWeapon {
 		MHUD A 2 A_PlayWeaponSound("lrm/fire")
 		NULL A 0 Radius_Quake(2,70,0,1,0)
 		NULL A 0 A_TakeInventory("MechRocketAmmo",20)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 1, 6) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 1, 6) // reload
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 A_JumpIfInventory ("IsBlue",1,"Fire.MissilesBlue")
 		MHUD BBBBBBBBBBBBBBBBBBBB 2 A_FireCustomMissile("LongRangeMissile",random(-1,1),0,-25,0)
@@ -268,7 +268,7 @@ actor TitanWeapons : AOWWeapon {
 		Goto LightDone
 	AltFire:
 		NULL A 0
-		MHUD B 35 ACS_ExecuteAlways (314, 0)
+		MHUD B 35 ACS_ExecuteAlways (aow_script314, 0)
 		MHUD A 18
 		Goto Ready
 	Spawn:

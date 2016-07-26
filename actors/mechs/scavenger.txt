@@ -23,7 +23,7 @@ actor Scavenger : MechPlayer_Base {
 	states {
 	Spawn:
 		NULL A 0 SetPlayerProperty (0, 0, 3)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
 		NULL A 0 A_GiveInventory ("ScavengerEject", 1)
 		NULL A 0 A_GiveInventory ("IsMech", 1)
 		ROB2 Q 35
@@ -135,7 +135,7 @@ actor ScavengerSwitchPickup : CustomInventory {
 		ROB2 Q -1
 		stop
 	Pickup:
-		NULL A 0 ACS_ExecuteWithResult (353)
+		NULL A 0 ACS_ExecuteWithResult (aow_script353)
 		stop
 	Use:
 		NULL A 0 A_GiveInventory ("ScavengerSwitch", 1)

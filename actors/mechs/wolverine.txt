@@ -19,7 +19,7 @@ actor Wolverine : MechPlayer_Base {
 		NULL A 0
 		NULL A 0 SetPlayerProperty (0, 0, 3)
 		NULL A 0 ACS_Execute (315, 0)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
 		NULL A 0 A_GiveInventory ("MechEjectButton", 1)
 		NULL A 0 A_GiveInventory ("IsMech",1)
 		ROB1 A 35
@@ -109,7 +109,7 @@ actor WolverineSwitchPickup : CustomInventory {
 		ROB1 A -1
 		stop
 	Pickup:
-		NULL A 0 ACS_ExecuteWithResult (353)
+		NULL A 0 ACS_ExecuteWithResult (aow_script353)
 		stop
 	Use:
 		NULL A 0 A_GiveInventory ("WolverineSwitchUsed", 1)
@@ -150,7 +150,7 @@ actor WolverineWeapons : AOWWeapon {
 		MHUD A 2 A_PlayWeaponSound ("lrm/fire")
 		NULL A 0 Radius_Quake (2, 35, 0, 1, 0)
 		NULL A 0 A_TakeInventory ("MechRocketAmmo", 10)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 1, 4) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 1, 4) // reload
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "FireBlue")
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile ("LongRangeMissile", 0, 0, 25)
@@ -216,7 +216,7 @@ actor WolverineWeapons : AOWWeapon {
 		Goto LightDone
 	AltFire:
 		NULL A 0
-		MHUD C 35 ACS_ExecuteAlways (314, 0)
+		MHUD C 35 ACS_ExecuteAlways (aow_script314, 0)
 		MHUD A 18
 		Goto Ready
 	Spawn:

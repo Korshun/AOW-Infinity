@@ -58,7 +58,7 @@ actor Utility_MiniRefCacheRed {
 		MREF A 35 A_SpawnItemEx("MiniRefCacheFlare",0,0,48,0,0,0,128,0)
 		loop
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_MINIREF, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_MINIREF, TEAM_RED)
 		MREF A 1 A_Stop
 		goto Working
 	Death:  
@@ -99,7 +99,7 @@ ACTOR Utility_MiniRefCacheBlue : Utility_MiniRefCacheRed {
 		MREF A -1 A_Gravity // wait until the script approves the cache.
 		stop
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_MINIREF, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_MINIREF, TEAM_BLUE)
 		MREF A 1 A_Stop
 		goto Working
 	}

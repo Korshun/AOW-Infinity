@@ -9,7 +9,7 @@ actor SelfHealItem : CustomInventory {
 		SYRI X -1
 		stop
 	Use:
-		NULL A 0 ACS_ExecuteAlways (951, 0, 4)
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 4)
 		fail
 	Nope:
 		NULL A 0

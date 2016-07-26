@@ -128,7 +128,7 @@ actor BlueStrikeFX {
 		NULL A 0 A_PlaySound ("ion/strike", CHAN_BODY, 1.0, 0, ATTN_NONE)
 		NULL A 0 A_SpawnItemEx ("BlueFlare") // these two are same on both renderers
 		NULL A 0 A_SpawnItemEx ("IonPole")
-		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (910, 0) == 0, "Software")
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (aow_script910, 0) == 0, "Software")
 		NULL A 0 A_SpawnItemEx  ("IonFloor")
 		NULL A 0 A_SpawnItemEx  ("IonSphere")
 		NULL A 0 A_SpawnItemEx ("IonBlasphemy")

@@ -12,15 +12,15 @@ actor ProxyMine : InventoryItem {
 		NULL A 0 A_PlaySound ("c4/proxy", CHAN_ITEM)
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "UseBlue")
 		NULL A 0 A_SpawnItemEx ("ProxyMineRed", 32, 0, 1, 0, 0, 0, 0, SXF_SETMASTER)
-		NULL A 0 ACS_ExecuteAlways (349, 0, 2)
+		NULL A 0 ACS_ExecuteAlways (aow_script349, 0, 2)
 		stop
 	UseBlue:
 		NULL A 0 A_SpawnItemEx ("ProxyMineBlue", 32, 0, 1, 0, 0, 0, 0, SXF_SETMASTER)
-		NULL A 0 ACS_ExecuteAlways (349, 0, 2)
+		NULL A 0 ACS_ExecuteAlways (aow_script349, 0, 2)
 		stop
 	Limit:
-		NULL A 0 ACS_ExecuteAlways (349, 0, 2)
-		// TNT1 A 0 ACS_ExecuteAlways (347, 0) // "At limit!"
+		NULL A 0 ACS_ExecuteAlways (aow_script349, 0, 2)
+		// TNT1 A 0 ACS_ExecuteAlways (aow_script347, 0) // "At limit!"
 		fail
 	}
 }

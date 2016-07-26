@@ -165,7 +165,7 @@ actor BarracksTerminalBlue : BaseTerminalBlue 21100 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_BARRACKS, TEAM_BLUE)
 		NULL A 0 ACS_Execute(aow_script97,0,1,1)
 		goto Spawn
 	}
@@ -181,7 +181,7 @@ actor RefineryTerminalBlue : BaseTerminalBlue 21102 {
 		goto SpawnDone
 	Pain:
 		NULL A 0 
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_REFINERY, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_REFINERY, TEAM_BLUE)
 		NULL A 0 ACS_Execute(aow_script97,0,2,1)
 		goto Idle
 	}
@@ -197,7 +197,7 @@ actor PowerPlantTerminalBlue : BaseTerminalBlue 21103 {
 		goto SpawnDone
 	Pain:
 		NULL A 0 
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_RESCENTRE, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_RESCENTRE, TEAM_BLUE)
 		NULL A 0 ACS_Execute(aow_script97,0,3,1)
 		goto Idle
 	}
@@ -213,7 +213,7 @@ actor WarFactoryTerminalBlue : BaseTerminalBlue 21104 {
 		goto SpawnDone
 	Pain:
 		NULL A 0 
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_FACTORY, TEAM_BLUE)
 		NULL A 0 ACS_Execute(aow_script97,0,4,1)
 		goto Idle
 	}
@@ -232,7 +232,7 @@ actor ObeliskTerminalBlue : BaseTerminalBlue 21111 {
 		goto Pain+1
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_OBELISK, TEAM_BLUE)
 		NULL A 0 ACS_Execute(aow_script97,0,6,1)
 		goto Idle
 	}
@@ -248,7 +248,7 @@ actor BarracksTerminalRed : BaseTerminal 21105 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_BARRACKS, TEAM_RED)
 		NULL A 0 ACS_Execute(aow_script97, 0, 1)
 		goto Idle
 	}
@@ -264,7 +264,7 @@ actor RefineryTerminalRed : BaseTerminal 21106 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_REFINERY, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_REFINERY, TEAM_RED)
 		NULL A 0 ACS_Execute (97, 0, 2)
 		goto Idle
 	}
@@ -280,7 +280,7 @@ actor PowerPlantTerminalRed : BaseTerminal 21107 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_RESCENTRE, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_RESCENTRE, TEAM_RED)
 		NULL A 0 ACS_Execute (97, 0, 3)
 		goto Idle
 	}
@@ -297,7 +297,7 @@ actor WarFactoryTerminalRed : BaseTerminal 21108 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_FACTORY, TEAM_RED)
 		NULL A 0 ACS_Execute(aow_script97, 0, 4)
 		goto Idle
 	}
@@ -313,7 +313,7 @@ actor ObeliskTerminalRed : BaseTerminal 21112 {
 		goto SpawnDone
 	Pain:
 		NULL A 0
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_OBELISK, TEAM_RED)
 		NULL A 0 ACS_Execute(aow_script97,0,6,0)
 		goto Idle
 	}
@@ -333,7 +333,7 @@ actor RepairTerminalRed : BaseTerminal 21110 {
 		NULL A 0 Thing_SetSpecial (0, 80, 205, 0, 0)
 		goto SpawnDone
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_REPAIR, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_REPAIR, TEAM_RED)
 		NULL A 0 
 		goto Idle
 	}
@@ -352,7 +352,7 @@ actor RepairTerminalBlue : BaseTerminalBlue 21109 {
 		NULL A 0 Thing_SetSpecial (0, 80, 105, 0, 0)
 		goto SpawnDone
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (930, 0, BUILDING_REPAIR, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_REPAIR, TEAM_BLUE)
 		NULL A 0
 		goto Idle
 	}

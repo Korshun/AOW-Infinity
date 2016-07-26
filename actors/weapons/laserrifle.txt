@@ -104,13 +104,13 @@ actor StealthLaserRifle : AOWWeapon {
 	Fire.Stealth:
 		NULL A 0 A_JumpIfInventory ("StealthMode", 3, "FireGo")
 		NULL A 0 A_GiveInventory ("StealthFire", 1)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
 		goto FireGo
 	Restealth:
 		NULL A 0 A_JumpIfInventory ("StealthFire", 1, 2)
 		goto Ready
 		NULL A 0 A_TakeInventory ("StealthFire", 1)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 0)
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Restealth.Blue")
 		LSRF AAAAAAAAAAAAAAA 1 A_WeaponReady
 		goto Ready

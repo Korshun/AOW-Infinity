@@ -190,7 +190,7 @@ actor RemoteC4Armed {
 		NULL A 0 A_SpawnItemEx ("ExplosionMainLarge")
 		NULL A 0 A_PlaySound ("weapons/rocklx")
 		NULL A 0 A_PlayWeaponSound ("weapons/rocklx")
-		NULL A 0 ACS_ExecuteAlways (978, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script978, 0, 1)
 		NULL A 0 A_Explode (500, 64)
 		NULL A 0 A_Explode (400, 196)
 		NULL A 0 A_Explode (500, 256)

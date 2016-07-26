@@ -12,7 +12,7 @@ actor PowerupCrate : CustomInventory replaces RandomPowerup 21410 {
 		UCRT A 6
 		goto Spawn+2
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (309, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script309, 0)
 		stop
 	}
 }
@@ -103,7 +103,7 @@ actor BombCrateFXBlue1 {
 		goto Idle
 	Idle:
 		"----" A 0 bright A_FadeIn (0.015)
-		"----" AAAA 1 bright ACS_ExecuteAlways (966, 0)
+		"----" AAAA 1 bright ACS_ExecuteAlways (aow_script966, 0)
 		"----" A 0 bright A_Countdown
 		loop
 	Clear:

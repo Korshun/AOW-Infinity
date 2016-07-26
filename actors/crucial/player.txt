@@ -133,7 +133,7 @@ actor Player : DoomPlayer {
 		PLAY N -1
 		stop
 	Death.MechStomp:
-		NULL A 0 ACS_ExecuteAlways (923, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script923, 0)
 	Death.Falling:
 	Death.Suicide:
 	XDeath:

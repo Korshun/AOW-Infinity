@@ -177,7 +177,7 @@ actor GuardianWeapons : AOWWeapon {
 		NULL A 0 A_JumpIfInventory ("Reload-80mm", 1, "Fire.Missiles")
 		NULL A 0 SetPlayerProperty (0, 1, 0)
 		NULL A 0 A_TakeInventory ("ArtilleryShellAmmo", 2)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 3, 5) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 3, 5) // reload
 		JUGS A 10 A_GiveInventory ("GuardianAttack", 2)
 		NULL A 0 A_PlayWeaponSound ("artillery/fire")
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire.ArtilleryBlue")
@@ -199,7 +199,7 @@ actor GuardianWeapons : AOWWeapon {
 		NULL A 0 A_JumpIfInventory ("Reload-LRM", 1, "Fire.Flak")
 		NULL A 0 SetPlayerProperty (0, 1, 0)
 		NULL A 0 A_TakeInventory ("ShortRangeMissileAmmo", 15)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 1, 6) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 1, 6) // reload
 		JUGS A 10 A_GiveInventory("GuardianAttack", 2)
 		NULL A 0 A_PlayWeaponSound ("lrm/fire")
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire.MissilesBlue")
@@ -257,7 +257,7 @@ actor GuardianWeapons : AOWWeapon {
 		Goto AltFire
 		NULL A 0 SetPlayerProperty (0, 1, 0)
 		NULL A 0 A_TakeInventory ("NukeAmmo", 1)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 6, 20) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 6, 20) // reload
 		JUGS A 10 A_GiveInventory("GuardianAttack", 2)
 		NULL A 0 A_PlayWeaponSound ("mech/artillery")
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire.NukeBlue")
@@ -272,7 +272,7 @@ actor GuardianWeapons : AOWWeapon {
 		goto Ready
 	AltFire:
 		NULL A 0
-		JUGS E 53 ACS_ExecuteAlways (314, 0, 4)
+		JUGS E 53 ACS_ExecuteAlways (aow_script314, 0, 4)
 		goto Ready
 	Denied:
 		JUGS A 10 

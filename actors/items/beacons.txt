@@ -12,10 +12,10 @@ actor IonCannonBeacon : InventoryItem {
 			goto SafetyLock
 		NULL A 0 A_Stop
 		// TNT1 A 0 A_PlaySound ("ion/place")
-		NULL A 0 ACS_ExecuteAlways (951, 0, 0, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 0, 0)
 		stop
 	SafetyLock:
-		NULL A 0 ACS_ExecuteAlways (951, 0, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 0, 1)
 		fail
 	}
 }
@@ -33,10 +33,10 @@ actor NuclearStrikeBeacon : InventoryItem {
 			goto SafetyLock
 		NULL A 0 A_Stop
 		// TNT1 A 0 A_PlaySound ("nuke/place")
-		NULL A 0 ACS_ExecuteAlways (951, 0, 0, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 0, 0)
 		stop
 	SafetyLock:
-		NULL A 0 ACS_ExecuteAlways (951, 0, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 0, 1)
 		fail
 	}
 }
@@ -186,7 +186,7 @@ actor IonCannonPlaced {
 		BBLU D 1 Bright A_Explode(40000, 512, 1)
 		stop
 	Water:
-		NULL A 0 ACS_ExecuteAlways (957, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script957, 0, 1)
 	Death.Disarm:
 		NULL A 0
 		NULL A 0 A_PlaySound ("c4/disarm", 6)
@@ -407,7 +407,7 @@ actor IonBeaconThrown {
 		stop
 	Water:
 		BEAC D 35 A_PlaySound ("c4/disarm", 6)
-		NULL A 0 ACS_ExecuteAlways (957, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script957, 0, 1)
 		BEAC D 1 A_Fadeout(0.1) 
 		wait
 	}
@@ -425,7 +425,7 @@ actor NukeBeaconThrown : IonBeaconThrown {
 		stop
 	Water:
 		BEAC C 35 A_PlaySoundEx("c4/disarm","SoundSlot6")
-		NULL A 0 ACS_ExecuteAlways (957, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script957, 0)
 		BEAC C 1 A_Fadeout(0.1)
 		wait
 	}

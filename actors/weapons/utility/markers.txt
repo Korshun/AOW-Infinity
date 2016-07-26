@@ -249,7 +249,7 @@ actor Utility_PlatformMarker : Utility_MarkerBase {
 	states {
 	Spawn:
 		NULL A 0
-		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (750, 0) == 0, "Spawn.Red")
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (aow_script750, 0) == 0, "Spawn.Red")
 		NULL A 0 A_SpawnItemEx ("Utility_StepMarker", -84, -84)
 		NULL A 0 A_SpawnItemEx ("Utility_StepMarker", -28, -84)
 		NULL A 0 A_SpawnItemEx ("Utility_StepMarker", 28, -84)

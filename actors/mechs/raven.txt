@@ -24,7 +24,7 @@ actor Raven : MechPlayer_Base {
 	Spawn:
 		RAVN A 1
 		NULL A 0 SetPlayerProperty (0, 0, 3)
-		NULL A 0 ACS_ExecuteAlways (310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
 		NULL A 0 ACS_Execute (315,0)
 		NULL A 0 A_GiveInventory ("MechEjectButton", 1)
 		NULL A 0 A_GiveInventory ("IsMech", 1)
@@ -106,10 +106,10 @@ actor RavenSwitchPickup : CustomInventory {
 		RAV2 B -1
 		loop
 	Pickup:
-		NULL A 0 ACS_ExecuteWithResult (353, 0, 0, 0)
+		NULL A 0 ACS_ExecuteWithResult (aow_script353, 0, 0, 0)
 		stop
 	Use:
-		NULL A 0 ACS_ExecuteAlways (699, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script699, 0, 1)
 		NULL A 0 A_GiveInventory ("RavenSwitch2", 1)
 		stop
 	}
@@ -165,7 +165,7 @@ actor RavenWeapons : AOWWeapon {
 		goto Ready
 		MHUD A 2 A_PlayWeaponSound ("lrm/fire")
 		NULL A 0 Radius_Quake (2,20,0,1,0)
-		NULL A 0 ACS_ExecuteAlways (319, 0, 1, 3) // reload
+		NULL A 0 ACS_ExecuteAlways (aow_script319, 0, 1, 3) // reload
 		NULL A 0 Bright A_GunFlash
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "AltFireBlue")
 		MHUD BBBBB 2 A_FireCustomMissile ("LongRangeMissile", 0, 1, random(42, 48), 14)

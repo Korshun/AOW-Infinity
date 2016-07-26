@@ -14,7 +14,7 @@ actor C4Box : AmmoPack {
 		C4BX A -1
 		stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (951, 0, 2) // refill c4
+		NULL A 0 ACS_ExecuteAlways (aow_script951, 0, 2) // refill c4
 		stop
 	}
 }
@@ -34,7 +34,7 @@ actor FullRefillPack : AmmoPack {
 		BPK2 A -1
 		stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (93, 0, 0, 1)
+		NULL A 0 ACS_ExecuteAlways (aow_script93, 0, 0, 1)
 		NULL A 0 A_PlaySound("none")
 		stop
 	}
@@ -46,7 +46,7 @@ actor Utility_Raven : RavenSwitchPickup {
 	states {
 	Spawn:
 		NULL A 0
-		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (750, 0) == 0, "Nope")
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (aow_script750, 0) == 0, "Nope")
 		RAV2 B -1
 		stop
 	Nope:
@@ -62,7 +62,7 @@ actor Utility_Wolverine : WolverineSwitchPickup {
 	states {
 	Spawn:
 		NULL A 0
-		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (750, 0) == 0, "Nope")
+		NULL A 0 A_JumpIf (ACS_ExecuteWithResult (aow_script750, 0) == 0, "Nope")
 		ROB1 A -1
 		stop
 	Nope:

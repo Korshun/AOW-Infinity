@@ -51,13 +51,13 @@ actor AdminPistol : AOWWeapon {
 		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
 		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
 		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
-		NULL A 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
+		NULL A 0 ACS_ExecuteAlways (aow_script650, 0, 500, 0) // repair+heal
 		GPIS A 2 BRIGHT A_FireBullets (0, 0, 2, 500, "DisarmPuff") // disarm
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlayWeaponSound ("repairgun/fire")
 		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "RepairDisarmPuff") // visual puff
 		NULL A 0 A_FireBullets (0.5, 0.5, 2, 0, "MedicPuff") // visual puff
-		NULL A 0 ACS_ExecuteAlways (650, 0, 500, 0) // repair+heal
+		NULL A 0 ACS_ExecuteAlways (aow_script650, 0, 500, 0) // repair+heal
 		GPIS B 2 BRIGHT A_FireBullets (0, 0, 2, 500, "DisarmPuff") // disarm
 		NULL A 0 A_ReFire
 		goto Ready
@@ -74,7 +74,7 @@ actor AdminPistol : AOWWeapon {
 		goto Ready
 	AltFire:
 		NULL A 0 A_PlayWeaponSound ("switch/shotgun")
-		GPIS B 4 ACS_ExecuteAlways (402, 0, 13)
+		GPIS B 4 ACS_ExecuteAlways (aow_script402, 0, 13)
 		GPIS C 5
 		goto Ready
 	Flash:

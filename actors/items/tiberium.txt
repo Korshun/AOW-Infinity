@@ -13,7 +13,7 @@ actor TiberiumCrystalGiver : CustomInventory 21407 {
 		TIBE A 35 BRIGHT A_Explode (24, 112)
 		wait
 	Pickup:
-		NULL A 0 ACS_ExecuteWithResult (357)
+		NULL A 0 ACS_ExecuteWithResult (aow_script357)
 		stop
 	Use:
 		NULL A 0 A_GiveInventory ("TiberiumCrystal", 1)
@@ -59,7 +59,7 @@ actor TiberiumCrystal : CustomInventory {
 		NULL A 0 A_SpawnItemEx ("TiberiumCrystalThrownBlue", 16, 0, 32, 6, 0, 5)
 		stop
 	UseMech:
-		NULL A 0 ACS_ExecuteAlways (697, 0, 255)
+		NULL A 0 ACS_ExecuteAlways (aow_script697, 0, 255)
 		fail
 	}
 }

@@ -25,8 +25,8 @@ actor RepairGun : AOWWeapon {
 		NULL A 0 A_JumpIfInventory ("RepairGunUpgrade", 1, "FireEnhanced")
 		REP1 C 2
 		NULL A 0 bright A_FireBullets (0, 0, 1, 2, "RepairDisarmPuff", 0, 800)
-		NULL A 0 bright ACS_ExecuteAlways (650, 0, 10, 0)
-		REP1 B 2 bright ACS_ExecuteAlways (654, 0) // display target health
+		NULL A 0 bright ACS_ExecuteAlways (aow_script650, 0, 10, 0)
+		REP1 B 2 bright ACS_ExecuteAlways (aow_script654, 0) // display target health
 		REP1 C 2 A_Refire
 		Goto Ready
 	AltFire:
@@ -48,8 +48,8 @@ actor RepairGun : AOWWeapon {
 	FireEnhanced:
 		REP2 C 1
 		NULL A 0 bright A_FireBullets (0, 0, 1, 1, "EnhancedRepairDisarmPuff", 0, 800)
-		NULL A 0 bright ACS_ExecuteAlways (650, 0, 10, 0)
-		REP2 B 1 bright ACS_ExecuteAlways (654, 0)
+		NULL A 0 bright ACS_ExecuteAlways (aow_script650, 0, 10, 0)
+		REP2 B 1 bright ACS_ExecuteAlways (aow_script654, 0)
 		REP2 A 2 A_Refire
 		Goto Ready
 	}
@@ -80,8 +80,8 @@ actor HealGun : RepairGun {
 	AltFire:
 		REP4 C 2
 		NULL A 0 bright A_FireBullets (0, 0, 1, 0, "MedicPuff", 0, 800) // visual ONLY
-		NULL A 0 bright ACS_ExecuteAlways (650, 0, 6, 1) // actually does the healing
-		REP4 B 2 bright ACS_ExecuteAlways (654, 0) // display target health
+		NULL A 0 bright ACS_ExecuteAlways (aow_script650, 0, 6, 1) // actually does the healing
+		REP4 B 2 bright ACS_ExecuteAlways (aow_script654, 0) // display target health
 		REP4 C 2 A_Refire
 		goto Ready
 	}

@@ -176,7 +176,7 @@ actor MechEjectButton : CustomInventory {
 		NULL A 0
 		stop
 	Use:
-		NULL A 0 ACS_ExecuteAlways (697, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_script697, 0)
 		stop
 	}
 }
