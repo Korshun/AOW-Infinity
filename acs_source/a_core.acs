@@ -59,7 +59,7 @@ script aow_script999 OPEN {
 	delay (5);
 	
 	// Special case: the war factory isn't present. Accommodate.
-	if (!ThingCount (T_NONE, 107) && !ThingCount (T_NONE, 207)) {
+	if (!ThingCount (T_NONE, TID_FACTORY_BLUE) && !ThingCount (T_NONE, TID_FACTORY_RED)) {
 		GotFactory[0] = 0;
 		GotFactory[1] = 0;
 		BaseLeft[0] = 4;
@@ -77,8 +77,8 @@ script aow_script999 OPEN {
 	// spawned at the respective team's Repair Facilities. The counters'
 	// angle tells the starting ticket amount, their speed tells the current
 	// ticket amount.
-	SpawnSpotForced ("MapSpot", 109, TID_TICKETCOUNTER_BLUE, 0);
-	SpawnSpotForced ("MapSpot", 209, TID_TICKETCOUNTER_RED, 0);
+	SpawnSpotForced ("MapSpot", TID_REPAIR_BLUE, TID_TICKETCOUNTER_BLUE, 0);
+	SpawnSpotForced ("MapSpot", TID_REPAIR_RED, TID_TICKETCOUNTER_RED, 0);
 	SetActorAngle (TID_TICKETCOUNTER_BLUE, StartingTickets);
 	SetActorAngle (TID_TICKETCOUNTER_RED, StartingTickets);
 	if (TicketPool) {

@@ -118,22 +118,22 @@ script aow_script978 (int p) {
 	int hit;
 	int range = 96;
 	if (c4team == TEAM_BLUE) {
-		if (CheckActorDistance(0, 201, range)) hit = true;
-		else if (CheckActorDistance(0, 203, range)) hit = true;
-		else if (CheckActorDistance(0, 205, range)) hit = true;
-		else if (CheckActorDistance(0, 207, range)) hit = true;
-		else if (CheckActorDistance(0, 209, range)) hit = true;
-		else if (CheckActorDistance(0, 214, range)) hit = true;
+		if (CheckActorDistance(0, TID_BARRACKS_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_REFINERY_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_RESCENTRE_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_FACTORY_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_REPAIR_RED, range)) hit = true;
+		else if (CheckActorDistance(0, TID_OBELISK_RED, range)) hit = true;
 		else if (CheckActorDistance(0, 900, range)) hit = true;
 		else if (CheckActorDistance(0, 902, range)) hit = true;
 		else if (CheckActorDistance(0, 904, range)) hit = true;
 	} else {
-		if (CheckActorDistance(0, 101, range)) hit = true;
-		else if (CheckActorDistance(0, 103, range)) hit = true;
-		else if (CheckActorDistance(0, 105, range)) hit = true;
-		else if (CheckActorDistance(0, 107, range)) hit = true;
-		else if (CheckActorDistance(0, 109, range)) hit = true;
-		else if (CheckActorDistance(0, 114, range)) hit = true;
+		if (CheckActorDistance(0, TID_BARRACKS_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_REFINERY_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_RESCENTRE_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_FACTORY_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_REPAIR_BLUE, range)) hit = true;
+		else if (CheckActorDistance(0, TID_OBELISK_BLUE, range)) hit = true;
 		else if (CheckActorDistance(0, 901, range)) hit = true;
 		else if (CheckActorDistance(0, 903, range)) hit = true;
 		else if (CheckActorDistance(0, 905, range)) hit = true;

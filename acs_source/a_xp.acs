@@ -129,7 +129,7 @@ script aow_script91 (void) {
 	
 	switch (Rank[PlayerNumber()]) {
 		case RANK_CORPORAL: SetMaxHealth (100); break;
-		case RANK_SERGEANT: SetMaxHealth (105); break;
+		case RANK_SERGEANT: SetMaxHealth (TID_RESCENTRE_BLUE); break;
 		case RANK_MASTERSGT: SetMaxHealth (110); break;
 		case RANK_OFFICER: SetMaxHealth (115); break;
 		case RANK_LIEUTENANT: SetMaxHealth (120); break;

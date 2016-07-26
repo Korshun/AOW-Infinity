@@ -2,7 +2,7 @@
 script aow_script101 (VOID)
 {
 	Thing_Destroy(100,0);
-	Thing_Destroy(101,0);
+	Thing_Destroy(TID_BARRACKS_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotBarracks[1] = False;
 	BaseLeft[1]--;
@@ -23,7 +23,7 @@ script aow_script101 (VOID)
 script aow_script102 (VOID)
 {
 	Thing_Destroy(102,0);
-	Thing_Destroy(103,0);
+	Thing_Destroy(TID_REFINERY_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotRefinery[1] = False;
 	BaseLeft[1]--;
@@ -43,7 +43,7 @@ script aow_script102 (VOID)
 script aow_script103 (void) {
 	Thing_Destroy(104,0);
 	Thing_Remove(104);
-	Thing_Destroy(105,0);
+	Thing_Destroy(TID_RESCENTRE_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotPlant[1] = False;
 	BaseLeft[1]--;
@@ -66,7 +66,7 @@ script aow_script103 (void) {
 script aow_script104 (VOID)
 {
 	Thing_Destroy(106,0);
-	Thing_Destroy(107,0);
+	Thing_Destroy(TID_FACTORY_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotFactory[1] = False;
 	BaseLeft[1]--;
@@ -86,12 +86,12 @@ script aow_script104 (VOID)
 //---------------------------BLUE REPAIR FACILITY DEATH
 script aow_script105 (VOID)
 {
-	//Thing_Remove(109);
+	//Thing_Remove(TID_REPAIR_BLUE);
 	BaseHUDUpdate = 1;
 	GotRepair[1] = False;
 	ReddenSector (13);
 	ReddenSector (14);
-	SetActorProperty(109,APROP_Health,0);
+	SetActorProperty(TID_REPAIR_BLUE,APROP_Health,0);
 	
 	// SetFont("BIGFONT");
 	// HudMessageBold(s:"The \chBlue Repair Facility\cd has been destroyed!!";
@@ -109,7 +109,7 @@ script aow_script105 (VOID)
 //---------------------------BLUE OBELISK DEATH
 script aow_script114 (VOID)
 {
-	Thing_Destroy(114,0);
+	Thing_Destroy(TID_OBELISK_BLUE,0);
 	Thing_Destroy(115,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotObelisk[1] = False;
@@ -130,7 +130,7 @@ script aow_script114 (VOID)
 script aow_script201 (VOID)
 {
 	Thing_Destroy(200,0);
-	Thing_Destroy(201,0);
+	Thing_Destroy(TID_BARRACKS_RED,0);
 	ACS_ExecuteAlways (aow_script99, 0, TEAM_RED);
 	
 	GotBarracks[0] = False;
@@ -154,7 +154,7 @@ script aow_script201 (VOID)
 script aow_script202 (VOID)
 {
 	Thing_Destroy(202,0);
-	Thing_Destroy(203,0);
+	Thing_Destroy(TID_REFINERY_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotRefinery[0] = False;
 	BaseLeft[0]--;
@@ -174,7 +174,7 @@ script aow_script202 (VOID)
 script aow_script203 (VOID)
 {
 	Thing_Destroy(204,0);
-	Thing_Destroy(205,0);
+	Thing_Destroy(TID_RESCENTRE_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotPlant[0] = False;
 	BaseLeft[0]--;
@@ -196,7 +196,7 @@ script aow_script203 (VOID)
 script aow_script204 (VOID)
 {
 	Thing_Destroy(206,0);
-	Thing_Destroy(207,0);
+	Thing_Destroy(TID_FACTORY_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotFactory[0] = False;
 	BaseLeft[0]--;
@@ -220,7 +220,7 @@ script aow_script205 (VOID) {
 	GotRepair[0] = False;
 	ReddenSector (15);
 	ReddenSector (16);
-	SetActorProperty(209,APROP_Health,0);
+	SetActorProperty(TID_REPAIR_RED,APROP_Health,0);
 	
 	/*SetFont("BIGFONT");
 	HudMessageBold(s:"The \cgRed Repair Facility\cd has been destroyed!!";
@@ -238,7 +238,7 @@ script aow_script205 (VOID) {
 //---------------------------RED OBELISK DEATH
 script aow_script214 (VOID)
 {
-	Thing_Destroy(214,0);
+	Thing_Destroy(TID_OBELISK_RED,0);
 	Thing_Destroy(215,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotObelisk[0] = False;

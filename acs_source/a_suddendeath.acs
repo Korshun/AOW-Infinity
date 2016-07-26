@@ -22,26 +22,26 @@ script aow_script998 OPEN {
 script aow_script997 (void) {
 	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_SUDDENDEATH, TEAM_NONE);
 	GiveActorInventory (100, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (101, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_BARRACKS_BLUE, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (102, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (103, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_REFINERY_BLUE, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (104, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (105, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_RESCENTRE_BLUE, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (106, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (107, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_FACTORY_BLUE, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (108, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (114, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_OBELISK_BLUE, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (115, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (200, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (201, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_BARRACKS_RED, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (202, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (203, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_REFINERY_RED, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (204, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (205, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_RESCENTRE_RED, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (206, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (207, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_FACTORY_RED, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (208, "SuddenDeathVulnerability", 1);
-	GiveActorInventory (214, "SuddenDeathVulnerability", 1);
+	GiveActorInventory (TID_OBELISK_RED, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (215, "SuddenDeathVulnerability", 1);
 	if (Timer() > 5*35 + 10) {
 		if (random (0, 1))
@@ -106,11 +106,11 @@ script aow_script997 (void) {
 		if (degeneration && !(ticker % degeninterval)) {
 			// crash all buildings by 1% every interval seconds
 			for (i = 0; i <= 1; i++) {
-				Thing_Damage (101+(i*100), HP_BARRACKS / 100);
-				Thing_Damage (103+(i*100), HP_REFINERY / 100);
-				Thing_Damage (105+(i*100), HP_PLANT / 100);
-				Thing_Damage (107+(i*100), HP_FACTORY / 100);
-				Thing_Damage (114+(i*100), HP_OBELISK / 100);
+				Thing_Damage (TID_BARRACKS_BLUE+(i*100), HP_BARRACKS / 100);
+				Thing_Damage (TID_REFINERY_BLUE+(i*100), HP_REFINERY / 100);
+				Thing_Damage (TID_RESCENTRE_BLUE+(i*100), HP_PLANT / 100);
+				Thing_Damage (TID_FACTORY_BLUE+(i*100), HP_FACTORY / 100);
+				Thing_Damage (TID_OBELISK_BLUE+(i*100), HP_OBELISK / 100);
 			}
 		}
 		
