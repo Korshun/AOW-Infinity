@@ -1,5 +1,5 @@
 // determine should we pick up Tiberium or leave it there
-script 357 (void) {
+script aow_script357 (void) {
 	SetResultValue (0);
 	if (CheckInventory ("IsHarvester") && !CheckInventory ("TiberiumCrystal")) {
 		SetResultValue (1);
@@ -11,7 +11,7 @@ script 357 (void) {
 }
 
 // Tiberium refining terminal
-script 110 (int Team) {
+script aow_script110 (int Team) {
 	if(Team == PlayerTeam() || PlayerTeam() < 0 || PlayerTeam() > 1) {
 		Error ("This is not your terminal!");
 		terminate;

@@ -1,5 +1,5 @@
 // Stealth code
-script 310 (int action) {
+script aow_script310 (int action) {
 	int a;
 	switch (action) {
 	case 0:
@@ -69,7 +69,7 @@ script 310 (int action) {
 }
 
 // Debug script
-script 311 (void) CLIENTSIDE {
+script aow_script311 (void) CLIENTSIDE {
 	while (CheckWeapon ("StealthLaserRifle") || CheckWeapon ("Knife")) {
 		HudMessage (s:"StealthMode: \cD", d:CheckInventory ("StealthMode"),
 			s:"\nStealthFire: \cF", d:CheckInventory ("StealthFire"),

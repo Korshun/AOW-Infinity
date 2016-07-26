@@ -11,7 +11,7 @@
 // [Dusk] TODO: this thing is a pretty damn big hack. Needs to be able
 // to detect whether you can get a certain crate instead of forcing the desired
 // crate effect - that's just dumb.
-script 955 (int action) {
+script aow_script955 (int action) {
 	if (!CheckWeapon ("CrateChooser")) terminate;
 	
 	// INIT
@@ -73,7 +73,7 @@ script 955 (int action) {
 }
 
 // HUD
-script 954 (void) NET CLIENTSIDE {
+script aow_script954 (void) NET CLIENTSIDE {
 	str CrateNote = "";
 	int id;
 	while (CheckWeapon ("CrateChooser") && GetActorProperty (ActivatorTID(), APROP_HEALTH) >= 0) {

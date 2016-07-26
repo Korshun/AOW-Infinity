@@ -122,7 +122,7 @@ function void SetArmorGrade (int n, int mod) {
 }
 
 // for testing and decorate (ai marines, et al)
-script 985 (int grade, int mod) {SetArmorGrade (grade, mod);}
+script aow_script985 (int grade, int mod) {SetArmorGrade (grade, mod);}
 
 // [DEBUG] ARMOR DISPLAY
 int ArmorNames[13] = {"PowerGrade1Armor", "PowerGrade2Armor", "PowerGrade3Armor", "PowerGrade4Armor", "PowerGrade5Armor", 
@@ -143,7 +143,7 @@ int ArmorValuesChem[13] = {0.9, 0.8, 0.7, 0.6, 0.5, 1.2,
 int ArmorValuesLaser[13] = {0.9, 0.8, 0.7, 0.6, 0.5, 1.2,
 	1.0, 1.0, 2.0, 0.5, 2.0, 1.0, 0.9};
 
-script 981 (void) NET CLIENTSIDE {
+script aow_script981 (void) NET CLIENTSIDE {
 	int fist, bullet, explo, antiarmor, fire, chem, laser;
 	
 	if (CheckInventory ("IsMech")) {
@@ -188,7 +188,7 @@ script 981 (void) NET CLIENTSIDE {
 	     s:" \ci", f:antiarmor);
 }
 
-script 920 (int modtype) {
+script aow_script920 (int modtype) {
 	GiveInventory ("IsChangingArmor", 1);
 	ACS_ExecuteAlways (922, 0, modtype);
 	
@@ -205,7 +205,7 @@ script 920 (int modtype) {
 	SetArmorGrade (NOCHANGE, modtype);
 }
 
-script 922 (int modtype) CLIENTSIDE {
+script aow_script922 (int modtype) CLIENTSIDE {
 	if (PlayerNumber() != ConsolePlayer) terminate;
 	
 	TakeInventory ("ArmorChangeProgress", 175);

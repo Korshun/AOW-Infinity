@@ -13,7 +13,7 @@
  * CPU usage for the server.
  */
 
-script 996 OPEN {
+script aow_script996 OPEN {
 	int i;
 	int Counter;
 	int CurTimeMax;
@@ -66,7 +66,7 @@ script 996 OPEN {
 	restart;
 }
 
-script 992 (void)
+script aow_script992 (void)
 {
 	//Log(s:"Changing team for player #",d:PlayerNeedsSwitched,s:" who was in the game since ",d:StartTime[PlayerNeedsSwitched]);
 	SetActivator(3800+PlayerNeedsSwitched);

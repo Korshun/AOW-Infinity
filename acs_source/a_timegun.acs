@@ -5,7 +5,7 @@
 // [Dusk] time gun effect messages and altfire rotation (in one script o.O)
 // action == 0 => intel message
 // action == 1 => altfire rotation
-script 958 (int action, int type) {
+script aow_script958 (int action, int type) {
 	if (action == 1) {
 		// rotation
 		if (CheckInventory ("TimeGunRotation") == 5)
@@ -44,7 +44,7 @@ script 958 (int action, int type) {
 
 // ------------
 // Time gun HUD
-script 959 (void) NET CLIENTSIDE {
+script aow_script959 (void) NET CLIENTSIDE {
 	while (CheckWeapon ("TimeGun") && GetActorProperty (ActivatorTID(), APROP_HEALTH) >= 0) {
 		SetFont("SMALLFONT");
 		HudMessage(s:TimeHudColor(0), s:"BOOST (25)\n",

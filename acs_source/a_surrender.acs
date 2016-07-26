@@ -1,5 +1,5 @@
 // SURRENDER SCRIPT
-script 342 (void) NET {
+script aow_script342 (void) NET {
 	if (!PlayerInGame(PlayerNumber())) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -62,7 +62,7 @@ script 342 (void) NET {
 	ACS_Execute(751, 0);
 }
 
-script 751 (void) {
+script aow_script751 (void) {
 	int count;
 	
 	count = SurrenderCount (TEAM_BLUE);

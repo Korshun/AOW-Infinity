@@ -1,7 +1,7 @@
 // Clientside effects and designation actors
 int ChemSmokers[32];
 
-script 943 OPEN CLIENTSIDE {	
+script aow_script943 OPEN CLIENTSIDE {	
 	// [SP] This script allows clients to keep track of what player# they are
 	ConsoleCommand ("puke 944");
 	
@@ -23,10 +23,10 @@ script 943 OPEN CLIENTSIDE {
 	ConsoleCommand ("puke 945");
 }
 
-script 944 (void) NET CLIENTSIDE {ConsolePlayer = PlayerNumber();}
-script 946 (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayer, s:" named ", n:0);}
+script aow_script944 (void) NET CLIENTSIDE {ConsolePlayer = PlayerNumber();}
+script aow_script946 (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayer, s:" named ", n:0);}
 
-script 366 (void) NET CLIENTSIDE {
+script aow_script366 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
 	if (ConsolePlayer == -1) terminate;
 	
@@ -59,7 +59,7 @@ script 366 (void) NET CLIENTSIDE {
 	}
 }
 
-script 355 (int i, int what) CLIENTSIDE {
+script aow_script355 (int i, int what) CLIENTSIDE {
 	int x;
 	switch (what) {
 	case 0:
@@ -106,7 +106,7 @@ script 355 (int i, int what) CLIENTSIDE {
 	}
 }
 
-script 400 OPEN CLIENTSIDE {
+script aow_script400 OPEN CLIENTSIDE {
 	while (1) {
 		if (!GetCVAR ("hud_scale"))
 			ConsoleCommand("set hud_scale true");
@@ -123,7 +123,7 @@ str TrailTypes[MAX_TRAILTYPES] = {
 };
 
 // trail -> player
-script 986 (int type, int target) CLIENTSIDE {
+script aow_script986 (int type, int target) CLIENTSIDE {
 	if (type == 0) {
 		if (!SpawnTrail (0, target, 2, 32, 7, 0, 0, 0, -6.0, 0, 36.0)) {
 			Log (s:"Trailing failed");

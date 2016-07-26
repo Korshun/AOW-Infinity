@@ -1,5 +1,5 @@
 // REFILL
-script 93 (int unused, int silent) {
+script aow_script93 (int unused, int silent) {
 	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);
 	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);
 	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);	GiveInventory("Backpack",1);
@@ -22,7 +22,7 @@ script 93 (int unused, int silent) {
 }
 
 // TELEPORT BACK TO FIELD
-script 94 (int Team) {
+script aow_script94 (int Team) {
 	if (!CheckInventory("HasClass")) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -37,7 +37,7 @@ script 94 (int Team) {
 }
 
 // RESIGN
-script 95 (int unused, int force) {
+script aow_script95 (int unused, int force) {
 	if (MitigateDoublePress() && !force) terminate;
 	if (!CheckInventory("HasClass") && !force) {
 		DisplayCross();
@@ -135,7 +135,7 @@ script 95 (int unused, int force) {
 }
 
 // PURCHASE TERMINAL / RESEARCH TERMINAL / MECH PURCHASE TERMINAL
-script 96 (int type) {
+script aow_script96 (int type) {
 	if (MitigateDoublePress()) terminate;
 	int dest;
 	
@@ -224,4 +224,4 @@ script 96 (int type) {
 	}
 }
 
-script 90 (void) {TakeInventory ("PurchaseToken", 1);}
+script aow_script90 (void) {TakeInventory ("PurchaseToken", 1);}

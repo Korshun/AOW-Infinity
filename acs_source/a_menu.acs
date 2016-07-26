@@ -7,7 +7,7 @@ int MenuSelection[2], MenuHorPos;
 // SERVER INTERACTION
 // Script #970 - server prepares client to utility menu usage
 // Utility gun AltFire calls this to activate the menu
-script 970 (void) {
+script aow_script970 (void) {
 	ActivatorSound ("switch/pulse", 127);
 	
 	int team = 1-PlayerTeam();
@@ -36,7 +36,7 @@ script 970 (void) {
 }
 
 // Script #969 - server receives selection from utility guy
-script 969 (int sel0, int sel1) NET {
+script aow_script969 (int sel0, int sel1) NET {
 	int pn = PlayerNumber();
 	if (!CheckInventory ("InUtilMenu")) terminate;
 	LocalAmbientSound ("menu/dismiss", 127);
@@ -68,7 +68,7 @@ script 969 (int sel0, int sel1) NET {
 }
 
 // MENU LOOP
-script 965 (void) CLIENTSIDE {
+script aow_script965 (void) CLIENTSIDE {
 	DisplayUtilHud();
 	LocalAmbientSound ("menu/prompt", 127);
 	

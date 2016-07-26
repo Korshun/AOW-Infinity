@@ -1,5 +1,5 @@
 //Player burnt and is burning script, unfortunately the killer who set the player alight is not awarded for this.
-script 360 (void) {
+script aow_script360 (void) {
 	delay (1);
 	
 	if (CheckInventory("CrispyPlayer")) terminate;
@@ -16,7 +16,7 @@ script 360 (void) {
 }
 
 //Player poisoned and is burning script, unfortunately the killer who set the player alight is not awarded for this.
-script 361 (void) {
+script aow_script361 (void) {
 	delay(1);
 	
 	if (CheckInventory("CrispyPlayer2")) terminate;

@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 // display credits/experience, manage self-heal
-script 5 RESPAWN {
+script aow_script5 RESPAWN {
 	while (PlayerInGame (PlayerNumber()) && GetHealth() > 0) {
 		ShowStatus();
 	
@@ -40,7 +40,7 @@ function void ShowStatus(void) {
 	SetFont ("DOOMFONT");
 }
 
-script 111 (int what) {
+script aow_script111 (int what) {
 	int amount;
 	switch (what) {
 	case 0:

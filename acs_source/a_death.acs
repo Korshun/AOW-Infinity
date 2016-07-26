@@ -9,7 +9,7 @@
  */
 
 // death script: victim POV
-script 994 DEATH {
+script aow_script994 DEATH {
 	Thing_ChangeTID (0, 9999);
 	TakeInventory ("ThermalCloakingTime", 90);
 	TakeInventory ("InUtilMenu", 1);
@@ -147,7 +147,7 @@ script 994 DEATH {
 }
 
 // Guardian stomp health
-script 923 (void) {
+script aow_script923 (void) {
 	SetActivatorToTarget (0);
 	if (!CheckWeapon ("GuardianWeapons")) terminate;
 	SetHealth (GetHealth () + 100);
@@ -155,7 +155,7 @@ script 923 (void) {
 }
 
 // [SP] Fragging a monster
-Script 947 (int Amount) {
+script aow_script947 (int Amount) {
 	if (ActivatorTID() >= 3800 && ActivatorTID() <= 3831) {
 		LocalAmbientSound("game/boink",255);
 		AddExperience(10 * Amount);

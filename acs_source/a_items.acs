@@ -5,7 +5,7 @@
 // You may use portions of this script in your project as long as you give credit where credit is
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
-script 951 (int action, int team) {
+script aow_script951 (int action, int team) {
 	switch (action) {
 	case 0:
 		// Deploy superweapon beacon
@@ -123,7 +123,7 @@ script 951 (int action, int team) {
 #define HEALRAD_AMOUNT 10
 #define HEALRAD_DELAY 5
 int IsBeingHealed[32];
-script 952 (int action, int i) {
+script aow_script952 (int action, int i) {
 	int shp;
 	int n;
 	switch (action) {

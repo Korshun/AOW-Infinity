@@ -45,7 +45,7 @@ function str GetRankPic (void) {
 }
 
 // check for rankup
-script 7 (void) {
+script aow_script7 (void) {
 	bool RankedUp;
 	
 	SetFont("SMALLFONT");
@@ -127,7 +127,7 @@ script 7 (void) {
 bool NotifiedUnbalanceCompensation[2];
 
 //Rank awards/checks
-script 91 (void) {
+script aow_script91 (void) {
 	ACS_Execute (332, 0);
 	
 	if (CheckInventory("PowerBerserk")) {
@@ -180,7 +180,7 @@ script 91 (void) {
 	}
 }
 
-script 92 (void) {
+script aow_script92 (void) {
 	if (!CheckInventory("InGame")) {
 		GiveInventory ("InGame", 1);
 		ACS_ExecuteAlways (5, 0);
@@ -190,7 +190,7 @@ script 92 (void) {
 }
 
 //Just add experience.
-Script 318 (VOID)
+script aow_script318 (VOID)
 {
 	for (int i = 0; i < 5; i++) {
 		LocalAmbientSound ("c4/use", 255);
@@ -199,7 +199,7 @@ Script 318 (VOID)
 	}
 }
 
-script 324 (int n) {
+script aow_script324 (int n) {
 	while (n > 0) {
 		n--;
 		LocalAmbientSound ("c4/use", 127);
@@ -209,7 +209,7 @@ script 324 (int n) {
 }
 
 //Bonuses for disarming C4.
-Script 328 (int team) {
+script aow_script328 (int team) {
 	if (PlayerTeam() != team) {
 		AddExperience (10);
 		AddCredits (Credits[PlayerNumber()+1], 75);
@@ -219,7 +219,7 @@ Script 328 (int team) {
 }
 
 //Bonuses for disarming Beacon.
-Script 350 (int team) {
+script aow_script350 (int team) {
 	if (team == PlayerTeam()) terminate;
 	
 	ACS_ExecuteAlways(324,0,3,0,0);			//150 XP

@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 //---------------------------GUNMAN
-script 20 (int Team) {
+script aow_script20 (int Team) {
 	int cost = 0; int speed = 1.0;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -40,7 +40,7 @@ script 20 (int Team) {
 }
 
 //---------------------------ENGINEER
-script 21 (int Team) {
+script aow_script21 (int Team) {
 	int cost = 0; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -75,7 +75,7 @@ script 21 (int Team) {
 }
 
 //---------------------------MINIGUNNER
-script 22 (int Team) {
+script aow_script22 (int Team) {
 	int cost = 400; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -116,7 +116,7 @@ script 22 (int Team) {
 }
 
 //---------------------------TECHNICIAN
-script 23 (int Team) {
+script aow_script23 (int Team) {
 	int cost = 200; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -157,7 +157,7 @@ script 23 (int Team) {
 }
 
 //---------------------------FLAMER
-script 24 (int Team) {
+script aow_script24 (int Team) {
 	int cost = 450; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -197,7 +197,7 @@ script 24 (int Team) {
 }
 
 //---------------------------RIFLEMAN
-script 25 (int Team) {
+script aow_script25 (int Team) {
 	int cost = 200; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -237,7 +237,7 @@ script 25 (int Team) {
 }
 
 //---------------------------SUPPORT / MACHINE GUNNER
-script 26 (int Team) {
+script aow_script26 (int Team) {
 	int cost = 300; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -278,7 +278,7 @@ script 26 (int Team) {
 }
 
 //---------------------------GRENADIER
-script 27 (int Team) {
+script aow_script27 (int Team) {
 	int cost = 550; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -322,7 +322,7 @@ script 27 (int Team) {
 }
 
 //---------------------------ROCKET SOLDIER
-script 28 (int Team) {
+script aow_script28 (int Team) {
 	int cost = 500; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -367,7 +367,7 @@ script 28 (int Team) {
 }
 
 //---------------------------STEALTH TROOPER
-script 29 (int Team) {
+script aow_script29 (int Team) {
 	int cost = 600; int speed = 0.95;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -417,7 +417,7 @@ script 29 (int Team) {
 }
 
 //---------------------------GAUSS GUNNER
-script 33 (int Team) {
+script aow_script33 (int Team) {
 	int cost = 600; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -466,7 +466,7 @@ script 33 (int Team) {
 }
 
 //---------------------------CHEM WARRIOR
-script 34 (int Team) {
+script aow_script34 (int Team) {
 	int cost = 550; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -511,7 +511,7 @@ script 34 (int Team) {
 }
 
 //---------------------------SHOCK TROOPER
-script 35 (int Team) {
+script aow_script35 (int Team) {
 	int cost = 600; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -558,7 +558,7 @@ script 35 (int Team) {
 }
 
 //---------------------------COMMANDO
-script 36 (int Team) {
+script aow_script36 (int Team) {
 	int cost = 1000; int speed = 0.85;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -624,7 +624,7 @@ script 36 (int Team) {
 }
 
 //---------------------------PLASMA CANNON
-script 37 (int Team)
+script aow_script37 (int Team)
 {
 	int cost = 1500;
 	if (MitigateDoublePress()) terminate;
@@ -690,7 +690,7 @@ script 37 (int Team)
 }
 
 //---------------------------SHOTGUNNER
-script 38 (int Team) {
+script aow_script38 (int Team) {
 	int cost = 0; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -726,7 +726,7 @@ script 38 (int Team) {
 }
 
 //---------------------------SUICIDE BOMBER
-script 62 (int Team) {
+script aow_script62 (int Team) {
 	int cost = 1750; int speed = 1.0;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -777,7 +777,7 @@ script 62 (int Team) {
 }
 
 //---------------------------SNIPER
-script 40 (int Team) {
+script aow_script40 (int Team) {
 	int cost = 750; int speed = 0.675;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -824,7 +824,7 @@ script 40 (int Team) {
 }
 
 //---------------------------UTILITY GUY
-script 41 (int Team) {
+script aow_script41 (int Team) {
 	int cost = 650; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -872,7 +872,7 @@ script 41 (int Team) {
 }
 
 //---------------------------DEMO EXPERT
-script 42 (int Team) {
+script aow_script42 (int Team) {
 	int cost = 550; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -919,7 +919,7 @@ script 42 (int Team) {
 }
 
 // FIELD MEDIC
-script 43 (int Team) {
+script aow_script43 (int Team) {
 	int cost = 300; int speed = 0.85;
 	
 	if (MitigateDoublePress()) terminate;
@@ -967,7 +967,7 @@ script 43 (int Team) {
 }
 
 //---------------------------LASER CHAINGUNNER
-script 44 (int Team) {
+script aow_script44 (int Team) {
 	int cost = 650; int speed = 0.75;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1008,7 +1008,7 @@ script 44 (int Team) {
 }
 
 //---------------------------T-E 21cal RIFLE
-script 49 (int Team)
+script aow_script49 (int Team)
 {
 	int cost = 300;
 	if (MitigateDoublePress()) terminate;
@@ -1040,7 +1040,7 @@ script 49 (int Team)
 }
 
 //---------------------------CHAINSAW (was flashbangs)
-script 50 (int Team) {
+script aow_script50 (int Team) {
 	int cost = 250;
 	if (MitigateDoublePress()) terminate;
 	if (CheckInventory("EagerBeaver")) {
@@ -1070,7 +1070,7 @@ script 50 (int Team) {
 }
 
 // ARTILLERY CANNON
-script 51 (int Team) {
+script aow_script51 (int Team) {
 	int cost = 550;
 	if (MitigateDoublePress()) terminate;
 	if(CheckInventory("ArtilleryCannon")) {
@@ -1101,7 +1101,7 @@ script 51 (int Team) {
 }
 
 //---------------------------JUMPJET
-script 52 (int Team) {
+script aow_script52 (int Team) {
 	int cost = 600; int speed = 0.65;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1144,7 +1144,7 @@ script 52 (int Team) {
 }
 
 //---------------------------TIBERIUM AUTORIFLEMAN
-script 53 (int Team) {
+script aow_script53 (int Team) {
 	int cost = 400; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1183,7 +1183,7 @@ script 53 (int Team) {
 }
 
 //---------------------------DOUBLE SHOTGUNNER
-script 54 (int Team) {
+script aow_script54 (int Team) {
 	int cost = 200; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!IsResigned()) terminate;
@@ -1221,7 +1221,7 @@ script 54 (int Team) {
 
 //-------------------- BLUE TEAM SUPERWEAPON
 //---------------------------ION CANNON BEACON
-script 55 (int Team) {
+script aow_script55 (int Team) {
 	if (PlayerTeam() == TEAM_RED) {
 		// [Dusk] this message should never be displayed in casual games
 		DisplayCross();
@@ -1288,7 +1288,7 @@ script 55 (int Team) {
 
 //-------------------- RED TEAM SUPERWEAPON
 //---------------------------NUCLEAR STRIKE BEACON
-script 56 (int Team) {
+script aow_script56 (int Team) {
 	if (PlayerTeam() == TEAM_BLUE) {
 		// [Dusk] this message should never be displayed in casual games
 		DisplayCross();
@@ -1350,7 +1350,7 @@ script 56 (int Team) {
 }
 
 //---------------------------ARMOUR/DAMAGE UPGRADE
-script 57 (int Team) {
+script aow_script57 (int Team) {
 	int cost = 250;
 	if (MitigateDoublePress()) terminate;
 	
@@ -1392,7 +1392,7 @@ script 57 (int Team) {
 }
 
 //---------------------------PLASMA GUNNER
-script 60 (int Team) {
+script aow_script60 (int Team) {
 	int cost = 800; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1434,7 +1434,7 @@ script 60 (int Team) {
 }
 
 // ARTILLERY SOLDIER
-script 61 (int Team) {
+script aow_script61 (int Team) {
 	int cost = 600; int speed = 0.7;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(Team)) terminate;
@@ -1482,7 +1482,7 @@ script 61 (int Team) {
 }
 
 //---------------------------TIME COP
-script 39 (int Team) {
+script aow_script39 (int Team) {
 	int cost = 2000; int speed = 0.9;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(team)) terminate;
@@ -1555,7 +1555,7 @@ script 39 (int Team) {
 }
 
 //---------------------------TIBERIUM HARVESTER //Advanced
-script 63 (int Team) {
+script aow_script63 (int Team) {
 	int cost = 750; int speed = 0.8;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckRefinery(Team)) terminate;
@@ -1605,7 +1605,7 @@ script 63 (int Team) {
 }
 
 //---------------------------TIBERIUM HARVESTER //Free
-script 64 (int Team) {
+script aow_script64 (int Team) {
 	int cost = 0; int speed = 0.65;
 	if (MitigateDoublePress()) terminate;
 	if (!CheckRefinery(Team)) terminate;
@@ -1649,7 +1649,7 @@ script 64 (int Team) {
 	ActivatorSound("misc/chem",255);
 }
 
-script 961 (int team) {
+script aow_script961 (int team) {
 	int tries, i;
 	bool failed = true;
 	if (GetLevelInfo (LEVELINFO_LEVELNUM) == 20 || GetLevelInfo (LEVELINFO_LEVELNUM) == 21) {

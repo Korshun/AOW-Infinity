@@ -6,7 +6,7 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 //Show limits
-script 349 (int Type) {
+script aow_script349 (int Type) {
 	if(Type == 0)
 	{
 		SetFont("BIGFONT");
@@ -63,7 +63,7 @@ script 349 (int Type) {
 
 
 //Limits
-script 344 (int Type, int DoneByUtilGun)
+script aow_script344 (int Type, int DoneByUtilGun)
 {
 	int Counter = 0;
 	if(Type == 0)
@@ -339,7 +339,7 @@ script 344 (int Type, int DoneByUtilGun)
 }
 
 //Deaths of said objects
-script 345 (int Type, int Team)
+script aow_script345 (int Type, int Team)
 {
 	// give points for disabling enemy defenses
 	if (type == 0 && team != PlayerTeam()) {
@@ -430,7 +430,7 @@ script 345 (int Type, int Team)
 }
 
 //Check if it's not at limit
-script 346 (int Type, int Team) {
+script aow_script346 (int Type, int Team) {
 	SetResultValue(1);
 	switch (Type) {
 	case 0:
@@ -462,7 +462,7 @@ script 346 (int Type, int Team) {
 	}
 }
 
-script 347 (int Type) {
+script aow_script347 (int Type) {
 	if(Type == 0)
 		HudMessage (s:"At limit!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -475,7 +475,7 @@ script 347 (int Type) {
 
 
 // [SP] This script is used to determine whether a utility is in his own base or not, and to give "UtilityOutOfRange" if he's not.
-script 370 (void)
+script aow_script370 (void)
 {
 	bool IsInBase;
 	if ( PlayerTeam() == TEAM_RED )
@@ -533,7 +533,7 @@ script 370 (void)
 }
 
 // determine do we have adv turrets
-script 971 (void) {
+script aow_script971 (void) {
 	SetResultValue (1);
 	if (AdvancedTurrets[1-PlayerTeam()]) {SetResultValue(0);}
 }
@@ -555,7 +555,7 @@ function bool CheckActorDistance(int Source, int Target, int Range)
 }
 
 //BUILD with Utility (check for cash)
-script 695 (int Type)
+script aow_script695 (int Type)
 {
 	if (IsAdmin[PlayerNumber()]) {
 		SetResultValue(1);
@@ -745,7 +745,7 @@ script 695 (int Type)
 }
 
 // [Dusk] same as above but custom amount
-script 694 (int amount) {
+script aow_script694 (int amount) {
 	if (IsAdmin[PlayerNumber()]) {
 		SetResultValue(1);
 		terminate;
@@ -760,7 +760,7 @@ script 694 (int amount) {
 }
 
 // [Dusk] Floating platform's check for space. These are not supposed to be built inside buildings.
-script 750 (void) {
+script aow_script750 (void) {
 	int canbuild = 0;
 	int levelnum = GetLevelInfo (LEVELINFO_LEVELNUM);
 	int height = GetActorCeilingZ (0) - GetActorFloorZ (0);

@@ -8,7 +8,7 @@
  * of this and call it your own. Thanks!
  */
 
-script 320 (int Which)
+script aow_script320 (int Which)
 {
 	//SetHudSize(1680,1050,0);
 	if(Which == 0)
@@ -34,7 +34,7 @@ script 320 (int Which)
 }
 
 //Self heal health
-script 329 (void) {
+script aow_script329 (void) {
 	int SelfHealCooldown = 30;
 	
 	if (GetHealth () <= 0) terminate;
@@ -50,7 +50,7 @@ script 329 (void) {
 }
 
 // Jumpjet fuel drain
-script 331 (void) {
+script aow_script331 (void) {
 	delay (35);
 	while (CheckInventory ("JumpjetSwitch") && GetHealth() > 0) {
 		TakeInventory ("JumpjetFuel", 1);
@@ -59,12 +59,12 @@ script 331 (void) {
 }
 
 // [SP] Player goes spectator.
-script 941 (int Player) DISCONNECT {
+script aow_script941 (int Player) DISCONNECT {
 	Thing_ChangeTID (3800+Player, 0);
 }
 
-script 948 (int time, int display) SetResultValue (TimeDelay (time, display));
-script 949 (int display) SetResultValue (TimeDelay (TimedC4Delay, display));
+script aow_script948 (int time, int display) SetResultValue (TimeDelay (time, display));
+script aow_script949 (int display) SetResultValue (TimeDelay (TimedC4Delay, display));
 
 function bool TimeDelay (int time, bool display) {
 	if (Time * 35 * 60 > Timer()) {
@@ -81,7 +81,7 @@ function bool TimeDelay (int time, bool display) {
 }
 
 // [Dusk] beacon timer reset due to it being placed underwater
-script 957 (int Team) {
+script aow_script957 (int Team) {
 	SetFont ("SMALLFONT");
 	
 	if (Team == 0) {
@@ -106,10 +106,10 @@ script 957 (int Team) {
 }
 
 // returns renderer
-script 910 (void) {SetResultValue (GetCVar ("vid_renderer"));}
+script aow_script910 (void) {SetResultValue (GetCVar ("vid_renderer"));}
 
 // c4 explodes
-script 978 (int p) {
+script aow_script978 (int p) {
 	if (p <= 0) terminate;
 	
 	int c4team = TEAM_BLUE;
@@ -145,7 +145,7 @@ script 978 (int p) {
 }
 
 // A_SetPitch is not available, workaround:
-script 979 (int d, int n) NET CLIENTSIDE {
+script aow_script979 (int d, int n) NET CLIENTSIDE {
 	delay (1);
 	int newpitch;
 	while (n > 0) {
@@ -166,7 +166,7 @@ script 979 (int d, int n) NET CLIENTSIDE {
 }
 
 // Missile launcher targeter
-script 963 (void) CLIENTSIDE {
+script aow_script963 (void) CLIENTSIDE {
 	if (ActivatorTID () != 3800 + ConsolePlayer) terminate;
 	int mytid = 3800 + ConsolePlayer;
 	int t;

@@ -1,5 +1,5 @@
 //REGENERATION
-script 343 OPEN {
+script aow_script343 OPEN {
 	int n, r;
 	for (n = 0; n <= 31; n++) {
 		if (!PlayerInGame (n))
@@ -22,7 +22,7 @@ script 343 OPEN {
 }
 
 // MEDIC REGENERATION
-script 352 (void) {
+script aow_script352 (void) {
 	if (GetHealth() <= 0 || !CheckInventory("IsMedic") || !PlayerInGame (PlayerNumber()))
 		terminate;
 	
@@ -38,7 +38,7 @@ script 352 (void) {
 }
 
 // HP/AMMO REGENERATION
-script 354 OPEN {
+script aow_script354 OPEN {
 	int i, hp, shp;
 	int counter;
 	

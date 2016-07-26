@@ -16,15 +16,15 @@ function void MECH_PopArmorMod (void) {
 	SetArmorGrade (NOCHANGE, mod);
 }
 
-script 45 (void) {ACS_Execute (80, 0, MECH_WOLVERINE);}
-script 46 (void) {ACS_Execute (80, 0, MECH_TITAN);}
-script 47 (void) {ACS_Execute (80, 0, MECH_RAVEN);}
-script 48 (void) {ACS_Execute (80, 0, MECH_MADCAT);}
-script 58 (void) {ACS_Execute (80, 0, MECH_ORCA);}
-script 59 (void) {ACS_Execute (80, 0, MECH_GUARDIAN);}
+script aow_script45 (void) {ACS_Execute (80, 0, MECH_WOLVERINE);}
+script aow_script46 (void) {ACS_Execute (80, 0, MECH_TITAN);}
+script aow_script47 (void) {ACS_Execute (80, 0, MECH_RAVEN);}
+script aow_script48 (void) {ACS_Execute (80, 0, MECH_MADCAT);}
+script aow_script58 (void) {ACS_Execute (80, 0, MECH_ORCA);}
+script aow_script59 (void) {ACS_Execute (80, 0, MECH_GUARDIAN);}
 
 // global mech purchase script
-script 80 (int mech) {
+script aow_script80 (int mech) {
 	int cost;
 	str card, morph, nicename, ammo;
 	
@@ -220,14 +220,14 @@ script 80 (int mech) {
 }
 
 // frag bounty
-script 317 (int team) {
+script aow_script317 (int team) {
 	if (team == PlayerTeam()) terminate;
 	GiveCredits (-1, 200);
 	AddExperience (150);
 }
 
 //Mech Weapon Switching
-script 314 (void) {
+script aow_script314 (void) {
 	if (!CheckInventory ("IsMech")) terminate;
 	if (CheckInventory ("WolverineWeapons")) {
 		if(CheckInventory("Wolverine-WhatWeapon") == 0)
@@ -322,7 +322,7 @@ script 314 (void) {
 }
 
 //Mech HUD
-script 315 (void) NET CLIENTSIDE {
+script aow_script315 (void) NET CLIENTSIDE {
 	if (!CheckInventory ("IsMech")) terminate;
 	
 	SetFont ("SMALLFONT");
@@ -396,7 +396,7 @@ function str MechHudColor (int weapon, str cooldownitem) {
 }
 
 //EJECT MECH
-script 697 (void) {
+script aow_script697 (void) {
 	int MechType = 1;
 	if (CheckInventory ("RavenWeapons")) MechType = 1;
 	if (CheckInventory ("MadCatWeapons")) MechType = 2;
@@ -468,7 +468,7 @@ script 697 (void) {
 }
 
 // Get in Mech animation
-script 699 (void) {
+script aow_script699 (void) {
 	delay (1);
 	SetActorState (0, "Spawn2");
 	
@@ -477,7 +477,7 @@ script 699 (void) {
 }
 
 // Activates weapon reload.
-script 319 (int Weapon, int ReloadTime) {
+script aow_script319 (int Weapon, int ReloadTime) {
 	if (Weapon == 1) {
 		GiveInventory ("Reload-LRM", 1);
 		delay (35*ReloadTime-1);
@@ -535,7 +535,7 @@ script 319 (int Weapon, int ReloadTime) {
 	}
 }
 
-script 332 (void) CLIENTSIDE {
+script aow_script332 (void) CLIENTSIDE {
 	while (CheckInventory("IsMech")) {
 		if (GetHealth () <= GetSpawnHealth()/10) {
 			SETFONT("BigFont");
@@ -547,7 +547,7 @@ script 332 (void) CLIENTSIDE {
 }
 
 // check if you can enter an ejected mech
-script 353 (void) {
+script aow_script353 (void) {
 	int r = 1;
 	if(CheckInventory ("HighUpgrade"))
 		r = 0;
@@ -561,7 +561,7 @@ script 353 (void) {
 
 // [Dusk] thrusts the player with the specified angle if they are in a mech
 // Meant to be used in maps to block areas off from mechs
-script 150 (int angle) {
+script aow_script150 (int angle) {
 	if (CheckInventory ("IsMech")) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -572,13 +572,13 @@ script 150 (int angle) {
 }
 
 // [Dusk] we're activating a used mech - set the hp to half
-script 359 (void) {
+script aow_script359 (void) {
 	delay (5);
 	SetHealth (GetSpawnHealth()/2);
 }
 
 // Tiger's hanger stuff
-script 84 (void) {
+script aow_script84 (void) {
 	// is this really necessary?
 	/* DisplayCross ();
 	SetFont ("BIGFONT");
@@ -586,7 +586,7 @@ script 84 (void) {
 		HUDMSG_FADEOUT, 240+PlayerNumber(), CR_DarkRed, 0.5, 0.45, 2.0, 1.0); */
 }
 
-script 86 (int x) {
+script aow_script86 (int x) {
 	if (LineSide ()) terminate;
 	DisplayCross ();
 	SetFont ("BIGFONT");
@@ -600,6 +600,6 @@ script 86 (int x) {
 }
 
 // duplicates..
-script 85 (void) {ACS_ExecuteAlways (84, 0);}
-script 88 (void) {ACS_ExecuteAlways (86, 0, 1);}
-script 89 (void) {} // dummy - present because maps actually call this. even though it was empty
+script aow_script85 (void) {ACS_ExecuteAlways (84, 0);}
+script aow_script88 (void) {ACS_ExecuteAlways (86, 0, 1);}
+script aow_script89 (void) {} // dummy - present because maps actually call this. even though it was empty
