@@ -143,6 +143,6 @@ script aow_script335 (void) NET
 				TakeInventory("DonationName", 31);
 		}
 		ShowCurrentDonationMenu();
-		ACS_ExecuteAlways(333, 0);
+		ACS_ExecuteAlways(aow_script333, 0);
 	}
 }

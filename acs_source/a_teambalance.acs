@@ -36,7 +36,7 @@ script aow_script996 OPEN {
 				}
 				Counter++;
 			}
-			ACS_ExecuteAlways(992,0,0,0,0);
+			ACS_ExecuteAlways(aow_script992,0,0,0,0);
 		}
 
 		// [SP] force red surplus to blue
@@ -54,7 +54,7 @@ script aow_script996 OPEN {
 				}
 				Counter++;
 			}
-			ACS_ExecuteAlways(992,0,0,0,0);
+			ACS_ExecuteAlways(aow_script992,0,0,0,0);
 		}
 	}
 	
@@ -80,7 +80,7 @@ script aow_script992 (void)
 		delay(1);
 		Teleport(70);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95, 0);
+		ACS_ExecuteAlways(aow_script95, 0);
 		TakeInventory("IsRed",1);
 		GiveInventory("IsBlue",1);
 	}
@@ -92,7 +92,7 @@ script aow_script992 (void)
 		delay(1);
 		Teleport(71);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95, 0);
+		ACS_ExecuteAlways(aow_script95, 0);
 		TakeInventory("IsBlue",1);
 		GiveInventory("IsRed",1);
 	}

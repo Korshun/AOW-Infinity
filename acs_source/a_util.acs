@@ -87,7 +87,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			HudMessageBold (n:0, s:"\cJ of \cARed Team\cJ\nhas built a \cDMini-Refinery!";
 				HUDMSG_FADEOUT, 15000, CR_WHITE,
 				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			//ACS_ExecuteAlways(324,0,2,0,0);
+			//ACS_ExecuteAlways(aow_script324,0,2,0,0);
 			AddExperience (125);
 			SetThingSpecial(900,226,345,0,3,0);
 			SetActorState (900, "Approved");
@@ -109,7 +109,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			HudMessageBold (n:0, s:"\cJ of \cNBlue Team\cJ\nhas built a \cDMini-Refinery!";
 				HUDMSG_FADEOUT, 15000, CR_WHITE,
 				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			//ACS_ExecuteAlways(324,0,2,0,0);
+			//ACS_ExecuteAlways(aow_script324,0,2,0,0);
 			AddExperience (125);
 			SetThingSpecial(901,226,345,0,3,1);
 			SetActorState (901, "Approved");
@@ -355,7 +355,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cDMini-Refinery!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Mini-Ref.");
 		GivePoints (POINTS_RESEARCH);
@@ -368,7 +368,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cDMini-Refinery!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Mini-Ref.");
 		GivePoints (POINTS_RESEARCH);
@@ -381,7 +381,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cAHealth Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Health Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
@@ -394,7 +394,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cAHealth Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Health Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
@@ -407,7 +407,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cKAmmo Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Ammo Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
@@ -421,7 +421,7 @@ script aow_script345 (int Type, int Team)
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cKAmmo Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		ACS_ExecuteAlways(324,0,2,0,0); // 100xp
+		ACS_ExecuteAlways(aow_script324,0,2,0,0); // 100xp
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Ammo Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
@@ -564,7 +564,7 @@ script aow_script695 (int Type)
 	
 	if(Type == 0) //TURRET
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,50,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,50,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -579,7 +579,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 1) //POWERUP CACHE
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,250,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,250,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -594,7 +594,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 2) //MINI REFINERY
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,2250,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,2250,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -609,7 +609,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 3) //ANTI-MECH TURRET
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,80,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,80,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -624,7 +624,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 4) //MINES
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,80,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,80,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -639,7 +639,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 5) //REPAIR TURRET
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,125,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,125,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -654,7 +654,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 6) //ADVANCED/KLAXON TURRET
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,100,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,100,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -669,7 +669,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 7) //REGENERATION CACHE
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,2250,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,2250,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -684,7 +684,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 8) //RAVEN MECH
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,1400,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,1400,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -699,7 +699,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 9) //RAVEN COMPANION
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,150,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,150,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -714,7 +714,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 10) //MISSILE TURRET
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,200,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,200,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -729,7 +729,7 @@ script aow_script695 (int Type)
 	}
 	if(Type == 11) //WOLVERINE MECH
 	{
-		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330,1600,0,0))
+		if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330,1600,0,0))
 		{
 			//LocalAmbientSound("misc/funds",255);
 			//SETFONT("BigFont");
@@ -751,7 +751,7 @@ script aow_script694 (int amount) {
 		terminate;
 	}
 	
-	if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(330, amount, 0, 0)) {
+	if(Credits[PlayerNumber()+1] < ACS_ExecuteWithResult(aow_script330, amount, 0, 0)) {
 		SetResultValue(0);			
 	} else {
 		SpendCredits(Credits[PlayerNumber()+1], amount);

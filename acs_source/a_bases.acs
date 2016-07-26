@@ -3,7 +3,7 @@ script aow_script101 (VOID)
 {
 	Thing_Destroy(100,0);
 	Thing_Destroy(101,0);
-	ACS_ExecuteAlways(99, 0, TEAM_BLUE);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotBarracks[1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(1,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -24,7 +24,7 @@ script aow_script102 (VOID)
 {
 	Thing_Destroy(102,0);
 	Thing_Destroy(103,0);
-	ACS_ExecuteAlways(99, 0, TEAM_BLUE);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotRefinery[1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(5,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -44,7 +44,7 @@ script aow_script103 (void) {
 	Thing_Destroy(104,0);
 	Thing_Remove(104);
 	Thing_Destroy(105,0);
-	ACS_ExecuteAlways(99, 0, TEAM_BLUE);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotPlant[1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(7,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -67,7 +67,7 @@ script aow_script104 (VOID)
 {
 	Thing_Destroy(106,0);
 	Thing_Destroy(107,0);
-	ACS_ExecuteAlways(99, 0, TEAM_BLUE);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotFactory[1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(9,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -111,7 +111,7 @@ script aow_script114 (VOID)
 {
 	Thing_Destroy(114,0);
 	Thing_Destroy(115,0);
-	ACS_ExecuteAlways(99, 0, TEAM_BLUE);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
 	GotObelisk[1] = False;
 	BaseLeft[1]--;
 	ReddenSector (19);
@@ -155,7 +155,7 @@ script aow_script202 (VOID)
 {
 	Thing_Destroy(202,0);
 	Thing_Destroy(203,0);
-	ACS_ExecuteAlways(99, 0, TEAM_RED);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotRefinery[0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(6,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -175,7 +175,7 @@ script aow_script203 (VOID)
 {
 	Thing_Destroy(204,0);
 	Thing_Destroy(205,0);
-	ACS_ExecuteAlways(99, 0, TEAM_RED);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotPlant[0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(8,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -197,7 +197,7 @@ script aow_script204 (VOID)
 {
 	Thing_Destroy(206,0);
 	Thing_Destroy(207,0);
-	ACS_ExecuteAlways(99, 0, TEAM_RED);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotFactory[0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(10,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -240,7 +240,7 @@ script aow_script214 (VOID)
 {
 	Thing_Destroy(214,0);
 	Thing_Destroy(215,0);
-	ACS_ExecuteAlways(99, 0, TEAM_RED);
+	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
 	GotObelisk[0] = False;
 	BaseLeft[0]--;
 	ReddenSector (20);

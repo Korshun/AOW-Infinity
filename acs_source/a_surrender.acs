@@ -59,7 +59,7 @@ script aow_script342 (void) NET {
 			INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
 	delay(35*2);
 	
-	ACS_Execute(751, 0);
+	ACS_Execute(aow_script751, 0);
 }
 
 script aow_script751 (void) {

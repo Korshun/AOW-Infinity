@@ -25,7 +25,7 @@ script aow_script65 (int Team) {
 			\n\tout of refining Tiberium.
 			\n\cd--- Increases Harvesting income by \cf$150";
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -84,7 +84,7 @@ script aow_script66 (int Team) {
 			\n\ciPurpose: \cdNew Mech chassis and hardened metal plating.
 			\n\cd--- Enables construction of larger Mechs.";
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -141,7 +141,7 @@ script aow_script68 (int Team) {
 			\n\cd--- Builds a Regen. Health Cache behind the Research Centre.";
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
 		
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -153,7 +153,7 @@ script aow_script68 (int Team) {
 	SETFONT("BigFont");
 	HudMessage(s:"\ciConstruction Complete!"; HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 
-	ACS_ExecuteAlways(344, 0, 6);
+	ACS_ExecuteAlways(aow_script344, 0, 6);
 	// GlobalMedic[Team] = True;
 
 	if(Team == 0)
@@ -181,7 +181,7 @@ script aow_script69 (int Team) {
 			\n\cd--- Gives entire team slow Ammo regeneration. Mechs Included.
 			\n\cd--- Builds a Regen. Ammo Cache behind the Research Centre.";
 				HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35*1);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -195,7 +195,7 @@ script aow_script69 (int Team) {
 	HudMessage(s:"\ciConstruction Complete!";
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 
-	ACS_ExecuteAlways(344, 0, 8);
+	ACS_ExecuteAlways(aow_script344, 0, 8);
 	//GlobalAmmo[Team] = True;
 
 	if(Team == 0)
@@ -259,7 +259,7 @@ script aow_script71 (int Team) {
 			\n\ciPurpose: \cdUpgrades your repair gun
 			\n\cd--- Allows you to repair faster";
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -300,7 +300,7 @@ script aow_script72 (int Team) {
 			\n\ciPurpose: \cdNew turret tech has come in!
 			\n\cd--- Enables use of higher level turrets."; 
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;
@@ -353,7 +353,7 @@ script aow_script73 (int Team) {
 			\n\ciPurpose: \cdMore generators to power turrets.
 			\n\cd--- Increases Turret cap by 10.";
 				HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteWithResult(330, cost);
+		ACS_ExecuteWithResult(aow_script330, cost);
 		Delay(35);
 		TakeInventory("PurchaseToken",1);
 		terminate;

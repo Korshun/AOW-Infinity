@@ -46,7 +46,7 @@ script aow_script401 (int Player,int Action)
 		delay(1);
 		Teleport(70);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95,0,0,0,0);
+		ACS_ExecuteAlways(aow_script95,0,0,0,0);
 		TakeInventory("IsRed",1);
 		GiveInventory("IsBlue",1);
 		StartTime[Player] = -0x7FFFFFFF;
@@ -70,7 +70,7 @@ script aow_script401 (int Player,int Action)
 		delay(1);
 		Teleport(71);
 		GiveInventory("HasClass",1);
-		ACS_ExecuteAlways(95,0,0,0,0);
+		ACS_ExecuteAlways(aow_script95,0,0,0,0);
 		TakeInventory("IsBlue",1);
 		GiveInventory("IsRed",1);
 		StartTime[Player] = -0x7FFFFFFF;

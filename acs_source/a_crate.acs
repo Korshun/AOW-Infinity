@@ -211,7 +211,7 @@ script aow_script309 (int Crate, int Override) {
 		
 		SetFont("SMALLFONT");
 		if (TournamentMode) { // [SP] This crate is forbidden in tournament mode
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		LocalAmbientSound("powerup/kama",255);
@@ -235,7 +235,7 @@ script aow_script309 (int Crate, int Override) {
 	case 27:
 		SetFont("SMALLFONT");
 		if (!Override && (CrateTime || CheckInventory("PlasmaCannon"))) {
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		LocalAmbientSound("powerup/plas",255);
@@ -270,7 +270,7 @@ script aow_script309 (int Crate, int Override) {
 		else if(PlayerTeam() == TEAM_BLUE)
 			Teleport(70);
 		
-		ACS_ExecuteAlways(95, 0);
+		ACS_ExecuteAlways(aow_script95, 0);
 		Log(n:0, s:" gets Resign Crate.");
 		break;
 	case 13:
@@ -397,7 +397,7 @@ script aow_script309 (int Crate, int Override) {
 		SetFont("SMALLFONT");
 		if(CrateTime == True)
 		{
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		AmbientSound("weapons/rocklx",255);
@@ -637,7 +637,7 @@ script aow_script309 (int Crate, int Override) {
 	case 58:
 		SetFont("SMALLFONT");
 		GiveInventory ("ThermalCloakingTime", 90);
-		ACS_ExecuteAlways(953, 0);
+		ACS_ExecuteAlways(aow_script953, 0);
 		Log(n:0, s:" gets Thermal Cloaking.");
 		HudMessage (s:"\cUThermal cloaking!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -735,7 +735,7 @@ script aow_script309 (int Crate, int Override) {
 	case 63:
 	case 64:
 		if (CheckInventory ("RemoteC4") && !Override) {
-			ACS_ExecuteAlways(309, 0);
+			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
 		SetFont ("SMALLFONT");

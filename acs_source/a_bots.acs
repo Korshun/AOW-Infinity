@@ -6,7 +6,7 @@ int BotClassPlantDependencies[13] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
 
 script aow_script888 ENTER {
 	if (!PlayerIsBot(PlayerNumber())) terminate;
-	ACS_ExecuteAlways(92,0,0,0,0);
+	ACS_ExecuteAlways(aow_script92,0,0,0,0);
 	int chance = random(0,100);
 	delay (35);
 	
@@ -50,5 +50,5 @@ script aow_script888 ENTER {
 }
 
 script aow_script889 RESPAWN {
-	ACS_ExecuteAlways(888, 0);
+	ACS_ExecuteAlways(aow_script888, 0);
 }

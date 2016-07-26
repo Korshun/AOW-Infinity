@@ -47,7 +47,7 @@ script aow_script95 (int unused, int force) {
 		terminate;
 	}
 	
-	ACS_ExecuteAlways(310, 0, 3);
+	ACS_ExecuteAlways(aow_script310, 0, 3);
 	delay (5);
 	SetWeapon("Unarmed");
 	TakeInventory("HasClass",1);

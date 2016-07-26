@@ -346,7 +346,7 @@ script aow_script8 (int Gone) DISCONNECT {
 		}
 	}
 	else // % of players surrendering could now be higher. Al demands a recount!
-		ACS_Execute(751, 0);
+		ACS_Execute(aow_script751, 0);
 }
 
 script aow_script303 OPEN {

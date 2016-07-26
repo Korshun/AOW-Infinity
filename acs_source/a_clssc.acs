@@ -29,7 +29,7 @@ script aow_script20 (int Team) {
 	SetFragGrenades (1);
 	GiveInventory("SubMachineGun",1);
 	SetWeapon("SubMachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GUNMAN);
@@ -64,7 +64,7 @@ script aow_script21 (int Team) {
 	GiveInventory ("TimedC4Count",1);
 	GiveInventory("RepairGun",1);
 	SetWeapon("RepairGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ENGINEER);
@@ -105,7 +105,7 @@ script aow_script22 (int Team) {
 	GiveInventory("GatlingGun",1);
 	GiveInventory("MachineGunAmmo",400);
 	SetWeapon("GatlingGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_MINIGUNNER);
@@ -147,7 +147,7 @@ script aow_script23 (int Team) {
 	GiveInventory("RepairGunUpgrade",1);
 	GiveInventory("RepairGun",1);
 	SetWeapon("RepairGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_TECHNICIAN);
@@ -186,7 +186,7 @@ script aow_script24 (int Team) {
 	GiveInventory("FlamerAmmo",400);
 	GiveInventory("PhosphorusGrenadeAmmo",4);
 	SetWeapon("Flamer");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_FLAMER);
@@ -222,7 +222,7 @@ script aow_script25 (int Team) {
 	GiveInventory("TimedC4Count", 1);
 	GiveInventory("FragGrenade", 1);
 	GiveInventory("FragGrenadeAmmo", 1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("Rifle", 1);
 	GiveInventory("RifleAmmo", 30);
 	GiveInventory("RifleGrenadeAmmo", 4);
@@ -265,7 +265,7 @@ script aow_script26 (int Team) {
 	GiveInventory("FragGrenade", 1);
 	SetAmmoCapacity("FragGrenadeAmmo", 2);
 	GiveInventory("FragGrenadeAmmo", 2);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("MachineGun", 1);
 	SetWeapon("MachineGun");
 	
@@ -311,7 +311,7 @@ script aow_script27 (int Team) {
 	GiveInventory("GrenadeAmmo",40);
 	SetWeapon("Grenade_Launcher");
 	
-	ACS_ExecuteAlways(91,0);
+	ACS_ExecuteAlways(aow_script91,0);
 		
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GRENADIER);
@@ -356,7 +356,7 @@ script aow_script28 (int Team) {
 	GiveInventory("MissileLauncher",1);
 	SetWeapon("MissileLauncher");
 	
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ROCKETEER);
@@ -398,7 +398,7 @@ script aow_script29 (int Team) {
 	GiveInventory("FragGrenadeAmmo",1);
 	GiveInventory("StealthLaserRifle",1);
 	GiveInventory("Knife",1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_STEALTH);
@@ -454,7 +454,7 @@ script aow_script33 (int Team) {
 	GiveInventory("GaussRifle",1);
 	SetWeapon("GaussRifle");
 
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_GAUSSGUNNER);
@@ -545,7 +545,7 @@ script aow_script35 (int Team) {
 	GiveInventory("GeneporiumCharge",400);
 	SetWeapon("ShockRifle");
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_SHOCKTROOPER);
@@ -611,7 +611,7 @@ script aow_script36 (int Team) {
 	SetFragGrenades (4);
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_COMMANDO);
-	ACS_ExecuteAlways(91,0,0,0,0);
+	ACS_ExecuteAlways(aow_script91,0,0,0,0);
 	
 	SetWeapon("GaussRifle");
 				
@@ -712,7 +712,7 @@ script aow_script38 (int Team) {
 	GiveInventory("TimedC4Count",1);
 	GiveInventory("ShotgunAmmo",50);
 	SetFragGrenades (1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 			
 	GiveInventory("Boomstick",1);
 	SetWeapon("Boomstick");
@@ -759,7 +759,7 @@ script aow_script62 (int Team) {
 	GiveInventory("Refunds",cost/2);
 	GiveInventory("BombPack",1);
 	SetWeapon("BombPack");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_SUICIDEBOMBER);
@@ -807,7 +807,7 @@ script aow_script40 (int Team) {
 	SetFragGrenades (2);
 	
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91,0,0,0,0);
+	ACS_ExecuteAlways(aow_script91,0,0,0,0);
 	
 	GiveInventory("SniperRifle",1);
 	SetWeapon("SniperRifle");
@@ -858,7 +858,7 @@ script aow_script41 (int Team) {
 	GiveInventory("Utility_Ammo", 75);
 	
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_UTILITYGUY);
@@ -911,7 +911,7 @@ script aow_script42 (int Team) {
 	GiveInventory ("ClassID", CLASS_DEMOEXPERT);
 
 	//Check for RANK to give awards
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -954,12 +954,12 @@ script aow_script43 (int Team) {
 	GiveInventory("Boomstick",1);
 	GiveInventory("ShotgunAmmo",50);
 	SetFragGrenades (2);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("HealGun",1);
 	SetWeapon("HealGun");
 	GiveInventory("SpawnInvulnerability",1);
 	// Medic regeneration
-	ACS_ExecuteAlways(352, 0);
+	ACS_ExecuteAlways(aow_script352, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -997,7 +997,7 @@ script aow_script44 (int Team) {
 	GiveInventory("LaserChaingun",1);
 	GiveInventory("LaserChaingunAmmo",400);
 	SetWeapon("LaserChaingun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_LASERCHAINGUNNER);
@@ -1133,7 +1133,7 @@ script aow_script52 (int Team) {
 	GiveInventory("JumpJetFuel",100);
 	GiveInventory("JumpJetGatlingGun",1);
 	SetWeapon("JumpJetGatlingGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_JUMPJET);
@@ -1172,7 +1172,7 @@ script aow_script53 (int Team) {
 	SetFragGrenades (2);
 	GiveInventory("TiberiumAutorifle",1);
 	SetWeapon("TiberiumAutorifle");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_TIBRIFLE);
@@ -1207,7 +1207,7 @@ script aow_script54 (int Team) {
 	GiveInventory("TimedC4",1);
 	GiveInventory("TimedC4Count",1);
 	SetFragGrenades (1);
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	GiveInventory("DoubleShotgun",1);
 	SetWeapon("DoubleShotgun");
 	
@@ -1426,7 +1426,7 @@ script aow_script60 (int Team) {
 	GiveInventory("PlasmaGun",1);
 	SetWeapon("PlasmaGun");
 	
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
@@ -1471,7 +1471,7 @@ script aow_script61 (int Team) {
 	SetFragGrenades (2);
 	GiveInventory("ArtilleryCannon",1);
 	SetWeapon("ArtilleryCannon");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ARTILLERY);
@@ -1542,7 +1542,7 @@ script aow_script39 (int Team) {
 	GiveInventory ("TimeGun", 1);
 	GiveInventory ("TimeGunAmmo", 100);
 	SetWeapon ("TimeGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	ACS_ExecuteAlways (961, 0, Team);
 	
@@ -1592,7 +1592,7 @@ script aow_script63 (int Team) {
 	GiveInventory("SubMachineGun",1);
 	GiveInventory("MachineGun",1);
 	SetWeapon("MachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 	
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_ADVHARVESTER);
@@ -1640,7 +1640,7 @@ script aow_script64 (int Team) {
 	GiveInventory("SpawnInvulnerability",1);
 	GiveInventory ("ClassID", CLASS_HARVESTER);
 	SetWeapon("SubMachineGun");
-	ACS_ExecuteAlways(91, 0);
+	ACS_ExecuteAlways(aow_script91, 0);
 				
 	ACS_ExecuteAlways (961, 0, Team);
 	PlayerSpeeds[PlayerNumber()] = speed;
