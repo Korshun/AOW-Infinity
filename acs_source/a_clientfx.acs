@@ -2,9 +2,6 @@
 int ChemSmokers[32];
 
 script aow_script943 OPEN CLIENTSIDE {	
-	// [SP] This script allows clients to keep track of what player# they are
-	ConsoleCommand ("puke 944");
-	
 	delay (5);
 	
 	// get outside the spawn room
