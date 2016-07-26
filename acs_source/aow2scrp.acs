@@ -202,7 +202,6 @@ int DeveloperSafetyLock;
 
 int EventScripts;
 
-int GameMode;
 int BodycountTimelimit;
 
 int Credits[33];
