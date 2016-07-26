@@ -59,18 +59,28 @@ script aow_script95 (int unused, int force) {
 	
 	RefundCredits(Credits[PlayerNumber()+1], CheckInventory("Refunds"));
 	TakeInventory("Refunds", 10000);
+	bool HasPlasma = false;
+	bool HasArtillery = false;
+	bool HasTiberiumAutorifle = false;
+	bool HasSuperWeapon = false;
+	bool HasIronCurtain = false;
+	bool HasBerserk = false;
+	bool HasChainsaw = false;
+	bool HasKamikaze = false;
+	bool HasTimeGunPositiveEffect = false;
+	bool HasTimeGunNegativeEffect = false;
 	if (CheckInventory ("JumpjetSwitch")) GiveInventory ("JumpjetDeactivate", 1);
-	if (CheckInventory ("PlasmaCannon")) bool HasPlasma = True;
-	if (CheckInventory ("ArtilleryCannon")) bool HasArtillery = True;
-	if (CheckInventory ("TiberiumAutorifleWeak")) bool HasTiberiumAutorifle = True;
-	if (CheckInventory ("IonCannonBeacon") || CheckInventory("NuclearStrikeBeacon")) bool HasSuperWeapon = True;
-	if (CheckInventory ("PowerInvulnerable")) bool HasIronCurtain = True;
-	if (CheckInventory ("PowerBerserk")) bool HasBerserk = True;
-	if (CheckInventory ("EagerBeaver")) bool HasChainsaw = True;
-	if (CheckInventory ("BombPack")) bool HasKamikaze = True;
+	if (CheckInventory ("PlasmaCannon")) HasPlasma = True;
+	if (CheckInventory ("ArtilleryCannon")) HasArtillery = True;
+	if (CheckInventory ("TiberiumAutorifleWeak")) HasTiberiumAutorifle = True;
+	if (CheckInventory ("IonCannonBeacon") || CheckInventory("NuclearStrikeBeacon")) HasSuperWeapon = True;
+	if (CheckInventory ("PowerInvulnerable")) HasIronCurtain = True;
+	if (CheckInventory ("PowerBerserk")) HasBerserk = True;
+	if (CheckInventory ("EagerBeaver")) HasChainsaw = True;
+	if (CheckInventory ("BombPack")) HasKamikaze = True;
 	if (CheckInventory ("PowerTimeGunFloat") || CheckInventory ("PowerTimeGunBoost") || CheckInventory ("IsTeleporting"))
-		bool HasTimeGunPositiveEffect = 1;
-	if (CheckInventory ("PowerTimeGunWeaken") || CheckInventory ("PowerTimeGunSlow")) bool HasTimeGunNegativeEffect = 1;
+		HasTimeGunPositiveEffect = 1;
+	if (CheckInventory ("PowerTimeGunWeaken") || CheckInventory ("PowerTimeGunSlow")) HasTimeGunNegativeEffect = 1;
 	TakeInventory ("PowerTimeGunBoost", 1);
 	SetActorProperty (0, APROP_Alpha, 1.0);
 	SetPlayerProperty (0, 0, PROP_FLY);

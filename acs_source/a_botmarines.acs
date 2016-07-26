@@ -128,7 +128,8 @@ script SC_MARINE_COMPENSATION (int team) {
 		AIClass = "RedRandomMarine";
 	
 	// Count how many AI marines the specified team has
-	for (int i = 0; i < MAX_MARINES; i++) {
+	int i;
+	for (i = 0; i < MAX_MARINES; i++) {
 		if (!Bots[i])
 			continue;
 		

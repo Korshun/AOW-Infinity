@@ -11,7 +11,7 @@
 // [SP] == Eruanna
 // [NG] == Tiger
 
-#library "aow2scrp.acs"
+#library "aow2scrp"
 #include "zcommon.acs"
 
 #define MAX_NORMAL_WEAPONS 22
