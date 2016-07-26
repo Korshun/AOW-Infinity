@@ -44,7 +44,7 @@ actor RepairBonusItem : CustomInventory
     NULL A 5
     stop
   Pickup:
-    NULL A 0 ACS_ExecuteAlways(aow_script325,0,0,0,0)
+    NULL A 0 //ACS_ExecuteAlways(aow_script325,0,0,0,0)
     stop
   }
 }
