@@ -407,7 +407,6 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_class_tiberiumharvester 64
 
 
-#define aow_script1 1
 #define aow_script4 4
 #define aow_script5 5
 #define aow_script7 7
