@@ -53,7 +53,7 @@ script aow_script997 (void) {
 	Log(s:"=== Sudden Death begins ===");
 
 	if (!TournamentMode) {
-		for (int n = 0; n <= 31; n++) {
+		for (int n = 0; n < MAX_PLAYERS; n++) {
 			if (!PlayerInGame(n)) continue;
 			if (GetPlayerInfo (n, PLAYERINFO_TEAM) == TEAM_RED)
 				GiveActorInventory (3800+n, "NuclearStrikeBeacon", 1);

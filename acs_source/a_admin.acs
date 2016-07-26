@@ -274,9 +274,9 @@ script aow_teamshuffle (void) {
 	int c;
 	log (s:"[SHUFFLE] Begin of team shuffle.");
 	// first knock out start times of everybody - we don't want team switcher to interfere here
-	for (i = 0; i <= 31; i++) if (PlayerInGame (i)) StartTime[i] = -0x7FFFFFFF;
+	for (i = 0; i < MAX_PLAYERS; i++) if (PlayerInGame (i)) StartTime[i] = -0x7FFFFFFF;
 	
-	for (i = 0; i <= 31; i++) {
+	for (i = 0; i < MAX_PLAYERS; i++) {
 		if (!PlayerInGame (i)) continue;
 		
 		// don't interfere gamemasters, they're here to do something important
@@ -351,5 +351,5 @@ script aow_activatedeveloper (void) {
 	ConsoleCommand ("set aow_maxtimecopsperteam -1");
 	
 	// make everybody gamemaster, but don't morph them
-	for (i = 0; i <= 31; i++) IsAdmin[i] = true;
+	for (i = 0; i < MAX_PLAYERS; i++) IsAdmin[i] = true;
 }

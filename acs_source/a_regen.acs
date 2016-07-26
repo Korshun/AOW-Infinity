@@ -1,7 +1,7 @@
 //REGENERATION
 script aow_script343 OPEN {
 	int n, r;
-	for (n = 0; n <= 31; n++) {
+	for (n = 0; n < MAX_PLAYERS; n++) {
 		if (!PlayerInGame (n))
 			continue;
 		

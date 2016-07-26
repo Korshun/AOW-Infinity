@@ -34,13 +34,13 @@ script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 		SpawnSpotForced ("TiberiumChemSmoke", TID_TIBERIUM, 0, 0);
 		
 		// display smoke on tib-carrying players
-		for (i = 0; i <= 31; i++) {
+		for (i = 0; i < MAX_PLAYERS; i++) {
 			if (CheckActorInventory (3800+i, "TiberiumCrystal") && !ChemSmokers[i])
 				ACS_ExecuteAlways (aow_script355, 0, i, 0);
 		}
 		
 		// see friendly stealths
-		for (i = 0; i <= 31; i++) {
+		for (i = 0; i < MAX_PLAYERS; i++) {
 			teammate = GetPlayerInfo (i, PLAYERINFO_TEAM) == GetPlayerInfo (ConsolePlayerNumber(), PLAYERINFO_TEAM);
 			if (!PlayerInGame (ConsolePlayerNumber())) teammate = 1; // spects
 			if (CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayerNumber())
@@ -48,7 +48,7 @@ script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 		}
 		
 		// jumpjet fire
-		for (i = 0; i <= 31; i++) {
+		for (i = 0; i < MAX_PLAYERS; i++) {
 			if (CheckActorInventory (3800+i, "JumpjetSwitch") && !ChemSmokers[i])
 				ACS_ExecuteAlways (aow_script355, 0, i, 2);
 		}
