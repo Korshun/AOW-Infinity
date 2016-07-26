@@ -13,7 +13,6 @@
 
 #library "aow2scrp.acs"
 #include "zcommon.acs"
-#import "modcvars.acs"
 
 #define MAX_NORMAL_WEAPONS 22
 

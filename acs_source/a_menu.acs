@@ -90,9 +90,7 @@ script aow_script965 (void) CLIENTSIDE {
 			(MenuSelection[0] != 3 || MenuSelection[1] != 2 || (CheckInventory ("PortalsEnabled")));
 			
 			if ((!(buttons & BT_ATTACK) || lethimbuild || GetActorProperty (0, APROP_HEALTH) <= 0) && Timer() > MenuEpoch) {
-				SetCvar ("x_utilselection0", MenuSelection[0]);
-				SetCvar ("x_utilselection1", MenuSelection[1]);
-				ConsoleCommand ("puke -969 $x_utilselection0 $x_utilselection1");
+				ConsoleCommand(StrParam(s:"puke -969 ", d:MenuSelection[0], s:" ", d:MenuSelection[1]));
 				delay (15);
 			} else
 				delay (5);
