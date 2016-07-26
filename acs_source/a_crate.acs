@@ -820,7 +820,7 @@ script aow_script953 (void) {
 script aow_script966 (void) CLIENTSIDE {
 	// [Dusk] Don't display this actor for the player who's currently
 	// getting the bomb crate - said player gets a fade instead.
-	if (ACS_ExecuteWithResult (aow_script651, 0) == ConsolePlayer) {
+	if (ACS_ExecuteWithResult (aow_script651, 0) == ConsolePlayerNumber()) {
 		SetActorState (0, "Clear");
 		terminate;
 	}

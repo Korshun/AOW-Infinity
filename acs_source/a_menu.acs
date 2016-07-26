@@ -103,7 +103,7 @@ script aow_script965 (void) CLIENTSIDE {
 
 // [Dusk] Cursor moves up/down
 function void MoveMenuCursorVertical (bool up) {
-	if (PlayerNumber() != ConsolePlayer) {return;}
+	if (PlayerNumber() != ConsolePlayerNumber()) {return;}
 	
 	LocalAmbientSound ("menu/cursor", 127);
 	int levelnum = GetLevelInfo (LEVELINFO_LEVELNUM);
@@ -136,7 +136,7 @@ function void MoveMenuCursorVertical (bool up) {
 
 // [Dusk] Cursor moves right/left
 function void MoveMenuCursorHorizontal (bool right) {
-	if (PlayerNumber() != ConsolePlayer) {return;}
+	if (PlayerNumber() != ConsolePlayerNumber()) {return;}
 	
 	if (right != MenuHorPos)
 		LocalAmbientSound ("menu/cursor", 127);

@@ -246,10 +246,6 @@ int HasTeleported[32];
 
 int LastMenu[33] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
 
-// [SP] Current Console Player IDX (client-side only)
-// Defaults to -1, this will be the "server" - anytime ConsolePlayer is -1
-// it means the client-side script did not execute, therefore this is the server.
-int ConsolePlayer = -1;
 
 //Bases
 bool GotRefinery[2];
@@ -537,7 +533,6 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script941 941
 #define aow_script942 942
 #define aow_script943 943
-#define aow_script944 944
 #define aow_script945 945
 #define aow_script946 946
 #define aow_script947 947

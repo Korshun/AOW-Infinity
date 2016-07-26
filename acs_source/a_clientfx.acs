@@ -23,12 +23,11 @@ script aow_script943 OPEN CLIENTSIDE {
 	ConsoleCommand ("puke 945");
 }
 
-script aow_script944 (void) NET CLIENTSIDE {ConsolePlayer = PlayerNumber();}
-script aow_script946 (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayer, s:" named ", n:0);}
+script aow_script946 (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
 
 script aow_script366 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
-	if (ConsolePlayer == -1) terminate;
+	if (ConsolePlayerNumber() == -1) terminate;
 	
 	// if (GetCVAR ("aow_nofriendinfo") <= 0) ConsoleCommand ("set aow_nofriendinfo 0");
 	
@@ -45,9 +44,9 @@ script aow_script366 (void) NET CLIENTSIDE {
 		
 		// see friendly stealths
 		for (i = 0; i <= 31; i++) {
-			teammate = GetPlayerInfo (i, PLAYERINFO_TEAM) == GetPlayerInfo (ConsolePlayer, PLAYERINFO_TEAM);
-			if (!PlayerInGame (ConsolePlayer)) teammate = 1; // spects
-			if (CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayer)
+			teammate = GetPlayerInfo (i, PLAYERINFO_TEAM) == GetPlayerInfo (ConsolePlayerNumber(), PLAYERINFO_TEAM);
+			if (!PlayerInGame (ConsolePlayerNumber())) teammate = 1; // spects
+			if (CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayerNumber())
 				ACS_ExecuteAlways (aow_script355, 0, i, 1);
 		}
 		
@@ -136,7 +135,7 @@ script aow_script986 (int type, int target) CLIENTSIDE {
 function bool SpawnTrail (int src, int dest, int type, int interval, int rand,
 				  int xoff0, int yoff0, int zoff0, int xoff1, int yoff1, int zoff1) {
 	// The server may not do this
-	if (ConsolePlayer == -1)
+	if (ConsolePlayerNumber() == -1)
 		return false;
 	
 	int x, y, z;

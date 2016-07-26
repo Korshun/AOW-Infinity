@@ -161,7 +161,7 @@ script aow_script651 (void) {
 
 // FRIEND HEALTH DISPLAY
 script aow_script654 (void) CLIENTSIDE {
-	if (PlayerNumber() != ConsolePlayer) terminate;
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
 	int myteam = PlayerTeam ();
 	str nc = "\ch";
 	if (myteam) nc = "\cg";
@@ -171,7 +171,7 @@ script aow_script654 (void) CLIENTSIDE {
 	
 	int tid = ActivatorTID ();
 	if (PlayerNumber() == -1) terminate;
-	if (tid == 3800+ConsolePlayer) terminate;
+	if (tid == 3800+ConsolePlayerNumber()) terminate;
 	if (GetPlayerInfo (tid-3800, PLAYERINFO_TEAM) != myteam) terminate;
 	
 	int shp = GetSpawnHealth ();

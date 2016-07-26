@@ -206,7 +206,7 @@ script aow_script920 (int modtype) {
 }
 
 script aow_script922 (int modtype) CLIENTSIDE {
-	if (PlayerNumber() != ConsolePlayer) terminate;
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
 	
 	TakeInventory ("ArmorChangeProgress", 175);
 	

@@ -207,7 +207,6 @@ const int aow_script940 = 940;
 const int aow_script941 = 941;
 const int aow_script942 = 942;
 const int aow_script943 = 943;
-const int aow_script944 = 944;
 const int aow_script945 = 945;
 const int aow_script946 = 946;
 const int aow_script947 = 947;
