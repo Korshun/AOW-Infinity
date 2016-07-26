@@ -16,12 +16,12 @@ function void MECH_PopArmorMod (void) {
 	SetArmorGrade (NOCHANGE, mod);
 }
 
-script aow_script45 (void) {ACS_Execute (80, 0, MECH_WOLVERINE);}
-script aow_script46 (void) {ACS_Execute (80, 0, MECH_TITAN);}
-script aow_script47 (void) {ACS_Execute (80, 0, MECH_RAVEN);}
-script aow_script48 (void) {ACS_Execute (80, 0, MECH_MADCAT);}
-script aow_script58 (void) {ACS_Execute (80, 0, MECH_ORCA);}
-script aow_script59 (void) {ACS_Execute (80, 0, MECH_GUARDIAN);}
+script aow_mech_wolverine (void) {ACS_Execute (80, 0, MECH_WOLVERINE);}
+script aow_mech_titan (void) {ACS_Execute (80, 0, MECH_TITAN);}
+script aow_mech_raven (void) {ACS_Execute (80, 0, MECH_RAVEN);}
+script aow_mech_madcat (void) {ACS_Execute (80, 0, MECH_MADCAT);}
+script aow_mech_orca (void) {ACS_Execute (80, 0, MECH_ORCA);}
+script aow_mech_guardian (void) {ACS_Execute (80, 0, MECH_GUARDIAN);}
 
 // global mech purchase script
 script aow_script80 (int mech) {

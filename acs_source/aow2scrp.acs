@@ -389,7 +389,10 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_class_demoexpert 42
 #define aow_class_fieldmedic 43
 #define aow_class_laserchaingunner 44
-
+#define aow_mech_wolverine 45
+#define aow_mech_titan 46
+#define aow_mech_raven 47
+#define aow_mech_madcat 48
 #define aow_addon_tiberiumautorifle 49
 #define aow_addon_chainsaw 50
 #define aow_addon_artillerycannon 51
@@ -399,7 +402,8 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_addon_ionbeacon 55
 #define aow_addon_nukebeacon 56
 #define aow_addon_armor 57
-
+#define aow_mech_orca 58
+#define aow_mech_guardian 59
 #define aow_class_plasmagunner 60
 #define aow_class_artillerysoldier 61
 #define aow_class_suicidebomber 62
@@ -414,12 +418,6 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script10 10
 #define aow_script11 11
 #define aow_script32 32
-#define aow_script45 45
-#define aow_script46 46
-#define aow_script47 47
-#define aow_script48 48
-#define aow_script58 58
-#define aow_script59 59
 #define aow_script63 63
 #define aow_script64 64
 #define aow_script65 65
