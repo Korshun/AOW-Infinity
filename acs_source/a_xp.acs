@@ -31,17 +31,7 @@ function int GetExpNeed (void) {
 }
 
 function str GetRankPic (void) {
-	switch (Rank[PlayerNumber()]) {
-		case RANK_PRIVATE: return "RANK01";
-		case RANK_CORPORAL: return "RANK02";
-		case RANK_SERGEANT: return "RANK03";
-		case RANK_MASTERSGT: return "RANK04";
-		case RANK_OFFICER: return "RANK05";
-		case RANK_LIEUTENANT: return "RANK06";
-		case RANK_MAJOR: return "RANK07";
-		case RANK_COMMANDO: return "RANK08";
-	}
-	return -1;
+	return StrParam(s:"RANK0", d:Rank[PlayerNumber()] + 1);
 }
 
 // check for rankup
