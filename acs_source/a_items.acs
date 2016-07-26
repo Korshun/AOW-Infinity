@@ -131,7 +131,7 @@ script aow_script952 (int action, int i) {
 		for (i = 0; i <= 31; i++) {
 			if (GetActorHealth (3800+i) < GetActorSpawnHealth (3800+i) && !CheckActorInventory (3800+i, "IsMech")) {
 				if (CheckActorDistance (0, 3800+i, HEALRAD_RANGE))
-					ACS_ExecuteAlways (952, 0, 1, i);
+					ACS_ExecuteAlways (aow_script952, 0, 1, i);
 			}
 		}
 		break;

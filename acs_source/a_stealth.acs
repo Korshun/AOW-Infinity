@@ -47,7 +47,7 @@ script aow_script310 (int action) {
 		TakeInventory ("StealthPain", 1);
 		SetActorProperty (0, APROP_RenderStyle, STYLE_Normal);
 		SetInventory ("StealthMode", 0);
-		if (oldmode != 3) ACS_ExecuteAlways (310, 0);
+		if (oldmode != 3) ACS_ExecuteAlways (aow_script310, 0);
 		terminate;
 	case 3:
 		// force destealth (Deselect state for instance)

@@ -43,8 +43,8 @@ script aow_script994 DEATH {
 	}
 		
 	// were we on a spree?
-	int killer_t = ACS_ExecuteWithResult (964, 5);
-	int killer_p = ACS_ExecuteWithResult (964, 9);
+	int killer_t = ACS_ExecuteWithResult (aow_script964, 5);
+	int killer_p = ACS_ExecuteWithResult (aow_script964, 9);
 	//Log (n:0, s:"\c-: I am ", d:ActivatorTID(), s:" and was killed by ", d:killer_t, s:" (", n:killer_p+1, s:")");
 	if (CheckInventory ("SpreeCount") >= 5) {
 		SetFont ("SMALLFONT");
@@ -89,7 +89,7 @@ script aow_script994 DEATH {
 	// no points for suicides
 	if (n0 != n1 && n1 != -1) {
 		GivePoints (2*points);
-		ACS_ExecuteAlways (931, 0);
+		ACS_ExecuteAlways (aow_script931, 0);
 		
 		LocalAmbientSound ("game/boink", 127);
 		GiveCredits (-1, CreditFragAward);
@@ -143,7 +143,7 @@ script aow_script994 DEATH {
 		}
 	}
 	
-	ACS_ExecuteAlways (992, 0);
+	ACS_ExecuteAlways (aow_script992, 0);
 }
 
 // Guardian stomp health

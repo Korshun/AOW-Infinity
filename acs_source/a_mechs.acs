@@ -194,7 +194,7 @@ script aow_script80 (int mech) {
 			HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 	
 	
-	ACS_ExecuteAlways (315, 0); // display mech HUD
+	ACS_ExecuteAlways (aow_script315, 0); // display mech HUD
 	
 	int tid = 6000;
 	if (PlayerTeam() == TEAM_BLUE) tid = 6001;
@@ -456,7 +456,7 @@ script aow_script697 (void) {
 	SetActorProperty (0, APROP_Invulnerable, false);
 	SetPlayerProperty (0, 0, 3);
 	CheckAndRemove ("MechEjectButton");
-	ACS_ExecuteAlways (10, 0);
+	ACS_ExecuteAlways (aow_script10, 0);
 	TakeInventory ("IsMech", 1);
 	MECH_PopArmorMod ();
 	
@@ -600,6 +600,6 @@ script aow_script86 (int x) {
 }
 
 // duplicates..
-script aow_script85 (void) {ACS_ExecuteAlways (84, 0);}
-script aow_script88 (void) {ACS_ExecuteAlways (86, 0, 1);}
+script aow_script85 (void) {ACS_ExecuteAlways (aow_script84, 0);}
+script aow_script88 (void) {ACS_ExecuteAlways (aow_script86, 0, 1);}
 script aow_script89 (void) {} // dummy - present because maps actually call this. even though it was empty

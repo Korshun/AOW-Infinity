@@ -93,7 +93,7 @@ script aow_script942 (void) NET {
 	GiveInventory("IsInSpawnRoom",1);
 	
 	// resign if necessary
-	if (CheckInventory ("HasClass")) ACS_ExecuteAlways (95, 0);
+	if (CheckInventory ("HasClass")) ACS_ExecuteAlways (aow_script95, 0);
 	
 	// logs and notices
 	str newteam, newcolor;

@@ -224,6 +224,7 @@ const int aow_script956 = 956;
 const int aow_script957 = 957;
 const int aow_script958 = 958;
 const int aow_script959 = 959;
+const int aow_eventscript = 960;
 const int aow_script961 = 961;
 const int aow_script963 = 963;
 const int aow_script964 = 964;

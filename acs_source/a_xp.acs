@@ -13,7 +13,7 @@ Function void AddExperience (int XP) {
 		HUDMSG_FADEOUT, 140+PlayerNumber(), CR_WHITE,
 		0.5, 0.59, 2.0, 1.0);
 	
-	ACS_ExecuteAlways (7,0);
+	ACS_ExecuteAlways (aow_script7,0);
 }
 
 function int GetExpNeed (void) {
@@ -183,8 +183,8 @@ script aow_script91 (void) {
 script aow_script92 (void) {
 	if (!CheckInventory("InGame")) {
 		GiveInventory ("InGame", 1);
-		ACS_ExecuteAlways (5, 0);
-		ACS_ExecuteAlways (10, 0);
+		ACS_ExecuteAlways (aow_script5, 0);
+		ACS_ExecuteAlways (aow_script10, 0);
 		Thing_ChangeTID(0,PlayerNumber()+3800);
 	}
 }

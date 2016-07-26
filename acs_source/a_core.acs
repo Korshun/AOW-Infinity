@@ -68,8 +68,8 @@ script aow_script999 OPEN {
 		Team_GivePoints (TEAM_BLUE, 1, 0);
 	}
 	
-	ACS_ExecuteAlways (930, 0, BUILDING_ALL, TEAM_RED);
-	ACS_ExecuteAlways (930, 0, BUILDING_ALL, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_ALL, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_ALL, TEAM_BLUE);
 	
 	// [Dusk] If ticket pool is enabled, spawn ticket counters. These counters
 	// are used to inform clients about ticket values, since the left-hand
@@ -92,7 +92,7 @@ script aow_script999 OPEN {
 	// Activate developer mode if the proper cvar is set.
 	if (GetCVAR ("aow_developer")) {
 		DeveloperSafetyLock = 0x7FFFFFFF;
-		ACS_ExecuteAlways (404, 0);
+		ACS_ExecuteAlways (aow_script404, 0);
 	}
 }
 
@@ -259,7 +259,7 @@ script aow_script10 RESPAWN {
 		GiveInventory("IsFemale",1);
 	}
 	
-	ACS_ExecuteAlways (97, 0);
+	ACS_ExecuteAlways (aow_script97, 0);
 	SetWeapon ("Unarmed");
 }
 
@@ -289,8 +289,8 @@ script aow_script11 ENTER {
 	}
 	
 	delay(5);
-	ACS_ExecuteAlways (5, 0); // display credits/exp HUD
-	ACS_ExecuteAlways (92, 0);
+	ACS_ExecuteAlways (aow_script5, 0); // display credits/exp HUD
+	ACS_ExecuteAlways (aow_script92, 0);
 	
 	// If we're in developer mode, make him gamemaster.
 	if (Developer) {

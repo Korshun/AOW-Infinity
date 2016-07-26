@@ -20,7 +20,7 @@ script aow_script998 OPEN {
 }
 
 script aow_script997 (void) {
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_SUDDENDEATH, TEAM_NONE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_SUDDENDEATH, TEAM_NONE);
 	GiveActorInventory (100, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (101, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (102, "SuddenDeathVulnerability", 1);
@@ -84,7 +84,7 @@ script aow_script997 (void) {
 		SetActorSpeed (TID_TICKETCOUNTER_RED, StartingTickets);
 		
 		// tell clients to update the hud
-		ACS_ExecuteAlways (931, 0);
+		ACS_ExecuteAlways (aow_script931, 0);
 	}
 	
 	SuddenDeath = true;

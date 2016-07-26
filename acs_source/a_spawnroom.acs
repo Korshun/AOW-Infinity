@@ -33,7 +33,7 @@ script aow_script94 (int Team) {
 	
 	TakeInventory("IsInSpawnRoom",1);
 	
-	ACS_ExecuteAlways (961, 0, Team);
+	ACS_ExecuteAlways (aow_script961, 0, Team);
 }
 
 // RESIGN
@@ -136,8 +136,8 @@ script aow_script95 (int unused, int force) {
 	HudMessage(s:"You have resigned from your class.";
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_ORANGE, 0.5, 0.45, 2.0, 1.0);
 	
-	ACS_ExecuteAlways (91, 0);
-	ACS_ExecuteAlways (10, 0);
+	ACS_ExecuteAlways (aow_script91, 0);
+	ACS_ExecuteAlways (aow_script10, 0);
 	RecountTimeCops ();
 	Log (n:0, s:" resigns.");
 	
@@ -182,13 +182,13 @@ script aow_script96 (int type) {
 				HUDMSG_FADEOUT, 240+PlayerNumber(), CR_RED, 0.5, 0.45, 2.0, 1.0);
 			
 			delay (5);
-			ACS_ExecuteAlways (96, 0, type-2);
+			ACS_ExecuteAlways (aow_script96, 0, type-2);
 			terminate;
 		}
 		
 		if (!CheckFactory (type-2)) {
 			delay (5);
-			ACS_ExecuteAlways (96, 0, type-2);
+			ACS_ExecuteAlways (aow_script96, 0, type-2);
 			terminate;
 		}
 		
@@ -198,7 +198,7 @@ script aow_script96 (int type) {
 			HudMessage(s:"You can't pilot a mech while berserk!\nYou'll just tear the thing into pieces.";
 				HUDMSG_FADEOUT, 240+PlayerNumber(), CR_RED, 0.5, 0.45, 2.0, 1.0);
 			delay (5);
-			ACS_ExecuteAlways (96, 0, type-2);
+			ACS_ExecuteAlways (aow_script96, 0, type-2);
 			terminate;
 		}
 
@@ -208,7 +208,7 @@ script aow_script96 (int type) {
 			HudMessage(s:"You have upgraded yourself in a\nway where you must resign!";
 				HUDMSG_FADEOUT, 240+PlayerNumber(), CR_RED, 0.5, 0.35, 2.0, 1.0);
 			delay (5);
-			ACS_ExecuteAlways (96, 0, type-2);
+			ACS_ExecuteAlways (aow_script96, 0, type-2);
 			terminate;
 		}
 		
@@ -220,7 +220,7 @@ script aow_script96 (int type) {
 		
 		if (!CheckPlant (type-4)) {
 			delay (5);
-			ACS_ExecuteAlways (96, 0, type-4);
+			ACS_ExecuteAlways (aow_script96, 0, type-4);
 			terminate;
 		}
 		

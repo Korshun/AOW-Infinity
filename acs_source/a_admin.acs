@@ -127,7 +127,7 @@ script aow_script402 (int Arg1, int Arg2, int Arg3) NET
 		break;
 	case 3:
 		// Activate crate
-		ACS_ExecuteAlways (309, 0, Arg2, Arg3);
+		ACS_ExecuteAlways (aow_script309, 0, Arg2, Arg3);
 		break;
 	case 4:
 	case 5:
@@ -152,7 +152,7 @@ script aow_script402 (int Arg1, int Arg2, int Arg3) NET
 			Teleport(71);
 		else
 			Teleport(70);
-		ACS_ExecuteAlways (95, 0);
+		ACS_ExecuteAlways (aow_script95, 0);
 		break;
 	case 8:
 		// Give beacon item
@@ -233,9 +233,9 @@ script aow_script402 (int Arg1, int Arg2, int Arg3) NET
 			HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_WHITE, 0.5, 0.45, 2.0, 1.0);
 		Log (n:0, s:" (#", d:PlayerNumber(), s:") exits admin mode.");
 		IsAdmin[PlayerNumber()] = false;
-		ACS_ExecuteAlways (96, 0, 1-PlayerTeam()); // teleport to spawn room
+		ACS_ExecuteAlways (aow_script96, 0, 1-PlayerTeam()); // teleport to spawn room
 		delay (5);
-		ACS_ExecuteAlways (95, 0); // resign
+		ACS_ExecuteAlways (aow_script95, 0); // resign
 		break;
 	case 17:
 		// Set health
@@ -301,7 +301,7 @@ script aow_script403 (void) {
 		
 		if (!IsAdmin [i]) {
 			if (!CheckInventory ("IsInSpawnRoom") || c) Teleport (70 + PlayerTeam());
-			ACS_ExecuteAlways (95, 0, 0, TRUE);
+			ACS_ExecuteAlways (aow_script95, 0, 0, TRUE);
 		}
 		
 		delay (5);

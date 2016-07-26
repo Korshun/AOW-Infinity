@@ -22,7 +22,7 @@ script aow_script5 RESPAWN {
 		
 		delay (35);
 		if (!CheckWeapon("StealthLaserRifle") && !CheckWeapon("Knife"))
-			ACS_ExecuteAlways (310, 0, 3);
+			ACS_ExecuteAlways (aow_script310, 0, 3);
 	}
 }
 

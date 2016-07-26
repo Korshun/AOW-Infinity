@@ -15,8 +15,8 @@ script aow_script101 (VOID)
 	HudMessageBold(s:"The \chBlue Barracks\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue Barracks.");
 	AwardBuildingDestruction (TEAM_RED, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_BLUE);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_BARRACKS, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_BARRACKS, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_BARRACKS, TEAM_BLUE);
 }
 
 //---------------------------BLUE REFINERY DEATH
@@ -35,8 +35,8 @@ script aow_script102 (VOID)
 	HudMessageBold(s:"The \chBlue Refinery\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue Refinery.");
 	AwardBuildingDestruction (TEAM_RED, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_REFINERY, TEAM_BLUE);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_REFINERY, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_REFINERY, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_REFINERY, TEAM_BLUE);
 }
 
 //---------------------------BLUE POWERPLANT DEATH
@@ -58,8 +58,8 @@ script aow_script103 (void) {
 		HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue Research Centre.");
 	AwardBuildingDestruction (TEAM_RED, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_RESCENTRE, TEAM_BLUE);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_PLANT, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_RESCENTRE, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_PLANT, TEAM_BLUE);
 }
 
 //---------------------------BLUE WAR FACTORY DEATH
@@ -79,8 +79,8 @@ script aow_script104 (VOID)
 	HudMessageBold(s:"The \chBlue WarFactory\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue War Factory.");
 	AwardBuildingDestruction (TEAM_RED, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_BLUE);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_FACTORY, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_FACTORY, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_FACTORY, TEAM_BLUE);
 }
 
 //---------------------------BLUE REPAIR FACILITY DEATH
@@ -96,13 +96,13 @@ script aow_script105 (VOID)
 	// SetFont("BIGFONT");
 	// HudMessageBold(s:"The \chBlue Repair Facility\cd has been destroyed!!";
 	// 	HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_REPAIR, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_REPAIR, TEAM_BLUE);
 	SetFont ("SMALLFONT");
 	HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cFRepair Facility!";
 		HUDMSG_FADEOUT, 15000, CR_WHITE,
 		INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue Repair Facility.");
-	ACS_ExecuteAlways (930, 0, BUILDING_REPAIR, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_REPAIR, TEAM_BLUE);
 	AwardBuildingDestruction (TEAM_RED, true);
 }
 
@@ -122,8 +122,8 @@ script aow_script114 (VOID)
 	HudMessageBold(s:"The \chBlue Obelisk\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Blue Obelisk.");
 	AwardBuildingDestruction (TEAM_RED, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_BLUE);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_OBELISK, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_OBELISK, TEAM_BLUE);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_OBELISK, TEAM_BLUE);
 }
 
 //---------------------------RED BARRACKS DEATH
@@ -131,7 +131,7 @@ script aow_script201 (VOID)
 {
 	Thing_Destroy(200,0);
 	Thing_Destroy(201,0);
-	ACS_ExecuteAlways (99, 0, TEAM_RED);
+	ACS_ExecuteAlways (aow_script99, 0, TEAM_RED);
 	
 	GotBarracks[0] = False;
 	BaseLeft[0]--;
@@ -146,8 +146,8 @@ script aow_script201 (VOID)
 	HudMessageBold(s:"The \cgRED Barracks\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Red Barracks.");
 	AwardBuildingDestruction (TEAM_BLUE, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_BARRACKS, TEAM_RED);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_BARRACKS, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_BARRACKS, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_BARRACKS, TEAM_RED);
 }
 
 //---------------------------RED REFINERY DEATH
@@ -166,8 +166,8 @@ script aow_script202 (VOID)
 	HudMessageBold(s:"The \cgRed Refinery\cd has been destroyed!!"; HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Red Refinery.");
 	AwardBuildingDestruction (TEAM_BLUE, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_REFINERY, TEAM_RED);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_REFINERY, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_REFINERY, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_REFINERY, TEAM_RED);
 }
 
 //---------------------------RED POWERPLANT DEATH
@@ -188,8 +188,8 @@ script aow_script203 (VOID)
 		HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Red Research Centre.");
 	AwardBuildingDestruction (TEAM_BLUE, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_RESCENTRE, TEAM_RED);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_PLANT, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_RESCENTRE, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_PLANT, TEAM_RED);
 }
 
 //---------------------------RED WAR FACTORY DEATH
@@ -203,8 +203,8 @@ script aow_script204 (VOID)
 	SetLineTexture(10,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	ReddenSector (11);
 	ReddenSector (12);
-	ACS_ExecuteAlways (930, 0, BUILDING_FACTORY, TEAM_RED);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_FACTORY, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_FACTORY, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_FACTORY, TEAM_RED);
 	
 	SetFont("BIGFONT");
 		
@@ -225,8 +225,8 @@ script aow_script205 (VOID) {
 	/*SetFont("BIGFONT");
 	HudMessageBold(s:"The \cgRed Repair Facility\cd has been destroyed!!";
 		HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);*/
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_REPAIR, TEAM_RED);
-	ACS_ExecuteAlways (930, 0, BUILDING_REPAIR, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_REPAIR, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_REPAIR, TEAM_RED);
 	SetFont ("SMALLFONT");
 	HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cFRepair Facility!";
 		HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -252,8 +252,8 @@ script aow_script214 (VOID)
 		HUDMSG_FADEOUT, 0, CR_Green, 0.5, 0.7, 2.0, 1.0);
 	Log(n:0, s:" destroys Red Obelisk.");
 	AwardBuildingDestruction (TEAM_BLUE, false);
-	ACS_ExecuteAlways (930, 0, BUILDING_OBELISK, TEAM_RED);
-	if (EventScripts) ACS_ExecuteAlways (960, 0, ACTION_DESTROY_OBELISK, TEAM_RED);
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_OBELISK, TEAM_RED);
+	if (EventScripts) ACS_ExecuteAlways (aow_eventscript, 0, ACTION_DESTROY_OBELISK, TEAM_RED);
 }
 
 script aow_script97 (int Structure, int Team) CLIENTSIDE {
@@ -306,7 +306,7 @@ function void AwardBuildingDestruction (int team, int small) {
 	for (int k = 0; k <= 31; k++) {
 		if (PlayerInGame(k) && GetPlayerInfo(k,PLAYERINFO_TEAM) == Team) {
 			SetActivator(3800+k);
-			ACS_ExecuteAlways (318,0);
+			ACS_ExecuteAlways (aow_script318,0);
 			GiveCredits (-1, 500);
 		}
 	}
@@ -315,7 +315,7 @@ function void AwardBuildingDestruction (int team, int small) {
 	SetActivator (activator);
 	
 	// no latent functions in functions
-	ACS_ExecuteAlways (653, 0, team, small);
+	ACS_ExecuteAlways (aow_script653, 0, team, small);
 }
 
 script aow_script653 (int team, int small) {

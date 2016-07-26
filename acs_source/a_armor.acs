@@ -190,7 +190,7 @@ script aow_script981 (void) NET CLIENTSIDE {
 
 script aow_script920 (int modtype) {
 	GiveInventory ("IsChangingArmor", 1);
-	ACS_ExecuteAlways (922, 0, modtype);
+	ACS_ExecuteAlways (aow_script922, 0, modtype);
 	
 	int n = 5;
 	

@@ -61,7 +61,7 @@ function int fdistance (int tid1, int tid2)
 // if not, prints the error message and returns 0
 function int CheckCredits(int price) {
 	if (IsAdmin[PlayerNumber()]) return 1;
-	price = ACS_ExecuteWithResult (330, price);
+	price = ACS_ExecuteWithResult (aow_script330, price);
 	
 	if(Credits[PlayerNumber()+1] < price) {
 		TakeInventory("PurchaseToken",1);
@@ -101,11 +101,11 @@ function int IsSecondPress(str StatCard, int price) {
 		StatCard != "WEAP05" && StatCard != "WEAP06")) {return 1;}
 	
 	if (!CheckInventory("PurchaseToken")) {
-		ACS_ExecuteWithResult (330, price);
+		ACS_ExecuteWithResult (aow_script330, price);
 		SetFont(StatCard);
 		HudMessage(s:"a";
 			HUDMSG_FADEOUT, 2100+PlayerNumber(), CR_Green, 0.25, 0.25, 3.0, 2.0);
-		ACS_ExecuteAlways (956, 0);
+		ACS_ExecuteAlways (aow_script956, 0);
 		return 0;
 	} else {
 		// Clear the card out once the class is purchased
@@ -323,7 +323,7 @@ function void TakeTickets (int team, int count) {
 		SetActorSpeed (TID_TICKETCOUNTER_BLUE, Tickets[TEAM_BLUE]);
 	
 	// tell clients to update the hud
-	ACS_ExecuteAlways (931, 0);
+	ACS_ExecuteAlways (aow_script931, 0);
 	
 	// handle ticket loss
 	int d;

@@ -70,7 +70,7 @@ script aow_script309 (int Crate, int Override) {
 			if (GotFactory[1]) SetActorHealth (107, GetActorSpawnHealth (107));
   			if (GotObelisk[1]) SetActorHealth (114, GetActorSpawnHealth (114));
 		}
-		ACS_ExecuteAlways (930, 0, BUILDING_ALL, PlayerTeam());
+		ACS_ExecuteAlways (aow_script930, 0, BUILDING_ALL, PlayerTeam());
 		HudMessage (s:"\cDBase miracle!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
@@ -427,7 +427,7 @@ script aow_script309 (int Crate, int Override) {
 		HudMessage (s:"\cRBase crasher!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
-		ACS_ExecuteAlways (930, 0, BUILDING_ALL, PlayerTeam()); // update the hud
+		ACS_ExecuteAlways (aow_script930, 0, BUILDING_ALL, PlayerTeam()); // update the hud
 		break;
 	case 37:
 	case 38:
@@ -550,7 +550,7 @@ script aow_script309 (int Crate, int Override) {
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		GiveInventory("HealingRadiusItem",1);
-		ACS_ExecuteAlways (352, 0);
+		ACS_ExecuteAlways (aow_script352, 0);
 		Log(n:0, s:" gets Healing Radius crate.");
 		break;
 	case 49:
@@ -607,7 +607,7 @@ script aow_script309 (int Crate, int Override) {
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		GiveInventory("MarineBeaconItem",1);
-		ACS_ExecuteAlways (352, 0);
+		ACS_ExecuteAlways (aow_script352, 0);
 		Log(n:0, s:" gets Marine Beacon.");
 		break;
 	case 55:
@@ -820,19 +820,19 @@ script aow_script953 (void) {
 script aow_script966 (void) CLIENTSIDE {
 	// [Dusk] Don't display this actor for the player who's currently
 	// getting the bomb crate - said player gets a fade instead.
-	if (ACS_ExecuteWithResult (651, 0) == ConsolePlayer) {
+	if (ACS_ExecuteWithResult (aow_script651, 0) == ConsolePlayer) {
 		SetActorState (0, "Clear");
 		terminate;
 	}
 	
-	if (ACS_ExecuteWithResult (964, 3) <= 0) {
+	if (ACS_ExecuteWithResult (aow_script964, 3) <= 0) {
 		SetActorState (0, "Clear");
 		terminate;
 	}
 	
-	int x = ACS_ExecuteWithResult (964, 0);
-	int y = ACS_ExecuteWithResult (964, 1);
-	int z = ACS_ExecuteWithResult (964, 2);
+	int x = ACS_ExecuteWithResult (aow_script964, 0);
+	int y = ACS_ExecuteWithResult (aow_script964, 1);
+	int z = ACS_ExecuteWithResult (aow_script964, 2);
 	SetActorPosition (0, x, y, z, 0);
 }
 

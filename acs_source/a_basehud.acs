@@ -102,7 +102,7 @@ script aow_script930 (int what, int team) {
 		}
 	}
 	
-	if (u) ACS_ExecuteAlways (931, 0); // tell clients to update the hud
+	if (u) ACS_ExecuteAlways (aow_script931, 0); // tell clients to update the hud
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

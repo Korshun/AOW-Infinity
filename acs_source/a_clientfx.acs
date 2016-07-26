@@ -40,7 +40,7 @@ script aow_script366 (void) NET CLIENTSIDE {
 		// display smoke on tib-carrying players
 		for (i = 0; i <= 31; i++) {
 			if (CheckActorInventory (3800+i, "TiberiumCrystal") && !ChemSmokers[i])
-				ACS_ExecuteAlways (355, 0, i, 0);
+				ACS_ExecuteAlways (aow_script355, 0, i, 0);
 		}
 		
 		// see friendly stealths
@@ -48,13 +48,13 @@ script aow_script366 (void) NET CLIENTSIDE {
 			teammate = GetPlayerInfo (i, PLAYERINFO_TEAM) == GetPlayerInfo (ConsolePlayer, PLAYERINFO_TEAM);
 			if (!PlayerInGame (ConsolePlayer)) teammate = 1; // spects
 			if (CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayer)
-				ACS_ExecuteAlways (355, 0, i, 1);
+				ACS_ExecuteAlways (aow_script355, 0, i, 1);
 		}
 		
 		// jumpjet fire
 		for (i = 0; i <= 31; i++) {
 			if (CheckActorInventory (3800+i, "JumpjetSwitch") && !ChemSmokers[i])
-				ACS_ExecuteAlways (355, 0, i, 2);
+				ACS_ExecuteAlways (aow_script355, 0, i, 2);
 		}
 	}
 }

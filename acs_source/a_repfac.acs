@@ -10,7 +10,7 @@ script aow_script106 (int team) {
 	if (CheckInventory ("InRepairs")) terminate;
 	GiveInventory("InRepairs",1);
 	delay(1);
-	ACS_ExecuteAlways (107, 0);
+	ACS_ExecuteAlways (aow_script107, 0);
 }
 
 script aow_script107 (void) {

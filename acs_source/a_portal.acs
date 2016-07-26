@@ -176,7 +176,7 @@ script SC_PORTAL_INIT (void) {
 	}
 	
 	// update the hud
-	ACS_ExecuteAlways (930, 0, BUILDING_PORTAL, PlayerTeam());
+	ACS_ExecuteAlways (aow_script930, 0, BUILDING_PORTAL, PlayerTeam());
 }
 
 // Portal teleport function
@@ -190,7 +190,7 @@ script SC_PORTAL_FUNCTION (int idx) {
 		
 		// teamkilling should not yield a reward...
 		if (idx >= 2 && PlayerTeam () == TEAM_BLUE || idx < 2 && PlayerTeam () == TEAM_RED) {
-			ACS_ExecuteAlways (324, 0, 1); // 50xp
+			ACS_ExecuteAlways (aow_script324, 0, 1); // 50xp
 			AddCredits (Credits[PlayerNumber () + 1], 200);
 		}
 		
@@ -207,7 +207,7 @@ script SC_PORTAL_FUNCTION (int idx) {
 		}
 		
 		// update the hud
-		ACS_ExecuteAlways (930, 0, BUILDING_PORTAL, PlayerTeam());
+		ACS_ExecuteAlways (aow_script930, 0, BUILDING_PORTAL, PlayerTeam());
 		
 		terminate;
 	}

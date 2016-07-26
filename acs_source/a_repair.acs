@@ -66,7 +66,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 		
 		if (!(RepairBonus[pn] % 10)) GiveCredits (-1, CreditRepairAmount);
 		
-		ACS_ExecuteAlways (930, 0, what, tteam); // update the hud
+		ACS_ExecuteAlways (aow_script930, 0, what, tteam); // update the hud
 	} else if (tid >= 3800 && tid <= 3831 || CheckInventory ("IsAIMarine")) {
 		if (repairtype == REPAIRTYPE_REPAIR) amount = 1;
 		bonus = amount*3;
@@ -116,7 +116,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
  */
 script aow_script651 (void) {
 	SetResultValue (0);
-	int tid = ACS_ExecuteWithResult (964, 5);
+	int tid = ACS_ExecuteWithResult (aow_script964, 5);
 	
 	if (SuddenDeath && tid < 900) {
 		// It's sudden death. We can't repair here, so
@@ -155,7 +155,7 @@ script aow_script651 (void) {
 	
 	SetActorHealth (tid, newhp);
 	
-	ACS_ExecuteAlways (930, 0, what, tteam);
+	ACS_ExecuteAlways (aow_script930, 0, what, tteam);
 	SetResultValue (1);
 }
 
