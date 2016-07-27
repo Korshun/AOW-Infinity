@@ -5,6 +5,8 @@ Actor AOWBulletPuff replaces BulletPuff
 	DamageType "Bullet"
 	Decal "BulletChip"
 	
+	+NOGRAVITY
+	
 	States
 	{
 	Spawn:
