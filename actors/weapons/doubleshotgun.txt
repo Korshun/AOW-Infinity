@@ -23,6 +23,7 @@ actor DoubleShotgun : AOWWeapon {
 	Fire:
 		SHT2 A 3
 		NULL A 0 Bright A_GunFlash
+		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 0, 0)
 		SHT2 A 7 Bright A_FireBullets (15.7, 11.7, 20, 5, "HandgunPuff", 1, 512)
 		goto Reload
 	Reload:

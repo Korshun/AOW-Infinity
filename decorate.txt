@@ -28,6 +28,7 @@
 #include "actors/effects/steam.txt"
 #include "actors/effects/muzzles.txt"
 #include "actors/effects/laserchaingunlights.txt"
+#include "actors/effects/tracers.txt"
 #include "actors/misc/decorations.txt"
 #include "actors/misc/hazards.txt"
 #include "actors/misc/shrubs.txt"

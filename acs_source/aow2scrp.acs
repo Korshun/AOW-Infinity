@@ -512,6 +512,8 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script699 699
 #define aow_script750 750
 #define aow_script751 751
+#define aow_traceroffset 798
+#define aow_spawntracer 799
 #define aow_script888 888
 #define aow_script889 889
 #define aow_script905 905
@@ -602,3 +604,4 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #include "a_tiberium.acs"
 #include "a_util.acs"
 #include "a_wchk.acs"
+#include "tracers.acs"
