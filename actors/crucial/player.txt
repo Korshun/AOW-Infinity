@@ -11,16 +11,16 @@ actor Player : DoomPlayer {
 	player.sidemove 0.875
 	player.maxhealth 100
 	
-	damagefactor "ExplosionRed", 0.3
-	damagefactor "ExplosionBlue", 0.3
-	damagefactor "ChemicalRed", 2.0
-	damagefactor "ChemicalBlue", 2.0
-	damagefactor "ExplosionMechRed", 0.1
-	damagefactor "ExplosionMechBlue", 0.1
+	damagefactor "Explosion", 0.3
+	damagefactor "Explosion", 0.3
+	damagefactor "Chemical", 2.0
+	damagefactor "Chemical", 2.0
+	damagefactor "ExplosionMech", 0.1
+	damagefactor "ExplosionMech", 0.1
 	damagefactor "Disarm", 0.0 
 	damagefactor "Deconstruction", 0.0
-	damagefactor "MassDriverRed", 0.3
-	damagefactor "MassDriverBlue", 0.3
+	damagefactor "Artillery", 0.3
+	damagefactor "Artillery", 0.3
 	deathsound "generic/death"
 	States {
 	Spawn:
@@ -67,20 +67,20 @@ actor Player : DoomPlayer {
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
 		PLAY G 4 A_Pain
 		goto Spawn
-	Pain.ExplosionRed:
-	Pain.ExplosionBlue:
+	Pain.Explosion:
+	Pain.ExplosionB:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0)
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
 		PLAY G 4 A_Pain
 		goto Spawn
-	Pain.LaserRed:
-	Pain.LaserBlue:
+	Pain.Laser:
+	Pain.Laser:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 4)
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
 		PLAY G 4 A_Pain
 		goto Spawn
-	Pain.RazorWireBlue:
-	Pain.RazorWireRed:
+	Pain.RazorWire:
+	Pain.RazorWire:
 		NULL A 0 A_GiveInventory("RazorWireSpeed",1)
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 4)
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
@@ -88,15 +88,15 @@ actor Player : DoomPlayer {
 		goto Spawn
 	Pain.FireSpecial:
 		NULL A 0 A_GiveInventory ("NoHealXP", 1)
-	Pain.FireRed:
-	Pain.FireBlue:
+	Pain.Fire:
+	Pain.Fire:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 1)
 		NULL A 0 ACS_ExecuteAlways(aow_script360, 0)
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
 		PLAY G 4 A_Pain
 		goto Spawn
-	Pain.ChemicalRed:
-	Pain.ChemicalBlue:
+	Pain.Chemical:
+	Pain.Chemical:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 2)
 		NULL A 0 ACS_ExecuteAlways(aow_script361, 0)
 		PLAY G 4 ACS_ExecuteAlways(aow_script310, 0, 2)
@@ -161,14 +161,14 @@ actor Player : DoomPlayer {
 		PLAY STUV 4
 		PLAY W -1
 		stop
-	Death.ExplosionRed:
-	Death.ExplosionBlue:
+	Death.Explosion:
+	Death.Explosion:
 		PLAY H 1
 		NULL A 0 A_Jump(128,"Death")
 		goto XDeath
 	Death.FireSpecial:
-	Death.FireRed:
-	Death.FireBlue:
+	Death.Fire:
+	Death.Fire:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"FireAlt")
 		NULL A 0 A_JumpIfInventory ("IsKamikaze",1,"Death.IonExplosion")
 		NULL A 0 A_JumpIfInventory ("TimeGun", 1, "Death.TimeRed")
@@ -192,8 +192,8 @@ actor Player : DoomPlayer {
 		PLAY N -1 A_SetTranslucent(0.0,0)
 		stop
 	Death.ChemicalSpecial:
-	Death.ChemicalRed:
-	Death.ChemicalBlue:
+	Death.Chemical:
+	Death.Chemical:
 		TNT1 AA 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "ChemFireAlt")
 		NULL A 0 A_JumpIfInventory ("IsKamikaze", 1, "Death.IonExplosion")
 		NULL A 0 A_JumpIfInventory ("TimeGun", 1, "Death.TimeRed")

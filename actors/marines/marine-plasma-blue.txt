@@ -35,34 +35,34 @@ Actor BluePlasmaGunner	//Red Tiberium Rifleman
 
 //AOW Base DamageFactoring-----------------------------------------------------------------------
 
-	damagefactor "FistRed", 1.0
-	damagefactor "FistBlue", 0.0
-	damagefactor "BulletRed", 1.0
-	damagefactor "BulletBlue", 0.0
-	damagefactor "RifleRed", 1.0
-	damagefactor "RifleBlue", 0.0
-	damagefactor "ExplosionRed", 0.3
-	damagefactor "ExplosionBlue", 0.0
+	damagefactor "Fist", 1.0
+	damagefactor "Fist", 0.0
+	damagefactor "Bullet", 1.0
+	damagefactor "Bullet", 0.0
+	damagefactor "Rifle", 1.0
+	damagefactor "Rifle", 0.0
+	damagefactor "Explosion", 0.3
+	damagefactor "Explosion", 0.0
 	damagefactor "Terrorist", 2.0
 	damagefactor "Suicide", 1.0
-	damagefactor "FireRed", 1.0
-	damagefactor "FireBlue", 0.0
-	damagefactor "ChemicalRed", 2.0
-	damagefactor "ChemicalBlue", 0.0
+	damagefactor "Fire", 1.0
+	damagefactor "Fire", 0.0
+	damagefactor "Chemical", 2.0
+	damagefactor "Chemical", 0.0
 	damagefactor "ChemicalSpecial", 0.0
-	damagefactor "LaserRed", 1.0
-	damagefactor "LaserBlue", 0.0
-	damagefactor "RazorWireRed", 1.0
-	damagefactor "RazorWireBlue", 0.0
-	damagefactor "ExplosionMechRed", 0.1
-	damagefactor "ExplosionMechBlue", 0.0
+	damagefactor "Laser", 1.0
+	damagefactor "Laser", 0.0
+	damagefactor "RazorWire", 1.0
+	damagefactor "RazorWire", 0.0
+	damagefactor "ExplosionMech", 0.1
+	damagefactor "ExplosionMech", 0.0
 	damagefactor "TimeRed", 1.0
 	damagefactor "TimeBlue", 0.0
 	damagefactor "Repair", 0.0
 	damagefactor "Disarm", 0.0
 	damagefactor "Deconstruction", 0.0
-	damagefactor "MassDriverRed", 0.3
-	damagefactor "MassDriverBlue", 0.0
+	damagefactor "Artillery", 0.3
+	damagefactor "Artillery", 0.0
 	damagefactor "Mechstomp", 0.0
 	damagefactor "Monster", 1.0
 //-----------------------------------------------------------------------
@@ -798,8 +798,8 @@ Actor BluePlasmaGunner	//Red Tiberium Rifleman
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 1)
 		NULL A 0 ACS_ExecuteAlways(aow_script310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
-	Pain.FireRed:
-	Pain.FireBlue:
+	Pain.Fire:
+	Pain.Fire:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 1)
 		NULL A 0 ACS_ExecuteAlways(aow_script360, 0)
 		NULL A 0 ACS_ExecuteAlways(aow_script310, 0, 2)
@@ -808,8 +808,8 @@ Actor BluePlasmaGunner	//Red Tiberium Rifleman
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 2)
 		NULL A 0 ACS_ExecuteAlways(aow_script310, 0, 2)
 		Goto DisablePushablePreAlternatePainBackOff
-	Pain.ChemicalRed:
-	Pain.ChemicalBlue:
+	Pain.Chemical:
+	Pain.Chemical:
 		NULL A 0 ACS_ExecuteAlways(aow_script320, 0, 2)
 		NULL A 0 ACS_ExecuteAlways(aow_script361, 0)
 		NULL A 0 ACS_ExecuteAlways(aow_script310, 0, 2)
@@ -895,20 +895,20 @@ Actor BluePlasmaGunner	//Red Tiberium Rifleman
 		PLA6 W -1
 		stop
 
-	Death.MassDriverRed:
-	Death.MassDriverBlue:
-	Death.ExplosionMechRed:
-	Death.ExplosionMechBlue:
-	Death.ExplosionRed:
-	Death.ExplosionBlue:
+	Death.Artillery:
+	Death.Artillery:
+	Death.ExplosionMech:
+	Death.ExplosionMech:
+	Death.Explosion:
+	Death.Explosion:
 		NULL A 0 ThrustThing(angle*256/360+(random(0,192)), random(20,40), 1, 0)
 		PLA6 H 1 ThrustThingZ(0,45,0,0)
 		NULL A 0 A_Jump(128,"Death")
 		goto XDeath
 
 	Death.FireSpecial:
-	Death.FireRed:
-	Death.FireBlue:
+	Death.Fire:
+	Death.Fire:
 		// stop all sound channels
 		NULL A 0 A_StopSound (0) PLA6 A 0 A_StopSound (4)
 		NULL A 0 A_StopSound (1) PLA6 A 0 A_StopSound (5)
@@ -921,8 +921,8 @@ Actor BluePlasmaGunner	//Red Tiberium Rifleman
 		stop
 
 	Death.ChemicalSpecial:
-	Death.ChemicalRed:
-	Death.ChemicalBlue:
+	Death.Chemical:
+	Death.Chemical:
 		// stop all sound channels
 		NULL A 0 A_StopSound (0) PLA6 A 0 A_StopSound (4)
 		NULL A 0 A_StopSound (1) PLA6 A 0 A_StopSound (5)

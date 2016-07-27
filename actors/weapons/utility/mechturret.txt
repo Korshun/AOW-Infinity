@@ -3,10 +3,10 @@ actor Utility_MechTurretRed : Utility_TurretBase {
 	obituary "%o was owned by a \cgRed \c-anti-Mech turret."
 	health 500
 	painchance 50
-	damagefactor "ExplosionRed", 0.75
-  damagefactor "ExplosionBlue", 0.75
-  damagefactor "MassDriverRed", 0.75
-  damagefactor "MassDriverBlue", 0.75
+	damagefactor "Explosion", 0.75
+  damagefactor "Explosion", 0.75
+  damagefactor "Artillery", 0.75
+  damagefactor "Artillery", 0.75
 	//seesound "turret/sight"
 	attacksound "rifle/fire"
 	activesound "turret/sight"
@@ -80,10 +80,10 @@ actor Utility_MechTurretBlue : Utility_TurretBase
 	obituary "%o was owned by a \chBlue \c-anti-Mech turret."
 	health 500
 	painchance 50
-	damagefactor "ExplosionRed", 0.75
-  damagefactor "ExplosionBlue", 0.75
-  damagefactor "MassDriverRed", 0.75
-  damagefactor "MassDriverBlue", 0.75
+	damagefactor "Explosion", 0.75
+  damagefactor "Explosion", 0.75
+  damagefactor "Artillery", 0.75
+  damagefactor "Artillery", 0.75
 	//seesound "turret/sight"
 	attacksound "rifle/fire"
 	activesound "turret/sight"
@@ -161,7 +161,7 @@ actor MechTurretProjectile : FastProjectile {
 	Projectile
 	-RANDOMIZE
 	obituary "%o was owned by a \cgRed \c-anti-Mech turret."
-	DamageType "ExplosionMechRed"
+	DamageType "ExplosionMech"
 	states {
 	Spawn:
 		NULL A -1
@@ -174,5 +174,5 @@ actor MechTurretProjectile : FastProjectile {
 
 actor MechTurretProjectileBlue : MechTurretProjectile {
 	obituary "%o was owned by a \chBlue \c-anti-Mech turret."
-	DamageType "ExplosionMechBlue"
+	DamageType "ExplosionMech"
 }

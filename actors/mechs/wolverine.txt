@@ -239,7 +239,7 @@ actor PulseBall {
 	seesound "plasma/fire"
 	deathsound "plasma/explo"
 	decal PulseScorch
-	damagetype "LaserRed"
+	damagetype "Laser"
 	
 	states {
 	Spawn:
@@ -255,7 +255,7 @@ actor PulseBall {
 	}
 }
 
-actor PulseBallBlue : PulseBall {damageType "LaserBlue"}
+actor PulseBallBlue : PulseBall {damageType "Laser"}
 
 actor MechRocketAmmo : Ammo {
 	inventory.amount 10

@@ -87,7 +87,7 @@ actor GrenadeGrenade {
 	height 8
 	speed 35
 	damage (25)
-	damagetype "RifleRed"
+	damagetype "Rifle"
 	seesound ""
 	deathsound "weapons/rocklx"
 	obituary "$OB_GRENADE" // "%o ate %k's grenade."
@@ -121,8 +121,8 @@ actor GrenadeBounce : GrenadeGrenade {
 	}
 }
 
-actor GrenadeGrenadeBlue : GrenadeGrenade {DamageType "RifleBlue"}
-actor GrenadeBounceBlue : GrenadeBounce {DamageType "RifleBlue"}
+actor GrenadeGrenadeBlue : GrenadeGrenade {DamageType "Rifle"}
+actor GrenadeBounceBlue : GrenadeBounce {DamageType "Rifle"}
 
 // Select/Deselect offset-animations
 /*

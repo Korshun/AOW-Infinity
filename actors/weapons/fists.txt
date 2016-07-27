@@ -158,7 +158,7 @@ actor FistPuff : BulletPuff {
 	+NOGRAVITY
 	-ALLOWPARTICLES
 	+PUFFONACTORS
-	DamageType "FistRed"
+	DamageType "Fist"
 	states {
 	Crash:
 		NULL A 0 bright
@@ -177,7 +177,7 @@ actor FistPuff : BulletPuff {
 	}
 }
 
-actor FistPuffBlue : FistPuff {DamageType "FistBlue"}
+actor FistPuffBlue : FistPuff {DamageType "Fist"}
 actor BerserkPuff : FistPuff {
 	+EXTREMEDEATH
 	States {
@@ -187,7 +187,7 @@ actor BerserkPuff : FistPuff {
 		stop
 	}
 }
-actor BerserkPuffBlue : BerserkPuff { DamageType "FistBlue" }
+actor BerserkPuffBlue : BerserkPuff { DamageType "Fist" }
 
 actor FistHit {
 	+CLIENTSIDEONLY

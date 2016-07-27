@@ -202,7 +202,7 @@ actor RavenAC2 : FastProjectile {
 	Projectile
 	-RANDOMIZE
 	Obituary "$OB_RAVEN"
-	DamageType "RifleRed"
+	DamageType "Rifle"
 	seesound "mech/ac2"
 	scale 0.5
 	decal "Scorch"
@@ -230,7 +230,7 @@ actor RavenAC2FX {
 
 actor RavenAC2Explosion {
 	Obituary "$OB_RAVEN"
-	DamageType "ExplosionRed"
+	DamageType "Explosion"
 	states {
 	Spawn:
 		NULL A 0
@@ -241,7 +241,7 @@ actor RavenAC2Explosion {
 
 actor RavenAC2Blue : RavenAC2 {
 	translation "112:120=200:207", "121:127=241:247"
-	damagetype "RifleBlue"
+	damagetype "Rifle"
 	states {
 	Death:
 		NULL A 0 A_Explode(20,128,0)
@@ -251,7 +251,7 @@ actor RavenAC2Blue : RavenAC2 {
 	}
 }
 
-actor RavenAC2ExplosionBlue : RavenAC2Explosion {DamageType "ExplosionBlue"}
+actor RavenAC2ExplosionBlue : RavenAC2Explosion {DamageType "Explosion"}
 
 actor Raven-RocketAmmo : Ammo {
 	inventory.amount 5

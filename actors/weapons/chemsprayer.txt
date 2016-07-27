@@ -117,7 +117,7 @@ actor ChemicalShot {
 	Height 8
 	Speed 25
 	Damage (random (4, 5))
-	DamageType "ChemicalRed"
+	DamageType "Chemical"
 	Scale 0.5
 	States {
 	Spawn:
@@ -138,7 +138,7 @@ actor ChemicalShot {
 }
 
 actor ChemicalShotBlue : ChemicalShot {
-	DamageType "ChemicalBlue"
+	DamageType "Chemical"
 	States {
 	Clear:
 		NULL A 0 A_SpawnItemEx("AnthraxDecayBlue", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 240)
@@ -186,7 +186,7 @@ actor AnthraxDecay {
 	+LOWGRAVITY
 	+NODAMAGETHRUST
 	Scale 2.0
-	DamageType "ChemicalRed"
+	DamageType "Chemical"
 	obituary "%o chokes in %k's chemicals."
 	states {
 	Spawn:
@@ -213,7 +213,7 @@ actor AnthraxDecayFX {
 	}
 }
 
-actor AnthraxDecayBlue : AnthraxDecay {damagetype "ChemicalBlue"}
+actor AnthraxDecayBlue : AnthraxDecay {damagetype "Chemical"}
 actor AnthraxDecaySpecial : AnthraxDecay {damagetype "ChemicalSpecial"} // neutral
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -229,7 +229,7 @@ actor ChemicalGrenade {
 	seesound ""
 	deathsound "weapons/rocklx"
 	obituary "%o was mutated by %k's chemical grenade."
-	damagetype "ChemicalRed"
+	damagetype "Chemical"
 	decal "ChemScorchStrong"
 	translation "80:111=120:127"
 	states {
@@ -247,7 +247,7 @@ actor ChemicalGrenade {
 }
 
 actor ChemicalGrenadeBlue : ChemicalGrenade {
-	DamageType "ChemicalBlue"
+	DamageType "Chemical"
 	states {
 	Death:
 		NULL A 0 bright A_SpawnItem ("ChemicalExplosion")

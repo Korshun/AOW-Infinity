@@ -67,7 +67,7 @@ actor Utility_KlaxonRed : Utility_TurretBase {
 		NULL A 0 A_CPosRefire
 		NULL A 0 A_GiveInventory("GunTurretClip",1)
 		goto MissileCheck
-	Pain.LaserBlue:
+	Pain.Laser:
 	Pain:
 		NULL A 0 A_StopSound (6)
 		NULL A 0 A_ClearTarget
@@ -161,7 +161,7 @@ actor Utility_KlaxonBlue : Utility_TurretBase {
 		NULL A 0 A_CPosRefire
 		NULL A 0 A_GiveInventory("GunTurretClip", 1)
 		goto MissileCheck
-	Pain.LaserRed:
+	Pain.Laser:
 	Pain:
 		NULL A 0 A_StopSound (6)
 		NULL A 0 A_ClearTarget

@@ -128,7 +128,7 @@ actor PlasmaShot {
 	RenderStyle Add
 	Alpha 0.75
 	DeathSound "weapons/plasmax"
-	DamageType "LaserRed"
+	DamageType "Laser"
 	Decal PulseScorch
 	Obituary "%o was incinerated by %k's Plasma Rifle."
 	translation "192:207=169:191", "240:247=[63,0,0]:[0,0,0]" 
@@ -145,7 +145,7 @@ actor PlasmaShot {
 
 Actor PlasmaShotBlue : PlasmaShot {
 	translation ""
-	DamageType "LaserBlue"
+	DamageType "Laser"
 }
 
 actor PlasmaHeat : Ammo {
