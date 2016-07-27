@@ -240,11 +240,11 @@ function void GiveInventoryBold (str what, int amount) {
 	}
 }
 
-script aow_isredteam (int Invert) {
+script aow_isblueteam (int Invert) {
 	if(PlayerTeam() == TEAM_RED)
-		SetResultValue(1);
-	else if(PlayerTeam() == TEAM_BLUE)
 		SetResultValue(0);
+	else if(PlayerTeam() == TEAM_BLUE)
+		SetResultValue(1);
 }
 
 function bool MitigateDoublePress(void)
