@@ -28,14 +28,7 @@ actor TiberiumAutorifleWeak : AOWWeapon {
 		NULL A 0 A_JumpIfNoAmmo ("Reload")
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlaySound("toxin/fire")
-		NULL A 0 A_JumpIfInventory ("IsBlue",1,"FireBlue")
 		E21C B 2 bright A_FireCustomMissile ("TiberiumDart", 0, 1, 10)
-		E21C C 2 bright
-		E21C D 2 A_JumpIfNoAmmo ("Reload")
-		E21C A 2 A_ReFire
-		goto Ready
-	FireBlue:
-		E21C B 2 bright A_FireCustomMissile ("TiberiumDartBlue", 0, 1, 10)
 		E21C C 2 bright
 		E21C D 2 A_JumpIfNoAmmo ("Reload")
 		E21C A 2 A_ReFire
@@ -131,18 +124,6 @@ actor TiberiumDart : FastProjectile {
 	}
 }
 
-actor TiberiumDartBlue : TiberiumDart {
-	DamageType "Rifle"
-	states {
-	Death:
-		NULL A 0
-		NULL A 0 A_SpawnItemEx ("TiberiumDartExplosionBlue", -1)
-		NULL A 5 A_SpawnItemEx ("ChemicalExplosionSmall")
-		NULL A 0 A_SpawnItemEx("AnthraxDecayBlue", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 160)
-		stop
-	}
-}
-
 actor TiberiumDartExplosion {
 	PROJECTILE
 	+NOCLIP
@@ -154,8 +135,6 @@ actor TiberiumDartExplosion {
 		stop
 	}
 }
-
-actor TiberiumDartExplosionBlue : TiberiumDartExplosion {DamageType "Chemical"}
 
 actor TiberiumAutoriflePickup : CustomInventory 21084 {
 	inventory.pickupmessage "You got the Tiberium autorifle!"
