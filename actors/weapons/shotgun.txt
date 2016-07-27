@@ -22,6 +22,7 @@ actor Boomstick : AOWWeapon {
 	Fire:
 		SHTG A 3
 		NULL A 0 A_GunFlash
+		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 0, 0)
 		NULL A 0 Bright A_FireBullets (5.5, 5.5, 2, 6, "HandgunPuff",0,350)
 		SHTG A 2 Bright A_FireBullets (5.5, 5.5, 6, 4, "HandgunPuff",1,1000)
 		SHTG A 3 Bright
