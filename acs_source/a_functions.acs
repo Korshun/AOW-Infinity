@@ -55,6 +55,28 @@ function int ActorDistance (int tid1, int tid2)
 	return len;
 }
 
+// From ZDoom wiki. Modified to work on coordinates instead of actors.
+// fixed length3d(fixed x, fixed y, fixed z)
+function int length3d(int x, int y, int z)
+{
+	 int len;
+
+	 int ang = vectorangle(x,y);
+	 if(((ang+0.125)%0.5) > 0.25) len = fixeddiv(y, sin(ang));
+	 else len = fixeddiv(x, cos(ang));
+
+	 ang = vectorangle(len, z);
+	 if(((ang+0.125)%0.5) > 0.25) return fixeddiv(z, sin(ang));
+	 return fixeddiv(len, cos(ang));
+}
+
+
+function int lerp(int a, int b, int alpha)
+{
+	return FixedMul(a, 1.0 - alpha) + FixedMul(b, alpha);
+}
+
+
 // [Dusk] check functions
 
 // [Dusk] returns 1 if player has $price money, discount taken into account
