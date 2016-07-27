@@ -85,7 +85,6 @@ actor Knife : AOWWeapon {
 	Fire:
 		NULL A 0 A_JumpIfInventory("StealthMode", 1, "FireStealth")
 	FireGo:
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		KNIF B 1
 		KNIF B 1 offset (0,0)
 		KNIF B 1 offset (-16,32)
@@ -107,51 +106,6 @@ actor Knife : AOWWeapon {
 		NULL A 0 A_CustomPunch(24, 1, 1, "KnifePuff",100)
 		KNIF C 1 offset (-4,-14)
 		NULL A 0 A_CustomPunch(32, 1, 1, "KnifePuff",100)
-		NULL A 0 A_CustomPunch(50, 1, 1, "KnifeDisarm")
-		KNIF C 1 offset (84,-10)
-		KNIF C 1 offset (116,-8)
-		KNIF C 1 offset (148,-6)
-		KNIF C 1 offset (164,-4)
-		KNIF C 1 offset (172,-2)
-		KNIF C 1 offset (176,0)
-		KNIF C 1 offset (178,0)
-		KNIF C 1 offset (176,0)
-		KNIF C 1 offset (168,2)
-		KNIF C 1 offset (160,4)
-		KNIF C 1 offset (144,8)
-		KNIF C 1 offset (128,12)
-		KNIF C 1 offset (112,16)
-		KNIF C 1 offset (96,20)
-		KNIF C 1 offset (80,24)
-		KNIF B 1 offset (64,26)
-		KNIF B 1 offset (48,38)
-		KNIF B 1 offset (32,30)
-		KNIF B 1 offset (32,32)
-		NULL A 0 A_Refire
-		KNIF AAAAA 2 A_WeaponReady
-		goto Restealth
-	FireBlue: 
-		KNIF B 1
-		KNIF B 1 offset (0,0)
-		KNIF B 1 offset (-16,32)
-		KNIF B 1 offset (-40,28)
-		KNIF B 1 offset (-64,24)
-		KNIF B 1 offset (-88,20)
-		KNIF B 1 offset (-112,16)
-		KNIF B 1 offset (-136,12)
-		KNIF C 1 offset (-232,-2)
-		KNIF C 1 offset (-224,-4)
-		KNIF C 1 offset (-256,-6)
-		KNIF C 1 offset (-262,-7)
-		KNIF C 1 offset (-268,-8)
-		NULL A 0 A_PlayWeaponSound("Weapons/KnifeSwing")
-		NULL A 0 A_CustomPunch(8, 1, 1, "KnifePuffBlue",100)
-		KNIF C 1 offset (-180,-14)
-		NULL A 0 A_CustomPunch(16, 1, 1, "KnifePuffBlue",100)
-		KNIF C 1 offset (-92,-18)
-		NULL A 0 A_CustomPunch(24, 1, 1, "KnifePuffBlue",100)
-		KNIF C 1 offset (-4,-14)
-		NULL A 0 A_CustomPunch(32, 1, 1, "KnifePuffBlue",100)
 		NULL A 0 A_CustomPunch(50, 1, 1, "KnifeDisarm")
 		KNIF C 1 offset (84,-10)
 		KNIF C 1 offset (116,-8)
@@ -198,11 +152,6 @@ actor KnifePuff : BulletPuff
   +NOGRAVITY
   -ALLOWPARTICLES
   +PUFFONACTORS
-  DamageType "Fist"
-}
-
-actor KnifePuffBlue : KnifePuff
-{
   DamageType "Fist"
 }
 
