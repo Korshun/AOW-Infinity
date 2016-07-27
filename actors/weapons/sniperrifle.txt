@@ -29,11 +29,7 @@ actor SniperRifle : AOWWeapon {
 	Fire:
 		NULL A 0 A_GunFlash
 		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "FireZoomed")
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"FireBlue")
 		NULL A 0 A_FireBullets (7.2, 7.2, -1, 25, "RiflePuff")
-		goto Reload
-	FireBlue:
-		NULL A 0 A_FireBullets (7.2, 7.2, -1, 25, "RiflePuffBlue")
 		goto Reload
 	Reload:
 		SNIF F 2 BRIGHT
@@ -46,13 +42,8 @@ actor SniperRifle : AOWWeapon {
 		SNIE A 1 A_ReFire
 		goto Ready
 	FireZoomed:
-		NULL A 0 A_JumpIfInventory("IsBlue", 1, "FireZoomedBlue")
 		NULL A 0 A_RailAttack (75, 0, 0, none, none, 1, 0, "RiflePuff")
 		NULL A 1 bright A_FireBullets (0.0, 0.0, 1, 0, "RiflePuff")
-		goto ReloadZoomed
-	FireZoomedBlue:
-		NULL A 0 A_RailAttack (75, 0, 0, none, none, 1, 0, "RiflePuffBlue")
-		NULL A 1 bright A_FireBullets (0.0, 0.0, 1, 0, "RiflePuffBlue")
 		goto ReloadZoomed
 	ReloadZoomed:
 		NULL A 30
