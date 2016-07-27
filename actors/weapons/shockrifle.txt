@@ -28,14 +28,7 @@ actor ShockRifle : AOWWeapon 21068 {
 	Hold:
 		// broken
 		// VOLF E 0 bright A_FireBullets (0, 0, 1, 0, "VoltageTrailPuff", 0, 1100)
-		NULL A 0 bright A_JumpIfInventory ("IsBlue", 1, "Hold.Blue")
 		VOLF E 1 bright A_FireBullets (3.2, 3.2, 3, random (2, 3), "VoltagePuff", 1, 1100)
-		VOLF D 2 bright
-		NULL A 0 bright A_ReFire
-		VOLF CBA 3 bright
-		goto Ready
-	Hold.Blue:
-		VOLF E 1 bright A_FireBullets (3.2, 3.2, 3, random (2, 3), "VoltagePuffBlue", 1, 1100)
 		VOLF D 2 bright
 		NULL A 0 bright A_ReFire
 		VOLF CBA 3 bright
@@ -70,8 +63,6 @@ actor VoltagePuff {
 		stop
 	}
 }
-
-actor VoltagePuffBlue : VoltagePuff {damagetype "Laser"}
 
 actor VoltagePuff2 {
 	renderstyle Add

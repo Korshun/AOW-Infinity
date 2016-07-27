@@ -33,19 +33,9 @@ actor ChemicalSprayer : AOWWeapon 21066 {
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom",1,"Ready")
 		NULL A 0 A_PlaySound ("chem/fire", CHAN_WEAPON, 1.0, 1)
 		NULL A 0 A_GunFlash
-		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire.Blue")
 		CHMG A 1 BRIGHT A_FireCustomMissile("ChemicalShot",random(-2,2),0,8,random(-2,2))
 		CHMG A 1 BRIGHT A_FireCustomMissile("ChemicalShotDummy",random(-2,2),0,8,random(-2,2))
 		CHMG B 1 BRIGHT A_FireCustomMissile("ChemicalShot",random(-2,2),1,8,random(-2,2))
-		CHMG B 1 BRIGHT A_FireCustomMissile("ChemicalShotDummy",random(-2,2),0,8,random(-2,2))
-		CHMG C 1 A_ReFire
-		CHMG CD 3
-		NULL A 0 A_StopSoundEx("Weapon")
-		goto Ready
-	Fire.Blue:
-		CHMG A 1 BRIGHT A_FireCustomMissile("ChemicalShotBlue",random(-2,2),0,8,random(-2,2))
-		CHMG A 1 BRIGHT A_FireCustomMissile("ChemicalShotDummy",random(-2,2),0,8,random(-2,2))
-		CHMG B 1 BRIGHT A_FireCustomMissile("ChemicalShotBlue",random(-2,2),1,8,random(-2,2))
 		CHMG B 1 BRIGHT A_FireCustomMissile("ChemicalShotDummy",random(-2,2),0,8,random(-2,2))
 		CHMG C 1 A_ReFire
 		CHMG CD 3
@@ -56,13 +46,7 @@ actor ChemicalSprayer : AOWWeapon 21066 {
 		NULL A 0 A_JumpIfInventory ("IsInSpawnRoom",1,"Ready")
 		CHPA C 15
 		CHGR B 6 A_PlayWeaponSound ("chem/grenade")
-		NULL A 0 A_JumpIfInventory("IsBlue",1,"AltFireBlue")
 		CHGR A 8 BRIGHT A_FireCustomMissile ("ChemicalGrenade", 0, 1, 8, 0)
-		CHGR BC 3
-		NULL A 0 A_ReFire
-		goto Ready
-	AltFireBlue:
-		CHGR A 8 BRIGHT A_FireCustomMissile ("ChemicalGrenadeBlue",0,1,8,0)
 		CHGR BC 3
 		NULL A 0 A_ReFire
 		goto Ready
@@ -131,23 +115,6 @@ actor ChemicalShot {
 	Death:
 		NULL A 1 //A_Explode(2,172)
 		NULL A 0 A_SpawnItemEx("AnthraxDecay", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 240)
-		TIBX H 3 bright A_Stop
-		TIBX IIJJKKLLMMOOPPQQ 1 bright A_FadeOut(0.07)
-		stop
-	}
-}
-
-actor ChemicalShotBlue : ChemicalShot {
-	DamageType "Chemical"
-	States {
-	Clear:
-		NULL A 0 A_SpawnItemEx("AnthraxDecayBlue", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 240)
-		TIBX L 2 bright
-		TIBX MMNNOOPPQQ 1 bright A_FadeOut(0.1)
-		stop
-	Death:
-		NULL A 1 //A_Explode(2,172)
-		NULL A 0 A_SpawnItemEx("AnthraxDecayBlue", random(-16,16), random(-16,16), 4, 0, 0, 0, 0, 0, 240)
 		TIBX H 3 bright A_Stop
 		TIBX IIJJKKLLMMOOPPQQ 1 bright A_FadeOut(0.07)
 		stop
@@ -241,19 +208,6 @@ actor ChemicalGrenade {
 		NULL A 0 bright A_Gravity
 		NULL A 0 bright A_Explode (90, 128, 1)
 		TNT1 AAAAAAAAA 70 A_SpawnItemEx("AnthraxDecay", random(-64,64), random(-64,64), 4)
-		NULL A 0
-		stop
-	}
-}
-
-actor ChemicalGrenadeBlue : ChemicalGrenade {
-	DamageType "Chemical"
-	states {
-	Death:
-		NULL A 0 bright A_SpawnItem ("ChemicalExplosion")
-		NULL A 0 bright A_Gravity
-		NULL A 0 bright A_Explode (90, 128, 1)
-		TNT1 AAAAAAAAA 70 A_SpawnItemEx("AnthraxDecayBlue", random(-64,64), random(-64,64), 4)
 		NULL A 0
 		stop
 	}

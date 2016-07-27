@@ -53,11 +53,6 @@ Object VoltagePuff2
     frame VOLX { light VPUFF }
 }
 
-Object VoltagePuffBlue
-{
-    frame VOLX { light VPUFF }
-}
-
 //Object VoltageDecay
 //{
 //   frame VOLX { light VPUFF }
@@ -88,19 +83,7 @@ Object HandgunPuff
     frame PUFFB { light BPUFF2 }
 }
 
-Object HandgunPuffBlue
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
 Object RiflePuff
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
-Object RiflePuffBlue
 {
     frame PUFFA { light BPUFF1 }
     frame PUFFB { light BPUFF2 }
@@ -243,12 +226,6 @@ Object TiberiumDart
 	frame TNT1 { light Chemical }
 }
 
-Object TiberiumDartBlue
-{
-	frame E21X { light TiberiumShot }
-	frame TNT1 { light Chemical }
-}
-
 flickerlight Tibcrystalnorm
 {
 	color 0.4 1.0 0.0
@@ -369,11 +346,6 @@ object ChemFireRemains
 */
 
 object ChemicalShot
-{
-	frame TIBX { light Chemical }
-}
-
-object ChemicalShotBlue
 {
 	frame TIBX { light Chemical }
 }
