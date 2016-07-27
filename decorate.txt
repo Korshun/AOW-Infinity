@@ -6,6 +6,7 @@
 #include "actors/crucial/player.txt"
 #include "actors/crucial/acsitems.txt"
 #include "actors/crucial/armor.txt"
+#include "actors/crucial/effect.txt"
 #include "actors/crucial/puffs.txt"
 #include "actors/crucial/deadthings.txt"
 #include "actors/crucial/infoitems.txt"
