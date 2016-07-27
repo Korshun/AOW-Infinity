@@ -64,7 +64,7 @@ actor StealthLaserRifle : AOWWeapon {
 		NULL A 0 A_JumpIfInventory ("IsBlue", 1, "Fire.Blue")
 		NULL A 0 A_PlayWeaponSound ("laser/fire")
 		LSRF B 1 bright offset (0, 34) A_Light2
-		NULL A 0 bright offset (0, 34) A_FireBullets (0, 0, 1, 0, "LaserPuff", 0, 5000)
+		NULL A 0 bright offset (0, 34) A_FireBullets (0, 0, 1, 0, "LaserPuff", FBF_NORANDOM, 5000)
 		LSRF B 1 bright offset (0, 36) A_RailAttack (16, 0, 1, none, Red, 1, 0, "LaserPuff")
 		LSRF C 2 bright offset (0, 34)
 		LSRF A 5 offset (0, 32) A_Light0
@@ -84,7 +84,7 @@ actor StealthLaserRifle : AOWWeapon {
 	Fire.Blue:
 		NULL A 0 A_PlayWeaponSound ("laser/fire")
 		LSRB B 1 bright offset (0, 34) A_Light2
-		NULL A 0 bright offset (0, 34) A_FireBullets (0, 0, 1, 0, "LaserPuffBlue", 0, 5000)
+		NULL A 0 bright offset (0, 34) A_FireBullets (0, 0, 1, 0, "LaserPuffBlue", FBF_NORANDOM, 5000)
 		LSRB B 1 bright offset (0, 36) A_RailAttack (16, 0, 1, none, "40 40 FF", 1, 0, "LaserPuffBlue")
 		LSRB C 2 bright offset (0, 34)
 		LSRB A 5 offset (0, 32) A_Light0

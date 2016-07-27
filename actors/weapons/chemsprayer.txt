@@ -100,7 +100,7 @@ actor ChemicalShot {
 	Radius 8
 	Height 8
 	Speed 25
-	Damage (random (4, 5))
+	Damage (5)
 	DamageType "Chemical"
 	Scale 0.5
 	States {

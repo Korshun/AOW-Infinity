@@ -196,7 +196,7 @@ actor ArtilleryShell {
 	radius 11
 	height 8
 	speed 75
-	damage (15*(random(3,6)/2))
+	damage (33)
 	damageType "Artillery"
 	deathsound "artillery/explosion"
 	decal "Scorch"
@@ -225,7 +225,7 @@ actor ArtilleryShell {
 actor ArtilleryShell80mm : ArtilleryShell {
 	translation "112:127=176:191", "80:111=104:111"
 	speed 50
-	damage (25*(random(16,24)/8))
+	damage (63)
 	damagetype "ExplosionMech"
 	scale 0.74
 	states {

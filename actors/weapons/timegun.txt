@@ -441,7 +441,7 @@ actor GoldenBall1 : PlasmaShot {
 	obituary "%o was blasted out of timestream by %k's time gun."
 	translation "192:207=160:167", "240:246=232:235", "80:111=160:167"
 	damagetype "TimeRed"
-	damage (4*random(2,3)) // 8 or 12 per shot
+	damage (10)
 	speed 25
 	renderstyle add
 	alpha 0.75
@@ -458,7 +458,7 @@ actor GoldenBall2 : DoomImpBall {
 	obituary "%o was blasted out of timestream by %k's time gun."
 	translation "176:191=160:167", "208:223=160:167", "16:47=160:167"
 	damagetype "TimeRed"
-	damage (4*random(2,3)) // 8 or 12 per shot
+	damage (10)
 	speed 25
 	fastspeed 25
 	renderstyle add
