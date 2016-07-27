@@ -15,9 +15,6 @@ script aow_script943 OPEN CLIENTSIDE {
 	
 	// bodycount clock
 	// ConsoleCommand ("puke 368");
-	
-	// building HUD
-	ConsoleCommand ("puke 945");
 }
 
 script aow_whoami (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}

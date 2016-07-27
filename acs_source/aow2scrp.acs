@@ -260,7 +260,6 @@ int GlobalMedicHealth[2];
 int GlobalAmmoHealth[2];
 int BaseLeft[2];
 
-int BaseHUDUpdate;
 int NextTicketUpdate;
 int LastAttackMessage;
 int LastTickets[2];
@@ -523,13 +522,12 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_showspeed 921
 #define aow_script922 922
 #define aow_script923 923
-#define aow_script930 930
-#define aow_script931 931
+#define aow_basehud_serverside 930
 #define aow_spectatorteleport 940
 #define aow_script941 941
 #define aow_teamswitch 942
 #define aow_script943 943
-#define aow_script945 945
+#define aow_basehud_clientside 945
 #define aow_whoami 946
 #define aow_script947 947
 #define aow_script948 948

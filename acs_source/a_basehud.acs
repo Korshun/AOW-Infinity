@@ -10,7 +10,8 @@
  *  something for a later date...
  */
 
-script aow_script930 (int what, int team) {
+script aow_basehud_serverside (int what, int team)
+{
 	int LastHealth, perc;
 	int tid, maxhp, exists;
 	int u = false;
@@ -101,8 +102,6 @@ script aow_script930 (int what, int team) {
 			if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 		}
 	}
-	
-	if (u) ACS_ExecuteAlways (aow_script931, 0); // tell clients to update the hud
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -110,33 +109,17 @@ script aow_script930 (int what, int team) {
  * not aware of mobjs' healths, the above script sets the speed properties to
  * desired percentage values - these are used instead.
  *
- * script aow_script945 is a daemon script executed by the client-side script aow_script943 - see
- * a_clientfx.acs for these scripts. script aow_script931 is called by the server to
- * tell clients to update the HUD. This way, updates to the hud are instant.
+ * script aow_basehud_clientside is a daemon script.
+ * This way, updates to the hud are instant.
  */
 
-script aow_script931 (void) NET CLIENTSIDE BaseHUDUpdate = 1;
-script aow_script945 (void) NET CLIENTSIDE {
-	delay (5);
-	
-	// for the first three seconds, update the hud every second
-	// the speed information of terminals doesn't travel instantly...
-	DisplayBuildingHud ();
-	for (int i = 0; i <= 2; i++) {
-		delay (35);
-		DisplayBuildingHud ();
+script aow_basehud_clientside OPEN CLIENTSIDE 
+{
+	while (true) 
+	{
+		DisplayBuildingHud();
+		Delay(1);
 	}
-	
-	// begin idle loop. whenever we are told to update
-	// the hud, do so.
-	while (1) {
-		if (BaseHudUpdate) {
-			DisplayBuildingHud ();
-			BaseHudUpdate = false;
-		}
-		delay (1);
-	}
-	restart;
 }
 
 function void DisplayBuildingHud (void) {
