@@ -69,8 +69,6 @@ actor MechDeathSmoke {
 	}
 }
 
-actor MechStepSmokePuffLarge : MechStepSmokePuff {scale 2.5}
-
 actor MechStepDamageWeak {
 	RenderStyle None
 	+RANDOMIZE

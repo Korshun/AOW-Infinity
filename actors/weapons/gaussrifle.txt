@@ -159,7 +159,7 @@ actor GaussPuff : HHBulletPuff {
 
 actor GaussPuffBlue : GaussPuff {
 	damagetype "Laser"
-	translation ""
+	translation "0:255=0:255"
 }
 
 actor ExplosionMechPuff : ExplosionPuff {damagetype "ExplosionMech"}

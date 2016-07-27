@@ -196,7 +196,7 @@ actor LaserPuff : HHBulletPuff {
 
 actor LaserPuffBlue : LaserPuff {
 	DamageType "Laser"
-	translation ""
+	translation "0:255=0:255"
 }
 
 actor StealthCharge : Ammo {
