@@ -89,7 +89,6 @@ script aow_script994 DEATH {
 	// no points for suicides
 	if (n0 != n1 && n1 != -1) {
 		GivePoints (2*points);
-		ACS_ExecuteAlways (aow_script931, 0);
 		
 		LocalAmbientSound ("game/boink", 127);
 		GiveCredits (-1, CreditFragAward);

@@ -82,9 +82,6 @@ script aow_script997 (void) {
 		Tickets[TEAM_RED] = StartingTickets;
 		SetActorSpeed (TID_TICKETCOUNTER_BLUE, StartingTickets);
 		SetActorSpeed (TID_TICKETCOUNTER_RED, StartingTickets);
-		
-		// tell clients to update the hud
-		ACS_ExecuteAlways (aow_script931, 0);
 	}
 	
 	SuddenDeath = true;

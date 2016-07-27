@@ -87,7 +87,6 @@ script aow_script104 (VOID)
 script aow_script105 (VOID)
 {
 	//Thing_Remove(TID_REPAIR_BLUE);
-	BaseHUDUpdate = 1;
 	GotRepair[1] = False;
 	ReddenSector (13);
 	ReddenSector (14);
@@ -216,7 +215,6 @@ script aow_script204 (VOID)
 
 //---------------------------RED REPAIR FACILITY DEATH
 script aow_script205 (VOID) {
-	BaseHUDUpdate = 1;
 	GotRepair[0] = False;
 	ReddenSector (15);
 	ReddenSector (16);
