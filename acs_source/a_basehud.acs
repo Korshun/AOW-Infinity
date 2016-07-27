@@ -10,7 +10,8 @@
  *  something for a later date...
  */
 
-script aow_script930 (int what, int team) {
+script aow_basehud_serverside (int what, int team)
+{
 	int LastHealth, perc;
 	int tid, maxhp, exists;
 	int u = false;

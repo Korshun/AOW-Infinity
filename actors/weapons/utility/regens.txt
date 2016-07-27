@@ -61,7 +61,7 @@ actor Utility_GlobalMedicCacheRed {
 		CACH A 35 A_SpawnItemEx("MedicalCacheFlare",0,0,64,0,0,0,128,0)
 		loop
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_HEALTHREGEN, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_RED)
 		CACH A 1 A_Stop
 		goto Working
 	Death:  
@@ -112,7 +112,7 @@ actor Utility_GlobalMedicCacheBlue : Utility_GlobalMedicCacheRed {
 		CACH A -1 A_Gravity
 		stop
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_HEALTHREGEN, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_BLUE)
 		CACH A 1 A_Stop
 		goto Working
 	}
@@ -138,7 +138,7 @@ ACTOR Utility_GlobalAmmoCacheRed : Utility_GlobalMedicCacheRed {
 		CACH A 35 A_SpawnItemEx("AmmoCacheFlare",0,0,64,0,0,0,128,0)
 		loop
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_AMMOREGEN, TEAM_RED)
+		NULL A 0 ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_RED)
 		CACH A 1 A_Stop
 		goto Working
 	}
@@ -183,7 +183,7 @@ ACTOR Utility_GlobalAmmoCacheBlue : Utility_GlobalAmmoCacheRed  {
 		NULL A 0 A_ChangeFlag("FRIENDLY",0)
 		goto Working
 	Pain:
-		NULL A 0 ACS_ExecuteAlways (aow_script930, 0, BUILDING_AMMOREGEN, TEAM_BLUE)
+		NULL A 0 ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_BLUE)
 		CACH A 1 A_Stop
 		goto Working
 	}

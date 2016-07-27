@@ -176,7 +176,7 @@ script SC_PORTAL_INIT (void) {
 	}
 	
 	// update the hud
-	ACS_ExecuteAlways (aow_script930, 0, BUILDING_PORTAL, PlayerTeam());
+	ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_PORTAL, PlayerTeam());
 }
 
 // Portal teleport function
@@ -207,7 +207,7 @@ script SC_PORTAL_FUNCTION (int idx) {
 		}
 		
 		// update the hud
-		ACS_ExecuteAlways (aow_script930, 0, BUILDING_PORTAL, PlayerTeam());
+		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_PORTAL, PlayerTeam());
 		
 		terminate;
 	}
