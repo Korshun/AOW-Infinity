@@ -176,7 +176,7 @@ actor LaserRifleAmmo : Ammo {
 	}
 }
 
-actor LaserPuff : HHBulletPuff {
+actor LaserPuff : AOWBulletPuff {
 	-ALLOWPARTICLES +PUFFONACTORS
 	scale 0.5
 	DamageType "Laser"

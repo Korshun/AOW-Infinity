@@ -71,7 +71,7 @@ flickerlight VSPARK
 //    frame VOLX { light VSPARK }
 //}
 
-Object HHBulletPuff
+Object AOWBulletPuff
 {
     frame PUFFA { light BPUFF1 }
     frame PUFFB { light BPUFF2 }

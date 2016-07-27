@@ -1,4 +1,4 @@
-actor HHBulletPuff : BulletPuff replaces BulletPuff {
+actor AOWBulletPuff : BulletPuff replaces BulletPuff {
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+NOGRAVITY
