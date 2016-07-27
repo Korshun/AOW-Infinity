@@ -1,0 +1,12 @@
+AOW Infinity is based on AOW r2539-5
+
+r1:  
+* Removed damage randomization from all projectiles and bullets
+* Increased player limit to 64 (experimental!)
+* Base hud updates are now instant
++ Added bullet puffs from Project MSX
++ Added tracers (toggleable serverside using aowinf_tracers)
++ Added mech huds from AOW 2.1
+- Fixed machinegun not using ammo and having unlimited range
+- Fixed rifle using two rounds per shot
+- Fixed compatibility with ACC 1.5.5 and BCC
