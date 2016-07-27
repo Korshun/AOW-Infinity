@@ -124,7 +124,7 @@ actor AOWZombieman : Zombieman replaces Zombieman {
 	{
 	Missile:
 		POSS E 10 A_FaceTarget
-		POSS F 8 A_CustomBulletAttack (22.5, 0, 1, 5, "AOWBulletPuff")
+		POSS F 8 A_CustomBulletAttack (22.5, 0, 1, 5, "AOWMonsterPuff")
 		POSS E 8
 		goto See
 	Death.TimeBlue:
@@ -142,7 +142,7 @@ actor AOWShotgunGuy : ShotgunGuy replaces ShotgunGuy {
 	{
 	Missile:
 		SPOS E 10 A_FaceTarget
-		SPOS F 10 bright A_CustomBulletAttack (22.5, 0, 3, 5, "AOWBulletPuff")
+		SPOS F 10 bright A_CustomBulletAttack (22.5, 0, 3, 5, "AOWMonsterPuff")
 		SPOS E 10
 		goto See
 	Death.TimeBlue:
@@ -219,7 +219,7 @@ actor RandomPinky : RandomSpawner {
 actor AOWBaronBall : BaronBall replaces BaronBall { damagetype "FireSpecial" }
 actor AOWDoomImpBall : DoomImpBall replaces DoomImpBall { damagetype "FireSpecial" }
 actor AOWCacodemonBall : CacodemonBall replaces CacodemonBall { damagetype "FireSpecial" }
-actor AOWBulletPuff : BulletPuff replaces BulletPuff { damagetype "Monster" }
+actor AOWMonsterPuff : BulletPuff replaces BulletPuff { damagetype "Monster" }
 actor AOWArachnotronPlasma : ArachnotronPlasma { damagetype "Monster" }
 
 // Decorations
