@@ -5,6 +5,7 @@ r3:
 * Increased player limit to 64 for real now (still experimental!)
 * Stole flamer flames from AOW 2.1
 * Removed Skulltag textures from texture pack
++ Added "addaowmaps" command that adds all aow maps to map list.
 - Fixed missing music
 - Fixed overlapping base huds
 

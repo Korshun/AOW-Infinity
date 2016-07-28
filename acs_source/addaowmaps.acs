@@ -1,0 +1,25 @@
+script aow_addaowmaps (void)
+{
+	ConsoleCommand("addmap aow01");
+	ConsoleCommand("addmap aow02");
+	ConsoleCommand("addmap aow03");
+	ConsoleCommand("addmap aow04");
+	ConsoleCommand("addmap aow05");
+	ConsoleCommand("addmap aow06");
+	ConsoleCommand("addmap aow07");
+	ConsoleCommand("addmap aow08");
+	ConsoleCommand("addmap aow09");
+	ConsoleCommand("addmap aow10");
+	ConsoleCommand("addmap aow11");
+	ConsoleCommand("addmap aow12");
+	ConsoleCommand("addmap aow13");
+	ConsoleCommand("addmap aow14");
+	ConsoleCommand("addmap aow15");
+	ConsoleCommand("addmap aow16");
+	ConsoleCommand("addmap aow17");
+	ConsoleCommand("addmap aow18");
+	ConsoleCommand("addmap aow19");
+	ConsoleCommand("addmap aow20");
+	ConsoleCommand("addmap aow21");
+	PrintBold(s:"Added aow maps to map list.");
+}
