@@ -170,7 +170,7 @@
 
 // MAXPLAYERS - should be the same as in the Skulltag this AOW is played in
 // TODO: make this actually used
-#define MAX_PLAYERS 32
+#define MAX_PLAYERS 64
 
 bool Bots[MAX_MARINES];
 
