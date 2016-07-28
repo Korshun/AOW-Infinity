@@ -39,6 +39,7 @@ actor MechPlayer_Base : PlayerPawn {
 	-TELESTOMP
 	-NOBLOCKMONST
 	+NOSKIN
+	+NOBLOODDECALS
 	bloodtype "HHMetalHit"
 	bloodcolor "White"
 }
