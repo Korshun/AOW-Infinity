@@ -6,15 +6,15 @@ script aow_script943 OPEN CLIENTSIDE {
 	
 	// get outside the spawn room
 	if (!PlayerInGame (PlayerNumber ()))
-		ConsoleCommand ("puke 940");
+		ConsoleCommand (StrParam(s:"puke ", d:aow_spectatorteleport));
 	
 	delay (5);
 	
 	// effects + hud
-	ConsoleCommand ("puke 366");
+	ConsoleCommand (StrParam(s:"puke ", d:aow_rehashclientfx1));
 	
 	// bodycount clock
-	// ConsoleCommand ("puke 368");
+	// ConsoleCommand (StrParam(s:"puke ", d:aow_script368));
 }
 
 script aow_whoami (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
