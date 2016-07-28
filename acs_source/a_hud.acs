@@ -6,10 +6,16 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 // display credits/experience, manage self-heal
-script aow_playerstatushud RESPAWN {
-	while (PlayerInGame (PlayerNumber()) && GetHealth() > 0) {
-		ShowStatus();
+script aow_playerstatushud_serverside RESPAWN {
+
+	ACS_ExecuteAlways(aow_playerstatushud_clientside, 0, PlayerNumber());
 	
+	while (PlayerInGame (PlayerNumber()) && GetHealth() > 0) {
+		
+		SetInventory("PlayerCredits", Credits[PlayerNumber() + 1]);
+		SetInventory("PlayerExperience", Experience[PlayerNumber()]);
+		SetInventory("PlayerRank", Rank[PlayerNumber()]);
+		
 		if (GetHealth () <= GetSpawnHealth ()-50 && !CheckInventory("IsMech") &&
 			!CheckInventory("SelfHealCooldown") && !CheckInventory("PowerBerserk")) {
 			GiveInventory ("SelfHealCooldown",1);
@@ -20,17 +26,29 @@ script aow_playerstatushud RESPAWN {
 				INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		}
 		
-		delay (35);
+		delay (1);
 		if (!CheckWeapon("StealthLaserRifle") && !CheckWeapon("Knife"))
 			ACS_ExecuteAlways (aow_script310, 0, 3);
 	}
 }
 
+script aow_playerstatushud_clientside (int player) CLIENTSIDE
+{
+	if (player != ConsolePlayerNumber())
+		terminate;
+		
+	while (PlayerInGame (PlayerNumber()) && GetHealth() > 0)
+	{
+		ShowStatus();
+		Delay(1);
+	}
+}
+
 function void ShowStatus(void) {
 	SetFont ("SMALLFONT");
-	HudMessage(s:"\cNCredits: \cQ$\cD", d:Credits[PlayerNumber()+1],
-		s:"\n", s:"\cNExperience: \cD",d:Experience[PlayerNumber()], s:"\cQ/\cD",d:GetExpNeed(), s:" XP",
-		s:"\n", s:RankTitles[Rank[PlayerNumber()]];
+	HudMessage(s:"\cNCredits: \cQ$\cD", d:CheckInventory("PlayerCredits"),
+		s:"\n", s:"\cNExperience: \cD",d:CheckInventory("PlayerExperience"), s:"\cQ/\cD",d:GetExpNeed(CheckInventory("PlayerRank")), s:" XP",
+		s:"\n", s:RankTitles[CheckInventory("PlayerRank")];
 		HUDMSG_PLAIN, 50+PlayerNumber(), CR_WHITE, -0.685, -0.805, 1.5);
 	
 	SetFont (GetRankPic());

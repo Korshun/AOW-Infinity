@@ -89,7 +89,8 @@ const int aow_res_moreturrets = 73;
 
 
 const int aow_creditflow = 4;
-const int aow_playerstatushud = 5;
+const int aow_playerstatushud_serverside = 5;
+const int aow_playerstatushud_clientside = 6;
 const int aow_script7 = 7;
 const int aow_script8 = 8;
 const int aow_script10 = 10;

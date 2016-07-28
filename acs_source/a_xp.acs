@@ -16,8 +16,8 @@ Function void AddExperience (int XP) {
 	ACS_ExecuteAlways (aow_script7,0);
 }
 
-function int GetExpNeed (void) {
-	switch (Rank[PlayerNumber()]) {
+function int GetExpNeed (int rankid) {
+	switch (rankid) {
 		case RANK_PRIVATE: return XPREQ_CORPORAL;
 		case RANK_CORPORAL: return XPREQ_SERGEANT;
 		case RANK_SERGEANT: return XPREQ_MASTERSGT;
@@ -31,7 +31,7 @@ function int GetExpNeed (void) {
 }
 
 function str GetRankPic (void) {
-	return StrParam(s:"RANK0", d:Rank[PlayerNumber()] + 1);
+	return StrParam(s:"RANK0", d:CheckInventory("PlayerRank") + 1);
 }
 
 // check for rankup
@@ -173,7 +173,7 @@ script aow_script91 (void) {
 script aow_script92 (void) {
 	if (!CheckInventory("InGame")) {
 		GiveInventory ("InGame", 1);
-		ACS_ExecuteAlways (aow_playerstatushud, 0);
+		ACS_ExecuteAlways (aow_playerstatushud_serverside, 0);
 		ACS_ExecuteAlways (aow_script10, 0);
 		Thing_ChangeTID(0,PlayerNumber()+3800);
 	}

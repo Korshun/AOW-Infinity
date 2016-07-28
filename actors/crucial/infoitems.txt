@@ -23,6 +23,8 @@ actor CrispyPlayer2 : Inventory {inventory.maxamount 4}
 actor IsInSpawnRoom : Boolean {}
 actor IsMCT : Boolean {}
 actor IsArtillerySoldier : Boolean {}
+Actor PlayerCredits : Integer {}
+Actor PlayerExperience : Integer {}
 
 // [SP] This item is used to determine whether a util can build turrets in his base.
 // He must be close enough to one of his own (standing) structures to do this.
