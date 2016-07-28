@@ -2,6 +2,7 @@ AOW Infinity is based on AOW r2539-5
 
 r5:
 - Fixed blood decals from mechs
+- Fixed orca flames being too big
 
 r4:
 - Fixed utility guy getting stuck in menu
