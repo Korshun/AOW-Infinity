@@ -1006,7 +1006,7 @@ actor UtilityGun : AOWWeapon {
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_isblueteam,0,0,0) == 1, "Done.PortalBlue")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,21,1) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script694,250) == 0, "EndFire2")
-		UTIF A 2 ACS_ExecuteAlways (SC_PORTAL_INIT, 0)
+		UTIF A 2 ACS_ExecuteAlways (aow_portal_init, 0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalStandMarker",128,80,0,0,0,0,0,32,0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalStandMarker",128,-80,0,0,0,0,0,32,0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalSphereMarker",128,80,56,0,0,0,0,32,0)
@@ -1020,7 +1020,7 @@ actor UtilityGun : AOWWeapon {
 	Done.PortalBlue:
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script346,21,0) == 0, "Limit")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script694,250) == 0, "EndFire2")
-		UTIF A 2 ACS_ExecuteAlways (SC_PORTAL_INIT, 0)
+		UTIF A 2 ACS_ExecuteAlways (aow_portal_init, 0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalStandMarker",128,80,0,0,0,0,0,32,0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalStandMarker",128,-80,0,0,0,0,0,32,0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalSphereMarker",128,80,56,0,0,0,0,32,0)

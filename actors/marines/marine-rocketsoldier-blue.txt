@@ -117,7 +117,7 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 		NULL A 0 A_GiveInventory("PowerBlueTeamArmor")
 		NULL A 0 A_ChangeFlag("Friendly", 0)//Execute ACS script(s) here.
 		NULL A 0 ACS_ExecuteAlways (aow_script985, 0, 1, ARMOD_EXPLO)
-		NULL A 0 ACS_ExecuteAlways (SC_MARINE_INIT, 0)
+		NULL A 0 ACS_ExecuteAlways (aow_marine_init, 0)
 		Goto EnablePushablePreIdle
 
 	EnablePushablePreIdle: //Allows you to push marines if they are in your way while idling.

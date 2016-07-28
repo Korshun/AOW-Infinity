@@ -76,7 +76,7 @@ function int AI_IsCompensation (int i) {
 
 // ============================================================================
 // Init a marine
-script SC_MARINE_INIT (void) {
+script aow_marine_init (void) {
 	GiveInventory ("IsAIMarine", 1);
 	
 	// if we haven't got an ID already, get one
@@ -89,7 +89,7 @@ script SC_MARINE_INIT (void) {
 	}
 	
 	// Set proper special
-	SetThingSpecial (0, ACS_ExecuteAlways, SC_MARINE_DEATH, 0, ActivatorTID()-TID_MARINE);
+	SetThingSpecial (0, ACS_ExecuteAlways, aow_marine_death, 0, ActivatorTID()-TID_MARINE);
 }
 
 // ============================================================================
@@ -114,12 +114,12 @@ function void AI_ManageCompensation (void) {
 		AIMarines[TEAM_RED] = 0;
 	
 	// make sure teams have the right amount of marines
-	ACS_ExecuteAlways (SC_MARINE_COMPENSATION, 0, TEAM_BLUE);
-	ACS_ExecuteAlways (SC_MARINE_COMPENSATION, 0, TEAM_RED);
+	ACS_ExecuteAlways (aow_marine_compensation, 0, TEAM_BLUE);
+	ACS_ExecuteAlways (aow_marine_compensation, 0, TEAM_RED);
 }
 
 // This is a script so as to be able to use latent functions.
-script SC_MARINE_COMPENSATION (int team) {
+script aow_marine_compensation (int team) {
 	int AICount;
 	int spottid;
 	
@@ -215,7 +215,7 @@ script SC_MARINE_COMPENSATION (int team) {
 
 // ============================================================================
 // AI marine bounty
-script SC_MARINE_DEATH (int i) {
+script aow_marine_death (int i) {
 	// No matter what happened to the marine, the slot needs to
 	// be cleared now that it's dead. Save it's team first,
 	// we can't get it after the slot is cleared.
@@ -239,7 +239,7 @@ script SC_MARINE_DEATH (int i) {
 }
 
 // Dumps known information about AI marines. Not a lot here at the moment..
-script SC_MARINE_STATS (void) {
+script aow_marine_stats (void) {
 	for (int i = 0; i < MAX_MARINES; i++) {
 		if (!Bots[i]) {
 			Log (s:"Marine ", d:i, s:": -");

@@ -20,7 +20,7 @@ function int Portal_GetDestination (int idx) {
 }
 
 // Portal use this to request TIDs.
-script SC_PORTAL_TIDREQUEST (int team) {
+script aow_portal_tidrequest (int team) {
 	if (team == TEAM_RED) {
 		if (!ThingCount (0, TID_PORTAL_RED1)) {Thing_ChangeTID (0, TID_PORTAL_RED1); terminate;}
 		if (!ThingCount (0, TID_PORTAL_RED2)) {Thing_ChangeTID (0, TID_PORTAL_RED2); terminate;}
@@ -35,7 +35,7 @@ script SC_PORTAL_TIDREQUEST (int team) {
 	Print (s:"Portal gets tid ", d:ActivatorTID());
 }
 
-script SC_PORTAL_INIT (void) {
+script aow_portal_init (void) {
 	int disapproved;
 	int angle, x, y, z, z2;
 	int tid;
@@ -131,7 +131,7 @@ script SC_PORTAL_INIT (void) {
 	
 	// Sanity checks complete - the portal is good now!
 	Portals[idx] = true;
-	SetThingSpecial (tid, ACS_ExecuteAlways, SC_PORTAL_FUNCTION, 0, idx);
+	SetThingSpecial (tid, ACS_ExecuteAlways, aow_portal_function, 0, idx);
 	
 	// What sphere color should we use?
 	int spheretype, fxtype;
@@ -180,7 +180,7 @@ script SC_PORTAL_INIT (void) {
 }
 
 // Portal teleport function
-script SC_PORTAL_FUNCTION (int idx) {
+script aow_portal_function (int idx) {
 	int dest = Portal_GetDestination (idx);
 	int tid = TID_PORTAL_BLUE1 + idx;
 	

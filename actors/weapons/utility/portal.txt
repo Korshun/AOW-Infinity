@@ -36,7 +36,7 @@ actor Utility_PortalBlue {
 	damagefactor "Chemical", 0.6
 	states {
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways (SC_PORTAL_TIDREQUEST, 0, TEAM_BLUE)
+		TNT1 AA 0 ACS_ExecuteAlways (aow_portal_tidrequest, 0, TEAM_BLUE)
 		NULL A 8 A_CheckSight ("CantSeeShit")
 		NULL A 0 A_JumpIf (waterlevel >= 1, "CantSeeShit")
 		NULL A -1
@@ -85,7 +85,7 @@ actor Utility_PortalBlue {
 actor Utility_PortalRed : Utility_PortalBlue {
 	states {
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways (SC_PORTAL_TIDREQUEST, 0, TEAM_RED)
+		TNT1 AA 0 ACS_ExecuteAlways (aow_portal_tidrequest, 0, TEAM_RED)
 		NULL A 8 A_CheckSight ("CantSeeShit")
 		NULL A 0 A_JumpIf (waterlevel >= 1, "CantSeeShit")
 		NULL A -1
