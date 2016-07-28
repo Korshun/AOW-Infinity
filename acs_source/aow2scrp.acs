@@ -229,7 +229,7 @@ int Portals[4] = {0};
 // used to determine when a player has teleported in the last 18 tics. prevents teleporting multiple times.
 int HasTeleported[MAX_PLAYERS];
 
-int LastMenu[MAX_PLAYERS] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
+int LastMenu[MAX_PLAYERS + 1] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
 
 
 //Bases
