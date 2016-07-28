@@ -1,5 +1,8 @@
 AOW Infinity is based on AOW r2539-5
 
+r2:
+- Fixed utility guy building stuff for the wrong team
+
 r1:  
 * Removed damage randomization from all projectiles and bullets
 * Increased player limit to 64 (experimental!)
