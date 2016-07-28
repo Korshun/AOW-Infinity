@@ -157,10 +157,11 @@ function void DisplayBuildingHud (void) {
 		s:ColorCodeHealth(GetActorSpeed (TID_MINIREF_BLUE)), d:GetActorSpeed (TID_MINIREF_BLUE), s:"\cc%\n",
 		s:PortalLinkColor (TEAM_BLUE, 0), s:"++", s:PortalLinkColor (TEAM_BLUE, 1), s:"Portal\cc: ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_BLUE1)), d:PortalHealth (TID_PORTAL_BLUE1), s:"\cc% / ",
-		s:ColorCodeHealth(PortalHealth (TID_PORTAL_BLUE2)), d:PortalHealth (TID_PORTAL_BLUE2), s:"\cc%";
-		HUDMSG_PLAIN, 8850, CR_BLUE, 0.012, 0.52, 0.0);
+		s:ColorCodeHealth(PortalHealth (TID_PORTAL_BLUE2)), d:PortalHealth (TID_PORTAL_BLUE2), s:"\cc%",
+		
+		s:"\n\n\n\n\n\n",
 	
-	HudMessageBold (s:ExistsBuilding (TID_BARRACKS_RED), s:"Barracks\cc: ",
+	    s:ExistsBuilding (TID_BARRACKS_RED), s:"Barracks\cc: ",
 		s:ColorCodeHealth(GetActorSpeed (TID_BARRACKS_RED)), d:GetActorSpeed (TID_BARRACKS_RED), s:"\cc%\n",
 		s:ExistsBuilding (TID_REFINERY_RED), s:"Refinery\cc: ",
 		s:ColorCodeHealth(GetActorSpeed (TID_REFINERY_RED)), d:GetActorSpeed (TID_REFINERY_RED), s:"\cc%\n",
@@ -181,7 +182,7 @@ function void DisplayBuildingHud (void) {
 		s:PortalLinkColor (TEAM_RED, 0), s:"++", s:PortalLinkColor (TEAM_RED, 1), s:"Portal\cc: ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_RED1)), d:PortalHealth (TID_PORTAL_RED1), s:"\cc% / ",
 		s:ColorCodeHealth(PortalHealth (TID_PORTAL_RED2)), d:PortalHealth (TID_PORTAL_RED2), s:"\cc%";
-		HUDMSG_PLAIN, 8851, CR_RED, 0.012, 0.74, 0.0);
+		HUDMSG_PLAIN, 8850, CR_BLUE, 0.012, 0.52, 0.0);
 	
 	int bluelives = GetActorSpeed (TID_TICKETCOUNTER_BLUE);
 	int redlives = GetActorSpeed (TID_TICKETCOUNTER_RED);
