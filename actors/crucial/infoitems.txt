@@ -24,6 +24,7 @@ actor IsInSpawnRoom : Boolean {}
 actor IsMCT : Boolean {}
 actor IsArtillerySoldier : Boolean {}
 Actor PlayerCredits : Integer {}
+Actor PlayerCredits2 : Integer {}
 Actor PlayerExperience : Integer {}
 
 // [SP] This item is used to determine whether a util can build turrets in his base.
