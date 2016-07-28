@@ -1,5 +1,8 @@
 AOW Infinity is based on AOW r2539-5
 
+r4:
+- Fixed utility guy getting stuck in menu
+
 r3:
 * Player status hud is now clientside and updates instantly too
 * Increased player limit to 64 for real now (still experimental!)
