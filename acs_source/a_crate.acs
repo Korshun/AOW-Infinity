@@ -70,7 +70,6 @@ script aow_script309 (int Crate, int Override) {
 			if (GotFactory[1]) SetActorHealth (TID_FACTORY_BLUE, GetActorSpawnHealth (TID_FACTORY_BLUE));
   			if (GotObelisk[1]) SetActorHealth (TID_OBELISK_BLUE, GetActorSpawnHealth (TID_OBELISK_BLUE));
 		}
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_ALL, PlayerTeam());
 		HudMessage (s:"\cDBase miracle!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
@@ -427,7 +426,6 @@ script aow_script309 (int Crate, int Override) {
 		HudMessage (s:"\cRBase crasher!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_ALL, PlayerTeam()); // update the hud
 		break;
 	case 37:
 	case 38:

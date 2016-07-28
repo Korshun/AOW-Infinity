@@ -9,15 +9,16 @@
  *  It could be improved even further to not use copy/paste code but that's 
  *  something for a later date...
  */
-
-script aow_basehud_serverside (int what, int team)
+ 
+script aow_basehud_serverside OPEN
 {
 	int LastHealth, perc;
 	int tid, maxhp, exists;
 	int u = false;
-	int a = (what == BUILDING_ALL);
+	int team;
 
-	if (what == BUILDING_BARRACKS || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_BARRACKS_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_BARRACKS + GotBarracks[1-team];
@@ -25,7 +26,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_REFINERY || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_REFINERY_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_REFINERY + GotRefinery[1-team];
@@ -33,7 +35,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_RESCENTRE || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_RESCENTRE_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_PLANT + GotPlant[1-team];
@@ -41,7 +44,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_FACTORY || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_FACTORY_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_FACTORY + GotFactory[1-team];
@@ -49,7 +53,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_REPAIR || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_REPAIR_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_REPAIR + GotRepair[1-team];
@@ -57,7 +62,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_OBELISK || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_OBELISK_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_OBELISK + GotObelisk[1-team];
@@ -65,7 +71,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_MINIREF || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_MINIREF_BLUE - team;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_MINIREF + MiniRefinery[1-team];
@@ -73,7 +80,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_HEALTHREGEN || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_HEALTHREGEN_BLUE - team;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_REGENS + GlobalMedic[1-team];
@@ -81,7 +89,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_AMMOREGEN || a) {
+	for (team = 0; team < 2; team++)
+	{
 		tid = TID_AMMOREGEN_BLUE - team;
 		LastHealth = GetActorSpeed (tid);
 		perc = GetActorHealth (tid) * 99 / HP_REGENS + GlobalAmmo[1-team];
@@ -89,7 +98,8 @@ script aow_basehud_serverside (int what, int team)
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
 	
-	if (what == BUILDING_PORTAL || a) {
+	for (team = 0; team < 2; team++)
+	{
 		// [Dusk] we can't tell from the building index which
 		// portal end is changing. Update both.
 		for (int i = 0; i <= 1; i++) {
@@ -102,6 +112,9 @@ script aow_basehud_serverside (int what, int team)
 			if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 		}
 	}
+	
+	Delay(1);
+	restart;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

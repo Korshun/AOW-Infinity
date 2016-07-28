@@ -68,9 +68,6 @@ script aow_script999 OPEN {
 		Team_GivePoints (TEAM_BLUE, 1, 0);
 	}
 	
-	ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_ALL, TEAM_RED);
-	ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_ALL, TEAM_BLUE);
-	
 	// [Dusk] If ticket pool is enabled, spawn ticket counters. These counters
 	// are used to inform clients about ticket values, since the left-hand
 	// hud is client-sided. "Physically", the ticket counters are map spots

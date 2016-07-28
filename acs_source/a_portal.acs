@@ -174,9 +174,6 @@ script aow_portal_init (void) {
 		SetActorState (tid_effects, "Init.Inactive");
 		Log (n:0, s:" constructs a portal end.");
 	}
-	
-	// update the hud
-	ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_PORTAL, PlayerTeam());
 }
 
 // Portal teleport function
@@ -205,9 +202,6 @@ script aow_portal_function (int idx) {
 			SetActorState (TID_PORTAL_BLUE1 + dest, "Inactive");
 			SetActorState (TID_PORTAL_FX + dest, "Inactive");
 		}
-		
-		// update the hud
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_PORTAL, PlayerTeam());
 		
 		terminate;
 	}

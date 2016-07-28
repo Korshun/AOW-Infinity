@@ -93,7 +93,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetActorState (TID_MINIREF_RED, "Approved");
 			Log(n:0, s:" builds Red Mini-Refinery.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_MINIREF, TEAM_RED);
 		} else if(PlayerTeam() == TEAM_RED && ThingCountSector(T_NONE,TID_MINIREF_RED,18) == 0) {
 			SetFont("SMALLFONT");
 			HudMessage (s:"Must be built into a \cDTiberium Field!";
@@ -115,7 +114,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetActorState (TID_MINIREF_BLUE, "Approved");
 			Log(n:0, s:" builds Blue Mini-Refinery.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_MINIREF, TEAM_BLUE);
 		}
 		else if(PlayerTeam() == TEAM_BLUE && ThingCountSector(T_NONE,TID_MINIREF_BLUE,18) == 0) {
 			SetFont("SMALLFONT");
@@ -189,7 +187,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetActorState (TID_HEALTHREGEN_RED, "Approved");
 			Log(n:0, s:" builds Red Health Regen Cache.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_RED);
 		} else if(PlayerTeam() == TEAM_RED) {
 			SetFont ("SMALLFONT");
 			HudMessage (s:"Regenerator failed to spawn to cache pad!";
@@ -217,7 +214,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetActorState (TID_HEALTHREGEN_BLUE, "Approved");
 			Log(n:0, s:" builds Blue Health Regen Cache.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_BLUE);
 		} else if (PlayerTeam() == TEAM_BLUE) {
 			SetFont ("SMALLFONT");
 			HudMessage (s:"Regenerator failed to spawn to cache pad!";
@@ -287,7 +283,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetThingSpecial(TID_AMMOREGEN_RED, ACS_ExecuteAlways, 345, 0, 7, 0);
 			Log(n:0, s:" builds Red Ammo Regen Cache.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_RED);
 		} else if(PlayerTeam() == TEAM_RED) {
 			SetFont ("SMALLFONT");
 			HudMessage (s:"Regenerator failed to spawn to cache pad!";
@@ -315,7 +310,6 @@ script aow_script344 (int Type, int DoneByUtilGun)
 			SetThingSpecial(TID_AMMOREGEN_BLUE, ACS_ExecuteAlways, 345, 0, 7, 1);
 			Log(n:0, s:" builds Blue Ammo Regen Cache.");
 			GivePoints (POINTS_RESEARCH);
-			ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_BLUE);
 		} else if (PlayerTeam() == TEAM_BLUE) {
 			SetFont ("SMALLFONT");
 			HudMessage (s:"Regenerator failed to spawn to cache pad!";
@@ -359,7 +353,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Mini-Ref.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_MINIREF, TEAM_RED);
 	}
 	if(Type == 3 && Team == 1) //BLUE 
 	{
@@ -372,7 +365,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Mini-Ref.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_MINIREF, TEAM_BLUE);
 	}
 	if(Type == 5 && Team == 0) //RED 
 	{
@@ -385,7 +377,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Health Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_RED);
 	}
 	if(Type == 5 && Team == 1) //BLUE 
 	{
@@ -398,7 +389,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Health Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_HEALTHREGEN, TEAM_RED);
 	}
 	if(Type == 7 && Team == 0) //RED 
 	{
@@ -411,7 +401,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Red Ammo Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_RED);
 
 	}
 	if(Type == 7 && Team == 1) //BLUE 
@@ -425,7 +414,6 @@ script aow_script345 (int Type, int Team)
 		AddCredits(Credits[PlayerNumber()+1], 200);	
 		Log(n:0, s:" destroys Blue Ammo Regen Cache.");
 		GivePoints (POINTS_RESEARCH);
-		ACS_ExecuteAlways (aow_basehud_serverside, 0, BUILDING_AMMOREGEN, TEAM_BLUE);
 	}
 }
 
