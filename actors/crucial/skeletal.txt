@@ -50,7 +50,7 @@ actor InventoryItem : CustomInventory {
 		NULL A 0
 		fail
 	Destealth:
-		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_stealth, 0, 3)
 		fail
 	}
 }

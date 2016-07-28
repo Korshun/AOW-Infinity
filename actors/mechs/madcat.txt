@@ -27,7 +27,7 @@ actor MadCat : MechPlayer_Base {
 	Spawn:
 		MADC A 1
 		NULL A 0 SetPlayerProperty(0,0,3)
-		NULL A 0 ACS_ExecuteAlways (aow_script310, 0, 3)
+		NULL A 0 ACS_ExecuteAlways (aow_stealth, 0, 3)
 		NULL A 0 ACS_Execute (315, 0)
 		NULL A 0 A_GiveInventory ("MechEjectButton", 1)
 		NULL A 0 A_GiveInventory ("IsMech", 1)

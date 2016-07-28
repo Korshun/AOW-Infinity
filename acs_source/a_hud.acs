@@ -30,7 +30,7 @@ script aow_playerstatushud_serverside RESPAWN {
 		
 		delay (1);
 		if (!CheckWeapon("StealthLaserRifle") && !CheckWeapon("Knife"))
-			ACS_ExecuteAlways (aow_script310, 0, 3);
+			ACS_ExecuteAlways (aow_stealth, 0, 3);
 	}
 }
 
