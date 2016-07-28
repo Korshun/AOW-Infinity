@@ -55,6 +55,16 @@ actor InventoryItem : CustomInventory {
 	}
 }
 
+Actor Integer : Inventory {
+	+NOBLOCKMAP
+	inventory.maxamount 0x7fffffff
+	states {
+	Spawn:
+		NULL A 0
+		stop
+	}
+}
+
 actor Boolean : Inventory {
 	+NOBLOCKMAP
 	inventory.maxamount 1
