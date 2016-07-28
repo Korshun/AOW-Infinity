@@ -1,5 +1,8 @@
 AOW Infinity is based on AOW r2539-5
 
+r3:
+* Player status hud is now clientside and updates instantly too
+
 r2:
 - Fixed utility guy building stuff for the wrong team
 
