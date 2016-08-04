@@ -211,7 +211,7 @@ function int CheckFreeHangar (int Team) {
 // [Dusk] Check for advanced mech research
 function int CheckAdvMechResearch (int Team) {
 	if (IsAdmin[PlayerNumber()]) return 1;
-	if (!AdvancedMechResearch[Team]) {
+	if (!Researches[RESERACH_AdvancedMechResearch][Team]) {
 		Error ("You need to research \cfadvanced mechs\c- first!");
 		return 0;
 	}

@@ -10,7 +10,7 @@ script aow_res_enhancedrefining (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
 
-	if(EnhancedRefining[Team]) {
+	if(Researches[RESERACH_EnhancedRefining][Team]) {
 		Error ("This has already been researched!");
 		terminate;
 	}
@@ -54,7 +54,7 @@ script aow_res_enhancedrefining (int Team) {
 		Log (n:0, s:" researches Enhanced Refining for Blue Team.");
 	}
 	
-	EnhancedRefining[Team] = True;
+	Researches[RESERACH_EnhancedRefining][Team] = True;
 }
 
 //---------------------------ADVANCED MECH RESEARCH
@@ -70,7 +70,7 @@ script aow_res_advancedmechs (int Team) {
 		terminate;
 	}
 
-	if (AdvancedMechResearch[Team]) {
+	if (Researches[RESERACH_AdvancedMechResearch][Team]) {
 		Error ("This has already been researched!");
 		terminate;
 	}
@@ -112,7 +112,7 @@ script aow_res_advancedmechs (int Team) {
 		Log (n:0, s:" researches Advanced Mechs for Blue Team");
 	}
 
-	AdvancedMechResearch[Team] = True;
+	Researches[RESERACH_AdvancedMechResearch][Team] = True;
 }
 
 // [Dusk] Dummy script for a possible future research
@@ -154,7 +154,7 @@ script aow_res_healthregencache (int Team) {
 	HudMessage(s:"\ciConstruction Complete!"; HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 
 	ACS_ExecuteAlways(aow_script344, 0, 6);
-	// GlobalMedic[Team] = True;
+	// Researches[RESERACH_GlobalMedic][Team] = True;
 
 	if(Team == 0)
 		SpawnSpot("Utility_GlobalMedicCacheRed", 212);
@@ -196,7 +196,7 @@ script aow_res_ammoregencache (int Team) {
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 
 	ACS_ExecuteAlways(aow_script344, 0, 8);
-	//GlobalAmmo[Team] = True;
+	//Researches[RESERACH_GlobalAmmo][Team] = True;
 
 	if(Team == 0)
 		SpawnSpot("Utility_GlobalAmmoCacheRed", 213);
@@ -285,7 +285,7 @@ script aow_res_repairgunupgrade (int Team) {
 script aow_res_advancedturrets (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
-	if (AdvancedTurrets[Team]) {
+	if (Researches[RESERACH_AdvancedTurrets][Team]) {
 		Error ("This has already been researched!");
 		terminate;
 	}
@@ -329,7 +329,7 @@ script aow_res_advancedturrets (int Team) {
 		Log (n:0, s:" researches Advanced Turrets for Blue Team");
 	}
 	
-	AdvancedTurrets[Team] = True;
+	Researches[RESERACH_AdvancedTurrets][Team] = True;
 }
 
 //---------------------------MORE TURRETS
@@ -337,7 +337,7 @@ script aow_res_moreturrets (int Team) {
 	int cost = 2000;
 	if (MitigateDoublePress()) terminate;
 	
-	if (MoreTurrets[Team]) {
+	if (Researches[RESERACH_MoreTurrets][Team]) {
 		Error ("This has already been researched!");
 		terminate;
 	}
@@ -382,6 +382,6 @@ script aow_res_moreturrets (int Team) {
 		Log (n:0, s:" researches More Turrets for Blue Team");
 	}
 
-	MoreTurrets[Team] = True;
+	Researches[RESERACH_MoreTurrets][Team] = True;
 	MaxTurrets[Team] += 5;
 }

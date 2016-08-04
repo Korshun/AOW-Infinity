@@ -246,12 +246,15 @@ int MinEnemyTurretDistance = 1500;
 int SurrenderWaitTime = 20;
 
 //RESEARCHES!!!!!!!!
-bool EnhancedRefining[2]; //Increases profits from harvesting by $50 //Costs $2000
-bool AdvancedMechResearch[2]; //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
-int GlobalMedic[2]; //Builds a Team Health Regeneration Cache //Costs $2250
-int GlobalAmmo[2]; //Builds a Team Ammo Regeneration Cache //Costs $2250
-bool AdvancedTurrets[2]; //Allows construction of high level Turrets //Costs $2000
-bool MoreTurrets[2]; //Increases Turret cap by 10 //Costs $2000
+#define RESERACH_EnhancedRefining 0 //Increases profits from harvesting by $50 //Costs $2000
+#define RESERACH_AdvancedMechResearch 1 //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
+#define RESERACH_GlobalMedic 2 //Builds a Team Health Regeneration Cache //Costs $2250
+#define RESERACH_GlobalAmmo 3 //Builds a Team Ammo Regeneration Cache //Costs $2250
+#define RESERACH_AdvancedTurrets 4 //Allows construction of high level Turrets //Costs $2000
+#define RESERACH_MoreTurrets 5 //Increases Turret cap by 10 //Costs $2000
+#define NUM_RESEARCHES 6
+
+int Researches[NUM_RESEARCHES][2];
 int MaxTurrets[2] = {15, 15};
 
 

@@ -84,7 +84,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_HEALTHREGEN_BLUE - team;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_REGENS + GlobalMedic[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_REGENS + Researches[RESERACH_GlobalMedic][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -93,7 +93,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_AMMOREGEN_BLUE - team;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_REGENS + GlobalAmmo[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_REGENS + Researches[RESERACH_GlobalAmmo][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
