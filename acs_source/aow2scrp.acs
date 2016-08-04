@@ -12,7 +12,31 @@
 // [NG] == Tiger
 
 #library "aow2scrp"
+#nocompact
+
+#define TIDALLOCSTART 15000
+
 #include "zcommon.acs"
+#include "acsretval.acs"
+#include "acserror.acs"
+#include "acsmath.acs"
+#include "acsctype.acs"
+#include "acsstr.acs"
+#include "acszdoom.acs"
+#include "acspack.acs"
+#include "acsinput.acs"
+#include "acsunits.acs"
+#include "acsparse.acs"
+#include "acstid.acs"
+// #include "acshudlib.acs" // OVER 128 GLOBALS
+
+
+// Your project's error handler:
+function void ACSUtilsErrorHandler(int type, int message)
+{
+	Log(s:"error: ", s:message);
+	printbold(s:"error: ", s:message);
+}
 
 #define MAX_NORMAL_WEAPONS 22
 
@@ -121,6 +145,16 @@
 #define BUILDING_HEALTHREGEN 7
 #define BUILDING_AMMOREGEN 8
 #define BUILDING_PORTAL 9
+#define NUM_BUILDING_TYPES 10
+
+bool GotBuilding[NUM_BUILDING_TYPES][2];
+int BuildingHealth[NUM_BUILDING_TYPES][2];
+
+int MiniRefinery[2];
+int MiniRefHealth[2];
+int GlobalMedicHealth[2];
+int GlobalAmmoHealth[2];
+int BaseLeft[2];
 
 // TODO: move these to 1000+ range
 #define TID_BARRACKS_BLUE 101
@@ -168,10 +202,6 @@
 
 #define MAX_MARINES 24
 
-// MAXPLAYERS - should be the same as in the Skulltag this AOW is played in
-// TODO: make this actually used
-#define MAX_PLAYERS 64
-
 bool Bots[MAX_MARINES];
 
 int BaseTIDs[18] = {
@@ -212,15 +242,10 @@ int PlayerNeedsSwitched;
 int LastPurchasedCannon[MAX_PLAYERS + 1];
 int LastPurchasedBeacon[3];
 int NumPlasmaCannons[3];
-int MaxCannonsPerTeam;
-int CannonPurchaseDelay;
 
 // [SP] Time Cop tracking
 int LastPurchasedTimeCop[MAX_PLAYERS + 1];
 int NumTimeCops[3];
-int MaxTimeCopsPerTeam;
-
-int TimedC4Delay;
 
 int UsePortals = 1;
 // [Dusk] this is used to determine which portal is alive *and* active
@@ -230,26 +255,6 @@ int Portals[4] = {0};
 int HasTeleported[MAX_PLAYERS];
 
 int LastMenu[MAX_PLAYERS + 1] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
-
-
-//Bases
-bool GotRefinery[2];
-bool GotBarracks[2];
-bool GotFactory[2];
-bool GotPlant[2];
-bool GotRepair[2];
-bool GotObelisk[2];
-int MiniRefinery[2];
-int RefineryHealth[2];
-int BarracksHealth[2];
-int FactoryHealth[2];
-int PlantHealth[2];
-int RepairHealth[2];
-int ObeliskHealth[2];
-int MiniRefHealth[2];
-int GlobalMedicHealth[2];
-int GlobalAmmoHealth[2];
-int BaseLeft[2];
 
 int NextTicketUpdate;
 int LastAttackMessage;
@@ -261,34 +266,23 @@ int MinEnemyTurretDistance = 1500;
 int SurrenderWaitTime = 20;
 
 //RESEARCHES!!!!!!!!
-bool EnhancedRefining[2]; //Increases profits from harvesting by $50 //Costs $2000
-bool AdvancedMechResearch[2]; //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
-int GlobalMedic[2]; //Builds a Team Health Regeneration Cache //Costs $2250
-int GlobalAmmo[2]; //Builds a Team Ammo Regeneration Cache //Costs $2250
-bool AdvancedTurrets[2]; //Allows construction of high level Turrets //Costs $2000
-bool MoreTurrets[2]; //Increases Turret cap by 10 //Costs $2000
+#define RESERACH_EnhancedRefining 0 //Increases profits from harvesting by $50 //Costs $2000
+#define RESERACH_AdvancedMechResearch 1 //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
+#define RESERACH_GlobalMedic 2 //Builds a Team Health Regeneration Cache //Costs $2250
+#define RESERACH_GlobalAmmo 3 //Builds a Team Ammo Regeneration Cache //Costs $2250
+#define RESERACH_AdvancedTurrets 4 //Allows construction of high level Turrets //Costs $2000
+#define RESERACH_MoreTurrets 5 //Increases Turret cap by 10 //Costs $2000
+#define NUM_RESEARCHES 6
+
+int Researches[NUM_RESEARCHES][2];
 int MaxTurrets[2] = {15, 15};
 
-int GuardianLimit;
 
-int StartCredits;
-int CreditFlow;
-int CreditFlowPower;
-int CreditFragAward;
-int CreditAwardTime;
-int CreditAwardAmount;
-int CreditRepairAmount;
-
-bool MechEnabled;
 bool GettingMech[2];
 bool SuddenDeath = False;
-bool TicketPool = False;
 int Tickets[2];
 int StartingTickets;
-int TournamentMode;
-int BeaconPurchaseDelay;
 
-int TeamStayTime;
 bool TeamUnbalanceCompensation[2];
 
 bool RedBeaconCooldown = False;
@@ -303,7 +297,6 @@ bool CrateTime = True;
 int PlayerSpeeds[MAX_PLAYERS];
 int MechGetter[2]; // which player is in the hangar?
 
-int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
 int PlasmaCooldown[MAX_PLAYERS]; // same for plasma cannon (internal)
 
 int MaxRazorWire = 20;
@@ -313,7 +306,6 @@ int MaxCrates = 15;
 
 int RepairBonus[MAX_PLAYERS];
 int MedicBonus[MAX_PLAYERS];
-int MedicBonusNeed;
 int AIMarines[2] = {0}; // compensation-spawned only
 
 int AIMarineCount = 0; // how many AI marines are there overall?

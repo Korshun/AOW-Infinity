@@ -4,7 +4,7 @@ script aow_script101 (VOID)
 	Thing_Destroy(100,0);
 	Thing_Destroy(TID_BARRACKS_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
-	GotBarracks[1] = False;
+	GotBuilding[BUILDING_BARRACKS][1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(1,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	SetLineTexture(3,SIDE_FRONT,TEXTURE_MIDDLE,"MCT3");
@@ -24,7 +24,7 @@ script aow_script102 (VOID)
 	Thing_Destroy(102,0);
 	Thing_Destroy(TID_REFINERY_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
-	GotRefinery[1] = False;
+	GotBuilding[BUILDING_REFINERY][1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(5,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	ReddenSector (5);
@@ -43,7 +43,7 @@ script aow_script103 (void) {
 	Thing_Remove(104);
 	Thing_Destroy(TID_RESCENTRE_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
-	GotPlant[1] = False;
+	GotBuilding[BUILDING_RESCENTRE][1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(7,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	SetLineTexture(3,SIDE_FRONT,TEXTURE_MIDDLE,"MCT3");
@@ -65,7 +65,7 @@ script aow_script104 (VOID)
 	Thing_Destroy(106,0);
 	Thing_Destroy(TID_FACTORY_BLUE,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
-	GotFactory[1] = False;
+	GotBuilding[BUILDING_FACTORY][1] = False;
 	BaseLeft[1]--;
 	SetLineTexture(9,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	ReddenSector (9);
@@ -83,7 +83,7 @@ script aow_script104 (VOID)
 script aow_script105 (VOID)
 {
 	//Thing_Remove(TID_REPAIR_BLUE);
-	GotRepair[1] = False;
+	GotBuilding[BUILDING_REPAIR][1] = False;
 	ReddenSector (13);
 	ReddenSector (14);
 	SetActorProperty(TID_REPAIR_BLUE,APROP_Health,0);
@@ -106,7 +106,7 @@ script aow_script114 (VOID)
 	Thing_Destroy(TID_OBELISK_BLUE,0);
 	Thing_Destroy(115,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_BLUE);
-	GotObelisk[1] = False;
+	GotBuilding[BUILDING_OBELISK][1] = False;
 	BaseLeft[1]--;
 	ReddenSector (19);
 	SetLineTexture(11,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -126,7 +126,7 @@ script aow_script201 (VOID)
 	Thing_Destroy(TID_BARRACKS_RED,0);
 	ACS_ExecuteAlways (aow_script99, 0, TEAM_RED);
 	
-	GotBarracks[0] = False;
+	GotBuilding[BUILDING_BARRACKS][0] = False;
 	BaseLeft[0]--;
 	
 	SetLineTexture(2,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
@@ -148,7 +148,7 @@ script aow_script202 (VOID)
 	Thing_Destroy(202,0);
 	Thing_Destroy(TID_REFINERY_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
-	GotRefinery[0] = False;
+	GotBuilding[BUILDING_REFINERY][0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(6,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	ReddenSector (6);
@@ -167,7 +167,7 @@ script aow_script203 (VOID)
 	Thing_Destroy(204,0);
 	Thing_Destroy(TID_RESCENTRE_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
-	GotPlant[0] = False;
+	GotBuilding[BUILDING_RESCENTRE][0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(8,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	SetLineTexture(4,SIDE_FRONT,TEXTURE_MIDDLE,"MCT3");
@@ -188,7 +188,7 @@ script aow_script204 (VOID)
 	Thing_Destroy(206,0);
 	Thing_Destroy(TID_FACTORY_RED,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
-	GotFactory[0] = False;
+	GotBuilding[BUILDING_FACTORY][0] = False;
 	BaseLeft[0]--;
 	SetLineTexture(10,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");
 	ReddenSector (11);
@@ -205,7 +205,7 @@ script aow_script204 (VOID)
 
 //---------------------------RED REPAIR FACILITY DEATH
 script aow_script205 (VOID) {
-	GotRepair[0] = False;
+	GotBuilding[BUILDING_REPAIR][0] = False;
 	ReddenSector (15);
 	ReddenSector (16);
 	SetActorProperty(TID_REPAIR_RED,APROP_Health,0);
@@ -228,7 +228,7 @@ script aow_script214 (VOID)
 	Thing_Destroy(TID_OBELISK_RED,0);
 	Thing_Destroy(215,0);
 	ACS_ExecuteAlways(aow_script99, 0, TEAM_RED);
-	GotObelisk[0] = False;
+	GotBuilding[BUILDING_OBELISK][0] = False;
 	BaseLeft[0]--;
 	ReddenSector (20);
 	SetLineTexture(12,SIDE_FRONT,TEXTURE_BOTTOM,"MCT2");

@@ -64,7 +64,7 @@ script aow_script941 (int Player) DISCONNECT {
 }
 
 script aow_script948 (int time, int display) SetResultValue (TimeDelay (time, display));
-script aow_script949 (int display) SetResultValue (TimeDelay (TimedC4Delay, display));
+script aow_script949 (int display) SetResultValue (TimeDelay (GetCVAR("aow_c4delay"), display));
 
 function bool TimeDelay (int time, bool display) {
 	if (Time * 35 * 60 > Timer()) {
