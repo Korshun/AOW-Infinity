@@ -27,7 +27,7 @@ script aow_script107 (void) {
 				delay (5);
 			}
 			
-			if (GotRepair[1-PlayerTeam()]) {
+			if (GotBuilding[BUILDING_REPAIR][1-PlayerTeam()]) {
 				SetHealth (GetHealth() + 3);
 				GiveInventory ("AmmoCachePack", 1);
 			} else {
@@ -49,7 +49,7 @@ script aow_script107 (void) {
 				delay (5);
 			}
 			
-			if (GotRepair[1-PlayerTeam()]) {
+			if (GotBuilding[BUILDING_REPAIR][1-PlayerTeam()]) {
 				SetHealth (GetHealth() + 22);
 				GiveInventory("MechAmmoStuffSmall",1);
 			} else {

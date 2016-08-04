@@ -21,7 +21,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_BARRACKS_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_BARRACKS + GotBarracks[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_BARRACKS + GotBuilding[BUILDING_BARRACKS][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -30,7 +30,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_REFINERY_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_REFINERY + GotRefinery[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_REFINERY + GotBuilding[BUILDING_REFINERY][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -39,7 +39,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_RESCENTRE_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_PLANT + GotPlant[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_PLANT + GotBuilding[BUILDING_RESCENTRE][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -48,7 +48,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_FACTORY_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_FACTORY + GotFactory[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_FACTORY + GotBuilding[BUILDING_FACTORY][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -57,7 +57,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_REPAIR_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_REPAIR + GotRepair[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_REPAIR + GotBuilding[BUILDING_REPAIR][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}
@@ -66,7 +66,7 @@ script aow_basehud_serverside OPEN
 	{
 		tid = TID_OBELISK_BLUE + team*100;
 		LastHealth = GetActorSpeed (tid);
-		perc = GetActorHealth (tid) * 99 / HP_OBELISK + GotObelisk[1-team];
+		perc = GetActorHealth (tid) * 99 / HP_OBELISK + GotBuilding[BUILDING_OBELISK][1-team];
 		if (perc < 0) perc = 0;
 		if (perc != LastHealth) {SetActorSpeed (tid, perc); u = true;}
 	}

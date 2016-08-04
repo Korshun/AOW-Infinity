@@ -121,6 +121,23 @@
 #define BUILDING_HEALTHREGEN 7
 #define BUILDING_AMMOREGEN 8
 #define BUILDING_PORTAL 9
+#define NUM_BUILDING_TYPES 10
+
+bool GotBuilding[NUM_BUILDING_TYPES][2];
+int BuildingHealth[NUM_BUILDING_TYPES][2];
+
+int RefineryHealth[2];
+int BarracksHealth[2];
+int FactoryHealth[2];
+int PlantHealth[2];
+int RepairHealth[2];
+int ObeliskHealth[2];
+
+int MiniRefinery[2];
+int MiniRefHealth[2];
+int GlobalMedicHealth[2];
+int GlobalAmmoHealth[2];
+int BaseLeft[2];
 
 // TODO: move these to 1000+ range
 #define TID_BARRACKS_BLUE 101
@@ -225,26 +242,6 @@ int Portals[4] = {0};
 int HasTeleported[MAX_PLAYERS];
 
 int LastMenu[MAX_PLAYERS + 1] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
-
-
-//Bases
-bool GotRefinery[2];
-bool GotBarracks[2];
-bool GotFactory[2];
-bool GotPlant[2];
-bool GotRepair[2];
-bool GotObelisk[2];
-int MiniRefinery[2];
-int RefineryHealth[2];
-int BarracksHealth[2];
-int FactoryHealth[2];
-int PlantHealth[2];
-int RepairHealth[2];
-int ObeliskHealth[2];
-int MiniRefHealth[2];
-int GlobalMedicHealth[2];
-int GlobalAmmoHealth[2];
-int BaseLeft[2];
 
 int NextTicketUpdate;
 int LastAttackMessage;

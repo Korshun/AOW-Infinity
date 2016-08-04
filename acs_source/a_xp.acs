@@ -137,7 +137,7 @@ script aow_script91 (void) {
 		case RANK_COMMANDO: SetMaxHealth (130); break;
 	}
 	
-	if (!GotFactory[1-PlayerTeam()] && GotFactory[PlayerTeam()]) GiveInventory("Grade2ArmorFactory", 1);
+	if (!GotBuilding[BUILDING_FACTORY][1-PlayerTeam()] && GotBuilding[BUILDING_FACTORY][PlayerTeam()]) GiveInventory("Grade2ArmorFactory", 1);
 	
 	// suicide bomber doesn't benefit from anything past this
 	if (CheckInventory ("BombPack")) terminate;
