@@ -126,13 +126,6 @@
 bool GotBuilding[NUM_BUILDING_TYPES][2];
 int BuildingHealth[NUM_BUILDING_TYPES][2];
 
-int RefineryHealth[2];
-int BarracksHealth[2];
-int FactoryHealth[2];
-int PlantHealth[2];
-int RepairHealth[2];
-int ObeliskHealth[2];
-
 int MiniRefinery[2];
 int MiniRefHealth[2];
 int GlobalMedicHealth[2];
