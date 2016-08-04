@@ -24,7 +24,7 @@ script aow_script994 DEATH {
 	if (CheckWeapon ("BombPack") && !CheckInventory ("IsTerrorist")) ActivatorSound ("c4/disarm", 127);
 	
 	// activate plasma cannon cooldown, if player had a plasma cannon
-	if (CheckInventory ("PlasmaCannon")) PlasmaCooldown[PlayerNumber()] = Timer() + PlasmaCooldownTime;
+	if (CheckInventory ("PlasmaCannon")) PlasmaCooldown[PlayerNumber()] = Timer() + GetCVAR("aow_plasmacooldown") * 35 * 60;
 	
 	// how much is this thing worth?
 	int points = 1;
@@ -91,7 +91,7 @@ script aow_script994 DEATH {
 		GivePoints (2*points);
 		
 		LocalAmbientSound ("game/boink", 127);
-		GiveCredits (-1, CreditFragAward);
+		GiveCredits (-1, GetCVar("aow_creditfrag"));
 		AddExperience (50);
 		
 		delay (5);

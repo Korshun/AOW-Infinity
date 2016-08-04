@@ -70,19 +70,19 @@ script aow_script330 (int Price) {
 
 // CREDIT BONUS
 script aow_script326 OPEN {
-	while (CreditAwardTime <= 0)
+	while (GetCVar("aow_bonustime") <= 0)
 		delay (5*35);
 	
-	delay(35*60*CreditAwardTime);
+	delay(35*60*GetCVar("aow_bonustime"));
 	
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (PlayerInGame(i) && !IsAdmin[i])
-			Credits[i+1] += CreditAwardAmount;
+			Credits[i+1] += GetCVar("aow_bonusamount");
 	}
 	
 	AmbientSound("powerup/credsound", 255);
 	SetFont ("SMALLFONT");
-	HudMessageBold (s:"Credit bonus! You all get \cQ$\cD", d:CreditAwardAmount, s:"\cJ!";
+	HudMessageBold (s:"Credit bonus! You all get \cQ$\cD", d:GetCVar("aow_bonusamount"), s:"\cJ!";
 		HUDMSG_FADEOUT, 15000, CR_WHITE,
 		INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 	

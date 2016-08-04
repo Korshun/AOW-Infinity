@@ -40,9 +40,9 @@ script aow_script999 OPEN {
 	GotObelisk[1] = True;
 	BaseLeft[1] = 5;
 
-	if(GetCVAR("aow_tickets") <= 1 && TicketPool == False)
+	if(GetCVAR("aow_tickets") <= 1 && GetCVar("aow_ticketpool") == False)
 		ConsoleCommand("set aow_tickets 75");
-	else if(GetCVAR("aow_tickets") <= 100 && TicketPool == True)
+	else if(GetCVAR("aow_tickets") <= 100 && GetCVar("aow_ticketpool") == True)
 		ConsoleCommand("set aow_tickets 250");
 	StartingTickets = GetCVAR("aow_tickets");
 	
@@ -78,7 +78,7 @@ script aow_script999 OPEN {
 	SpawnSpotForced ("MapSpot", TID_REPAIR_RED, TID_TICKETCOUNTER_RED, 0);
 	SetActorAngle (TID_TICKETCOUNTER_BLUE, StartingTickets);
 	SetActorAngle (TID_TICKETCOUNTER_RED, StartingTickets);
-	if (TicketPool) {
+	if (GetCVar("aow_ticketpool")) {
 		SetActorSpeed (TID_TICKETCOUNTER_BLUE, StartingTickets);
 		SetActorSpeed (TID_TICKETCOUNTER_RED, StartingTickets);
 	} else {
@@ -164,27 +164,6 @@ function void ReloadSettings (void) {
 		ConsoleCommand ("set aow_tiberium_other 75");
 	if (!GetCVAR ("aow_tiberium_advperc"))
 		ConsoleCommand ("set aow_tiberium_advperc 300");
-	
-	// TODO: get rid of these variables and replace with direct GetCVAR calls
-	StartCredits = GetCVAR("aow_startcredits");
-	CreditFlow = GetCVAR("aow_credflow");
-	CreditFlowPower = GetCVAR("aow_powercredflow");
-	CreditFragAward = GetCVAR("aow_creditfrag");
-	CreditAwardTime = GetCVAR("aow_bonustime");
-	CreditAwardAmount = GetCVAR("aow_bonusamount");
-	CreditRepairAmount = GetCVAR("aow_repairbonus");
-	GuardianLimit = GetCVAR("aow_guardianlimit");
-	MechEnabled = GetCVAR("aow_mechs");
-	TicketPool = GetCVAR("aow_ticketpool");
-	TeamStayTime = GetCVAR("aow_teamstaytime");
-	CannonPurchaseDelay = GetCVAR("aow_plasmapurchasedelay") * 35 * 60;
-	MaxCannonsPerTeam = GetCVAR("aow_maxcannonsperteam");
-	MaxTimeCopsPerTeam = GetCVAR("aow_maxtimecopsperteam");
-	TournamentMode = GetCVAR("aow_tournamentmode");
-	BeaconPurchaseDelay = GetCVAR("aow_beaconpurchasedelay") * 60;
-	PlasmaCooldownTime = GetCVAR("aow_plasmacooldown") * 35 * 60;
-	TimedC4Delay = GetCVar ("aow_c4delay");
-	MedicBonusNeed = GetCVAR ("aow_medicbonusneed");
 }
 
 // Server settings
@@ -206,14 +185,14 @@ script aow_creditflow OPEN {
 		if (GotPlant[0] == 1) p += 25;
 		if (GotRefinery[0] == 1) p += 50;
 		if (MiniRefinery[0] == 1) p += 75;
-		redflow = (CreditFlow * p) / 100;
+		redflow = (GetCVar("aow_credflow") * p) / 100;
 		if (!redflow) redflow = 1;
 		
 		p = 25;
 		if (GotPlant[1] == 1) p += 25;
 		if (GotRefinery[1] == 1) p += 50;
 		if (MiniRefinery[1] == 1) p += 75;
-		blueflow = (CreditFlow * p) / 100;
+		blueflow = (GetCVar("aow_credflow") * p) / 100;
 		if (!blueflow) blueflow = 1;
 		
 		for (i = 0; i < MAX_PLAYERS; i++) {
@@ -357,7 +336,7 @@ script aow_script303 OPEN {
 }
 
 function void InitPlayer (void) {
-	SetCreditsSilent(Credits[PlayerNumber()+1], StartCredits);
+	SetCreditsSilent(Credits[PlayerNumber()+1], GetCVar("aow_startcredits"));
 	Experience[PlayerNumber()] = 0;
 	Rank[PlayerNumber()] = RANK_PRIVATE;
 	Surrender[PlayerNumber()] = False;

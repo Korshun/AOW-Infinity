@@ -18,7 +18,7 @@ script aow_script996 OPEN {
 	int Counter;
 	int CurTimeMax;
 	PlayerNeedsSwitched = -1;
-	int PlayerStayTics = TeamStayTime * 60 * 35;
+	int PlayerStayTics = GetCVar("aow_teamstaytime") * 60 * 35;
 	
 	if (GetCVar("sv_noteamswitch")) {
 		// [SP] force blue surplus to red

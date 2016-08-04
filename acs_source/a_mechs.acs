@@ -80,7 +80,7 @@ script aow_script80 (int mech) {
 	
 	if (!CheckFactory (!PlayerTeam())) terminate;
 	
-	if (mech == MECH_GUARDIAN && GuardianCount() >= GuardianLimit && !IsAdmin[PlayerNumber()]) {
+	if (mech == MECH_GUARDIAN && GuardianCount() >= GetCVar("aow_guardianlimit") && !IsAdmin[PlayerNumber()]) {
 		DisplayCross();
 		SETFONT("BigFont");
 		HudMessage (s:"\cfAt limit!";

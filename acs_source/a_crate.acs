@@ -103,13 +103,13 @@ script aow_script309 (int Crate, int Override) {
 	case 5:
 	case 16:
 		SetFont("SMALLFONT");
-		HudMessage (s:"You got extra \cQ$\cD", d:CreditAwardAmount, s:"!";
+		HudMessage (s:"You got extra \cQ$\cD", d:GetCVar("aow_bonusamount"), s:"!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		LocalAmbientSound("powerup/cred",255);
 		Delay(4);
 		LocalAmbientSound("powerup/credsound",255);
-		AddCreditsSilent(Credits[PlayerNumber()+1], CreditAwardAmount);
+		AddCreditsSilent(Credits[PlayerNumber()+1], GetCVar("aow_bonusamount"));
 		Log(n:0, s:" gets Bonus Credits Crate.");
 		break;
 	case 6:
@@ -183,7 +183,7 @@ script aow_script309 (int Crate, int Override) {
 	case 9:
 	case 25:
 		if (CheckInventory ("PowerInvulnerable") && !Override) {crate = 0; restart;}
-		if (TournamentMode) {crate = 0; restart;}
+		if (GetCVAR("aow_tournamentmode")) {crate = 0; restart;}
 		
 		SetFont("SMALLFONT");
 		LocalAmbientSound("powerup/iron", 255);
@@ -209,7 +209,7 @@ script aow_script309 (int Crate, int Override) {
 		if (CheckInventory ("IsKamikaze") && !Override) {crate = 0; restart;}
 		
 		SetFont("SMALLFONT");
-		if (TournamentMode) { // [SP] This crate is forbidden in tournament mode
+		if (GetCVAR("aow_tournamentmode")) { // [SP] This crate is forbidden in tournament mode
 			ACS_ExecuteAlways(aow_script309, 0);
 			terminate;
 		}
@@ -296,13 +296,13 @@ script aow_script309 (int Crate, int Override) {
 	case 14:
 	case 28:
 		SetFont("SMALLFONT");
-		HudMessage (s:"\cJYou lost \cQ$\cD", d:CreditAwardAmount;
+		HudMessage (s:"\cJYou lost \cQ$\cD", d:GetCVar("aow_bonusamount");
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
 			INTEL_XPOS, INTEL_YPOS, 2.0, 1.0);
 		LocalAmbientSound("powerup/stol",255);
 		Delay(4);
 		LocalAmbientSound("powerup/stolsound",255);
-		TakeCreditsSilent(Experience[PlayerNumber()+1], CreditAwardAmount);
+		TakeCreditsSilent(Experience[PlayerNumber()+1], GetCVar("aow_bonusamount"));
 		Log(n:0, s:" gets Credits Stolen.");
 		break;
 	case 15:
@@ -491,7 +491,7 @@ script aow_script309 (int Crate, int Override) {
 		Log(n:0, s:" gets Bulletproof Vest.");
 		break;
 	case 45:
-		if (!Override && (CrateTime || CheckInventory("IsMech") || !MechEnabled || CheckInventory ("GuardianPowerup"))) {
+		if (!Override && (CrateTime || CheckInventory("IsMech") || !GetCVar("aow_mechs") || CheckInventory ("GuardianPowerup"))) {
 			crate = 0; restart;
 		}
 		
@@ -609,7 +609,7 @@ script aow_script309 (int Crate, int Override) {
 		Log(n:0, s:" gets Marine Beacon.");
 		break;
 	case 55:
-		if (Timer() < 10*60*35 || CheckInventory ("CrateChooser") || TournamentMode) {
+		if (Timer() < 10*60*35 || CheckInventory ("CrateChooser") || GetCVAR("aow_tournamentmode")) {
 			if (!Override) {Crate = 0; restart;}
 		}
 		

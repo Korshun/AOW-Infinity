@@ -212,15 +212,10 @@ int PlayerNeedsSwitched;
 int LastPurchasedCannon[MAX_PLAYERS + 1];
 int LastPurchasedBeacon[3];
 int NumPlasmaCannons[3];
-int MaxCannonsPerTeam;
-int CannonPurchaseDelay;
 
 // [SP] Time Cop tracking
 int LastPurchasedTimeCop[MAX_PLAYERS + 1];
 int NumTimeCops[3];
-int MaxTimeCopsPerTeam;
-
-int TimedC4Delay;
 
 int UsePortals = 1;
 // [Dusk] this is used to determine which portal is alive *and* active
@@ -269,26 +264,12 @@ bool AdvancedTurrets[2]; //Allows construction of high level Turrets //Costs $20
 bool MoreTurrets[2]; //Increases Turret cap by 10 //Costs $2000
 int MaxTurrets[2] = {15, 15};
 
-int GuardianLimit;
 
-int StartCredits;
-int CreditFlow;
-int CreditFlowPower;
-int CreditFragAward;
-int CreditAwardTime;
-int CreditAwardAmount;
-int CreditRepairAmount;
-
-bool MechEnabled;
 bool GettingMech[2];
 bool SuddenDeath = False;
-bool TicketPool = False;
 int Tickets[2];
 int StartingTickets;
-int TournamentMode;
-int BeaconPurchaseDelay;
 
-int TeamStayTime;
 bool TeamUnbalanceCompensation[2];
 
 bool RedBeaconCooldown = False;
@@ -303,7 +284,6 @@ bool CrateTime = True;
 int PlayerSpeeds[MAX_PLAYERS];
 int MechGetter[2]; // which player is in the hangar?
 
-int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
 int PlasmaCooldown[MAX_PLAYERS]; // same for plasma cannon (internal)
 
 int MaxRazorWire = 20;
@@ -313,7 +293,6 @@ int MaxCrates = 15;
 
 int RepairBonus[MAX_PLAYERS];
 int MedicBonus[MAX_PLAYERS];
-int MedicBonusNeed;
 int AIMarines[2] = {0}; // compensation-spawned only
 
 int AIMarineCount = 0; // how many AI marines are there overall?

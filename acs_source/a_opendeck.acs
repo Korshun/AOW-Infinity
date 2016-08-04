@@ -17,7 +17,7 @@ script aow_script955 (int action) {
 	// INIT
 	if (action == 0) {
 		if (CheckInventory ("CrateChooserReady")) terminate;
-		if (!MechEnabled) GiveInventory ("NoMechs", 1);
+		if (!GetCVar("aow_mechs")) GiveInventory ("NoMechs", 1);
 		GiveInventory ("CrateChooserReady", 1);
 		terminate;
 	}
@@ -48,7 +48,7 @@ script aow_script955 (int action) {
 			case 11: ACS_ExecuteAlways (aow_script309, 0, 15, 1); break;
 			case 12: ACS_ExecuteAlways (aow_script309, 0, 38, 1); break;
 			case 13:
-				if (!MechEnabled) {
+				if (!GetCVar("aow_mechs")) {
 					DisplayCross();
 					SETFONT("BigFont");
 					HudMessage(s:"Mechs have been disabled for this map!";

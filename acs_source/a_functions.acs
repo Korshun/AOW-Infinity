@@ -314,7 +314,7 @@ function void RecountPlasma (void) {
 // checks tickets and ends the game if tickets are out
 // activator is assumed to be the killer!
 function void TakeTickets (int team, int count) {
-	if (!SuddenDeath && !TicketPool) return;
+	if (!SuddenDeath && !GetCVar("aow_ticketpool")) return;
 	
 	Tickets[team] -= count;
 	

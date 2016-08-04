@@ -65,7 +65,7 @@ script aow_res_advancedmechs (int Team) {
 	if (!CheckFactory(Team)) terminate;
 	
 	// [sp] mechs not allowed!
-	if (!MechEnabled) {
+	if (!GetCVar("aow_mechs")) {
 		Error ("Mechs have been disabled for this map!");
 		terminate;
 	}
