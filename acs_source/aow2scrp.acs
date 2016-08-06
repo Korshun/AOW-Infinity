@@ -17,18 +17,7 @@
 #define TIDALLOCSTART 15000
 
 #include "zcommon.acs"
-#include "acsretval.acs"
-#include "acserror.acs"
-#include "acsmath.acs"
-#include "acsctype.acs"
-#include "acsstr.acs"
-#include "acszdoom.acs"
-#include "acspack.acs"
-#include "acsinput.acs"
-#include "acsunits.acs"
-#include "acsparse.acs"
-#include "acstid.acs"
-// #include "acshudlib.acs" // OVER 128 GLOBALS
+#include "acsutils.acs"
 
 
 // Your project's error handler:
