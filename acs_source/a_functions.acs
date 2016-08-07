@@ -319,16 +319,10 @@ function void SetFragGrenades (int grenades) {
 
 function int GetHealth (void) {return GetActorProperty (0, APROP_HEALTH);}
 function void SetHealth (int hp) {SetActorProperty (0, APROP_HEALTH, hp);}
-function int GetActorHealth (int tid) {return GetActorProperty (tid, APROP_HEALTH);}
-function void SetActorHealth (int tid, int hp) {SetActorProperty (tid, APROP_HEALTH, hp);}
 function int GetSpawnHealth (void) {return GetActorProperty (0, APROP_SPAWNHEALTH);}
 function void SetSpawnHealth (int shp) {SetActorProperty (0, APROP_SPAWNHEALTH, shp);}
-function int GetActorSpawnHealth (int tid) {return GetActorProperty (tid, APROP_SPAWNHEALTH);}
-function void SetActorSpawnHealth (int tid, int shp) {SetActorProperty (tid, APROP_SPAWNHEALTH, shp);}
 function int GetSpeed (void) {return GetActorProperty (0, APROP_SPEED);}
 function void SetSpeed (int value) {SetActorProperty (0, APROP_SPEED, value);}
-function int GetActorSpeed (int tid) {return GetActorProperty (tid, APROP_SPEED);}
-function void SetActorSpeed (int tid, int value) {SetActorProperty (tid, APROP_SPEED, value);}
 function int LevelNumber (void) {return GetLevelInfo (LEVELINFO_LEVELNUM);}
 function void GivePoints (int p) {Team_GivePoints (PlayerTeam(), p, false);}
 
