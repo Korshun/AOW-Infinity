@@ -45,9 +45,9 @@ script aow_script997 (void) {
 	GiveActorInventory (215, "SuddenDeathVulnerability", 1);
 	if (Timer() > 5*35 + 10) {
 		if (random (0, 1))
-			SetMusic ("razor-ub");
+			SetMusic ("stomp");
 		else
-			SetMusic ("razorub2");
+			SetMusic ("fireline");
 	}
 
 	Log(s:"=== Sudden Death begins ===");
