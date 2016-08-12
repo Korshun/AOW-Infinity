@@ -35,13 +35,12 @@ map GLACIER "Glacier" {
 map FLOATCIT "Floating City" {
 	next = "CANYON"
 	sky1 = "STARS"
-	music = "D_AOW06"
+	music = "SOR2ABOV"
 	levelnum = 6
 }
 
 map CANYON "Canyon" {
 	next = "INFECTED"
-	secretnext = "AOW08"
 	sky1 = "STSKY2"
 	music = "moveit"
 	levelnum = 7
@@ -84,7 +83,7 @@ map OASIS "Oasis" {
 map DEFUNCT "Defunct Commission" {
 	next = "REDZONE"
 	sky1 = "SKYFOG0", 0.1
-	music = "defunt"
+	music = "defunct"
 	levelnum = 17
 }
 
