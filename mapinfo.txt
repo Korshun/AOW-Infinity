@@ -25,25 +25,11 @@ map AOW02 "Barrens" {
 	levelnum = 2
 }
 
-map AOW03 "All Out War" {
-	next = "AOW04"
-	sky1 = "STSKY14"
-	music = "D_AOW03"
-	levelnum = 3
-}
-
 map AOW04 "Glacier" {
 	next = "AOW05"
 	sky1 = "STSKY14"
 	music = "D_AOW04"
 	levelnum = 4
-}
-
-map AOW05 "Mercury" {
-	next = "AOW06"
-	sky1 = "STSKY1"
-	music = "D_AOW05"
-	levelnum = 50 // yes, fifty
 }
 
 map AOW06 "Floating City" {
@@ -61,25 +47,11 @@ map AOW07 "Canyon" {
 	levelnum = 7
 }
 
-map AOW08 "Island" {
-	next = "AOW09"
-	sky1 = "STSKY2"
-	music = "D_AOW08"
-	levelnum = 8
-}
-
 map AOW09 "Infected" {
 	next = "AOW10"
 	sky1 = "STSKY7", 0.1
 	music = "D_AOW09"
 	levelnum = 9
-}
-
-map AOW10 "Space Camp" {
-	next = "AOW11"
-	sky1 = "STARS"
-	music = "D_AOW10"
-	levelnum = 10
 }
 
 map AOW11 "Disk Defrag" {
@@ -95,13 +67,6 @@ map AOW12 "Hell's March" {
 	levelnum = 12
 }
 
-map AOW13 "Lava Giant" {
-	next = "AOW14"
-	sky1 = "STARS"
-	music = "D_AOW13"
-	levelnum = 13
-}
-
 map AOW14 "Emerald Wasteland" {
 	next = "AOW15"
 	sky1 = "STSKY14"
@@ -114,13 +79,6 @@ map AOW15 "Oasis" {
 	sky1 = "SKY04", 0.1
 	music = "D_AOW15"
 	levelnum = 15
-}
-
-map AOW16 "Unending Pain" {
-	next = "AOW17"
-	music = "D_AOW16"
-	sky1 = "STSKY3"
-	levelnum = 16
 }
 
 map AOW17 "Defunct Commission" {
