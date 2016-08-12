@@ -8,280 +8,291 @@
  * only to serve as identification and limits.
  */
 
-actor Utility_PortalBlue {
+Actor Utility_PortalBlue {
 	+SOLID
 	+SHOOTABLE
 	+BUMPSPECIAL
 	+NOBLOOD
 	+ISMONSTER
 	
-	radius 16
-	height 128
-	health 3000
-	painchance 255
-	mass 0x7FFFFFF
-	damagefactor "Disarm", 0.0
-	damagefactor "RazorWire", 0.0
-	damagefactor "RazorWire", 0.0
-	damagefactor "Fist", 0.5
-	damagefactor "Fist", 0.5
-	damagefactor "Mechstomp", 0.0
-	damagefactor "Explosion", 1.5
-	damagefactor "Explosion", 1.5
-	damagefactor "MechExplosionBlue", 2.5
-	damagefactor "MechExplosionRed", 2.5
-	damagefactor "Fire", 0.6
-	damagefactor "Fire", 0.6
-	damagefactor "Chemical", 0.6
-	damagefactor "Chemical", 0.6
-	states {
+	Radius 16
+	Height 128
+	Health 3000
+	PainChance 255
+	Mass 0x7FFFFFF
+	DamageFactor "Disarm", 0.0
+	DamageFactor "RazorWire", 0.0
+	DamageFactor "RazorWire", 0.0
+	DamageFactor "Fist", 0.5
+	DamageFactor "Fist", 0.5
+	DamageFactor "Mechstomp", 0.0
+	DamageFactor "Explosion", 1.5
+	DamageFactor "Explosion", 1.5
+	DamageFactor "MechExplosionBlue", 2.5
+	DamageFactor "MechExplosionRed", 2.5
+	DamageFactor "Fire", 0.6
+	DamageFactor "Fire", 0.6
+	DamageFactor "Chemical", 0.6
+	DamageFactor "Chemical", 0.6
+	States
+	{
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways (aow_portal_tidrequest, 0, TEAM_BLUE)
-		NULL A 8 A_CheckSight ("CantSeeShit")
-		NULL A 0 A_JumpIf (waterlevel >= 1, "CantSeeShit")
+		TNT1 AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_BLUE)
+		NULL A 8 A_CheckSight("CantSeeShit")
+		NULL A 0 A_JumpIf(waterlevel >= 1, "CantSeeShit")
 		NULL A -1
-		stop
+		Stop
 	CantSeeShit:
-		NULL A 0 A_GiveInventory ("Utility_PortalNotInSight", 1)
+		NULL A 0 A_GiveInventory("Utility_PortalNotInSight", 1)
 		NULL A -1
-		stop
+		Stop
 	Inactive:
 		NULL A 0 A_UnsetSolid
-		NULL A 0 A_TakeInventory ("IsActive", 1)
+		NULL A 0 A_TakeInventory("IsActive", 1)
 		NULL A 35 A_CheckTerrain
-		wait
+		Wait
 	Active:
-		NULL A 0 A_GiveInventory ("IsActive", 1)
+		NULL A 0 A_GiveInventory("IsActive", 1)
 		NULL A 0 A_SetSolid
 	Idle:
-		NULL A 0 A_JumpIfHealthLower (1250, "Damaged")
+		NULL A 0 A_JumpIfHealthLower(1250, "Damaged")
 		NULL A 35 A_CheckTerrain
-		loop
+		Loop
 	Damaged:
-		TNT1 AA 17 A_SpawnItemEx ("Utility_PortalSparkCluster", 0, 0, random(16,64), 0, 0, 0, 0, 0, (health/5)+60)
-		loop
+		TNT1 AA 17 A_SpawnItemEx("Utility_PortalSparkCluster", 0, 0, random(16, 64), 0, 0, 0, 0, 0, (Health/5)+60)
+		Loop
 	Pain:
-		NULL A 0 A_JumpIfInventory ("IsActive", 1, "Idle")
-		goto Inactive+2
+		NULL A 0 A_JumpIfInventory("IsActive", 1, "Idle")
+		Goto Inactive+2
 	Death:
 		NULL A 1
-		NULL A 0 A_PlaySound ("weapons/rocklx")
-		NULL A 0 A_SpawnItemEx ("ExplosionMain")
-		NULL A 0 ACS_ExecuteAlways (aow_script345, 0, 21, tid)
+		NULL A 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("ExplosionMain")
+		NULL A 0 ACS_ExecuteAlways(aow_script345, 0, 21, tid)
 		NULL A 10
-		stop
+		Stop
 	Disapproved:
-		NULL A 20 A_PlaySound ("misc/nope")
-		stop
+		NULL A 20 A_PlaySound("misc/nope")
+		Stop
 	Death.Deconstruction:
 		NULL A 0 A_NoBlocking
-		NULL A 0 ACS_ExecuteAlways (aow_script345, 0, 21, tid)
-		NULL A 2 A_PlaySound ("utility/deconstruct")
-		stop
+		NULL A 0 ACS_ExecuteAlways(aow_script345, 0, 21, tid)
+		NULL A 2 A_PlaySound("utility/deconstruct")
+		Stop
 	}
 }
 
-actor Utility_PortalRed : Utility_PortalBlue {
-	states {
+Actor Utility_PortalRed : Utility_PortalBlue {
+	States
+	{
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways (aow_portal_tidrequest, 0, TEAM_RED)
-		NULL A 8 A_CheckSight ("CantSeeShit")
-		NULL A 0 A_JumpIf (waterlevel >= 1, "CantSeeShit")
+		TNT1 AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_RED)
+		NULL A 8 A_CheckSight("CantSeeShit")
+		NULL A 0 A_JumpIf(waterlevel >= 1, "CantSeeShit")
 		NULL A -1
-		stop
+		Stop
 	Pain:
-		NULL A 0 A_JumpIfInventory ("IsActive", 1, "Active")
-		goto Inactive+2
+		NULL A 0 A_JumpIfInventory("IsActive", 1, "Active")
+		Goto Inactive+2
 	}
 }
 
-// This actor is used to check whether the portal
+// This Actor is used to check whether the portal
 // fits in the space it's wanted to be spawned at.
-actor Utility_PortalChecker {
+Actor Utility_PortalChecker {
 	+SOLID
-	radius 80
-	height 128
-	states {
+	Radius 80
+	Height 128
+	States
+	{
 	Spawn:
 		NULL A 5
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
 // stands.. the thing needs some structure, doesn't it?
-actor Utility_PortalStand {
+Actor Utility_PortalStand {
 	+SOLID
-	radius 12
-	height 44
-	gravity 10000
-	states {
+	Radius 12
+	Height 44
+	Gravity 10000
+	States
+	{
 	Spawn:
 		NULL A 0
-		DGIZ A 8 A_CheckSight ("CantSeeShit")
-		NULL A 0 A_JumpIf (waterlevel >= 1, "CantSeeShit")
+		DGIZ A 8 A_CheckSight("CantSeeShit")
+		NULL A 0 A_JumpIf(waterlevel >= 1, "CantSeeShit")
 		DGIZ A -1
-		stop
+		Stop
 	CantSeeShit:
 		NULL A 0
-		stop
+		Stop
 	Disapproved:
 		"----" A 0 A_NoBlocking
-		"----" A 2 A_SetTranslucent (1.0, 1)
+		"----" A 2 A_SetTranslucent(1.0, 1)
 		"----" A 2 A_FadeOut 
-		wait
+		Wait
 	}
 }
 
 // Decorative spheres that spawn on top of the stands
-actor Utility_PortalSphereBlue {
+Actor Utility_PortalSphereBlue {
 	+NOINTERACTION +NOGRAVITY
 	+FORCEXYBILLBOARD
-	renderstyle add
-	alpha 0.0
-	scale 0.5
-	states {
+	RenderStyle add
+	Alpha 0.0
+	Scale 0.5
+	States
+	{
 	Spawn:
 		NULL A -1
-		stop
+		Stop
 	Init.Active:
-		GIZB CDABCD 3 bright A_FadeIn (0.1)
-		goto Active
+		GIZB CDABCD 3 BRIGHT A_FadeIn(0.1)
+		Goto Active
 	Init.Inactive:
-		GIZB CCDD 3 A_FadeIn (0.1)
-		goto Inactive
+		GIZB CCDD 3 A_FadeIn(0.1)
+		Goto Inactive
 	Active:
-		NULL A 0 A_SetTranslucent (0.6)
-		GIZB ABCD 3 bright
-		goto Active+1
+		NULL A 0 A_SetTranslucent(0.6)
+		GIZB ABCD 3 BRIGHT
+		Goto Active+1
 	Inactive:
-		NULL A 0 A_SetTranslucent (0.4)
+		NULL A 0 A_SetTranslucent(0.4)
 		GIZB ABCD 6
-		goto Inactive+1
+		Goto Inactive+1
 	}
 }
 
-actor Utility_PortalSphereRed : Utility_PortalSphereBlue {
-	states {
+Actor Utility_PortalSphereRed : Utility_PortalSphereBlue {
+	States
+	{
 	Init.Active:
-		GIZR CDABCD 3 bright A_FadeIn (0.1)
-		goto Active
+		GIZR CDABCD 3 BRIGHT A_FadeIn(0.1)
+		Goto Active
 	Init.Inactive:
-		GIZR CCDD 3 A_FadeIn (0.1)
-		goto Inactive
+		GIZR CCDD 3 A_FadeIn(0.1)
+		Goto Inactive
 	Active:
-		NULL A 0 A_SetTranslucent (0.6)
-		GIZR ABCD 3 bright
-		goto Active+1
+		NULL A 0 A_SetTranslucent(0.6)
+		GIZR ABCD 3 BRIGHT
+		Goto Active+1
 	Inactive:
-		NULL A 0 A_SetTranslucent (0.4)
+		NULL A 0 A_SetTranslucent(0.4)
 		GIZR ABCD 6
-		goto Inactive+1
+		Goto Inactive+1
 	}
 }
 
 // Effect cluster, designates active portal
-actor Utility_PortalFX {
-	gravity 10000
-	translation "112:127=[255,0,0]:[128,0,0]"
-	states {
+Actor Utility_PortalFX {
+	Gravity 10000
+	Translation "112:127=[255,0,0]:[128,0,0]"
+	States
+	{
 	Spawn:
 	Active:
 		NULL A 5
-		NULL A 35 A_SpawnItemEx ("Utility_PortalTelefogCluster", 0,0,0,0,0,0,0,SXF_TRANSFERTRANSLATION)
-		wait
+		NULL A 35 A_SpawnItemEx("Utility_PortalTelefogCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		Wait
 	Init.Inactive:
 	Inactive:
 		NULL A -1
-		stop
+		Stop
 	}
 }
 
-actor Utility_PortalFXBlue : Utility_PortalFX {
-	translation "112:127=[64,64,128]:[24,24,128]"
+Actor Utility_PortalFXBlue : Utility_PortalFX {
+	Translation "112:127=[64,64,128]:[24,24,128]"
 }
 
-actor Utility_PortalTelefogCluster {
+Actor Utility_PortalTelefogCluster {
 	+NOINTERACTION
 	+CLIENTSIDEONLY
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0
-		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx ("Utility_PortalTelefog",
-			32,0,random(-8,8), 0,0,random(2,6), random(0,360), SXF_TRANSFERTRANSLATION)
-		stop
+		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Utility_PortalTelefog",
+			32,0,random(-8, 8), 0, 0, random(2, 6), random(0, 360), SXF_TRANSFERTRANSLATION)
+		Stop
 	}
 }
 
-actor Utility_PortalTelefog {
+Actor Utility_PortalTelefog {
 	+NOINTERACTION
 	+CLIENTSIDEONLY
-	renderstyle add
-	alpha 0.75
-	states {
+	RenderStyle add
+	Alpha 0.75
+	States
+	{
 	Spawn:
-		TFOG ABCDEFGHIJ 3 bright A_FadeOut (0.05)
-		stop
+		TFOG ABCDEFGHIJ 3 BRIGHT A_FadeOut(0.05)
+		Stop
 	}
 }
 
 // Effect sparks, designates damaged portals.
-actor Utility_PortalSparkCluster {
+Actor Utility_PortalSparkCluster {
 	+CLIENTSIDEONLY +NOCLIP
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0
-		NULL A 0 A_PlaySound ("world/spark")
-		TNT1 AAAAAAAAAAA 0 A_CustomMissile ("Utility_PortalSpark", 0, 0, random(-180,180), 2, random (8, 32))
-		goto Death
+		NULL A 0 A_PlaySound("world/spark")
+		TNT1 AAAAAAAAAAA 0 A_CustomMissile("Utility_PortalSpark", 0, 0, random(-180, 180), 2, random (8, 32))
+		Goto Death
 	Death:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor Utility_PortalSpark {
+Actor Utility_PortalSpark {
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD
 	+NOCLIP
 	-NOGRAVITY
-	radius 8
-	height 8
-	speed 4
-	renderstyle add
-	alpha 0.75
-	scale 0.05
-	states {
+	Radius 8
+	Height 8
+	Speed 4
+	RenderStyle add
+	Alpha 0.75
+	Scale 0.05
+	States
+	{
 	Spawn:
 		NULL A 0
-		NULL A 0 ThrustThingZ (0, random(15,40), 0, 0)
-		NULL A 0 A_Jump (256, "Spawn1", "Spawn2", "Spawn3", "Spawn4", "Spawn5", "Spawn6")
-		goto Spawn1
+		NULL A 0 ThrustThingZ (0, random(15, 40), 0, 0)
+		NULL A 0 A_Jump(256, "Spawn1", "Spawn2", "Spawn3", "Spawn4", "Spawn5", "Spawn6")
+		Goto Spawn1
 	Spawn1:
 		SPKY A 15
-		goto Death
+		Goto Death
 	Spawn2:
-		SPKY B 12 bright
-		goto Death
+		SPKY B 12 BRIGHT
+		Goto Death
 	Spawn3:
-		SPKY C 16 bright
-		goto Death
+		SPKY C 16 BRIGHT
+		Goto Death
 	Spawn4:
-		SPKY D 14 bright
-		goto Death
+		SPKY D 14 BRIGHT
+		Goto Death
 	Spawn5:
-		SPKY E 13 bright
-		goto Death
+		SPKY E 13 BRIGHT
+		Goto Death
 	Spawn6:
-		SPKY F 11 bright
-		goto Death
+		SPKY F 11 BRIGHT
+		Goto Death
 	Death:
-		"----" AAAAAAAA 1 A_FadeOut (0.05)
-		stop
+		"----" AAAAAAAA 1 A_FadeOut(0.05)
+		Stop
 	}
 }
 
 // Dummy item to mark the portal as invalid with
-actor Utility_PortalNotInSight : Boolean {}
-actor IsActive : Boolean {}
+Actor Utility_PortalNotInSight : Boolean {}
+Actor IsActive : Boolean {}

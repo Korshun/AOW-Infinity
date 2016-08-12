@@ -1,19 +1,20 @@
 // [NF] See weapons/fists.txt for Berserk Fist code
-actor BerserkPlayer : Player {
+Actor BerserkPlayer : Player {
 	+NOSKIN
 	-PICKUP
-	health 200
-	player.maxhealth 200
-	player.displayName "Berserker"
-	player.startitem "BerserkFists", 1
-	player.forwardmove 1.0 // doomguy speed!
-	player.sidemove 1.0
-	player.morphweapon "BerserkFists"
-	damagefactor "Chemical", 2.25 // aaahhh
-	damagefactor "Chemical", 2.25
-	damagefactor "MechStomp", 0.35
+	Health 200
+	Player.MaxHealth 200
+	Player.DisplayName "Berserker"
+	Player.StartItem "BerserkFists", 1
+	Player.ForwardMove 1.0 // doomguy speed!
+	Player.SideMove 1.0
+	Player.MorphWeapon "BerserkFists"
+	DamageFactor "Chemical", 2.25 // aaahhh
+	DamageFactor "Chemical", 2.25
+	DamageFactor "MechStomp", 0.35
 	
-	states {
+	States
+	{
 	Death:
 	Death.Chemical:
 	Death.Chemical:
@@ -23,37 +24,38 @@ actor BerserkPlayer : Player {
 	Death.FireSpecial:
 	Death.TimeRed:
 	Death.TimeBlue:
-		goto XDeathGo
+		Goto XDeathGo
 	}
 }
 
-actor BerserkSwitch : PowerupGiver {
-	powerup.type "Berserk"
-	powerup.duration 10500 // five minutes
-	powerup.color RedMap
+Actor BerserkSwitch : PowerupGiver {
+	Powerup.Type "Berserk"
+	Powerup.Duration 10500 // five minutes
+	Powerup.Color RedMap
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
 	Inventory.MaxAmount 1
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	Pickup:
-		NULL A 0 A_GiveInventory ("BerserkHue", 1)
+		NULL A 0 A_GiveInventory("BerserkHue", 1)
 		NULL A 5
-		stop
+		Stop
 	}
 }
 
-actor PowerBerserkHue : PowerNull {}
-actor BerserkHue : BerserkSwitch {
-	powerup.type "BerserkHue"
-	powerup.color RedMap
+Actor PowerBerserkHue : PowerNull {}
+Actor BerserkHue : BerserkSwitch {
+	Powerup.Type "BerserkHue"
+	Powerup.Color RedMap
 }
 
-actor BerserkSwitchTest : BerserkSwitch {Powerup.Duration 0x7FFFFFFF}
+Actor BerserkSwitchTest : BerserkSwitch {Powerup.Duration 0x7FFFFFFF}
 
-actor PowerBerserk : PowerMorph {
+Actor PowerBerserk : PowerMorph {
 	PowerMorph.PlayerClass "BerserkPlayer"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }

@@ -1,218 +1,218 @@
 // ARMOUR GRADES AND MODIFIERS
-actor PowerGrade1Armor : PowerProtection {
-	damagefactor "Fist",		0.92	damagefactor "Fist",	0.92
-	damagefactor "Bullet",	0.92	damagefactor "Bullet",	0.92
-	damagefactor "Rifle",	0.92	damagefactor "Rifle",	0.92
-	damagefactor "Explosion",	0.92	damagefactor "Explosion",	0.92
-	damagefactor "Fire",		0.92	damagefactor "Fire",	0.92
-	damagefactor "Chemical",	0.92	damagefactor "Chemical",	0.92
-	damagefactor "Laser",	0.92	damagefactor "Laser",	0.92
-	damagefactor "TimeRed",		0.92	damagefactor "TimeBlue",	0.92
-	damagefactor "Artillery",	0.92	damagefactor "Artillery",	0.92
-	damagefactor "ExplosionMech", 0.92	damagefactor "ExplosionMech", 0.92
-	damagefactor "RazorWire",	0.92	damagefactor "RazorWire",	0.92
+Actor PowerGrade1Armor : PowerProtection {
+	DamageFactor "Fist",		0.92	DamageFactor "Fist",	0.92
+	DamageFactor "Bullet",	0.92	DamageFactor "Bullet",	0.92
+	DamageFactor "Rifle",	0.92	DamageFactor "Rifle",	0.92
+	DamageFactor "Explosion",	0.92	DamageFactor "Explosion",	0.92
+	DamageFactor "Fire",		0.92	DamageFactor "Fire",	0.92
+	DamageFactor "Chemical",	0.92	DamageFactor "Chemical",	0.92
+	DamageFactor "Laser",	0.92	DamageFactor "Laser",	0.92
+	DamageFactor "TimeRed",		0.92	DamageFactor "TimeBlue",	0.92
+	DamageFactor "Artillery",	0.92	DamageFactor "Artillery",	0.92
+	DamageFactor "ExplosionMech", 0.92	DamageFactor "ExplosionMech", 0.92
+	DamageFactor "RazorWire",	0.92	DamageFactor "RazorWire",	0.92
 	
-	damagefactor "FireSpecial",	0.92
-	damagefactor "ChemicalSpecial",	0.92
-	damagefactor "Mechstomp",	0.92
-	damagefactor "Monster",		0.92
+	DamageFactor "FireSpecial",	0.92
+	DamageFactor "ChemicalSpecial",	0.92
+	DamageFactor "Mechstomp",	0.92
+	DamageFactor "Monster",		0.92
 }
 
-actor PowerGrade2Armor : PowerProtection {
-	damagefactor "Fist",		0.84	damagefactor "Fist",	0.84
-	damagefactor "Bullet",	0.84	damagefactor "Bullet",	0.84
-	damagefactor "Rifle",	0.84	damagefactor "Rifle",	0.84
-	damagefactor "Explosion",	0.84	damagefactor "Explosion",	0.84
-	damagefactor "Fire",		0.84	damagefactor "Fire",	0.84
-	damagefactor "Chemical",	0.84	damagefactor "Chemical",	0.84
-	damagefactor "Laser",	0.84	damagefactor "Laser",	0.84
-	damagefactor "TimeRed",		0.84	damagefactor "TimeBlue",	0.84
-	damagefactor "Artillery",	0.84	damagefactor "Artillery",	0.84
-	damagefactor "ExplosionMech", 0.84	damagefactor "ExplosionMech", 0.84
-	damagefactor "RazorWire",	0.84	damagefactor "RazorWire",	0.84
+Actor PowerGrade2Armor : PowerProtection {
+	DamageFactor "Fist",		0.84	DamageFactor "Fist",	0.84
+	DamageFactor "Bullet",	0.84	DamageFactor "Bullet",	0.84
+	DamageFactor "Rifle",	0.84	DamageFactor "Rifle",	0.84
+	DamageFactor "Explosion",	0.84	DamageFactor "Explosion",	0.84
+	DamageFactor "Fire",		0.84	DamageFactor "Fire",	0.84
+	DamageFactor "Chemical",	0.84	DamageFactor "Chemical",	0.84
+	DamageFactor "Laser",	0.84	DamageFactor "Laser",	0.84
+	DamageFactor "TimeRed",		0.84	DamageFactor "TimeBlue",	0.84
+	DamageFactor "Artillery",	0.84	DamageFactor "Artillery",	0.84
+	DamageFactor "ExplosionMech", 0.84	DamageFactor "ExplosionMech", 0.84
+	DamageFactor "RazorWire",	0.84	DamageFactor "RazorWire",	0.84
 	
-	damagefactor "FireSpecial",	0.84
-	damagefactor "ChemicalSpecial",	0.84
-	damagefactor "Mechstomp",	0.84
-	damagefactor "Monster",		0.84
+	DamageFactor "FireSpecial",	0.84
+	DamageFactor "ChemicalSpecial",	0.84
+	DamageFactor "Mechstomp",	0.84
+	DamageFactor "Monster",		0.84
 }
 
-actor PowerGrade3Armor : PowerProtection {
-	damagefactor "Fist",		0.76	damagefactor "Fist",	0.76
-	damagefactor "Bullet",	0.76	damagefactor "Bullet",	0.76
-	damagefactor "Rifle",	0.76	damagefactor "Rifle",	0.76
-	damagefactor "Explosion",	0.76	damagefactor "Explosion",	0.76
-	damagefactor "Fire",		0.76	damagefactor "Fire",	0.76
-	damagefactor "Chemical",	0.76	damagefactor "Chemical",	0.76
-	damagefactor "Laser",	0.76	damagefactor "Laser",	0.76
-	damagefactor "TimeRed",		0.76	damagefactor "TimeBlue",	0.76
-	damagefactor "Artillery",	0.76	damagefactor "Artillery",	0.76
-	damagefactor "ExplosionMech", 0.76	damagefactor "ExplosionMech", 0.76
-	damagefactor "RazorWire",	0.76	damagefactor "RazorWire",	0.76
+Actor PowerGrade3Armor : PowerProtection {
+	DamageFactor "Fist",		0.76	DamageFactor "Fist",	0.76
+	DamageFactor "Bullet",	0.76	DamageFactor "Bullet",	0.76
+	DamageFactor "Rifle",	0.76	DamageFactor "Rifle",	0.76
+	DamageFactor "Explosion",	0.76	DamageFactor "Explosion",	0.76
+	DamageFactor "Fire",		0.76	DamageFactor "Fire",	0.76
+	DamageFactor "Chemical",	0.76	DamageFactor "Chemical",	0.76
+	DamageFactor "Laser",	0.76	DamageFactor "Laser",	0.76
+	DamageFactor "TimeRed",		0.76	DamageFactor "TimeBlue",	0.76
+	DamageFactor "Artillery",	0.76	DamageFactor "Artillery",	0.76
+	DamageFactor "ExplosionMech", 0.76	DamageFactor "ExplosionMech", 0.76
+	DamageFactor "RazorWire",	0.76	DamageFactor "RazorWire",	0.76
 	
-	damagefactor "FireSpecial",	0.76
-	damagefactor "ChemicalSpecial",	0.76
-	damagefactor "Mechstomp",	0.76
-	damagefactor "Monster",		0.76
+	DamageFactor "FireSpecial",	0.76
+	DamageFactor "ChemicalSpecial",	0.76
+	DamageFactor "Mechstomp",	0.76
+	DamageFactor "Monster",		0.76
 }
 
-actor PowerGrade4Armor : PowerProtection {
-	damagefactor "Fist",		0.68	damagefactor "Fist",	0.68
-	damagefactor "Bullet",	0.68	damagefactor "Bullet",	0.68
-	damagefactor "Rifle",	0.68	damagefactor "Rifle",	0.68
-	damagefactor "Explosion",	0.68	damagefactor "Explosion",	0.68
-	damagefactor "Fire",		0.68	damagefactor "Fire",	0.68
-	damagefactor "Chemical",	0.68	damagefactor "Chemical",	0.68
-	damagefactor "Laser",	0.68	damagefactor "Laser",	0.68
-	damagefactor "TimeRed",		0.68	damagefactor "TimeBlue",	0.68
-	damagefactor "Artillery",	0.68	damagefactor "Artillery",	0.68
-	damagefactor "ExplosionMech", 0.68	damagefactor "ExplosionMech", 0.68
-	damagefactor "RazorWire",	0.68	damagefactor "RazorWire",	0.68
+Actor PowerGrade4Armor : PowerProtection {
+	DamageFactor "Fist",		0.68	DamageFactor "Fist",	0.68
+	DamageFactor "Bullet",	0.68	DamageFactor "Bullet",	0.68
+	DamageFactor "Rifle",	0.68	DamageFactor "Rifle",	0.68
+	DamageFactor "Explosion",	0.68	DamageFactor "Explosion",	0.68
+	DamageFactor "Fire",		0.68	DamageFactor "Fire",	0.68
+	DamageFactor "Chemical",	0.68	DamageFactor "Chemical",	0.68
+	DamageFactor "Laser",	0.68	DamageFactor "Laser",	0.68
+	DamageFactor "TimeRed",		0.68	DamageFactor "TimeBlue",	0.68
+	DamageFactor "Artillery",	0.68	DamageFactor "Artillery",	0.68
+	DamageFactor "ExplosionMech", 0.68	DamageFactor "ExplosionMech", 0.68
+	DamageFactor "RazorWire",	0.68	DamageFactor "RazorWire",	0.68
 	
-	damagefactor "FireSpecial",	0.68
-	damagefactor "ChemicalSpecial",	0.68
-	damagefactor "Mechstomp",	0.68
-	damagefactor "Monster",		0.68
+	DamageFactor "FireSpecial",	0.68
+	DamageFactor "ChemicalSpecial",	0.68
+	DamageFactor "Mechstomp",	0.68
+	DamageFactor "Monster",		0.68
 }
 
 
-actor PowerGrade5Armor : PowerProtection {
-	damagefactor "Fist",		0.6	damagefactor "Fist",	0.6
-	damagefactor "Bullet",	0.6	damagefactor "Bullet",	0.6
-	damagefactor "Rifle",	0.6	damagefactor "Rifle",	0.6
-	damagefactor "Explosion",	0.6	damagefactor "Explosion",	0.6
-	damagefactor "Fire",		0.6	damagefactor "Fire",	0.6
-	damagefactor "Chemical",	0.6	damagefactor "Chemical",	0.6
-	damagefactor "Laser",	0.6	damagefactor "Laser",	0.6
-	damagefactor "TimeRed",		0.6	damagefactor "TimeBlue",	0.6
-	damagefactor "Artillery",	0.6	damagefactor "Artillery",	0.6
-	damagefactor "ExplosionMech", 0.6	damagefactor "ExplosionMech", 0.6
-	damagefactor "RazorWire",	0.6	damagefactor "RazorWire",	0.6
-	damagefactor "Superweapon",	0.6	damagefactor "SuperweaponIon",	0.6
-	damagefactor "FireSpecial",	0.6
-	damagefactor "ChemicalSpecial",	0.6
-	damagefactor "Mechstomp",	0.6
-	damagefactor "Monster",		0.6
+Actor PowerGrade5Armor : PowerProtection {
+	DamageFactor "Fist",		0.6	DamageFactor "Fist",	0.6
+	DamageFactor "Bullet",	0.6	DamageFactor "Bullet",	0.6
+	DamageFactor "Rifle",	0.6	DamageFactor "Rifle",	0.6
+	DamageFactor "Explosion",	0.6	DamageFactor "Explosion",	0.6
+	DamageFactor "Fire",		0.6	DamageFactor "Fire",	0.6
+	DamageFactor "Chemical",	0.6	DamageFactor "Chemical",	0.6
+	DamageFactor "Laser",	0.6	DamageFactor "Laser",	0.6
+	DamageFactor "TimeRed",		0.6	DamageFactor "TimeBlue",	0.6
+	DamageFactor "Artillery",	0.6	DamageFactor "Artillery",	0.6
+	DamageFactor "ExplosionMech", 0.6	DamageFactor "ExplosionMech", 0.6
+	DamageFactor "RazorWire",	0.6	DamageFactor "RazorWire",	0.6
+	DamageFactor "Superweapon",	0.6	DamageFactor "SuperweaponIon",	0.6
+	DamageFactor "FireSpecial",	0.6
+	DamageFactor "ChemicalSpecial",	0.6
+	DamageFactor "Mechstomp",	0.6
+	DamageFactor "Monster",		0.6
 }
 
-actor PowerGrade-1Armor : PowerProtection {
-	damagefactor "Fist",		1.2	damagefactor "Fist",	1.2
-	damagefactor "Bullet",	1.2	damagefactor "Bullet",	1.2
-	damagefactor "Rifle",	1.2	damagefactor "Rifle",	1.2
-	damagefactor "Explosion",	1.2	damagefactor "Explosion",	1.2
-	damagefactor "Fire",		1.2	damagefactor "Fire",	1.2
-	damagefactor "Chemical",	1.2	damagefactor "Chemical",	1.2
-	damagefactor "Laser",	1.2	damagefactor "Laser",	1.2
-	damagefactor "TimeRed",		1.2	damagefactor "TimeBlue",	1.2
-	damagefactor "Artillery",	1.2	damagefactor "Artillery",	1.2
-	damagefactor "ExplosionMech", 1.2	damagefactor "ExplosionMech", 1.2
-	damagefactor "RazorWire",	1.2	damagefactor "RazorWire",	1.2
+Actor PowerGrade-1Armor : PowerProtection {
+	DamageFactor "Fist",		1.2	DamageFactor "Fist",	1.2
+	DamageFactor "Bullet",	1.2	DamageFactor "Bullet",	1.2
+	DamageFactor "Rifle",	1.2	DamageFactor "Rifle",	1.2
+	DamageFactor "Explosion",	1.2	DamageFactor "Explosion",	1.2
+	DamageFactor "Fire",		1.2	DamageFactor "Fire",	1.2
+	DamageFactor "Chemical",	1.2	DamageFactor "Chemical",	1.2
+	DamageFactor "Laser",	1.2	DamageFactor "Laser",	1.2
+	DamageFactor "TimeRed",		1.2	DamageFactor "TimeBlue",	1.2
+	DamageFactor "Artillery",	1.2	DamageFactor "Artillery",	1.2
+	DamageFactor "ExplosionMech", 1.2	DamageFactor "ExplosionMech", 1.2
+	DamageFactor "RazorWire",	1.2	DamageFactor "RazorWire",	1.2
 	
-	damagefactor "FireSpecial",	1.2
-	damagefactor "ChemicalSpecial",	1.2
-	damagefactor "Mechstomp",	1.2
-	damagefactor "Monster",		1.2
+	DamageFactor "FireSpecial",	1.2
+	DamageFactor "ChemicalSpecial",	1.2
+	DamageFactor "Mechstomp",	1.2
+	DamageFactor "Monster",		1.2
 }
 
-actor PowerFireProof : PowerProtection {
-	damagefactor "Fire",		0.0	damagefactor "Fire",	0.0
-	damagefactor "Chemical",	2.0	damagefactor "Chemical",	2.0
-	damagefactor "FireSpecial",	0.0
-	damagefactor "ChemicalSpecial",	2.0
+Actor PowerFireProof : PowerProtection {
+	DamageFactor "Fire",		0.0	DamageFactor "Fire",	0.0
+	DamageFactor "Chemical",	2.0	DamageFactor "Chemical",	2.0
+	DamageFactor "FireSpecial",	0.0
+	DamageFactor "ChemicalSpecial",	2.0
 }
 
-actor PowerChemicalProof : PowerProtection {
-	damagefactor "Fire",		2.0	damagefactor "Fire",	2.0
-	damagefactor "FireSpecial",	2.0
-	damagefactor "Chemical",	0.0	damagefactor "Chemical",	0.0
-	damagefactor "ChemicalSpecial",	0.0
+Actor PowerChemicalProof : PowerProtection {
+	DamageFactor "Fire",		2.0	DamageFactor "Fire",	2.0
+	DamageFactor "FireSpecial",	2.0
+	DamageFactor "Chemical",	0.0	DamageFactor "Chemical",	0.0
+	DamageFactor "ChemicalSpecial",	0.0
 }
 
-actor PowerLaserResistance : PowerProtection {
-	damagefactor "Laser", 0.6
-	damagefactor "Laser", 0.6
+Actor PowerLaserResistance : PowerProtection {
+	DamageFactor "Laser", 0.6
+	DamageFactor "Laser", 0.6
 	
-	damagefactor "Explosion", 1.4
-	damagefactor "Explosion", 1.4
-	damagefactor "ExplosionMech", 1.4
-	damagefactor "ExplosionMech", 1.4
-	damagefactor "Artillery", 1.4
-	damagefactor "Artillery", 1.4
+	DamageFactor "Explosion", 1.4
+	DamageFactor "Explosion", 1.4
+	DamageFactor "ExplosionMech", 1.4
+	DamageFactor "ExplosionMech", 1.4
+	DamageFactor "Artillery", 1.4
+	DamageFactor "Artillery", 1.4
 }
 
-actor PowerBulletResistance : PowerProtection {
-	damagefactor "Bullet", 0.45
-	damagefactor "Bullet", 0.45
-	damagefactor "Rifle", 0.45
-	damagefactor "Rifle", 0.45
+Actor PowerBulletResistance : PowerProtection {
+	DamageFactor "Bullet", 0.45
+	DamageFactor "Bullet", 0.45
+	DamageFactor "Rifle", 0.45
+	DamageFactor "Rifle", 0.45
 	
-	damagefactor "Laser", 1.2
-	damagefactor "Laser", 1.2
+	DamageFactor "Laser", 1.2
+	DamageFactor "Laser", 1.2
 	
-	damagefactor "Explosion", 1.2
-	damagefactor "Explosion", 1.2
-	damagefactor "ExplosionMech", 1.2
-	damagefactor "ExplosionMech", 1.2
-	damagefactor "Artillery", 1.2
-	damagefactor "Artillery", 1.2
+	DamageFactor "Explosion", 1.2
+	DamageFactor "Explosion", 1.2
+	DamageFactor "ExplosionMech", 1.2
+	DamageFactor "ExplosionMech", 1.2
+	DamageFactor "Artillery", 1.2
+	DamageFactor "Artillery", 1.2
 }
 
-actor PowerExplosiveResistance : PowerProtection {
-	damagefactor "Explosion", 0.6
-	damagefactor "Explosion", 0.6
-	damagefactor "ExplosionMech", 0.6
-	damagefactor "ExplosionMech", 0.6
-	damagefactor "Artillery", 0.6
-	damagefactor "Artillery", 0.6
+Actor PowerExplosiveResistance : PowerProtection {
+	DamageFactor "Explosion", 0.6
+	DamageFactor "Explosion", 0.6
+	DamageFactor "ExplosionMech", 0.6
+	DamageFactor "ExplosionMech", 0.6
+	DamageFactor "Artillery", 0.6
+	DamageFactor "Artillery", 0.6
 	
-	damagefactor "Laser", 1.4
-	damagefactor "Laser", 1.4
+	DamageFactor "Laser", 1.4
+	DamageFactor "Laser", 1.4
 }
 
-actor Grade1Armor : PermanentPowerup {powerup.type "Grade1Armor"}
-actor Grade2Armor : PermanentPowerup {powerup.type "Grade2Armor"}
-actor Grade3Armor : PermanentPowerup {powerup.type "Grade3Armor"}
-actor Grade4Armor : PermanentPowerup {powerup.type "Grade4Armor"}
-actor Grade5Armor : PermanentPowerup {powerup.type "Grade5Armor"}
-actor Grade-1Armor : PermanentPowerup {powerup.type "Grade-1Armor"}
-actor FireProof : PermanentPowerup {powerup.type "FireProof"}
-actor ChemicalProof : PermanentPowerup {powerup.type "ChemicalProof"}
-actor BulletResistance : PermanentPowerup {powerup.type "BulletResistance"}
-actor ExplosiveResistance : PermanentPowerup {powerup.type "ExplosiveResistance"}
-actor LaserResistance : PermanentPowerup {powerup.type "LaserResistance"}
+Actor Grade1Armor : PermanentPowerup {Powerup.Type "Grade1Armor"}
+Actor Grade2Armor : PermanentPowerup {Powerup.Type "Grade2Armor"}
+Actor Grade3Armor : PermanentPowerup {Powerup.Type "Grade3Armor"}
+Actor Grade4Armor : PermanentPowerup {Powerup.Type "Grade4Armor"}
+Actor Grade5Armor : PermanentPowerup {Powerup.Type "Grade5Armor"}
+Actor Grade-1Armor : PermanentPowerup {Powerup.Type "Grade-1Armor"}
+Actor FireProof : PermanentPowerup {Powerup.Type "FireProof"}
+Actor ChemicalProof : PermanentPowerup {Powerup.Type "ChemicalProof"}
+Actor BulletResistance : PermanentPowerup {Powerup.Type "BulletResistance"}
+Actor ExplosiveResistance : PermanentPowerup {Powerup.Type "ExplosiveResistance"}
+Actor LaserResistance : PermanentPowerup {Powerup.Type "LaserResistance"}
 
 // harvesters get this to make sure they can not be harmed by tiberium even if
 // their chemical proof is canceled
-actor PowerTiberiumProof : PowerProtection {damagefactor "ChemicalSpecial", 0.0}
-actor TiberiumProof : PermanentPowerup {powerup.type "TiberiumProof"}
+Actor PowerTiberiumProof : PowerProtection {DamageFactor "ChemicalSpecial", 0.0}
+Actor TiberiumProof : PermanentPowerup {Powerup.Type "TiberiumProof"}
 
-// DAMAGEFACTOR TEMPLATE:
+// DamageFactor TEMPLATE:
 /*
-	damagefactor "Fist",			1.0	damagefactor "Fist",		1.0
-	damagefactor "Bullet",		1.0	damagefactor "Bullet",		1.0
-	damagefactor "Rifle",		1.0	damagefactor "Rifle",		1.0
-	damagefactor "Explosion",		1.0	damagefactor "Explosion",		1.0
-	damagefactor "Fire",			1.0	damagefactor "Fire",		1.0
-	damagefactor "Chemical",		1.0	damagefactor "Chemical",		1.0
-	damagefactor "Laser",		1.0	damagefactor "Laser",		1.0
-	damagefactor "TimeRed",			1.0	damagefactor "TimeBlue",		1.0
-	damagefactor "Artillery",		1.0	damagefactor "Artillery",		1.0
-	damagefactor "ExplosionMech",	1.0	damagefactor "ExplosionMech",	1.0
-	damagefactor "RazorWire",		1.0	damagefactor "RazorWire",		1.0
-	damagefactor "Superweapon",		1.0	damagefactor "SuperweaponIon",		1.0
+	DamageFactor "Fist",			1.0	DamageFactor "Fist",		1.0
+	DamageFactor "Bullet",		1.0	DamageFactor "Bullet",		1.0
+	DamageFactor "Rifle",		1.0	DamageFactor "Rifle",		1.0
+	DamageFactor "Explosion",		1.0	DamageFactor "Explosion",		1.0
+	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
+	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
+	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
+	DamageFactor "TimeRed",			1.0	DamageFactor "TimeBlue",		1.0
+	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
+	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
+	DamageFactor "RazorWire",		1.0	DamageFactor "RazorWire",		1.0
+	DamageFactor "Superweapon",		1.0	DamageFactor "SuperweaponIon",		1.0
 	
-	damagefactor "FireSpecial",	1.0
-	damagefactor "ChemicalSpecial",	1.0
-	damagefactor "Mechstomp",	1.0
-	damagefactor "Disarm",		1.0
-	damagefactor "Deconstruction",	1.0
-	damagefactor "Flash",		1.0
-	damagefactor "Monster",		1.0
+	DamageFactor "FireSpecial",	1.0
+	DamageFactor "ChemicalSpecial",	1.0
+	DamageFactor "Mechstomp",	1.0
+	DamageFactor "Disarm",		1.0
+	DamageFactor "Deconstruction",	1.0
+	DamageFactor "Flash",		1.0
+	DamageFactor "Monster",		1.0
 */
 
 // SPECIALIZED TYPES
 
-actor SpawnInvulnerability : PowerupGiver {
+Actor SpawnInvulnerability : PowerupGiver {
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	Powerup.Type "Invulnerable"
@@ -221,203 +221,203 @@ actor SpawnInvulnerability : PowerupGiver {
 }
 
 // given to terminals to weaken them on SD
-actor SuddenDeathVulnerability : PermanentPowerup {powerup.type "SuddenDeathVulnerability"}
-actor PowerSuddenDeathVulnerability : PowerProtection {
-	damagefactor "Fist",			4.0	damagefactor "Fist",		4.0
-	damagefactor "Bullet",		4.0	damagefactor "Bullet",		4.0
-	damagefactor "Rifle",		4.0	damagefactor "Rifle",		4.0
-	damagefactor "Explosion",		2.5	damagefactor "Explosion",		2.5
-	damagefactor "Fire",			4.0	damagefactor "Fire",		4.0
-	damagefactor "Chemical",		4.0	damagefactor "Chemical",		4.0
-	damagefactor "Laser",		4.0	damagefactor "Laser",		4.0
-	damagefactor "TimeRed",			4.0	damagefactor "TimeBlue",		4.0
-	damagefactor "Artillery",		2.5	damagefactor "Artillery",		2.5
-	damagefactor "ExplosionMech",	4.0	damagefactor "ExplosionMech",	4.0
-	damagefactor "RazorWire",		0.0	damagefactor "RazorWire",		0.0
-	damagefactor "Superweapon",		4.0	damagefactor "SuperweaponIon",		4.0
+Actor SuddenDeathVulnerability : PermanentPowerup {Powerup.Type "SuddenDeathVulnerability"}
+Actor PowerSuddenDeathVulnerability : PowerProtection {
+	DamageFactor "Fist",			4.0	DamageFactor "Fist",		4.0
+	DamageFactor "Bullet",		4.0	DamageFactor "Bullet",		4.0
+	DamageFactor "Rifle",		4.0	DamageFactor "Rifle",		4.0
+	DamageFactor "Explosion",		2.5	DamageFactor "Explosion",		2.5
+	DamageFactor "Fire",			4.0	DamageFactor "Fire",		4.0
+	DamageFactor "Chemical",		4.0	DamageFactor "Chemical",		4.0
+	DamageFactor "Laser",		4.0	DamageFactor "Laser",		4.0
+	DamageFactor "TimeRed",			4.0	DamageFactor "TimeBlue",		4.0
+	DamageFactor "Artillery",		2.5	DamageFactor "Artillery",		2.5
+	DamageFactor "ExplosionMech",	4.0	DamageFactor "ExplosionMech",	4.0
+	DamageFactor "RazorWire",		0.0	DamageFactor "RazorWire",		0.0
+	DamageFactor "Superweapon",		4.0	DamageFactor "SuperweaponIon",		4.0
 	
-	damagefactor "FireSpecial",	4.0
-	damagefactor "ChemicalSpecial",	4.0
-	damagefactor "Mechstomp",	0.0
-	damagefactor "Disarm",		0.0
-	damagefactor "Deconstruction",	0.0
-	damagefactor "Flash",		0.0
-	damagefactor "Monster",		4.0
+	DamageFactor "FireSpecial",	4.0
+	DamageFactor "ChemicalSpecial",	4.0
+	DamageFactor "Mechstomp",	0.0
+	DamageFactor "Disarm",		0.0
+	DamageFactor "Deconstruction",	0.0
+	DamageFactor "Flash",		0.0
+	DamageFactor "Monster",		4.0
 }
 
-actor RedTeamArmor : PermanentPowerup {powerup.type "RedTeamArmor"}
-actor PowerRedTeamArmor : PowerProtection {
-	damagefactor "Fist",			1.0	damagefactor "Fist",		1.0
-	damagefactor "Bullet",		1.0	damagefactor "Bullet",		1.0
-	damagefactor "Rifle",		1.0	damagefactor "Rifle",		1.0
-	damagefactor "Explosion",		1.0	damagefactor "Explosion",		1.0
-	damagefactor "Fire",			1.0	damagefactor "Fire",		1.0
-	damagefactor "Chemical",		1.0	damagefactor "Chemical",		1.0
-	damagefactor "Laser",		1.0	damagefactor "Laser",		1.0
-	damagefactor "TimeRed",			0.0	damagefactor "TimeBlue",		1.0
-	damagefactor "Artillery",		1.0	damagefactor "Artillery",		1.0
-	damagefactor "ExplosionMech",	1.0	damagefactor "ExplosionMech",	1.0
-	damagefactor "RazorWire",		0.0	damagefactor "RazorWire",		1.0
-	damagefactor "Superweapon",		0.0	damagefactor "SuperweaponIon",		1.0
+Actor RedTeamArmor : PermanentPowerup {Powerup.Type "RedTeamArmor"}
+Actor PowerRedTeamArmor : PowerProtection {
+	DamageFactor "Fist",			1.0	DamageFactor "Fist",		1.0
+	DamageFactor "Bullet",		1.0	DamageFactor "Bullet",		1.0
+	DamageFactor "Rifle",		1.0	DamageFactor "Rifle",		1.0
+	DamageFactor "Explosion",		1.0	DamageFactor "Explosion",		1.0
+	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
+	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
+	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
+	DamageFactor "TimeRed",			0.0	DamageFactor "TimeBlue",		1.0
+	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
+	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
+	DamageFactor "RazorWire",		0.0	DamageFactor "RazorWire",		1.0
+	DamageFactor "Superweapon",		0.0	DamageFactor "SuperweaponIon",		1.0
 	
-	damagefactor "FireSpecial",	1.0
-	damagefactor "ChemicalSpecial",	1.0
-	damagefactor "Mechstomp",	1.0
-	damagefactor "Disarm",		0.0
-	damagefactor "Deconstruction",	1.0
-	damagefactor "Flash",		1.0
-	damagefactor "Monster",		1.0
+	DamageFactor "FireSpecial",	1.0
+	DamageFactor "ChemicalSpecial",	1.0
+	DamageFactor "Mechstomp",	1.0
+	DamageFactor "Disarm",		0.0
+	DamageFactor "Deconstruction",	1.0
+	DamageFactor "Flash",		1.0
+	DamageFactor "Monster",		1.0
 }
 
-actor BlueTeamArmor : PermanentPowerup {powerup.type "BlueTeamArmor"}
-actor PowerBlueTeamArmor : PowerProtection {
-	damagefactor "Fist",			1.0	damagefactor "Fist",		1.0
-	damagefactor "Bullet",		1.0	damagefactor "Bullet",		1.0
-	damagefactor "Rifle",		1.0	damagefactor "Rifle",		1.0
-	damagefactor "Explosion",		1.0	damagefactor "Explosion",		1.0
-	damagefactor "Fire",			1.0	damagefactor "Fire",		1.0
-	damagefactor "Chemical",		1.0	damagefactor "Chemical",		1.0
-	damagefactor "Laser",		1.0	damagefactor "Laser",		1.0
-	damagefactor "TimeRed",			1.0	damagefactor "TimeBlue",		0.0
-	damagefactor "Artillery",		1.0	damagefactor "Artillery",		1.0
-	damagefactor "ExplosionMech",	1.0	damagefactor "ExplosionMech",	1.0
-	damagefactor "RazorWire",		1.0	damagefactor "RazorWire",		0.0
-	damagefactor "Superweapon",		1.0	damagefactor "SuperweaponIon",		0.0
+Actor BlueTeamArmor : PermanentPowerup {Powerup.Type "BlueTeamArmor"}
+Actor PowerBlueTeamArmor : PowerProtection {
+	DamageFactor "Fist",			1.0	DamageFactor "Fist",		1.0
+	DamageFactor "Bullet",		1.0	DamageFactor "Bullet",		1.0
+	DamageFactor "Rifle",		1.0	DamageFactor "Rifle",		1.0
+	DamageFactor "Explosion",		1.0	DamageFactor "Explosion",		1.0
+	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
+	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
+	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
+	DamageFactor "TimeRed",			1.0	DamageFactor "TimeBlue",		0.0
+	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
+	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
+	DamageFactor "RazorWire",		1.0	DamageFactor "RazorWire",		0.0
+	DamageFactor "Superweapon",		1.0	DamageFactor "SuperweaponIon",		0.0
 	
-	damagefactor "FireSpecial",	1.0
-	damagefactor "ChemicalSpecial",	1.0
-	damagefactor "Mechstomp",	1.0
-	damagefactor "Disarm",		0.0
-	damagefactor "Deconstruction",	1.0
-	damagefactor "Flash",		1.0
-	damagefactor "Monster",		1.0
+	DamageFactor "FireSpecial",	1.0
+	DamageFactor "ChemicalSpecial",	1.0
+	DamageFactor "Mechstomp",	1.0
+	DamageFactor "Disarm",		0.0
+	DamageFactor "Deconstruction",	1.0
+	DamageFactor "Flash",		1.0
+	DamageFactor "Monster",		1.0
 }
 
-actor PowerGrade0DamagePower : PowerDamage
+Actor PowerGrade0DamagePower : PowerDamage
 {
-  damagefactor "Fist", 0.8
-  damagefactor "Fist", 0.8
-  damagefactor "Bullet", 0.8
-  damagefactor "Bullet", 0.8
-  damagefactor "Rifle", 0.8
-  damagefactor "Rifle", 0.8
-  damagefactor "Explosion", 0.8
-  damagefactor "Explosion", 0.8
-  damagefactor "Fire", 0.8
-  damagefactor "Fire", 0.8
-  damagefactor "Chemical", 0.8
-  damagefactor "Chemical", 0.8
-  damagefactor "Laser", 0.8
-  damagefactor "Laser", 0.8
-  damagefactor "RazorWire", 0.8
-  damagefactor "RazorWire", 0.8
-  damagefactor "ExplosionMech", 0.8
-  damagefactor "ExplosionMech", 0.8
-  damagefactor "TimeRed", 0.8
-  damagefactor "TimeBlue", 0.8
-  damagefactor "Disarm", 1.0
-  damagefactor "Flash", 1.0
-  damagefactor "Superweapon", 1.0
-  damagefactor "SuperweaponIon", 1.0
-  damagefactor "Slime", 1.0      //Mines
-  damagefactor "Artillery", 0.8
-  damagefactor "Artillery", 0.8
-  damagefactor "Mechstomp", 0.8
-  damagefactor "Monster", 0.8
+	DamageFactor "Fist", 0.8
+	DamageFactor "Fist", 0.8
+	DamageFactor "Bullet", 0.8
+	DamageFactor "Bullet", 0.8
+	DamageFactor "Rifle", 0.8
+	DamageFactor "Rifle", 0.8
+	DamageFactor "Explosion", 0.8
+	DamageFactor "Explosion", 0.8
+	DamageFactor "Fire", 0.8
+	DamageFactor "Fire", 0.8
+	DamageFactor "Chemical", 0.8
+	DamageFactor "Chemical", 0.8
+	DamageFactor "Laser", 0.8
+	DamageFactor "Laser", 0.8
+	DamageFactor "RazorWire", 0.8
+	DamageFactor "RazorWire", 0.8
+	DamageFactor "ExplosionMech", 0.8
+	DamageFactor "ExplosionMech", 0.8
+	DamageFactor "TimeRed", 0.8
+	DamageFactor "TimeBlue", 0.8
+	DamageFactor "Disarm", 1.0
+	DamageFactor "Flash", 1.0
+	DamageFactor "Superweapon", 1.0
+	DamageFactor "SuperweaponIon", 1.0
+	DamageFactor "Slime", 1.0      //Mines
+	DamageFactor "Artillery", 0.8
+	DamageFactor "Artillery", 0.8
+	DamageFactor "Mechstomp", 0.8
+	DamageFactor "Monster", 0.8
 }
 
-actor Grade0Damage : PowerupGiver
+Actor Grade0Damage : PowerupGiver
 {
-  inventory.maxamount 0
-  powerup.type "Grade0DamagePower"
-  powerup.duration 9999999
-  +AUTOACTIVATE
-  states
-  {
-  Spawn:
-    NULL A -1
-    stop
-  }
+	Inventory.MaxAmount 0
+	Powerup.Type "Grade0DamagePower"
+	Powerup.Duration 9999999
+	+AUTOACTIVATE
+	States
+	{
+	Spawn:
+		NULL A -1
+		Stop
+	}
 }
 
-actor PowerGrade2DamageArtillery : PowerDamage {
-	damagefactor "Fist", 1.1
-	damagefactor "Fist", 1.1
-	damagefactor "Bullet", 1.1
-	damagefactor "Bullet", 1.1
-	damagefactor "Rifle", 1.1
-	damagefactor "Rifle", 1.1
-	damagefactor "Explosion", 1.25
-	damagefactor "Explosion", 1.25
-	damagefactor "Fire", 1.1
-	damagefactor "Fire", 1.1
-	damagefactor "Chemical", 1.1
-	damagefactor "Chemical", 1.1
-	damagefactor "Laser", 1.1
-	damagefactor "Laser", 1.1
-	damagefactor "RazorWire", 1.1
-	damagefactor "RazorWire", 1.1
-	damagefactor "ExplosionMech", 1.25
-	damagefactor "ExplosionMech", 1.25
-	damagefactor "TimeRed", 1.1
-	damagefactor "TimeBlue", 1.1
-	damagefactor "Artillery", 1.25
-	damagefactor "Artillery", 1.25
-	damagefactor "Mechstomp", 1.1
+Actor PowerGrade2DamageArtillery : PowerDamage {
+	DamageFactor "Fist", 1.1
+	DamageFactor "Fist", 1.1
+	DamageFactor "Bullet", 1.1
+	DamageFactor "Bullet", 1.1
+	DamageFactor "Rifle", 1.1
+	DamageFactor "Rifle", 1.1
+	DamageFactor "Explosion", 1.25
+	DamageFactor "Explosion", 1.25
+	DamageFactor "Fire", 1.1
+	DamageFactor "Fire", 1.1
+	DamageFactor "Chemical", 1.1
+	DamageFactor "Chemical", 1.1
+	DamageFactor "Laser", 1.1
+	DamageFactor "Laser", 1.1
+	DamageFactor "RazorWire", 1.1
+	DamageFactor "RazorWire", 1.1
+	DamageFactor "ExplosionMech", 1.25
+	DamageFactor "ExplosionMech", 1.25
+	DamageFactor "TimeRed", 1.1
+	DamageFactor "TimeBlue", 1.1
+	DamageFactor "Artillery", 1.25
+	DamageFactor "Artillery", 1.25
+	DamageFactor "Mechstomp", 1.1
 }
 
-actor Grade2DamageArtillery : PermanentPowerup {powerup.type "Grade2DamageArtillery"}
+Actor Grade2DamageArtillery : PermanentPowerup {Powerup.Type "Grade2DamageArtillery"}
 
-actor PowerFirepowerUpgrade : PowerDamage {
-	damagefactor "Fist", 1.3
-	damagefactor "Fist", 1.3
-	damagefactor "Bullet", 1.3
-	damagefactor "Bullet", 1.3
-	damagefactor "Rifle", 1.3
-	damagefactor "Rifle", 1.3
-	damagefactor "Explosion", 1.3
-	damagefactor "Explosion", 1.3
-	damagefactor "Fire", 1.3
-	damagefactor "Fire", 1.3
-	damagefactor "Chemical", 1.3
-	damagefactor "Chemical", 1.3
-	damagefactor "Laser", 1.3
-	damagefactor "Laser", 1.3
-	damagefactor "ExplosionMech", 1.3
-	damagefactor "ExplosionMech", 1.3
-	damagefactor "TimeRed", 1.3
-	damagefactor "TimeBlue", 1.3
-	damagefactor "Artillery", 1.3
-	damagefactor "Artillery", 1.3
-	damagefactor "Mechstomp", 1.3
+Actor PowerFirepowerUpgrade : PowerDamage {
+	DamageFactor "Fist", 1.3
+	DamageFactor "Fist", 1.3
+	DamageFactor "Bullet", 1.3
+	DamageFactor "Bullet", 1.3
+	DamageFactor "Rifle", 1.3
+	DamageFactor "Rifle", 1.3
+	DamageFactor "Explosion", 1.3
+	DamageFactor "Explosion", 1.3
+	DamageFactor "Fire", 1.3
+	DamageFactor "Fire", 1.3
+	DamageFactor "Chemical", 1.3
+	DamageFactor "Chemical", 1.3
+	DamageFactor "Laser", 1.3
+	DamageFactor "Laser", 1.3
+	DamageFactor "ExplosionMech", 1.3
+	DamageFactor "ExplosionMech", 1.3
+	DamageFactor "TimeRed", 1.3
+	DamageFactor "TimeBlue", 1.3
+	DamageFactor "Artillery", 1.3
+	DamageFactor "Artillery", 1.3
+	DamageFactor "Mechstomp", 1.3
 }
 
-actor FirepowerUpgrade : PermanentPowerup {powerup.type "FirepowerUpgrade"}
+Actor FirepowerUpgrade : PermanentPowerup {Powerup.Type "FirepowerUpgrade"}
 
-actor HasArmorUpgrade : Inventory {inventory.maxamount 1}
+Actor HasArmorUpgrade : Inventory {Inventory.MaxAmount 1}
 
-actor PowerGrade2ArmorFactoryPower : PowerProtection {
-	damagefactor "Fist", 0.9
-	damagefactor "Fist", 0.9
-	damagefactor "Bullet", 0.9
-	damagefactor "Bullet", 0.9
-	damagefactor "Rifle", 0.9
-	damagefactor "Rifle", 0.9
-	damagefactor "Explosion", 0.9
-	damagefactor "Explosion", 0.9
-	damagefactor "Fire", 0.9
-	damagefactor "Fire", 0.9
-	damagefactor "Chemical", 0.9
-	damagefactor "Chemical", 0.9
-	damagefactor "Laser", 0.9
-	damagefactor "Laser", 0.9
-	damagefactor "ExplosionMech", 0.9
-	damagefactor "ExplosionMech", 0.9
-	damagefactor "TimeRed", 1.0
-	damagefactor "TimeBlue", 1.0
-	damagefactor "Artillery", 0.9
-	damagefactor "Artillery", 0.9
-	damagefactor "Mechstomp", 0.9
-	damagefactor "Monster", 0.9
+Actor PowerGrade2ArmorFactoryPower : PowerProtection {
+	DamageFactor "Fist", 0.9
+	DamageFactor "Fist", 0.9
+	DamageFactor "Bullet", 0.9
+	DamageFactor "Bullet", 0.9
+	DamageFactor "Rifle", 0.9
+	DamageFactor "Rifle", 0.9
+	DamageFactor "Explosion", 0.9
+	DamageFactor "Explosion", 0.9
+	DamageFactor "Fire", 0.9
+	DamageFactor "Fire", 0.9
+	DamageFactor "Chemical", 0.9
+	DamageFactor "Chemical", 0.9
+	DamageFactor "Laser", 0.9
+	DamageFactor "Laser", 0.9
+	DamageFactor "ExplosionMech", 0.9
+	DamageFactor "ExplosionMech", 0.9
+	DamageFactor "TimeRed", 1.0
+	DamageFactor "TimeBlue", 1.0
+	DamageFactor "Artillery", 0.9
+	DamageFactor "Artillery", 0.9
+	DamageFactor "Mechstomp", 0.9
+	DamageFactor "Monster", 0.9
 }
-actor Grade2ArmorFactory : PermanentPowerup {powerup.type "Grade2ArmorFactoryPower"}
+Actor Grade2ArmorFactory : PermanentPowerup {Powerup.Type "Grade2ArmorFactoryPower"}

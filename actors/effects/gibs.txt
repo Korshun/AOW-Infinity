@@ -1,8 +1,8 @@
-actor Giblet {
-	radius 2
-	height 2
-	speed 15
-	damage 0
+Actor Giblet {
+	Radius 2
+	Height 2
+	Speed 15
+	Damage 0
 	PROJECTILE
 	-NOGRAVITY
 	+RANDOMIZE
@@ -10,153 +10,167 @@ actor Giblet {
 	+BOUNCEONACTORS
 	Mass 50
 	Scale 0.7
-	gravity 0.5
-	bouncefactor 0.6
-	bouncecount 6
-	seesound "gib/thump"
-	states {
+	Gravity 0.5
+	BounceFactor 0.6
+	BounceCount 6
+	SeeSound "gib/thump"
+	States
+	{
 	Death:
 		"----" A 700
-		"----" A 3 A_FadeOut (0.1)
-		wait
+		"----" A 3 A_FadeOut(0.1)
+		Wait
 	}
 }
 
-actor Giblet1 : Giblet {
-	states {
+Actor Giblet1 : Giblet {
+	States
+	{
 	Spawn:
-		GIP1 ABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP1 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP1 ABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP1 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP1 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet2 : Giblet {
-	states {
+Actor Giblet2 : Giblet {
+	States
+	{
 	Spawn:
-		GIP2 ABCD 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP2 ABCDABCD 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP2 ABCD 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP2 ABCDABCD 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP2 ABCDABCDABCD 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet3 : Giblet {
-	states {
+Actor Giblet3 : Giblet {
+	States
+	{
 	Spawn:
-		GIP3 AAA 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP3 AAAAAA 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP3 AAA 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP3 AAAAAA 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP3 AAAAAAAAA 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet4 : Giblet {
-	states {
+Actor Giblet4 : Giblet {
+	States
+	{
 	Spawn:
-		GIP4 ABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP4 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP4 ABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP4 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP4 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor SkullGiblet4 : Giblet {
+Actor SkullGiblet4 : Giblet {
 	-MISSILE
-	states {
+	States
+	{
 	Spawn:
-		GIP4 ABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP4 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP4 ABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP4 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP4 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet5 : Giblet {
-	states {
+Actor Giblet5 : Giblet {
+	States
+	{
 	Spawn:
-		GIP5 ABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP5 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP5 ABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP5 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP5 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet6 : Giblet {
-	states {
+Actor Giblet6 : Giblet {
+	States
+	{
 	Spawn:
-		GIP6 AABBCCDDEEFF 2 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP6 AABBCCDDEEFF 2 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP6 AABBCCDDEEFF 2
 		GIP6 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet7 : Giblet {
-	states {
+Actor Giblet7 : Giblet {
+	States
+	{
 	Spawn:
-		GIP7 ABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP7 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP7 ABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP7 ABCDEFABCDEF 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP7 ABCDEFABCDEFABCDEF 4
-		stop
+		Stop
 	}
 }
 
-actor Giblet8 : Giblet {
-	states {
+Actor Giblet8 : Giblet {
+	States
+	{
 	Spawn:
-		GIP8 AAAA 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
-		GIP8 AAAA 3 A_SpawnItemEx("HHBlood2",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1),0,128,50)
+		GIP8 AAAA 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
+		GIP8 AAAA 3 A_SpawnItemEx("HHBlood2", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1), 0, 128, 50)
 		GIP8 AAAAAAAAA 4
-		stop
+		Stop
 	}
 }
 
-actor GibExplosion {
+Actor GibExplosion {
 	+CLIENTSIDEONLY
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0 
-		TNT1 AAAAAAAA 0 A_CustomMissile("GibExplosionBlood",0,0,random(-180,180),2,random(20,80))
-		TNT1 AAAAAAAA 1 A_SpawnItemEx("GibExplosionBlood2",random(-12,12),random(-12,12),-21,random(-2,2),random(-2,2),random(0,2),0,128,0)
-		stop
+		TNT1 AAAAAAAA 0 A_CustomMissile("GibExplosionBlood", 0, 0, random(-180, 180), 2, random(20, 80))
+		TNT1 AAAAAAAA 1 A_SpawnItemEx("GibExplosionBlood2", random(-12, 12), random(-12, 12), -21, random(-2, 2), random(-2, 2), random(0, 2), 0, 128, 0)
+		Stop
 	}
 }
 
-actor GibExplosionBlood : Blood  {
+Actor GibExplosionBlood : Blood  {
 	+NOBLOCKMAP
 	+NOTELEPORT
 	+CLIENTSIDEONLY
-	mass 5
-	speed 9
-	gravity 0.8
-	States {
+	Mass 5
+	Speed 9
+	Gravity 0.8
+	States
+	{
 	Spawn:
-		BLUD CCCC 0 A_SpawnItemEx("HHBlood3",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1))
+		BLUD CCCC 0 A_SpawnItemEx("HHBlood3", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1))
 		BLUD C 8 
 		BLUD BA 8
-		stop
+		Stop
 	}
 }
-actor GibExplosionBlood2 : GibExplosionBlood {
-	speed 2
-	scale 1.2
-	States {
+Actor GibExplosionBlood2 : GibExplosionBlood {
+	Speed 2
+	Scale 1.2
+	States
+	{
 	Spawn:
-		BLUD CCCC 0 A_SpawnItemEx("HHBlood3",random(-5,5),random(-5,5),random(-8,8),random(-1,1),random(-1,1),random(-1,1))
+		BLUD CCCC 0 A_SpawnItemEx("HHBlood3", random(-5, 5), random(-5, 5), random(-8, 8), random(-1, 1), random(-1, 1), random(-1, 1))
 		BLUD C 12
 		BLUD BA 12
-		stop
+		Stop
 	}
 }
 
-actor AOWBrainStem : BrainStem {
+Actor AOWBrainStem : BrainStem {
 	+CLIENTSIDEONLY
-	states {
+	States
+	{
 	Spawn:
 		BRS1 A 700
-		BRS1 A 3 A_FadeOut (0.1)
-		wait
+		BRS1 A 3 A_FadeOut(0.1)
+		Wait
 	}
 }

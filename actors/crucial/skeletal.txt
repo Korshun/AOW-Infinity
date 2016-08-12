@@ -1,76 +1,81 @@
 // very important stuff
-actor AOWWeapon : Weapon {
+Actor AOWWeapon : Weapon {
 	+NO_AUTO_SWITCH
 	+NOAUTOAIM
 	Weapon.Kickback 50
-	weapon.selectionorder 9999
-	states {
+	Weapon.SelectionOrder 9999
+	States
+	{
 	DeselectDie:
 		NULL A 0 A_Lower
 		NULL A 1 A_Lower
-		loop
+		Loop
 	Flash:
 		NULL A 2 A_Light1
 		NULL A 2 A_Light2
 		NULL A 0 A_Light0
-		stop
+		Stop
 	LightDone:
 		NULL A 0 A_Light0
 		Stop
 	}
 }
 
-actor AOWMorph : PowerMorph {
+Actor AOWMorph : PowerMorph {
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }
 
-actor PermanentPowerup : PowerupGiver {
-	inventory.maxamount 0
-	powerup.type "Null"
-	powerup.duration 0x7FFFFFFF
+Actor PermanentPowerup : PowerupGiver {
+	Inventory.MaxAmount 0
+	Powerup.Type "Null"
+	Powerup.Duration 0x7FFFFFFF
 	+AUTOACTIVATE
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor InventoryItem : CustomInventory {
+Actor InventoryItem : CustomInventory {
 	+INVBAR
-	inventory.maxamount 1
-	states {
+	Inventory.MaxAmount 1
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	Use.Mech:
-		NULL A 0 ACS_ExecuteAlways (aow_script697, 0)
-		fail
+		NULL A 0 ACS_ExecuteAlways(aow_script697, 0)
+		Fail
 	Failure:
 		NULL A 0
-		fail
+		Fail
 	Destealth:
-		NULL A 0 ACS_ExecuteAlways (aow_stealth, 0, 3)
-		fail
+		NULL A 0 ACS_ExecuteAlways(aow_stealth, 0, 3)
+		Fail
 	}
 }
 
 Actor Integer : Inventory {
 	+NOBLOCKMAP
-	inventory.maxamount 0x7fffffff
-	states {
+	Inventory.MaxAmount 0x7fffffff
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor Boolean : Inventory {
+Actor Boolean : Inventory {
 	+NOBLOCKMAP
-	inventory.maxamount 1
-	states {
+	Inventory.MaxAmount 1
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	}
 }

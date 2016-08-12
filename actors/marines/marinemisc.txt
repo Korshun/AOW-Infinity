@@ -46,4 +46,4 @@ Actor MoveBackwardsThreshold : Inventory //Adds or cleats when the momentum is 0
 
 
 // [Dusk] Is the marine spawned because of compensation?
-actor IsCompensationMarine : Boolean {}
+Actor IsCompensationMarine : Boolean {}
