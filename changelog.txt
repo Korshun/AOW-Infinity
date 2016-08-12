@@ -1,5 +1,8 @@
 AOW Infinity is based on AOW r2539-5
 
+r6:
+- Fixed bomb squad gun dynamic lights
+
 r5:
 - Fixed blood decals from mechs
 - Fixed orca flames being too big

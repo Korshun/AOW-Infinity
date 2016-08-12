@@ -875,12 +875,10 @@ object HealTrail
 }
 */
 
-/*
 object DisarmPuff
 {
 	frame CHMX { light RepYellow }
 }
-*/
 
 /*
 object DisarmTrail
