@@ -290,14 +290,14 @@ function void TakeTickets (int team, int count) {
 }
 
 // returns color code
-function str FractionColor (int perc, int max) {
-	if (perc == max)
+function str FractionColor (int perc, int maxperc) {
+	if (perc == maxperc)
 		return "\cQ";
-	else if ((perc*4)/3 >= max) // 75%
+	else if ((perc*4)/3 >= maxperc) // 75%
 		return "\cD";
-	else if (perc*2 >= max) // 50%
+	else if (perc*2 >= maxperc) // 50%
 		return "\cF";
-	else if (perc*4 >= max) // 25%
+	else if (perc*4 >= maxperc) // 25%
 		return "\cI";
 	else if (perc > 0) // 24-1%
 		return "\cR";
