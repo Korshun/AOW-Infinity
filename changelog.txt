@@ -14,6 +14,7 @@ r6:
 - Fixed messages about array sizes on map load.
 - Fixed minor bugs in map scripts.
 - Fixed bomb squad gun dynamic lights
+- Fixed INFECTED and MINESITE map scripts conflicting with beacon disarm bonus script.
 
 r5:
 - Fixed blood decals from mechs

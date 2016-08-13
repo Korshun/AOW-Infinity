@@ -478,7 +478,8 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script346 346
 #define aow_script347 347
 #define aow_script349 349
-#define aow_beacondisarmbonus 350 // conflicts with INFECTED and MINESITE
+// script 350 used on INFECTED and MINESITE
+#define aow_beacondisarmbonus 351 
 #define aow_script352 352
 #define aow_script353 353
 #define aow_script354 354
