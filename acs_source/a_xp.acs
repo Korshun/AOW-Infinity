@@ -209,7 +209,7 @@ script aow_script328 (int team) {
 }
 
 //Bonuses for disarming Beacon.
-script aow_script350 (int team) {
+script aow_beacondisarmbonus (int team) {
 	if (team == PlayerTeam()) terminate;
 	
 	ACS_ExecuteAlways(aow_script324,0,3,0,0);			//150 XP
