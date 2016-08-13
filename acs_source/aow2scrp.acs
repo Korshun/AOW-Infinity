@@ -382,6 +382,9 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_res_moreturrets 73
 
 
+// script 1 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 2 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 3 used on HELLMRCH
 #define aow_creditflow 4
 #define aow_playerstatushud_serverside 5
 #define aow_playerstatushud_clientside 6
@@ -389,9 +392,12 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script8 8
 #define aow_script10 10
 #define aow_script11 11
+// script 14 used on EMERALD
+// script 15 used on EMERALD
+// script 16 used on EMERALD
+// scripts 20-29 are used for classes
 #define aow_script32 32
-#define aow_script63 63
-#define aow_script64 64
+// scripts 33-73 are used for classes and stuff
 #define aow_script80 80
 #define aow_script84 84
 #define aow_script85 85
@@ -419,12 +425,28 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script111 111
 #define aow_script114 114
 #define aow_script150 150
+// script 200 used on FLOATCIT
 #define aow_script201 201
 #define aow_script202 202
 #define aow_script203 203
 #define aow_script204 204
 #define aow_script205 205
+// script 206 used on RENE2030
+// script 207 used on RENE2030 and RENE2032
+// script 208 used on RENE2030 and RENE2032
+// script 209 used on RENE2030 and RENE2032
+// script 210 used on RENE2030 and RENE2032
+// script 211 used on RENE2032
+// script 212 used on RENE2032
+// script 213 used on RENE2032
 #define aow_script214 214
+// script 215 used on RENE2032
+// script 216 used on RENE2032
+// script 218 used on RENE2032
+// script 220 used on RENE2032
+// script 221 used on RENE2032
+// script 222 used on RENE2032
+// script 223 used on RENE2032
 #define aow_script301 301
 #define aow_script303 303
 #define aow_script309 309
@@ -456,7 +478,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script346 346
 #define aow_script347 347
 #define aow_script349 349
-#define aow_script350 350
+#define aow_script350 350 // conflicts with INFECTED and MINESITE
 #define aow_script352 352
 #define aow_script353 353
 #define aow_script354 354
@@ -472,8 +494,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_gamemastercommand 402
 #define aow_teamshuffle 403
 #define aow_activatedeveloper 404
+// script 507 used on FLOATCIT
 #define aow_script556 556
 #define aow_script599 599
+// script 600 used on HELLMRCH
+// script 601 used on CANYON
+// script 602 used on CANYON
+// script 603 used on CANYON
 #define aow_script650 650
 #define aow_script651 651
 #define aow_script652 652
@@ -485,9 +512,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script699 699
 #define aow_script750 750
 #define aow_script751 751
+// script 754 used on FLOATCIT
 #define aow_addaowmaps 797
 #define aow_traceroffset 798
 #define aow_spawntracer 799
+// script 893 used on HELLMRCH
+// script 894 used on HELLMRCH
+// script 895 used on HELLMRCH and OASIS
 #define aow_script888 888
 #define aow_script889 889
 #define aow_script905 905
@@ -522,7 +553,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script957 957
 #define aow_script958 958
 #define aow_script959 959
-#define aow_eventscript 960 // Provided by maps
+#define aow_eventscript 960 // Provided by maps (EMERALD and RENE2032)
 #define aow_script961 961
 #define aow_script963 963
 #define aow_script964 964
