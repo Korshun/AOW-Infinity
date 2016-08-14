@@ -25,11 +25,11 @@ Actor UtilityGun : AOWWeapon {
 		NULL A 0 
 		Stop
 	RejectedWait:
-		NULL A 0 A_StopSound(CHAN_WEAPON)
+		NULL A 0 A_StopSoundEx("Weapon")
 		UTIG A 20
 		Goto Ready
 	Ready:
-		NULL A 0 A_StopSound(CHAN_WEAPON)
+		NULL A 0 A_StopSoundEx("Weapon")
 		NULL A 0 ACS_ExecuteAlways(aow_script370, 0)
 		NULL A 0 A_TakeInventory("Utility_Percent", 2)
 		NULL A 0 A_GiveInventory("Utility_Ammo", 2)
@@ -274,7 +274,7 @@ Actor UtilityGun : AOWWeapon {
 	Done.Sandbags:
 		NULL A 0 A_SpawnItemEx("Utility_SandbagsMarker", 96, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		NULL A 0 A_SpawnItemEx("SandbagWall", 96, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		NULL A 0 A_StopSound(CHAN_WEAPON)
+		NULL A 0 A_StopSoundEx("Weapon")
 		UTIG A 35 BRIGHT Radius_Quake(1, 4, 0, 1, 0)
 		UTIG A 35 A_TakeInventory("Utility_Percent", 100)
 		NULL A 0 A_Refire
@@ -1048,7 +1048,7 @@ Actor UtilityGun : AOWWeapon {
 	Done.Barrel:
 		NULL A 0 A_SpawnItemEx("Utility_BarrelMarker", 96, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		NULL A 0 A_SpawnItemEx("Utility_Barrel", 96)
-		NULL A 0 A_StopSound(CHAN_WEAPON)
+		NULL A 0 A_StopSoundEx("Weapon")
 		UTIG A 35 BRIGHT Radius_Quake (1, 4, 0, 1, 0)
 		UTIG A 35 A_TakeInventory("Utility_Percent", 100)
 		NULL A 0 A_Refire
