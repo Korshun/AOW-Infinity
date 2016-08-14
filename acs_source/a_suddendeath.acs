@@ -45,14 +45,14 @@ script aow_script997 (void) {
 	GiveActorInventory (215, "SuddenDeathVulnerability", 1);
 	if (Timer() > 5*35 + 10) {
 		if (random (0, 1))
-			SetMusic ("razor-ub");
+			SetMusic ("stomp");
 		else
-			SetMusic ("razorub2");
+			SetMusic ("fireline");
 	}
 
 	Log(s:"=== Sudden Death begins ===");
 
-	if (!TournamentMode) {
+	if (!GetCVAR("aow_tournamentmode")) {
 		for (int n = 0; n < MAX_PLAYERS; n++) {
 			if (!PlayerInGame(n)) continue;
 			if (GetPlayerInfo (n, PLAYERINFO_TEAM) == TEAM_RED)
@@ -76,7 +76,7 @@ script aow_script997 (void) {
 			INTEL_XPOS, 0.45, 7.0, 1.0);
 	}
 	
-	if (!TicketPool) {
+	if (!GetCVar("aow_ticketpool")) {
 		// init tickets
 		Tickets[TEAM_BLUE] = StartingTickets;
 		Tickets[TEAM_RED] = StartingTickets;

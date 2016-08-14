@@ -19,11 +19,11 @@ script aow_script970 (void) {
 	TakeInventory ("GotMoreTurrets", 1);
 	TakeInventory ("GoingToUtilMenu", 1);
 	TakeInventory ("Utility_Percent", 100);
-	if (AdvancedTurrets[team])
+	if (Researches[RESERACH_AdvancedTurrets][team])
 		GiveInventory ("GotAdvTurrets", 1);
-	if (MoreTurrets[team])
+	if (Researches[RESERACH_MoreTurrets][team])
 		GiveInventory ("GotMoreTurrets", 1);
-	if (!MechEnabled)
+	if (!GetCVar("aow_mechs"))
 		GiveInventory ("NoMechs", 1);
 	if (UsePortals)
 		GiveInventory ("PortalsEnabled", 1);
@@ -49,8 +49,8 @@ script aow_script969 (int sel0, int sel1) NET {
 	
 	// HACK: determine if the player is allowed to build
 	// THIS CHECK IS ONLY A HINT AND SHOULD NOT BE RELIED UPON
-	if (	(sel0 != 2 || sel1 < 4 || AdvancedTurrets[1-PlayerTeam()] == 1) &&
-		(sel0 != 1 || sel1 < 6 || MechEnabled) &&
+	if (	(sel0 != 2 || sel1 < 4 || Researches[RESERACH_AdvancedTurrets][1-PlayerTeam()] == 1) &&
+		(sel0 != 1 || sel1 < 6 || GetCVar("aow_mechs")) &&
 		(sel0 != 2 || (sel1 == 2 || sel1 == 3) || TurretLimit() < TurretLimitMax()) &&
 		(sel0 != 2 || sel1 != 2 || MineLimit() < 50) &&
 		(sel0 != 2 || sel1 != 3 || MiniRavenLimit() < 5) &&
@@ -90,7 +90,7 @@ script aow_script965 (void) CLIENTSIDE {
 			(MenuSelection[0] != 3 || MenuSelection[1] != 2 || (CheckInventory ("PortalsEnabled")));
 			
 			if ((!(buttons & BT_ATTACK) || lethimbuild || GetActorProperty (0, APROP_HEALTH) <= 0) && Timer() > MenuEpoch) {
-				ConsoleCommand(StrParam(s:"puke -", d:aow_script969, s:" ", d:MenuSelection[0], s:" ", d:MenuSelection[1]));
+				RequestScriptPuke(aow_script969, MenuSelection[0], MenuSelection[1]);
 				delay (15);
 			} else
 				delay (5);

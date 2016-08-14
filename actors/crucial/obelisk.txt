@@ -10,14 +10,14 @@
  * which shoot the plasma blast at enemies they see.
  */
 
-actor RedObeliskThing 21214 {
-	obituary "$OB_OBELISK_RED" // "%o was vaporized by the \cgRed Obelisk\c-."
-	health 99999
-	radius 16
-	height 64
+Actor RedObeliskThing 21214 {
+	Obituary "$OB_OBELISK_RED" // "%o was vaporized by the \cgRed Obelisk\c-."
+	Health 99999
+	Radius 16
+	Height 64
 	Mass 999999
-	speed 0
-	painchance 0
+	Speed 0
+	PainChance 0
 	MONSTER
 	-ISMONSTER
 	+FLOORCLIP
@@ -31,103 +31,103 @@ actor RedObeliskThing 21214 {
 	+NEVERRESPAWN
 	+NOGRAVITY
 	+NOINTERACTION
-	states
+	States
 	{
 	Spawn:
 		NULL A 0
-		NULL A 0 Thing_ChangeTID (0, 215)
-		NULL A 0 A_ChangeFlag("ISMONSTER",1)
-		NULL A 0 A_GiveInventory("IsRed",1)
-		NULL A 0 A_TakeInventory("ObeliskCharged",1)
+		NULL A 0 Thing_ChangeTID(0, 215)
+		NULL A 0 A_ChangeFlag("ISMONSTER", 1)
+		NULL A 0 A_GiveInventory("IsRed", 1)
+		NULL A 0 A_TakeInventory("ObeliskCharged", 1)
 		NULL A 8 A_Look
-		loop
+		Loop
 	See:
-		NULL A 0 A_Chase("","",CHF_DONTMOVE)
-		NULL A 0 A_GiveInventory("IsRed",1)
-		NULL A 0 A_TakeInventory("ObeliskCharged",1)
+		NULL A 0 A_Chase("", "", CHF_DONTMOVE)
+		NULL A 0 A_GiveInventory("IsRed", 1)
+		NULL A 0 A_TakeInventory("ObeliskCharged", 1)
 		NULL A 3 A_FaceTarget
 		NULL A 2 A_JumpIfTargetInLOS("Missile")
 		NULL A 2 A_ClearTarget
-		goto Spawn
+		Goto Spawn
 	See2:
 		NULL A 2 A_ClearTarget
-		goto See
+		Goto See
 	MissileCheck:
-		TNT1 AA 0 A_JumpIfInTargetInventory("IsBlue",1,"MissileGo")
+		TNT1 AA 0 A_JumpIfInTargetInventory("IsBlue", 1, "MissileGo")
 		NULL A 0 
-		goto See
+		Goto See
 	Missile:
 		NULL A 0 
-		NULL A 1 A_JumpIfInTargetInventory("IsRed",1,"See2")
-		NULL A 1 A_JumpIfCloser(30000,"MissileGo")
+		NULL A 1 A_JumpIfInTargetInventory("IsRed", 1, "See2")
+		NULL A 1 A_JumpIfCloser(30000, "MissileGo")
 		NULL A 0 
-		goto See2
+		Goto See2
 	MissileGo:
-		NULL A 0 A_JumpIfInTargetInventory("IsMech",1,"MissileGoMech")
-		NULL A 0 A_JumpIfInventory("ObeliskCharged",1,"MissileCharged")
+		NULL A 0 A_JumpIfInTargetInventory("IsMech", 1, "MissileGoMech")
+		NULL A 0 A_JumpIfInventory("ObeliskCharged", 1, "MissileCharged")
 		NULL A 0 A_FaceTarget
-		NULL A 70 A_PlaySoundEx("obelisk/charge","Voice",0)
-		NULL A 0 A_GiveInventory("ObeliskCharged",15)
+		NULL A 70 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		NULL A 0 A_GiveInventory("ObeliskCharged", 15)
 		NULL A 0 A_CposRefire
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_SpawnItemEx("ObbyFlare")
-		NULL A 0 A_CustomMissile("ObeliskShotRedInfantry",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotRedInfantry", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileCharged:
 		NULL A 15
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomMissile("ObeliskShotRedInfantry",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotRedInfantry", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileGoMech:
-		NULL A 0 A_JumpIfInventory("ObeliskCharged",1,"MissileChargedMech")
+		NULL A 0 A_JumpIfInventory("ObeliskCharged", 1, "MissileChargedMech")
 		NULL A 0 A_FaceTarget
-		NULL A 70 A_PlaySoundEx("obelisk/charge","Voice",0)
-		NULL A 0 A_GiveInventory("ObeliskCharged",15)
+		NULL A 70 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		NULL A 0 A_GiveInventory("ObeliskCharged", 15)
 		NULL A 0 A_CposRefire
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_SpawnItemEx("ObbyFlare")
-		NULL A 0 A_CustomMissile("ObeliskShotRed",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotRed", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileChargedMech:
 		NULL A 15
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomMissile("ObeliskShotRed",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotRed", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	Death:	
 		NULL A 5
-		stop
+		Stop
 	}
 }
 
-actor BlueObeliskThing 21213 
+Actor BlueObeliskThing 21213 
 {
-	obituary "$OB_OBELISK_BLUE" // "%o was vaporized by the \chBlue Obelisk\c-."
-	health 99999
-	radius 16
-	height 64
+	Obituary "$OB_OBELISK_BLUE" // "%o was vaporized by the \chBlue Obelisk\c-."
+	Health 99999
+	Radius 16
+	Height 64
 	Mass 999999
-	speed 0
-	painchance 0
+	Speed 0
+	PainChance 0
 	MONSTER
 	-ISMONSTER
 	+FLOORCLIP
@@ -141,91 +141,91 @@ actor BlueObeliskThing 21213
 	+NEVERRESPAWN
 	+NOGRAVITY
 	+NOINTERACTION
-	states
+	States
 	{
 	Spawn:
 		NULL A 0
-		NULL A 0 Thing_ChangeTID (0, 115)
-		NULL A 0 A_ChangeFlag("ISMONSTER",1)
-		NULL A 0 A_GiveInventory("IsBlue",1)
-		NULL A 0 A_TakeInventory("ObeliskCharged",1)
+		NULL A 0 Thing_ChangeTID(0, 115)
+		NULL A 0 A_ChangeFlag("ISMONSTER", 1)
+		NULL A 0 A_GiveInventory("IsBlue", 1)
+		NULL A 0 A_TakeInventory("ObeliskCharged", 1)
 		NULL A 8 A_Look
-		loop
+		Loop
 	See:
-		NULL A 0 A_Chase("","",CHF_DONTMOVE)
-		NULL A 0 A_GiveInventory("IsBlue",1)
-		NULL A 0 A_TakeInventory("ObeliskCharged",1)
+		NULL A 0 A_Chase("", "", CHF_DONTMOVE)
+		NULL A 0 A_GiveInventory("IsBlue", 1)
+		NULL A 0 A_TakeInventory("ObeliskCharged", 1)
 		NULL A 3 A_FaceTarget
 		NULL A 2 A_JumpIfTargetInLOS("Missile")
 		NULL A 2 A_ClearTarget
-		goto Spawn
+		Goto Spawn
 	See2:
 		NULL A 2 A_ClearTarget
-		goto See
+		Goto See
 	MissileCheck:
-		TNT1 AA 0 A_JumpIfInTargetInventory("IsRed",1,"MissileGo")
+		TNT1 AA 0 A_JumpIfInTargetInventory("IsRed", 1, "MissileGo")
 		NULL A 0 
-		goto See
+		Goto See
 	Missile:
 		NULL A 0 
-		NULL A 1 A_JumpIfInTargetInventory("IsBlue",1,"See2")
-		NULL A 1 A_JumpIfCloser(30000,"MissileGo")
+		NULL A 1 A_JumpIfInTargetInventory("IsBlue", 1, "See2")
+		NULL A 1 A_JumpIfCloser(30000, "MissileGo")
 		NULL A 0 
-		goto See2
+		Goto See2
 	MissileGo:
-		NULL A 0 A_JumpIfInTargetInventory("IsMech",1,"MissileGoMech")
-		NULL A 0 A_JumpIfInventory("ObeliskCharged",1,"MissileCharged")
+		NULL A 0 A_JumpIfInTargetInventory("IsMech", 1, "MissileGoMech")
+		NULL A 0 A_JumpIfInventory("ObeliskCharged", 1, "MissileCharged")
 		NULL A 0 A_FaceTarget
-		NULL A 70 A_PlaySoundEx("obelisk/charge","Voice",0)
-		NULL A 0 A_GiveInventory("ObeliskCharged",15)
+		NULL A 70 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		NULL A 0 A_GiveInventory("ObeliskCharged", 15)
 		NULL A 0 A_CposRefire
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_SpawnItemEx("ObbyFlareBlue")
-		NULL A 0 A_CustomMissile("ObeliskShotBlueInfantry",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotBlueInfantry", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileCharged:
 		NULL A 15
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomMissile("ObeliskShotBlueInfantry",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotBlueInfantry", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileGoMech:
-		NULL A 0 A_JumpIfInventory("ObeliskCharged",1,"MissileChargedMech")
+		NULL A 0 A_JumpIfInventory("ObeliskCharged", 1, "MissileChargedMech")
 		NULL A 0 A_FaceTarget
-		NULL A 70 A_PlaySoundEx("obelisk/charge","Voice",0)
-		NULL A 0 A_GiveInventory("ObeliskCharged",15)
+		NULL A 70 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		NULL A 0 A_GiveInventory("ObeliskCharged", 15)
 		NULL A 0 A_CposRefire
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_SpawnItemEx("ObbyFlareBlue")
-		NULL A 0 A_CustomMissile("ObeliskShotBlue",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotBlue", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	MissileChargedMech:
 		NULL A 15
-		NULL A 0 A_PlaySoundEx("obelisk/fire","Weapon",0)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Body",0)
+		NULL A 0 A_PlaySoundEx("obelisk/fire", "Weapon", 0)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Body", 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomMissile("ObeliskShotBlue",12,0)
+		NULL A 0 A_CustomMissile("ObeliskShotBlue", 12, 0)
 		NULL A 70 A_FaceTarget
-		NULL A 0 A_TakeInventory("ObeliskCharged",15)
-		NULL A 0 A_PlaySoundEx("obelisk/charge","Voice",0)
-		goto See
+		NULL A 0 A_TakeInventory("ObeliskCharged", 15)
+		NULL A 0 A_PlaySoundEx("obelisk/charge", "Voice", 0)
+		Goto See
 	Death:	
 		NULL A 5
-		stop
+		Stop
 	}
 }
 
@@ -259,197 +259,202 @@ Actor ObbyFlareBlue
 	}
 }
 
-actor ObeliskCharged : Inventory
+Actor ObeliskCharged : Inventory
 {
-		inventory.amount 0
-		inventory.maxamount 15
+		Inventory.amount 0
+		Inventory.MaxAmount 15
 }
 
-actor ObeliskShotRed : FastProjectile
+Actor ObeliskShotRed : FastProjectile
 {
-	radius 13
-	height 8
-	speed 2000
-	damage (250)
-	renderstyle Add
-	alpha 0.75
+	Radius 13
+	Height 8
+	Speed 2000
+	Damage (250)
+	RenderStyle Add
+	Alpha 0.75
 	PROJECTILE
 	-RANDOMIZE
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
 	DamageType "Explosion"
-	translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
-	states
+	Translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
+	States
 	{
 	Spawn:
-		NULL A 1 bright A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		loop
+		NULL A 1 BRIGHT A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		Loop
 	Death:
-		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		NULL A 3 bright A_Explode(250,256)
-		stop
+		NULL A 0 A_SpawnItemEx("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		NULL A 3 BRIGHT A_Explode(250, 256)
+		Stop
 	}
 }
 
-actor ObeliskShotRedInfantry : FastProjectile
+Actor ObeliskShotRedInfantry : FastProjectile
 {
-	radius 13
-	height 8
-	speed 2000
-	damage (40)
-	renderstyle Add
-	alpha 0.75
+	Radius 13
+	Height 8
+	Speed 2000
+	Damage (40)
+	RenderStyle Add
+	Alpha 0.75
 	PROJECTILE
 	-RANDOMIZE
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
 	DamageType "Superweapon"
-	translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
-	states
+	Translation "192:207=169:189", "240:246=45:47", "112:127=176:191"
+	States
 	{
 	Spawn:
-		NULL A 1 bright A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		loop
+		NULL A 1 BRIGHT A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		Loop
 	Death:
-		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		NULL A 3 bright A_Explode(50,256)
-		stop
+		NULL A 0 A_SpawnItemEx("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		NULL A 3 BRIGHT A_Explode(50, 256)
+		Stop
 	}
 }
 
-actor ObeliskShotBlue : FastProjectile
+Actor ObeliskShotBlue : FastProjectile
 {
-	radius 13
-	height 8
-	speed 2000
-	damage (250)
-	renderstyle Add
-	alpha 0.75
+	Radius 13
+	Height 8
+	Speed 2000
+	Damage (250)
+	RenderStyle Add
+	Alpha 0.75
 	PROJECTILE
 	-RANDOMIZE
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
 	DamageType "Explosion"
-	translation "112:120=200:207", "121:127=241:247"
-	states
+	Translation "112:120=200:207", "121:127=241:247"
+	States
 	{
 	Spawn:
-		NULL A 1 bright A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		loop
+		NULL A 1 BRIGHT A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		Loop
 	Death:
-		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		NULL A 3 bright A_Explode(250,256)
-		stop
+		NULL A 0 A_SpawnItemEx("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		NULL A 3 BRIGHT A_Explode(250, 256)
+		Stop
 	}
 }
 
-actor ObeliskShotBlueInfantry : FastProjectile
+Actor ObeliskShotBlueInfantry : FastProjectile
 {
-	radius 13
-	height 8
-	speed 2000
-	damage (40)
-	renderstyle Add
-	alpha 0.75
+	Radius 13
+	Height 8
+	Speed 2000
+	Damage (40)
+	RenderStyle Add
+	Alpha 0.75
 	PROJECTILE
 	-RANDOMIZE
 	+NOEXTREMEDEATH
 	+THRUGHOST
 	Scale 1.0
 	DamageType "SuperweaponIon"
-	translation "112:120=200:207", "121:127=241:247"
-	states
+	Translation "112:120=200:207", "121:127=241:247"
+	States
 	{
 	Spawn:
-		NULL A 1 bright A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		loop
+		NULL A 1 BRIGHT A_SpawnItemEx("PlasmaFlameTail", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		Loop
 	Death:
-		NULL A 0 A_SpawnItemEx ("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		NULL A 3 bright A_Explode(50,256)
-		stop
+		NULL A 0 A_SpawnItemEx("PlasmaFlameCluster", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
+		NULL A 3 BRIGHT A_Explode(50, 256)
+		Stop
 	}
 }
 
 // ------------------------
 // Obelisk decorations
-actor ObeliskVoltageDecorSpawner 29010 {
+Actor ObeliskVoltageDecorSpawner 29010 {
 	+NOINTERACTION
 	+NOBLOCKMAP
 	+SHOOTABLE
-	health 999999
-	states {
+	Health 999999
+	States
+	{
 	Spawn:
 		NULL A 0
-		NULL A 60 A_SpawnItemEx ("ObeliskVoltageDecor")
-		loop
+		NULL A 60 A_SpawnItemEx("ObeliskVoltageDecor")
+		Loop
 	Death:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor ObeliskVoltageDecor {
+Actor ObeliskVoltageDecor {
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
-	reactiontime 35
-	states {
+	ReactionTime 35
+	States
+	{
 	Spawn:
-		TNT1 AAAAAA 1 A_SpawnItemEx ("ObeliskVoltageDecorFX", random (-96,96), random (-96,96), -224, 0, 0, 25)
+		TNT1 AAAAAA 1 A_SpawnItemEx("ObeliskVoltageDecorFX", random (-96, 96), random (-96, 96), -224, 0, 0, 25)
 		NULL A 0 A_Countdown
-		loop
+		Loop
 	Death:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor ObeliskVoltageDecorFX {
+Actor ObeliskVoltageDecorFX {
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY
-	radius 1
-	height 1
-	renderstyle add
-	alpha 1.0
-	scale 0.75
-	states {
+	Radius 1
+	Height 1
+	RenderStyle add
+	Alpha 1.0
+	Scale 0.75
+	States
+	{
 	Spawn:
 		VOLX ABCDEFEDCB 2 BRIGHT A_FadeOut(0.1)
-		stop
+		Stop
 	}
 }
 
-actor ObeliskVoltageDecorSpawnerRound 29013 {
+Actor ObeliskVoltageDecorSpawnerRound 29013 {
 	+NOINTERACTION
 	+NOBLOCKMAP
 	+SHOOTABLE
-	health 999999
-	states {
+	Health 999999
+	States
+	{
 	Spawn:
 		NULL A 0
-		NULL A 60 A_SpawnItemEx ("ObeliskVoltageDecorRound")
-		loop
+		NULL A 60 A_SpawnItemEx("ObeliskVoltageDecorRound")
+		Loop
 	Death:
 		NULL A 0
-		stop
+		Stop
 	}
 }
 
-actor ObeliskVoltageDecorRound {
+Actor ObeliskVoltageDecorRound {
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
-	reactiontime 14
-	states {
+	ReactionTime 14
+	States
+	{
 	Spawn:
-		TNT1 AAAAA 1 A_SpawnItemEx ("ObeliskVoltageDecorFX", random (0, 160), 0, -224, 0, 0, 25, random (0, 360))
+		TNT1 AAAAA 1 A_SpawnItemEx("ObeliskVoltageDecorFX", random (0, 160), 0, -224, 0, 0, 25, random (0, 360))
 		NULL A 0 A_Countdown
-		loop
+		Loop
 	Death:
 		NULL A 0
-		stop
+		Stop
 	}
 }

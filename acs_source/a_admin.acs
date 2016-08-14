@@ -334,10 +334,10 @@ script aow_activatedeveloper (void) {
 	
 	int i;
 	for (i = 0; i <= 1; i++) {
-		EnhancedRefining[i] = true;
-		AdvancedMechResearch[i] = true;
-		AdvancedTurrets[i] = true;
-		MoreTurrets[i] = true;
+		Researches[RESERACH_EnhancedRefining][i] = true;
+		Researches[RESERACH_AdvancedMechResearch][i] = true;
+		Researches[RESERACH_AdvancedTurrets][i] = true;
+		Researches[RESERACH_MoreTurrets][i] = true;
 		MaxTurrets[i] = 1000000;
 	}
 	

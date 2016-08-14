@@ -16,8 +16,8 @@ script aow_script888 ENTER {
 	
 	int i; int team = 1-PlayerTeam();
 	int max = 12; int x;
-	if (!GotPlant[Team]) max = 8;
-	if (!GotBarracks[Team]) max = 2;
+	if (!GotBuilding[BUILDING_RESCENTRE][Team]) max = 8;
+	if (!GotBuilding[BUILDING_BARRACKS][Team]) max = 2;
 	
 	// PrintBold (n:0, s:"\c-: I have \cQ$\cD", d:Credits[PlayerNumber()+1]);
 	
@@ -30,8 +30,8 @@ script aow_script888 ENTER {
 	} else {
 		while (x < 5) {
 			i = random(0, max);
-			if ((GotBarracks[Team] || !BotClassBarDependencies[i]) &&
-				(GotPlant[Team] || !BotClassPlantDependencies[i]) &&
+			if ((GotBuilding[BUILDING_BARRACKS][Team] || !BotClassBarDependencies[i]) &&
+				(GotBuilding[BUILDING_RESCENTRE][Team] || !BotClassPlantDependencies[i]) &&
 				Credits[PlayerNumber()+1] >= BotClassCosts[i])
 				break;
 			x++;

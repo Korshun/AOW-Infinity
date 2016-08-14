@@ -1,75 +1,77 @@
-actor Credits1 : CustomInventory 21412 {
-	radius 20
-	height 26
-	inventory.pickupmessage "Picked up a lucky coin. +\cq$\cd1"
-	inventory.respawntics 1050
-	inventory.pickupsound "misc/credit_pkup"
-	inventory.maxamount 9999
+Actor Credits1 : CustomInventory 21412 {
+	Radius 20
+	Height 26
+	Inventory.PickupMessage "Picked up a lucky coin. +\cq$\cd1"
+	Inventory.respawntics 1050
+	Inventory.pickupsound "misc/credit_pkup"
+	Inventory.MaxAmount 9999
 	+ALWAYSPICKUP
-	states {
+	States
+	{
 	Spawn:
 		COIN A -1
-		stop
+		Stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (aow_script321, 0, 1)
-		stop
+		NULL A 0 ACS_ExecuteAlways(aow_script321, 0, 1)
+		Stop
 	}
 }
 
-actor Credits20 : CustomInventory 21413 {
-	radius 20
-	height 26
-	inventory.pickupmessage "Picked up a pile of credits! +\cq$\cd20"
-	inventory.respawntics 1575
-	inventory.pickupsound "misc/credit_pkup"
-	inventory.maxamount 9999
+Actor Credits20 : CustomInventory 21413 {
+	Radius 20
+	Height 26
+	Inventory.PickupMessage "Picked up a pile of credits! +\cq$\cd20"
+	Inventory.respawntics 1575
+	Inventory.pickupsound "misc/credit_pkup"
+	Inventory.MaxAmount 9999
 	+ALWAYSPICKUP
-	states {
+	States
+	{
 	Spawn:
 		CRED A -1
-		stop
+		Stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (aow_script321, 0, 20)
-		stop
+		NULL A 0 ACS_ExecuteAlways(aow_script321, 0, 20)
+		Stop
 	}
 }
 
-actor Credits40 : CustomInventory 21414
+Actor Credits40 : CustomInventory 21414
 {
-	radius 20
-	height 26
-	inventory.pickupmessage "Picked up bag of credits! +\cq$\cd40"
-	inventory.respawntics 2100
-	inventory.pickupsound "misc/credit_pkup"
-	inventory.maxamount 9999
+	Radius 20
+	Height 26
+	Inventory.PickupMessage "Picked up bag of credits! +\cq$\cd40"
+	Inventory.respawntics 2100
+	Inventory.pickupsound "misc/credit_pkup"
+	Inventory.MaxAmount 9999
 	+ALWAYSPICKUP
-	states
+	States
 	{
 	Spawn:
 		SACK A -1
-		stop
+		Stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (aow_script321, 0, 40)
-		stop
+		NULL A 0 ACS_ExecuteAlways(aow_script321, 0, 40)
+		Stop
 	}
 }
 
-actor Credits75 : CustomInventory 21415
+Actor Credits75 : CustomInventory 21415
 {
-	radius 20
-	height 26
-	inventory.pickupmessage "Picked up credit cache! +\cq$\cd75"
-	inventory.respawntics 3150
-	inventory.pickupsound "misc/credit_pkup"
-	inventory.maxamount 9999
+	Radius 20
+	Height 26
+	Inventory.PickupMessage "Picked up credit cache! +\cq$\cd75"
+	Inventory.respawntics 3150
+	Inventory.pickupsound "misc/credit_pkup"
+	Inventory.MaxAmount 9999
 	+ALWAYSPICKUP
-	states
+	States
 	{
 	Spawn:
 		CHST A -1
-		stop
+		Stop
 	Pickup:
-		NULL A 0 ACS_ExecuteAlways (aow_script321, 0, 75)
-		stop
+		NULL A 0 ACS_ExecuteAlways(aow_script321, 0, 75)
+		Stop
 	}
 }

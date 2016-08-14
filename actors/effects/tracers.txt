@@ -4,7 +4,7 @@ Actor Tracer : CollidingEffect
 	Alpha 0.85
 	
 	// For tests.
-	Projectile
+	PROJECTILE
 	Speed 10
 	
 	States
@@ -14,7 +14,7 @@ Actor Tracer : CollidingEffect
 		NULL A 0 //A_JumpIf(ACS_ExecuteWithResult(aow_checkfx, FX_TRACERS) == 0, "Unseen")
 	Fly:
 		// Uses a 3D model
-		RIC1 A 1 Bright
+		RIC1 A 1 BRIGHT
 		Loop
 	}
 }

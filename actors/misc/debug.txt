@@ -1,116 +1,87 @@
 // misc stuff
-actor DamageTypeIndicator {
+Actor DamageTypeIndicator {
 	+SHOOTABLE
 	+NOCLIP
 	+NODAMAGE
 	+NOBLOOD
 	+NOGRAVITY
 	+FLOATBOB
-	mass 0x7FFFFFFF
-	radius 64
-	height 64
-	painchance 255
-	renderstyle add
-	alpha 0.75
-	states {
+	Mass 0x7FFFFFFF
+	Radius 64
+	Height 64
+	PainChance 255
+	RenderStyle add
+	Alpha 0.75
+	States
+	{
 	Spawn:
 		PPCX A -1 BRIGHT
-		stop
+		Stop
 	Pain.Fist:
-		NULL A 0 A_Print ("Damage type indicator hit with Fist")
-		goto Spawn
-	Pain.Fist:
-		NULL A 0 A_Print ("Damage type indicator hit with Fist")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Fist")
+		Goto Spawn
 	Pain.Bullet:
-		NULL A 0 A_Print ("Damage type indicator hit with Bullet")
-		goto Spawn
-	Pain.Bullet:
-		NULL A 0 A_Print ("Damage type indicator hit with Bullet")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Bullet")
+		Goto Spawn
 	Pain.Rifle:
-		NULL A 0 A_Print ("Damage type indicator hit with Rifle")
-		goto Spawn
-	Pain.Rifle:
-		NULL A 0 A_Print ("Damage type indicator hit with Rifle")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Rifle")
+		Goto Spawn
 	Pain.Explosion:
-		NULL A 0 A_Print ("Damage type indicator hit with Explosion")
-		goto Spawn
-	Pain.Explosion:
-		NULL A 0 A_Print ("Damage type indicator hit with Explosion")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Explosion")
+		Goto Spawn
 	Pain.Fire:
-		NULL A 0 A_Print ("Damage type indicator hit with Fire")
-		goto Spawn
-	Pain.Fire:
-		NULL A 0 A_Print ("Damage type indicator hit with Fire")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Fire")
+		Goto Spawn
 	Pain.FireSpecial:
-		NULL A 0 A_Print ("Damage type indicator hit with FireSpecial")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with FireSpecial")
+		Goto Spawn
 	Pain.Chemical:
-		NULL A 0 A_Print ("Damage type indicator hit with Chemical")
-		goto Spawn
-	Pain.Chemical:
-		NULL A 0 A_Print ("Damage type indicator hit with Chemical")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Chemical")
+		Goto Spawn
 	Pain.ChemicalSpecial:
-		NULL A 0 A_Print ("Damage type indicator hit with ChemicalSpecial")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with ChemicalSpecial")
+		Goto Spawn
 	Pain.Laser:
-		NULL A 0 A_Print ("Damage type indicator hit with Laser")
-		goto Spawn
-	Pain.Laser:
-		NULL A 0 A_Print ("Damage type indicator hit with Laser")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Laser")
+		Goto Spawn
 	Pain.RazorWire:
-		NULL A 0 A_Print ("Damage type indicator hit with RazorWire")
-		goto Spawn
-	Pain.RazorWire:
-		NULL A 0 A_Print ("Damage type indicator hit with RazorWire")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with RazorWire")
+		Goto Spawn
 	Pain.ExplosionMech:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMech")
-		goto Spawn
-	Pain.ExplosionMech:
-		NULL A 0 A_Print ("Damage type indicator hit with ExplosionMech")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with ExplosionMech")
+		Goto Spawn
 	Pain.TimeRed:
-		NULL A 0 A_Print ("Damage type indicator hit with TimeRed")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with TimeRed")
+		Goto Spawn
 	Pain.TimeBlue:
-		NULL A 0 A_Print ("Damage type indicator hit with TimeBlue")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with TimeBlue")
+		Goto Spawn
 	Pain.Disarm:
-		NULL A 0 A_Print ("Damage type indicator hit with Disarm")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Disarm")
+		Goto Spawn
 	Pain.Superweapon:
-		NULL A 0 A_Print ("Damage type indicator hit with Superweapon")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Superweapon")
+		Goto Spawn
 	Pain.SuperweaponIon:
-		NULL A 0 A_Print ("Damage type indicator hit with SuperweaponIon")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with SuperweaponIon")
+		Goto Spawn
 	Pain.Artillery:
-		NULL A 0 A_Print ("Damage type indicator hit with Artillery")
-		goto Spawn
-	Pain.Artillery:
-		NULL A 0 A_Print ("Damage type indicator hit with Artillery")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Artillery")
+		Goto Spawn
 	Pain.Mechstomp:
-		NULL A 0 A_Print ("Damage type indicator hit with Mechstomp")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Mechstomp")
+		Goto Spawn
 	Pain.Monster:
-		NULL A 0 A_Print ("Damage type indicator hit with Monster")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Monster")
+		Goto Spawn
 	Pain.Deconstruction:
-		NULL A 0 A_Print ("Damage type indicator hit with Deconstruction")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with Deconstruction")
+		Goto Spawn
 	Pain:
-		NULL A 0 A_Print ("Damage type indicator hit with unknown damagetype")
-		goto Spawn
+		NULL A 0 A_Print("Damage Type indicator hit with unknown DamageType")
+		Goto Spawn
 	Death:
 		NULL A 0
-		goto Spawn
+		Goto Spawn
 	}
 }

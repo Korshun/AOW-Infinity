@@ -1,40 +1,40 @@
 //White Smoke Code by dark-slayer
 
-actor PuffSmoke {
+Actor PuffSmoke {
 	+NOINTERACTION
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY
 	+WINDTHRUST
-	Renderstyle Add
-	alpha 0.5
+	RenderStyle Add
+	Alpha 0.5
 	Scale 0.5
-	states
+	States
 	{
 	Spawn:
 		NULL A 1
-		NULL A 0 A_Jump(128,"Spawn2","Spawn3","Spawn4")
-		SMK1 ABCDEFGHIJKLMNOP 2 bright A_FadeOut(0.025)
-		stop
+		NULL A 0 A_Jump(128, "Spawn2", "Spawn3", "Spawn4")
+		SMK1 ABCDEFGHIJKLMNOP 2 BRIGHT A_FadeOut(0.025)
+		Stop
 	Spawn2:
-		SMK2 ABCDEFGHIJKLMNOP 2 bright A_FadeOut(0.025)
-		stop
+		SMK2 ABCDEFGHIJKLMNOP 2 BRIGHT A_FadeOut(0.025)
+		Stop
 	Spawn3:
-		SMK3 ABCDEFGHIJKLMNOP 2 bright A_FadeOut(0.025)
-		stop
+		SMK3 ABCDEFGHIJKLMNOP 2 BRIGHT A_FadeOut(0.025)
+		Stop
 	Spawn4:
-		SMK4 ABCDEFGHIJKLMNOP 2 bright A_FadeOut(0.025)
-		stop
+		SMK4 ABCDEFGHIJKLMNOP 2 BRIGHT A_FadeOut(0.025)
+		Stop
 	}
 }
 
-actor PulseBallSmokePuff : PuffSmoke {scale 1.0}
-actor PlayerStepSmokePuff : PuffSmoke	{Alpha 0.25	Scale 1.0}
-actor FireSmokePuff : PuffSmoke		{Scale 4.0}
-actor PowerPlantSmokePuff : PuffSmoke	{Scale 8.0}
-actor PowerPlantSmokePuffSmall : PuffSmoke{Scale 4.0}
-actor BurnDeathSmokePuff : PuffSmoke	{Scale 4.0}
-actor EjectedMechSmokePuff : PuffSmoke	{Scale 8.0}
-actor MechStepSmokePuff : PuffSmoke		{Scale 4.0}
-actor MechStepSmokePuffLarge : PuffSmoke	{Scale 6.0}
-actor RocketSmoke : PuffSmoke			{Scale 1.0}
-actor GrenadeSmoke : PuffSmoke		{Scale 1.0}
+Actor PulseBallSmokePuff : PuffSmoke {Scale 1.0}
+Actor PlayerStepSmokePuff : PuffSmoke	{Alpha 0.25	Scale 1.0}
+Actor FireSmokePuff : PuffSmoke		{Scale 4.0}
+Actor PowerPlantSmokePuff : PuffSmoke	{Scale 8.0}
+Actor PowerPlantSmokePuffSmall : PuffSmoke{Scale 4.0}
+Actor BurnDeathSmokePuff : PuffSmoke	{Scale 4.0}
+Actor EjectedMechSmokePuff : PuffSmoke	{Scale 8.0}
+Actor MechStepSmokePuff : PuffSmoke		{Scale 4.0}
+Actor MechStepSmokePuffLarge : PuffSmoke	{Scale 6.0}
+Actor RocketSmoke : PuffSmoke			{Scale 1.0}
+Actor GrenadeSmoke : PuffSmoke		{Scale 1.0}

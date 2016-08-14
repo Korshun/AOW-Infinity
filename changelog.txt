@@ -1,5 +1,21 @@
 AOW Infinity is based on AOW r2539-5
 
+r6:
+* All maps now have meaningful lump names instead of AOWxx.
+* Removed maps:
+	- AOW03: All Out War
+	- AOW05: Mercury
+	- AOW08: The Island
+	- AOW10: Space Camp
+	- AOW13: Lava Giant
+	- AOW16: Unending Pain
+* All music now has lump names referring to original names.
+* Removed OpenGL nodes and empty DIALOGUE lumps from maps.
+- Fixed messages about array sizes on map load.
+- Fixed minor bugs in map scripts.
+- Fixed bomb squad gun dynamic lights
+- Fixed INFECTED and MINESITE map scripts conflicting with beacon disarm bonus script.
+
 r5:
 - Fixed blood decals from mechs
 - Fixed orca flames being too big

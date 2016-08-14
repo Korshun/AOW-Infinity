@@ -232,7 +232,7 @@ script aow_marine_death (int i) {
 	
 	LocalAmbientSound ("game/boink", 127);
 	AddExperience (50);
-	AddCredits (Credits[PlayerNumber()+1], CreditFragAward);
+	AddCredits (Credits[PlayerNumber()+1], GetCVar("aow_creditfrag"));
 	TakeTickets (AITeam, 1);
 	
 	Team_GivePoints (PlayerTeam(), 2, false);

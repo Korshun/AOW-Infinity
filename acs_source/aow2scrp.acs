@@ -12,7 +12,21 @@
 // [NG] == Tiger
 
 #library "aow2scrp"
+#nocompact
+
+#define ACSUTILS_HUDLIB_SAVEDSTATES 16
+#define TIDALLOCSTART 15000
+
 #include "zcommon.acs"
+#include "acsutils.acs"
+
+
+// Your project's error handler:
+function void ACSUtilsErrorHandler(int type, int message)
+{
+	Log(s:"error: ", s:message);
+	printbold(s:"error: ", s:message);
+}
 
 #define MAX_NORMAL_WEAPONS 22
 
@@ -121,6 +135,16 @@
 #define BUILDING_HEALTHREGEN 7
 #define BUILDING_AMMOREGEN 8
 #define BUILDING_PORTAL 9
+#define NUM_BUILDING_TYPES 10
+
+bool GotBuilding[NUM_BUILDING_TYPES][2];
+int BuildingHealth[NUM_BUILDING_TYPES][2];
+
+int MiniRefinery[2];
+int MiniRefHealth[2];
+int GlobalMedicHealth[2];
+int GlobalAmmoHealth[2];
+int BaseLeft[2];
 
 // TODO: move these to 1000+ range
 #define TID_BARRACKS_BLUE 101
@@ -168,10 +192,6 @@
 
 #define MAX_MARINES 24
 
-// MAXPLAYERS - should be the same as in the Skulltag this AOW is played in
-// TODO: make this actually used
-#define MAX_PLAYERS 64
-
 bool Bots[MAX_MARINES];
 
 int BaseTIDs[18] = {
@@ -212,15 +232,10 @@ int PlayerNeedsSwitched;
 int LastPurchasedCannon[MAX_PLAYERS + 1];
 int LastPurchasedBeacon[3];
 int NumPlasmaCannons[3];
-int MaxCannonsPerTeam;
-int CannonPurchaseDelay;
 
 // [SP] Time Cop tracking
 int LastPurchasedTimeCop[MAX_PLAYERS + 1];
 int NumTimeCops[3];
-int MaxTimeCopsPerTeam;
-
-int TimedC4Delay;
 
 int UsePortals = 1;
 // [Dusk] this is used to determine which portal is alive *and* active
@@ -230,26 +245,6 @@ int Portals[4] = {0};
 int HasTeleported[MAX_PLAYERS];
 
 int LastMenu[MAX_PLAYERS + 1] = {0}; // [SP] This is to fix double-pressing on mech switches, causing a huge cost to the buyer.
-
-
-//Bases
-bool GotRefinery[2];
-bool GotBarracks[2];
-bool GotFactory[2];
-bool GotPlant[2];
-bool GotRepair[2];
-bool GotObelisk[2];
-int MiniRefinery[2];
-int RefineryHealth[2];
-int BarracksHealth[2];
-int FactoryHealth[2];
-int PlantHealth[2];
-int RepairHealth[2];
-int ObeliskHealth[2];
-int MiniRefHealth[2];
-int GlobalMedicHealth[2];
-int GlobalAmmoHealth[2];
-int BaseLeft[2];
 
 int NextTicketUpdate;
 int LastAttackMessage;
@@ -261,34 +256,23 @@ int MinEnemyTurretDistance = 1500;
 int SurrenderWaitTime = 20;
 
 //RESEARCHES!!!!!!!!
-bool EnhancedRefining[2]; //Increases profits from harvesting by $50 //Costs $2000
-bool AdvancedMechResearch[2]; //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
-int GlobalMedic[2]; //Builds a Team Health Regeneration Cache //Costs $2250
-int GlobalAmmo[2]; //Builds a Team Ammo Regeneration Cache //Costs $2250
-bool AdvancedTurrets[2]; //Allows construction of high level Turrets //Costs $2000
-bool MoreTurrets[2]; //Increases Turret cap by 10 //Costs $2000
+#define RESERACH_EnhancedRefining 0 //Increases profits from harvesting by $50 //Costs $2000
+#define RESERACH_AdvancedMechResearch 1 //Enables purchase of Juggernaut, Titan and MadCat //Costs $2000
+#define RESERACH_GlobalMedic 2 //Builds a Team Health Regeneration Cache //Costs $2250
+#define RESERACH_GlobalAmmo 3 //Builds a Team Ammo Regeneration Cache //Costs $2250
+#define RESERACH_AdvancedTurrets 4 //Allows construction of high level Turrets //Costs $2000
+#define RESERACH_MoreTurrets 5 //Increases Turret cap by 10 //Costs $2000
+#define NUM_RESEARCHES 6
+
+int Researches[NUM_RESEARCHES][2];
 int MaxTurrets[2] = {15, 15};
 
-int GuardianLimit;
 
-int StartCredits;
-int CreditFlow;
-int CreditFlowPower;
-int CreditFragAward;
-int CreditAwardTime;
-int CreditAwardAmount;
-int CreditRepairAmount;
-
-bool MechEnabled;
 bool GettingMech[2];
 bool SuddenDeath = False;
-bool TicketPool = False;
 int Tickets[2];
 int StartingTickets;
-int TournamentMode;
-int BeaconPurchaseDelay;
 
-int TeamStayTime;
 bool TeamUnbalanceCompensation[2];
 
 bool RedBeaconCooldown = False;
@@ -303,7 +287,6 @@ bool CrateTime = True;
 int PlayerSpeeds[MAX_PLAYERS];
 int MechGetter[2]; // which player is in the hangar?
 
-int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
 int PlasmaCooldown[MAX_PLAYERS]; // same for plasma cannon (internal)
 
 int MaxRazorWire = 20;
@@ -313,7 +296,6 @@ int MaxCrates = 15;
 
 int RepairBonus[MAX_PLAYERS];
 int MedicBonus[MAX_PLAYERS];
-int MedicBonusNeed;
 int AIMarines[2] = {0}; // compensation-spawned only
 
 int AIMarineCount = 0; // how many AI marines are there overall?
@@ -400,6 +382,9 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_res_moreturrets 73
 
 
+// script 1 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 2 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 3 used on HELLMRCH
 #define aow_creditflow 4
 #define aow_playerstatushud_serverside 5
 #define aow_playerstatushud_clientside 6
@@ -407,22 +392,25 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script8 8
 #define aow_script10 10
 #define aow_script11 11
+// script 14 used on EMERALD
+// script 15 used on EMERALD
+// script 16 used on EMERALD
+// scripts 20-29 are used for classes
 #define aow_script32 32
-#define aow_script63 63
-#define aow_script64 64
-#define aow_script80 80
-#define aow_script84 84
-#define aow_script85 85
-#define aow_script86 86
-#define aow_script88 88
-#define aow_script89 89
+// scripts 33-73 are used for classes and stuff
+#define aow_script80 80 // executed by maps
+#define aow_script84 84 // executed by maps
+#define aow_script85 85 // executed by maps
+#define aow_script86 86 // executed by maps
+#define aow_script88 88 // executed by maps
+#define aow_script89 89 // executed by maps
 #define aow_script90 90
 #define aow_script91 91
 #define aow_script92 92
 #define aow_script93 93
-#define aow_script94 94
-#define aow_script95 95
-#define aow_script96 96
+#define aow_script94 94 // executed by maps
+#define aow_script95 95 // executed by maps
+#define aow_script96 96 // executed by maps
 #define aow_script97 97
 #define aow_script99 99
 #define aow_script101 101
@@ -433,16 +421,32 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script106 106
 #define aow_script107 107
 #define aow_script108 108
-#define aow_script110 110
+#define aow_script110 110 // executed by maps
 #define aow_script111 111
 #define aow_script114 114
 #define aow_script150 150
+// script 200 used on FLOATCIT
 #define aow_script201 201
 #define aow_script202 202
 #define aow_script203 203
 #define aow_script204 204
 #define aow_script205 205
+// script 206 used on RENE2030
+// script 207 used on RENE2030 and RENE2032
+// script 208 used on RENE2030 and RENE2032
+// script 209 used on RENE2030 and RENE2032
+// script 210 used on RENE2030 and RENE2032
+// script 211 used on RENE2032
+// script 212 used on RENE2032
+// script 213 used on RENE2032
 #define aow_script214 214
+// script 215 used on RENE2032
+// script 216 used on RENE2032
+// script 218 used on RENE2032
+// script 220 used on RENE2032
+// script 221 used on RENE2032
+// script 222 used on RENE2032
+// script 223 used on RENE2032
 #define aow_script301 301
 #define aow_script303 303
 #define aow_script309 309
@@ -474,7 +478,8 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script346 346
 #define aow_script347 347
 #define aow_script349 349
-#define aow_script350 350
+// script 350 used on INFECTED and MINESITE
+#define aow_beacondisarmbonus 351 
 #define aow_script352 352
 #define aow_script353 353
 #define aow_script354 354
@@ -490,8 +495,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_gamemastercommand 402
 #define aow_teamshuffle 403
 #define aow_activatedeveloper 404
+// script 507 used on FLOATCIT
 #define aow_script556 556
 #define aow_script599 599
+// script 600 used on HELLMRCH
+// script 601 used on CANYON
+// script 602 used on CANYON
+// script 603 used on CANYON
 #define aow_script650 650
 #define aow_script651 651
 #define aow_script652 652
@@ -503,9 +513,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script699 699
 #define aow_script750 750
 #define aow_script751 751
+// script 754 used on FLOATCIT
 #define aow_addaowmaps 797
 #define aow_traceroffset 798
 #define aow_spawntracer 799
+// script 893 used on HELLMRCH
+// script 894 used on HELLMRCH
+// script 895 used on HELLMRCH and OASIS
 #define aow_script888 888
 #define aow_script889 889
 #define aow_script905 905
@@ -540,7 +554,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script957 957
 #define aow_script958 958
 #define aow_script959 959
-#define aow_eventscript 960 // Provided by maps
+#define aow_eventscript 960 // Provided by maps (EMERALD and RENE2032)
 #define aow_script961 961
 #define aow_script963 963
 #define aow_script964 964

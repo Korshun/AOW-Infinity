@@ -1,43 +1,45 @@
 // [SP] This file is just for misc actors to help ACS
 
 // [NF] Thermal cloaking timer - tells how many seconds left.
-actor ThermalCloakingTime : Inventory {inventory.maxamount 90}
+Actor ThermalCloakingTime : Inventory {Inventory.MaxAmount 90}
 
 // [NF] used to fix iron curtain + resign bug
-actor PowerNull : PowerProtection {damagefactor "normal", 1.0}
-actor RedHueRemover : PowerupGiver {
+Actor PowerNull : PowerProtection {DamageFactor "normal", 1.0}
+Actor RedHueRemover : PowerupGiver {
 	+INVENTORY.AUTOACTIVATE
-	inventory.pickupmessage "wat are you doing"
-	inventory.maxamount 0
-	powerup.color RedMap
-	powerup.duration -2
-	powerup.type "Null"
+	Inventory.PickupMessage "wat are you doing"
+	Inventory.MaxAmount 0
+	Powerup.Color RedMap
+	Powerup.Duration -2
+	Powerup.Type "Null"
 }
 
-actor DimGoldHueRemover : RedHueRemover {powerup.color GoldMap, 0.25}
-actor DimRedHueRemover : RedHueRemover {powerup.color "AA 00 00", 0.25}
-actor GreenHueRemover : RedHueRemover {powerup.color GreenMap}
+Actor DimGoldHueRemover : RedHueRemover {Powerup.Color GoldMap, 0.25}
+Actor DimRedHueRemover : RedHueRemover {Powerup.Color "AA 00 00", 0.25}
+Actor GreenHueRemover : RedHueRemover {Powerup.Color GreenMap}
 
 // === GROSS HACK
-actor DonationMessage : CustomInventory {
-	inventory.maxamount 0
-	inventory.amount 0
+Actor DonationMessage : CustomInventory {
+	Inventory.MaxAmount 0
+	Inventory.amount 0
 	+AUTOACTIVATE
 	+ALWAYSPICKUP
-	states {
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	Use:
-		NULL A 5 ACS_ExecuteAlways (aow_script111, 0)
-		stop
+		NULL A 5 ACS_ExecuteAlways(aow_script111, 0)
+		Stop
 	}
 }
 
-actor UtilityMenuActivator : DonationMessage {
-	states {
+Actor UtilityMenuActivator : DonationMessage {
+	States
+	{
 	Use:
-		NULL A 5 ACS_ExecuteAlways (aow_script965, 0)
-		stop
+		NULL A 5 ACS_ExecuteAlways(aow_script965, 0)
+		Stop
 	}
 }

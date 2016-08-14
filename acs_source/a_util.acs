@@ -38,7 +38,7 @@ script aow_script349 (int Type) {
 	if(Type == 4)
 	{
 		SetFont("BIGFONT");
-		HudMessage(s:"\cFLimit: \cJ", d:GlobalMedic[1-PlayerTeam()],s:" \cK/\cJ 1";
+		HudMessage(s:"\cFLimit: \cJ", d:Researches[RESERACH_GlobalMedic][1-PlayerTeam()],s:" \cK/\cJ 1";
 			HUDMSG_FADEOUT, 960+PlayerNumber(), CR_White, 0.2, 0.4, 2.0, 1.0);
 	}
 	if(Type == 5)
@@ -50,13 +50,13 @@ script aow_script349 (int Type) {
 	if(Type == 6)
 	{
 		SetFont("BIGFONT");
-		HudMessage(s:"\cFLimit: \cJ", d:GlobalMedic[1-PlayerTeam()],s:" \cK/\cJ 1";
+		HudMessage(s:"\cFLimit: \cJ", d:Researches[RESERACH_GlobalMedic][1-PlayerTeam()],s:" \cK/\cJ 1";
 			HUDMSG_FADEOUT, 960+PlayerNumber(), CR_White, 0.2, 0.4, 2.0, 1.0);
 	}
 	if(Type == 8)
 	{
 		SetFont("BIGFONT");
-		HudMessage(s:"\cFLimit: \cJ", d:GlobalAmmo[1-PlayerTeam()],s:" \cK/\cJ 1";
+		HudMessage(s:"\cFLimit: \cJ", d:Researches[RESERACH_GlobalAmmo][1-PlayerTeam()],s:" \cK/\cJ 1";
 			HUDMSG_FADEOUT, 960+PlayerNumber(), CR_White, 0.2, 0.4, 2.0, 1.0);
 	}
 }
@@ -139,7 +139,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 	}
 	if(Type == 6) {
 		delay(70);
-		if (GlobalMedic[1-PlayerTeam()] == 1) {
+		if (Researches[RESERACH_GlobalMedic][1-PlayerTeam()] == 1) {
 			// [Dusk] fuckup compensation..
 			
 			// NOTE: this check leaves the useless cache there,
@@ -175,7 +175,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 		}
 
 		if(PlayerTeam() == TEAM_RED && ThingCount(T_NONE,TID_HEALTHREGEN_RED) == 1) {
-			GlobalMedic[0] = 1;
+			Researches[RESERACH_GlobalMedic][0] = 1;
 			delay(35);
 			SetFont ("SMALLFONT");
 			HudMessageBold (n:0, s:"\cJ of \cARed Team\cJ\nhas built a \cAHealth Regenerator!";
@@ -202,7 +202,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 		}
 		
 		if (PlayerTeam() == TEAM_BLUE && ThingCount(T_NONE,TID_HEALTHREGEN_BLUE) == 1) {
-			GlobalMedic[1] = 1;
+			Researches[RESERACH_GlobalMedic][1] = 1;
 			delay(35);
 			SetFont ("SMALLFONT");
 			HudMessageBold (n:0, s:"\cJ of \cNBlue Team\cJ\nhas built a \cAHealth Regenerator!";
@@ -236,7 +236,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 	}
 	if(Type == 8) {
 		delay(70);
-		if (GlobalAmmo[1-PlayerTeam()] == 1) {
+		if (Researches[RESERACH_GlobalAmmo][1-PlayerTeam()] == 1) {
 			// [Dusk] fuckup compensation..
 			
 			// NOTE: this check leaves the useless cache there,
@@ -271,7 +271,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 		}
 
 		if(PlayerTeam() == TEAM_RED && ThingCount(T_NONE,TID_AMMOREGEN_RED) == 1) {
-			GlobalAmmo[0] = 1;
+			Researches[RESERACH_GlobalAmmo][0] = 1;
 			delay(35);
 			SetFont ("SMALLFONT");
 			HudMessageBold (n:0, s:"\cJ of \cARed Team\cJ\nhas built an \cKAmmo Regenerator!";
@@ -298,7 +298,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 		}
 		
 		if (PlayerTeam() == TEAM_BLUE && ThingCount(T_NONE,TID_AMMOREGEN_BLUE) == 1) {
-			GlobalAmmo[1] = 1;
+			Researches[RESERACH_GlobalAmmo][1] = 1;
 			delay(35);
 			SetFont ("SMALLFONT");
 			HudMessageBold (n:0, s:"\cJ of \cNBlue Team\cJ\nhas built a \cKAmmo Regenerator!";
@@ -368,7 +368,7 @@ script aow_script345 (int Type, int Team)
 	}
 	if(Type == 5 && Team == 0) //RED 
 	{
-		GlobalMedic[0] = 0;
+		Researches[RESERACH_GlobalMedic][0] = 0;
 		SetFont ("SMALLFONT");
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cAHealth Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -380,7 +380,7 @@ script aow_script345 (int Type, int Team)
 	}
 	if(Type == 5 && Team == 1) //BLUE 
 	{
-		GlobalMedic[1] = 0;
+		Researches[RESERACH_GlobalMedic][1] = 0;
 		SetFont ("SMALLFONT");
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cAHealth Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -392,7 +392,7 @@ script aow_script345 (int Type, int Team)
 	}
 	if(Type == 7 && Team == 0) //RED 
 	{
-		GlobalAmmo[0] = 0;
+		Researches[RESERACH_GlobalAmmo][0] = 0;
 		SetFont ("SMALLFONT");
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cARed \cKAmmo Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -405,7 +405,7 @@ script aow_script345 (int Type, int Team)
 	}
 	if(Type == 7 && Team == 1) //BLUE 
 	{
-		GlobalAmmo[1] = 0;
+		Researches[RESERACH_GlobalAmmo][1] = 0;
 		SetFont ("SMALLFONT");
 		HudMessageBold (n:0, s:"\cJ has destroyed\cJ\nthe \cNBlue \cKAmmo Regenerator!";
 			HUDMSG_FADEOUT, 15000, CR_WHITE,
@@ -435,13 +435,13 @@ script aow_script346 (int Type, int Team) {
 		if (ThingCount (T_NONE, TID_MINIREF_RED+Team) != 0) SetResultValue (0);
 		break;
 	case 4:
-		if (GlobalMedic[Team]) SetResultValue (0);
+		if (Researches[RESERACH_GlobalMedic][Team]) SetResultValue (0);
 		break;
 	case 5:
 		if (MiniRavenLimit() >= MaxMechs) SetResultValue (0);
 		break;
 	case 6:
-		if (GlobalAmmo[Team]) SetResultValue (0);
+		if (Researches[RESERACH_GlobalAmmo][Team]) SetResultValue (0);
 		break;
 	case 21:
 		if (Team == 0 && Portals[0] && Portals[1]) SetResultValue (0);
@@ -523,7 +523,7 @@ script aow_script370 (void)
 // determine do we have adv turrets
 script aow_script971 (void) {
 	SetResultValue (1);
-	if (AdvancedTurrets[1-PlayerTeam()]) {SetResultValue(0);}
+	if (Researches[RESERACH_AdvancedTurrets][1-PlayerTeam()]) {SetResultValue(0);}
 }
 
 function bool CheckActorDistance(int Source, int Target, int Range)

@@ -1,199 +1,199 @@
-actor Utility_PrecisionTurretRed : Utility_TurretBase
+Actor Utility_PrecisionTurretRed : Utility_TurretBase
 {
-  obituary "%o was sniped by a \cgRed \c-precision turret."
-  health 300
-  Mass 999999
-  speed 0
-  painchance 50
-  //seesound "turret/sight"
-  attacksound "rifle/fire"
-  activesound "turret/sight"
-  states
-  {
-  Spawn:
+	Obituary "%o was sniped by a \cgRed \c-precision turret."
+	Health 300
+	Mass 999999
+	Speed 0
+	PainChance 50
+	//SeeSound "turret/sight"
+	AttackSound "rifle/fire"
+	ActiveSound "turret/sight"
+	States
+	{
+	Spawn:
 	CIGN AA 0 A_CheckSight("Death.Deconstruction")
-	NULL A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_RED)
-  Idle:
-    NULL A 0 A_GiveInventory("MechReloading",12)
-    CIGN A 6 A_LookEx (0, 1024, 0, 0, 0, "See")
-    Wait
-  See:
-    NULL A 0 A_GiveInventory("IsRed",1)
-    CIGN A 2 A_ChangeFlag("FRIENDLY",0)
-    CIGN D 12 A_StopSoundEx("SoundSlot6")
-    CIGN A 2 A_JumpIfTargetInLOS("Missile")
-    NULL A 0 A_TakeInventory("MechReloading",12)
-    CIGN A 2 A_ClearTarget
-    goto Idle+1
-  See2:
-    CIGN A 2 A_ClearTarget
-    goto See
-  See3:
-    CIGN A 1 A_JumpIfInTargetInventory("IsRed",1,"See2")
-    NULL A 0 A_Jump(32,"MissileGo")
-    NULL A 0 A_JumpIfCloser(128,"MissileGo")
-    goto See
-  MissileCheck:
-    NULL A 0 A_JumpIfInTargetInventory("IsRed",1,"See2")
-    NULL A 0 A_Chase("","",CHF_DONTMOVE)
-    NULL A 0 
-    goto MissileGo+2
-  Missile:
-    NULL A 0 
-    CIGN A 1 A_JumpIfInTargetInventory("IsRed",1,"See2")
-    NULL A 0 A_JumpIfInTargetInventory("StealthMode",1,"See2")
-    CIGN A 1 A_JumpIfCloser(18000,"MissileGo")
-    NULL A 0 
-    goto See2
-  MissileGo:
-    CIGN BB 10 A_FaceTarget
-    NULL A 0 A_CPosRefire
-    NULL A 0 A_JumpIfInventory("MechReloading",6,"Pain")
-    NULL A 0 A_PlayWeaponSound("rifle/fire")
-    NULL A 0 A_CustomMissile("PrecisionTurretProjectile",48,0,random(-2,2))
-    NULL A 0 //A_CustomBulletAttack(2,2,1,15,"RiflePuff",4000)
-    NULL A 0 A_SpawnItemEx("Flash",0,0,0,0,0,0,0,128,0)
-    NULL A 0 A_FaceTarget
-    CIGN C 4 BRIGHT A_SpawnItemEx("ShellCasing",8,8,48,random(1,3),random(0,1),random(1,3),random(45,60),128)
-    CIGN BA 6 BRIGHT A_ChangeFlag("FRIENDLY",0)
-    NULL A 0 A_CPosRefire
-    NULL A 0 A_GiveInventory("MechReloading",1)
-    goto MissileCheck
-  Pain:
-    NULL A 0 A_StopSoundEx("SoundSlot6")
-    NULL A 0 A_ClearTarget
-    CIGN A 3 A_TakeInventory("MechReloading",6) // not 9
-    goto See
-  Death:  
-    NULL A 0     
-    NULL A 0 A_StopSoundEx("SoundSlot6")
-    NULL A 0 A_NoBlocking
-    NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
-    NULL A 0 A_PlaySound("weapons/rocklx")
-    NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-    NULL A 4 bright // ACS_ExecuteAlways(aow_script345,0,4,0,0)
-    stop
-  }
+	NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_RED)
+	Idle:
+		NULL A 0 A_GiveInventory("MechReloading", 12)
+		CIGN A 6 A_LookEx(0, 1024, 0, 0, 0, "See")
+		Wait
+	See:
+		NULL A 0 A_GiveInventory("IsRed", 1)
+		CIGN A 2 A_ChangeFlag("FRIENDLY", 0)
+		CIGN D 12 A_StopSoundEx("SoundSlot6")
+		CIGN A 2 A_JumpIfTargetInLOS("Missile")
+		NULL A 0 A_TakeInventory("MechReloading", 12)
+		CIGN A 2 A_ClearTarget
+		Goto Idle+1
+	See2:
+		CIGN A 2 A_ClearTarget
+		Goto See
+	See3:
+		CIGN A 1 A_JumpIfInTargetInventory("IsRed", 1, "See2")
+		NULL A 0 A_Jump(32, "MissileGo")
+		NULL A 0 A_JumpIfCloser(128, "MissileGo")
+		Goto See
+	MissileCheck:
+		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "See2")
+		NULL A 0 A_Chase("", "", CHF_DONTMOVE)
+		NULL A 0 
+		Goto MissileGo+2
+	Missile:
+		NULL A 0 
+		CIGN A 1 A_JumpIfInTargetInventory("IsRed", 1, "See2")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 1, "See2")
+		CIGN A 1 A_JumpIfCloser(18000, "MissileGo")
+		NULL A 0 
+		Goto See2
+	MissileGo:
+		CIGN BB 10 A_FaceTarget
+		NULL A 0 A_CPosRefire
+		NULL A 0 A_JumpIfInventory("MechReloading", 6, "Pain")
+		NULL A 0 A_PlayWeaponSound("rifle/fire")
+		NULL A 0 A_CustomMissile("PrecisionTurretProjectile", 48, 0, random(-2, 2))
+		NULL A 0 //A_CustomBulletAttack(2, 2, 1, 15, "RiflePuff", 4000)
+		NULL A 0 A_SpawnItemEx("Flash", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_FaceTarget
+		CIGN C 4 BRIGHT A_SpawnItemEx("ShellCasing", 8, 8, 48, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		CIGN BA 6 BRIGHT A_ChangeFlag("FRIENDLY", 0)
+		NULL A 0 A_CPosRefire
+		NULL A 0 A_GiveInventory("MechReloading", 1)
+		Goto MissileCheck
+	Pain:
+		NULL A 0 A_StopSoundEx("SoundSlot6")
+		NULL A 0 A_ClearTarget
+		CIGN A 3 A_TakeInventory("MechReloading", 6) // not 9
+		Goto See
+	Death:  
+		NULL A 0     
+		NULL A 0 A_StopSoundEx("SoundSlot6")
+		NULL A 0 A_NoBlocking
+		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 4 BRIGHT // ACS_ExecuteAlways(aow_script345, 0, 4, 0, 0)
+		Stop
+	}
 }
 
-actor Utility_PrecisionTurretBlue : Utility_TurretBase
+Actor Utility_PrecisionTurretBlue : Utility_TurretBase
 {
-  obituary "%o was sniped by a \chBlue \c-precision turret."
-  health 300
-  Mass 999999
-  speed 0
-  painchance 50
-  //seesound "turret/sight"
-  attacksound "rifle/fire"
-  activesound "turret/sight"
-  states
-  {
-  Spawn:
+	Obituary "%o was sniped by a \chBlue \c-precision turret."
+	Health 300
+	Mass 999999
+	Speed 0
+	PainChance 50
+	//SeeSound "turret/sight"
+	AttackSound "rifle/fire"
+	ActiveSound "turret/sight"
+	States
+	{
+	Spawn:
 	CIGN AA 0 A_CheckSight("Death.Deconstruction")
-	NULL A 0 Thing_SetSpecial (0, 84, 345, 0, TEAM_BLUE)
-  Idle:
-    NULL A 0 A_GiveInventory("MechReloading",12)
-    CIGN A 6 A_LookEx (0, 1024, 0, 0, 0, "See")
-    Wait
-  See:
-    NULL A 0 A_GiveInventory("IsBlue",1)
-    CIGN A 2 A_ChangeFlag("FRIENDLY",0)
-    CIGN D 12 A_StopSoundEx("SoundSlot6")
-    CIGN A 2 A_JumpIfTargetInLOS("Missile")
-    NULL A 0 A_TakeInventory("MechReloading",12)
-    CIGN A 2 A_ClearTarget
-    goto Idle+1
-  See2:
-    CIGN A 2 A_ClearTarget
-    goto See
-  See3:
-    CIGN A 1 A_JumpIfInTargetInventory("IsBlue",1,"See2")
-    NULL A 0 A_Jump(16,"MissileGo")
-    NULL A 0 A_JumpIfCloser(128,"MissileGo")
-    goto See
-  MissileCheck:
-    NULL A 0 A_JumpIfInTargetInventory("IsBlue",1,"See2")
-    NULL A 0 A_Chase("","",CHF_DONTMOVE)
-    NULL A 0 
-    goto MissileGo+2
-  Missile:
-    NULL A 0 
-    CIGN A 1 A_JumpIfInTargetInventory("IsBlue",1,"See2")
-    NULL A 0 A_JumpIfInTargetInventory("StealthMode",1,"See2")
-    CIGN A 1 A_JumpIfCloser(18000,"MissileGo")
-    NULL A 0 
-    goto See2
-  MissileGo:
-    CIGN BB 10 A_FaceTarget
-    NULL A 0 A_CPosRefire
-    NULL A 0 A_JumpIfInventory("MechReloading",6,"Pain")
-    NULL A 0 A_PlayWeaponSound("rifle/fire")
-    NULL A 0 A_CustomMissile("PrecisionTurretProjectileBlue",48,0,random(-2,2))
-    NULL A 0 //A_CustomBulletAttack(2,2,1,15,"RiflePuff",4000)
-    NULL A 0 A_SpawnItemEx("Flash",0,0,0,0,0,0,0,128,0)
-    NULL A 0 A_FaceTarget
-    CIGN C 4 BRIGHT A_SpawnItemEx("ShellCasing",8,8,48,random(1,3),random(0,1),random(1,3),random(45,60),128)
-    CIGN BA 6 BRIGHT A_ChangeFlag("FRIENDLY",0)
-    NULL A 0 A_CPosRefire
-    NULL A 0 A_GiveInventory("MechReloading",1)
-    goto MissileCheck
-  Pain:
-    NULL A 0 A_StopSoundEx("SoundSlot6")
-    NULL A 0 A_ClearTarget
-    CIGN A 3 A_TakeInventory("MechReloading",6)
-    goto See
-  Death:  
-    NULL A 0     
-    NULL A 0 A_StopSoundEx("SoundSlot6")
-    NULL A 0 A_NoBlocking
-    NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
-    NULL A 0 A_PlaySound("weapons/rocklx")
-    NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
-    NULL A 4 bright // ACS_ExecuteAlways(aow_script345,0,4,1,0)
-    stop
-  }
+	NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_BLUE)
+	Idle:
+		NULL A 0 A_GiveInventory("MechReloading", 12)
+		CIGN A 6 A_LookEx(0, 1024, 0, 0, 0, "See")
+		Wait
+	See:
+		NULL A 0 A_GiveInventory("IsBlue", 1)
+		CIGN A 2 A_ChangeFlag("FRIENDLY", 0)
+		CIGN D 12 A_StopSoundEx("SoundSlot6")
+		CIGN A 2 A_JumpIfTargetInLOS("Missile")
+		NULL A 0 A_TakeInventory("MechReloading", 12)
+		CIGN A 2 A_ClearTarget
+		Goto Idle+1
+	See2:
+		CIGN A 2 A_ClearTarget
+		Goto See
+	See3:
+		CIGN A 1 A_JumpIfInTargetInventory("IsBlue", 1, "See2")
+		NULL A 0 A_Jump(16, "MissileGo")
+		NULL A 0 A_JumpIfCloser(128, "MissileGo")
+		Goto See
+	MissileCheck:
+		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "See2")
+		NULL A 0 A_Chase("", "", CHF_DONTMOVE)
+		NULL A 0 
+		Goto MissileGo+2
+	Missile:
+		NULL A 0 
+		CIGN A 1 A_JumpIfInTargetInventory("IsBlue", 1, "See2")
+		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 1, "See2")
+		CIGN A 1 A_JumpIfCloser(18000, "MissileGo")
+		NULL A 0 
+		Goto See2
+	MissileGo:
+		CIGN BB 10 A_FaceTarget
+		NULL A 0 A_CPosRefire
+		NULL A 0 A_JumpIfInventory("MechReloading", 6, "Pain")
+		NULL A 0 A_PlayWeaponSound("rifle/fire")
+		NULL A 0 A_CustomMissile("PrecisionTurretProjectileBlue", 48, 0, random(-2, 2))
+		NULL A 0 //A_CustomBulletAttack(2, 2, 1, 15, "RiflePuff", 4000)
+		NULL A 0 A_SpawnItemEx("Flash", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_FaceTarget
+		CIGN C 4 BRIGHT A_SpawnItemEx("ShellCasing", 8, 8, 48, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		CIGN BA 6 BRIGHT A_ChangeFlag("FRIENDLY", 0)
+		NULL A 0 A_CPosRefire
+		NULL A 0 A_GiveInventory("MechReloading", 1)
+		Goto MissileCheck
+	Pain:
+		NULL A 0 A_StopSoundEx("SoundSlot6")
+		NULL A 0 A_ClearTarget
+		CIGN A 3 A_TakeInventory("MechReloading", 6)
+		Goto See
+	Death:  
+		NULL A 0     
+		NULL A 0 A_StopSoundEx("SoundSlot6")
+		NULL A 0 A_NoBlocking
+		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
+		NULL A 0 A_PlaySound("weapons/rocklx")
+		NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
+		NULL A 4 BRIGHT // ACS_ExecuteAlways(aow_script345, 0, 4, 1, 0)
+		Stop
+	}
 }
 
-actor PrecisionTurretProjectile : FastProjectile
+Actor PrecisionTurretProjectile : FastProjectile
 {
-  Radius 5
-  Height 5
-  Speed 550
-  Damage (18)
-  Projectile
-  -RANDOMIZE
-  Obituary "%o died."
-  DamageType "Rifle"
-  Scale 0.0
-  States
-  { 
-  Spawn:
-    NULL A 35
-    loop
-  Death:
-    NULL A 5 A_SpawnItemEx("BulletPuff",0,0,0,0,0,0,0,128,0)
-    stop
-  }
+	Radius 5
+	Height 5
+	Speed 550
+	Damage (18)
+	PROJECTILE
+	-RANDOMIZE
+	Obituary "%o died."
+	DamageType "Rifle"
+	Scale 0.0
+	States
+	{
+	Spawn:
+		NULL A 35
+		Loop
+	Death:
+		NULL A 5 A_SpawnItemEx("BulletPuff", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		Stop
+	}
 }
 
-actor PrecisionTurretProjectileBlue : FastProjectile
+Actor PrecisionTurretProjectileBlue : FastProjectile
 {
-  Radius 5
-  Height 5
-  Speed 550
-  Damage (18)
-  Projectile
-  -RANDOMIZE
-  Obituary "%o died."
-  DamageType "Rifle"
-  Scale 0.0
-  States
-  {
-  Spawn:
-    NULL A 35
-    loop
-  Death:
-    NULL A 5 A_SpawnItemEx("BulletPuff",0,0,0,0,0,0,0,128,0)
-    stop
-  }
+	Radius 5
+	Height 5
+	Speed 550
+	Damage (18)
+	PROJECTILE
+	-RANDOMIZE
+	Obituary "%o died."
+	DamageType "Rifle"
+	Scale 0.0
+	States
+	{
+	Spawn:
+		NULL A 35
+		Loop
+	Death:
+		NULL A 5 A_SpawnItemEx("BulletPuff", 0, 0, 0, 0, 0, 0, 0, 128, 0)
+		Stop
+	}
 }

@@ -1,137 +1,140 @@
 // Sniper rifle
-actor SniperRifle : AOWWeapon {
-	obituary "$OB_SNIPER" // "%o found %k's bullet in %p head."
-	attacksound "rc50/fire"
-	weapon.selectionorder 3
-	weapon.kickback 80
-	weapon.ammotype "SniperAmmo"
-	weapon.ammouse 1
-	weapon.ammogive 5
+Actor SniperRifle : AOWWeapon {
+	Obituary "$OB_SNIPER" // "%o found %k's bullet in %p head."
+	AttackSound "rc50/fire"
+	Weapon.SelectionOrder 3
+	Weapon.Kickback 80
+	Weapon.AmmoType "SniperAmmo"
+	Weapon.AmmoUse 1
+	Weapon.AmmoGive 5
 	DropItem "SniperRifleWeak"
-	inventory.pickupmessage "You got the sniper rifle!"
+	Inventory.PickupMessage "You got the sniper rifle!"
 	+NOEXTREMEDEATH
 	Weapon.PreferredSkin "MarineSniper"
-	states {
+	States
+	{
 	Ready:
-		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "ReadyZoomed")
+		SNIE AA 0 A_JumpIfInventory("IsZoomed", 1, "ReadyZoomed")
 		SNIE A 1 A_WeaponReady
-		wait
+		Wait
 	ReadyZoomed:
 		NULL A 1 A_WeaponReady
-		loop
+		Loop
 	Deselect:
-		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "AltFireOff")
+		SNIE AA 0 A_JumpIfInventory("IsZoomed", 1, "AltFireOff")
 		SNIE A 1 A_Lower
-		wait
+		Wait
 	Select:
 		SNIE A 1 A_Raise
-		loop
+		Loop
 	Fire:
 		NULL A 0 A_GunFlash
-		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "FireZoomed")
+		SNIE AA 0 A_JumpIfInventory("IsZoomed", 1, "FireZoomed")
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
-		NULL A 0 A_FireBullets (7.2, 7.2, -1, 50, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
-		goto Reload
+		NULL A 0 A_FireBullets(7.2, 7.2, -1, 50, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
+		Goto Reload
 	Reload:
 		SNIF F 2 BRIGHT
 		SNIE A 8
 		SNIR ABCDEFGHIJ 2
-		SNIR C 5 offset (0, 40) A_PlaySound ("rc50/boltopen")
-		SNIR C 5 offset (0, 35) A_SpawnItemEx("RifleShellCasing",0,8,32,random(1,3),random(0,1),random(1,3),random(45,60),128)
-		SNIR C 10 offset (0, 33) A_PlaySound ("rc50/boltclose")
+		SNIR C 5 offset(0, 40) A_PlaySound("rc50/boltopen")
+		SNIR C 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		SNIR C 10 offset(0, 33) A_PlaySound("rc50/boltclose")
 		SNIR BA 3
 		SNIE A 1 A_ReFire
-		goto Ready
+		Goto Ready
 	FireZoomed:
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
-		NULL A 0 A_RailAttack (75, 0, 0, none, none, 1, 0, "RiflePuff")
-		NULL A 1 bright A_FireBullets (0.0, 0.0, 1, 0, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
-		goto ReloadZoomed
+		NULL A 0 A_RailAttack(75, 0, 0, none, none, 1, 0, "RiflePuff")
+		NULL A 1 BRIGHT A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
+		Goto ReloadZoomed
 	ReloadZoomed:
 		NULL A 30
-		NULL A 5 offset (0, 40) A_PlaySound ("rc50/boltopen")
-		NULL A 5 offset (0, 35) A_SpawnItemEx("RifleShellCasing",0,8,32,random(1,3),random(0,1),random(1,3),random(45,60),128)
-		NULL A 10 offset (0, 33) A_PlaySound ("rc50/boltclose")
+		NULL A 5 offset(0, 40) A_PlaySound("rc50/boltopen")
+		NULL A 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		NULL A 10 offset(0, 33) A_PlaySound("rc50/boltclose")
 		NULL A 6
 		NULL A 1 A_ReFire
-		goto Ready
+		Goto Ready
 	AltFire:
-		SNIE A 1 A_JumpIfInventory ("IsZoomed", 1, "AltFireOff")
-		NULL A 0 A_GiveInventory ("IsZoomed", 1)
-		SNIE A 4 A_ZoomFactor (6.0)
-		SNIE A 1 offset (0, 32)
-		SNIE A 1 offset (0, 40)
-		SNIE A 1 offset (0, 48)
-		SNIE A 1 offset (0, 56)
-		SNIE A 1 offset (0, 64)
-		SNIE A 1 offset (0, 72)
-		SNIE A 1 offset (0, 80)
-		SNIE A 1 offset (0, 88)
-		SNIE A 1 offset (0, 96)
-		SNIE A 1 offset (0, 104)
-		SNIE A 1 offset (0, 112)
-		SNIE A 1 offset (0, 120)
-		SNIE A 1 offset (0, 128)
-		SNIE A 1 offset (0, 160)
-		goto Ready
+		SNIE A 1 A_JumpIfInventory("IsZoomed", 1, "AltFireOff")
+		NULL A 0 A_GiveInventory("IsZoomed", 1)
+		SNIE A 4 A_ZoomFactor(6.0)
+		SNIE A 1 offset(0, 32)
+		SNIE A 1 offset(0, 40)
+		SNIE A 1 offset(0, 48)
+		SNIE A 1 offset(0, 56)
+		SNIE A 1 offset(0, 64)
+		SNIE A 1 offset(0, 72)
+		SNIE A 1 offset(0, 80)
+		SNIE A 1 offset(0, 88)
+		SNIE A 1 offset(0, 96)
+		SNIE A 1 offset(0, 104)
+		SNIE A 1 offset(0, 112)
+		SNIE A 1 offset(0, 120)
+		SNIE A 1 offset(0, 128)
+		SNIE A 1 offset(0, 160)
+		Goto Ready
 	AltFireOff:
-		SNIE A 4 offset (0, 160) A_ZoomFactor (1.0)
-		SNIE A 1 offset (0, 128)
-		SNIE A 1 offset (0, 120)
-		SNIE A 1 offset (0, 112)
-		SNIE A 1 offset (0, 104)
-		SNIE A 1 offset (0, 96)
-		SNIE A 1 offset (0, 88)
-		SNIE A 1 offset (0, 80)
-		SNIE A 1 offset (0, 72)
-		SNIE A 1 offset (0, 64)
-		SNIE A 1 offset (0, 56)
-		SNIE A 1 offset (0, 48)
-		SNIE A 1 offset (0, 40)
-		SNIE A 1 offset (0, 32)
-		NULL A 0 A_TakeInventory ("IsZoomed", 1)
-		goto Ready
+		SNIE A 4 offset(0, 160) A_ZoomFactor(1.0)
+		SNIE A 1 offset(0, 128)
+		SNIE A 1 offset(0, 120)
+		SNIE A 1 offset(0, 112)
+		SNIE A 1 offset(0, 104)
+		SNIE A 1 offset(0, 96)
+		SNIE A 1 offset(0, 88)
+		SNIE A 1 offset(0, 80)
+		SNIE A 1 offset(0, 72)
+		SNIE A 1 offset(0, 64)
+		SNIE A 1 offset(0, 56)
+		SNIE A 1 offset(0, 48)
+		SNIE A 1 offset(0, 40)
+		SNIE A 1 offset(0, 32)
+		NULL A 0 A_TakeInventory("IsZoomed", 1)
+		Goto Ready
 	Spawn:
 		NULL A 0
 		NULL A 0 A_SpawnItem("SniperRifleWeak")
-		stop
+		Stop
 	Flash:
 		NULL A 2 A_Light1
 		NULL A 2 A_Light2
 		NULL A 0 A_Light0
-		stop
+		Stop
 	}
 }
 
-actor IsZoomed : Boolean {}
+Actor IsZoomed : Boolean {}
 
-actor SniperRifleWeak : SniperRifle 21081 {
-	states {
+Actor SniperRifleWeak : SniperRifle 21081 {
+	States
+	{
 	Fire:
-		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "FireZoomed")
+		SNIE AA 0 A_JumpIfInventory("IsZoomed", 1, "FireZoomed")
 		NULL A 0 A_GunFlash
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
-		NULL A 0 A_FireBullets (7.2, 7.2, -1, 34, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
-		goto Reload
+		NULL A 0 A_FireBullets(7.2, 7.2, -1, 34, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
+		Goto Reload
 	FireZoomed:
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
-		NULL A 0 A_RailAttack (50, 0, 0, none, none, 1, 0, "RiflePuff")
-		NULL A 1 bright A_FireBullets (0.0, 0.0, 1, 0, "RiflePuff")
-		goto ReloadZoomed
+		NULL A 0 A_RailAttack(50, 0, 0, none, none, 1, 0, "RiflePuff")
+		NULL A 1 BRIGHT A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff")
+		Goto ReloadZoomed
 	Spawn:
 		SNIP X -1
-		stop
+		Stop
 	}
 }
 
-actor SniperAmmo : Ammo {
-	inventory.amount 4
-	inventory.maxamount 40
-	ammo.backpackamount 4
-	ammo.backpackmaxamount 40
-	states {
+Actor SniperAmmo : Ammo {
+	Inventory.amount 4
+	Inventory.MaxAmount 40
+	Ammo.BackpackAmount 4
+	Ammo.BackpackMaxAmount 40
+	States
+	{
 	Spawn:
 		NULL A 0
-		stop
+		Stop
 	}
 }

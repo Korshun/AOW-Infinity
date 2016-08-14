@@ -640,7 +640,7 @@ script aow_addon_plasmacannon (int Team)
 		terminate;
 	}
 	
-	if (NumPlasmaCannons[Team] >= MaxCannonsPerTeam && MaxCannonsPerTeam != -1) {
+	if (NumPlasmaCannons[Team] >= GetCVAR("aow_maxcannonsperteam") && GetCVAR("aow_maxcannonsperteam") != -1) {
 		DisplayCross();
 		SETFONT("BigFont");
 		HudMessage(s:"Your team already has too many of those!"; 
@@ -648,13 +648,13 @@ script aow_addon_plasmacannon (int Team)
 		terminate;
 	}
 	
-	if (Timer() < CannonPurchaseDelay) {
+	if (Timer() < GetCVAR("aow_plasmapurchasedelay") * 35 * 60) {
 		DisplayCross();
 		SETFONT("BigFont");
-		//int mins = (CannonPurchaseDelay - Timer())/(35*60);
+		//int mins = (GetCVAR("aow_plasmapurchasedelay") * 35 * 60 - Timer())/(35*60);
 		//int secs = 59 - (Timer()/35)%60;
 
-		HudMessage(s:"You must wait \cF", d:(CannonPurchaseDelay - Timer()) / 60,
+		HudMessage(s:"You must wait \cF", d:(GetCVAR("aow_plasmapurchasedelay") * 35 * 60 - Timer()) / 60,
 			s:" seconds\nbefore you can get one of these!";
 			HUDMSG_FADEOUT, 240+PlayerNumber(), CR_RED, 0.5, 0.45, 2.0, 1.0);		
 		terminate;
@@ -1242,7 +1242,7 @@ script aow_addon_ionbeacon (int Team) {
 		terminate;
 	}
 	
-	BlueBeaconTime=BeaconPurchaseDelay-(Timer()-LastPurchasedBeacon[1])/35;
+	BlueBeaconTime=GetCVAR("aow_beaconpurchasedelay") * 60-(Timer()-LastPurchasedBeacon[1])/35;
 	if (BlueBeaconTime <= 0)
 		BlueBeaconCooldown = false;
 	else
@@ -1302,7 +1302,7 @@ script aow_addon_nukebeacon (int Team) {
 	if ( MitigateDoublePress() ) terminate;
 
 	RedBeaconCooldown = true;
-	RedBeaconTime = BeaconPurchaseDelay-(Timer()-LastPurchasedBeacon[2])/35;
+	RedBeaconTime = GetCVAR("aow_beaconpurchasedelay") * 60-(Timer()-LastPurchasedBeacon[2])/35;
 	if (RedBeaconTime <= 0)
 		RedBeaconCooldown = false;
 	
@@ -1487,10 +1487,10 @@ script aow_class_timecop (int Team) {
 	if (MitigateDoublePress()) terminate;
 	if (!CheckBarracks(team)) terminate;
 	if (!CheckPlant(team)) terminate;
-	if (MaxTimeCopsPerTeam > 0 && NumTimeCops[team] >= MaxTimeCopsPerTeam) {
+	if (GetCVAR("aow_maxtimecopsperteam") > 0 && NumTimeCops[team] >= GetCVAR("aow_maxtimecopsperteam")) {
 		DisplayCross();
 		SETFONT("BigFont");
-		if (MaxTimeCopsPerTeam == 1) {
+		if (GetCVAR("aow_maxtimecopsperteam") == 1) {
 			HudMessage(s:"You already have a time cop in-field!";
 				HUDMSG_FADEOUT, 240+PlayerNumber(), CR_RED, 0.5, 0.45, 2.0, 1.0);
 		} else {

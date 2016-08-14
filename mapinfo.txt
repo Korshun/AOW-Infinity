@@ -7,153 +7,110 @@ defaultmap {
 	clipmidtextures
 }
 
-episode AOW01 {
+episode MINESITE {
 	name = "A New War"
 }
 
-map AOW01 "Mining Site" {
-	next = "AOW02"
+map MINESITE "Mining Site" {
+	next = "BARRENS"
 	sky1 = "SKY1"
-	music = "D_AOW01"
+	music = "sakura"
 	levelnum = 1
 }
 
-map AOW02 "Barrens" {
-	next = "AOW03"
+map BARRENS "Barrens" {
+	next = "GLACIER"
 	sky1 = "STSKY2"
-	music = "D_AOW02"
+	music = "ammoclip"
 	levelnum = 2
 }
 
-map AOW03 "All Out War" {
-	next = "AOW04"
+map GLACIER "Glacier" {
+	next = "FLOATCIT"
 	sky1 = "STSKY14"
-	music = "D_AOW03"
-	levelnum = 3
-}
-
-map AOW04 "Glacier" {
-	next = "AOW05"
-	sky1 = "STSKY14"
-	music = "D_AOW04"
+	music = "beach"
 	levelnum = 4
 }
 
-map AOW05 "Mercury" {
-	next = "AOW06"
-	sky1 = "STSKY1"
-	music = "D_AOW05"
-	levelnum = 50 // yes, fifty
-}
-
-map AOW06 "Floating City" {
-	next = "AOW07"
+map FLOATCIT "Floating City" {
+	next = "CANYON"
 	sky1 = "STARS"
-	music = "D_AOW06"
+	music = "SOR2ABOV"
 	levelnum = 6
 }
 
-map AOW07 "Canyon" {
-	next = "AOW08"
-	secretnext = "AOW08"
+map CANYON "Canyon" {
+	next = "INFECTED"
 	sky1 = "STSKY2"
-	music = "D_AOW07"
+	music = "moveit"
 	levelnum = 7
 }
 
-map AOW08 "Island" {
-	next = "AOW09"
-	sky1 = "STSKY2"
-	music = "D_AOW08"
-	levelnum = 8
-}
-
-map AOW09 "Infected" {
-	next = "AOW10"
+map INFECTED "Infected" {
+	next = "DEFRAG"
 	sky1 = "STSKY7", 0.1
-	music = "D_AOW09"
+	music = "lststand"
 	levelnum = 9
 }
 
-map AOW10 "Space Camp" {
-	next = "AOW11"
-	sky1 = "STARS"
-	music = "D_AOW10"
-	levelnum = 10
-}
-
-map AOW11 "Disk Defrag" {
-	next = "AOW12"
-	music = "D_AOW11"
+map DEFRAG "Disk Defrag" {
+	next = "HELLMRCH"
+	music = "drill"
 	levelnum = 11
 }
 
-map AOW12 "Hell's March" {
-	next = "AOW13"
+map HELLMRCH "Hell's March" {
+	next = "EMERALD"
 	sky1 = "STSKY5"
-	music = "D_AOW12"
+	music = "hellmrch"
 	levelnum = 12
 }
 
-map AOW13 "Lava Giant" {
-	next = "AOW14"
-	sky1 = "STARS"
-	music = "D_AOW13"
-	levelnum = 13
-}
-
-map AOW14 "Emerald Wasteland" {
-	next = "AOW15"
+map EMERALD "Emerald Wasteland" {
+	next = "OASIS"
 	sky1 = "STSKY14"
-	music = "D_AOW14"
+	music = "2kmeters"
 	levelnum = 14
 }
 
-map AOW15 "Oasis" {
-	next = "AOW16"
+map OASIS "Oasis" {
+	next = "DEFUNCT"
 	sky1 = "SKY04", 0.1
-	music = "D_AOW15"
+	music = "ut2k4l15"
 	levelnum = 15
 }
 
-map AOW16 "Unending Pain" {
-	next = "AOW17"
-	music = "D_AOW16"
-	sky1 = "STSKY3"
-	levelnum = 16
-}
-
-map AOW17 "Defunct Commission" {
-	next = "AOW18"
+map DEFUNCT "Defunct Commission" {
+	next = "REDZONE"
 	sky1 = "SKYFOG0", 0.1
-	music = "D_AOW17"
+	music = "defunct"
 	levelnum = 17
 }
 
-map AOW18 "Red Zone" {
-	next = "AOW19"
+map REDZONE "Red Zone" {
+	next = "VALLEY"
 	sky1 = "STSKY2"
-	music = "D_AOW18"
+	music = "facenemy"
 	levelnum = 18
 }
 
-map AOW19 "Valley" {
-	next = "AOW20"
-	music = "D_AOW19"
+map VALLEY "Valley" {
+	next = "RENE2030"
+	music = "nuclear"
 	sky1 = "SKYFOG0", 0.1
 	levelnum = 19
 }
 
-map AOW20 "Renegade 2030" {
-	next = "AOW21"
-	music = "D_AOW20"
+map RENE2030 "Renegade 2030" {
+	next = "RENE2032"
+	music = "organic"
 	sky1 = "STARS"
 	levelnum = 20
 }
 
-map AOW21 "Renegade 2032" {
-	next = "AOW01"
-	music = "D_AOW21"
+map RENE2032 "Renegade 2032" {
+	next = "MINESITE"
+	music = "noregret"
 	sky1 = "STARS"
 	levelnum = 21
 }

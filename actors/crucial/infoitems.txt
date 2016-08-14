@@ -1,89 +1,89 @@
-actor ClassID : Inventory {inventory.maxamount 29}
+Actor ClassID : Inventory {Inventory.MaxAmount 29}
 
-actor SelfHealCooldown : Boolean {}
-actor Ingame : Boolean {} // DEPRECATED
-actor IsRed : Boolean {}
-actor IsBlue : Boolean {}
-actor IsFemale : Boolean {}
-actor PurchaseToken : Boolean {}
-actor InRepairs : Boolean {}
-actor HasClass : Boolean {}
-actor IsMech : Boolean {}
-actor TournamentMode : Boolean {}
-actor Refunds : Inventory {inventory.maxamount 10000}
-actor PlayerRank : Inventory {inventory.maxamount 8}
-actor IsCommando : Boolean {}
-actor IsSniper : Boolean {}
-actor IsMedic : Boolean {}
-actor IsKamikaze : Boolean {}
-actor IsHarvester : Boolean {}
-actor HighUpgrade : Boolean {}
-actor CrispyPlayer : Boolean {}
-actor CrispyPlayer2 : Inventory {inventory.maxamount 4}
-actor IsInSpawnRoom : Boolean {}
-actor IsMCT : Boolean {}
-actor IsArtillerySoldier : Boolean {}
+Actor SelfHealCooldown : Boolean {}
+Actor Ingame : Boolean {} // DEPRECATED
+Actor IsRed : Boolean {}
+Actor IsBlue : Boolean {}
+Actor IsFemale : Boolean {}
+Actor PurchaseToken : Boolean {}
+Actor InRepairs : Boolean {}
+Actor HasClass : Boolean {}
+Actor IsMech : Boolean {}
+Actor TournamentMode : Boolean {}
+Actor Refunds : Inventory {Inventory.MaxAmount 10000}
+Actor PlayerRank : Inventory {Inventory.MaxAmount 8}
+Actor IsCommando : Boolean {}
+Actor IsSniper : Boolean {}
+Actor IsMedic : Boolean {}
+Actor IsKamikaze : Boolean {}
+Actor IsHarvester : Boolean {}
+Actor HighUpgrade : Boolean {}
+Actor CrispyPlayer : Boolean {}
+Actor CrispyPlayer2 : Inventory {Inventory.MaxAmount 4}
+Actor IsInSpawnRoom : Boolean {}
+Actor IsMCT : Boolean {}
+Actor IsArtillerySoldier : Boolean {}
 Actor PlayerCredits : Integer {}
 Actor PlayerCredits2 : Integer {}
 Actor PlayerExperience : Integer {}
 
 // [SP] This item is used to determine whether a util can build turrets in his base.
 // He must be close enough to one of his own (standing) structures to do this.
-actor UtilityOutOfRange : Boolean {}
+Actor UtilityOutOfRange : Boolean {}
 
-actor DonateMenu : Boolean {}
-actor DonationName : Inventory {inventory.maxamount 100}
+Actor DonateMenu : Boolean {}
+Actor DonationName : Inventory {Inventory.MaxAmount 100}
 
-actor RepairBonus_XP : Inventory {inventory.maxamount 1000}
-actor RepairBonus_Money : Inventory {inventory.maxamount 20}
+Actor RepairBonus_XP : Inventory {Inventory.MaxAmount 1000}
+Actor RepairBonus_Money : Inventory {Inventory.MaxAmount 20}
 
-actor RepairBonusItem : CustomInventory
+Actor RepairBonusItem : CustomInventory
 {
-  inventory.maxamount 9999
-  +ALWAYSPICKUP
-  states
-  {
-  Spawn:
-    NULL A 5
-    stop
-  Pickup:
-    NULL A 0 //ACS_ExecuteAlways(aow_script325,0,0,0,0)
-    stop
-  }
+	Inventory.MaxAmount 9999
+	+ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		NULL A 5
+		Stop
+	Pickup:
+		NULL A 0 //ACS_ExecuteAlways(aow_script325, 0, 0, 0, 0)
+		Stop
+	}
 }
 
-actor RepairEffectPlayer : CustomInventory
+Actor RepairEffectPlayer : CustomInventory
 {
-  inventory.maxamount 9999
-  +ALWAYSPICKUP
-  states
-  {
-  Spawn:
-    NULL A 5
-    stop
-  Pickup:
-    TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2",random(-8,8),random(-8,8),random(4,56),0,0,0,0,128,0)
-    stop
-  }
+	Inventory.MaxAmount 9999
+	+ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		NULL A 5
+		Stop
+	Pickup:
+		TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2", random(-8, 8), random(-8, 8), random(4, 56), 0, 0, 0, 0, 128, 0)
+		Stop
+	}
 }
-actor RepairEffectMech : CustomInventory
+Actor RepairEffectMech : CustomInventory
 {
-  inventory.maxamount 9999
-  +ALWAYSPICKUP
-  states
-  {
-  Spawn:
-    NULL A 5
-    stop
-  Pickup:
-    TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2",random(-29,29),random(-29,29),random(4,128),0,0,0,0,128,0)
-    TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2",random(-29,29),random(-29,29),random(4,128),0,0,0,0,128,0)
-    stop
-  }
+	Inventory.MaxAmount 9999
+	+ALWAYSPICKUP
+	States
+	{
+	Spawn:
+		NULL A 5
+		Stop
+	Pickup:
+		TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2", random(-29, 29), random(-29, 29), random(4, 128), 0, 0, 0, 0, 128, 0)
+		TNT1 AAAAA 0 A_SpawnItemEx("VoltagePuff2", random(-29, 29), random(-29, 29), random(4, 128), 0, 0, 0, 0, 128, 0)
+		Stop
+	}
 }
 
 // [SP] This item is used to check maps for HOM's. It blurs the screen red - however it also gives invulnerability.
-actor HOMCheckerGL : InvulnerabilitySphere {
+Actor HOMCheckerGL : InvulnerabilitySphere {
 	Powerup.Color "FF 00 00", 0.2
 	Powerup.Duration 0x7FFFFFFF
 	Inventory.PickupMessage "HOM Checker!"
@@ -94,36 +94,36 @@ actor HOMCheckerGL : InvulnerabilitySphere {
 // 1 = fading out (stealthing)
 // 2 = stealthed
 // 3 = fading in (destealthing)
-actor StealthMode : Inventory {
-    inventory.amount 0
-    inventory.maxamount 3
+Actor StealthMode : Inventory {
+		Inventory.amount 0
+		Inventory.MaxAmount 3
 }
 
 // [NF] players get this when they start pain flashing.
-actor StealthPain : Boolean {}
+Actor StealthPain : Boolean {}
 
 // [NF] players get this when they're getting forcibly destealthed (see #310, switch case 3)
 // Stealth scripts recognize this item and terminate themselves to make way for the destealthing.
-actor DestealthOverride : Boolean {}
+Actor DestealthOverride : Boolean {}
 
 // [NF] players get this when they start firing while stealthed. This way
 // the script knows to restealth them afterwards
-actor StealthFire : Boolean {}
+Actor StealthFire : Boolean {}
 
 // token spawned so that clients know to display ticket hud
-actor TicketToken {}
+Actor TicketToken {}
 
 // token spawned at bodycount
-actor BodycountToken {}
+Actor BodycountToken {}
 
-actor SpreeCount : Inventory {inventory.maxamount 31}
+Actor SpreeCount : Inventory {Inventory.MaxAmount 31}
 
-actor PowerNoHealXP : PowerDamage {damagefactor Normal, 1.0}
-actor NoHealXP : PowerupGiver {
+Actor PowerNoHealXP : PowerDamage {DamageFactor Normal, 1.0}
+Actor NoHealXP : PowerupGiver {
 	+AUTOACTIVATE +ALWAYSPICKUP
-	inventory.maxamount 0
-	powerup.duration -2
-	powerup.type "NoHealXP"
+	Inventory.MaxAmount 0
+	Powerup.Duration -2
+	Powerup.Type "NoHealXP"
 }
 
-actor StoredArmorModifier : Inventory {inventory.maxamount 8}
+Actor StoredArmorModifier : Inventory {Inventory.MaxAmount 8}

@@ -1,1 +1,21 @@
 server bool aowinf_tracers = true;
+
+//server int aow_maxcannonsperteam;
+//server int aow_plasmapurchasedelay;
+//server int aow_maxtimecopsperteam;
+//server int aow_c4delay;
+//server int aow_guardianlimit;
+//server int aow_startcredits;
+//server int aow_credflow;
+//server int aow_powercredflow;
+//server int aow_creditfrag;
+//server int aow_bonustime;
+//server int aow_bonusamount;
+//server int aow_repairbonus;
+//server bool aow_mechs;
+//server bool aow_ticketpool = false;
+//server int aow_tournamentmode;
+//server int aow_beaconpurchasedelay;
+//server int aow_teamstaytime;
+//server int aow_plasmacooldown;
+//server int aow_medicbonusneed;

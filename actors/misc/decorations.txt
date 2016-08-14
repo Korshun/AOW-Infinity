@@ -1,86 +1,86 @@
-ACTOR Box1 29024
+Actor Box1 29024
 {
-  Game Doom
-  Radius 16
-  Height 56
-  +SOLID
-  States
-  {
-  Spawn:
-    BOX1 A -1
-    Stop
-  }
+	Game Doom
+	Radius 16
+	Height 56
+	+SOLID
+	States
+	{
+	Spawn:
+		BOX1 A -1
+		Stop
+	}
 }
 Actor BrownMetalBarrel 29025
 {
-  +FloorClip
-  +Solid
-  Radius 12
-  Height 32
-  States
-  {
-  Spawn:
-    BBAR A -1
-    Stop
-  }
+	+FloorClip
+	+SOLID
+	Radius 12
+	Height 32
+	States
+	{
+	Spawn:
+		BBAR A -1
+		Stop
+	}
 }
 
 Actor EmptyNukageBarrel 29014
 {
-  +FloorClip
-  +Solid
-  Radius 12
-  Height 32
-  States
-  {
-  Spawn:
-    EBAR A -1
-    Stop
-  }
+	+FloorClip
+	+SOLID
+	Radius 12
+	Height 32
+	States
+	{
+	Spawn:
+		EBAR A -1
+		Stop
+	}
 }
 
 // alias for aow14
-actor EmptyNukageBarrel2 : EmptyNukageBarrel 19000 {}
+Actor EmptyNukageBarrel2 : EmptyNukageBarrel 19000 {}
 
-ACTOR TLamp1 12850
+Actor TLamp1 12850
 {
-  Radius 16
-  Height 80
-  +SOLID
-  States
-  {
-  Spawn:
-    LAMT A -1 Bright
-    Stop
-  }
+	Radius 16
+	Height 80
+	+SOLID
+	States
+	{
+	Spawn:
+		LAMT A -1 BRIGHT
+		Stop
+	}
 }
 
-ACTOR TLamp2 12851
+Actor TLamp2 12851
 {
-  Radius 16
-  Height 60
-  +SOLID
-  States
-  {
-  Spawn:
-    LAMT B -1 Bright
-    Stop
-  }
+	Radius 16
+	Height 60
+	+SOLID
+	States
+	{
+	Spawn:
+		LAMT B -1 BRIGHT
+		Stop
+	}
 }
 
-ACTOR TLamp3 12852
+Actor TLamp3 12852
 {
-  Radius 16
-  Height 70
-  +SOLID
-  States
-  {
-  Spawn:
-    LAMT C -1 Bright
-    Stop
-  }
+	Radius 16
+	Height 70
+	+SOLID
+	States
+	{
+	Spawn:
+		LAMT C -1 BRIGHT
+		Stop
+	}
 }
-ACTOR TechLanternBig 500
+Actor TechLanternBig 500
 {
 	Radius 10
 	Height 80
@@ -95,7 +95,7 @@ ACTOR TechLanternBig 500
 	}
 }
 
-ACTOR TechLanternSmall 501
+Actor TechLanternSmall 501
 {
 	Radius 6
 	Height 45
@@ -105,12 +105,12 @@ ACTOR TechLanternSmall 501
 	States
 	{
 	Spawn:
-		HLMP EFGH 6 Bright
+		HLMP EFGH 6 BRIGHT
 		Loop
 	}
 }
 
-ACTOR BlackCandleChandelier 502
+Actor BlackCandleChandelier 502
 {
 	Radius 20
 	Height 55
@@ -124,168 +124,169 @@ ACTOR BlackCandleChandelier 502
 		Stop
 	}
 }
-ACTOR StoneTorch : SwitchableDecoration 12320
+Actor StoneTorch : SwitchableDecoration 12320
 {
-  Radius 16
-  Height 64
-  +SOLID
-  States
-  {
-  Active:
-    NULL A 0 Bright A_PlaySound("Ignite")
-  Spawn:
-    STOR ABCDEFGHI 4 Bright
-    Loop
-  Inactive:
-    STOF A -1
-    Stop
-  }
+	Radius 16
+	Height 64
+	+SOLID
+	States
+	{
+	Active:
+		NULL A 0 BRIGHT A_PlaySound("Ignite")
+	Spawn:
+		STOR ABCDEFGHI 4 BRIGHT
+		Loop
+	Inactive:
+		STOF A -1
+		Stop
+	}
 }
 //////////////////////////////
 /////TRASH CAN1///////////////SPRITE//DUKE NUKEM
 //////////////////////////////
 
-ACTOR TrashCan1 29012
+Actor TrashCan1 29012
 {
-  Game Doom
-  Radius 16
-  Height 40
-  +SOLID
-  States
-  {
-  Spawn:
-    TRAC A -1
-    Stop
-  }
+	Game Doom
+	Radius 16
+	Height 40
+	+SOLID
+	States
+	{
+	Spawn:
+		TRAC A -1
+		Stop
+	}
 }
 
 Actor TechLampBroken 12321
 {
-  Game Doom
-  Radius 4
-  Height 80
-  +SOLID
-  States
-  {
-  Spawn:
-    BLMP A -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 80
+	+SOLID
+	States
+	{
+	Spawn:
+		BLMP A -1
+		Stop
+	}
 }
 
 Actor TechLampBroken2 12322
 {
-  Game Doom
-  Radius 4
-  Height 64
-  +SOLID
-  States
-  {
-  Spawn:
-    BLPN A -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 64
+	+SOLID
+	States
+	{
+	Spawn:
+		BLPN A -1
+		Stop
+	}
 }
 
 Actor TreeBrokenBurnt 12323
 {
-  Game Doom
-  Radius 4
-  Height 39
-  +SOLID
-  States
-  {
-  Spawn:
-    TREN C -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 39
+	+SOLID
+	States
+	{
+	Spawn:
+		TREN C -1
+		Stop
+	}
 }
 
 Actor TreeBroken2 12324
 {
-  Game Doom
-  Radius 4
-  Height 39
-  +SOLID
-  States
-  {
-  Spawn:
-    TREN B -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 39
+	+SOLID
+	States
+	{
+	Spawn:
+		TREN B -1
+		Stop
+	}
 }
 
 Actor TreeBroken3 12325
 {
-  Game Doom
-  Radius 5
-  Height 42
-  +SOLID
-  States
-  {
-  Spawn:
-    TREN E -1
-    Stop
-  }
+	Game Doom
+	Radius 5
+	Height 42
+	+SOLID
+	States
+	{
+	Spawn:
+		TREN E -1
+		Stop
+	}
 }
 
 Actor NTree 12326
 {
-  Game Doom
-  Radius 4
-  Height 64
-  +SOLID
-  States
-  {
-  Spawn:
-    TREN A -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 64
+	+SOLID
+	States
+	{
+	Spawn:
+		TREN A -1
+		Stop
+	}
 }
 
 Actor NTreeBurnt 12327
 {
-  Game Doom
-  Radius 4
-  Height 64
-  +SOLID
-  States
-  {
-  Spawn:
-    TREN A -1
-    Stop
-  }
+	Game Doom
+	Radius 4
+	Height 64
+	+SOLID
+	States
+	{
+	Spawn:
+		TREN A -1
+		Stop
+	}
 }
 
 // Fake Tiberium
-actor FakeTiberiumCrystal 24000 {
+Actor FakeTiberiumCrystal 24000 {
 	+FLOORCLIP
 	+NONETID
 	+CLIENTSIDEONLY
-	radius 10
-	height 34
-	mass 0x7FFFFFFF
-	states {
+	Radius 10
+	Height 34
+	Mass 0x7FFFFFFF
+	States
+	{
 	Spawn:
 		// The TID change is delayed by 15 tics
 		// this is to make the fake tiberium *not*
 		// get mapmarkers
 		TIBE A 15 BRIGHT
-		TIBE AA 0 Thing_ChangeTID (0, 402)
+		TIBE AA 0 Thing_ChangeTID(0, 402)
 		TIBE A -1 BRIGHT
-		stop
+		Stop
 	}
 }
 
 // Mercury needs this
-actor TrueSolidInvisibleBridge : InvisibleBridge 29011 {
+Actor TrueSolidInvisibleBridge : InvisibleBridge 29011 {
 	+SHOOTABLE +NODAMAGE
-	mass 0x7FFFFFFF
+	Mass 0x7FFFFFFF
 }
 
 // ===== new aow21 stuff
 //without SPAWNCEILING
-ACTOR TechLanternBigFree 503
+Actor TechLanternBigFree 503
 {
 	Radius 10
 	Height 80
@@ -301,7 +302,7 @@ ACTOR TechLanternBigFree 503
 }
 
 //without SPAWNCEILING
-ACTOR TechLanternSmallFree 504
+Actor TechLanternSmallFree 504
 {
 	Radius 6
 	Height 45
@@ -311,13 +312,13 @@ ACTOR TechLanternSmallFree 504
 	States
 	{
 	Spawn:
-		HLMP EFGH 6 Bright
+		HLMP EFGH 6 BRIGHT
 		Loop
 	}
 }
 
 //without SPAWNCEILING + clipped
-ACTOR TechLanternBigFreeShort 505
+Actor TechLanternBigFreeShort 505
 {
 	Radius 10
 	Height 54
@@ -333,7 +334,7 @@ ACTOR TechLanternBigFreeShort 505
 }
 
 //clipped
-ACTOR TechLanternBigShort 506
+Actor TechLanternBigShort 506
 {
 	Radius 10
 	Height 54
@@ -349,82 +350,89 @@ ACTOR TechLanternBigShort 506
 }
 
 // AOW14 specific actors
-actor A14RedTowerFX 27500 {
+Actor A14RedTowerFX 27500 {
 	+CLIENTSIDEONLY
 	+NOINTERACTION
-	states {
+	States
+	{
 	Spawn:
-		NULL A 5 A_SpawnItemEx ("A14RedTowerFX2", 0,0,0,0,0,7)
-		wait
+		NULL A 5 A_SpawnItemEx("A14RedTowerFX2", 0, 0, 0, 0, 0, 7)
+		Wait
 	}
 }
 
-actor A14RedTowerFX2 {
+Actor A14RedTowerFX2 {
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD
-	renderstyle add
-	alpha 0.75
-	scale 0.25
-	states {
+	RenderStyle add
+	Alpha 0.75
+	Scale 0.25
+	States
+	{
 	Spawn:
 		SPKR E 70
 		SPKR E 10 A_FadeOut
-		wait
+		Wait
 	}
 }
 
-actor A14BlueTowerFX 27501 {
+Actor A14BlueTowerFX 27501 {
 	+CLIENTSIDEONLY
 	+NOINTERACTION
-	states {
+	States
+	{
 	Spawn:
-		NULL A 5 A_SpawnItemEx ("A14BlueTowerFX2", 0,0,0,0,0,7)
-		wait
+		NULL A 5 A_SpawnItemEx("A14BlueTowerFX2", 0, 0, 0, 0, 0, 7)
+		Wait
 	}
 }
 
-actor A14BlueTowerFX2 : A14RedTowerFX2 {
-	states {
+Actor A14BlueTowerFX2 : A14RedTowerFX2 {
+	States
+	{
 	Spawn:
 		SPKB E 70
 		SPKB E 10 A_FadeOut
-		wait
+		Wait
 	}
 }
 
-actor PhobosRock1 19004 {
+Actor PhobosRock1 19004 {
 	//$Category Decorations
-	tag "Phobos rock"
+	Tag "Phobos rock"
 	Radius 24
 	Height 16
 	+SOLID
-	States {
+	States
+	{
 	Spawn:
 		ROK1 A -1
 		Loop
 	}
 }
 
-actor PhobosRock2 19005 {
-	tag "Phobos rock"
+Actor PhobosRock2 19005 {
+	Tag "Phobos rock"
 	//$Category Decorations
 	Radius 24
 	Height 16
 	+SOLID
-	States {
+	States
+	{
 		Spawn:
 		ROK2 A -1
 		Loop
 	}
 }
 
-actor PhobosRockSmall 19006 {
-	tag "Phobos rock (small)"
+Actor PhobosRockSmall 19006 {
+	Tag "Phobos rock (small)"
 	//$Category Decorations
 	Radius 1
 	Height 1
-	States {
+	States
+	{
 	Spawn:
 		ROK3 A -1
 		Loop
