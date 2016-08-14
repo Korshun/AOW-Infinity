@@ -11,6 +11,7 @@ r6:
 	- AOW16: Unending Pain
 * All music now has lump names referring to original names.
 * Removed OpenGL nodes and empty DIALOGUE lumps from maps.
+* Healgun fire and altfire swapped.
 - Fixed messages about array sizes on map load.
 - Fixed minor bugs in map scripts.
 - Fixed bomb squad gun dynamic lights

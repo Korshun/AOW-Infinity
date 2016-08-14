@@ -76,10 +76,10 @@ Actor HealGun : RepairGun {
 	Select:
 		REP4 A 1 A_Raise
 		Loop
-	Fire:
-		NULL A 0 A_JumpIfTargetInLOS("AltFire")
-		Goto Ready
 	AltFire:
+		NULL A 0 A_JumpIfTargetInLOS("Fire")
+		Goto Ready
+	Fire:
 		REP4 C 2
 		NULL A 0 BRIGHT A_FireBullets(0, 0, 1, 0, "MedicPuff", 0, 800) // visual ONLY
 		NULL A 0 BRIGHT ACS_ExecuteAlways(aow_script650, 0, 6, 1) // actually does the healing
