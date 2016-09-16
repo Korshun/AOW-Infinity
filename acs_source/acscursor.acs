@@ -1,0 +1,131 @@
+function int CursorX(void)
+{
+	return ACSUtils[ACSUTILS_CursorX];
+}
+
+function int CursorY(void)
+{
+	return ACSUtils[ACSUTILS_CursorY];
+}
+
+function int CursorDeltaX(void)
+{
+	if (ACSUtils[ACSUTILS_CursorWrapX])
+		return CursorMotionX();
+	return ACSUtils[ACSUTILS_CursorX] - ACSUtils[ACSUTILS_CursorPrevX];
+}
+function int CursorDeltaY(void)
+{
+	if (ACSUtils[ACSUTILS_CursorWrapY])
+		return CursorMotionY();
+	return ACSUtils[ACSUTILS_CursorY] - ACSUtils[ACSUTILS_CursorPrevY];
+}
+
+function int CursorMotionX(void)
+{
+	return ACSUtils[ACSUTILS_CursorMotionX];
+}
+
+function int CursorMotionY(void)
+{
+	return ACSUtils[ACSUTILS_CursorMotionY];
+}
+
+function void SetCursorSpeed(int speed)
+{
+	ACSUtils[ACSUTILS_CursorSpeedX] = speed;
+	ACSUtils[ACSUTILS_CursorSpeedY] = speed;
+}
+
+function void SetCursorSpeedX(int speed)
+{
+	ACSUtils[ACSUTILS_CursorSpeedX] = speed;
+}
+
+function void SetCursorSpeedY(int speed)
+{
+	ACSUtils[ACSUTILS_CursorSpeedY] = speed;
+}
+
+function void SetCursorPosition(int x, int y)
+{
+	ACSUtils[ACSUTILS_CursorX] = x;
+	ACSUtils[ACSUTILS_CursorY] = y;
+}
+
+function void CenterCursor(void)
+{
+	SetCursorPosition(ACSUtils[ACSUTILS_CursorAreaWidth] / 2, ACSUtils[ACSUTILS_CursorAreaHeight] / 2);
+}
+
+function void EnableCursorWrap(bool enable)
+{
+	ACSUtils[ACSUTILS_CursorWrapX] = enable;
+	ACSUtils[ACSUTILS_CursorWrapY] = enable;
+}
+
+function void EnableCursorWrapX(bool enable)
+{
+	ACSUtils[ACSUTILS_CursorWrapX] = enable;
+}
+
+function void EnableCursorWrapY(bool enable)
+{
+	ACSUtils[ACSUTILS_CursorWrapY] = enable;
+}
+
+function void _ClampCursor(void)
+{
+	if (ACSUtils[ACSUTILS_CursorWrapX])
+		ACSUtils[ACSUTILS_CursorX] = mod(ACSUtils[ACSUTILS_CursorX], ACSUtils[ACSUTILS_CursorAreaWidth]);
+	else
+		ACSUtils[ACSUTILS_CursorX] = clamp(ACSUtils[ACSUTILS_CursorX], 0, ACSUtils[ACSUTILS_CursorAreaWidth]);
+	
+	if (ACSUtils[ACSUTILS_CursorWrapY])
+		ACSUtils[ACSUTILS_CursorY] = mod(ACSUtils[ACSUTILS_CursorY], ACSUtils[ACSUTILS_CursorAreaHeight]);
+	else
+		ACSUtils[ACSUTILS_CursorY] = clamp(ACSUtils[ACSUTILS_CursorY], 0, ACSUtils[ACSUTILS_CursorAreaHeight]);
+}
+
+function void SetCursorArea(int width, int height)
+{
+	if (width <= 0)
+		ProgramError(StrParam(s:"Cursor area width set to ", d:width));
+	if (height <= 0)
+		ProgramError(StrParam(s:"Cursor area height set to ", d:height));
+	
+	ACSUtils[ACSUTILS_CursorX] = FixedMul(ACSUtils[ACSUTILS_CursorX], FixedDiv(width, ACSUtils[ACSUTILS_CursorAreaWidth]));
+	ACSUtils[ACSUTILS_CursorY] = FixedMul(ACSUtils[ACSUTILS_CursorY], FixedDiv(height, ACSUtils[ACSUTILS_CursorAreaHeight]));
+	ACSUtils[ACSUTILS_CursorPrevX] = FixedMul(ACSUtils[ACSUTILS_CursorPrevX], FixedDiv(width, ACSUtils[ACSUTILS_CursorAreaWidth]));
+	ACSUtils[ACSUTILS_CursorPrevY] = FixedMul(ACSUtils[ACSUTILS_CursorPrevY], FixedDiv(height, ACSUtils[ACSUTILS_CursorAreaHeight]));
+	ACSUtils[ACSUTILS_CursorMotionX] = FixedMul(ACSUtils[ACSUTILS_CursorMotionX], FixedDiv(width, ACSUtils[ACSUTILS_CursorAreaWidth]));
+	ACSUtils[ACSUTILS_CursorMotionY] = FixedMul(ACSUtils[ACSUTILS_CursorMotionY], FixedDiv(height, ACSUtils[ACSUTILS_CursorAreaHeight]));
+
+	ACSUtils[ACSUTILS_CursorAreaWidth] = width;
+	ACSUtils[ACSUTILS_CursorAreaHeight] = height;
+}
+
+function void UpdateCursor(void)
+{
+	ACSUtils[ACSUTILS_CursorPrevX] = ACSUtils[ACSUTILS_CursorX];
+	ACSUtils[ACSUTILS_CursorPrevY] = ACSUtils[ACSUTILS_CursorY];
+
+	int sensitivity = a_GetCVarFixed("mouse_sensitivity");
+	int speedX = FixedDiv(ACSUtils[ACSUTILS_CursorSpeedX], FixedMul(a_GetCVarFixed("m_yaw"), sensitivity));
+	int speedY = FixedDiv(ACSUtils[ACSUTILS_CursorSpeedY], FixedMul(a_GetCVarFixed("m_pitch"), sensitivity));
+	
+	speedX = FixedMul(speedX * 2, ACSUtils[ACSUTILS_CursorAreaWidth]) / 64000;
+	speedY = FixedMul(speedY * 2, ACSUtils[ACSUTILS_CursorAreaHeight]) / 32000;
+
+	int dx = -GetPlayerInput(ConsolePlayerNumber(), INPUT_YAW)   * speedX;
+    int dy = -GetPlayerInput(ConsolePlayerNumber(), INPUT_PITCH) * speedY;
+
+	if (GetCVar("invertmouse"))
+        dy = -dy;
+		
+	ACSUtils[ACSUTILS_CursorMotionX] = dx;
+	ACSUtils[ACSUTILS_CursorMotionY] = dy;
+	ACSUtils[ACSUTILS_CursorX] += dx;
+	ACSUtils[ACSUTILS_CursorY] += dy;
+	_ClampCursor();
+}

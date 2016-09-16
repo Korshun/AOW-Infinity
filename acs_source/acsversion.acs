@@ -1,0 +1,12 @@
+#libdefine ACSUTILS_VERSION_MAJOR 1
+#libdefine ACSUTILS_VERSION_MINOR 3
+#libdefine ACSUTILS_VERSION_PATCH 2
+
+function str ACSUtilsVersion(void)
+{
+	return StrParam(
+		d:ACSUTILS_VERSION_MAJOR, s:".",
+		d:ACSUTILS_VERSION_MINOR, s:".",
+		d:ACSUTILS_VERSION_PATCH
+	);
+}
