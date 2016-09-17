@@ -80,7 +80,7 @@ script aow_script344 (int Type, int DoneByUtilGun)
 	}
 	if(Type == 3)
 	{
-		delay(TID_BARRACKS_BLUE);
+		delay(101);
 		if(PlayerTeam() == TEAM_RED && ThingCountSector(T_NONE,TID_MINIREF_RED,18) >= 1) {
 			SetFont("SMALLFONT");
 			MiniRefinery[0] = 1;
