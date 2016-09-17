@@ -616,5 +616,5 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #include "a_tiberium.acs"
 #include "a_util.acs"
 #include "a_wchk.acs"
-#include "tracers.acs"
-#include "addaowmaps.acs"
+#include "a_tracers.acs"
+#include "a_addaowmaps.acs"
