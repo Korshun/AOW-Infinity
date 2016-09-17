@@ -4,9 +4,6 @@ acs/
 # Builds
 *.pk3
 
-# Music
-music/
-
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
