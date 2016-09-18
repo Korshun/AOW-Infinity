@@ -10,7 +10,7 @@ Actor Tracer : CollidingEffect
 	States
 	{
 	Spawn:
-		TNT1 A 0		
+		NULL A 0		
 		NULL A 0 //A_JumpIf(ACS_ExecuteWithResult(aow_checkfx, FX_TRACERS) == 0, "Unseen")
 	Fly:
 		// Uses a 3D model

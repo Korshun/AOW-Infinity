@@ -714,10 +714,10 @@ Actor MBase : PlayerPawn	//Basic unarmed marine.
 	Death.Fire:
 	Death.Fire:
 		// Stop all sound channels
-		NULL A 0 A_StopSound(0) TNT1 A 0 A_StopSound(4)
-		NULL A 0 A_StopSound(1) TNT1 A 0 A_StopSound(5)
-		NULL A 0 A_StopSound(2) TNT1 A 0 A_StopSound(6)
-		NULL A 0 A_StopSound(3) TNT1 A 0 A_StopSound(7)
+		NULL A 0 A_StopSound(0) NULL A 0 A_StopSound(4)
+		NULL A 0 A_StopSound(1) NULL A 0 A_StopSound(5)
+		NULL A 0 A_StopSound(2) NULL A 0 A_StopSound(6)
+		NULL A 0 A_StopSound(3) NULL A 0 A_StopSound(7)
 		NULL A 0 ACS_ExecuteAlways(aow_stealth, 0, 3, 0, 0)
 		NULL A 0 A_SpawnItemEx("BurningCorpse", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
 		NULL A 0 A_NoBlocking
@@ -728,10 +728,10 @@ Actor MBase : PlayerPawn	//Basic unarmed marine.
 	Death.Chemical:
 	Death.Chemical:
 		// Stop all sound channels
-		NULL A 0 A_StopSound(0) TNT1 A 0 A_StopSound(4)
-		NULL A 0 A_StopSound(1) TNT1 A 0 A_StopSound(5)
-		NULL A 0 A_StopSound(2) TNT1 A 0 A_StopSound(6)
-		NULL A 0 A_StopSound(3) TNT1 A 0 A_StopSound(7)
+		NULL A 0 A_StopSound(0) NULL A 0 A_StopSound(4)
+		NULL A 0 A_StopSound(1) NULL A 0 A_StopSound(5)
+		NULL A 0 A_StopSound(2) NULL A 0 A_StopSound(6)
+		NULL A 0 A_StopSound(3) NULL A 0 A_StopSound(7)
 		NULL A 0 ACS_ExecuteAlways(aow_stealth, 0, 3, 0, 0)
 		NULL A 0 A_SpawnItemEx("ChemicalCorpse", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0)
 		NULL A 0 A_NoBlocking

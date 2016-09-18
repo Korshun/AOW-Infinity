@@ -87,7 +87,7 @@ Actor UtilityGun : AOWWeapon {
 		NULL A 0 A_JumpIfInventory("MenuSelection2", 5, "Create.StepStraight")
 		NULL A 0 A_JumpIfInventory("MenuSelection2", 4, "Create.Step")
 		NULL A 0 A_JumpIfInventory("MenuSelection2", 3, "Create.Platform")
-		//UTIG A 0 A_JumpIfInventory("MenuSelection2", 3, "Create.Barrel")
+		//NULL A 0 A_JumpIfInventory("MenuSelection2", 3, "Create.Barrel")
 		NULL A 0 A_JumpIfInventory("MenuSelection2", 2, "Create.Portal")
 		NULL A 0 A_JumpIfInventory("MenuSelection2", 1, "Create.Sandbags")
 		Goto Create.RazorWire
@@ -1033,7 +1033,6 @@ Actor UtilityGun : AOWWeapon {
 		NULL A 0 A_Refire
 		Goto EndFire
 	/*Create.Barrel:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		Goto Ready
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Barrel")
 		NULL A 0 Radius_Quake (1 , 4 , 0, 1, 0)

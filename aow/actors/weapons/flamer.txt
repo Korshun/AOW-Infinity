@@ -129,7 +129,7 @@ Actor FlameThrowerFire {
 	States
 	{
 	Spawn:
-		FLMX B 0
+		NULL A 0
 		FLMX BCDEFGHIJK 2 BRIGHT A_Explode(2, 128, 0)
 		NULL A 0 A_SpawnItemEx("FlameDecay", random(-16, 16), random(-16, 16), 4, 0, 0, 0, 0, 0, 240)
 		FLMX LMNO 2 BRIGHT A_FadeOut(0.16)

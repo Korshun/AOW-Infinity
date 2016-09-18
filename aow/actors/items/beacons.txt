@@ -12,7 +12,7 @@ Actor IonCannonBeacon : InventoryItem {
 		NULL A 0 A_JumpIfInventory("BeaconUseToken", 1, 1)
 			Goto SafetyLock
 		NULL A 0 A_Stop
-		// TNT1 A 0 A_PlaySound("ion/place")
+		// NULL A 0 A_PlaySound("ion/place")
 		NULL A 0 ACS_ExecuteAlways(aow_script951, 0, 0, 0)
 		Stop
 	SafetyLock:
@@ -34,7 +34,7 @@ Actor NuclearStrikeBeacon : InventoryItem {
 		NULL A 0 A_JumpIfInventory("BeaconUseToken", 1, 1)
 			Goto SafetyLock
 		NULL A 0 A_Stop
-		// TNT1 A 0 A_PlaySound("nuke/place")
+		// NULL A 0 A_PlaySound("nuke/place")
 		NULL A 0 ACS_ExecuteAlways(aow_script951, 0, 0, 0)
 		Stop
 	SafetyLock:

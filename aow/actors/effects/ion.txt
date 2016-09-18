@@ -214,7 +214,7 @@ Actor IonBeaconFX
 	 BFLR AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 2 A_SpawnItemEx("BeamFire", 0, 0, 0, 0.1 * Random(-3, 3), 0.1 * Random(-3, 3), 0.01 * Random(20, 150), 0, 128, 0)
 	 BFLR A 1 A_SpawnItemEx("IonRain", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 	 TNT1 AAAAAAAAA 35 //A_FadeOut(0.05)
-	 // BFLR A 0 A_SpawnItemEx("BlueStrike", 0, 0, 0, 0, 0, 0, 0, 0, 0) moved to beacon Actor
+	 // NULL A 0 A_SpawnItemEx("BlueStrike", 0, 0, 0, 0, 0, 0, 0, 0, 0) moved to beacon Actor
 	 Stop
  }
 }
