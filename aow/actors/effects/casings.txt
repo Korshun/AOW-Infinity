@@ -144,7 +144,7 @@ Actor CellCasing : ShellCasing {
 		Wait
 	Death:
 		NULL A 0
-		NULL A 0 ThrustThingZ (0, 2, 1, 0)
+		NULL A 0 ThrustThingZ(0, 2, 1, 0)
 		CELL A 512
 		CELL A 1 A_FadeOut(0.01)
 		Wait

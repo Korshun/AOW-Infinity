@@ -24,7 +24,7 @@ Actor Utility_RepairGunTurretRed : Utility_TurretBase {
 		Wait
 	See:
 		// don't target any players
-		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1 , "Recheck")
+		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "Recheck")
 		NULL A 0 A_JumpIfInTargetInventory("IsBlue", 1, "Recheck")
 		NULL A 0 A_RemoveChildren(1)
 		CIGN A 1 A_Chase

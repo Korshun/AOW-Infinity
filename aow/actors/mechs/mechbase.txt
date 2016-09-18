@@ -114,7 +114,7 @@ Actor MechStepGuardian : MechStepDamageWeak {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 0 Radius_Quake (3, 10, 0, 4, 0)
+		NULL A 0 Radius_Quake(3, 10, 0, 4, 0)
 		TNT1 A 10 BRIGHT A_Explode(384, 192, 0)
 		Stop
 	}  

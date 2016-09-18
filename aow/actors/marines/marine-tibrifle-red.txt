@@ -133,17 +133,17 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 
 	SinkDown1: //Ankle deep.
-		NULL A 0 ThrustThingZ (0, 2, 1, 1)
+		NULL A 0 ThrustThingZ(0, 2, 1, 1)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
 	SinkDown2: //Waist deep.
-		NULL A 0 ThrustThingZ (0, 1, 1, 1)
+		NULL A 0 ThrustThingZ(0, 1, 1, 1)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
 	SinkDown3: //Cmpletely underwater. Slower sinking.
-		NULL A 0 ThrustThingZ (0, 2, 1, 0)
+		NULL A 0 ThrustThingZ(0, 2, 1, 0)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
@@ -186,25 +186,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndLeft: //Straferunning 28% faster.
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndRight:
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
@@ -262,18 +262,18 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	Swim1:
 		NULL A 0 A_JumpIf(z - floorz == 0, 2) //If non-deep water, don't swim.
-		NULL A 0 ThrustThingZ (0, 8, 0, 1) //Simulates jumping/swimming in water.
+		NULL A 0 ThrustThingZ(0, 8, 0, 1) //Simulates jumping/swimming in water.
 		NULL A 0
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim2:
-		NULL A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ(0, 16, 0, 1)
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim3:
-		NULL A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ(0, 32, 0, 1)
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
@@ -324,13 +324,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	MoveBackwardsAndLeft:
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndLeft")
 		Goto MoveBackwardsAndLeft
@@ -340,13 +340,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	MoveBackwardsAndRight:
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndRight")
 		Goto MoveBackwardsAndRight
@@ -387,25 +387,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndLeft:
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndRight:
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
@@ -451,18 +451,18 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	SwimWhileWander1:
 		NULL A 0 A_JumpIf(z - floorz == 0, 2)
-		NULL A 0 ThrustThingZ (0, 8, 0, 1)
+		NULL A 0 ThrustThingZ(0, 8, 0, 1)
 		NULL A 0
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander2:
-		NULL A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ(0, 16, 0, 1)
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander3:
-		NULL A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ(0, 32, 0, 1)
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
@@ -513,13 +513,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	MoveBackwardsAndLeftWhileWander:
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndLeftWhileWander")
 		Goto MoveBackwardsAndLeftWhileWander
@@ -529,13 +529,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 
 	MoveBackwardsAndRightWhileWander:
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndRightWhileWander")
 		Goto MoveBackwardsAndRightWhileWander
@@ -583,13 +583,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 	BackOffBackwardsAndLeft:
 		NULL A 0 A_FaceTarget
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_JumpIf(Health <= 50, "Missile")
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "BackOffBackwardsAndLeft")
@@ -601,13 +601,13 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 	BackOffBackwardsAndRight:
 		NULL A 0 A_FaceTarget
 		MGMR A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		MGMR D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_JumpIf(Health <= 50, "Missile")
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "BackOffBackwardsAndRight")
@@ -637,25 +637,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//1
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -663,25 +663,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//2
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -689,25 +689,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//3
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -715,25 +715,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//4
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -741,25 +741,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//5
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -767,61 +767,61 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//6
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 	Reload:
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_TakeInventory("TE21CallAmmoAI", 6)
 		NULL A 0 A_GiveInventory("TiberiumRifleCooldown")
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_ClearTarget
 		NULL A 0 A_Chase("", "")
 		NULL A 0 A_SpidRefire
@@ -829,62 +829,62 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		Goto Missile2
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 44)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_SpidRefire
 		Goto Missile2
 		NULL A 0 A_SpidRefire
@@ -899,25 +899,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//1
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -925,25 +925,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//2
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -951,25 +951,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//3
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -977,25 +977,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//4
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -1003,25 +1003,25 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//5
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_JumpIfInTargetInventory("IsRed", 1, "ClearTarget")
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 3, 2)
 		NULL A 0 A_JumpIfInTargetInventory("StealthMode", 2, "ClearTarget")
@@ -1029,61 +1029,61 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("toxin/fire")
 		NULL A 0 A_CustomMissile("TiberiumDart", 36, 10, 2+random(-3, 0))//2
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		NULL A 0 A_GiveInventory("TE21CallAmmoAI")
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 	ReloadR:
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_TakeInventory("TE21CallAmmoAI", 6)
 		NULL A 0 A_GiveInventory("TiberiumRifleCooldown")
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_ClearTarget
 		NULL A 0 A_Chase("", "")
 		NULL A 0 A_SpidRefire
@@ -1091,62 +1091,62 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 		Goto Missile3
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 44)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		MGMR D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_SpidRefire
 		Goto Missile3
 		NULL A 0 A_SpidRefire
@@ -1222,20 +1222,20 @@ Actor RedTiberiumRifleman	//Red Tiberium Rifleman
 	PainBackOffBackwardsAndLeft:
 		NULL A 0 A_FaceTarget
 		MGMR G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Pain
 		MGMR G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		//NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
 	PainBackOffBackwardsAndRight:
 		NULL A 0 A_FaceTarget
 		MGMR G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Pain
 		MGMR G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		//NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 

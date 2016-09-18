@@ -133,17 +133,17 @@ Actor RedFlamerDude
 
 
 	SinkDown1: //Ankle deep.
-		NULL A 0 ThrustThingZ (0, 2, 1, 1)
+		NULL A 0 ThrustThingZ(0, 2, 1, 1)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
 	SinkDown2: //Waist deep.
-		NULL A 0 ThrustThingZ (0, 1, 1, 1)
+		NULL A 0 ThrustThingZ(0, 1, 1, 1)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
 	SinkDown3: //Cmpletely underwater. Slower sinking.
-		NULL A 0 ThrustThingZ (0, 2, 1, 0)
+		NULL A 0 ThrustThingZ(0, 2, 1, 0)
 		//NULL A 0 A_Jump(256, "Idle")
 		Goto Idle
 
@@ -186,25 +186,25 @@ Actor RedFlamerDude
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndLeft: //Straferunning 28% faster.
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
 
 	ChaseForwardAndRight:
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileChase")
 		Goto TurnAndAcquireTargetWhileChase
@@ -262,18 +262,18 @@ Actor RedFlamerDude
 
 	Swim1:
 		NULL A 0 A_JumpIf(z - floorz == 0, 2) //If non-deep water, don't swim.
-		NULL A 0 ThrustThingZ (0, 8, 0, 1) //Simulates jumping/swimming in water.
+		NULL A 0 ThrustThingZ(0, 8, 0, 1) //Simulates jumping/swimming in water.
 		NULL A 0
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim2:
-		NULL A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ(0, 16, 0, 1)
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
 	Swim3:
-		NULL A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ(0, 32, 0, 1)
 		//NULL A 0 A_Jump(256, "AddToTimers")
 		Goto AddToTimers
 
@@ -324,13 +324,13 @@ Actor RedFlamerDude
 
 	MoveBackwardsAndLeft:
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndLeft")
 		Goto MoveBackwardsAndLeft
@@ -340,13 +340,13 @@ Actor RedFlamerDude
 
 	MoveBackwardsAndRight:
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndRight")
 		Goto MoveBackwardsAndRight
@@ -387,25 +387,25 @@ Actor RedFlamerDude
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndLeft:
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360-38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-38.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
 
 	WanderForwardAndRight:
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM A 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(-0.504)
-		NULL A 0 ThrustThing (angle*256/360+38.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+38.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(-0.504)
 		//NULL A 0 A_Jump(256, "TurnAndAcquireTargetWhileWander")
 		Goto TurnAndAcquireTargetWhileWander
@@ -451,18 +451,18 @@ Actor RedFlamerDude
 
 	SwimWhileWander1:
 		NULL A 0 A_JumpIf(z - floorz == 0, 2)
-		NULL A 0 ThrustThingZ (0, 8, 0, 1)
+		NULL A 0 ThrustThingZ(0, 8, 0, 1)
 		NULL A 0
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander2:
-		NULL A 0 ThrustThingZ (0, 16, 0, 1)
+		NULL A 0 ThrustThingZ(0, 16, 0, 1)
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
 	SwimWhileWander3:
-		NULL A 0 ThrustThingZ (0, 32, 0, 1)
+		NULL A 0 ThrustThingZ(0, 32, 0, 1)
 		//NULL A 0 A_Jump(256, "AlternateWander")
 		Goto AlternateWander
 
@@ -513,13 +513,13 @@ Actor RedFlamerDude
 
 	MoveBackwardsAndLeftWhileWander:
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndLeftWhileWander")
 		Goto MoveBackwardsAndLeftWhileWander
@@ -529,13 +529,13 @@ Actor RedFlamerDude
 
 	MoveBackwardsAndRightWhileWander:
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "MoveBackwardsAndRightWhileWander")
 		Goto MoveBackwardsAndRightWhileWander
@@ -583,13 +583,13 @@ Actor RedFlamerDude
 	BackOffBackwardsAndLeft:
 		NULL A 0 A_FaceTarget
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_JumpIf(Health <= 50, "Missile")
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "BackOffBackwardsAndLeft")
@@ -601,13 +601,13 @@ Actor RedFlamerDude
 	BackOffBackwardsAndRight:
 		NULL A 0 A_FaceTarget
 		PFLM A 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM B 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM C 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		PFLM D 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_JumpIf(Health <= 50, "Missile")
 		NULL A 0 A_Jump(random(128, 256), 1)
 		//NULL A 0 A_Jump(256, "BackOffBackwardsAndRight")
@@ -639,21 +639,21 @@ Actor RedFlamerDude
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("flamer2/fire")
 		NULL A 0 A_CustomMissile("FlamethrowerFire", random(38, 42), 5, random(-2, 2))//36, 10)//1
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("flamer2/fire")
 		NULL A 0 A_CustomMissile("FlamethrowerFire", random(38, 42), 5, random(-2, 2))
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_Jump(random(32, 256), 4)
 		NULL A 0 A_ClearTarget
 		NULL A 0 A_Chase("", "")
@@ -662,62 +662,62 @@ Actor RedFlamerDude
 		Goto Missile2
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 44)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-192, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_SpidRefire
 		Goto Missile2
 		NULL A 0 A_SpidRefire
@@ -733,21 +733,21 @@ Actor RedFlamerDude
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("flamer2/fire")
 		NULL A 0 A_CustomMissile("FlamethrowerFire", random(38, 42), 5, random(-2, 2))
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		NULL A 0 A_PlayWeaponSound("flamer2/fire")
 		NULL A 0 A_CustomMissile("FlamethrowerFire", random(38, 42), 5, random(-2, 2))
-		NULL A 0 NoiseAlert (0, 0)
+		NULL A 0 NoiseAlert(0, 0)
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 BRIGHT A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_Jump(random(32, 256), 4)
 		NULL A 0 A_ClearTarget
 		NULL A 0 A_Chase("", "")
@@ -756,62 +756,62 @@ Actor RedFlamerDude
 		Goto Missile3
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM E 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_Jump(random(128, 256), 44)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM A 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM B 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM C 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
 		PFLM D 1 A_Recoil(-0.368856)
-		NULL A 0 ThrustThing (angle*256/360-64, 1, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_SpidRefire
 		Goto Missile3
 		NULL A 0 A_SpidRefire
@@ -887,20 +887,20 @@ Actor RedFlamerDude
 	PainBackOffBackwardsAndLeft:
 		NULL A 0 A_FaceTarget
 		PFLM G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		NULL A 0 A_Pain
 		PFLM G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360+166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360+166.7, 4, 0, 0)
 		//NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
 	PainBackOffBackwardsAndRight:
 		NULL A 0 A_FaceTarget
 		PFLM G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		NULL A 0 A_Pain
 		PFLM G 4 A_Recoil(0.504)
-		NULL A 0 ThrustThing (angle*256/360-166.7, 4, 0, 0)
+		NULL A 0 ThrustThing(angle*256/360-166.7, 4, 0, 0)
 		//NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
