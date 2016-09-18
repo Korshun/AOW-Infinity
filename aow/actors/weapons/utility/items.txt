@@ -1,5 +1,6 @@
 //Utility Gun items, etc.
-Actor C4Box : AmmoPack {
+Actor C4Box : AmmoPack
+{
 	Inventory.PickupMessage "Picked up a C4 box."
 	RenderStyle Translucent
 	Alpha 0.0
@@ -20,7 +21,8 @@ Actor C4Box : AmmoPack {
 	}
 }
 
-Actor FullRefillPack : AmmoPack {
+Actor FullRefillPack : AmmoPack
+{
 	Inventory.PickupMessage "Picked up a full refill pack."
 	RenderStyle Translucent
 	Alpha 0.0
@@ -42,7 +44,8 @@ Actor FullRefillPack : AmmoPack {
 	}
 }
 
-Actor Utility_Raven : RavenSwitchPickup {
+Actor Utility_Raven : RavenSwitchPickup
+{
 	RenderStyle translucent
 	Alpha 1.0
 	States
@@ -59,7 +62,8 @@ Actor Utility_Raven : RavenSwitchPickup {
 	}
 }
 
-Actor Utility_Wolverine : WolverineSwitchPickup {
+Actor Utility_Wolverine : WolverineSwitchPickup
+{
 	RenderStyle translucent
 	Alpha 1.0
 	States

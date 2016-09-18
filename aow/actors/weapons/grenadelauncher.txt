@@ -1,5 +1,6 @@
 // Grenade launcher
-Actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
+Actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046
+{
 	+WEAPON.NOAUTOAIM
 	Obituary "$OB_GRENADE" // "%o ate %k's grenade."
 	Inventory.PickupMessage "You got the grenade launcher!"
@@ -53,7 +54,8 @@ Actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046 {
 // orca still uses this
 Actor GrenadeSwitch : Boolean {}
 
-Actor GrenadeAmmo : Ammo {
+Actor GrenadeAmmo : Ammo
+{
 	 Inventory.Amount 6
 	 Inventory.MaxAmount 40
 	 Ammo.BackpackAmount 5
@@ -66,7 +68,8 @@ Actor GrenadeAmmo : Ammo {
 	 }
 }
 
-Actor GrenadeGrenade {
+Actor GrenadeGrenade
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY
@@ -94,7 +97,8 @@ Actor GrenadeGrenade {
 	}
 }
 
-Actor GrenadeBounce : GrenadeGrenade {
+Actor GrenadeBounce : GrenadeGrenade
+{
 	+DOOMBOUNCE
 	-LOWGRAVITY
 	Obituary "$OB_GRENADE_ALT" // "%o played catch with %k's grenade."

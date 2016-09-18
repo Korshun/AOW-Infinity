@@ -1,5 +1,6 @@
 // PLASMA CANNON
-Actor PlasmaCannon : AOWWeapon {
+Actor PlasmaCannon : AOWWeapon
+{
 	Weapon.SelectionOrder 1
 	Weapon.Kickback 100
 	Weapon.AmmoType "PlasmaCannonAmmo"
@@ -98,7 +99,8 @@ Actor PlasmaCannon : AOWWeapon {
 	}
 }
 
-Actor PlasmaCannonAmmo : Ammo {
+Actor PlasmaCannonAmmo : Ammo
+{
 	Inventory.amount 0
 	Inventory.MaxAmount 10
 	Ammo.BackpackAmount 1
@@ -115,7 +117,8 @@ Actor PlasmaCannonAmmo : Ammo {
 // ===================================================
 // ---------------------------- MAIN PROJECTILE ACTORS
 // ===================================================
-Actor PlasmaCannonBall {
+Actor PlasmaCannonBall
+{
 	PROJECTILE
 	+FORCEXYBILLBOARD
 	+EXTREMEDEATH
@@ -148,7 +151,8 @@ Actor PlasmaCannonBall {
 	}
 }
 
-Actor PlasmaCannonBallSmall : PlasmaCannonBall {
+Actor PlasmaCannonBallSmall : PlasmaCannonBall
+{
 	+SEEKERMISSILE
 	-EXTREMEDEATH
 	Radius 9
@@ -177,7 +181,8 @@ Actor PlasmaCannonBallSmall : PlasmaCannonBall {
 	}
 }
 
-Actor PlasmaCannonBallBlue : PlasmaCannonBall {
+Actor PlasmaCannonBallBlue : PlasmaCannonBall
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	Obituary "$OB_PLASMACANNON_BLUE" // "%o was annihilated by %k's \cNPlasma Cannon."
 	DamageType "Explosion"
@@ -195,7 +200,8 @@ Actor PlasmaCannonBallBlue : PlasmaCannonBall {
 	}
 }
 
-Actor PlasmaCannonBallSmallBlue : PlasmaCannonBallSmall {
+Actor PlasmaCannonBallSmallBlue : PlasmaCannonBallSmall
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	Obituary "$OB_PLASMACANNON_ALT_BLUE" // "%o couldn't escape %k's \cnPlasma Cannon."
 	DamageType "Explosion"
@@ -204,7 +210,8 @@ Actor PlasmaCannonBallSmallBlue : PlasmaCannonBallSmall {
 // =========================================
 // ---------------------------- DECAY ACTORS
 // =========================================
-Actor PlasmaFlameDecay {
+Actor PlasmaFlameDecay
+{
 	RenderStyle None
 	+NOBLOCKMAP
 	+NOGRAVITY
@@ -220,7 +227,8 @@ Actor PlasmaFlameDecay {
 	}
 }
 
-Actor PlasmaFlameDecayFX {
+Actor PlasmaFlameDecayFX
+{
 	+CLIENTSIDEONLY +NOBLOCKMAP
 	+NOGRAVITY +NOINTERACTION
 	ReactionTime 66
@@ -239,7 +247,8 @@ Actor PlasmaFlameDecayFX {
 
 Actor PlasmaFlameDecayBlue : PlasmaFlameDecay {DamageType "Fire"}
 
-Actor PlasmaFlameCluster {
+Actor PlasmaFlameCluster
+{
 	+NOBLOCKMAP +NOGRAVITY
 	+CLIENTSIDEONLY +NOINTERACTION
 	ReactionTime 60
@@ -257,7 +266,8 @@ Actor PlasmaFlameCluster {
 }
 
 
-Actor PlasmaFlameTail {
+Actor PlasmaFlameTail
+{
 	+CLIENTSIDEONLY +NOBLOCKMAP
 	+NOGRAVITY +NOINTERACTION
 	States
@@ -270,7 +280,8 @@ Actor PlasmaFlameTail {
 	}
 }
 
-Actor PlasmaFlameTailSmall : PlasmaFlameTail {
+Actor PlasmaFlameTailSmall : PlasmaFlameTail
+{
 	States
 	{
 	Spawn:
@@ -281,7 +292,8 @@ Actor PlasmaFlameTailSmall : PlasmaFlameTail {
 	}
 }
 
-Actor PlasmaFlame {
+Actor PlasmaFlame
+{
 	+CLIENTSIDEONLY +NOBLOCKMAP
 	+NOGRAVITY +NOINTERACTION
 	+FORCEXYBILLBOARD
@@ -303,7 +315,8 @@ Actor PlasmaFlame {
 	}
 }
 
-Actor PlasmaFlameSmall : PlasmaFlame {
+Actor PlasmaFlameSmall : PlasmaFlame
+{
 	Scale 0.8
 	States
 	{

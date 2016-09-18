@@ -1,4 +1,5 @@
-Actor SubMachineGun : AOWWeapon 21043 {
+Actor SubMachineGun : AOWWeapon 21043
+{
 	//$Category Weapons
 	Tag "Sub-Machine Gun"
 	Obituary "$OB_SUBBY" // "%o was whittled down by %k's submachinegun."

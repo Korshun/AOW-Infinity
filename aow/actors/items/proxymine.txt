@@ -1,5 +1,6 @@
 // Proxy mine
-Actor ProxyMine : InventoryItem {
+Actor ProxyMine : InventoryItem
+{
 	Inventory.icon "mineicon"
 	Tag "Proxy C4 -mine"
 	Inventory.MaxAmount 6
@@ -28,7 +29,8 @@ Actor ProxyMine : InventoryItem {
 
 Actor ProxyMineCount : Inventory {Inventory.MaxAmount 6}
 
-Actor ProxyMineRed {
+Actor ProxyMineRed
+{
 	MONSTER
 	-SOLID
 	-FRIENDLY
@@ -112,7 +114,8 @@ Actor ProxyMineRed {
 	}
 }
 
-Actor ProxyMineExplosion {
+Actor ProxyMineExplosion
+{
 	PROJECTILE
 	-RANDOMIZE
 	+NOCLIP

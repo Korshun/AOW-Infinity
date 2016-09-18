@@ -1,5 +1,6 @@
 // Admin pistol
-Actor AdminPistol : AOWWeapon {
+Actor AdminPistol : AOWWeapon
+{
 	+NOAUTOFIRE
 	+NOAUTOAIM
 	Inventory.PickupMessage "If you see this message, you are \cgHACKING."
@@ -86,7 +87,8 @@ Actor AdminPistolRotation : Inventory {Inventory.MaxAmount 2}
 Actor TimePuff : AOWBulletPuff {DamageType "TimeRed"}
 Actor TimePuffBlue : AOWBulletPuff {DamageType "TimeBlue"}
 
-Actor Administrator : Player {
+Actor Administrator : Player
+{
 	Health 200
 	Player.MaxHealth 200
 	Player.DisplayName "Administrator"
@@ -108,12 +110,14 @@ Actor Administrator : Player {
 }
 
 Actor AdministratorSwitch : PermanentPowerup {Powerup.Type "Administrator"}
-Actor PowerAdministrator : PowerMorph {
+Actor PowerAdministrator : PowerMorph
+{
 	PowerMorph.PlayerClass "Administrator"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }
 
-Actor AdminCrown {
+Actor AdminCrown
+{
 	+CLIENTSIDEONLY +NOINTERACTION +NOGRAVITY
 	States
 	{

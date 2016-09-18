@@ -1,5 +1,6 @@
 //Beacons
-Actor IonCannonBeacon : InventoryItem {
+Actor IonCannonBeacon : InventoryItem
+{
 	Inventory.icon "ionicon"
 	Tag "Ion Cannon Beacon"
 	States
@@ -21,7 +22,8 @@ Actor IonCannonBeacon : InventoryItem {
 	}
 }
 
-Actor NuclearStrikeBeacon : InventoryItem {
+Actor NuclearStrikeBeacon : InventoryItem
+{
 	Inventory.icon "nukeicon"
 	Tag "Nuclear Strike Beacon"
 	States
@@ -47,7 +49,8 @@ Actor NuclearStrikeBeacon : InventoryItem {
 Actor BeaconUseToken : Boolean {}
 Actor PlantingBeacon : Boolean {}
 
-Actor IonCannonPlaced {
+Actor IonCannonPlaced
+{
 	Obituary "$OB_IONCANNON" // "%o was obliterated by %k's \cHIon Cannon."
 	Radius 6
 	Height 8
@@ -199,7 +202,8 @@ Actor IonCannonPlaced {
 	}
 }
 
-Actor IonBlaster : IonCannonPlaced {
+Actor IonBlaster : IonCannonPlaced
+{
 	States
 	{
 	Spawn:
@@ -372,7 +376,8 @@ Actor NuclearStrikePlaced
 	}
 } 
 
-Actor BeaconItem : CustomInventory {
+Actor BeaconItem : CustomInventory
+{
 	Inventory.PickupMessage "Snagged an item."
 	Inventory.MaxAmount 0
 	Inventory.amount 0
@@ -389,7 +394,8 @@ Actor BeaconItem : CustomInventory {
 	}
 }
 
-Actor IonBeaconThrown {
+Actor IonBeaconThrown
+{
 	PROJECTILE
 	-NOGRAVITY
 	+THRUGHOST
@@ -419,7 +425,8 @@ Actor IonBeaconThrown {
 	}
 }
 
-Actor NukeBeaconThrown : IonBeaconThrown {
+Actor NukeBeaconThrown : IonBeaconThrown
+{
 	States
 	{
 	Spawn:
@@ -439,7 +446,8 @@ Actor NukeBeaconThrown : IonBeaconThrown {
 }
 
 // NOTE: DEBUG ACTORS
-Actor IonMissile : Rocket {
+Actor IonMissile : Rocket
+{
 	DamageType "SuperweaponIon"
 	States
 	{
@@ -449,7 +457,8 @@ Actor IonMissile : Rocket {
 		Stop
 	}
 }
-Actor NuclearMissile : Rocket {
+Actor NuclearMissile : Rocket
+{
 	DamageType "Superweapon"
 	States
 	{

@@ -1,5 +1,6 @@
 // Double-barreled Shotgun
-Actor DoubleShotgun : AOWWeapon {
+Actor DoubleShotgun : AOWWeapon
+{
 	Inventory.PickupMessage "You got the double shotgun!"
 	Obituary "$OB_DOUBLESHOTGUN" // "%o was splattered by %k's double shotgun."
 	AttackSound "weapons/sshotf"
@@ -49,7 +50,8 @@ Actor DoubleShotgun : AOWWeapon {
 	}
 }
 
-Actor DoubleShotgunPickup : CustomInventory replaces SuperShotgun 21086 {
+Actor DoubleShotgunPickup : CustomInventory replaces SuperShotgun 21086
+{
 	Inventory.PickupMessage "You got the double shotgun!"
 	Inventory.MaxAmount 0
 	Inventory.respawntics 2100

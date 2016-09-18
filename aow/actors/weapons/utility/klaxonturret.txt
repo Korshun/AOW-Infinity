@@ -1,5 +1,6 @@
 // Klaxon turret AKA Advanced Gun Turret
-Actor Utility_KlaxonRed : Utility_TurretBase {
+Actor Utility_KlaxonRed : Utility_TurretBase
+{
 	Obituary "%o was pwned by a \cgRed\c- klaxon turret."
 	Health 250
 	Speed 0
@@ -93,7 +94,8 @@ Actor Utility_KlaxonRed : Utility_TurretBase {
 	}
 }
 
-Actor Utility_KlaxonBlue : Utility_TurretBase {
+Actor Utility_KlaxonBlue : Utility_TurretBase
+{
 	Obituary "%o was pwned by a \chBlue\c- klaxon turret."
 	Health 250
 	Speed 0
@@ -188,7 +190,8 @@ Actor Utility_KlaxonBlue : Utility_TurretBase {
 	}
 }
 
-Actor KlaxonMarker : MapMarker {
+Actor KlaxonMarker : MapMarker
+{
 	Scale .1
 	States
 	{

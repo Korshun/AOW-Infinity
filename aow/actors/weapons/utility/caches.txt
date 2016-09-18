@@ -1,5 +1,6 @@
 // Caches
-Actor CacheBase : SwitchableDecoration {
+Actor CacheBase : SwitchableDecoration
+{
 	-SOLID +SHOOTABLE
 	+NOBLOOD +ACTIVATEMCROSS
 	+DONTGIB +NOICEDEATH
@@ -50,7 +51,8 @@ Actor CacheBase : SwitchableDecoration {
 	}
 }
 
-Actor MedicalCache : CacheBase 21416 {
+Actor MedicalCache : CacheBase 21416
+{
 	Tag "Medical Cache"
 	Health 300
 	States
@@ -82,7 +84,8 @@ Actor MedicalCache : CacheBase 21416 {
 	}
 }
 
-Actor MedicalCacheHealth : Stimpack {
+Actor MedicalCacheHealth : Stimpack
+{
 	States
 	{
 	Spawn:
@@ -92,7 +95,8 @@ Actor MedicalCacheHealth : Stimpack {
 	}
 }
 
-Actor AmmoCache : CacheBase 21417 {
+Actor AmmoCache : CacheBase 21417
+{
 	Tag "Ammo Cache"
 	Health 400
 	States
@@ -123,7 +127,8 @@ Actor AmmoCache : CacheBase 21417 {
 	}
 }
 
-Actor AmmoCachePack : AmmoPack {
+Actor AmmoCachePack : AmmoPack
+{
 	Inventory.PickupMessage "Picked up an Ammo pack."
 	States
 	{
@@ -156,7 +161,8 @@ Actor AmmoCachePack : AmmoPack {
 	}
 }
 
-Actor SuperCache : CacheBase {
+Actor SuperCache : CacheBase
+{
 	Tag "Super Cache"
 	Health 800
 	States
@@ -188,7 +194,8 @@ Actor SuperCache : CacheBase {
 	}
 }
 
-Actor SuperCacheMapSpawned : SuperCache 21418 {
+Actor SuperCacheMapSpawned : SuperCache 21418
+{
 	+SOLID
 	-NOCLIP
 	-NOGRAVITY
@@ -201,7 +208,8 @@ Actor SuperCacheMapSpawned : SuperCache 21418 {
 	}
 }
 
-Actor MedicalCacheFlare {
+Actor MedicalCacheFlare
+{
 	+RANDOMIZE +NOCLIP
 	+NOGRAVITY +BRIGHT
 	+NOINTERACTION +CLIENTSIDEONLY
@@ -221,7 +229,8 @@ Actor MedicalCacheFlare {
 	}
 }
 
-Actor AmmoCacheFlare : MedicalCacheFlare {
+Actor AmmoCacheFlare : MedicalCacheFlare
+{
 	States
 	{
 	Spawn:
@@ -230,7 +239,8 @@ Actor AmmoCacheFlare : MedicalCacheFlare {
 	}
 }
 
-Actor SuperCacheFlare : MedicalCacheFlare {
+Actor SuperCacheFlare : MedicalCacheFlare
+{
 	States
 	{
 	Spawn:
@@ -239,7 +249,8 @@ Actor SuperCacheFlare : MedicalCacheFlare {
 	}
 }
 
-Actor MiniRefCacheFlare : MedicalCacheFlare {
+Actor MiniRefCacheFlare : MedicalCacheFlare
+{
 	States
 	{
 	Spawn:

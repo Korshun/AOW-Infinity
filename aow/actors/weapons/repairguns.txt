@@ -1,5 +1,6 @@
 // Repair gun
-Actor RepairGun : AOWWeapon {
+Actor RepairGun : AOWWeapon
+{
 	Weapon.Kickback 0
 	Inventory.pickupsound "misc/w_pkup"
 	Obituary "%o was repaired to death by %k."
@@ -57,7 +58,8 @@ Actor RepairGun : AOWWeapon {
 }
 Actor RepairGunUpgrade : Boolean {}
 
-Actor HealGun : RepairGun {
+Actor HealGun : RepairGun
+{
 	Inventory.PickupMessage "Picked up the Healing Gun."
 	Obituary "%o suffers from medicophobia."
 	Weapon.PreferredSkin "MarineMedic"
@@ -89,7 +91,8 @@ Actor HealGun : RepairGun {
 	}
 }
 
-Actor BombSquadGun : RepairGun {
+Actor BombSquadGun : RepairGun
+{
 	Inventory.PickupMessage "Picked up the Bomb-Squad Gun."
 	AttackSound "repairgun/fire"
 	Obituary "%o was disarmed by %k."
@@ -114,7 +117,8 @@ Actor BombSquadGun : RepairGun {
 	}
 }
 
-Actor DisarmPuff {
+Actor DisarmPuff
+{
 	+NOINTERACTION
 	+PUFFONACTORS
 	+BLOODLESSIMPACT
@@ -138,7 +142,8 @@ Actor DisarmPuff {
 		Stop
 	}
 }
-Actor RepairDisarmPuff : DisarmPuff {
+Actor RepairDisarmPuff : DisarmPuff
+{
 	Translation "0:255=0:255"
 	States
 	{
@@ -151,7 +156,8 @@ Actor RepairDisarmPuff : DisarmPuff {
 	}
 }
 
-Actor EnhancedRepairDisarmPuff : DisarmPuff {
+Actor EnhancedRepairDisarmPuff : DisarmPuff
+{
 	Translation "112:127=250:254"
 	States
 	{
@@ -164,7 +170,8 @@ Actor EnhancedRepairDisarmPuff : DisarmPuff {
 	}
 }
 
-Actor MedicPuff : DisarmPuff {
+Actor MedicPuff : DisarmPuff
+{
 	Translation "112:127=174:189"
 	States
 	{

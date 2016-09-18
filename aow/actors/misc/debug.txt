@@ -1,5 +1,6 @@
 // misc stuff
-Actor DamageTypeIndicator {
+Actor DamageTypeIndicator
+{
 	+SHOOTABLE
 	+NOCLIP
 	+NODAMAGE

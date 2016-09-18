@@ -1,4 +1,5 @@
-Actor PowerPlantSmokeGenerator 21406 {
+Actor PowerPlantSmokeGenerator 21406
+{
 	+NOGRAVITY
 	+INVULNERABLE
 	+SHOOTABLE
@@ -16,7 +17,8 @@ Actor PowerPlantSmokeGenerator 21406 {
 	}
 }
 
-Actor PowerPlantSmokeGeneratorFX {
+Actor PowerPlantSmokeGeneratorFX
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -27,7 +29,8 @@ Actor PowerPlantSmokeGeneratorFX {
 	}
 }
 
-Actor PowerPlantSmokeGeneratorSmall 24002 {
+Actor PowerPlantSmokeGeneratorSmall 24002
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States

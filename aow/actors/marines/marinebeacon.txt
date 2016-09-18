@@ -1,5 +1,6 @@
 // MARINE BEACON
-Actor BlueRandomMarine : RandomSpawner {
+Actor BlueRandomMarine : RandomSpawner
+{
 	DropItem "BlueRocketSoldier"
 	DropItem "BlueSuperShotgunner"
 	DropItem "BlueTiberiumRifleman"
@@ -7,7 +8,8 @@ Actor BlueRandomMarine : RandomSpawner {
 	DropItem "BlueFlamerDude"
 }
 
-Actor RedRandomMarine : RandomSpawner {
+Actor RedRandomMarine : RandomSpawner
+{
 	DropItem "RedRocketSoldier"
 	DropItem "RedSuperShotgunner"
 	DropItem "RedTiberiumRifleman"
@@ -16,7 +18,8 @@ Actor RedRandomMarine : RandomSpawner {
 }
 
 // no count item for this one because it cannot be refilled in any form
-Actor MarineBeaconItem : InventoryItem 29016 {
+Actor MarineBeaconItem : InventoryItem 29016
+{
 	Inventory.icon "mbcnicon"
 	Inventory.PickupMessage "Picked up a marine beacon!"
 	States
@@ -38,7 +41,8 @@ Actor MarineBeaconItem : InventoryItem 29016 {
 	}
 }
 
-Actor MarineBeaconThrown : HealingRadiusThrown {
+Actor MarineBeaconThrown : HealingRadiusThrown
+{
 	States
 	{
 	Spawn:
@@ -51,7 +55,8 @@ Actor MarineBeaconThrown : HealingRadiusThrown {
 	}
 }
 
-Actor MarineBeaconThrownBlue : HealingRadiusThrown {
+Actor MarineBeaconThrownBlue : HealingRadiusThrown
+{
 	Translation "32:39=200:207", "168:183=192:207", "184:191=240:247"
 	States
 	{
@@ -65,7 +70,8 @@ Actor MarineBeaconThrownBlue : HealingRadiusThrown {
 	}
 }
 
-Actor MarineBeacon {
+Actor MarineBeacon
+{
 	States
 	{
 	Spawn:
@@ -89,7 +95,8 @@ Actor MarineBeacon {
 }
 
 // for some reason inheritance breaks this o_O
-Actor MarineBeaconBlue {
+Actor MarineBeaconBlue
+{
 	States
 	{
 	Spawn:

@@ -1,5 +1,6 @@
 // LASER RIFLE
-Actor StealthLaserRifle : AOWWeapon {
+Actor StealthLaserRifle : AOWWeapon
+{
 	+NOEXTREMEDEATH
 	+ALT_AMMO_OPTIONAL
 	DropItem "LaserRifle"
@@ -154,7 +155,8 @@ Actor StealthLaserRifle : AOWWeapon {
 	}
 }
 
-Actor LaserRifle : StealthLaserRifle 21050 {
+Actor LaserRifle : StealthLaserRifle 21050
+{
 	Weapon.AmmoType2 ""
 	Weapon.SelectionOrder 9
 	States
@@ -166,7 +168,8 @@ Actor LaserRifle : StealthLaserRifle 21050 {
 	}
 }
 
-Actor LaserRifleAmmo : Ammo {
+Actor LaserRifleAmmo : Ammo
+{
 	Inventory.amount 20
 	Inventory.MaxAmount 200
 	Ammo.BackpackAmount 20
@@ -179,7 +182,8 @@ Actor LaserRifleAmmo : Ammo {
 	}
 }
 
-Actor LaserPuff : AOWBulletPuff {
+Actor LaserPuff : AOWBulletPuff
+{
 	-ALLOWPARTICLES +PUFFONACTORS
 	Scale 0.5
 	DamageType "Laser"
@@ -198,12 +202,14 @@ Actor LaserPuff : AOWBulletPuff {
 	}
 }
 
-Actor LaserPuffBlue : LaserPuff {
+Actor LaserPuffBlue : LaserPuff
+{
 	DamageType "Laser"
 	Translation "0:255=0:255"
 }
 
-Actor StealthCharge : Ammo {
+Actor StealthCharge : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 0
 	Inventory.MaxAmount 100

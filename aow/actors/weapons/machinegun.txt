@@ -1,5 +1,6 @@
 // MACHINE GUN
-Actor MachineGun : AOWWeapon {
+Actor MachineGun : AOWWeapon
+{
 	Obituary "$OB_MACHINEGUN"
 	AttackSound "ak47/fire"
 	Weapon.SelectionOrder 14
@@ -91,14 +92,16 @@ Actor MachineGun : AOWWeapon {
 }
 
 Actor MachineGunSwitch : Boolean {}
-Actor MachineGunAmmo : Ammo {
+Actor MachineGunAmmo : Ammo
+{
 	Inventory.amount 30
 	Inventory.MaxAmount 400
 	Ammo.BackpackAmount 30
 	Ammo.BackpackMaxAmount 400
 }
 
-Actor MachineGunPickup : CustomInventory replaces Chaingun 21044 {
+Actor MachineGunPickup : CustomInventory replaces Chaingun 21044
+{
 	Inventory.PickupMessage "You got the machinegun!"
 	Inventory.MaxAmount 0
 	Inventory.respawntics 2100

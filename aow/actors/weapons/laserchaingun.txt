@@ -1,5 +1,6 @@
 // Laser Chaingun
-Actor LaserChaingun : AOWWeapon {
+Actor LaserChaingun : AOWWeapon
+{
 	Obituary "$OB_LASERCHAINGUN" // "%o was incinerated by %k's laser chaingun."
 	AttackSound "lchaingun/fire"
 	Inventory.PickupMessage "You got the laser chaingun!"
@@ -114,7 +115,8 @@ Actor LaserChaingun : AOWWeapon {
 	}
 }
 
-Actor LaserChaingunAmmo : Ammo {
+Actor LaserChaingunAmmo : Ammo
+{
 	Inventory.amount 50
 	Inventory.MaxAmount 400
 	Ammo.BackpackAmount 50
@@ -127,7 +129,8 @@ Actor LaserChaingunAmmo : Ammo {
 	}
 }
 
-Actor LaserChaingunPickup : CustomInventory 21083 {
+Actor LaserChaingunPickup : CustomInventory 21083
+{
 	Inventory.PickupMessage "You got the laser chaingun!"
 	Inventory.MaxAmount 0
 	Inventory.respawntics 2100

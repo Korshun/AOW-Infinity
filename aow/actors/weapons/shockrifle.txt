@@ -1,5 +1,6 @@
 // Shock rifle
-Actor ShockRifle : AOWWeapon 21068 {
+Actor ShockRifle : AOWWeapon 21068
+{
 	Obituary "%o felt %k's surge."
 	Inventory.PickupMessage "You got the shock rifle!"
 	Weapon.SelectionOrder 4
@@ -40,14 +41,16 @@ Actor ShockRifle : AOWWeapon 21068 {
 	}
 }
 
-Actor GeneporiumCharge : Ammo {
+Actor GeneporiumCharge : Ammo
+{
 	Inventory.amount 20
 	Inventory.MaxAmount 200
 	Ammo.BackpackAmount 20
 	Ammo.BackpackMaxAmount 200
 }
 
-Actor VoltagePuff {
+Actor VoltagePuff
+{
 	RenderStyle Add
 	Alpha 0.5
 	+NOBLOCKMAP +NOGRAVITY
@@ -66,7 +69,8 @@ Actor VoltagePuff {
 	}
 }
 
-Actor VoltagePuff2 {
+Actor VoltagePuff2
+{
 	RenderStyle Add
 	Alpha 0.5
 	+NOBLOCKMAP
@@ -105,7 +109,8 @@ Actor VoltageDecay { //Now with extra hi-res funk!
 	}
 }
 
-Actor VoltageSpark {
+Actor VoltageSpark
+{
 	PROJECTILE
 	+CLIENTSIDEONLY -ACTIVATEIMPACT
 	-ACTIVATEPCROSS +NOBLOCKMAP
@@ -134,7 +139,8 @@ Actor VoltageSpark {
 
 // broken for now
 /*
-Actor VoltageTrailPuff : BulletPuff {
+Actor VoltageTrailPuff : BulletPuff
+{
 	+PUFFGETSOWNER
 	+ALWAYSPUFF
 	+PUFFONACTORS
@@ -150,7 +156,8 @@ Actor VoltageTrailPuff : BulletPuff {
 
 // DECAY CLUSTERS (power generator)
 
-Actor VoltageDecayClusterBlue {
+Actor VoltageDecayClusterBlue
+{
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+NOINTERACTION
@@ -163,11 +170,13 @@ Actor VoltageDecayClusterBlue {
 	}
 }
 
-Actor VoltageDecayClusterRed : VoltageDecayClusterBlue {
+Actor VoltageDecayClusterRed : VoltageDecayClusterBlue
+{
 	DamageType "Laser"
 }
 
-Actor VoltageDecayClusterFX {
+Actor VoltageDecayClusterFX
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+NOGRAVITY
@@ -181,7 +190,8 @@ Actor VoltageDecayClusterFX {
 	}
 }
 
-Actor VoltageDecayCluster {
+Actor VoltageDecayCluster
+{
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+NOINTERACTION

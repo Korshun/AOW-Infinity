@@ -1,4 +1,5 @@
-Actor Flash {
+Actor Flash
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	States
@@ -9,7 +10,8 @@ Actor Flash {
 	}
 }
 
-Actor PermanentFlameDecay 21499 {
+Actor PermanentFlameDecay 21499
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States

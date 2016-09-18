@@ -9,7 +9,8 @@ Actor InUtilMenu : Inventory {Inventory.MaxAmount 1}
 Actor NoMechs : Inventory {Inventory.MaxAmount 1}
 Actor PortalsEnabled : Inventory {Inventory.MaxAmount 1}
 
-Actor UtilityGun : AOWWeapon {
+Actor UtilityGun : AOWWeapon
+{
 	Inventory.PickupSound "misc/w_pkup"
 	DropItem "EngineerPack"
 	Weapon.AmmoType "Utility_Percent"
@@ -974,14 +975,16 @@ Actor UtilityGun : AOWWeapon {
 	}
 }
 
-Actor Utility_Percent : Ammo {
+Actor Utility_Percent : Ammo
+{
 	Inventory.amount 0
 	Inventory.MaxAmount 100
 	Ammo.BackpackAmount 0
 	Ammo.BackpackMaxAmount 0
 }
 
-Actor Utility_TurretBase {
+Actor Utility_TurretBase
+{
 	DamageFactor "Disarm", 0.0
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "RazorWire", 0.0
@@ -1026,7 +1029,8 @@ Actor Utility_TurretBase {
 
 // [NF] This Actor is used to clear places like War Factory hangar doors, teleport
 // destinations and the like from utility items
-Actor AntiUtilityExplosion {
+Actor AntiUtilityExplosion
+{
 	+NOGRAVITY +NOBLOCKMAP
 	+NOINTERACTION +NODAMAGETHRUST
 	+BLOODLESSIMPACT
@@ -1040,7 +1044,8 @@ Actor AntiUtilityExplosion {
 	}
 }
 
-Actor PowerupCacheMapSpawned 21490 {
+Actor PowerupCacheMapSpawned 21490
+{
 	States
 	{
 	Spawn:

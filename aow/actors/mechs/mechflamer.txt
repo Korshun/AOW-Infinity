@@ -1,4 +1,5 @@
-Actor FlameShot {
+Actor FlameShot
+{
 	Radius 13
 	Height 8
 	Speed 20
@@ -29,7 +30,8 @@ Actor FlameShot {
 	}
 }
 
-Actor FlameShotBlue : FlameShot {
+Actor FlameShotBlue : FlameShot
+{
 	DamageType "Fire"
 	States
 	{
@@ -50,7 +52,8 @@ Actor FlameShotBlue : FlameShot {
 	}
 }
 
-Actor FlameShotDebris {
+Actor FlameShotDebris
+{
 	+CLIENTSIDEONLY
 	Speed 0
 	Damage 0
@@ -66,7 +69,8 @@ Actor FlameShotDebris {
 	}
 }
 
-Actor FlameDebrisFX {
+Actor FlameDebrisFX
+{
 	PROJECTILE
 	-RANDOMIZE
 	+CLIENTSIDEONLY
@@ -98,7 +102,8 @@ Actor FlameDebrisFX {
 	}
 }
 
-Actor FlameDecay {
+Actor FlameDecay
+{
 	+NOBLOCKMAP
 	+NODAMAGETHRUST
 	+NOEXPLODEFLOOR
@@ -122,7 +127,8 @@ Actor FlameDecay {
 	}
 }
 
-Actor FlameDecayFX {
+Actor FlameDecayFX
+{
 	+NOBLOCKMAP +CLIENTSIDEONLY
 	States
 	{
@@ -134,7 +140,8 @@ Actor FlameDecayFX {
 	}
 }
 
-Actor FlameDecayStrong : FlameDecay {
+Actor FlameDecayStrong : FlameDecay
+{
 	States
 	{
 	Idle:
@@ -144,7 +151,8 @@ Actor FlameDecayStrong : FlameDecay {
 	}
 }
 
-Actor FlameWallDecay : FlameDecay {
+Actor FlameWallDecay : FlameDecay
+{
 	Obituary "%o ran into %k's firestorm."
 	ReactionTime 22
 	States
@@ -161,7 +169,8 @@ Actor FlameWallDecay : FlameDecay {
 	}
 }
 
-Actor FlameWallDecayFX {
+Actor FlameWallDecayFX
+{
 	Gravity 0.5
 	+NOBLOCKMAP +CLIENTSIDEONLY
 	States

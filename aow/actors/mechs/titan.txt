@@ -1,5 +1,6 @@
 // TITAN MECH
-Actor Titan : MechPlayer_Base {
+Actor Titan : MechPlayer_Base
+{
 	Health 5000
 	Radius 58
 	Height 128
@@ -87,7 +88,8 @@ Actor PowerTitan2 : AOWMorph {PowerMorph.PlayerClass "TitanUsed"}
 Actor TitanSwitch : PermanentPowerup {Powerup.Type "Titan"}
 Actor TitanSwitch2 : PermanentPowerup {Powerup.Type "Titan2"}
 
-Actor TitanSwitchPickup : CustomInventory {
+Actor TitanSwitchPickup : CustomInventory
+{
 	Inventory.pickupsound "mech/start"
 	Translation "112:127=[255,255,255]:[0,0,0]"
 	+INVENTORY.AUTOACTIVATE
@@ -106,7 +108,8 @@ Actor TitanSwitchPickup : CustomInventory {
 	}
 }
 
-Actor TitanWeapons : AOWWeapon {
+Actor TitanWeapons : AOWWeapon
+{
 	Weapon.SelectionOrder 1
 	Weapon.AmmoUse 0
 	Weapon.AmmoGive 40
@@ -280,21 +283,24 @@ Actor TitanWeapons : AOWWeapon {
 	}
 }
 
-Actor Titan-80mmAmmo : Ammo {
+Actor Titan-80mmAmmo : Ammo
+{
 	Inventory.amount 1
 	Inventory.MaxAmount 40
 	Ammo.BackpackAmount 1
 	Ammo.BackpackMaxAmount 40
 }
 
-Actor Titan-FlamerAmmo : Ammo {
+Actor Titan-FlamerAmmo : Ammo
+{
 	Inventory.amount 50
 	Inventory.MaxAmount 800
 	Ammo.BackpackAmount 50
 	Ammo.BackpackMaxAmount 800
 }
 
-Actor TitanShell {
+Actor TitanShell
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY
@@ -335,7 +341,8 @@ Actor TitanShell {
 	}
 }
 
-Actor TitanShellBlue : TitanShell {
+Actor TitanShellBlue : TitanShell
+{
 	Translation "112:120=200:207", "121:127=241:247", "80:111=104:111"
 	DamageType "Explosion"
 	States
@@ -357,7 +364,8 @@ Actor TitanShellBlue : TitanShell {
 
 Actor Reload-80mm : Inventory {Inventory.MaxAmount 5}
 
-Actor Titan-RocketAmmo : Ammo {
+Actor Titan-RocketAmmo : Ammo
+{
 	Inventory.amount 20
 	Inventory.MaxAmount 480
 	Ammo.BackpackAmount 20
@@ -365,7 +373,8 @@ Actor Titan-RocketAmmo : Ammo {
 }
 
 
-Actor DamagedTitan {
+Actor DamagedTitan
+{
 	Health 300
 	Radius 58
 	Height 128
@@ -395,7 +404,8 @@ Actor DamagedTitan {
 	}
 }
 
-Actor EjectedTitan {
+Actor EjectedTitan
+{
 	Scale 1.1
 	Translation "112:127=[255,255,255]:[0,0,0]"
 	States
@@ -407,7 +417,8 @@ Actor EjectedTitan {
 	}
 }
 
-Actor TitanAmmoPackage : CustomInventory {
+Actor TitanAmmoPackage : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	States

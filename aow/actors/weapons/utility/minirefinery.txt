@@ -8,7 +8,8 @@
  * the mini-refinery is active.
  */
 
-Actor Utility_MiniRefCacheRed {
+Actor Utility_MiniRefCacheRed
+{
 	+SHOOTABLE +NOBLOOD
 	+ACTIVATEMCROSS +DONTGIB
 	+NOICEDEATH +NOGRAVITY
@@ -78,7 +79,8 @@ Actor Utility_MiniRefCacheRed {
 	}
 }
 
-Actor Utility_MiniRefCacheBlue : Utility_MiniRefCacheRed {
+Actor Utility_MiniRefCacheBlue : Utility_MiniRefCacheRed
+{
 	Obituary "%o ventured too close to the \cNBlue Mini-Refinery\c-."
 	DamageFactor "Fist", 0.2		DamageFactor "Fist", 0.0
 	DamageFactor "Bullet", 0.5		DamageFactor "Bullet", 0.0

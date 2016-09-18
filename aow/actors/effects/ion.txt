@@ -120,7 +120,8 @@ Actor BlueStrike
  }
 }
 
-Actor BlueStrikeFX {
+Actor BlueStrikeFX
+{
 	+CLIENTSIDEONLY
 	States
 	{
@@ -148,7 +149,8 @@ Actor BlueStrikeFX {
 }
 
 // debug Actor
-Actor BlueStrikeFXOgl : BlueStrikeFX {
+Actor BlueStrikeFXOgl : BlueStrikeFX
+{
 	States
 	{
 	Spawn:
@@ -391,7 +393,8 @@ Stop
 }
 }
 
-Actor IonFx {
+Actor IonFx
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+NOCLIP
@@ -556,7 +559,8 @@ States
 // ==========================================================================
 // [NF] more toned-down variants for ion bomb (aka Blue Juggernaut Mini-Nuke)
 // ==========================================================================
-Actor IonFXSmall {
+Actor IonFXSmall
+{
 	+NOINTERACTION +NOBLOCKMAP
 	+CLIENTSIDEONLY
 	States
@@ -581,7 +585,8 @@ Stop
 }
 }
 
-Actor IonSmokeFxSmall : IonSmokeFx {
+Actor IonSmokeFxSmall : IonSmokeFx
+{
 	Scale 6.0
 	States
 	{
@@ -611,7 +616,8 @@ Stop
 }
 }
 
-Actor IonFx2Small : IonFx2 {
+Actor IonFx2Small : IonFx2
+{
 	Scale 3.0
 	States
 	{
@@ -668,7 +674,8 @@ Alpha 0.05
 Actor BlueFlareSmall : BlueFlare {Scale 3.0}
 
 // software compat
-Actor IonFloorSoftware : IonRing {
+Actor IonFloorSoftware : IonRing
+{
 	States
 	{
 	Spawn:
@@ -677,7 +684,8 @@ Actor IonFloorSoftware : IonRing {
 	}
 }
 
-Actor IonSphereSoftware : IonRing {
+Actor IonSphereSoftware : IonRing
+{
 	States
 	{
 	Spawn:
@@ -686,7 +694,8 @@ Actor IonSphereSoftware : IonRing {
 	}
 }
 
-Actor IonBlasphemySoftware : IonRing {
+Actor IonBlasphemySoftware : IonRing
+{
 	States
 	{
 	Spawn:
@@ -695,7 +704,8 @@ Actor IonBlasphemySoftware : IonRing {
 	}
 }
 
-Actor IonSmokePoleSoftware : IonRing {
+Actor IonSmokePoleSoftware : IonRing
+{
 	States
 	{
 	Spawn:
@@ -704,7 +714,8 @@ Actor IonSmokePoleSoftware : IonRing {
 	}
 }
 
-Actor IonDebrisSoftware : IonRing {
+Actor IonDebrisSoftware : IonRing
+{
 	States
 	{
 	Spawn:
@@ -713,7 +724,8 @@ Actor IonDebrisSoftware : IonRing {
 	}
 }
 
-Actor IonSmokeFXSoftware : IonSmokeFX {
+Actor IonSmokeFXSoftware : IonSmokeFX
+{
 	Alpha 0.4
 	States
 	{

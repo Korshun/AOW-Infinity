@@ -1,5 +1,6 @@
 // Tiberium Crystal
-Actor TiberiumCrystalGiver : CustomInventory 21407 {
+Actor TiberiumCrystalGiver : CustomInventory 21407
+{
 	+AUTOACTIVATE +BRIGHT
 	+BLOODLESSIMPACT +NODAMAGETHRUST
 	Obituary "%o ventured too close to Tiberium."
@@ -27,7 +28,8 @@ Actor TiberiumCrystalGiver : CustomInventory 21407 {
 	}
 }
 
-Actor TiberiumCrystalDropped : TiberiumCrystalGiver {
+Actor TiberiumCrystalDropped : TiberiumCrystalGiver
+{
 	States
 	{
 	Spawn:
@@ -42,7 +44,8 @@ Actor TiberiumCrystalDropped : TiberiumCrystalGiver {
 	}
 }
 
-Actor TiberiumCrystal : CustomInventory {
+Actor TiberiumCrystal : CustomInventory
+{
 	+INVBAR
 	Inventory.PickupMessage "You aquired yourself some Tiberium."
 	Inventory.MaxAmount 1
@@ -67,7 +70,8 @@ Actor TiberiumCrystal : CustomInventory {
 	}
 }
 
-Actor TiberiumCrystalThrown {
+Actor TiberiumCrystalThrown
+{
 	PROJECTILE
 	-NOGRAVITY
 	+GHOST +THRUGHOST
@@ -101,7 +105,8 @@ Actor TiberiumCrystalThrown {
 	}
 }
 
-Actor TiberiumCrystalSitting {
+Actor TiberiumCrystalSitting
+{
 	+BLOODLESSIMPACT +NODAMAGETHRUST
 	Obituary "%o was \cDturned green\c- by %k's Tiberium crystal."
 	Radius 16 Height 32
@@ -122,7 +127,8 @@ Actor TiberiumCrystalSitting {
 	}
 }
 
-Actor TiberiumCrystalFX {
+Actor TiberiumCrystalFX
+{
 	+CLIENTSIDEONLY
 	ReactionTime 16
 	States
@@ -138,7 +144,8 @@ Actor TiberiumCrystalFX {
 	}
 }
 
-Actor TiberiumCrystalThrownBlue : TiberiumCrystalThrown {
+Actor TiberiumCrystalThrownBlue : TiberiumCrystalThrown
+{
 	DamageType "Chemical"
 	States
 	{
@@ -152,7 +159,8 @@ Actor TiberiumCrystalThrownBlue : TiberiumCrystalThrown {
 
 Actor TiberiumCrystalSittingBlue : TiberiumCrystalSitting {DamageType "Chemical"}
 
-Actor TiberiumChemSmoke {
+Actor TiberiumChemSmoke
+{
 	+NOSECTOR +NOCLIP +NOINTERACTION +CLIENTSIDEONLY
 	States
 	{
@@ -163,7 +171,8 @@ Actor TiberiumChemSmoke {
 	}
 }
 
-Actor TiberiumChemSmokePlayer {
+Actor TiberiumChemSmokePlayer
+{
 	+NOSECTOR +NOCLIP +NOINTERACTION +CLIENTSIDEONLY
 	States
 	{
@@ -175,7 +184,8 @@ Actor TiberiumChemSmokePlayer {
 }
 
 // AOW21-specific tiberium
-Actor FactoryTiberium : TiberiumCrystalGiver {
+Actor FactoryTiberium : TiberiumCrystalGiver
+{
 	States
 	{
 	Spawn:
@@ -185,7 +195,8 @@ Actor FactoryTiberium : TiberiumCrystalGiver {
 	}
 }
 
-Actor TiberiumMapMarker : MapMarker 17000 {
+Actor TiberiumMapMarker : MapMarker 17000
+{
 	+CLIENTSIDEONLY
 	Scale 0.175
 	States
@@ -196,7 +207,8 @@ Actor TiberiumMapMarker : MapMarker 17000 {
 	}
 }
 
-Actor TiberiumCrystalSound 21408 {
+Actor TiberiumCrystalSound 21408
+{
 	+CLIENTSIDEONLY +NOINTERACTION
 	States
 	{

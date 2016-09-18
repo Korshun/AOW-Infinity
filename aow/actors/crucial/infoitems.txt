@@ -83,7 +83,8 @@ Actor RepairEffectMech : CustomInventory
 }
 
 // [SP] This item is used to check maps for HOM's. It blurs the screen red - however it also gives invulnerability.
-Actor HOMCheckerGL : InvulnerabilitySphere {
+Actor HOMCheckerGL : InvulnerabilitySphere
+{
 	Powerup.Color "FF 00 00", 0.2
 	Powerup.Duration 0x7FFFFFFF
 	Inventory.PickupMessage "HOM Checker!"
@@ -94,7 +95,8 @@ Actor HOMCheckerGL : InvulnerabilitySphere {
 // 1 = fading out (stealthing)
 // 2 = stealthed
 // 3 = fading in (destealthing)
-Actor StealthMode : Inventory {
+Actor StealthMode : Inventory
+{
 		Inventory.amount 0
 		Inventory.MaxAmount 3
 }
@@ -119,7 +121,8 @@ Actor BodycountToken {}
 Actor SpreeCount : Inventory {Inventory.MaxAmount 31}
 
 Actor PowerNoHealXP : PowerDamage {DamageFactor Normal, 1.0}
-Actor NoHealXP : PowerupGiver {
+Actor NoHealXP : PowerupGiver
+{
 	+AUTOACTIVATE +ALWAYSPICKUP
 	Inventory.MaxAmount 0
 	Powerup.Duration -2

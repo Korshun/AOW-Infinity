@@ -1,5 +1,6 @@
 // Chemical sprayer
-Actor ChemicalSprayer : AOWWeapon 21066 {
+Actor ChemicalSprayer : AOWWeapon 21066
+{
 	+ALT_AMMO_OPTIONAL
 	Inventory.PickupMessage "You got the chemical sprayer!"
 	AttackSound "Chem/fire"
@@ -65,7 +66,8 @@ Actor ChemicalSprayer : AOWWeapon 21066 {
 	}
 }
 
-Actor ChemicalAmmo : Ammo {
+Actor ChemicalAmmo : Ammo
+{
 	Inventory.amount 50
 	Inventory.MaxAmount 200
 	Ammo.BackpackAmount 50
@@ -78,7 +80,8 @@ Actor ChemicalAmmo : Ammo {
 	}
 }
 
-Actor ChemicalGrenadeAmmo : Ammo {
+Actor ChemicalGrenadeAmmo : Ammo
+{
 	Inventory.amount 1
 	Inventory.MaxAmount 4
 	Ammo.BackpackAmount 1
@@ -94,7 +97,8 @@ Actor ChemicalGrenadeAmmo : Ammo {
 Actor ChemSprayReady : Inventory {Inventory.MaxAmount 1}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-Actor ChemicalShot {
+Actor ChemicalShot
+{
 	PROJECTILE
 	+FORCEXYBILLBOARD
 	Obituary "%o was poisoned by %k's chemical sprayer."
@@ -125,7 +129,8 @@ Actor ChemicalShot {
 	}
 }
 
-Actor ChemicalShotDummy {
+Actor ChemicalShotDummy
+{
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD
@@ -151,7 +156,8 @@ Actor ChemicalShotDummy {
 	}
 }
 
-Actor AnthraxDecay {
+Actor AnthraxDecay
+{
 	RenderStyle None
 	Alpha 0.5
 	+NOBLOCKMAP
@@ -170,7 +176,8 @@ Actor AnthraxDecay {
 	}
 }
 
-Actor AnthraxDecayFX {
+Actor AnthraxDecayFX
+{
 	+LOWGRAVITY +NOBLOCKMAP
 	+CLIENTSIDEONLY
 	ReactionTime 33
@@ -191,7 +198,8 @@ Actor AnthraxDecayBlue : AnthraxDecay {DamageType "Chemical"}
 Actor AnthraxDecaySpecial : AnthraxDecay {DamageType "ChemicalSpecial"} // neutral
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-Actor ChemicalGrenade {
+Actor ChemicalGrenade
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY

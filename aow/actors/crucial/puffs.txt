@@ -17,7 +17,8 @@ Actor AOWBulletPuff replaces BulletPuff
 	}
 }
 
-Actor HHMetalHit : BulletPuff {
+Actor HHMetalHit : BulletPuff
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+FORCEXYBILLBOARD

@@ -1,7 +1,8 @@
 // BTOs - these actors are placed around buildings. They transfer external
 // damage to the terminal, allowing buildings to be destroyed from the outside.
 
-Actor BaseTerminalOutside {
+Actor BaseTerminalOutside
+{
 	Health 99999
 	Radius 0
 	Height 512
@@ -80,13 +81,15 @@ Actor BaseTerminalOutside {
 	}
 }
 
-Actor BaseTerminalOutsideBlue : BaseTerminalOutside {
+Actor BaseTerminalOutsideBlue : BaseTerminalOutside
+{
 	DamageFactor "Superweapon", 0.5
 	DamageFactor "SuperweaponIon", 0.0
 	DesignatedTeam 0
 }
 
-Actor BTOBarracksBlue : BaseTerminalOutsideBlue 21201 {
+Actor BTOBarracksBlue : BaseTerminalOutsideBlue 21201
+{
 	States
 	{
 	Spawn:
@@ -98,7 +101,8 @@ Actor BTOBarracksBlue : BaseTerminalOutsideBlue 21201 {
 	}
 }
 
-Actor BTOPowerPlantBlue : BaseTerminalOutsideBlue 21203 {
+Actor BTOPowerPlantBlue : BaseTerminalOutsideBlue 21203
+{
 	States
 	{
 	Spawn:
@@ -110,7 +114,8 @@ Actor BTOPowerPlantBlue : BaseTerminalOutsideBlue 21203 {
 	}
 }
 
-Actor BTORefineryBlue : BaseTerminalOutsideBlue 21205 {
+Actor BTORefineryBlue : BaseTerminalOutsideBlue 21205
+{
 	States
 	{
 	Spawn:
@@ -122,7 +127,8 @@ Actor BTORefineryBlue : BaseTerminalOutsideBlue 21205 {
 	}
 }
 
-Actor BTOFactoryBlue : BaseTerminalOutsideBlue 21207 {
+Actor BTOFactoryBlue : BaseTerminalOutsideBlue 21207
+{
 	States
 	{
 	Spawn:
@@ -134,7 +140,8 @@ Actor BTOFactoryBlue : BaseTerminalOutsideBlue 21207 {
 	}
 }
 
-Actor BTOObeliskBlue : BaseTerminalOutsideBlue 21211 {
+Actor BTOObeliskBlue : BaseTerminalOutsideBlue 21211
+{
 	States
 	{
 	Spawn:
@@ -146,7 +153,8 @@ Actor BTOObeliskBlue : BaseTerminalOutsideBlue 21211 {
 	}
 }
 
-Actor BTOBarracksRed : BaseTerminalOutside 21202 {
+Actor BTOBarracksRed : BaseTerminalOutside 21202
+{
 	States
 	{
 	Spawn:
@@ -158,7 +166,8 @@ Actor BTOBarracksRed : BaseTerminalOutside 21202 {
 	}
 }
 
-Actor BTOPowerPlantRed : BaseTerminalOutside 21204 {
+Actor BTOPowerPlantRed : BaseTerminalOutside 21204
+{
 	States
 	{
 	Spawn:
@@ -170,7 +179,8 @@ Actor BTOPowerPlantRed : BaseTerminalOutside 21204 {
 	}
 }
 
-Actor BTORefineryRed : BaseTerminalOutside 21206 {
+Actor BTORefineryRed : BaseTerminalOutside 21206
+{
 	States
 	{
 	Spawn:
@@ -182,7 +192,8 @@ Actor BTORefineryRed : BaseTerminalOutside 21206 {
 	}
 }
 
-Actor BTOFactoryRed : BaseTerminalOutside 21208 {
+Actor BTOFactoryRed : BaseTerminalOutside 21208
+{
 	States
 	{
 	Spawn:
@@ -194,7 +205,8 @@ Actor BTOFactoryRed : BaseTerminalOutside 21208 {
 	}
 }
 
-Actor BTOObeliskRed : BaseTerminalOutside 21212 {
+Actor BTOObeliskRed : BaseTerminalOutside 21212
+{
 	DamageFactor "Superweapon", 0.0
 	States
 	{

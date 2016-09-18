@@ -1,5 +1,6 @@
 // TIMED C4
-Actor TimedC4 : InventoryItem {
+Actor TimedC4 : InventoryItem
+{
 	Tag "Timed C4"
 	Inventory.MaxAmount 4
 	Inventory.PickupMessage "Picked up a Timed C4"
@@ -33,7 +34,8 @@ Actor TimedC4 : InventoryItem {
 	}
 }
 
-Actor TimedC4Thrown {
+Actor TimedC4Thrown
+{
 	PROJECTILE
 	-NOGRAVITY
 	+THRUGHOST
@@ -61,7 +63,8 @@ Actor TimedC4Thrown {
 	}
 }
 
-Actor TimedC4Armed {
+Actor TimedC4Armed
+{
 	+NOEXTREMEDEATH
 	+NOGRAVITY
 	+SHOOTABLE
@@ -147,7 +150,8 @@ Actor TimedC4Armed {
 	}
 }
 
-Actor C4Boom {
+Actor C4Boom
+{
 	Radius 1
 	Height 1
 	DamageType "Explosion"
@@ -182,7 +186,8 @@ Actor C4BoomE : C4Boom { //Enhanced
 
 Actor C4BoomEBlue : C4BoomE { DamageType "Explosion" }
 
-Actor TimedC4ThrownBlue : TimedC4Thrown {
+Actor TimedC4ThrownBlue : TimedC4Thrown
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	States
 	{
@@ -194,7 +199,8 @@ Actor TimedC4ThrownBlue : TimedC4Thrown {
 	}
 }
 
-Actor TimedC4ArmedBlue : TimedC4Armed {
+Actor TimedC4ArmedBlue : TimedC4Armed
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	DamageType "Explosion"
 	States
@@ -220,7 +226,8 @@ Actor TimedC4ArmedBlue : TimedC4Armed {
 Actor TimedC4Count : Inventory {Inventory.MaxAmount 4}
 Actor EnhancedTimedC4 : Boolean {}
 
-Actor TimedC4ThrownE : TimedC4Thrown {
+Actor TimedC4ThrownE : TimedC4Thrown
+{
 	Obituary "%o was blown far away by %k's Timed C4 bomb."
 	Health 500
 	States
@@ -233,7 +240,8 @@ Actor TimedC4ThrownE : TimedC4Thrown {
 	}
 }
 
-Actor TimedC4ArmedE : TimedC4Armed {
+Actor TimedC4ArmedE : TimedC4Armed
+{
 	Obituary "%o was blown far away by %k's Timed C4 bomb."
 	Health 700
 	States
@@ -251,7 +259,8 @@ Actor TimedC4ArmedE : TimedC4Armed {
 	}
 }
 
-Actor TimedC4ThrownEBlue : TimedC4ThrownE {
+Actor TimedC4ThrownEBlue : TimedC4ThrownE
+{
 	DamageType "Explosion"
 	Translation "112:120=200:207", "121:127=241:247"
 	States
@@ -264,7 +273,8 @@ Actor TimedC4ThrownEBlue : TimedC4ThrownE {
 	}
 }
 
-Actor TimedC4ArmedEBlue : TimedC4ArmedE {
+Actor TimedC4ArmedEBlue : TimedC4ArmedE
+{
 	DamageType "Explosion"
 	Translation "112:120=200:207", "121:127=241:247"
 	States

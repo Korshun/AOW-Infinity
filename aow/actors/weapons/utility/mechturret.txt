@@ -1,5 +1,6 @@
 // Mech turret
-Actor Utility_MechTurretRed : Utility_TurretBase {
+Actor Utility_MechTurretRed : Utility_TurretBase
+{
 	Obituary "%o was owned by a \cgRed \c-anti-Mech turret."
 	Health 500
 	PainChance 50
@@ -154,7 +155,8 @@ Actor Utility_MechTurretBlue : Utility_TurretBase
 	}
 }
 
-Actor MechTurretProjectile : FastProjectile {
+Actor MechTurretProjectile : FastProjectile
+{
 	Radius 5
 	Height 5
 	Speed 250
@@ -174,7 +176,8 @@ Actor MechTurretProjectile : FastProjectile {
 	}
 }
 
-Actor MechTurretProjectileBlue : MechTurretProjectile {
+Actor MechTurretProjectileBlue : MechTurretProjectile
+{
 	Obituary "%o was owned by a \chBlue \c-anti-Mech turret."
 	DamageType "ExplosionMech"
 }

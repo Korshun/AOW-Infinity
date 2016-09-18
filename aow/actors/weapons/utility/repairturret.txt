@@ -1,5 +1,6 @@
 // Repair Turret
-Actor Utility_RepairGunTurretRed : Utility_TurretBase {
+Actor Utility_RepairGunTurretRed : Utility_TurretBase
+{
 	Obituary "%o somehow died from repair gun turret."
 	Health 500
 	Gravity 10000
@@ -70,7 +71,8 @@ Actor Utility_RepairGunTurretRed : Utility_TurretBase {
 
 Actor SDReplace : Boolean {}
 
-Actor Utility_RepairGunTurretBlue : Utility_RepairGunTurretRed {
+Actor Utility_RepairGunTurretBlue : Utility_RepairGunTurretRed
+{
 	States
 	{
 	Spawn:
@@ -84,7 +86,8 @@ Actor Utility_RepairGunTurretBlue : Utility_RepairGunTurretRed {
 	}
 }
 
-Actor RepairTurretSymbol {
+Actor RepairTurretSymbol
+{
 	+NOINTERACTION
 	+ISMONSTER
 	+CLIENTSIDEONLY
@@ -99,7 +102,8 @@ Actor RepairTurretSymbol {
 	}
 }
 
-Actor RepairTurretError : RepairTurretSymbol {
+Actor RepairTurretError : RepairTurretSymbol
+{
 	Scale 0.2
 	States
 	{

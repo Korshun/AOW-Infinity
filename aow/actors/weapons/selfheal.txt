@@ -1,5 +1,6 @@
 // Self-heal syringe
-Actor SelfHealItem : CustomInventory {
+Actor SelfHealItem : CustomInventory
+{
 	+INVBAR
 	Tag "Self-heal syringe"
 	Inventory.icon "syriicon"
@@ -18,7 +19,8 @@ Actor SelfHealItem : CustomInventory {
 	}
 }
 
-Actor SelfHeal : AOWWeapon {
+Actor SelfHeal : AOWWeapon
+{
 	+NOALERT
 	+AMMO_OPTIONAL
 	+CHEATNOTWEAPON
@@ -79,7 +81,8 @@ Actor SelfHeal : AOWWeapon {
 	}
 }
 
-Actor SpentSyringe { 
+Actor SpentSyringe
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP +DROPOFF +MISSILE
 	+NOTELEPORT +FLOORCLIP +DOOMBOUNCE

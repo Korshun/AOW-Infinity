@@ -1,5 +1,6 @@
 // CHAINSAW
-Actor EagerBeaver : AOWWeapon replaces Chainsaw {
+Actor EagerBeaver : AOWWeapon replaces Chainsaw
+{
 	+MELEEWEAPON
 	// +EXTREMEDEATH
 	Weapon.Kickback 0
@@ -49,7 +50,8 @@ Actor EagerBeaver : AOWWeapon replaces Chainsaw {
 	}
 }
 
-Actor SawPuff : BulletPuff {
+Actor SawPuff : BulletPuff
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+NOGRAVITY
@@ -58,7 +60,8 @@ Actor SawPuff : BulletPuff {
 	DamageType "Fist"
 }
 
-Actor ChainsawThrown {
+Actor ChainsawThrown
+{
 	PROJECTILE
 	+RIPPER
 	+EXTREMEDEATH

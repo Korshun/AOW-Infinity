@@ -1,5 +1,6 @@
 // Shotgun
-Actor Boomstick : AOWWeapon {
+Actor Boomstick : AOWWeapon
+{
 	Obituary "%o was smacked down by %k's shotgun."
 	Inventory.PickupMessage "You got the shotgun!"
 	Weapon.SelectionOrder 17
@@ -44,14 +45,16 @@ Actor Boomstick : AOWWeapon {
 	}
 }
 
-Actor ShotgunAmmo : Ammo {
+Actor ShotgunAmmo : Ammo
+{
 	Inventory.amount 5
 	Inventory.MaxAmount 50
 	Ammo.BackpackAmount 5
 	Ammo.BackpackMaxAmount 50
 }
 
-Actor ShotgunPickup : CustomInventory replaces Shotgun 21080 {
+Actor ShotgunPickup : CustomInventory replaces Shotgun 21080
+{
 	Inventory.PickupMessage "You got the shotgun!"
 	Inventory.MaxAmount 0
 	Inventory.respawntics 2100

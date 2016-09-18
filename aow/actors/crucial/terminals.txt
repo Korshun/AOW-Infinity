@@ -1,5 +1,6 @@
 // TERMINALS
-Actor BaseTerminal {
+Actor BaseTerminal
+{
 	DamageFactor "Fist", 0.3
 	DamageFactor "Bullet", 0.5
 	DamageFactor "Rifle", 0.5
@@ -98,7 +99,8 @@ Actor BaseTerminal {
 	}
 }
 
-Actor BaseTerminalBlue : BaseTerminal {
+Actor BaseTerminalBlue : BaseTerminal
+{
 	DamageFactor "TimeRed", 1.0
 	DamageFactor "TimeBlue", 0.0
 	DamageFactor "Disarm", 0.0
@@ -116,7 +118,8 @@ Actor BaseTerminalBlue : BaseTerminal {
 	DesignatedTeam 0
 }
 
-Actor TerminalExplosion {
+Actor TerminalExplosion
+{
 	PROJECTILE
 	Speed 0
 	DamageType "Monster"
@@ -129,7 +132,8 @@ Actor TerminalExplosion {
 	}
 }
 
-Actor BarracksTerminalBlue : BaseTerminalBlue 21100 {
+Actor BarracksTerminalBlue : BaseTerminalBlue 21100
+{
 	Health 20000
 	States
 	{
@@ -145,7 +149,8 @@ Actor BarracksTerminalBlue : BaseTerminalBlue 21100 {
 	}
 }
 
-Actor RefineryTerminalBlue : BaseTerminalBlue 21102 {
+Actor RefineryTerminalBlue : BaseTerminalBlue 21102
+{
 	Health 30000
 	States
 	{
@@ -161,7 +166,8 @@ Actor RefineryTerminalBlue : BaseTerminalBlue 21102 {
 	}
 }
 
-Actor PowerPlantTerminalBlue : BaseTerminalBlue 21103 {
+Actor PowerPlantTerminalBlue : BaseTerminalBlue 21103
+{
 	Health 20000
 	States
 	{
@@ -177,7 +183,8 @@ Actor PowerPlantTerminalBlue : BaseTerminalBlue 21103 {
 	}
 }
 
-Actor WarFactoryTerminalBlue : BaseTerminalBlue 21104 {
+Actor WarFactoryTerminalBlue : BaseTerminalBlue 21104
+{
 	Health 30000
 	States
 	{
@@ -193,7 +200,8 @@ Actor WarFactoryTerminalBlue : BaseTerminalBlue 21104 {
 	}
 }
 
-Actor ObeliskTerminalBlue : BaseTerminalBlue 21111 {
+Actor ObeliskTerminalBlue : BaseTerminalBlue 21111
+{
 	Health 15000
 	States
 	{
@@ -212,7 +220,8 @@ Actor ObeliskTerminalBlue : BaseTerminalBlue 21111 {
 	}
 }
 
-Actor BarracksTerminalRed : BaseTerminal 21105 {
+Actor BarracksTerminalRed : BaseTerminal 21105
+{
 	Health 20000
 	States
 	{
@@ -228,7 +237,8 @@ Actor BarracksTerminalRed : BaseTerminal 21105 {
 	}
 }
 
-Actor RefineryTerminalRed : BaseTerminal 21106 {
+Actor RefineryTerminalRed : BaseTerminal 21106
+{
 	Health 30000
 	States
 	{
@@ -244,7 +254,8 @@ Actor RefineryTerminalRed : BaseTerminal 21106 {
 	}
 }
 
-Actor PowerPlantTerminalRed : BaseTerminal 21107 {
+Actor PowerPlantTerminalRed : BaseTerminal 21107
+{
 	Health 20000
 	States
 	{
@@ -260,7 +271,8 @@ Actor PowerPlantTerminalRed : BaseTerminal 21107 {
 	}
 }
 
-Actor WarFactoryTerminalRed : BaseTerminal 21108 {
+Actor WarFactoryTerminalRed : BaseTerminal 21108
+{
 	Health 30000
 	States
 	{
@@ -276,7 +288,8 @@ Actor WarFactoryTerminalRed : BaseTerminal 21108 {
 	}
 }
 
-Actor ObeliskTerminalRed : BaseTerminal 21112 {
+Actor ObeliskTerminalRed : BaseTerminal 21112
+{
 	Health 15000
 	States
 	{
@@ -293,7 +306,8 @@ Actor ObeliskTerminalRed : BaseTerminal 21112 {
 }
 
 // REPAIR TERMINAL
-Actor RepairTerminalRed : BaseTerminal 21110 {
+Actor RepairTerminalRed : BaseTerminal 21110
+{
 	Radius 145
 	Height 8
 	DeathSound "grenade/explode"
@@ -312,7 +326,8 @@ Actor RepairTerminalRed : BaseTerminal 21110 {
 	}
 }
 
-Actor RepairTerminalBlue : BaseTerminalBlue 21109 {
+Actor RepairTerminalBlue : BaseTerminalBlue 21109
+{
 	Radius 145
 	Height 8
 	DeathSound "grenade/explode"

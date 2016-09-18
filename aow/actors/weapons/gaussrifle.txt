@@ -1,5 +1,6 @@
 // Gauss Rifle
-Actor GaussRifle : AOWWeapon replaces Railgun 21049 {
+Actor GaussRifle : AOWWeapon replaces Railgun 21049
+{
 	Inventory.PickupMessage "You got the gauss rifle!"
 	Obituary "$OB_GAUSS" // "%o got %p torso busted by %k's gauss rifle."
 	AttackSound "gauss/fire"
@@ -134,14 +135,16 @@ Actor GaussRifle : AOWWeapon replaces Railgun 21049 {
 	}
 }
 
-Actor GaussRifleAmmo : Ammo {
+Actor GaussRifleAmmo : Ammo
+{
 	Inventory.amount 5
 	Inventory.MaxAmount 40
 	Ammo.BackpackAmount 5
 	Ammo.BackpackMaxAmount 40
 }
 
-Actor GaussPuff : AOWBulletPuff {
+Actor GaussPuff : AOWBulletPuff
+{
 	-ALLOWPARTICLES
 	+PUFFONACTORS
 	DamageType "Laser"
@@ -159,7 +162,8 @@ Actor GaussPuff : AOWBulletPuff {
 	}  
 }
 
-Actor GaussPuffBlue : GaussPuff {
+Actor GaussPuffBlue : GaussPuff
+{
 	DamageType "Laser"
 	Translation "0:255=0:255"
 }

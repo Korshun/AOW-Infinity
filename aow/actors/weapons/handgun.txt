@@ -1,4 +1,5 @@
-Actor Handgun : AOWWeapon replaces Pistol 21041 {
+Actor Handgun : AOWWeapon replaces Pistol 21041
+{
 	+WIMPY_WEAPON
 	+NOAUTOFIRE
 	Weapon.AmmoUse 1
@@ -43,7 +44,8 @@ Actor Handgun : AOWWeapon replaces Pistol 21041 {
 
 Actor HandgunPuff : AOWBulletPuff {DamageType "Bullet"}
 
-Actor NewClipAmmo : Ammo {
+Actor NewClipAmmo : Ammo
+{
 	Inventory.amount 30
 	Inventory.MaxAmount 400
 	Ammo.BackpackAmount 30

@@ -1,4 +1,5 @@
-Actor Utility_ArtilleryTurretRed : Utility_TurretBase {
+Actor Utility_ArtilleryTurretRed : Utility_TurretBase
+{
 	Obituary "%o was torn to shreds by a \cGRed\c- artillery turret."
 	Health 400
 	Speed 0
@@ -64,7 +65,8 @@ Actor Utility_ArtilleryTurretRed : Utility_TurretBase {
 	}
 }
 
-Actor Utility_ArtilleryTurretBlue : Utility_TurretBase {
+Actor Utility_ArtilleryTurretBlue : Utility_TurretBase
+{
 	Obituary "%o was torn to shreds by a \cHBlue\c- artillery turret."
 	Health 400
 	Speed 0
@@ -130,7 +132,8 @@ Actor Utility_ArtilleryTurretBlue : Utility_TurretBase {
 	}
 }
 
-Actor ArtilleryTurretShell : ArtilleryShell {
+Actor ArtilleryTurretShell : ArtilleryShell
+{
 	+NOGRAVITY // these things just Fail actually hitting anything otherwise
 	Obituary "%o was torn to shreds by a \cGRed\c- artillery turret."
 	Speed 80
@@ -154,7 +157,8 @@ Actor ArtilleryTurretShell : ArtilleryShell {
 	}
 }
 
-Actor ArtilleryTurretShellBlue : ArtilleryTurretShell {
+Actor ArtilleryTurretShellBlue : ArtilleryTurretShell
+{
 	DamageType "ExplosionMech"
 	States
 	{

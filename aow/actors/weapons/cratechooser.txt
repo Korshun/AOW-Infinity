@@ -1,5 +1,6 @@
 // OPEN DECK
-Actor CrateChooser : AOWWeapon {
+Actor CrateChooser : AOWWeapon
+{
 	+AMMO_OPTIONAL
 	Inventory.PickupMessage "You got the Open Deck Crate!"
 	Obituary "$OB_DEFAULT"

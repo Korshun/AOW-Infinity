@@ -1,4 +1,5 @@
-Actor PlasmaGun : AOWWeapon replaces PlasmaRifle 21087 {
+Actor PlasmaGun : AOWWeapon replaces PlasmaRifle 21087
+{
 	Inventory.PickupMessage "You got the plasma gun!"
 	Obituary "%o was incinerated by %k's plasma gun."
 	Weapon.AmmoType "PlasmaRifleAmmo"
@@ -106,7 +107,8 @@ Actor PlasmaGun : AOWWeapon replaces PlasmaRifle 21087 {
 	}
 }
 
-Actor PlasmaRifleAmmo : Ammo {
+Actor PlasmaRifleAmmo : Ammo
+{
 	Inventory.amount 40
 	Inventory.MaxAmount 300
 	Ammo.BackpackAmount 40
@@ -119,7 +121,8 @@ Actor PlasmaRifleAmmo : Ammo {
 	}
 }
 
-Actor PlasmaShot {
+Actor PlasmaShot
+{
 	PROJECTILE
 	-RANDOMIZE
 	Radius 12
@@ -146,12 +149,14 @@ Actor PlasmaShot {
 	}
 }
 
-Actor PlasmaShotBlue : PlasmaShot {
+Actor PlasmaShotBlue : PlasmaShot
+{
 	Translation "0:255=0:255"
 	DamageType "Laser"
 }
 
-Actor PlasmaHeat : Ammo {
+Actor PlasmaHeat : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 0
 	Inventory.MaxAmount 100
@@ -167,7 +172,8 @@ Actor PlasmaHeat : Ammo {
 
 Actor WarningChecker : Boolean {}
 
-Actor OverheatSmokeSpawner {
+Actor OverheatSmokeSpawner
+{
 	PROJECTILE
 	+CLIENTSIDEONLY
 	Speed 25

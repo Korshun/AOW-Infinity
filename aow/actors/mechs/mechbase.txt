@@ -1,5 +1,6 @@
 // Actors common to all mechs
-Actor MechPlayer_Base : PlayerPawn {
+Actor MechPlayer_Base : PlayerPawn
+{
 	DamageFactor "Fist", 0.35
 	DamageFactor "Fist", 0.35
 	DamageFactor "Bullet", 0.8
@@ -45,7 +46,8 @@ Actor MechPlayer_Base : PlayerPawn {
 }
 
 
-Actor MechDeathSmoke {
+Actor MechDeathSmoke
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY
@@ -71,7 +73,8 @@ Actor MechDeathSmoke {
 	}
 }
 
-Actor MechStepDamageWeak {
+Actor MechStepDamageWeak
+{
 	RenderStyle None
 	+RANDOMIZE
 	+NOCLIP
@@ -93,7 +96,8 @@ Actor MechStepDamageWeak {
 	}  
 }
 
-Actor MechStepDamageStrong : MechStepDamageWeak {
+Actor MechStepDamageStrong : MechStepDamageWeak
+{
 	-TELESTOMP
 	States
 	{
@@ -106,7 +110,8 @@ Actor MechStepDamageStrong : MechStepDamageWeak {
 	}  
 }
 
-Actor MechStepGuardian : MechStepDamageWeak {
+Actor MechStepGuardian : MechStepDamageWeak
+{
 	+EXTREMEDEATH
 	-TELESTOMP
 	DamageType "MechStomp"
@@ -120,7 +125,8 @@ Actor MechStepGuardian : MechStepDamageWeak {
 	}  
 }
 
-Actor MechStepDamageOrca : MechStepDamageWeak {
+Actor MechStepDamageOrca : MechStepDamageWeak
+{
 	-TELESTOMP
 	States
 	{
@@ -130,7 +136,8 @@ Actor MechStepDamageOrca : MechStepDamageWeak {
 		Stop
 	}
 }
-Actor StepSound {
+Actor StepSound
+{
 	+CLIENTSIDEONLY
 	-TELESTOMP
 	Radius 1
@@ -147,7 +154,8 @@ Actor StepSound {
 
 Actor MechReloading : Inventory {Inventory.MaxAmount 20}
 
-Actor MechAmmoStuffSmall : CustomInventory {
+Actor MechAmmoStuffSmall : CustomInventory
+{
 	+ALWAYSPICKUP
 	States
 	{
@@ -172,7 +180,8 @@ Actor MechAmmoStuffSmall : CustomInventory {
 	}
 }
 
-Actor MechEjectButton : CustomInventory {
+Actor MechEjectButton : CustomInventory
+{
 	+INVBAR
 	Inventory.MaxAmount 1
 	Inventory.icon "ICO_EJCT"
@@ -188,7 +197,8 @@ Actor MechEjectButton : CustomInventory {
 	}
 }
 
-Actor LongRangeMissile {
+Actor LongRangeMissile
+{
 	PROJECTILE
 	-RANDOMIZE
 	+ROCKETTRAIL
@@ -216,7 +226,8 @@ Actor LongRangeMissile {
 }
 
 
-Actor LongRangeMissileBlue : LongRangeMissile {
+Actor LongRangeMissileBlue : LongRangeMissile
+{
 	DamageType "Explosion"
 	States
 	{
@@ -230,14 +241,16 @@ Actor LongRangeMissileBlue : LongRangeMissile {
 }
 
 // Ammo types
-Actor ShortRangeMissileAmmo : Ammo {
+Actor ShortRangeMissileAmmo : Ammo
+{
 	Inventory.amount 0
 	Inventory.MaxAmount 150
 	Ammo.BackpackAmount 10
 	Ammo.BackpackMaxAmount 150
 }
 
-Actor MechExplosionSmall {
+Actor MechExplosionSmall
+{
 	Obituary "%o was blown up by %k's mech."
 	DamageType "Monster"
 	States
@@ -261,7 +274,8 @@ Actor MechExplosionSmall {
 	}
 }
 
-Actor MechExplosionLarge {
+Actor MechExplosionLarge
+{
 	Obituary "%o was blown up by %k's big mech."
 	DamageType "Monster"
 	States

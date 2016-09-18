@@ -8,7 +8,8 @@
  * only to serve as identification and limits.
  */
 
-Actor Utility_PortalBlue {
+Actor Utility_PortalBlue
+{
 	+SOLID
 	+SHOOTABLE
 	+BUMPSPECIAL
@@ -82,7 +83,8 @@ Actor Utility_PortalBlue {
 	}
 }
 
-Actor Utility_PortalRed : Utility_PortalBlue {
+Actor Utility_PortalRed : Utility_PortalBlue
+{
 	States
 	{
 	Spawn:
@@ -99,7 +101,8 @@ Actor Utility_PortalRed : Utility_PortalBlue {
 
 // This Actor is used to check whether the portal
 // fits in the space it's wanted to be spawned at.
-Actor Utility_PortalChecker {
+Actor Utility_PortalChecker
+{
 	+SOLID
 	Radius 80
 	Height 128
@@ -113,7 +116,8 @@ Actor Utility_PortalChecker {
 }
 
 // stands.. the thing needs some structure, doesn't it?
-Actor Utility_PortalStand {
+Actor Utility_PortalStand
+{
 	+SOLID
 	Radius 12
 	Height 44
@@ -138,7 +142,8 @@ Actor Utility_PortalStand {
 }
 
 // Decorative spheres that spawn on top of the stands
-Actor Utility_PortalSphereBlue {
+Actor Utility_PortalSphereBlue
+{
 	+NOINTERACTION +NOGRAVITY
 	+FORCEXYBILLBOARD
 	RenderStyle add
@@ -166,7 +171,8 @@ Actor Utility_PortalSphereBlue {
 	}
 }
 
-Actor Utility_PortalSphereRed : Utility_PortalSphereBlue {
+Actor Utility_PortalSphereRed : Utility_PortalSphereBlue
+{
 	States
 	{
 	Init.Active:
@@ -187,7 +193,8 @@ Actor Utility_PortalSphereRed : Utility_PortalSphereBlue {
 }
 
 // Effect cluster, designates active portal
-Actor Utility_PortalFX {
+Actor Utility_PortalFX
+{
 	Gravity 10000
 	Translation "112:127=[255,0,0]:[128,0,0]"
 	States
@@ -204,11 +211,13 @@ Actor Utility_PortalFX {
 	}
 }
 
-Actor Utility_PortalFXBlue : Utility_PortalFX {
+Actor Utility_PortalFXBlue : Utility_PortalFX
+{
 	Translation "112:127=[64,64,128]:[24,24,128]"
 }
 
-Actor Utility_PortalTelefogCluster {
+Actor Utility_PortalTelefogCluster
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	States
@@ -221,7 +230,8 @@ Actor Utility_PortalTelefogCluster {
 	}
 }
 
-Actor Utility_PortalTelefog {
+Actor Utility_PortalTelefog
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	RenderStyle add
@@ -235,7 +245,8 @@ Actor Utility_PortalTelefog {
 }
 
 // Effect sparks, designates damaged portals.
-Actor Utility_PortalSparkCluster {
+Actor Utility_PortalSparkCluster
+{
 	+CLIENTSIDEONLY +NOCLIP
 	States
 	{
@@ -250,7 +261,8 @@ Actor Utility_PortalSparkCluster {
 	}
 }
 
-Actor Utility_PortalSpark {
+Actor Utility_PortalSpark
+{
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD

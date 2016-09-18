@@ -1,6 +1,7 @@
 //White Smoke Code by dark-slayer
 
-Actor PuffSmoke {
+Actor PuffSmoke
+{
 	+NOINTERACTION
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY

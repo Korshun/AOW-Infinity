@@ -7,7 +7,8 @@
  * anti-mech weapon, only Plasma Cannon surpasses this.
  */
 
-Actor ArtilleryCannon : AOWWeapon 21085 {
+Actor ArtilleryCannon : AOWWeapon 21085
+{
 	Obituary "$OB_ARTILLERYCANNON" // "%o was demolished by %k's artillery cannon."
 	Inventory.PickupMessage "You got the artillery cannnon!"
 	Weapon.AmmoType "ArtilleryShellAmmo"
@@ -183,14 +184,16 @@ Actor ArtilleryCannon : AOWWeapon 21085 {
 	}
 }
 
-Actor ArtilleryShellAmmo : Ammo {
+Actor ArtilleryShellAmmo : Ammo
+{
 	Inventory.amount 2
 	Inventory.MaxAmount 30
 	Ammo.BackpackAmount 2
 	Ammo.BackpackMaxAmount 30
 }
 
-Actor ArtilleryShell {
+Actor ArtilleryShell
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY
@@ -224,7 +227,8 @@ Actor ArtilleryShell {
 	}
 }
 
-Actor ArtilleryShell80mm : ArtilleryShell {
+Actor ArtilleryShell80mm : ArtilleryShell
+{
 	Translation "112:127=176:191", "80:111=104:111"
 	Speed 50
 	Damage (63)
@@ -244,7 +248,8 @@ Actor ArtilleryShell80mm : ArtilleryShell {
 	}
 }
 
-Actor ArtilleryShellBlue : ArtilleryShell {
+Actor ArtilleryShellBlue : ArtilleryShell
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	DamageType "Artillery"
 	States
@@ -261,7 +266,8 @@ Actor ArtilleryShellBlue : ArtilleryShell {
 	}
 }
 
-Actor ArtilleryShell80mmBlue : ArtilleryShell80mm {
+Actor ArtilleryShell80mmBlue : ArtilleryShell80mm
+{
 	Translation "112:120=200:207", "121:127=241:247", "80:111=104:111"
 	DamageType "ExplosionMech"
 // I got lazy, so it just inhertits from the 80mm one.

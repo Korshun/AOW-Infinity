@@ -1,5 +1,6 @@
 // ARMOUR GRADES AND MODIFIERS
-Actor PowerGrade1Armor : PowerProtection {
+Actor PowerGrade1Armor : PowerProtection
+{
 	DamageFactor "Fist",		0.92	DamageFactor "Fist",	0.92
 	DamageFactor "Bullet",	0.92	DamageFactor "Bullet",	0.92
 	DamageFactor "Rifle",	0.92	DamageFactor "Rifle",	0.92
@@ -18,7 +19,8 @@ Actor PowerGrade1Armor : PowerProtection {
 	DamageFactor "Monster",		0.92
 }
 
-Actor PowerGrade2Armor : PowerProtection {
+Actor PowerGrade2Armor : PowerProtection
+{
 	DamageFactor "Fist",		0.84	DamageFactor "Fist",	0.84
 	DamageFactor "Bullet",	0.84	DamageFactor "Bullet",	0.84
 	DamageFactor "Rifle",	0.84	DamageFactor "Rifle",	0.84
@@ -37,7 +39,8 @@ Actor PowerGrade2Armor : PowerProtection {
 	DamageFactor "Monster",		0.84
 }
 
-Actor PowerGrade3Armor : PowerProtection {
+Actor PowerGrade3Armor : PowerProtection
+{
 	DamageFactor "Fist",		0.76	DamageFactor "Fist",	0.76
 	DamageFactor "Bullet",	0.76	DamageFactor "Bullet",	0.76
 	DamageFactor "Rifle",	0.76	DamageFactor "Rifle",	0.76
@@ -56,7 +59,8 @@ Actor PowerGrade3Armor : PowerProtection {
 	DamageFactor "Monster",		0.76
 }
 
-Actor PowerGrade4Armor : PowerProtection {
+Actor PowerGrade4Armor : PowerProtection
+{
 	DamageFactor "Fist",		0.68	DamageFactor "Fist",	0.68
 	DamageFactor "Bullet",	0.68	DamageFactor "Bullet",	0.68
 	DamageFactor "Rifle",	0.68	DamageFactor "Rifle",	0.68
@@ -76,7 +80,8 @@ Actor PowerGrade4Armor : PowerProtection {
 }
 
 
-Actor PowerGrade5Armor : PowerProtection {
+Actor PowerGrade5Armor : PowerProtection
+{
 	DamageFactor "Fist",		0.6	DamageFactor "Fist",	0.6
 	DamageFactor "Bullet",	0.6	DamageFactor "Bullet",	0.6
 	DamageFactor "Rifle",	0.6	DamageFactor "Rifle",	0.6
@@ -95,7 +100,8 @@ Actor PowerGrade5Armor : PowerProtection {
 	DamageFactor "Monster",		0.6
 }
 
-Actor PowerGrade-1Armor : PowerProtection {
+Actor PowerGrade-1Armor : PowerProtection
+{
 	DamageFactor "Fist",		1.2	DamageFactor "Fist",	1.2
 	DamageFactor "Bullet",	1.2	DamageFactor "Bullet",	1.2
 	DamageFactor "Rifle",	1.2	DamageFactor "Rifle",	1.2
@@ -114,21 +120,24 @@ Actor PowerGrade-1Armor : PowerProtection {
 	DamageFactor "Monster",		1.2
 }
 
-Actor PowerFireProof : PowerProtection {
+Actor PowerFireProof : PowerProtection
+{
 	DamageFactor "Fire",		0.0	DamageFactor "Fire",	0.0
 	DamageFactor "Chemical",	2.0	DamageFactor "Chemical",	2.0
 	DamageFactor "FireSpecial",	0.0
 	DamageFactor "ChemicalSpecial",	2.0
 }
 
-Actor PowerChemicalProof : PowerProtection {
+Actor PowerChemicalProof : PowerProtection
+{
 	DamageFactor "Fire",		2.0	DamageFactor "Fire",	2.0
 	DamageFactor "FireSpecial",	2.0
 	DamageFactor "Chemical",	0.0	DamageFactor "Chemical",	0.0
 	DamageFactor "ChemicalSpecial",	0.0
 }
 
-Actor PowerLaserResistance : PowerProtection {
+Actor PowerLaserResistance : PowerProtection
+{
 	DamageFactor "Laser", 0.6
 	DamageFactor "Laser", 0.6
 	
@@ -140,7 +149,8 @@ Actor PowerLaserResistance : PowerProtection {
 	DamageFactor "Artillery", 1.4
 }
 
-Actor PowerBulletResistance : PowerProtection {
+Actor PowerBulletResistance : PowerProtection
+{
 	DamageFactor "Bullet", 0.45
 	DamageFactor "Bullet", 0.45
 	DamageFactor "Rifle", 0.45
@@ -157,7 +167,8 @@ Actor PowerBulletResistance : PowerProtection {
 	DamageFactor "Artillery", 1.2
 }
 
-Actor PowerExplosiveResistance : PowerProtection {
+Actor PowerExplosiveResistance : PowerProtection
+{
 	DamageFactor "Explosion", 0.6
 	DamageFactor "Explosion", 0.6
 	DamageFactor "ExplosionMech", 0.6
@@ -212,7 +223,8 @@ Actor TiberiumProof : PermanentPowerup {Powerup.Type "TiberiumProof"}
 
 // SPECIALIZED TYPES
 
-Actor SpawnInvulnerability : PowerupGiver {
+Actor SpawnInvulnerability : PowerupGiver
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	Powerup.Type "Invulnerable"
@@ -222,7 +234,8 @@ Actor SpawnInvulnerability : PowerupGiver {
 
 // given to terminals to weaken them on SD
 Actor SuddenDeathVulnerability : PermanentPowerup {Powerup.Type "SuddenDeathVulnerability"}
-Actor PowerSuddenDeathVulnerability : PowerProtection {
+Actor PowerSuddenDeathVulnerability : PowerProtection
+{
 	DamageFactor "Fist",			4.0	DamageFactor "Fist",		4.0
 	DamageFactor "Bullet",		4.0	DamageFactor "Bullet",		4.0
 	DamageFactor "Rifle",		4.0	DamageFactor "Rifle",		4.0
@@ -246,7 +259,8 @@ Actor PowerSuddenDeathVulnerability : PowerProtection {
 }
 
 Actor RedTeamArmor : PermanentPowerup {Powerup.Type "RedTeamArmor"}
-Actor PowerRedTeamArmor : PowerProtection {
+Actor PowerRedTeamArmor : PowerProtection
+{
 	DamageFactor "Fist",			1.0	DamageFactor "Fist",		1.0
 	DamageFactor "Bullet",		1.0	DamageFactor "Bullet",		1.0
 	DamageFactor "Rifle",		1.0	DamageFactor "Rifle",		1.0
@@ -270,7 +284,8 @@ Actor PowerRedTeamArmor : PowerProtection {
 }
 
 Actor BlueTeamArmor : PermanentPowerup {Powerup.Type "BlueTeamArmor"}
-Actor PowerBlueTeamArmor : PowerProtection {
+Actor PowerBlueTeamArmor : PowerProtection
+{
 	DamageFactor "Fist",			1.0	DamageFactor "Fist",		1.0
 	DamageFactor "Bullet",		1.0	DamageFactor "Bullet",		1.0
 	DamageFactor "Rifle",		1.0	DamageFactor "Rifle",		1.0
@@ -340,7 +355,8 @@ Actor Grade0Damage : PowerupGiver
 	}
 }
 
-Actor PowerGrade2DamageArtillery : PowerDamage {
+Actor PowerGrade2DamageArtillery : PowerDamage
+{
 	DamageFactor "Fist", 1.1
 	DamageFactor "Fist", 1.1
 	DamageFactor "Bullet", 1.1
@@ -368,7 +384,8 @@ Actor PowerGrade2DamageArtillery : PowerDamage {
 
 Actor Grade2DamageArtillery : PermanentPowerup {Powerup.Type "Grade2DamageArtillery"}
 
-Actor PowerFirepowerUpgrade : PowerDamage {
+Actor PowerFirepowerUpgrade : PowerDamage
+{
 	DamageFactor "Fist", 1.3
 	DamageFactor "Fist", 1.3
 	DamageFactor "Bullet", 1.3
@@ -396,7 +413,8 @@ Actor FirepowerUpgrade : PermanentPowerup {Powerup.Type "FirepowerUpgrade"}
 
 Actor HasArmorUpgrade : Inventory {Inventory.MaxAmount 1}
 
-Actor PowerGrade2ArmorFactoryPower : PowerProtection {
+Actor PowerGrade2ArmorFactoryPower : PowerProtection
+{
 	DamageFactor "Fist", 0.9
 	DamageFactor "Fist", 0.9
 	DamageFactor "Bullet", 0.9

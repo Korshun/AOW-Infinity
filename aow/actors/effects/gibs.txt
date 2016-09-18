@@ -1,4 +1,5 @@
-Actor Giblet {
+Actor Giblet
+{
 	Radius 2
 	Height 2
 	Speed 15
@@ -23,7 +24,8 @@ Actor Giblet {
 	}
 }
 
-Actor Giblet1 : Giblet {
+Actor Giblet1 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -34,7 +36,8 @@ Actor Giblet1 : Giblet {
 	}
 }
 
-Actor Giblet2 : Giblet {
+Actor Giblet2 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -45,7 +48,8 @@ Actor Giblet2 : Giblet {
 	}
 }
 
-Actor Giblet3 : Giblet {
+Actor Giblet3 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -56,7 +60,8 @@ Actor Giblet3 : Giblet {
 	}
 }
 
-Actor Giblet4 : Giblet {
+Actor Giblet4 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -67,7 +72,8 @@ Actor Giblet4 : Giblet {
 	}
 }
 
-Actor SkullGiblet4 : Giblet {
+Actor SkullGiblet4 : Giblet
+{
 	-MISSILE
 	States
 	{
@@ -79,7 +85,8 @@ Actor SkullGiblet4 : Giblet {
 	}
 }
 
-Actor Giblet5 : Giblet {
+Actor Giblet5 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -90,7 +97,8 @@ Actor Giblet5 : Giblet {
 	}
 }
 
-Actor Giblet6 : Giblet {
+Actor Giblet6 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -101,7 +109,8 @@ Actor Giblet6 : Giblet {
 	}
 }
 
-Actor Giblet7 : Giblet {
+Actor Giblet7 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -112,7 +121,8 @@ Actor Giblet7 : Giblet {
 	}
 }
 
-Actor Giblet8 : Giblet {
+Actor Giblet8 : Giblet
+{
 	States
 	{
 	Spawn:
@@ -123,7 +133,8 @@ Actor Giblet8 : Giblet {
 	}
 }
 
-Actor GibExplosion {
+Actor GibExplosion
+{
 	+CLIENTSIDEONLY
 	States
 	{
@@ -135,7 +146,8 @@ Actor GibExplosion {
 	}
 }
 
-Actor GibExplosionBlood : Blood  {
+Actor GibExplosionBlood : Blood
+{
 	+NOBLOCKMAP
 	+NOTELEPORT
 	+CLIENTSIDEONLY
@@ -151,7 +163,8 @@ Actor GibExplosionBlood : Blood  {
 		Stop
 	}
 }
-Actor GibExplosionBlood2 : GibExplosionBlood {
+Actor GibExplosionBlood2 : GibExplosionBlood
+{
 	Speed 2
 	Scale 1.2
 	States
@@ -164,7 +177,8 @@ Actor GibExplosionBlood2 : GibExplosionBlood {
 	}
 }
 
-Actor AOWBrainStem : BrainStem {
+Actor AOWBrainStem : BrainStem
+{
 	+CLIENTSIDEONLY
 	States
 	{

@@ -5,7 +5,8 @@ Actor ThermalCloakingTime : Inventory {Inventory.MaxAmount 90}
 
 // [NF] used to fix iron curtain + resign bug
 Actor PowerNull : PowerProtection {DamageFactor "normal", 1.0}
-Actor RedHueRemover : PowerupGiver {
+Actor RedHueRemover : PowerupGiver
+{
 	+INVENTORY.AUTOACTIVATE
 	Inventory.PickupMessage "wat are you doing"
 	Inventory.MaxAmount 0
@@ -19,7 +20,8 @@ Actor DimRedHueRemover : RedHueRemover {Powerup.Color "AA 00 00", 0.25}
 Actor GreenHueRemover : RedHueRemover {Powerup.Color GreenMap}
 
 // === GROSS HACK
-Actor DonationMessage : CustomInventory {
+Actor DonationMessage : CustomInventory
+{
 	Inventory.MaxAmount 0
 	Inventory.amount 0
 	+AUTOACTIVATE
@@ -35,7 +37,8 @@ Actor DonationMessage : CustomInventory {
 	}
 }
 
-Actor UtilityMenuActivator : DonationMessage {
+Actor UtilityMenuActivator : DonationMessage
+{
 	States
 	{
 	Use:

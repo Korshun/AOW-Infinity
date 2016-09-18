@@ -1,5 +1,6 @@
 // Ammo packs
-Actor AmmoPack : CustomInventory replaces Backpack {
+Actor AmmoPack : CustomInventory replaces Backpack
+{
 	+ALWAYSPICKUP
 	Inventory.PickupMessage "Picked up an ammo pack."
 	Inventory.respawntics 2100
@@ -37,7 +38,8 @@ Actor AmmoPack : CustomInventory replaces Backpack {
 	}
 }
 
-Actor MedicPack : CustomInventory 21082 {
+Actor MedicPack : CustomInventory 21082
+{
 	Inventory.respawntics 2100
 	Inventory.pickupsound "misc/i_pkup"
 	Inventory.MaxAmount 9999
@@ -55,7 +57,8 @@ Actor MedicPack : CustomInventory 21082 {
 	}
 }
 
-Actor EngineerPack : MedicPack 21067 {
+Actor EngineerPack : MedicPack 21067
+{
 	Inventory.PickupMessage "Picked up a support pack."
 	States
 	{

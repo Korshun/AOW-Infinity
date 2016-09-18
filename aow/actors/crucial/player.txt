@@ -1,5 +1,6 @@
 // Player Marine
-Actor Player : DoomPlayer {
+Actor Player : DoomPlayer
+{
 	+NOSKIN
 	-TELESTOMP
 	Health 100
@@ -300,7 +301,8 @@ Actor Player : DoomPlayer {
 	}
 }
 
-Actor MarineGoreExplosion {
+Actor MarineGoreExplosion
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -316,7 +318,8 @@ Actor MarineGoreExplosion {
 	}
 }
 
-Actor MarineGoreExplosion2 {
+Actor MarineGoreExplosion2
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -333,7 +336,8 @@ Actor MarineGoreExplosion2 {
 }
 
 
-Actor MarineGoreExplosion3 {
+Actor MarineGoreExplosion3
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -349,7 +353,8 @@ Actor MarineGoreExplosion3 {
 }
 
 
-Actor MarineStomp  {
+Actor MarineStomp
+{
 	PROJECTILE
 	+NOBLOOD
 	+CLIENTSIDEONLY

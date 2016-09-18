@@ -1,5 +1,6 @@
 // Fists
-Actor Unarmed : AOWWeapon {
+Actor Unarmed : AOWWeapon
+{
 	+WIMPY_WEAPON
 	+MELEEWEAPON
 	Obituary "%k knocked %o out hard."
@@ -54,7 +55,8 @@ Actor Unarmed : AOWWeapon {
 	}
 }
 
-Actor BerserkFists : Unarmed {
+Actor BerserkFists : Unarmed
+{
 	-WIMPY_WEAPON // well it's not, is it?
 	Obituary "\cG%o \cGgot %p SHIT punched the fuck out by %k."
 	Weapon.SelectionOrder 0
@@ -112,7 +114,8 @@ Actor BerserkFists : Unarmed {
 Actor FistSwitch : Boolean {}
 Actor FistReplaced : Boolean {}
 
-Actor FistPuff : BulletPuff {
+Actor FistPuff : BulletPuff
+{
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
 	+NOGRAVITY
@@ -138,7 +141,8 @@ Actor FistPuff : BulletPuff {
 	}
 }
 
-Actor BerserkPuff : FistPuff {
+Actor BerserkPuff : FistPuff
+{
 	+EXTREMEDEATH
 	States
 	{
@@ -149,7 +153,8 @@ Actor BerserkPuff : FistPuff {
 	}
 }
 
-Actor FistHit {
+Actor FistHit
+{
 	+CLIENTSIDEONLY
 	+NOCLIP
 	Radius 1
@@ -163,7 +168,8 @@ Actor FistHit {
 	}
 }
 
-Actor FistWall : FistHit {
+Actor FistWall : FistHit
+{
 	States
 	{
 	Spawn:

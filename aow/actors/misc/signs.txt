@@ -636,7 +636,8 @@ Actor Sign_Upgrade04 21461
 }
 
 // [NF] removed sign
-Actor Sign_Upgrade05 21462 {
+Actor Sign_Upgrade05 21462
+{
 	Game Doom
 	Scale 0.75
 	+NOGRAVITY

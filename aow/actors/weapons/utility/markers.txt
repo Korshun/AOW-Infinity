@@ -1,5 +1,6 @@
 //Utility Gun markers
-Actor Utility_MarkerBase {
+Actor Utility_MarkerBase
+{
 	+NOBLOCKMAP +NOGRAVITY
 	+CLIENTSIDEONLY
 	Translation "1:254=112:127"
@@ -236,7 +237,8 @@ Actor Utility_MinesMarker : Utility_MarkerBase
 	}
 }
 
-Actor Utility_FullRefillMarker : Utility_MarkerBase {
+Actor Utility_FullRefillMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -246,7 +248,8 @@ Actor Utility_FullRefillMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_PlatformMarker : Utility_MarkerBase {
+Actor Utility_PlatformMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -310,7 +313,8 @@ Actor Utility_PlatformMarker : Utility_MarkerBase {
 
 Actor Utility_StepMarkerRed : Utility_StepMarker {Translation "1:254=176:191"}
 
-Actor Utility_PortalStandMarker : Utility_MarkerBase {
+Actor Utility_PortalStandMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -320,7 +324,8 @@ Actor Utility_PortalStandMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_PortalSphereMarker : Utility_MarkerBase {
+Actor Utility_PortalSphereMarker : Utility_MarkerBase
+{
 	Scale 0.5
 	States
 	{
@@ -331,7 +336,8 @@ Actor Utility_PortalSphereMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_RifleMarker : Utility_MarkerBase {
+Actor Utility_RifleMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -341,7 +347,8 @@ Actor Utility_RifleMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_MachineGunMarker : Utility_MarkerBase {
+Actor Utility_MachineGunMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -351,7 +358,8 @@ Actor Utility_MachineGunMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_C4BoxMarker : Utility_MarkerBase {
+Actor Utility_C4BoxMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -361,7 +369,8 @@ Actor Utility_C4BoxMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_ArmourMarker : Utility_MarkerBase {
+Actor Utility_ArmourMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:
@@ -371,7 +380,8 @@ Actor Utility_ArmourMarker : Utility_MarkerBase {
 	}
 }
 
-Actor Utility_BarrelMarker : Utility_MarkerBase {
+Actor Utility_BarrelMarker : Utility_MarkerBase
+{
 	States
 	{
 	Spawn:

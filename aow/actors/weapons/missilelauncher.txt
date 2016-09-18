@@ -1,5 +1,6 @@
 // Missile Launcher
-Actor MissileLauncher : AOWWeapon {
+Actor MissileLauncher : AOWWeapon
+{
 	+NOAUTOFIRE
 	Inventory.PickupMessage "You got the missile laucher!"
 	Obituary "$OB_MISSILELAUNCHER"
@@ -108,7 +109,8 @@ Actor MissileLauncher : AOWWeapon {
 	}
 }
 
-Actor MissileAmmo : Ammo {
+Actor MissileAmmo : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 15
 	Inventory.MaxAmount 15
@@ -116,7 +118,8 @@ Actor MissileAmmo : Ammo {
 	Ammo.BackpackMaxAmount 15
 }
 
-Actor HeavyMissile {
+Actor HeavyMissile
+{
 	PROJECTILE
 	-RANDOMIZE
 	Radius 11
@@ -145,7 +148,8 @@ Actor HeavyMissile {
 	}
 }
 
-Actor HeavyMissileBlue : HeavyMissile {
+Actor HeavyMissileBlue : HeavyMissile
+{
 	DamageType "Explosion"
 	States
 	{
@@ -160,7 +164,8 @@ Actor HeavyMissileBlue : HeavyMissile {
 	}
 }
 
-Actor HeavyHomingMissile : HeavyMissile {
+Actor HeavyHomingMissile : HeavyMissile
+{
 	+SEEKERMISSILE
 	Obituary "$OB_SEEKERMISSILE" // "%o was found by %k's seeker missile."
 	States
@@ -179,7 +184,8 @@ Actor HeavyHomingMissile : HeavyMissile {
 	}
 }
 
-Actor HeavyHomingMissileBlue : HeavyMissile {
+Actor HeavyHomingMissileBlue : HeavyMissile
+{
 	+SEEKERMISSILE
 	Obituary "$OB_SEEKERMISSILE" // "%o was found by %k's seeker missile."
 	DamageType "Explosion"
@@ -200,7 +206,8 @@ Actor HeavyHomingMissileBlue : HeavyMissile {
 	}
 }
 
-Actor HeavyMissileQuake {
+Actor HeavyMissileQuake
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -216,7 +223,8 @@ Actor HeavyMissileQuake {
 	}
 }
 
-Actor HeavyMissileSmoke {
+Actor HeavyMissileSmoke
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	Alpha 0.6

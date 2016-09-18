@@ -1,5 +1,6 @@
 // Razor wire
-Actor Utility_RazorWire 21152 {
+Actor Utility_RazorWire 21152
+{
 	//$Category Objects
 	+SHOOTABLE
 	+NOBLOOD
@@ -45,7 +46,8 @@ Actor Utility_RazorWire 21152 {
 	}
 }
 
-Actor Utility_RazorWireBlue : Utility_RazorWire 21153 {
+Actor Utility_RazorWireBlue : Utility_RazorWire 21153
+{
 	DamageType "RazorWire"
 	Tag "Razor wire (blue)"
 	States
@@ -64,7 +66,8 @@ Actor Utility_RazorWireBlue : Utility_RazorWire 21153 {
 
 Actor PowerRazorWire : PowerSpeed {Speed 0.5}
 
-Actor RazorWireSpeed : PowerupGiver {
+Actor RazorWireSpeed : PowerupGiver
+{
 	Inventory.MaxAmount 0
 	Powerup.Type "RazorWire"
 	Powerup.Duration 35

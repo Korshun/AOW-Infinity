@@ -1,7 +1,8 @@
 // ===========================
 // ARMOR ITEMS
 
-Actor FireArmor : InventoryItem {
+Actor FireArmor : InventoryItem
+{
 	+NOGRAVITY +NOCLIP
 	Tag "Fire Proof Armor"
 	Inventory.PickupMessage "Picked up fireproof armour!"
@@ -36,7 +37,8 @@ Actor FireArmor : InventoryItem {
 	}
 }
 
-Actor ChemicalArmor : FireArmor {
+Actor ChemicalArmor : FireArmor
+{
 	Tag "Chemical Proof Armor"
 	Inventory.PickupMessage "Picked up chemproof armour!"
 	Inventory.icon "arm1icon"
@@ -65,7 +67,8 @@ Actor ChemicalArmor : FireArmor {
 	}
 }
 
-Actor LaserArmor : FireArmor {
+Actor LaserArmor : FireArmor
+{
 	Tag "Laser-Resistant Armor"
 	Inventory.PickupMessage "Picked up laser-resistant armour!"
 	Inventory.icon "arm2icon"
@@ -90,7 +93,8 @@ Actor LaserArmor : FireArmor {
 
 // MY ARMOR IS EXPLOSIONS
 // RUN
-Actor ExplosionArmor : FireArmor {
+Actor ExplosionArmor : FireArmor
+{
 	Tag "Explosive-Resistant Armor"
 	Inventory.PickupMessage "Picked up explosive-resistant armour!"
 	Inventory.icon "arm4icon"
@@ -114,7 +118,8 @@ Actor ExplosionArmor : FireArmor {
 }
 
 // and now my armor is made of bullets fyi
-Actor BulletArmor : FireArmor {
+Actor BulletArmor : FireArmor
+{
 	Tag "Bulletproof Vest"
 	Inventory.PickupMessage "Picked up a bulletproof vest!"
 	Inventory.icon "arm5icon"

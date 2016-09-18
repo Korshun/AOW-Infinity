@@ -1,5 +1,6 @@
 // TIBERIUM AUTORIFLE
-/*actor TiberiumAutorifleWeak : AOWWeapon 21084 {
+/*actor TiberiumAutorifleWeak : AOWWeapon 21084
+{
 	+AMMO_OPTIONAL
 	+ALT_AMMO_OPTIONAL
 	inventory.pickupmessage "You got the Tiberium Autorifle!"
@@ -107,7 +108,8 @@
 	}
 }*/
 
-actor TiberiumAutorifle : AOWWeapon 21084 {
+actor TiberiumAutorifle : AOWWeapon 21084
+{
 	+AMMO_OPTIONAL
 	+ALT_AMMO_OPTIONAL
 	inventory.pickupmessage "You got the Tiberium Autorifle!"
@@ -121,7 +123,8 @@ actor TiberiumAutorifle : AOWWeapon 21084 {
 	weapon.ammogive2 20
 	obituary "%o was skewered and mutated by %k's Tiberium Autorifle."
 	Weapon.PreferredSkin "MarineMachineGun"
-	states {
+	states
+{
 	Ready:
 		NULL A 0
 		goto Ready2
@@ -230,7 +233,8 @@ actor TiberiumAutorifle : AOWWeapon 21084 {
 	}
 }
 
-Actor TE21CalAmmo : Ammo {
+Actor TE21CalAmmo : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 20
 	Inventory.MaxAmount 120
@@ -238,7 +242,8 @@ Actor TE21CalAmmo : Ammo {
 	Ammo.BackpackMaxAmount 120
 }
 
-Actor TE21Burst6 : Ammo {
+Actor TE21Burst6 : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 6
 	Inventory.MaxAmount 6
@@ -246,7 +251,8 @@ Actor TE21Burst6 : Ammo {
 	Ammo.BackpackMaxAmount 6
 }
 
-Actor TiberiumDart : FastProjectile {
+Actor TiberiumDart : FastProjectile
+{
 	PROJECTILE
 	-RANDOMIZE
 	radius 13
@@ -259,7 +265,8 @@ Actor TiberiumDart : FastProjectile {
 	scale 0.15
 	deathsound "toxin/explode"
 	decal "ChemScorch"
-	states {
+	states
+{
 	Spawn:
 		E21X A -1 bright
 		stop
@@ -274,11 +281,13 @@ Actor TiberiumDart : FastProjectile {
 
 actor TiberiumDartWeak : TiberiumDart { speed 72 damage (4) }
 
-actor TiberiumDartExplosion {
+actor TiberiumDartExplosion
+{
 	PROJECTILE
 	+NOCLIP
 	DamageType "Chemical"
-	states {
+	states
+{
 	Spawn:
 		NULL A 0
 		TNT1 A 5 A_Explode(6, 64)

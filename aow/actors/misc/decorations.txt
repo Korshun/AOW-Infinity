@@ -258,7 +258,8 @@ Actor NTreeBurnt 12327
 }
 
 // Fake Tiberium
-Actor FakeTiberiumCrystal 24000 {
+Actor FakeTiberiumCrystal 24000
+{
 	+FLOORCLIP
 	+NONETID
 	+CLIENTSIDEONLY
@@ -279,7 +280,8 @@ Actor FakeTiberiumCrystal 24000 {
 }
 
 // Mercury needs this
-Actor TrueSolidInvisibleBridge : InvisibleBridge 29011 {
+Actor TrueSolidInvisibleBridge : InvisibleBridge 29011
+{
 	+SHOOTABLE +NODAMAGE
 	Mass 0x7FFFFFFF
 }
@@ -350,7 +352,8 @@ Actor TechLanternBigShort 506
 }
 
 // AOW14 specific actors
-Actor A14RedTowerFX 27500 {
+Actor A14RedTowerFX 27500
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -361,7 +364,8 @@ Actor A14RedTowerFX 27500 {
 	}
 }
 
-Actor A14RedTowerFX2 {
+Actor A14RedTowerFX2
+{
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD
@@ -377,7 +381,8 @@ Actor A14RedTowerFX2 {
 	}
 }
 
-Actor A14BlueTowerFX 27501 {
+Actor A14BlueTowerFX 27501
+{
 	+CLIENTSIDEONLY
 	+NOINTERACTION
 	States
@@ -388,7 +393,8 @@ Actor A14BlueTowerFX 27501 {
 	}
 }
 
-Actor A14BlueTowerFX2 : A14RedTowerFX2 {
+Actor A14BlueTowerFX2 : A14RedTowerFX2
+{
 	States
 	{
 	Spawn:
@@ -398,7 +404,8 @@ Actor A14BlueTowerFX2 : A14RedTowerFX2 {
 	}
 }
 
-Actor PhobosRock1 19004 {
+Actor PhobosRock1 19004
+{
 	//$Category Decorations
 	Tag "Phobos rock"
 	Radius 24
@@ -412,7 +419,8 @@ Actor PhobosRock1 19004 {
 	}
 }
 
-Actor PhobosRock2 19005 {
+Actor PhobosRock2 19005
+{
 	Tag "Phobos rock"
 	//$Category Decorations
 	Radius 24
@@ -426,7 +434,8 @@ Actor PhobosRock2 19005 {
 	}
 }
 
-Actor PhobosRockSmall 19006 {
+Actor PhobosRockSmall 19006
+{
 	Tag "Phobos rock (small)"
 	//$Category Decorations
 	Radius 1

@@ -1,5 +1,6 @@
 // Wolverine mech
-Actor Wolverine : MechPlayer_Base {
+Actor Wolverine : MechPlayer_Base
+{
 	Health 3000
 	Radius 58
 	Height 128
@@ -90,17 +91,20 @@ Actor WolverineUsed : Wolverine {Health 1500}
 Actor WolverineSwitch : PermanentPowerup {Powerup.Type "Wolverine"}
 Actor WolverineSwitchUsed : PermanentPowerup {Powerup.Type "WolverineUsed"}
 
-Actor PowerWolverine : PowerMorph {
+Actor PowerWolverine : PowerMorph
+{
 	PowerMorph.PlayerClass "Wolverine"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }
 
-Actor PowerWolverineUsed : PowerMorph {
+Actor PowerWolverineUsed : PowerMorph
+{
 	PowerMorph.PlayerClass "WolverineUsed"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }
 
-Actor WolverineSwitchPickup : CustomInventory {
+Actor WolverineSwitchPickup : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.pickupsound "mech/start"
 	Translation "112:127=[255,255,255]:[0,0,0]"
@@ -119,7 +123,8 @@ Actor WolverineSwitchPickup : CustomInventory {
 	}
 }
 
-Actor WolverineWeapons : AOWWeapon {
+Actor WolverineWeapons : AOWWeapon
+{
 	Weapon.SelectionOrder 1
 	Obituary "%o was overwhelmed by %k's Wolverine."
 	+WEAPON.CHEATNOTWEAPON
@@ -217,7 +222,8 @@ Actor WolverineWeapons : AOWWeapon {
 	}
 }
 
-Actor PulseBall {
+Actor PulseBall
+{
 	PROJECTILE
 	+FORCEXYBILLBOARD
 	
@@ -250,14 +256,16 @@ Actor PulseBall {
 
 Actor PulseBallBlue : PulseBall {DamageType "Laser"}
 
-Actor MechRocketAmmo : Ammo {
+Actor MechRocketAmmo : Ammo
+{
 	Inventory.amount 10
 	Inventory.MaxAmount 240
 	Ammo.BackpackAmount 10
 	Ammo.BackpackMaxAmount 240
 }
 
-Actor Wolverine-MinigunAmmo : Ammo {
+Actor Wolverine-MinigunAmmo : Ammo
+{
 	Inventory.amount 10
 	Inventory.MaxAmount 600
 	Ammo.BackpackAmount 10
@@ -268,7 +276,8 @@ Actor Reload-LRM : Boolean {}
 
 Actor Wolverine-WhatWeapon : Inventory {Inventory.MaxAmount 8}
 
-Actor DamagedWolverine {
+Actor DamagedWolverine
+{
 	Health 300
 	Radius 58
 	Height 128
@@ -301,7 +310,8 @@ Actor DamagedWolverine {
 	}
 }
 
-Actor EjectedWolverine {
+Actor EjectedWolverine
+{
 	Scale 1.75
 	Translation "112:127=[255,255,255]:[0,0,0]"
 	States
@@ -313,7 +323,8 @@ Actor EjectedWolverine {
 	}
 }
 
-Actor WolverineAmmoPackage : CustomInventory {
+Actor WolverineAmmoPackage : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	States

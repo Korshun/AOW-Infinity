@@ -1,5 +1,6 @@
 // Powerup Crate and related actors
-Actor PowerupCrate : CustomInventory replaces RandomPowerup 21410 {
+Actor PowerupCrate : CustomInventory replaces RandomPowerup 21410
+{
 	+LOWGRAVITY
 	+ALWAYSPICKUP
 	Inventory.PickupMessage "Powerup Crate"
@@ -18,7 +19,8 @@ Actor PowerupCrate : CustomInventory replaces RandomPowerup 21410 {
 	}
 }
 
-Actor CrateMapMarker : MapMarker {
+Actor CrateMapMarker : MapMarker
+{
 	Scale 0.3
 	States
 	{
@@ -32,12 +34,14 @@ Actor PowerSpeedUpgrade : PowerSpeed {Speed 1.25}
 Actor SpeedUpgrade : PermanentPowerup {Powerup.Type "SpeedUpgrade"}
 
 Actor PowerFatigue : PowerSpeed {Speed 0.55}
-Actor SpeedDowngrade : PermanentPowerup {
+Actor SpeedDowngrade : PermanentPowerup
+{
 	Powerup.Type "Fatigue"
 	Powerup.Duration -60
 }
 
-Actor IronCurtain : PowerupGiver {
+Actor IronCurtain : PowerupGiver
+{
 	+AUTOACTIVATE
 	+ALWAYSPICKUP
 	Inventory.MaxAmount 0
@@ -46,7 +50,8 @@ Actor IronCurtain : PowerupGiver {
 	Powerup.Color GreenMap
 }
 
-Actor NukeKamikaze {
+Actor NukeKamikaze
+{
 	+NOINTERACTION
 	+FORCERADIUSDMG
 	Obituary "$OB_KAMIKAZE" // "%k make %o go boom!"
@@ -61,7 +66,8 @@ Actor NukeKamikaze {
 	}
 }
 
-Actor BlueStrikeKamikaze : NukeKamikaze {
+Actor BlueStrikeKamikaze : NukeKamikaze
+{
 	DamageType "Explosion"
 	States
 	{
@@ -73,7 +79,8 @@ Actor BlueStrikeKamikaze : NukeKamikaze {
 	}
 }
 
-Actor BombExplosion : KamikazeExplosion {
+Actor BombExplosion : KamikazeExplosion
+{
 	+EXTREMEDEATH
 	Obituary "%o was blasted away by %k's bomb crate."
 	DamageType "Monster"
@@ -90,7 +97,8 @@ Actor BombExplosion : KamikazeExplosion {
 Actor IsBombCrate : Boolean {}
 
 // ==== NEW BOMB CRATE STUFF
-Actor BombCrateFXBlue1 {
+Actor BombCrateFXBlue1
+{
 	PROJECTILE
 	+NOINTERACTION
 	+CLIENTSIDEONLY
@@ -122,7 +130,8 @@ Actor BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXBlue2 : BombCrateFXBlue1 {
+Actor BombCrateFXBlue2 : BombCrateFXBlue1
+{
 	Scale 2.7
 	States
 	{
@@ -132,7 +141,8 @@ Actor BombCrateFXBlue2 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXBlue3 : BombCrateFXBlue1 {
+Actor BombCrateFXBlue3 : BombCrateFXBlue1
+{
 	Scale 2.5
 	States
 	{
@@ -142,7 +152,8 @@ Actor BombCrateFXBlue3 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXBlue4 : BombCrateFXBlue1 {
+Actor BombCrateFXBlue4 : BombCrateFXBlue1
+{
 	Scale 2.5
 	States
 	{
@@ -152,7 +163,8 @@ Actor BombCrateFXBlue4 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXRed1 : BombCrateFXBlue1 {
+Actor BombCrateFXRed1 : BombCrateFXBlue1
+{
 	Scale 1
 	States
 	{
@@ -162,7 +174,8 @@ Actor BombCrateFXRed1 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXRed2 : BombCrateFXBlue1 {
+Actor BombCrateFXRed2 : BombCrateFXBlue1
+{
 	Scale 0.9
 	States
 	{
@@ -172,7 +185,8 @@ Actor BombCrateFXRed2 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXRed3 : BombCrateFXBlue1 {
+Actor BombCrateFXRed3 : BombCrateFXBlue1
+{
 	Scale 0.8
 	States
 	{
@@ -182,7 +196,8 @@ Actor BombCrateFXRed3 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXRed4 : BombCrateFXBlue1 {
+Actor BombCrateFXRed4 : BombCrateFXBlue1
+{
 	Scale 0.8
 	States
 	{
@@ -192,7 +207,8 @@ Actor BombCrateFXRed4 : BombCrateFXBlue1 {
 	}
 }
 
-Actor BombCrateFXGiverBlue : CustomInventory {
+Actor BombCrateFXGiverBlue : CustomInventory
+{
 	+AUTOACTIVATE
 	+ALWAYSPICKUP
 	States
@@ -207,7 +223,8 @@ Actor BombCrateFXGiverBlue : CustomInventory {
 	}
 }
 
-Actor BombCrateFXGiverRed : CustomInventory {
+Actor BombCrateFXGiverRed : CustomInventory
+{
 	+AUTOACTIVATE
 	+ALWAYSPICKUP
 	States

@@ -1,5 +1,6 @@
 // Bomb pack
-Actor BombPack : AOWWeapon {
+Actor BombPack : AOWWeapon
+{
 	Inventory.PickupMessage "Picked up the bomb pack... \cGwait what?!"
 	Inventory.pickupsound "terrorist/pickup"
 	Obituary "$OB_BOMBPACK_WTF" // "%o couldn't stand %k running around screaming."
@@ -43,7 +44,8 @@ Actor BombPack : AOWWeapon {
 	}
 }
 
-Actor Bomb-PackAmmo : Ammo {
+Actor Bomb-PackAmmo : Ammo
+{
 	+INVENTORY.IGNORESKILL
 	Inventory.icon "TNT1A0"
 	Inventory.amount 1
@@ -52,7 +54,8 @@ Actor Bomb-PackAmmo : Ammo {
 	Ammo.BackpackMaxAmount 0
 }
 
-Actor DummyMissile {
+Actor DummyMissile
+{
 	PROJECTILE
 	Speed 0 Radius 0
 	Height 0
@@ -64,11 +67,13 @@ Actor DummyMissile {
 	}
 }
 
-Actor IsTerrorist : Inventory {
+Actor IsTerrorist : Inventory
+{
 	Inventory.MaxAmount 1
 }
 
-Actor KamikazeExplosion {
+Actor KamikazeExplosion
+{
 	Obituary "$OB_BOMBPACK" // "%o \cIwas wiped off the face of Earth by %k."
 	PROJECTILE
 	+NOGRAVITY +NOINTERACTION
@@ -87,7 +92,8 @@ Actor KamikazeExplosion {
 }
 
 Actor KamikazeExplosionBlue : KamikazeExplosion {DamageType "Explosion"}
-Actor KamikazeExplosionFX {
+Actor KamikazeExplosionFX
+{
 	+CLIENTSIDEONLY +NOINTERACTION +NOGRAVITY
 	States
 	{
@@ -117,12 +123,14 @@ Actor KamikazeExplosionFX {
 	}
 }
 
-Actor BombPackSmoke : NukeSmoke {
+Actor BombPackSmoke : NukeSmoke
+{
 	+FORCEXYBILLBOARD
 	Scale 1.5
 }
 
-Actor BombPackQuake {
+Actor BombPackQuake
+{
 	+CLIENTSIDEONLY +NOSECTOR +NOCLIP +NOINTERACTION
 	States
 	{
@@ -140,7 +148,8 @@ Actor BombPackQuake {
 }
 
 // given on resign to take Player out of 'terrorism mode'
-Actor NoMoreTerrorism : CustomInventory {
+Actor NoMoreTerrorism : CustomInventory
+{
 	Inventory.amount 0
 	Inventory.MaxAmount 999999
 	+AUTOACTIVATE

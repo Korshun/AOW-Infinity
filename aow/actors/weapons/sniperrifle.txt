@@ -1,5 +1,6 @@
 // Sniper rifle
-Actor SniperRifle : AOWWeapon {
+Actor SniperRifle : AOWWeapon
+{
 	Obituary "$OB_SNIPER" // "%o found %k's bullet in %p head."
 	AttackSound "rc50/fire"
 	Weapon.SelectionOrder 3
@@ -106,7 +107,8 @@ Actor SniperRifle : AOWWeapon {
 
 Actor IsZoomed : Boolean {}
 
-Actor SniperRifleWeak : SniperRifle 21081 {
+Actor SniperRifleWeak : SniperRifle 21081
+{
 	States
 	{
 	Fire:
@@ -126,7 +128,8 @@ Actor SniperRifleWeak : SniperRifle 21081 {
 	}
 }
 
-Actor SniperAmmo : Ammo {
+Actor SniperAmmo : Ammo
+{
 	Inventory.amount 4
 	Inventory.MaxAmount 40
 	Ammo.BackpackAmount 4

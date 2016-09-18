@@ -1,5 +1,6 @@
 // RAVEN MECH
-Actor Raven : MechPlayer_Base {
+Actor Raven : MechPlayer_Base
+{
 	+NOSKIN
 	Radius 58
 	Height 144
@@ -97,7 +98,8 @@ Actor RavenSwitch2 : PermanentPowerup {Powerup.Type "Raven2"}
 Actor PowerRaven : AOWMorph {powermorph.playerclass "Raven"}
 Actor PowerRaven2 : AOWMorph {PowerMorph.PlayerClass "RavenUsed"}
 
-Actor RavenSwitchPickup : CustomInventory {
+Actor RavenSwitchPickup : CustomInventory
+{
 	Inventory.pickupsound "mech/start"
 	Translation "112:127=[255,255,255]:[0,0,0]"
 	+INVENTORY.AUTOACTIVATE
@@ -117,7 +119,8 @@ Actor RavenSwitchPickup : CustomInventory {
 	}
 }
 
-Actor RavenWeapons : AOWWeapon {
+Actor RavenWeapons : AOWWeapon
+{
 	+CHEATNOTWEAPON +DONTBOB
 	Weapon.SelectionOrder 1
 	Weapon.AmmoType "RavenAC2Ammo"
@@ -190,14 +193,16 @@ Actor RavenWeapons : AOWWeapon {
 	}
 }
 
-Actor RavenAC2Ammo : Ammo {
+Actor RavenAC2Ammo : Ammo
+{
 	Inventory.amount 10
 	Inventory.MaxAmount 120
 	Ammo.BackpackAmount 10
 	Ammo.BackpackMaxAmount 120
 }
 
-Actor RavenAC2 : FastProjectile {
+Actor RavenAC2 : FastProjectile
+{
 	Radius 4
 	Height 8
 	Speed 250
@@ -223,7 +228,8 @@ Actor RavenAC2 : FastProjectile {
 	}
 }
 
-Actor RavenAC2FX {
+Actor RavenAC2FX
+{
 	+CLIENTSIDEONLY
 	States
 	{
@@ -233,7 +239,8 @@ Actor RavenAC2FX {
 	}
 }
 
-Actor RavenAC2Explosion {
+Actor RavenAC2Explosion
+{
 	Obituary "$OB_RAVEN"
 	DamageType "Explosion"
 	States
@@ -245,7 +252,8 @@ Actor RavenAC2Explosion {
 	}
 }
 
-Actor RavenAC2Blue : RavenAC2 {
+Actor RavenAC2Blue : RavenAC2
+{
 	Translation "112:120=200:207", "121:127=241:247"
 	DamageType "Rifle"
 	States
@@ -260,14 +268,16 @@ Actor RavenAC2Blue : RavenAC2 {
 
 Actor RavenAC2ExplosionBlue : RavenAC2Explosion {DamageType "Explosion"}
 
-Actor Raven-RocketAmmo : Ammo {
+Actor Raven-RocketAmmo : Ammo
+{
 	Inventory.amount 5
 	Inventory.MaxAmount 120
 	Ammo.BackpackAmount 5
 	Ammo.BackpackMaxAmount 120
 }
 
-Actor DamagedRaven {
+Actor DamagedRaven
+{
 	Health 200
 	Radius 58
 	Height 128
@@ -296,7 +306,8 @@ Actor DamagedRaven {
 	}
 }
 
-Actor EjectedRaven {
+Actor EjectedRaven
+{
 	Scale 0.65
 	Translation "112:127=[255,255,255]:[0,0,0]"
 	States
@@ -309,7 +320,8 @@ Actor EjectedRaven {
 	}
 }
 
-Actor RavenAmmoPackage : CustomInventory {
+Actor RavenAmmoPackage : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	States

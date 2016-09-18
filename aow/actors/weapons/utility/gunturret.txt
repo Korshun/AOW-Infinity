@@ -1,5 +1,6 @@
 // Gun turret
-Actor Utility_GunTurretRed : Utility_TurretBase {
+Actor Utility_GunTurretRed : Utility_TurretBase
+{
 	Obituary "%o was owned by a \cgRed \c-turret."
 	Health 250
 	PainChance 50
@@ -83,7 +84,8 @@ Actor Utility_GunTurretRed : Utility_TurretBase {
 	}
 }
 
-Actor Utility_GunTurretBlue : Utility_TurretBase {
+Actor Utility_GunTurretBlue : Utility_TurretBase
+{
 	Obituary "%o was owned by a \chBlue \c-turret."
 	Health 250
 	PainChance 50

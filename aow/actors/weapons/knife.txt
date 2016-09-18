@@ -1,5 +1,6 @@
 // Stealth Trooper's Knife
-Actor Knife : AOWWeapon {
+Actor Knife : AOWWeapon
+{
 	+MELEEWEAPON
 	+NOALERT
 	+THRUGHOST

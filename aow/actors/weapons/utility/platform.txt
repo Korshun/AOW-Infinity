@@ -1,5 +1,6 @@
 // Floating Platform
-Actor FloatingPlatform : InvisibleBridge {
+Actor FloatingPlatform : InvisibleBridge
+{
 	+SHOOTABLE +NOBLOOD
 	Radius 92
 	Height 14
@@ -39,7 +40,8 @@ Actor FloatingPlatform : InvisibleBridge {
 	}
 }
 
-Actor FloatingPlatformVisual {
+Actor FloatingPlatformVisual
+{
 	+CLIENTSIDEONLY +NOGRAVITY
 	+NOBLOCKMAP +NOINTERACTION
 	States
@@ -75,7 +77,8 @@ Actor FloatingPlatformVisual {
 	}
 }
 
-Actor FloatingPlatformVisualDamaged {
+Actor FloatingPlatformVisualDamaged
+{
 	+CLIENTSIDEONLY +NOGRAVITY
 	+NOBLOCKMAP +NOINTERACTION
 	States
@@ -111,7 +114,8 @@ Actor FloatingPlatformVisualDamaged {
 	}
 }
 
-Actor FloatingPlatformVisualUnit {
+Actor FloatingPlatformVisualUnit
+{
 	+CLIENTSIDEONLY +NOGRAVITY
 	+NOBLOCKMAP +NOINTERACTION
 	Scale 0.25
@@ -123,7 +127,8 @@ Actor FloatingPlatformVisualUnit {
 	}
 }
 
-Actor FloatingPlatformVisualUnitDamaged : FloatingPlatformVisualUnit {
+Actor FloatingPlatformVisualUnitDamaged : FloatingPlatformVisualUnit
+{
 	States
 	{
 	Spawn:
@@ -132,7 +137,8 @@ Actor FloatingPlatformVisualUnitDamaged : FloatingPlatformVisualUnit {
 	}
 }
 
-Actor FloatingPlatformExplosion {
+Actor FloatingPlatformExplosion
+{
 	+CLIENTSIDEONLY +NOGRAVITY
 	+NOBLOCKMAP +NOINTERACTION
  	ReactionTime 2

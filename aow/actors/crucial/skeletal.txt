@@ -2,7 +2,8 @@
 
 // ============================================================================
 // Base class for weapons
-Actor AOWWeapon : Weapon {
+Actor AOWWeapon : Weapon
+{
 	//$Category Weapons
 	+NO_AUTO_SWITCH
 	+NOAUTOAIM
@@ -27,13 +28,15 @@ Actor AOWWeapon : Weapon {
 
 // =============================================================================
 // Base class for morphs
-Actor AOWMorph : PowerMorph {
+Actor AOWMorph : PowerMorph
+{
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }
 
 // =============================================================================
 // Base class for powerups
-Actor PermanentPowerup : PowerupGiver {
+Actor PermanentPowerup : PowerupGiver
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	Powerup.Type "Null"
@@ -48,7 +51,8 @@ Actor PermanentPowerup : PowerupGiver {
 
 // =============================================================================
 // Base class for inventory items, providing a few extra states and +INVBAR
-Actor InventoryItem : CustomInventory {
+Actor InventoryItem : CustomInventory
+{
 	+INVBAR
 	Inventory.MaxAmount 1
 	States
@@ -69,13 +73,15 @@ Actor InventoryItem : CustomInventory {
 }
 
 // ============================================================================
-actor Cooldown : PowerProtection {
+actor Cooldown : PowerProtection
+{
 	Powerup.Duration 1
 	DamageFactor "normal", 1
 }
 
 // ============================================================================
-Actor Integer : Inventory {
+Actor Integer : Inventory
+{
 	+NOBLOCKMAP
 	Inventory.MaxAmount 0x7fffffff
 	States
@@ -86,7 +92,8 @@ Actor Integer : Inventory {
 	}
 }
 
-Actor Boolean : Inventory {
+Actor Boolean : Inventory
+{
 	+NOBLOCKMAP
 	Inventory.MaxAmount 1
 	States

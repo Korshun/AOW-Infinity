@@ -1,5 +1,6 @@
 // Rifle
-Actor Rifle : AOWWeapon 21042 {
+Actor Rifle : AOWWeapon 21042
+{
 	+NOEXTREMEDEATH
 	+ALT_AMMO_OPTIONAL
 	Obituary "$OB_RIFLE" // "%o was crippled by %k's rifle."
@@ -67,14 +68,16 @@ Actor Rifle : AOWWeapon 21042 {
 	}
 }
 
-Actor RifleAmmo : Ammo {
+Actor RifleAmmo : Ammo
+{
 	Inventory.amount 8
 	Inventory.MaxAmount 50
 	Ammo.BackpackAmount 10
 	Ammo.BackpackMaxAmount 50
 }
 
-Actor RifleGrenadeAmmo : Ammo {
+Actor RifleGrenadeAmmo : Ammo
+{
 	Inventory.amount 1
 	Inventory.MaxAmount 8
 	Ammo.BackpackAmount 1

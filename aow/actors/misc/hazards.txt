@@ -4,7 +4,8 @@
 // - lava volcano
 // - airstrike
 
-Actor NukageBarrel : ExplosiveBarrel replaces ExplosiveBarrel {
+Actor NukageBarrel : ExplosiveBarrel replaces ExplosiveBarrel
+{
 	Health 20
 	DamageFactor "Disarm", 0.0
 	DamageFactor "ChemicalSpecial", 0.0
@@ -28,7 +29,8 @@ Actor NukageBarrel : ExplosiveBarrel replaces ExplosiveBarrel {
 
 // Disabled because of inability to set DamageType
 // without losing track of shooter...
-/*Actor Utility_Barrel : NukageBarrel {
+/*Actor Utility_Barrel : NukageBarrel
+{
 	RenderStyle translucent
 	Alpha 0
 	-SOLID
@@ -192,13 +194,15 @@ Actor Lavaball1
 	}
 }
 
-Actor Lavaball2 : Lavaball1 {
+Actor Lavaball2 : Lavaball1
+{
 	Obituary "%o ate a lava ball."
 	Damage (50)
 	Scale 0.4
 }
 
-Actor Airstrike {
+Actor Airstrike
+{
 	PROJECTILE
 	+CEILINGHUGGER
 	Speed 40
@@ -214,7 +218,8 @@ Actor Airstrike {
 	}
 }
 
-Actor AirstrikeBomb {
+Actor AirstrikeBomb
+{
 	PROJECTILE
 	-NOGRAVITY
 	Obituary "%o couldn't hide from an airstrike."

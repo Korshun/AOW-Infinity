@@ -1,5 +1,6 @@
 // Flamethrower
-Actor Flamer : AOWWeapon 21047 {
+Actor Flamer : AOWWeapon 21047
+{
 	+ALT_AMMO_OPTIONAL
 	Obituary "$OB_FLAMER"
 	Inventory.PickupMessage "You got the flamethrower!"
@@ -87,7 +88,8 @@ Actor Flamer : AOWWeapon 21047 {
 	}
 }
 
-Actor FlamerAmmo : Ammo {
+Actor FlamerAmmo : Ammo
+{
 	Inventory.amount 100
 	Inventory.MaxAmount 400
 	Ammo.BackpackAmount 100
@@ -100,7 +102,8 @@ Actor FlamerAmmo : Ammo {
 	}
 }
 
-Actor PhosphorusGrenadeAmmo : Ammo {
+Actor PhosphorusGrenadeAmmo : Ammo
+{
 	Inventory.amount 1
 	Inventory.MaxAmount 4
 	Ammo.BackpackAmount 1
@@ -113,7 +116,8 @@ Actor PhosphorusGrenadeAmmo : Ammo {
 	}
 }
 
-Actor FlameThrowerFire {
+Actor FlameThrowerFire
+{
 	PROJECTILE
 	+FORCEXYBILLBOARD
 	
@@ -142,7 +146,8 @@ Actor FlameThrowerFire {
 	}
 }
 
-Actor FlameThrowerFireBlue : FlameThrowerFire {
+Actor FlameThrowerFireBlue : FlameThrowerFire
+{
 	DamageType "Fire"
 	States
 	{
@@ -160,7 +165,8 @@ Actor FlameThrowerFireBlue : FlameThrowerFire {
 	}
 }
 
-Actor FlameThrowerFireRemains {
+Actor FlameThrowerFireRemains
+{
 	PROJECTILE
 	+RANDOMIZE
 	+CLIENTSIDEONLY
@@ -187,7 +193,8 @@ Actor FlameThrowerFireRemains {
 }
 
 // Phosphorus grenade
-Actor PhosphorusGrenade {
+Actor PhosphorusGrenade
+{
 	PROJECTILE
 	-RANDOMIZE
 	-NOGRAVITY
@@ -217,7 +224,8 @@ Actor PhosphorusGrenade {
 	}
 }
 
-Actor PhosphorusGrenadeBlue : PhosphorusGrenade {
+Actor PhosphorusGrenadeBlue : PhosphorusGrenade
+{
 	DamageType "Fire"
 	States
 	{

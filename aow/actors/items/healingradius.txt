@@ -1,6 +1,7 @@
 // MEDIC HEALING Radius
 Actor HealingRadiusCount : Inventory {Inventory.MaxAmount 1}
-Actor HealingRadiusItem : InventoryItem {
+Actor HealingRadiusItem : InventoryItem
+{
 	Tag "Healing Radius"
 	Inventory.icon "hradicon"
 	States
@@ -15,7 +16,8 @@ Actor HealingRadiusItem : InventoryItem {
 	}
 }
 
-Actor HealingRadiusThrown {
+Actor HealingRadiusThrown
+{
 	PROJECTILE
 	+DOOMBOUNCE
 	-NOGRAVITY
@@ -35,7 +37,8 @@ Actor HealingRadiusThrown {
 	}
 }
 
-Actor HealingRadius {
+Actor HealingRadius
+{
 	-SOLID
 	+SHOOTABLE
 	+NOBLOOD
@@ -135,7 +138,8 @@ Actor HealingRadius {
 	}
 }
 
-Actor HealingRadiusBall {
+Actor HealingRadiusBall
+{
 	+NOINTERACTION
 	+NOGRAVITY
 	+SHOOTABLE
@@ -162,7 +166,8 @@ Actor HealingRadiusBall {
 	}
 }
 
-Actor HealingRadiusFX {
+Actor HealingRadiusFX
+{
 	+CLIENTSIDEONLY
 	States
 	{
@@ -173,7 +178,8 @@ Actor HealingRadiusFX {
 	}
 }
 
-Actor HealingRadiusFX2 {
+Actor HealingRadiusFX2
+{
 	+NOGRAVITY
 	+CLIENTSIDEONLY
 	RenderStyle add
@@ -188,7 +194,8 @@ Actor HealingRadiusFX2 {
 }
 
 // map-spawnable healing Radius that does not dissipate and cannot be destroyed
-Actor HealingRadiusPermanent : HealingRadius 29015 {
+Actor HealingRadiusPermanent : HealingRadius 29015
+{
 	-SHOOTABLE	
 	States
 	{
@@ -202,7 +209,8 @@ Actor HealingRadiusPermanent : HealingRadius 29015 {
 	}
 }
 
-Actor HealingRadiusFXPerm {
+Actor HealingRadiusFXPerm
+{
 	+CLIENTSIDEONLY
 	States
 	{

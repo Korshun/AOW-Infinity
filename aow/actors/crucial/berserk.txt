@@ -1,5 +1,6 @@
 // [NF] See weapons/fists.txt for Berserk Fist code
-Actor BerserkPlayer : Player {
+Actor BerserkPlayer : Player
+{
 	+NOSKIN
 	-PICKUP
 	Health 200
@@ -28,7 +29,8 @@ Actor BerserkPlayer : Player {
 	}
 }
 
-Actor BerserkSwitch : PowerupGiver {
+Actor BerserkSwitch : PowerupGiver
+{
 	Powerup.Type "Berserk"
 	Powerup.Duration 10500 // five minutes
 	Powerup.Color RedMap
@@ -48,14 +50,16 @@ Actor BerserkSwitch : PowerupGiver {
 }
 
 Actor PowerBerserkHue : PowerNull {}
-Actor BerserkHue : BerserkSwitch {
+Actor BerserkHue : BerserkSwitch
+{
 	Powerup.Type "BerserkHue"
 	Powerup.Color RedMap
 }
 
 Actor BerserkSwitchTest : BerserkSwitch {Powerup.Duration 0x7FFFFFFF}
 
-Actor PowerBerserk : PowerMorph {
+Actor PowerBerserk : PowerMorph
+{
 	PowerMorph.PlayerClass "BerserkPlayer"
 	PowerMorph.MorphStyle (MRF_FULLHEALTH|MRF_ADDSTAMINA|MRF_NEWTIDBEHAVIOUR|MRF_WHENINVULNERABLE)
 }

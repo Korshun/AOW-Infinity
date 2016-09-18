@@ -1,5 +1,6 @@
 // Various gore actors
-Actor HHBlood : Blood Replaces Blood {
+Actor HHBlood : Blood Replaces Blood
+{
 	Mass 5
 	+NOBLOCKMAP
 	+NOTELEPORT
@@ -19,7 +20,8 @@ Actor HHBlood : Blood Replaces Blood {
 	}
 }
 
-Actor HHBlood2 : Blood  {
+Actor HHBlood2 : Blood
+{
 	Mass 5
 	+NOBLOCKMAP
 	+NOTELEPORT
@@ -39,7 +41,8 @@ Actor HHBlood2 : Blood  {
 	}
 }
 
-Actor HHBlood3 : Blood  {
+Actor HHBlood3 : Blood
+{
 	Mass 5
 	+NOBLOCKMAP
 	+NOTELEPORT
@@ -59,7 +62,8 @@ Actor HHBlood3 : Blood  {
 	}
 }
 
-Actor ActorHit {
+Actor ActorHit
+{
 	Radius 1
 	Height 1
 	+NOCLIP

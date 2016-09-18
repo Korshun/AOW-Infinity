@@ -1,14 +1,16 @@
 // REMOTE C4
 // TODO: make the weapon sprite include the detonator!
 
-Actor RemoteC4Ammo : Ammo {
+Actor RemoteC4Ammo : Ammo
+{
 	Inventory.amount 0
 	Inventory.MaxAmount 4
 	Ammo.BackpackAmount 1
 	Ammo.BackpackMaxAmount 4
 }
 
-Actor RemoteC4 : AOWWeapon {
+Actor RemoteC4 : AOWWeapon
+{
 	+NOALERT
 	Obituary "%o bonks %k with a 100kg Remote C4."
 	Weapon.AmmoType "RemoteC4Ammo"
@@ -97,7 +99,8 @@ Actor RemoteC4 : AOWWeapon {
 	}
 }
 
-Actor RemoteC4Thrown {
+Actor RemoteC4Thrown
+{
 	PROJECTILE
 	-NOGRAVITY
 	Radius 6
@@ -119,7 +122,8 @@ Actor RemoteC4Thrown {
 	}
 }
 
-Actor RemoteC4ThrownBlue : RemoteC4Thrown {
+Actor RemoteC4ThrownBlue : RemoteC4Thrown
+{
 	DamageType "Explosion"
 	//Translation "16:47=192:207", "168:191=192:207"
 	States
@@ -132,7 +136,8 @@ Actor RemoteC4ThrownBlue : RemoteC4Thrown {
 }
 
 
-Actor RemoteC4Armed {
+Actor RemoteC4Armed
+{
 	+NOEXTREMEDEATH
 	+NOGRAVITY
 	+NOBLOOD
@@ -210,7 +215,8 @@ Actor RemoteC4Armed {
 	}
 }
 
-Actor RemoteC4ArmedBlue : RemoteC4Armed {
+Actor RemoteC4ArmedBlue : RemoteC4Armed
+{
 	DamageType "Explosion"
 	Translation "16:47=112:127", "168:191=112:127"
 	States

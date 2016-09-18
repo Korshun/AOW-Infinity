@@ -1,5 +1,6 @@
 // Jumpjet Gatling gun
-Actor JumpJetGatlingGun : GatlingGun {
+Actor JumpJetGatlingGun : GatlingGun
+{
 	Obituary "$OB_GATLING_JET" // "%o was perforated by a flying %k's gatling gun."
 	Weapon.AmmoType2 "JumpJetFuel"
 	Weapon.AmmoUse2 1
@@ -68,17 +69,20 @@ Actor JumpJetGatlingGun : GatlingGun {
 	}
 }
 
-Actor JumpJetSwitch : Inventory {
+Actor JumpJetSwitch : Inventory
+{
 		Inventory.amount 0
 		Inventory.MaxAmount 1
 }
 
-Actor JumpJetCount : Inventory {
+Actor JumpJetCount : Inventory
+{
 		Inventory.amount 0
 		Inventory.MaxAmount 25
 }
 
-Actor JumpJetFuel : Ammo {
+Actor JumpJetFuel : Ammo
+{
 	Inventory.amount 1
 	Inventory.MaxAmount 100
 	Ammo.BackpackAmount 100
@@ -91,7 +95,8 @@ Actor JumpJetFuel : Ammo {
 	}
 }
 
-Actor JumpjetFire {
+Actor JumpjetFire
+{
 	+NOSECTOR +NOCLIP +NOINTERACTION +CLIENTSIDEONLY
 	States
 	{
@@ -104,7 +109,8 @@ Actor JumpjetFire {
 }
 
 // [Dusk] Deactivates jumpjet forcibly
-Actor JumpjetDeactivate : CustomInventory {
+Actor JumpjetDeactivate : CustomInventory
+{
 	+ALWAYSPICKUP +AUTOACTIVATE
 	States
 	{

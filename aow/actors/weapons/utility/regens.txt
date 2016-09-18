@@ -1,5 +1,6 @@
 // Regens
-Actor Utility_GlobalMedicCacheRed {
+Actor Utility_GlobalMedicCacheRed
+{
 	Tag "Red Health Regenerator"
 	+SOLID +SHOOTABLE
 	+NOBLOOD +DONTGIB
@@ -80,7 +81,8 @@ Actor Utility_GlobalMedicCacheRed {
 	}
 }
 
-Actor Utility_GlobalMedicCacheBlue : Utility_GlobalMedicCacheRed {
+Actor Utility_GlobalMedicCacheBlue : Utility_GlobalMedicCacheRed
+{
 	Tag "Blue Health Regenerator"
 	DamageFactor "Fist", 0.2
 	DamageFactor "Fist", 0.0
@@ -118,7 +120,8 @@ Actor Utility_GlobalMedicCacheBlue : Utility_GlobalMedicCacheRed {
 	}
 }
 
-Actor Utility_GlobalAmmoCacheRed : Utility_GlobalMedicCacheRed {
+Actor Utility_GlobalAmmoCacheRed : Utility_GlobalMedicCacheRed
+{
 	Tag "Red Ammo Regenerator"
 	States
 	{
@@ -144,7 +147,8 @@ Actor Utility_GlobalAmmoCacheRed : Utility_GlobalMedicCacheRed {
 	}
 }
 
-Actor Utility_GlobalAmmoCacheBlue : Utility_GlobalAmmoCacheRed  {
+Actor Utility_GlobalAmmoCacheBlue : Utility_GlobalAmmoCacheRed
+{
 	Tag "Blue Ammo Regenerator"
 	DamageFactor "Fist", 0.2
 	DamageFactor "Fist", 0.0
@@ -189,7 +193,8 @@ Actor Utility_GlobalAmmoCacheBlue : Utility_GlobalAmmoCacheRed  {
 	}
 }
 
-Actor AmmoRegenerationPack : AmmoPack {
+Actor AmmoRegenerationPack : AmmoPack
+{
 	States
 	{
 	Spawn:
@@ -219,7 +224,8 @@ Actor AmmoRegenerationPack : AmmoPack {
 	}
 }
 
-Actor Utility_PowerGeneratorRed : Utility_GlobalMedicCacheRed {
+Actor Utility_PowerGeneratorRed : Utility_GlobalMedicCacheRed
+{
 	DamageFactor "Laser", 0.0
 	DamageFactor "Laser", 0.0
 	Tag "Red Power Generator"
@@ -254,7 +260,8 @@ Actor Utility_PowerGeneratorRed : Utility_GlobalMedicCacheRed {
 	}
 }
 
-Actor Utility_PowerGeneratorBlue : Utility_GlobalMedicCacheBlue {
+Actor Utility_PowerGeneratorBlue : Utility_GlobalMedicCacheBlue
+{
 	DamageFactor "Laser", 0.0
 	DamageFactor "Laser", 0.0
 	Tag "Blue Power Generator"

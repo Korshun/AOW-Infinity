@@ -10,7 +10,8 @@
  * which shoot the plasma blast at enemies they see.
  */
 
-Actor RedObeliskThing 21214 {
+Actor RedObeliskThing 21214
+{
 	Obituary "$OB_OBELISK_RED" // "%o was vaporized by the \cgRed Obelisk\c-."
 	Health 99999
 	Radius 16
@@ -375,7 +376,8 @@ Actor ObeliskShotBlueInfantry : FastProjectile
 
 // ------------------------
 // Obelisk decorations
-Actor ObeliskVoltageDecorSpawner 29010 {
+Actor ObeliskVoltageDecorSpawner 29010
+{
 	+NOINTERACTION
 	+NOBLOCKMAP
 	+SHOOTABLE
@@ -392,7 +394,8 @@ Actor ObeliskVoltageDecorSpawner 29010 {
 	}
 }
 
-Actor ObeliskVoltageDecor {
+Actor ObeliskVoltageDecor
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP
@@ -409,7 +412,8 @@ Actor ObeliskVoltageDecor {
 	}
 }
 
-Actor ObeliskVoltageDecorFX {
+Actor ObeliskVoltageDecorFX
+{
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY
 	Radius 1
@@ -425,7 +429,8 @@ Actor ObeliskVoltageDecorFX {
 	}
 }
 
-Actor ObeliskVoltageDecorSpawnerRound 29013 {
+Actor ObeliskVoltageDecorSpawnerRound 29013
+{
 	+NOINTERACTION
 	+NOBLOCKMAP
 	+SHOOTABLE
@@ -442,7 +447,8 @@ Actor ObeliskVoltageDecorSpawnerRound 29013 {
 	}
 }
 
-Actor ObeliskVoltageDecorRound {
+Actor ObeliskVoltageDecorRound
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	+NOBLOCKMAP

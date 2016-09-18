@@ -1,5 +1,6 @@
 // Scavenger mech
-Actor Scavenger : MechPlayer_Base {
+Actor Scavenger : MechPlayer_Base
+{
 	Health 1500
 	Radius 44
 	Height 62
@@ -103,7 +104,8 @@ Actor Scavenger : MechPlayer_Base {
 	}
 }
 
-Actor ScavengerExplosion {
+Actor ScavengerExplosion
+{
 	+NOINTERACTION
 	States
 	{
@@ -127,7 +129,8 @@ Actor ScavengerExplosion {
 Actor ScavengerSwitch : PermanentPowerup {Powerup.Type "Scavenger"}
 Actor PowerScavenger : AOWMorph {powermorph.playerclass "Scavenger"}
 
-Actor ScavengerSwitchPickup : CustomInventory {
+Actor ScavengerSwitchPickup : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.pickupsound "mech/start"
 	Translation "112:127=[255,255,255]:[0,0,0]"
@@ -149,7 +152,8 @@ Actor ScavengerSwitchPickup : CustomInventory {
 
 Actor PowerScavengerUsed : AOWMorph {powermorph.playerclass "ScavengerUsed"}
 
-Actor ScavengerEject : CustomInventory  {
+Actor ScavengerEject : CustomInventory
+{
 	+INVBAR
 	Inventory.PickupMessage ""
 	Inventory.pickupsound ""
@@ -166,7 +170,8 @@ Actor ScavengerEject : CustomInventory  {
 	}
 }
 
-Actor EjectedScavengerWeak {
+Actor EjectedScavengerWeak
+{
 	Health 150
 	Radius 44
 	Height 62
@@ -203,7 +208,8 @@ Actor EjectedScavengerWeak {
 	}
 }
 
-Actor EjectedScavenger {
+Actor EjectedScavenger
+{
 	Health 300
 	Radius 58
 	Height 128
@@ -223,7 +229,8 @@ Actor EjectedScavenger {
 	}
 }
 
-Actor ScavengerWeapons : AOWWeapon {
+Actor ScavengerWeapons : AOWWeapon
+{
 	Weapon.SelectionOrder 1
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 400
@@ -295,7 +302,8 @@ Actor ScavengerWeapons : AOWWeapon {
 	}
 }
 
-Actor ScavengerAmmoPackage : CustomInventory {
+Actor ScavengerAmmoPackage : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	States

@@ -6,7 +6,8 @@
  * frags.
  */
 
-Actor BurningCorpse {
+Actor BurningCorpse
+{
 	MONSTER
 	+FLOORCLIP
 	+NORADIUSDMG
@@ -78,7 +79,8 @@ Actor BurningCorpse {
 }
 
 // This variant is spawned when the Player burns in spawn room
-Actor BurningCorpseReduced : BurningCorpse {
+Actor BurningCorpseReduced : BurningCorpse
+{
 	Speed 0
 	States
 	{
@@ -95,7 +97,8 @@ Actor BurningCorpseReduced : BurningCorpse {
 
 Actor BurnCount : Inventory {Inventory.MaxAmount 12}
 
-Actor FlameFX {
+Actor FlameFX
+{
 	PROJECTILE
 	+CLIENTSIDEONLY
 	+FORCEXYBILLBOARD
@@ -124,7 +127,8 @@ Actor FlameFX {
 	}
 }
 
-Actor FlameFXFloor : FlameFX {
+Actor FlameFXFloor : FlameFX
+{
 	Scale 0.625
 	States
 	{
@@ -145,7 +149,8 @@ Actor FlameFXFloor : FlameFX {
 }
 
 // Green variant for chemical death
-Actor ChemicalCorpse : BurningCorpse {
+Actor ChemicalCorpse : BurningCorpse
+{
 	Obituary "$OB_CHEMICALCORPSE" // "%o got too close to %k's radioactive corpse."
 	DamageType "ChemicalSpecial"
 	States
@@ -197,7 +202,8 @@ Actor ChemicalCorpse : BurningCorpse {
 	}
 }
 
-Actor ChemicalCorpseReduced : ChemicalCorpse {
+Actor ChemicalCorpseReduced : ChemicalCorpse
+{
 	States
 	{
 	Spawn:
@@ -211,7 +217,8 @@ Actor ChemicalCorpseReduced : ChemicalCorpse {
 	}
 }
 
-Actor ChemicalFlame {
+Actor ChemicalFlame
+{
 	PROJECTILE
 	-RANDOMIZE
 	+CLIENTSIDEONLY
@@ -236,7 +243,8 @@ Actor ChemicalFlame {
 	}
 }
 
-Actor ChemicalFlameSmall : ChemicalFlame {
+Actor ChemicalFlameSmall : ChemicalFlame
+{
 	Radius 13
 	Height 8
 	Speed 22
@@ -270,7 +278,8 @@ Actor ChemicalDeathShot : ChemicalFlame {}
 Actor ChemicalShotSmall : ChemicalFlameSmall {}
 
 
-Actor FadingCorpse {
+Actor FadingCorpse
+{
 	States
 	{
 	Spawn:

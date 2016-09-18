@@ -1,4 +1,5 @@
-Actor Orca : MechPlayer_Base {
+Actor Orca : MechPlayer_Base
+{
 	Radius 58
 	Height 128
 	Mass 1000
@@ -86,7 +87,8 @@ Actor Orca : MechPlayer_Base {
 Actor OrcaSwitch : PermanentPowerup {Powerup.Type "Orca"}
 Actor PowerOrca : AOWMorph {powermorph.playerclass "Orca"}
 
-Actor OrcaWeapons : AOWWeapon {
+Actor OrcaWeapons : AOWWeapon
+{
 	Weapon.SelectionOrder 1
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 600
@@ -160,21 +162,24 @@ Actor OrcaWeapons : AOWWeapon {
 	}
 }
 
-Actor Orca-RocketAmmo : Ammo {
+Actor Orca-RocketAmmo : Ammo
+{
 	Inventory.amount 4
 	Inventory.MaxAmount 60
 	Ammo.BackpackAmount 4
 	Ammo.BackpackMaxAmount 60
 }
 
-Actor Orca-MinigunAmmo : Ammo {
+Actor Orca-MinigunAmmo : Ammo
+{
 	Inventory.amount 50
 	Inventory.MaxAmount 600
 	Ammo.BackpackAmount 50
 	Ammo.BackpackMaxAmount 600
 }
 
-Actor OrcaRocket {
+Actor OrcaRocket
+{
 	PROJECTILE
 	-RANDOMIZE
 	+ROCKETTRAIL
@@ -201,7 +206,8 @@ Actor OrcaRocket {
 }
 
 
-Actor OrcaRocketBlue : OrcaRocket {
+Actor OrcaRocketBlue : OrcaRocket
+{
 	DamageType "Explosion"
 	States
 	{
@@ -214,7 +220,8 @@ Actor OrcaRocketBlue : OrcaRocket {
 	}
 }
 
-Actor OrcaFlame {
+Actor OrcaFlame
+{
 	PROJECTILE
 	+NOINTERACTION
 	+CLIENTSIDEONLY
@@ -234,7 +241,8 @@ Actor OrcaFlame {
 	}
 }
 
-Actor OrcaFireFlame : OrcaFlame {
+Actor OrcaFireFlame : OrcaFlame
+{
 	Scale 0.41
 	States
 	{
@@ -244,7 +252,8 @@ Actor OrcaFireFlame : OrcaFlame {
 	}
 }
 
-Actor OrcaFlash : OrcaFlame {
+Actor OrcaFlash : OrcaFlame
+{
 	Scale 0.205
 	States
 	{
@@ -255,12 +264,14 @@ Actor OrcaFlash : OrcaFlame {
 	}
 }
 
-Actor OrcaSmokePuff : PulseBallSmokePuff {
+Actor OrcaSmokePuff : PulseBallSmokePuff
+{
 	Alpha 0.25
 	Scale 2.0
 }
 
-Actor EjectedOrcaSpawner {
+Actor EjectedOrcaSpawner
+{
 	+NOINTERACTION
 	+SERVERSIDEONLY
 	States
@@ -271,7 +282,8 @@ Actor EjectedOrcaSpawner {
 	}
 }
 
-Actor EjectedOrca {
+Actor EjectedOrca
+{
 	PROJECTILE
 	-NOGRAVITY
 	+NOCLIP
@@ -303,7 +315,8 @@ Actor EjectedOrca {
 	}
 }
 
-Actor OrcaAmmoPackage : CustomInventory {
+Actor OrcaAmmoPackage : CustomInventory
+{
 	+AUTOACTIVATE
 	Inventory.MaxAmount 0
 	States

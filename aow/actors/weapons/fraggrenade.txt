@@ -1,5 +1,6 @@
 // Frag grenade
-Actor FragGrenade : AOWWeapon {
+Actor FragGrenade : AOWWeapon
+{
 	+NOALERT
 	Inventory.PickupMessage "Fragmentation Grenade"  
 	Inventory.pickupsound "misc/ammo_pkup"
@@ -100,7 +101,8 @@ Actor FragGrenade : AOWWeapon {
 	}
 }
 
-Actor FragGrenadeAmmo : Ammo {
+Actor FragGrenadeAmmo : Ammo
+{
 	Inventory.PickupMessage "Picked up a frag grenade."
 	Inventory.amount 1
 	Inventory.MaxAmount 1
@@ -115,7 +117,8 @@ Actor FragGrenadeAmmo : Ammo {
 	}
 }
 
-Actor FragGrenadePower : Ammo {
+Actor FragGrenadePower : Ammo
+{
 	+IGNORESKILL
 	Inventory.amount 0
 	Inventory.MaxAmount 100
@@ -123,7 +126,8 @@ Actor FragGrenadePower : Ammo {
 	Ammo.BackpackMaxAmount 100
 }
 
-Actor FragGrenadeThrown1 {
+Actor FragGrenadeThrown1
+{
 	Obituary "%o didn't see %k's frag grenade."
 	Radius 5
 	Height 5
@@ -161,7 +165,8 @@ Actor FragGrenadeThrown1 {
 	}
 }
 
-Actor FragGrenadeShrapnel {
+Actor FragGrenadeShrapnel
+{
 	PROJECTILE
 	+RIPPER
 	+BLOODSPLATTER

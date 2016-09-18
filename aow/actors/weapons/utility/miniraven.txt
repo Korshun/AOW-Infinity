@@ -5,7 +5,8 @@ Actor MiniRavenAwake : Inventory
 }
 
 // Mini-Raven
-Actor Utility_MiniRavenRed {
+Actor Utility_MiniRavenRed
+{
 	Obituary "$OB_MINIRAVEN_RED" // "%o was pecked by a \cgRed \c-Mini-Raven."
 	Health 750
 	Radius 32
@@ -380,7 +381,8 @@ Actor Utility_MiniRavenBlue
 	}
 }
 
-Actor MiniRaven-LRM {
+Actor MiniRaven-LRM
+{
 	Obituary "%o was pecked by a \cgRed \c-Mini-Raven."
 	Radius 11
 	Height 8
@@ -483,7 +485,8 @@ Actor MiniRaven-LRMExplosionBlue
 	}	
 }
 
-Actor MiniRavenAC2 : RavenAC2 {
+Actor MiniRavenAC2 : RavenAC2
+{
 	Obituary "%o was pecked by a \cgRed \c-Mini-Raven."
 	Speed 40
 	Damage (25)
@@ -496,7 +499,8 @@ Actor MiniRavenAC2 : RavenAC2 {
 	}
 }
 
-Actor MiniRavenAC2Blue : MiniRavenAC2 {
+Actor MiniRavenAC2Blue : MiniRavenAC2
+{
 	DamageType "Rifle"
 	Translation "112:120=200:207", "121:127=241:247"
 }

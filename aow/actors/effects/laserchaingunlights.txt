@@ -1,4 +1,5 @@
-Actor LaserChaingunLight {
+Actor LaserChaingunLight
+{
 	Radius 1
 	Height 1
 	Alpha 1

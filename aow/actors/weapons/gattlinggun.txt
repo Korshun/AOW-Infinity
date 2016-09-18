@@ -1,5 +1,6 @@
 // Gatling gun
-Actor GatlingGun : AOWWeapon replaces Minigun 21045 {
+Actor GatlingGun : AOWWeapon replaces Minigun 21045
+{
 	Obituary "$OB_GATLING" // "%o was perforated by %k's gatling gun."
 	Inventory.PickupMessage "You got the gatling gun!"
 	Weapon.SelectionOrder 7
@@ -82,7 +83,8 @@ Actor GatlingGun : AOWWeapon replaces Minigun 21045 {
 	}
 }
 
-Actor ExplosionPuff {
+Actor ExplosionPuff
+{
 	+PUFFONACTORS
 	+CLIENTSIDEONLY
 	DamageType "Explosion"
@@ -95,7 +97,8 @@ Actor ExplosionPuff {
 	}
 }
 
-Actor ExplosionPuffSmall : ExplosionPuff {
+Actor ExplosionPuffSmall : ExplosionPuff
+{
 	DamageType "Explosion"
 	States
 	{

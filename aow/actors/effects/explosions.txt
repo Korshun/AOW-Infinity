@@ -1,5 +1,6 @@
 // Explosion actors
-Actor ChemicalExplosion {
+Actor ChemicalExplosion
+{
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+CLIENTSIDEONLY
@@ -16,7 +17,8 @@ Actor ChemicalExplosion {
 	}
 }
 
-Actor ChemicalExplosionSmall {
+Actor ChemicalExplosionSmall
+{
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+CLIENTSIDEONLY
@@ -30,7 +32,8 @@ Actor ChemicalExplosionSmall {
 	}
 }
 
-Actor ChemicalExplosionLarge {
+Actor ChemicalExplosionLarge
+{
 	+NOBLOCKMAP
 	+NOGRAVITY
 	+CLIENTSIDEONLY
@@ -51,7 +54,8 @@ Actor ChemicalExplosionLarge {
 	}
 }
 
-Actor ChemicalFlameExplosion {
+Actor ChemicalFlameExplosion
+{
 	+CLIENTSIDEONLY +SOLID
 	+NOINTERACTION +FORCEXYBILLBOARD
 	Radius 13
@@ -184,7 +188,8 @@ Actor ExploLarge2 : ExplosionSprite {Scale 6.0}
 Actor ExploLarge3 : ExplosionSprite {Scale 4.0}
 Actor ExploLarge4 : ExplosionSprite {Scale 2.0}
 
-Actor ExplosionSmall {
+Actor ExplosionSmall
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	States
@@ -212,7 +217,8 @@ Actor ExploSmall2 : ExplosionSprite {Scale 1.5}
 Actor ExploSmall3 : ExplosionSprite {Scale 1.0}
 Actor ExploSmall4 : ExplosionSprite {Scale 0.5}
 
-Actor ExplosionSmaller {
+Actor ExplosionSmaller
+{
 	+NOINTERACTION
 	+CLIENTSIDEONLY
 	States

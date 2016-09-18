@@ -1,4 +1,5 @@
-Actor Credits1 : CustomInventory 21412 {
+Actor Credits1 : CustomInventory 21412
+{
 	Radius 20
 	Height 26
 	Inventory.PickupMessage "Picked up a lucky coin. +\cq$\cd1"
@@ -17,7 +18,8 @@ Actor Credits1 : CustomInventory 21412 {
 	}
 }
 
-Actor Credits20 : CustomInventory 21413 {
+Actor Credits20 : CustomInventory 21413
+{
 	Radius 20
 	Height 26
 	Inventory.PickupMessage "Picked up a pile of credits! +\cq$\cd20"

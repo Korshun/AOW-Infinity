@@ -1,4 +1,5 @@
-Actor Shrub 3051 {
+Actor Shrub 3051
+{
 	+CLIENTSIDEONLY
 	Gravity 1000
 	States

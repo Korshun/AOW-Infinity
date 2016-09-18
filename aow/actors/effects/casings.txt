@@ -1,4 +1,5 @@
-Actor ShellCasing {
+Actor ShellCasing
+{
 	+DOOMBOUNCE
 	+MISSILE
 	+NOBLOCKMAP
@@ -54,7 +55,8 @@ Actor ShellCasing {
 	}
 }
 
-Actor ShotgunShellCasing : ShellCasing {
+Actor ShotgunShellCasing : ShellCasing
+{
 	SeeSound "weapons/shotgunshells"
 	States
 	{
@@ -89,7 +91,8 @@ Actor ShotgunShellCasing : ShellCasing {
 	}
 }
 
-Actor RifleShellCasing : ShellCasing {
+Actor RifleShellCasing : ShellCasing
+{
 	SeeSound "weapons/ChainCasing"
 	States
 	{
@@ -124,17 +127,20 @@ Actor RifleShellCasing : ShellCasing {
 	}
 }
 
-Actor ArtilleryCasing : ShellCasing {
+Actor ArtilleryCasing : ShellCasing
+{
 	SeeSound "weapons/ChainCasing"
 	Scale 0.3
 }
 
-Actor ArtilleryCasing80mm : ShellCasing {
+Actor ArtilleryCasing80mm : ShellCasing
+{
 	SeeSound "weapons/ChainCasing"
 	Scale 0.45
 }
 
-Actor CellCasing : ShellCasing {
+Actor CellCasing : ShellCasing
+{
 	SeeSound "weapons/shotgunshells"
 	Scale 0.4
 	States
