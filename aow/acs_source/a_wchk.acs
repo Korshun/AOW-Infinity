@@ -38,7 +38,6 @@ script aow_script906 RESPAWN {
 	if (PlayerInGame (PlayerNumber())) {
 		// [SP] The following code removes redundant weapons
 		if (CheckInventory ("StealthLaserRifle")) CheckAndRemove("LaserRifle");
-		if (CheckInventory ("TiberiumAutorifle")) CheckAndRemove("TiberiumAutorifleWeak");
 		if (CheckInventory ("SniperRifle")) CheckAndRemove("SniperRifleWeak");
 	}
 	delay (35);

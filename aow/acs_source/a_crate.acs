@@ -673,7 +673,6 @@ script aow_script309 (int Crate, int Override) {
 		CheckAndRemove ("PlasmaCannon");
 		CheckAndRemove ("ArtilleryCannon");
 		CheckAndRemove ("ChemicalSprayer");
-		CheckAndRemove ("TiberiumAutorifleWeak");
 		CheckAndRemove ("TiberiumAutorifle");
 		CheckAndRemove ("FragGrenade");
 		CheckAndRemove ("RepairGunUpgrade");

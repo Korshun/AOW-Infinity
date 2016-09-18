@@ -175,9 +175,6 @@ script aow_sellweapon (void) NET {
 		if (WS_CheckClass (classid, CLASS_CHEMWARRIOR)) terminate;
 		price = 125;
 		weapon = "ChemicalSprayer";
-	} else if (CheckWeapon ("TiberiumAutorifleWeak")) {
-		price = 75; // never a primary
-		weapon = "TiberiumAutorifleWeak";
 	} else if (CheckWeapon ("SubMachineGun")) {
 		if (WS_CheckClass (classid, CLASS_GUNMAN)) terminate;
 		price = 25;
