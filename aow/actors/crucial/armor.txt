@@ -335,7 +335,7 @@ Actor Grade0Damage : PowerupGiver
 	States
 	{
 	Spawn:
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }

@@ -35,7 +35,7 @@ Actor Utility_RazorWire 21152 {
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 4
+		TNT1 A 4
 		Stop
 	Death.Deconstruction:
 		"----" A 0 A_NoBlocking

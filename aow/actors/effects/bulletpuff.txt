@@ -98,7 +98,7 @@ Actor BulletPuffSmoke : Effect
 	States
 	{
 	Spawn:
-		NULL A 3
+		TNT1 A 3
 		NULL A 0 A_Jump(255, "Smoke1", "Smoke2", "Smoke3", "Smoke4", "Smoke5", "Smoke6")
 	Smoke1:
 		NULL A 0 //ZDOOMVER A_SetScale(ScaleX * 1.02, ScaleY * 1.02)

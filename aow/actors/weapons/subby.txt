@@ -127,8 +127,8 @@ Actor SubMachineGun : AOWWeapon 21043 {
 		//NULL A 0 BRIGHT A_FireCustomMissile("MuzzleFlashSpawner", 0, 0, 5, 5)
 		//NULL A 0 BRIGHT A_SpawnItemEx("MuzzleFlashSpawner", 32, 5, 36, momx*sin(angle)*cos(angle)*1.414, momy*sin(angle)*cos(angle)*1.414, 0, 0, SXF_ABSOLUTEMOMENTUM)
 		NULL A 0 BRIGHT A_SpawnItemEx("MuzzleFlashSpawner", 27, 5, 35*(1+(-sin(pitch)*0.707)), momx*2.332*(sin(angle)*cos(angle)/2.332), momy*2.332*(sin(angle)*cos(angle)/2.332), momz*0.1415, 0, SXF_ABSOLUTEMOMENTUM)
-		NULL A 2 BRIGHT A_Light2
-		NULL A 2 BRIGHT A_Light1
+		TNT1 A 2 BRIGHT A_Light2
+		TNT1 A 2 BRIGHT A_Light1
 		Goto LightDone
 	Spawn:
 		SUBR X -1

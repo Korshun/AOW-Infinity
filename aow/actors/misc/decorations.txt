@@ -356,7 +356,7 @@ Actor A14RedTowerFX 27500 {
 	States
 	{
 	Spawn:
-		NULL A 5 A_SpawnItemEx("A14RedTowerFX2", 0, 0, 0, 0, 0, 7)
+		TNT1 A 5 A_SpawnItemEx("A14RedTowerFX2", 0, 0, 0, 0, 0, 7)
 		Wait
 	}
 }
@@ -383,7 +383,7 @@ Actor A14BlueTowerFX 27501 {
 	States
 	{
 	Spawn:
-		NULL A 5 A_SpawnItemEx("A14BlueTowerFX2", 0, 0, 0, 0, 0, 7)
+		TNT1 A 5 A_SpawnItemEx("A14BlueTowerFX2", 0, 0, 0, 0, 0, 7)
 		Wait
 	}
 }

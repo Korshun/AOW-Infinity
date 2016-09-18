@@ -142,7 +142,7 @@ Actor VoltageTrailPuff : BulletPuff {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 1 ACS_ExecuteAlways(aow_script986, 0, 0, ACS_ExecuteWithResult(aow_script964, 5))
+		TNT1 A 1 ACS_ExecuteAlways(aow_script986, 0, 0, ACS_ExecuteWithResult(aow_script964, 5))
 		Stop
 	}
 }

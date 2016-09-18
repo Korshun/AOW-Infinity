@@ -90,7 +90,7 @@ Actor ExplosionPuff {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 14 A_SpawnItemEx("ExplosionSmall", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 14 A_SpawnItemEx("ExplosionSmall", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
@@ -101,7 +101,7 @@ Actor ExplosionPuffSmall : ExplosionPuff {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 14 A_SpawnItemEx("ExplosionSmaller", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 14 A_SpawnItemEx("ExplosionSmaller", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }

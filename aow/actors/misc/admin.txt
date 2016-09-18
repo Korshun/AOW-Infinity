@@ -15,7 +15,7 @@ Actor AdminPistol : AOWWeapon {
 		GPIS A 1 A_WeaponReady
 		Wait
 	Deselect:
-		NULL A 1 A_Lower 
+		TNT1 A 1 A_Lower 
 		Loop
 	Select: 
 		GPIS A 1 A_Raise

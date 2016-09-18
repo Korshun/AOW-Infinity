@@ -42,40 +42,40 @@ Actor BaseTerminalOutside {
 	States
 	{
 	Death:
-		NULL A 10
+		TNT1 A 10
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx("ExplosionMainLarge")
-		NULL A 10
+		TNT1 A 10
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx("ExplosionMainLarge")
-		NULL A 10
+		TNT1 A 10
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL A 0 A_SpawnItemEx("ExplosionMainLarge")
-		NULL A -1
+		TNT1 A -1
 		Stop
 	Idle:
-		NULL A -1
+		TNT1 A -1
 		Stop
 	Pain:
 		NULL A 0
-		NULL A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], 1)
+		TNT1 A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], 1)
 		Goto Idle
 	Pain.Fire:
 	Pain.Fire:
 		NULL A 0
-		NULL A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], random(0, 1))
+		TNT1 A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], random(0, 1))
 		Goto Idle
 	Pain.Artillery:
 	Pain.Artillery:
 	Pain.Explosion:
 	Pain.Explosion:
 		NULL A 0
-		NULL A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], random(20, 40))
+		TNT1 A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], random(20, 40))
 		Goto Idle
 	Pain.Superweapon:
 	Pain.SuperweaponIon:
 		NULL A 0
-		NULL A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], 3000)
+		TNT1 A 5 ACS_ExecuteAlways(aow_script652, 0, args[0], 3000)
 		Goto Idle
 	}
 }
@@ -93,7 +93,7 @@ Actor BTOBarracksBlue : BaseTerminalOutsideBlue 21201 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 100)
 		NULL A 0 Thing_SetSpecial(0, 0, 101, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -105,7 +105,7 @@ Actor BTOPowerPlantBlue : BaseTerminalOutsideBlue 21203 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 104)
 		NULL A 0 Thing_SetSpecial(0, 0, 105, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -117,7 +117,7 @@ Actor BTORefineryBlue : BaseTerminalOutsideBlue 21205 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 102)
 		NULL A 0 Thing_SetSpecial(0, 0, 103, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -129,7 +129,7 @@ Actor BTOFactoryBlue : BaseTerminalOutsideBlue 21207 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 106)
 		NULL A 0 Thing_SetSpecial(0, 0, 107, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -141,7 +141,7 @@ Actor BTOObeliskBlue : BaseTerminalOutsideBlue 21211 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 115)
 		NULL A 0 Thing_SetSpecial(0, 0, 114, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -153,7 +153,7 @@ Actor BTOBarracksRed : BaseTerminalOutside 21202 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 200)
 		NULL A 0 Thing_SetSpecial(0, 0, 201, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -165,7 +165,7 @@ Actor BTOPowerPlantRed : BaseTerminalOutside 21204 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 204)
 		NULL A 0 Thing_SetSpecial(0, 0, 205, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -177,7 +177,7 @@ Actor BTORefineryRed : BaseTerminalOutside 21206 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 202)
 		NULL A 0 Thing_SetSpecial(0, 0, 203, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -189,7 +189,7 @@ Actor BTOFactoryRed : BaseTerminalOutside 21208 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 206)
 		NULL A 0 Thing_SetSpecial(0, 0, 207, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }
@@ -202,7 +202,7 @@ Actor BTOObeliskRed : BaseTerminalOutside 21212 {
 		NULL A 0
 		NULL A 0 Thing_ChangeTID(0, 215)
 		NULL A 0 Thing_SetSpecial(0, 0, 214, 0, 0)
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }

@@ -5,10 +5,10 @@ Actor PowerPlantSmokeGenerator 21406 {
 	States
 	{
 	Spawn: 
-		NULL A 70 A_SpawnItemEx("PowerPlantSmokeGeneratorFX")
+		TNT1 A 70 A_SpawnItemEx("PowerPlantSmokeGeneratorFX")
 		Loop
 	Death:
-		NULL A -1
+		TNT1 A -1
 		Stop
 	Raise:
 		NULL A 0
@@ -33,7 +33,7 @@ Actor PowerPlantSmokeGeneratorSmall 24002 {
 	States
 	{
 	Spawn:
-		NULL A 2 A_SpawnItemEx("PowerPlantSmokePuffSmall", random(-32, 32), random(-32, 32), 0, 0, 0, 3)
+		TNT1 A 2 A_SpawnItemEx("PowerPlantSmokePuffSmall", random(-32, 32), random(-32, 32), 0, 0, 0, 3)
 		Loop
 	}
 }

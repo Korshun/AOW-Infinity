@@ -13,7 +13,7 @@ Actor FlameShot {
 	States
 	{
 	Spawn:
-		NULL A 3
+		TNT1 A 3
 		FLMX EEEFFFGGGG 2 BRIGHT
 		NULL A 0 A_SpawnItemEx("FlameShotDebris", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		NULL A 0 A_Explode(4, 128, 0)
@@ -34,7 +34,7 @@ Actor FlameShotBlue : FlameShot {
 	States
 	{
 	Spawn:
-		NULL A 3
+		TNT1 A 3
 		FLMX EEEFFFGGGG 2 BRIGHT
 		NULL A 0 A_SpawnItemEx("FlameShotDebris", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		NULL A 0 A_Explode(4, 128, 0)
@@ -83,7 +83,7 @@ Actor FlameDebrisFX {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 1 A_SpawnItemEx("FlameThrowerFireRemains", 0, 0, random(0, 8), random(-1, 1), random(-1, 1), random(1, 2), 0, 0, 0)
+		TNT1 A 1 A_SpawnItemEx("FlameThrowerFireRemains", 0, 0, random(0, 8), random(-1, 1), random(-1, 1), random(1, 2), 0, 0, 0)
 		FLMB A 1 BRIGHT
 		FLMB A 1 BRIGHT ThrustThingZ(0, 5, 0, 1)
 		FLMB BCDEFGH 2 BRIGHT
@@ -113,7 +113,7 @@ Actor FlameDecay {
 		NULL A 0 A_SpawnItemEx("FlameDecayFX")
 		NULL A 0 A_PlaySoundEx("fire/fire", "SoundSlot6", 1)
 	Idle:
-		NULL A 15 BRIGHT A_Explode(4, 128)
+		TNT1 A 15 BRIGHT A_Explode(4, 128)
 		NULL A 0 A_CountDown
 		Loop
 	Death:
@@ -138,7 +138,7 @@ Actor FlameDecayStrong : FlameDecay {
 	States
 	{
 	Idle:
-		NULL A 15 BRIGHT A_Explode(16, 128)
+		TNT1 A 15 BRIGHT A_Explode(16, 128)
 		NULL A 0 A_CountDown
 		Loop
 	}
@@ -155,7 +155,7 @@ Actor FlameWallDecay : FlameDecay {
 		NULL A 0 A_PlaySoundEx("fire/fire", "SoundSlot6", 1)
 		Goto Idle
 	Idle:
-		NULL A 16 BRIGHT A_Explode(5, 128, 0)
+		TNT1 A 16 BRIGHT A_Explode(5, 128, 0)
 		NULL A 0 A_CountDown
 		Loop
 	}

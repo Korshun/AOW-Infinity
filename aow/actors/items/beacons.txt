@@ -409,7 +409,7 @@ Actor IonBeaconThrown {
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("IonCannonPlaced", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		NULL A 4 BRIGHT
+		TNT1 A 4 BRIGHT
 		Stop
 	Water:
 		BEAC D 35 A_PlaySound("c4/disarm", 6)
@@ -428,7 +428,7 @@ Actor NukeBeaconThrown : IonBeaconThrown {
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("NuclearStrikePlaced", 0, 0, 0, 0, 0, 0, 0, 32, 0)
-		NULL A 4 BRIGHT 
+		TNT1 A 4 BRIGHT 
 		Stop
 	Water:
 		BEAC C 35 A_PlaySoundEx("c4/disarm", "SoundSlot6")

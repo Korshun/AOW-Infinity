@@ -30,7 +30,7 @@ Actor DonationMessage : CustomInventory {
 		NULL A 0
 		Stop
 	Use:
-		NULL A 5 ACS_ExecuteAlways(aow_script111, 0)
+		TNT1 A 5 ACS_ExecuteAlways(aow_script111, 0)
 		Stop
 	}
 }
@@ -39,7 +39,7 @@ Actor UtilityMenuActivator : DonationMessage {
 	States
 	{
 	Use:
-		NULL A 5 ACS_ExecuteAlways(aow_script965, 0)
+		TNT1 A 5 ACS_ExecuteAlways(aow_script965, 0)
 		Stop
 	}
 }

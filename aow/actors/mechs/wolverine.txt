@@ -134,11 +134,11 @@ Actor WolverineWeapons : AOWWeapon {
 		NULL A 0 A_JumpIfHealthLower(1, 1)
 		Goto Ready
 		NULL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Lower
-		NULL A 1 A_Lower
+		TNT1 A 1 A_Lower
 		Goto Deselect+29
 	Select:
 		NULL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Raise
-		NULL A 1 A_Raise
+		TNT1 A 1 A_Raise
 		Wait
 	WaitReload:
 		MHUD A 2
@@ -203,8 +203,8 @@ Actor WolverineWeapons : AOWWeapon {
 		MHUD A 4
 		Goto Ready
 	Flash:
-		NULL A 1 BRIGHT A_Light2
-		NULL A 2 BRIGHT A_Light1
+		TNT1 A 1 BRIGHT A_Light2
+		TNT1 A 2 BRIGHT A_Light1
 		Goto LightDone
 	AltFire:
 		NULL A 0

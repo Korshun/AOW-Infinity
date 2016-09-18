@@ -40,7 +40,7 @@ Actor Step
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 1
+		TNT1 A 1
 		Stop
 	Death.Deconstruction:
 		"----" A 0 A_NoBlocking
@@ -93,7 +93,7 @@ Actor SandbagWall
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 1
+		TNT1 A 1
 		Stop
 	Death.Deconstruction:
 		"----" A 0 A_NoBlocking
@@ -114,7 +114,7 @@ Actor SandbagWallSideBlocker
 	States
 	{
 	Spawn:
-		NULL A -1
+		TNT1 A -1
 		Stop
 	}
 }

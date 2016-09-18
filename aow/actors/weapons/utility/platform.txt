@@ -20,21 +20,21 @@ Actor FloatingPlatform : InvisibleBridge {
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script750, 0) == 0, "Nope")
 	Idle:
 		NULL A 0 A_JumpIfHealthLower(400, "IdleDamaged")
-		NULL A 30 A_SpawnItemEx("FloatingPlatformVisual")
+		TNT1 A 30 A_SpawnItemEx("FloatingPlatformVisual")
 		Loop
 	IdleDamaged:
-		NULL A 30 A_SpawnItemEx("FloatingPlatformVisualDamaged")
+		TNT1 A 30 A_SpawnItemEx("FloatingPlatformVisualDamaged")
 		Loop
 	Death:
 		NULL A 0 
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("FloatingPlatformExplosion")
-		NULL A 4 BRIGHT 
+		TNT1 A 4 BRIGHT 
 		Stop
 	Nope:
 	Death.Deconstruction:
 		NULL A 0 A_NoBlocking
-		NULL A 2 A_PlaySound("utility/deconstruct")
+		TNT1 A 2 A_PlaySound("utility/deconstruct")
 		Stop
 	}
 }
@@ -149,7 +149,7 @@ Actor FloatingPlatformExplosion {
 		NULL A 0 A_SpawnItemEx("ExplosionMain", random(-32, 32), random( 48, 84))
 		NULL A 0 A_SpawnItemEx("ExplosionMain", random( 48, 84), random( 48, 84))
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 10 A_CountDown
+		TNT1 A 10 A_CountDown
 		Loop
 	Death:
 		NULL A 0

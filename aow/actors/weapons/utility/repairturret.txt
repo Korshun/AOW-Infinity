@@ -58,12 +58,12 @@ Actor Utility_RepairGunTurretRed : Utility_TurretBase {
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 4 BRIGHT
+		TNT1 A 4 BRIGHT
 		Stop
 	NoMoreMrNiceGuy:
 		NULL A 0 A_RemoveChildren(1)
 		NULL A 0 A_SpawnItemEx("Utility_KlaxonRed", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		NULL A 5 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 5 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
@@ -79,7 +79,7 @@ Actor Utility_RepairGunTurretBlue : Utility_RepairGunTurretRed {
 		Goto Idle
 	NoMoreMrNiceGuy:
 		NULL A 0 A_SpawnItemEx("Utility_KlaxonBlue", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		NULL A 5 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 5 A_SpawnItemEx("TeleportFog", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }

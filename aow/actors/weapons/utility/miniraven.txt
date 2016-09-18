@@ -182,7 +182,7 @@ Actor Utility_MiniRavenRed {
 		NULL AAA 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(16, 32), random(-5, 5), random(-5, 5), random(4, 7), 0, 0, 64)
 		NULL A 0 A_SpawnItemEx("FlameWallDecay", 0, 0, 0, 0, 0, 0, 0, 0, 0)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 1 // ACS_ExecuteAlways(aow_script345, 0, 6, 0, 0)
+		TNT1 A 1 // ACS_ExecuteAlways(aow_script345, 0, 6, 0, 0)
 		Stop
 	Death.Deconstruction:
 		// [NF] we be breaking down birdies
@@ -370,7 +370,7 @@ Actor Utility_MiniRavenBlue
 		NULL AAA 0 A_SpawnItemEx("MechDeathSmoke", 0, 0, random(16, 32), random(-5, 5), random(-5, 5), random(4, 7), 0, 0, 64)
 		NULL A 0 A_SpawnItemEx("FlameWallDecayBlue", 0, 0, 0, 0, 0, 0, 0, 0, 0)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 1 // ACS_ExecuteAlways(aow_script345, 0, 6, 1, 0)
+		TNT1 A 1 // ACS_ExecuteAlways(aow_script345, 0, 6, 1, 0)
 		Stop
 	Death.Deconstruction:
 		NULL A 0 A_NoBlocking
@@ -426,7 +426,7 @@ Actor MiniRaven-LRMExplosion
 	{
 	Spawn:
 		NULL A 0
-		NULL A 5 BRIGHT A_Explode(10, 128, 0)
+		TNT1 A 5 BRIGHT A_Explode(10, 128, 0)
 		Stop
 	}	
 }
@@ -478,7 +478,7 @@ Actor MiniRaven-LRMExplosionBlue
 	{
 	Spawn:
 		NULL A 0
-		NULL A 5 BRIGHT A_Explode(10, 128, 0)
+		TNT1 A 5 BRIGHT A_Explode(10, 128, 0)
 		Stop
 	}	
 }

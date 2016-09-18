@@ -67,7 +67,7 @@ Actor ActorHit {
 	{
 	Spawn:
 		NULL A 0
-		NULL A 1 A_PlaySound("bullet/flesh")
+		TNT1 A 1 A_PlaySound("bullet/flesh")
 		Stop
 	}
 }

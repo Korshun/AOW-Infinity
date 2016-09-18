@@ -39,7 +39,7 @@ Actor CacheBase : SwitchableDecoration {
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
 		NULL A 0 A_PlaySound("weapons/rocklx")
 		NULL A 0 BRIGHT A_Explode(64, 128)
-		NULL A 4 BRIGHT 
+		TNT1 A 4 BRIGHT 
 		Stop
 	NoWayDude:
 	Death.Deconstruction:
