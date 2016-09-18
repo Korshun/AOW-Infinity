@@ -9,7 +9,7 @@ Actor Utility_KlaxonRed : Utility_TurretBase {
 	States
 	{
 	Spawn:
-		CIGN AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_RED)
 	Idle:
 		NULL A 0 A_GiveInventory("MechReloading", 12)
@@ -104,7 +104,7 @@ Actor Utility_KlaxonBlue : Utility_TurretBase {
 	States
 	{
 	Spawn:
-		CIGN AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_BLUE)
 	Idle:
 		NULL A 0 A_GiveInventory("MechReloading", 12)

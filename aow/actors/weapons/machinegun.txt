@@ -109,7 +109,7 @@ Actor MachineGunPickup : CustomInventory replaces Chaingun 21044 {
 		AK47 X -1
 		Stop
 	Pickup:
-		TNT1 AA 0 A_JumpIfInventory("MachineGun", 1, "Failure")
+		NULL AA 0 A_JumpIfInventory("MachineGun", 1, "Failure")
 		NULL A 0 A_GiveInventory("MachineGun", 1)
 		NULL A 0 A_GiveInventory("MachineGunAmmo", 30)
 		NULL A 0 A_GiveInventory("Refunds", 20)

@@ -244,7 +244,7 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	TurnAndAcquireTargetWhileChase: //Allows for marines to turn and acquire targets.
-		PLA5 AAAAAAAAAAAAAAAA 0 A_Chase("", "")
+		NULL AAAAAAAAAAAAAAAA 0 A_Chase("", "")
 		//NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Goto CheckIfTargetInLOS
 
@@ -445,7 +445,7 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 
 
 	TurnAndAcquireTargetWhileWander:
-		PLA5 AAAAAAAAAAAAAAAA 0 A_Wander
+		NULL AAAAAAAAAAAAAAAA 0 A_Wander
 		NULL A 0 A_LookEx(0, 0, 0, 1200, 0, "CheckIfTargetInLOS")
 		//NULL A 0 A_Jump(256, "CheckIfStuckWhileWander")
 		Goto CheckIfStuckWhileWander
@@ -1456,7 +1456,7 @@ Actor BlueRocketSoldier		//Blue Rocket Soldier
 	XDeath:
 		PLA5 O 4
 		NULL A 0 A_NoBlocking
-		PLA5 PPP 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
+		NULL PPP 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
 		NULL A 0 A_SpawnItemEx("PowerupCrate", random(-4, 4), random(-4, 4), random(32, 48), random(2, 4), random(-2, 2), random(2, 4), 0, 0, 230)
 		NULL A 0 A_TakeInventory("Ingame", 1)
 		NULL A 0 A_Scream

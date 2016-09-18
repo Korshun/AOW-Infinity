@@ -56,7 +56,7 @@ Actor BeamFire
  States
 	{
 	Spawn:
-	 TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+	 NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 	 NULL A 0 A_SpawnItemEx("BeamSmoke", 0, 0, 0, momx, momy, momz, 0, 128, 0)
 	 ION1 A 1 BRIGHT A_FadeOut(0.02)
 	 Wait
@@ -83,7 +83,7 @@ Actor BeamSmoke
  States
 	{
 	Spawn:
-	 TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+	 NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 	 SMOK A 1 BRIGHT A_FadeOut(0.015)
 	 Wait
 	Spawn2:
@@ -321,12 +321,12 @@ Actor IonRing
 States
 	{
 Spawn:
-TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("IonSmokefx", 0, 0, 0 , 0.00001 * Random(0, 300000), 0.00001 * Random(0, 300000), 0, Random(0, 359), 128, 0)
-TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonFx3", 0, 0, 0, random(-6, 6), random(-6, 6), random(0, 6), 0, (128|32), 0)
-TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonFx3", 0, 0, 0, random(-1, 1), random(-1, 1), 0.0001 * Random(10000, 20000), 0, (128|32), 0)
-TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonSmoke2", 0, 0, 0, 0.0001 * Random(-80000, 80000), 0.0001 * Random(-80000, 80000), 0.0001 * Random(0, 80000), 0, (128|32), 0)
+NULL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("IonSmokefx", 0, 0, 0 , 0.00001 * Random(0, 300000), 0.00001 * Random(0, 300000), 0, Random(0, 359), 128, 0)
+NULL AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonFx3", 0, 0, 0, random(-6, 6), random(-6, 6), random(0, 6), 0, (128|32), 0)
+NULL AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonFx3", 0, 0, 0, random(-1, 1), random(-1, 1), 0.0001 * Random(10000, 20000), 0, (128|32), 0)
+NULL AAAAAAAAAAAAAAAAAAAA 0 A_SpawnitemEx("IonSmoke2", 0, 0, 0, 0.0001 * Random(-80000, 80000), 0.0001 * Random(-80000, 80000), 0.0001 * Random(0, 80000), 0, (128|32), 0)
 //TNT1 AAAAA 0 A_SpawnitemEx("IonSmoke2", 0.0001 * Random(-60000, 60000), 0.0001 * Random(-60000, 60000), 0.0001 * Random(-60000, 60000), 0, 0, 0.0001 * Random(0, 10000), 0, (128|32), 0)
-TNT1 AAAAA 0 A_SpawnitemEx("IonFire", random(-1, 1), random(-1, 1), 0, 0.0001 * Random(0, 100), 0.0001 * Random(0, 100), 0.0001 * Random(0, 7000), 0, (128|32), 0)
+NULL AAAAA 0 A_SpawnitemEx("IonFire", random(-1, 1), random(-1, 1), 0, 0.0001 * Random(0, 100), 0.0001 * Random(0, 100), 0.0001 * Random(0, 7000), 0, (128|32), 0)
 //TNT1 AAAAAAAAAA 0 A_SpawnitemEx("IonBigSmoke", 0, 0, 16, 0.0001 * Random(0, 10000), 0.0001 * Random(0, 10000), 0.0001 * Random(0, 10000), 0, (128|32), 0)
 NULL A 0 
 NULL A 1
@@ -423,7 +423,7 @@ Scale 4.0
 States
 	{
 Spawn:
-	 TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+	 NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 	 ION1 A 1 BRIGHT A_FadeOut(0.001)
 	 Wait
 	Spawn2:
@@ -489,7 +489,7 @@ Scale 8.0
 States
 	{
 	Spawn:
-	 TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+	 NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 	 SMOK A 1 BRIGHT A_FadeOut(0.0005)
 	 Wait
 	Spawn2:
@@ -514,7 +514,7 @@ Scale 5.4
 States
 	{
 	Spawn:
-	 TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+	 NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 	 SMOK A 1 BRIGHT A_FadeOut(0.0002)
 	 Wait
 	Spawn2:
@@ -586,7 +586,7 @@ Actor IonSmokeFxSmall : IonSmokeFx {
 	States
 	{
 	Spawn:
-		TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+		NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 		SMOK A 1 BRIGHT A_FadeOut(0.001)
 		Wait
 	Spawn2:
@@ -616,7 +616,7 @@ Actor IonFx2Small : IonFx2 {
 	States
 	{
 	Spawn:
-		TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+		NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 		ION1 A 1 BRIGHT A_FadeOut(0.001)
 		Wait
 	Spawn2:
@@ -718,7 +718,7 @@ Actor IonSmokeFXSoftware : IonSmokeFX {
 	States
 	{
 	Spawn:
-		TNT1 AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
+		NULL AA 0 A_Jump(196, "Spawn2", "Spawn3", "Spawn4")
 		SMOK A 1 BRIGHT A_FadeOut(0.001)
 		Wait
 	Spawn2:

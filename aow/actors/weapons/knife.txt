@@ -19,7 +19,7 @@ Actor Knife : AOWWeapon {
 	States
 	{
 	Ready:
-		KNIF AA 0 A_JumpIfInventory("StealthMode", 1, "ReadyStealthed")
+		NULL AA 0 A_JumpIfInventory("StealthMode", 1, "ReadyStealthed")
 		KNIF AAAAAAAAAAAA 3 offset(0, 0) A_WeaponReady
 		NULL A 0 A_GiveInventory("StealthCharge", 1)
 		NULL A 0 A_TakeInventory("StealthFire", 1)

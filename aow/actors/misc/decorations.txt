@@ -272,7 +272,7 @@ Actor FakeTiberiumCrystal 24000 {
 		// this is to make the fake tiberium *not*
 		// get mapmarkers
 		TIBE A 15 BRIGHT
-		TIBE AA 0 Thing_ChangeTID(0, 402)
+		NULL AA 0 Thing_ChangeTID(0, 402)
 		TIBE A -1 BRIGHT
 		Stop
 	}

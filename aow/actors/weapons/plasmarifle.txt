@@ -99,7 +99,7 @@ Actor PlasmaGun : AOWWeapon replaces PlasmaRifle 21087 {
 		Stop
 	Warning:
 		NULL A 0
-		ENRG AA 0 A_JumpIfInventory("WarningChecker", 1, "Ready")
+		NULL AA 0 A_JumpIfInventory("WarningChecker", 1, "Ready")
 		NULL A 0 A_PlaySoundEx("Plasma/Warning", "Voice", 0)
 		NULL A 0 A_GiveInventory("WarningChecker", 1)
 		Goto Ready

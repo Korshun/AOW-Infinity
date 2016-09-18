@@ -22,7 +22,7 @@ Actor Utility_RazorWire 21152 {
 	States
 	{
 	Spawn:
-		WIRE AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_RED)
 		WIRE AAAAAAAAAA 3 A_FadeIn(0.1)
 		NULL A 0 A_ChangeFlag("NOCLIP", 0)
@@ -51,7 +51,7 @@ Actor Utility_RazorWireBlue : Utility_RazorWire 21153 {
 	States
 	{
 	Spawn:
-		WIRE AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_BLUE)
 		WIRE AAAAAAAAAA 3 A_FadeIn(0.1)
 		NULL A 0 A_ChangeFlag("NOCLIP", 0)

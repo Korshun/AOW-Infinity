@@ -77,7 +77,7 @@ Actor ProxyMineRed {
 	States
 	{
 	Spawn:
-		PC4T AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 A_ChangeFlag("Friendly", 0)
 	Idle:
 		PC4T A 6 A_LookEx(LOF_NOSOUNDCHECK, 0, 64)

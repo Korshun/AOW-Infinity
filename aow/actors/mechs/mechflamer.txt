@@ -58,7 +58,7 @@ Actor FlameShotDebris {
 	States
 	{
 	Spawn:
-		TNT1 AAAAA 0 A_CustomMissile("FlameDebrisFX", 0, 0, random(-8, -6), 2, random(-4, 6))
+		NULL AAAAA 0 A_CustomMissile("FlameDebrisFX", 0, 0, random(-8, -6), 2, random(-4, 6))
 		Stop
 	Death:
 		FTHX ABCDEF 3 BRIGHT

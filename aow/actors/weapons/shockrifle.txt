@@ -95,7 +95,7 @@ Actor VoltageDecay { //Now with extra hi-res funk!
 	States
 	{
 	Spawn:
-		TNT1 AA 0 A_PlaySound("voltrifle/decay")
+		NULL AA 0 A_PlaySound("voltrifle/decay")
 		NULL A 0 A_Jump(128, "AltSpawn")
 		VOLX AABBCCDDEEFFEECCA 2 BRIGHT A_SpawnItemEx("VoltageSpark", 0, 0, 0, random(-2, 2), random(-2, 2), random(0, 2), random(-180, 180), 128, 64)
 		Stop

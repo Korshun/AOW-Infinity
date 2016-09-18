@@ -53,7 +53,7 @@ Actor RedObeliskThing 21214 {
 		NULL A 2 A_ClearTarget
 		Goto See
 	MissileCheck:
-		TNT1 AA 0 A_JumpIfInTargetInventory("IsBlue", 1, "MissileGo")
+		NULL AA 0 A_JumpIfInTargetInventory("IsBlue", 1, "MissileGo")
 		NULL A 0 
 		Goto See
 	Missile:
@@ -163,7 +163,7 @@ Actor BlueObeliskThing 21213
 		NULL A 2 A_ClearTarget
 		Goto See
 	MissileCheck:
-		TNT1 AA 0 A_JumpIfInTargetInventory("IsRed", 1, "MissileGo")
+		NULL AA 0 A_JumpIfInTargetInventory("IsRed", 1, "MissileGo")
 		NULL A 0 
 		Goto See
 	Missile:

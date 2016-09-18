@@ -27,7 +27,7 @@ Actor SelfHeal : AOWWeapon {
 	States
 	{
 	Deselect:
-		SYRU AA 0 A_JumpIfInventory("SelfHealItem", 1, "DeselectFull")
+		NULL AA 0 A_JumpIfInventory("SelfHealItem", 1, "DeselectFull")
 		NULL A 1 A_TakeInventory("SelfHeal", 1)
 		NULL A -1
 		Stop

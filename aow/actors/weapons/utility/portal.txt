@@ -37,7 +37,7 @@ Actor Utility_PortalBlue {
 	States
 	{
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_BLUE)
+		NULL AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_BLUE)
 		NULL A 8 A_CheckSight("CantSeeShit")
 		NULL A 0 A_JumpIf(waterlevel >= 1, "CantSeeShit")
 		NULL A -1
@@ -86,7 +86,7 @@ Actor Utility_PortalRed : Utility_PortalBlue {
 	States
 	{
 	Spawn:
-		TNT1 AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_RED)
+		NULL AA 0 ACS_ExecuteAlways(aow_portal_tidrequest, 0, TEAM_RED)
 		NULL A 8 A_CheckSight("CantSeeShit")
 		NULL A 0 A_JumpIf(waterlevel >= 1, "CantSeeShit")
 		NULL A -1
@@ -242,7 +242,7 @@ Actor Utility_PortalSparkCluster {
 	Spawn:
 		NULL A 0
 		NULL A 0 A_PlaySound("world/spark")
-		TNT1 AAAAAAAAAAA 0 A_CustomMissile("Utility_PortalSpark", 0, 0, random(-180, 180), 2, random (8, 32))
+		NULL AAAAAAAAAAA 0 A_CustomMissile("Utility_PortalSpark", 0, 0, random(-180, 180), 2, random (8, 32))
 		Goto Death
 	Death:
 		NULL A 0

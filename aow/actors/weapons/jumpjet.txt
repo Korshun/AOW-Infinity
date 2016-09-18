@@ -10,7 +10,7 @@ Actor JumpJetGatlingGun : GatlingGun {
 	{
 	Ready:
 		GATG A 1 A_WeaponReady
-		GATG AA 0 A_JumpIfInventory("JumpJetSwitch", 1, "ReadyJumpJet")
+		NULL AA 0 A_JumpIfInventory("JumpJetSwitch", 1, "ReadyJumpJet")
 		NULL A 0 A_StopSound(6)
 		GATG AA 35 A_WeaponReady
 		NULL A 0 A_StopSound(6)

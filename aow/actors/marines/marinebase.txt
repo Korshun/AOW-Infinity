@@ -196,7 +196,7 @@ Actor MBase : PlayerPawn	//Basic unarmed marine.
 
 
 	TurnAndAcquireTargetWhileChase: //Allows for marines to turn and acquire targets.
-		TNT1 AAAAAAAAAAAAAAAA 0 A_Chase("", "")
+		NULL AAAAAAAAAAAAAAAA 0 A_Chase("", "")
 		NULL A 0 A_Jump(256, "CheckIfTargetInLOS")
 		Stop
 
@@ -392,7 +392,7 @@ Actor MBase : PlayerPawn	//Basic unarmed marine.
 
 
 	TurnAndAcquireTargetWhileWander:
-		TNT1 AAAAAAAAAAAAAAAA 0 A_Wander
+		NULL AAAAAAAAAAAAAAAA 0 A_Wander
 		NULL A 0 A_LookEx(0, 0, 0, 1200, 0, "CheckIfTargetInLOS")
 		NULL A 0 A_Jump(256, "CheckIfStuckWhileWander")
 		Stop
@@ -691,7 +691,7 @@ Actor MBase : PlayerPawn	//Basic unarmed marine.
 	XDeath:
 		PLAY O 4
 		NULL A 0 A_NoBlocking
-		PLAY PPP 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
+		NULL PPP 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
 		NULL A 0 A_SpawnItemEx("PowerupCrate", random(-4, 4), random(-4, 4), random(32, 48), random(2, 4), random(-2, 2), random(2, 4), 0, 0, 230)
 		NULL A 0 A_TakeInventory("Ingame", 1)
 		NULL A 0 A_Scream

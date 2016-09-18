@@ -12,21 +12,21 @@ Actor PlasmaCannon : AOWWeapon {
 	States
 	{
 	Ready:
-		PLCG AA 0 A_JumpIfInventory("IsRed", 1, "ReadyRed")
+		NULL AA 0 A_JumpIfInventory("IsRed", 1, "ReadyRed")
 		PLCG ABCD 3 A_WeaponReady
 		Goto Ready+2
 	ReadyRed:
 		PC2G ABCD 3 A_WeaponReady
 		Loop
 	Deselect:
-		PLCG AA 0 A_JumpIfInventory("IsRed", 1, "DeselectRed")
+		NULL AA 0 A_JumpIfInventory("IsRed", 1, "DeselectRed")
 		PLCG AAABBBCCCDDD 1 A_Lower
 		Goto Deselect+2
 	DeselectRed:
 		PC2G AAABBBCCCDDD 1 A_Lower
 		Loop
 	Select:
-		PLCG AA 0 A_JumpIfInventory("IsRed", 1, "SelectRed")
+		NULL AA 0 A_JumpIfInventory("IsRed", 1, "SelectRed")
 		PLCG AAABBBCCCDDD 1 A_Raise
 		Goto Select+2
 	SelectRed:

@@ -8,7 +8,7 @@ Actor PowerupCrate : CustomInventory replaces RandomPowerup 21410 {
 	States
 	{
 	Spawn:
-		UCRT AA 0 Thing_ChangeTID(0, 401)
+		NULL AA 0 Thing_ChangeTID(0, 401)
 		UCRT A 6 BRIGHT
 		UCRT A 6
 		Goto Spawn+2

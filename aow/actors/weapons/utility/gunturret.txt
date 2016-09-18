@@ -9,7 +9,7 @@ Actor Utility_GunTurretRed : Utility_TurretBase {
 	States
 	{
 	Spawn:
-		CIGN AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_RED)
 	Idle:
 		NULL A 0 A_TakeInventory("GunTurretClip", 23)
@@ -93,7 +93,7 @@ Actor Utility_GunTurretBlue : Utility_TurretBase {
 	States
 	{
 	Spawn:
-		CIGN AA 0 A_CheckSight("Death.Deconstruction")
+		NULL AA 0 A_CheckSight("Death.Deconstruction")
 		NULL A 0 Thing_SetSpecial(0, 84, 345, 0, TEAM_BLUE)
 	Idle:
 		NULL A 0 A_TakeInventory("GunTurretClip", 23)
