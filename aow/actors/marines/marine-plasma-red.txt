@@ -881,7 +881,7 @@ Actor RedPlasmaGunner	//Red Tiberium Rifleman
 	XDeath:
 		PLA6 O 4
 		NULL A 0 A_NoBlocking
-		NULL PPP 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
+		NULL AAA 0 A_SpawnItemEx("Credits1", random(-4, 4), random(-4, 4), random(32, 48), random(-4, 4), random(-4, 4), random(4, 8), 0, 0, 128)
 		NULL A 0 A_SpawnItemEx("PowerupCrate", random(-4, 4), random(-4, 4), random(32, 48), random(2, 4), random(-2, 2), random(2, 4), 0, 0, 230)
 		NULL A 0 A_TakeInventory("Ingame", 1)
 		NULL A 0 A_Scream

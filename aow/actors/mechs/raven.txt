@@ -138,7 +138,7 @@ Actor RavenWeapons : AOWWeapon {
 		NULL A 1 A_Lower
 		Wait
 	Select:
-		NULL CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC 0 A_Raise
+		NULL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_Raise
 		MHUD A 1 A_Raise
 		Wait
 	WaitReload:

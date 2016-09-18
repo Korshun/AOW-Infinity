@@ -149,7 +149,7 @@ Actor FragGrenadeThrown1 {
 	Spawn:
 		FRGX ABCDEFGHA 5
 		FRGX BB 5
-		NULL BB 0 A_Countdown
+		NULL AA 0 A_Countdown
 	Death:
 		NULL A 0 BRIGHT A_NoGravity
 		NULL A 0 BRIGHT A_StopSoundEx("Body")
