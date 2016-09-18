@@ -5,7 +5,7 @@ Model Tracer
    MODEL 0 "tracer.md3"
    Scale 0.45 0.45 0.15
    PITCHFROMMOMENTUM
-   FrameIndex NULL A 0 0
+   FrameIndex RIC1 A 0 0
 }
 
 
@@ -16,7 +16,7 @@ Model ProxyMineRed
    Skin 0 "w_c4-p.png"
    Scale 2.5 2.5 2.5
 
-   FrameIndex NULL A 0 0
+   FrameIndex PC4T A 0 0
 }
 
 Model ProxyMineBlue
@@ -26,7 +26,7 @@ Model ProxyMineBlue
    Skin 0 "w_c4-p.png"
    Scale 2.5 2.5 2.5
 
-   FrameIndex NULL A 0 0
+   FrameIndex PC4T A 0 0
 }
 
 Model Utility_MinesMarker
@@ -36,7 +36,7 @@ Model Utility_MinesMarker
    Skin 0 "w_c4-p.png"
    Scale 2.5 2.5 2.5
 
-   FrameIndex NULL A 0 0
+   FrameIndex PC4T A 0 0
 }
 
 Model Utility_MiniRefCacheRed
@@ -50,7 +50,7 @@ Model Utility_MiniRefCacheRed
 
 	Scale 3.75 3.75 3.75
 
-	FrameIndex NULL A 0 0
+	FrameIndex MREF A 0 0
 }
 Model Utility_MiniRefCacheBlue
 {
@@ -63,7 +63,7 @@ Model Utility_MiniRefCacheBlue
 
 	Scale 3.75 3.75 3.75
 
-	FrameIndex NULL A 0 0
+	FrameIndex MREF A 0 0
 }
 Model Utility_MiniRefCacheMarker
 {
@@ -76,7 +76,7 @@ Model Utility_MiniRefCacheMarker
 
 	Scale 3.75 3.75 3.75
 
-	FrameIndex NULL A 0 0
+	FrameIndex MREF A 0 0
 }
 
 Model ChemicalDeathShot 
@@ -91,7 +91,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL G 0 0
+	FrameIndex CHMX G 0 0
 }
 Model ChemicalDeathShot 
 {
@@ -105,7 +105,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL H 0 1
+	FrameIndex CHMX H 0 1
 }
 Model ChemicalDeathShot 
 {
@@ -119,7 +119,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL I 0 2
+	FrameIndex CHMX I 0 2
 }
 Model ChemicalDeathShot 
 {
@@ -133,7 +133,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL J 0 3
+	FrameIndex CHMX J 0 3
 }
 
 
@@ -149,7 +149,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL A 0 4
+	FrameIndex CHMX A 0 4
 }
 Model ChemicalDeathShot 
 {
@@ -163,7 +163,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL B 0 5
+	FrameIndex CHMX B 0 5
 }
 Model ChemicalDeathShot 
 {
@@ -177,7 +177,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL C 0 6
+	FrameIndex CHMX C 0 6
 }
 Model ChemicalDeathShot 
 {
@@ -191,7 +191,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL D 0 7
+	FrameIndex CHMX D 0 7
 }
 Model ChemicalDeathShot 
 {
@@ -205,7 +205,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL E 0 8
+	FrameIndex CHMX E 0 8
 }
 Model ChemicalDeathShot 
 {
@@ -219,7 +219,7 @@ Model ChemicalDeathShot
 
 	Scale 10 10 10
 
-	FrameIndex NULL F 0 9
+	FrameIndex CHMX F 0 9
 }
 
 Model ChemicalShot
@@ -234,7 +234,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL A 0 0 
+	FrameIndex TIBX A 0 0 
 }
 Model ChemicalShot
 {
@@ -248,7 +248,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL B 0 1
+	FrameIndex TIBX B 0 1
 }
 Model ChemicalShot
 {
@@ -262,7 +262,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL C 0 2
+	FrameIndex TIBX C 0 2
 }
 Model ChemicalShot
 {
@@ -276,7 +276,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL D 0 3
+	FrameIndex TIBX D 0 3
 }
 Model ChemicalShot
 {
@@ -290,7 +290,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL E 0 4
+	FrameIndex TIBX E 0 4
 }
 Model ChemicalShot
 {
@@ -304,7 +304,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL F 0 5
+	FrameIndex TIBX F 0 5
 }
 Model ChemicalShot
 {
@@ -318,7 +318,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL G 0 6
+	FrameIndex TIBX G 0 6
 }
 Model ChemicalShot
 {
@@ -332,7 +332,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL H 0 7
+	FrameIndex TIBX H 0 7
 }
 Model ChemicalShot
 {
@@ -346,7 +346,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL I 0 8
+	FrameIndex TIBX I 0 8
 }
 Model ChemicalShot
 {
@@ -360,7 +360,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL J 0 9
+	FrameIndex TIBX J 0 9
 }
 Model ChemicalShot
 {
@@ -374,7 +374,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL K 0 10
+	FrameIndex TIBX K 0 10
 }
 Model ChemicalShot
 {
@@ -388,7 +388,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL L 0 11
+	FrameIndex TIBX L 0 11
 }
 Model ChemicalShot
 {
@@ -402,7 +402,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL M 0 12
+	FrameIndex TIBX M 0 12
 }
 Model ChemicalShot
 {
@@ -416,7 +416,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL N 0 13
+	FrameIndex TIBX N 0 13
 }
 Model ChemicalShot
 {
@@ -430,7 +430,7 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL O 0 14
+	FrameIndex TIBX O 0 14
 }
 Model ChemicalShot
 {
@@ -444,8 +444,8 @@ Model ChemicalShot
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL P 0 15
-	FrameIndex NULL Q 0 16
+	FrameIndex TIBX P 0 15
+	FrameIndex TIBX Q 0 16
 }
 
 Model ChemicalShotDummy
@@ -460,7 +460,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL A 0 0 
+	FrameIndex TIBX A 0 0 
 }
 Model ChemicalShotDummy
 {
@@ -474,7 +474,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL B 0 1
+	FrameIndex TIBX B 0 1
 }
 Model ChemicalShotDummy
 {
@@ -488,7 +488,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL C 0 2
+	FrameIndex TIBX C 0 2
 }
 Model ChemicalShotDummy
 {
@@ -502,7 +502,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL D 0 3
+	FrameIndex TIBX D 0 3
 }
 Model ChemicalShotDummy
 {
@@ -516,7 +516,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL E 0 4
+	FrameIndex TIBX E 0 4
 }
 Model ChemicalShotDummy
 {
@@ -530,7 +530,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL F 0 5
+	FrameIndex TIBX F 0 5
 }
 Model ChemicalShotDummy
 {
@@ -544,7 +544,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL G 0 6
+	FrameIndex TIBX G 0 6
 }
 Model ChemicalShotDummy
 {
@@ -558,7 +558,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL H 0 7
+	FrameIndex TIBX H 0 7
 }
 Model ChemicalShotDummy
 {
@@ -572,7 +572,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL I 0 8
+	FrameIndex TIBX I 0 8
 }
 Model ChemicalShotDummy
 {
@@ -586,7 +586,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL J 0 9
+	FrameIndex TIBX J 0 9
 }
 Model ChemicalShotDummy
 {
@@ -600,7 +600,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL K 0 10
+	FrameIndex TIBX K 0 10
 }
 Model ChemicalShotDummy
 {
@@ -614,7 +614,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL L 0 11
+	FrameIndex TIBX L 0 11
 }
 Model ChemicalShotDummy
 {
@@ -628,7 +628,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL M 0 12
+	FrameIndex TIBX M 0 12
 }
 Model ChemicalShotDummy
 {
@@ -642,7 +642,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL N 0 13
+	FrameIndex TIBX N 0 13
 }
 Model ChemicalShotDummy
 {
@@ -656,7 +656,7 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL O 0 14
+	FrameIndex TIBX O 0 14
 }
 Model ChemicalShotDummy
 {
@@ -670,8 +670,8 @@ Model ChemicalShotDummy
 
 	Scale 5.0 5.0 5.0
 
-	FrameIndex NULL P 0 15
-	FrameIndex NULL Q 0 16
+	FrameIndex TIBX P 0 15
+	FrameIndex TIBX Q 0 16
 }
 
 
@@ -690,7 +690,7 @@ Model Utility_CacheMarker
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model MedicalCache
@@ -704,7 +704,7 @@ Model MedicalCache
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model Utility_MedicalCacheMarker
@@ -720,7 +720,7 @@ Model Utility_MedicalCacheMarker
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 
@@ -735,7 +735,7 @@ Model AmmoCache
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model Utility_AmmoCacheMarker
@@ -751,7 +751,7 @@ Model Utility_AmmoCacheMarker
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 
@@ -766,7 +766,7 @@ Model SuperCache
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model SuperCacheMapSpawned
@@ -780,7 +780,7 @@ Model SuperCacheMapSpawned
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model Utility_SuperCacheMarker
@@ -796,7 +796,7 @@ Model Utility_SuperCacheMarker
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model Utility_GlobalMedicCacheRed 
@@ -810,7 +810,7 @@ Model Utility_GlobalMedicCacheRed
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 Model Utility_GlobalMedicCacheBlue
 {
@@ -823,7 +823,7 @@ Model Utility_GlobalMedicCacheBlue
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 Model Utility_GlobalAmmoCacheRed 
@@ -837,7 +837,7 @@ Model Utility_GlobalAmmoCacheRed
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 Model Utility_GlobalAmmoCacheBlue
 {
@@ -850,7 +850,7 @@ Model Utility_GlobalAmmoCacheBlue
 
 	Scale 7.0 7.0 7.0
 
-	FrameIndex NULL A 0 0
+	FrameIndex CACH A 0 0
 }
 
 
@@ -863,7 +863,7 @@ Model SandbagWall               // Name of actor in DECORATE
    Skin 0 "sandbag.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 2.0 1.75 2.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex BAGG A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model Utility_SandbagsMarker               // Name of actor in DECORATE
 {
@@ -872,7 +872,7 @@ Model Utility_SandbagsMarker               // Name of actor in DECORATE
    Skin 0 "sandbag.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 2.0 1.75 2.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex BAGG A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 
 ///////////////////TIMED C4 MODEL
@@ -883,7 +883,7 @@ Model TimedC4Armed               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4Thrown               // Name of actor in DECORATE
 {
@@ -892,7 +892,7 @@ Model TimedC4Thrown               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ArmedE               // Name of actor in DECORATE
 {
@@ -901,7 +901,7 @@ Model TimedC4ArmedE               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ThrownE               // Name of actor in DECORATE
 {
@@ -910,7 +910,7 @@ Model TimedC4ThrownE               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ArmedBlue               // Name of actor in DECORATE
 {
@@ -919,7 +919,7 @@ Model TimedC4ArmedBlue               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ThrownBlue               // Name of actor in DECORATE
 {
@@ -928,7 +928,7 @@ Model TimedC4ThrownBlue               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ArmedEBlue               // Name of actor in DECORATE
 {
@@ -937,7 +937,7 @@ Model TimedC4ArmedEBlue               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 Model TimedC4ThrownEBlue               // Name of actor in DECORATE
 {
@@ -946,7 +946,7 @@ Model TimedC4ThrownEBlue               // Name of actor in DECORATE
    Skin 0 "timedc4.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 45.0 45.0 50.0             // Scale values
 
-   FrameIndex NULL A 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex TC4T A 0 0         // The sprite lump, sprite frame, model index, frame number
 }
 
 
@@ -958,34 +958,34 @@ Model MadCat               // Name of actor in DECORATE
    Skin 0 "MadCat.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 7.0 7.0 7.0             // Scale values
 
-   FrameIndex NULL K 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 2         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL C 0 3         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL D 0 4         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL E 0 5         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL F 0 6         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL G 0 7         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL H 0 8         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL I 0 9         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL J 0 10         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL L 0 11         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL M 0 12         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL N 0 13         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL O 0 14         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL P 0 15         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Q 0 16         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL R 0 17         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL S 0 18         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL T 0 19         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL U 0 20         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL V 0 21         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL W 0 22         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL X 0 23         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Y 0 24         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Z 0 25         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 26         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 27         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC K 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC B 0 2         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC C 0 3         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC D 0 4         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC E 0 5         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC F 0 6         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC G 0 7         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC H 0 8         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC I 0 9         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC J 0 10         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC L 0 11         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC M 0 12         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC N 0 13         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC O 0 14         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC P 0 15         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Q 0 16         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC R 0 17         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC S 0 18         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC T 0 19         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC U 0 20         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC V 0 21         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC W 0 22         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC X 0 23         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Y 0 24         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Z 0 25         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 A 0 26         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 B 0 27         // The sprite lump, sprite frame, model index, frame number
 }
 
 Model MadCatUsed               // Name of actor in DECORATE
@@ -995,34 +995,34 @@ Model MadCatUsed               // Name of actor in DECORATE
    Skin 0 "MadCat.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 7.0 7.0 7.0             // Scale values
 
-   FrameIndex NULL K 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 2         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL C 0 3         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL D 0 4         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL E 0 5         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL F 0 6         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL G 0 7         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL H 0 8         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL I 0 9         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL J 0 10         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL L 0 11         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL M 0 12         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL N 0 13         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL O 0 14         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL P 0 15         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Q 0 16         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL R 0 17         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL S 0 18         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL T 0 19         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL U 0 20         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL V 0 21         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL W 0 22         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL X 0 23         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Y 0 24         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Z 0 25         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 26         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 27         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC K 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC B 0 2         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC C 0 3         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC D 0 4         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC E 0 5         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC F 0 6         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC G 0 7         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC H 0 8         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC I 0 9         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC J 0 10         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC L 0 11         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC M 0 12         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC N 0 13         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC O 0 14         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC P 0 15         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Q 0 16         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC R 0 17         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC S 0 18         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC T 0 19         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC U 0 20         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC V 0 21         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC W 0 22         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC X 0 23         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Y 0 24         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Z 0 25         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 A 0 26         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 B 0 27         // The sprite lump, sprite frame, model index, frame number
 }
 
 Model MadCatSwitchPickup               // Name of actor in DECORATE
@@ -1032,34 +1032,34 @@ Model MadCatSwitchPickup               // Name of actor in DECORATE
    Skin 0 "MadCat.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 7.0 7.0 7.0             // Scale values
 
-   FrameIndex NULL K 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 2         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL C 0 3         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL D 0 4         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL E 0 5         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL F 0 6         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL G 0 7         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL H 0 8         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL I 0 9         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL J 0 10         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL L 0 11         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL M 0 12         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL N 0 13         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL O 0 14         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL P 0 15         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Q 0 16         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL R 0 17         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL S 0 18         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL T 0 19         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL U 0 20         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL V 0 21         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL W 0 22         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL X 0 23         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Y 0 24         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Z 0 25         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 26         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 27         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC K 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC B 0 2         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC C 0 3         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC D 0 4         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC E 0 5         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC F 0 6         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC G 0 7         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC H 0 8         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC I 0 9         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC J 0 10         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC L 0 11         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC M 0 12         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC N 0 13         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC O 0 14         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC P 0 15         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Q 0 16         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC R 0 17         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC S 0 18         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC T 0 19         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC U 0 20         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC V 0 21         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC W 0 22         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC X 0 23         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Y 0 24         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Z 0 25         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 A 0 26         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 B 0 27         // The sprite lump, sprite frame, model index, frame number
 }
 
 Model DamagedMadcat               // Name of actor in DECORATE
@@ -1069,34 +1069,34 @@ Model DamagedMadcat               // Name of actor in DECORATE
    Skin 0 "MadCat.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 7.0 7.0 7.0             // Scale values
 
-   FrameIndex NULL K 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 2         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL C 0 3         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL D 0 4         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL E 0 5         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL F 0 6         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL G 0 7         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL H 0 8         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL I 0 9         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL J 0 10         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL L 0 11         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL M 0 12         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL N 0 13         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL O 0 14         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL P 0 15         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Q 0 16         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL R 0 17         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL S 0 18         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL T 0 19         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL U 0 20         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL V 0 21         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL W 0 22         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL X 0 23         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Y 0 24         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Z 0 25         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 26         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 27         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC K 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC B 0 2         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC C 0 3         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC D 0 4         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC E 0 5         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC F 0 6         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC G 0 7         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC H 0 8         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC I 0 9         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC J 0 10         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC L 0 11         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC M 0 12         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC N 0 13         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC O 0 14         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC P 0 15         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Q 0 16         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC R 0 17         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC S 0 18         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC T 0 19         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC U 0 20         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC V 0 21         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC W 0 22         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC X 0 23         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Y 0 24         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Z 0 25         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 A 0 26         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 B 0 27         // The sprite lump, sprite frame, model index, frame number
 }
 
 Model EjectedMadCat               // Name of actor in DECORATE
@@ -1106,34 +1106,34 @@ Model EjectedMadCat               // Name of actor in DECORATE
    Skin 0 "MadCat.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 7.0 7.0 7.0             // Scale values
 
-   FrameIndex NULL K 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 2         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL C 0 3         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL D 0 4         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL E 0 5         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL F 0 6         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL G 0 7         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL H 0 8         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL I 0 9         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL J 0 10         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL L 0 11         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL M 0 12         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL N 0 13         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL O 0 14         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL P 0 15         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Q 0 16         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL R 0 17         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL S 0 18         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL T 0 19         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL U 0 20         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL V 0 21         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL W 0 22         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL X 0 23         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Y 0 24         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL Z 0 25         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 26         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 27         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC K 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC B 0 2         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC C 0 3         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC D 0 4         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC E 0 5         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC F 0 6         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC G 0 7         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC H 0 8         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC I 0 9         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC J 0 10         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC L 0 11         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC M 0 12         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC N 0 13         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC O 0 14         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC P 0 15         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Q 0 16         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC R 0 17         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC S 0 18         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC T 0 19         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC U 0 20         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC V 0 21         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC W 0 22         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC X 0 23         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Y 0 24         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MADC Z 0 25         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 A 0 26         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex MAD2 B 0 27         // The sprite lump, sprite frame, model index, frame number
 }
 
 ///////////////////ORCA MODEL
@@ -1144,8 +1144,8 @@ Model Orca
    Skin 0 "Orca.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 1
+   FrameIndex ORCV A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex ORCV B 0 1
 }
 
 Model EjectedOrca
@@ -1155,8 +1155,8 @@ Model EjectedOrca
    Skin 0 "Orca.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL A 0 1         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL B 0 1
+   FrameIndex ORCV A 0 1         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex ORCV B 0 1
 }
 
 
@@ -1169,34 +1169,34 @@ Model Raven               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 Model RavenUsed               // Name of actor in DECORATE
 {
@@ -1205,34 +1205,34 @@ Model RavenUsed               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model RavenSwitchPickup               // Name of actor in DECORATE
@@ -1242,34 +1242,34 @@ Model RavenSwitchPickup               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model DamagedRaven               // Name of actor in DECORATE
@@ -1279,34 +1279,34 @@ Model DamagedRaven               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model EjectedRaven               // Name of actor in DECORATE
@@ -1316,34 +1316,34 @@ Model EjectedRaven               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model Utility_MiniRavenRed               // Name of actor in DECORATE
@@ -1353,26 +1353,26 @@ Model Utility_MiniRavenRed               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
 }
 
 Model Utility_MiniRavenBlue               // Name of actor in DECORATE
@@ -1382,26 +1382,26 @@ Model Utility_MiniRavenBlue               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
 }
 
 Model Utility_RavenMarker               // Name of actor in DECORATE
@@ -1411,28 +1411,28 @@ Model Utility_RavenMarker               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model Utility_Raven               // Name of actor in DECORATE
@@ -1442,34 +1442,34 @@ Model Utility_Raven               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
-   FrameIndex NULL U 0 21
-   FrameIndex NULL V 0 22
-   FrameIndex NULL W 0 23
-   FrameIndex NULL X 0 24
-   FrameIndex NULL Y 0 25
-   FrameIndex NULL Z 0 26
-   FrameIndex NULL A 0 27
-   FrameIndex NULL B 0 28
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
+   FrameIndex RAVN U 0 21
+   FrameIndex RAVN V 0 22
+   FrameIndex RAVN W 0 23
+   FrameIndex RAVN X 0 24
+   FrameIndex RAVN Y 0 25
+   FrameIndex RAVN Z 0 26
+   FrameIndex RAV2 A 0 27
+   FrameIndex RAV2 B 0 28
 }
 
 Model Utility_MiniRavenMarker               // Name of actor in DECORATE
@@ -1479,26 +1479,26 @@ Model Utility_MiniRavenMarker               // Name of actor in DECORATE
    Skin 0 "Raven.png"     // Model index, texture (can be in any format supported by GZDoom)
    Scale 10.0 10.0 10.0             // Scale values
 
-   FrameIndex NULL I 0 0         // The sprite lump, sprite frame, model index, frame number
-   FrameIndex NULL A 0 1
-   FrameIndex NULL B 0 2
-   FrameIndex NULL C 0 3
-   FrameIndex NULL D 0 4
-   FrameIndex NULL E 0 5
-   FrameIndex NULL F 0 6
-   FrameIndex NULL G 0 7
-   FrameIndex NULL H 0 8
-   FrameIndex NULL J 0 9
-   FrameIndex NULL K 0 11
-   FrameIndex NULL L 0 12
-   FrameIndex NULL M 0 13
-   FrameIndex NULL N 0 14
-   FrameIndex NULL O 0 15
-   FrameIndex NULL P 0 16
-   FrameIndex NULL Q 0 17
-   FrameIndex NULL R 0 18
-   FrameIndex NULL S 0 19
-   FrameIndex NULL T 0 20
+   FrameIndex RAVN I 0 0         // The sprite lump, sprite frame, model index, frame number
+   FrameIndex RAVN A 0 1
+   FrameIndex RAVN B 0 2
+   FrameIndex RAVN C 0 3
+   FrameIndex RAVN D 0 4
+   FrameIndex RAVN E 0 5
+   FrameIndex RAVN F 0 6
+   FrameIndex RAVN G 0 7
+   FrameIndex RAVN H 0 8
+   FrameIndex RAVN J 0 9
+   FrameIndex RAVN K 0 11
+   FrameIndex RAVN L 0 12
+   FrameIndex RAVN M 0 13
+   FrameIndex RAVN N 0 14
+   FrameIndex RAVN O 0 15
+   FrameIndex RAVN P 0 16
+   FrameIndex RAVN Q 0 17
+   FrameIndex RAVN R 0 18
+   FrameIndex RAVN S 0 19
+   FrameIndex RAVN T 0 20
 }
 
 model Utility_Razorwire
@@ -1507,7 +1507,7 @@ model Utility_Razorwire
     Model 0 "razor.md2"
     Skin 0 "razor.png"
     Scale 3.0 1.7 3.0
-    FrameIndex NULL A 0 0
+    FrameIndex WIRE A 0 0
 }
 
 model Utility_RazorwireBlue
@@ -1516,7 +1516,7 @@ model Utility_RazorwireBlue
     Model 0 "razor.md2"
     Skin 0 "razor.png"
     Scale 3.0 1.7 3.0
-    FrameIndex NULL A 0 0
+    FrameIndex WIRE A 0 0
 }
 
 model Utility_RazorwireMarker
@@ -1525,6 +1525,6 @@ model Utility_RazorwireMarker
     Model 0 "razor.md2"
     Skin 0 "razor.png"
     Scale 3.0 1.7 3.0
-    FrameIndex NULL A 0 0
+    FrameIndex WIRE A 0 0
 }
 
