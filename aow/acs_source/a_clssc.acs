@@ -1013,7 +1013,7 @@ script aow_addon_tiberiumautorifle (int Team)
 	int cost = 300;
 	if (MitigateDoublePress()) terminate;
 
-	if (CheckInventory("TiberiumAutorifleWeak") || CheckInventory("TiberiumAutorifle")) {
+	if (CheckInventory("TiberiumAutorifle")) {
 		DisplayCross();
 		SETFONT("BigFont");
 		HudMessage(s:"You already have a \cdTiberium Autorifle!";
@@ -1033,9 +1033,9 @@ script aow_addon_tiberiumautorifle (int Team)
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 	
 	// GiveInventory("Refunds", 100);
-	GiveInventory("TiberiumAutorifleWeak", 1);
+	GiveInventory("TiberiumAutorifle", 1);
 	GiveInventory("TE21CalAmmo", 200);
-	SetWeapon("TiberiumAutorifleWeak");
+	SetWeapon("TiberiumAutorifle");
 	Log(n:0, s:" purchases Tiberium Autorifle.");
 }
 

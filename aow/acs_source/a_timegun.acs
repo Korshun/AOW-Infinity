@@ -8,12 +8,38 @@
 script aow_script958 (int action, int type) {
 	if (action == 1) {
 		// rotation
-		if (CheckInventory ("TimeGunRotation") == 5)
-			TakeInventory ("TimeGunRotation", 5);
+		if (CheckInventory ("TimeGunRotation") == 3)
+			TakeInventory ("TimeGunRotation", 3);
 		else
 			GiveInventory ("TimeGunRotation", 1);
 		
 		ActivatorSound ("switch/pulse", 127);
+		terminate;
+	}
+	
+	if (action == 2) {
+		// [Dusk] {9/6/12} Check for a possible reward.
+		// Boosting teammates gives you 1 bonus,
+		// weakening enemies gets you 2 bonus.
+		int ttid = GetTargetInfo (5);
+		if (ttid == ActivatorTID() || ttid < 3800 || ttid >= 3800 + MAX_PLAYERS) {
+			// No valid target
+			terminate;
+		}
+		
+		int bonus = 1;
+		if (GetTargetInfo (10) != PlayerTeam ())
+			bonus = 2;
+		
+		int pn = PlayerNumber ();
+		if (MedicBonus[pn] < 175) { // TODO: Translate 175 to MedicBonusNeed variable which depends on aow_medicbonusneed CVAR
+			MedicBonus[pn] += 40 * bonus;
+		} else {
+			MedicBonus[pn] = 0;
+			AddExperience (50);
+			LocalAmbientSound ("c4/use", 127);
+			GivePoints (1);
+		}
 		terminate;
 	}
 	
@@ -45,36 +71,50 @@ script aow_script958 (int action, int type) {
 // ------------
 // Time gun HUD
 script aow_script959 (void) NET CLIENTSIDE {
-	while (CheckWeapon ("TimeGun") && GetActorProperty (ActivatorTID(), APROP_HEALTH) >= 0) {
-		SetFont("SMALLFONT");
-		HudMessage(s:TimeHudColor(0), s:"BOOST (25)\n",
-			s:TimeHudColor(1), s:"FLOAT (25)\n",
-			s:TimeHudColor(2), s:"SLOW (25)\n",
-			s:TimeHudColor(3), s:"WEAKEN (25)\n",
-			s:TimeHudColor(4), s:"TELEPORT (100)\n",
-			s:TimeHudColor(5), s:"BURST (5+)";
+	while (CheckWeapon ("TimeGun") && GetHealth () >= 0) {
+		SetFont ("SMALLFONT");
+		HudMessage (s:TimeHUDColor(0, 0), s:"BOOST ", s:TimeHUDColor(0, 1), s:" / ", s:TimeHUDColor (0, 2), s:"SLOW\n",
+			s:TimeHUDColor(1, 0), s:"FLOAT ", s:TimeHUDColor(1, 1), s:" / ", s:TimeHUDColor (1, 2), s:"WEAKEN\n",
+			s:TimeHUDColor(2, 0), s:"TELEPORT\n",
+			s:TimeHUDColor(3, 0), s:"HYPERSPEED\n";
 			HUDMSG_PLAIN, 0, CR_WHITE, -0.8, -0.6, 0.2);
 		
 		delay (5);
 	}
 }
 
-function str TimeHudColor (int type) {
+function str TimeHUDColor (int type, int side) {
 	if (CheckInventory ("TimeGunRotation") == type) {
 		// selected
-		if (CheckInventory ("TimeGunCooldown")) return "\cU";
 		switch (type) {
-			case 0: case 1: return "\cD";
-			case 2: case 3: return "\cA";
-			case 4: case 5: return "\cF";
+			case 0:
+			case 1:
+				switch (side) {
+				case 0:
+					return "\cD";
+				case 1:
+					return "\cC";
+				}
+				return "\cG";
+			case 2:
+			case 3:
+				return "\cF";
 		}
 	} else {
 		// not selected
-		if (CheckInventory ("TimeGunCooldown")) return "\cM";
 		switch (type) {
-			case 0: case 1: return "\cQ";
-			case 2: case 3: return "\cG";
-			case 4: case 5: return "\cK";
+			case 0:
+			case 1:
+				switch (side) {
+				case 0:
+					return "\cQ";
+				case 1:
+					return "\cU";
+				}
+				return "\cR";
+			case 2:
+			case 3:
+				return "\cK";
 		}
 	}
 	return "";

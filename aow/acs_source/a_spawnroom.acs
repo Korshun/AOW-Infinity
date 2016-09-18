@@ -72,7 +72,7 @@ script aow_script95 (int unused, int force) {
 	if (CheckInventory ("JumpjetSwitch")) GiveInventory ("JumpjetDeactivate", 1);
 	if (CheckInventory ("PlasmaCannon")) HasPlasma = True;
 	if (CheckInventory ("ArtilleryCannon")) HasArtillery = True;
-	if (CheckInventory ("TiberiumAutorifleWeak")) HasTiberiumAutorifle = True;
+	if (CheckInventory ("TiberiumAutorifle")) HasTiberiumAutorifle = True;
 	if (CheckInventory ("IonCannonBeacon") || CheckInventory("NuclearStrikeBeacon")) HasSuperWeapon = True;
 	if (CheckInventory ("PowerInvulnerable")) HasIronCurtain = True;
 	if (CheckInventory ("PowerBerserk")) HasBerserk = True;
@@ -114,7 +114,7 @@ script aow_script95 (int unused, int force) {
 		GiveInventory ("ArtilleryCannon", 1);
 		GiveInventory ("ArtilleryShellAmmo", 30);
 	} if (HasTiberiumAutorifle) {
-		GiveInventory ("TiberiumAutorifleWeak", 1);
+		GiveInventory ("TiberiumAutorifle", 1);
 		GiveInventory ("TE21CalAmmo", 120);
 	}
 	if (HasIronCurtain) GiveInventory ("GreenHueRemover", 1);
