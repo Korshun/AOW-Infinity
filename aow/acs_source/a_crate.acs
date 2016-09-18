@@ -834,6 +834,7 @@ script aow_script966 (void) CLIENTSIDE {
 }
 
 // target information
+// TODO: Move to a_functions.acs and possibly update the script to match the one in v15
 script aow_script964 (int type, int value) {
 	SetActivatorToTarget (0);
 	SetResultValue (0);
@@ -848,5 +849,10 @@ script aow_script964 (int type, int value) {
 	case 7: SetPlayerProperty (0, value, PROP_TOTALLYFROZEN); break;
 	case 8: SetResultValue (CheckInventory (value)); break;
 	case 9: SetResultValue (PlayerNumber ()); break;
+	case 10: SetResultValue(PlayerTeam ()); break;
 	}
+}
+
+function int GetTargetInfo (int type) {
+	return ACS_ExecuteWithResult (aow_script964, type);
 }
