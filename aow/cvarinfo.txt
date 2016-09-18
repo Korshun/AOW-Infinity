@@ -1,21 +1,52 @@
 server bool aowinf_tracers = true;
 
-//server int aow_maxcannonsperteam;
-//server int aow_plasmapurchasedelay;
-//server int aow_maxtimecopsperteam;
-//server int aow_c4delay;
-//server int aow_guardianlimit;
-//server int aow_startcredits;
-//server int aow_credflow;
-//server int aow_powercredflow;
-//server int aow_creditfrag;
-//server int aow_bonustime;
-//server int aow_bonusamount;
-//server int aow_repairbonus;
-//server bool aow_mechs;
-//server bool aow_ticketpool = false;
-//server int aow_tournamentmode;
-//server int aow_beaconpurchasedelay;
-//server int aow_teamstaytime;
-//server int aow_plasmacooldown;
-//server int aow_medicbonusneed;
+server int aowr_credflow = 4;
+server int aowr_startcredits = 300;
+server int aowr_creditfrag = 50;
+server int aowr_bonusamount = 300;
+server int aowr_bonustime = 5;
+server int aowr_medicbonusneed = 175;
+server int aowr_repairbonus = 1;
+server int aowr_guardianlimit = 2;
+server int aowr_ticketpool = 0;
+//[SP]How long you can stay on a team before you are never switched.
+server int aowr_teamstaytime = 2;
+
+// Plasma Cannon initial delay
+server int aowr_plasmapurchasedelay = 5;
+//[SP]Maximum number of plasma cannons per team. (Set to -1 for unlimited)
+server int aowr_maxcannonsperteam = 4;
+// [Dusk] Time (in minutes) to determine plasma cannon cooldown. Use -1 to disable
+server int aowr_plasmacooldown = 3;
+
+//[SP]How long you have to wait to buy a new superweapon beacon. (Minutes) (Set to -1 to disable wait)
+server int aowr_beaconpurchasedelay = 5;
+
+// [SP]Maximum number of time cops per team. (Set to -1 for unlimited)
+server int aowr_maxtimecopsperteam = 1;
+
+// [Dusk] How many minutes until Timed C4 can be used. (-1 to disable)
+server int aowr_c4delay = 5;
+
+//[SP] Time (in minutes) before sudden death.
+// [Dusk] changed default to 45, -1 means immediate
+server int aowr_suddendeathtime = 45;
+
+// [Dusk] Sudden death degeneration
+server int aowr_degeneration = 0;
+server int aowr_degenerationinterval = 10;
+
+server int aowr_tournamentmode = 0;
+server int aowr_disablemechs = 0;
+server int aowr_surrendermode = 0;
+
+// [Dusk] How much score does destroying a building award you, in addition to difference?
+server int aowr_buildingpoints = 125;
+
+// [Dusk] Tiberium amounts
+server int aowr_tiberium_self = 225;
+server int aowr_tiberium_other = 75;
+server int aowr_tiberium_advperc = 300;
+
+//server int aowr_powercredflow;
+//server bool aowr_mechs;
