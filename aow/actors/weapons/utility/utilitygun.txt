@@ -31,7 +31,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_StopSoundEx("Weapon")
 		NULL A 0 ACS_ExecuteAlways(aow_script370, 0)
 		NULL A 0 A_TakeInventory("Utility_Percent", 2)
-		NULL A 0 A_GiveInventory("Utility_Ammo", 2)
 		UTIG A 20 A_WeaponReady
 		Loop
 	Deselect:

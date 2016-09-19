@@ -29,7 +29,6 @@ Actor AmmoPack : CustomInventory replaces Backpack
 		NULL A 0 A_GiveInventory("GeneporiumCharge", 25)
 		NULL A 0 A_GiveInventory("TE21CalAmmo", 20)
 		NULL A 0 A_GiveInventory("ArtilleryShellAmmo", 2)
-		NULL A 0 A_GiveInventory("Utility_Ammo", 10)
 		NULL A 0 A_GiveInventory("PlasmaRifleAmmo", 20)
 		NULL A 0 A_GiveInventory("TimeGunAmmo", 2)
 		NULL A 0 A_GiveInventory("StealthCharge", 10)

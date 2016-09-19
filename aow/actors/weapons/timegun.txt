@@ -34,7 +34,7 @@ Actor TimeGun : AOWWeapon
 		Loop
 	Fire:
 		NULL A 0 A_JumpIfInventory("PowerTimeGunSpeed", 1, "HyperspeedLoop")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfInventory("TimeGunRotation", 3, "Fire.Hyperspeed")
 		NULL A 0 A_JumpIfInventory("TimeGunRotation", 2, "Fire.Teleport")
 		TMGN B 2 bright
@@ -120,7 +120,7 @@ Actor TimeGun : AOWWeapon
 		NULL A 0 A_SetTranslucent(0.5, 1)
 		NULL A 0 A_GiveInventory("TimeGunSpeed", 1)
 	HyperspeedLoop:
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "HyperspeedEnd")
+		// NULL A 0 A_JumpIfInventory("InMenu", 1, "HyperspeedEnd") -- InMenu is not added yet
 		TMGN H 1 bright DamageThing (1)
 		NULL A 0 bright A_ReFire
 	HyperspeedEnd:
@@ -141,7 +141,7 @@ Actor TimeGun : AOWWeapon
 		TMGN A 35
 		Goto Ready
 	AltFire:
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 ACS_Execute(958, 0, 1)
 		Goto Ready
 	}

@@ -925,31 +925,6 @@ flickerlight GOLD_X4
     chance 0.4
 }
 
-object GoldenBall1
-{
-    frame PLSSA { light GOLDBALL }
-    frame PLSSB { light GOLDBALL }
-
-    frame PLSEA { light GOLD_X1 }
-    frame PLSEB { light GOLD_X2 }
-    frame PLSEC { light GOLD_X2 }
-    frame PLSED { light GOLD_X3 }
-    frame PLSEE { light GOLD_X4 }
-}
-
-
-object GoldenBall1Blue
-{
-    frame PLSSA { light GOLDBALL }
-    frame PLSSB { light GOLDBALL }
-
-    frame PLSEA { light GOLD_X1 }
-    frame PLSEB { light GOLD_X2 }
-    frame PLSEC { light GOLD_X2 }
-    frame PLSED { light GOLD_X3 }
-    frame PLSEE { light GOLD_X4 }
-}
-
 pointlight GOLDIMPBALL
 {
     color 1.0 1.0 0.0
@@ -1008,48 +983,9 @@ Object FloatPuffBlue
     frame VOLX { light GOLDPUFF1 }
 }
 
-Object SlowPuffRed
-{
-    frame VOLX { light GOLDPUFF1 }
-}
+///////Mech Lights
+//////////////////
 
-Object SlowPuffBlue
-{
-    frame VOLX { light GOLDPUFF1 }
-}
-
-Object WeakenPuffRed
-{
-    frame VOLX { light GOLDPUFF1 }
-}
-
-Object WeakenPuffBlue
-{
-    frame VOLX { light GOLDPUFF1 }
-}
-
-object GoldenBall2
-{
-    frame BAL1A { light GOLDIMPBALL    }
-    frame BAL1B { light GOLDIMPBALL    }
-
-    frame BAL1C { light GOLDIMPBALL_X1 }
-    frame BAL1D { light GOLDIMPBALL_X2 }
-    frame BAL1E { light GOLDIMPBALL_X3 }
-}
-
-object GoldenBall2Blue
-{
-    frame BAL1A { light GOLDIMPBALL    }
-    frame BAL1B { light GOLDIMPBALL    }
-
-    frame BAL1C { light GOLDIMPBALL_X1 }
-    frame BAL1D { light GOLDIMPBALL_X2 }
-    frame BAL1E { light GOLDIMPBALL_X3 }
-}
-
-
-//Mech Lights
 flickerlight PulseBall
 {
 	color 0.6 1.0 0.0
