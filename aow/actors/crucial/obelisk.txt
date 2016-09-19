@@ -32,7 +32,7 @@ actor RedObeliskThing 21214 {
 	Speed 0
 	PainChance 0
 	Tag "Red Obelisk Eye"
-	Obituary "$OB_OBELISK_RED"
+	Obituary "$OB_OBELISK_RED" // "%o was vaporized by the \cgRed Obelisk\c-."
 	DesignatedTeam 1
 	States {
 	Spawn:
@@ -130,7 +130,7 @@ actor BlueObeliskThing 21213 {
 	PainChance 0
 	DesignatedTeam 0
 	Tag "Blue Obelisk Eye"
-	Obituary "$OB_OBELISK_BLUE" // "%o was vaporized by the \chRed Obelisk\c-."
+	Obituary "$OB_OBELISK_BLUE" // "%o was vaporized by the \chBlue Obelisk\c-."
 	States {
 	Spawn:
 		NULL A 0
