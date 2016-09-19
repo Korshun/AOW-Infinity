@@ -1073,6 +1073,21 @@ graphic arm5icon, 31, 17 {
 	offset -6, -16
 }
 
+Graphic jeticon, 25, 29
+{
+	XScale 2.0
+	YScale 2.0
+	Offset -7, -8
+	Patch jeticon, 0, 0
+}
+
+graphic fuelicon, 19, 28 {
+	xscale 2.2
+	yscale 2.2
+	offset 8, 20
+	patch fuelicon, 0, 0
+}
+
 graphic artibox, 32, 32 {
 	xscale 1.5
 	yscale 1.5
