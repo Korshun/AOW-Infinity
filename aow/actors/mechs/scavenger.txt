@@ -145,7 +145,7 @@ Actor ScavengerSwitchPickup : CustomInventory
 		Stop
 	Use:
 		NULL A 0 A_GiveInventory("ScavengerSwitch", 1)
-		NULL A 0 ACS_Execute(359, 0, 6)
+		NULL A 0 ACS_Execute(aow_script359, 0, 6)
 		Stop
 	}
 }

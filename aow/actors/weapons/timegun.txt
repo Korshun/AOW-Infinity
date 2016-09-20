@@ -106,7 +106,7 @@ Actor TimeGun : AOWWeapon
 		NULL A 0 A_JumpIfInventory("HasClass", 1, 1)
 		goto Nope
 		NULL A 0 A_TakeInventory("IsInSpawnRoom", 1)
-		TMGN A 3 BRIGHT ACS_ExecuteAlways (94, 0, random (0, 1))
+		TMGN A 3 BRIGHT ACS_ExecuteAlways(aow_script94, 0, random (0, 1))
 		NULL A 0 A_SetTranslucent(1.0, 0)
 		NULL A 0 A_SpawnItemEx("TimeGunFlareExplosion")
 		NULL A 0 SetPlayerProperty(0, 0, 0)
@@ -142,7 +142,7 @@ Actor TimeGun : AOWWeapon
 		Goto Ready
 	AltFire:
 		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
-		NULL A 0 ACS_Execute(958, 0, 1)
+		NULL A 0 ACS_Execute(aow_script958, 0, 1)
 		Goto Ready
 	}
 }
@@ -227,11 +227,11 @@ actor TimeGunBoostRed : CustomInventory
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "Slow")
 		NULL A 0 A_JumpIfInventory("Knife", 1, "Failure") // Not on stealths because this reveals them
 		NULL A 0 A_JumpIfInventory("StealthLaserRifle", 1, "Failure")
-		NULL A 0 ACS_Execute(958, 0, 0, 0) // intel message
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 0) // intel message
 		NULL A 0 A_GiveInventory("TimeGunBoost", 1)
 		stop
 	Slow:
-		NULL A 0 ACS_Execute(958, 0, 0, 2)
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 2)
 		NULL A 0 A_GiveInventory("TimeGunSlow", 1)
 		stop
 	Failure:
@@ -248,7 +248,7 @@ actor TimeGunBoostBlue : TimeGunBoostRed
 		NULL A 0 A_JumpIfInventory("IsRed", 1, "Slow")
 		NULL A 0 A_JumpIfInventory("Knife", 1, "Failure")
 		NULL A 0 A_JumpIfInventory("StealthLaserRifle", 1, "Failure")
-		NULL A 0 ACS_Execute(958, 0, 0, 0) // intel message
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 0) // intel message
 		NULL A 0 A_GiveInventory("TimeGunBoost", 1)
 		stop
 	}
@@ -281,11 +281,11 @@ actor TimeGunFloatRed : TimeGunBoostRed
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "Weaken")
 		NULL A 0 A_JumpIfInventory("Knife", 1, "Failure")
 		NULL A 0 A_JumpIfInventory("StealthLaserRifle", 1, "Failure")
-		NULL A 0 ACS_Execute(958, 0, 0, 1) // intel message
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 1) // intel message
 		NULL A 0 A_GiveInventory("TimeGunFloat", 1)
 		stop
 	Weaken:
-		NULL A 0 ACS_Execute(958, 0, 0, 3)
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 3)
 		NULL A 0 A_GiveInventory("TimeGunWeaken", 1)
 		stop
 	}
@@ -299,7 +299,7 @@ actor TimeGunFloatBlue : TimeGunFloatRed
 		NULL A 0 A_JumpIfInventory("IsRed", 1, "Weaken")
 		NULL A 0 A_JumpIfInventory("Knife", 1, "Failure")
 		NULL A 0 A_JumpIfInventory("StealthLaserRifle", 1, "Failure")
-		NULL A 0 ACS_Execute(958, 0, 0, 1) // intel message
+		NULL A 0 ACS_Execute(aow_script958, 0, 0, 1) // intel message
 		NULL A 0 A_GiveInventory("TimeGunFloat", 1)
 		stop
 	}

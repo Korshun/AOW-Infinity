@@ -16,7 +16,7 @@ script aow_script995 OPEN {
 script aow_script998 OPEN {
 	delay (5);
 	while (Timer() < GetCVAR ("aowr_suddendeathtime") * 35 * 60) delay (35 * 15);
-	ACS_Execute (997, 0);
+	ACS_Execute(aow_script997, 0);
 }
 
 script aow_script997 (void) {

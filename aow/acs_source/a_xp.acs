@@ -118,7 +118,7 @@ bool NotifiedUnbalanceCompensation[2];
 
 //Rank awards/checks
 script aow_script91 (void) {
-	ACS_Execute (332, 0);
+	ACS_Execute(aow_script332, 0);
 	
 	if (CheckInventory("PowerBerserk")) {
 		SetHealth (200);
