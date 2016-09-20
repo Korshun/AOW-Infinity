@@ -300,7 +300,7 @@ script aow_ccmd_teamshuffle (void) {
 		}
 		
 		if (!IsAdmin [i]) {
-			if (!CheckInventory ("IsInSpawnRoom") || c) Teleport (70 + PlayerTeam());
+			if (c) Teleport (70 + PlayerTeam());
 			ACS_ExecuteAlways (aow_script95, 0, 0, TRUE);
 		}
 		

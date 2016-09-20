@@ -90,7 +90,6 @@ script aow_ccmd_teamswitch (void) NET {
 	Player_SetTeam (!PlayerTeam());
 	
 	Teleport (70 + PlayerTeam());
-	GiveInventory("IsInSpawnRoom",1);
 	
 	// resign if necessary
 	if (CheckInventory ("HasClass")) ACS_ExecuteAlways (aow_script95, 0);

@@ -159,7 +159,6 @@ script aow_script10 RESPAWN {
 	if (StartTime[PlayerNumber()] == 0) InitPlayer();
 
 	GiveInventory("Ingame",1);
-	GiveInventory("IsInSpawnRoom", 1);
 	if(PlayerTeam() == TEAM_BLUE) {
 		GiveInventory ("BlueTeamArmor",1);
 		GiveInventory ("IsBlue",1);
@@ -190,7 +189,6 @@ script aow_script11 ENTER {
 	InitPlayer();
 
 	GiveInventory("Ingame",1);
-	GiveInventory("IsInSpawnRoom", 1);
 	if(PlayerTeam() == TEAM_BLUE)
 	{
 		GiveInventory("BlueTeamArmor",1);

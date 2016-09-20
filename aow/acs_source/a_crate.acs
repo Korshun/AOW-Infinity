@@ -388,7 +388,7 @@ script aow_script309 (int Crate, int Override) {
 		
 		delay (28);
 		FadeTo (0, 0, 0, 0, 1.0);
-		if (!CheckInventory ("IsInSpawnRoom")) GiveInventory ("IsKamikaze", 1);
+		GiveInventory ("IsKamikaze", 1);
 		delay (1);
 		Thing_Destroy (ActivatorTID(), 1);
 		terminate;

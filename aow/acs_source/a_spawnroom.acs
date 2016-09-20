@@ -31,8 +31,6 @@ script aow_script94 (int Team) {
 		terminate;
 	}
 	
-	TakeInventory("IsInSpawnRoom",1);
-	
 	ACS_ExecuteAlways (aow_script961, 0, Team);
 }
 
@@ -99,7 +97,6 @@ script aow_script95 (int unused, int force) {
 	
 	GiveInventory ("Ingame", 1);
 	GiveInventory ("Unarmed", 1);
-	GiveInventory ("IsInSpawnRoom", 1);
 	SetAmmoCapacity ("TimedC4Ammo", 1);
 	SetAmmoCapacity ("FragGrenadeAmmo", 1);
 	SetSpeed (1.0);
@@ -168,7 +165,6 @@ script aow_script96 (int type) {
 	if (type <= 1) {
 		// PURCHASE TERMINAL
 		dest = 70 + !type;
-		GiveInventory("IsInSpawnRoom",1);
 	} else if (type <= 3) {
 		// MECH PURCHASE
 		dest = 110;
@@ -211,8 +207,6 @@ script aow_script96 (int type) {
 			ACS_ExecuteAlways (aow_script96, 0, type-2);
 			terminate;
 		}
-		
-		GiveInventory("IsInSpawnRoom",1);
 	} else if (type <= 5) {
 		// RESEARCH CENTRE
 		dest = 111;
@@ -223,8 +217,6 @@ script aow_script96 (int type) {
 			ACS_ExecuteAlways (aow_script96, 0, type-4);
 			terminate;
 		}
-		
-		GiveInventory("IsInSpawnRoom",1);
 	}
 	
 	if (!Teleport (dest)) {

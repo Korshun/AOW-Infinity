@@ -17,7 +17,7 @@ script aow_script994 DEATH {
 	SetPlayerProperty (0, 0, PROP_TOTALLYFROZEN);
 	
 	// tiberium dropped by dead harvesters
-	if (CheckInventory ("TiberiumCrystal") && !CheckInventory ("IsInSpawnRoom"))
+	if (CheckInventory ("TiberiumCrystal"))
 		SpawnSpotForced ("TiberiumCrystalDropped", 0, 0, 0);
 	
 	// bomb pack disarm sound

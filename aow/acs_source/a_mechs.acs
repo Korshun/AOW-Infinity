@@ -462,7 +462,6 @@ script aow_script697 (void) {
 	
 	delay (1);
 	
-	TakeInventory ("IsInSpawnRoom", 1);
 	SetPlayerProperty (0, false, PROP_FROZEN);
 	SetSpeed (PlayerSpeeds[PlayerNumber()]);
 }

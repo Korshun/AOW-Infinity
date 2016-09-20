@@ -34,12 +34,10 @@ Actor PlasmaCannon : AOWWeapon
 		PC2G AAABBBCCCDDD 1 A_Raise
 		Loop
 	Fire:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "FireBlue")
 		PC2G A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PC2G EFG 6 BRIGHT
 		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 BRIGHT A_LightInverse
 		PC2G H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBall")
 		PC2G H 3 BRIGHT A_Light2
@@ -50,12 +48,10 @@ Actor PlasmaCannon : AOWWeapon
 		PC2G G 5 A_Refire
 		Goto Ready
 	AltFire:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "AltFireBlue")
 		PC2G A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PC2G EFG 5 BRIGHT
 		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 BRIGHT A_LightInverse
 		PC2G H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallSmall")
 		PC2G H 2 BRIGHT A_Light2
@@ -69,7 +65,6 @@ Actor PlasmaCannon : AOWWeapon
 		PLCG A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PLCG EFG 6 BRIGHT
 		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 BRIGHT A_LightInverse
 		PLCG H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallBlue")
 		PLCG H 3 BRIGHT A_Light2
@@ -83,7 +78,6 @@ Actor PlasmaCannon : AOWWeapon
 		PLCG A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PLCG EFG 5 BRIGHT
 		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 BRIGHT A_LightInverse
 		PLCG H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallSmallBlue")
 		PLCG H 2 BRIGHT A_Light2

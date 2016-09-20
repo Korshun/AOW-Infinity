@@ -30,7 +30,7 @@ Actor Guardian : MechPlayer_Base
 		NULL A 0
 		NULL A 0 SetPlayerProperty(0, 0, 0)
 		NULL A 0 SetPlayerProperty(0, 0, 3)
-		NULL A 0 ACS_Execute(315, 0) // HUD
+		NULL A 0 ACS_Execute(aow_script315, 0) // HUD
 		NULL A 0 A_GiveInventory("MechEjectButton", 1)
 		NULL A 0 A_GiveInventory("IsMech", 1)
 		TERM A 15 A_PlaySound("mech/idle", 5)
@@ -136,7 +136,6 @@ Actor GuardianPowerup : InventoryItem
 		NULL A 0
 		Stop
 	Use:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Nope")
 		NULL A 0 A_JumpIfInventory("IsMech", 1, "Use.Mech")
 		NULL A 0 A_JumpIfInventory("PowerBerserk", 1, "Failure")
 		NULL A 0 A_GiveInventory("IsMech", 1)

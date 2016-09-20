@@ -31,7 +31,6 @@ Actor Flamer : AOWWeapon 21047
 		FLMR A 1 A_Raise
 		Loop
 	Fire:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		FLMR A 2 A_PlaySound("flamer2/up", CHAN_WEAPON)
 		FLMR A 2
 		NULL A 0 A_GunFlash
@@ -43,7 +42,6 @@ Actor Flamer : AOWWeapon 21047
 		FLMR A 2 A_PlaySound("flamer2/down", CHAN_WEAPON)
 		Goto Ready
 	Hold:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 A_GunFlash
 		FLMR A 2 BRIGHT offset(4, 35) A_FireCustomMissile("FlamethrowerFire", random(-2, 2), 1, 5, random(2, 6))
 		FLMR A 2 BRIGHT offset(5, 36) A_FireCustomMissile("FlamethrowerFire", random(-2, 2), 0, 5, random(2, 6))
@@ -53,7 +51,6 @@ Actor Flamer : AOWWeapon 21047
 		FLMR A 2 A_PlaySound("flamer2/down", CHAN_WEAPON)
 		Goto Ready
 	AltFire:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 A_JumpIfNoAmmo("AltRejected")
 		FLMR A 15
 		FLMR A 6 A_PlaySound("grenade/fire", 6)

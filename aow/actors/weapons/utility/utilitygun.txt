@@ -138,7 +138,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.MedicalCache:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.MedicalCache")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_MedicalCacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -155,7 +154,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.AmmoCache:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.AmmoCache")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_AmmoCacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -188,7 +186,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.SuperCache:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.SuperCache")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_SuperCacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -205,7 +202,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.RazorWire:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.RazorWire")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_RazorWireMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -234,7 +230,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.Sandbags:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Sandbags")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_SandbagsMarker", 96, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
@@ -252,7 +247,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	Create.GunTurret:
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.GunTurret")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_TurretMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -285,7 +279,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	Create.MechTurret:
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.MechTurret")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_TurretMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -317,7 +310,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.Step:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Step")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -334,7 +326,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.StepDown:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.StepDown")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, -28, 0, 0, 0, 0, 32, 0)
@@ -351,7 +342,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.StepStraight:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.StepStraight")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, -12, 0, 0, 0, 0, 32, 0)
@@ -368,7 +358,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.Step3:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Step3")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -391,7 +380,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.StepDown3:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.StepDown3")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, -28, 0, 0, 0, 0, 32, 0)
@@ -414,7 +402,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.StepStraight3:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.StepStraight3")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_StepMarker", 64, 0, -12, 0, 0, 0, 0, 32, 0)
@@ -438,7 +425,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// MINIREF
 	Create.MiniRef:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.MiniRef")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_MiniRefCacheMarker", 128, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -471,7 +457,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// Health REGENERATOR
 	Create.Regen:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Regen")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_CacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -504,7 +489,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// Ammo REGENERATOR
 	Create.RegenAmmo:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.RegenAmmo")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_CacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -537,7 +521,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// MINES
 	Create.Mines:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Mines")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_MinesMarker", 64, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -591,7 +574,6 @@ Actor UtilityGun : AOWWeapon
 	// REPAIR TURRET
 	Create.RepairTurret:
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script971, 0) == 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("HasClass", 1, 1)
 		Goto Ready
@@ -629,7 +611,6 @@ Actor UtilityGun : AOWWeapon
 	Create.KlaxonTurret:
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script971, 0) == 1, "RejectedWait")
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.KlaxonTurret")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_TurretMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -698,7 +679,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// RAVEN
 	Create.RavenMech:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.RavenMech")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_RavenMarker", 128, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -717,7 +697,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// WOLVERINE
 	Create.WolfMech:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.WolfMech")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_WolfMarker", 128, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -736,7 +715,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// RIFLE/PRECISION TURRET
 	Create.PrecisionTurret:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script971, 0) == 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.PrecisionTurret")
@@ -771,7 +749,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// ANNOYING NOSY EVERYWHERE FOLLOWING BIRDIE
 	Create.MiniRaven:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.MiniRaven")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
@@ -804,7 +781,6 @@ Actor UtilityGun : AOWWeapon
 		NULL A 0 A_Refire
 		Goto EndFire
 	Create.ArtilleryTurret:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("UtilityOutOfRange", 1, "RejectedWait")
 		NULL A 0 A_JumpIf(ACS_ExecuteWithResult(aow_script971, 0) == 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.ArtilleryTurret")
@@ -839,7 +815,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// POWER GENERATOR
 	Create.PowerGenerator:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.PowerGenerator")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_CacheMarker", 96, 0, 0, 0, 0, 0, 0, 32, 0)
@@ -872,7 +847,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// PLATFORM
 	Create.Platform:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Platform")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_PlatformMarker", 128)
@@ -891,7 +865,6 @@ Actor UtilityGun : AOWWeapon
 		Goto EndFire
 	// PORTAL
 	Create.Portal:
-		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "RejectedWait")
 		NULL A 0 A_JumpIfInventory("Utility_Percent", 100, "Done.Portal")
 		NULL A 0 Radius_Quake(1, 4, 0, 1, 0)
 		NULL A 0 A_SpawnItemEx("Utility_PortalStandMarker", 128, 80, 0, 0, 0, 0, 0, 32, 0)

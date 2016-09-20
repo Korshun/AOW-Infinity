@@ -20,7 +20,6 @@ Actor IsHarvester : Boolean {}
 Actor HighUpgrade : Boolean {}
 Actor CrispyPlayer : Boolean {}
 Actor CrispyPlayer2 : Inventory {Inventory.MaxAmount 4}
-Actor IsInSpawnRoom : Boolean {}
 Actor PlayerCredits : Integer {}
 Actor PlayerCredits2 : Integer {}
 Actor PlayerExperience : Integer {}
