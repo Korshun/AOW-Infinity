@@ -1,4 +1,4 @@
-script aow_addaowmaps (void)
+script aow_ccmd_addaowmaps (void)
 {
 	ConsoleCommand("addmap MINESITE");
 	ConsoleCommand("addmap BARRENS");

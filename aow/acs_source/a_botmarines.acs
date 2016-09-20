@@ -239,7 +239,7 @@ script aow_marine_death (int i) {
 }
 
 // Dumps known information about AI marines. Not a lot here at the moment..
-script aow_marine_stats (void) {
+script aow_ccmd_marine_stats (void) {
 	for (int i = 0; i < MAX_MARINES; i++) {
 		if (!Bots[i]) {
 			Log (s:"Marine ", d:i, s:": -");

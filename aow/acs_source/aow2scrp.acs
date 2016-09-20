@@ -468,10 +468,10 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_jumpjetfueldrain 331
 #define aow_script332 332
 #define aow_script333 333
-#define aow_donationnamegive 334
-#define aow_donationmenu 335
+#define aow_ccmd_donationnamegive 334
+#define aow_ccmd_donationmenu 335
 #define aow_isblueteam 336
-#define aow_surrender 342
+#define aow_ccmd_surrender 342
 #define aow_script343 343
 #define aow_script344 344
 #define aow_script345 345
@@ -488,13 +488,13 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script359 359
 #define aow_script360 360
 #define aow_script361 361
-#define aow_rehashclientfx1 366
+#define aow_ccmd_rehashclientfx1 366
 #define aow_script370 370
 #define aow_script400 400
-#define aow_gamemaster 401
-#define aow_gamemastercommand 402
-#define aow_teamshuffle 403
-#define aow_activatedeveloper 404
+#define aow_ccmd_gamemaster 401
+#define aow_ccmd_gamemastercommand 402
+#define aow_ccmd_teamshuffle 403
+#define aow_ccmd_activatedeveloper 404
 // script 507 used on FLOATCIT
 #define aow_script556 556
 #define aow_script599 599
@@ -514,7 +514,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script750 750
 #define aow_script751 751
 // script 754 used on FLOATCIT
-#define aow_addaowmaps 797
+#define aow_ccmd_addaowmaps 797
 #define aow_traceroffset 798
 #define aow_spawntracer 799
 // script 893 used on HELLMRCH
@@ -527,7 +527,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script907 907
 #define aow_script910 910
 #define aow_script920 920
-#define aow_showspeed 921
+#define aow_ccmd_showspeed 921
 #define aow_script922 922
 #define aow_script923 923
 #define aow_basehud_serverside 930
@@ -536,12 +536,12 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_portal_function 937
 #define aow_marine_init 938
 #define aow_marine_compensation 939
-#define aow_spectatorteleport 940
+#define aow_ccmd_spectatorteleport 940
 #define aow_script941 941
-#define aow_teamswitch 942
+#define aow_ccmd_teamswitch 942
 #define aow_script943 943
 #define aow_basehud_clientside 945
-#define aow_whoami 946
+#define aow_ccmd_whoami 946
 #define aow_script947 947
 #define aow_script948 948
 #define aow_script949 949
@@ -561,14 +561,14 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script964 964
 #define aow_script965 965
 #define aow_script966 966
-#define aow_marine_stats 967
+#define aow_ccmd_marine_stats 967
 #define aow_marine_death 968
 #define aow_script969 969
 #define aow_script970 970
 #define aow_script971 971
 #define aow_script978 978
 #define aow_script979 979
-#define aow_showarmor 981
+#define aow_ccmd_showarmor 981
 #define aow_script985 985
 #define aow_script986 986
 #define aow_script992 992

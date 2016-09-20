@@ -6,20 +6,20 @@ script aow_script943 OPEN CLIENTSIDE {
 	
 	// get outside the spawn room
 	if (!PlayerInGame (PlayerNumber ()))
-		RequestScriptPuke(aow_spectatorteleport);
+		RequestScriptPuke(aow_ccmd_spectatorteleport);
 	
 	delay (5);
 	
 	// effects + hud
-	RequestScriptPuke(aow_rehashclientfx1);
+	RequestScriptPuke(aow_ccmd_rehashclientfx1);
 	
 	// bodycount clock
 	// RequestScriptPuke(aow_script368);
 }
 
-script aow_whoami (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
+script aow_ccmd_whoami (void) NET CLIENTSIDE {Log(s:"I am player ", d:ConsolePlayerNumber(), s:" named ", n:0);}
 
-script aow_rehashclientfx1 (void) NET CLIENTSIDE {
+script aow_ccmd_rehashclientfx1 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
 	if (ConsolePlayerNumber() == -1) terminate;
 	

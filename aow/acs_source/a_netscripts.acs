@@ -1,5 +1,5 @@
 // [SP] This allows a spectator to spawn outside of the team selection room
-script aow_spectatorteleport (int which) NET CLIENTSIDE {
+script aow_ccmd_spectatorteleport (int which) NET CLIENTSIDE {
 	if (PlayerInGame (PlayerNumber())) {
 		DisplayCross();
 		SETFONT("BigFont");
@@ -19,7 +19,7 @@ script aow_spectatorteleport (int which) NET CLIENTSIDE {
 }
 
 // [Dusk] allows players to switch to the losing team
-script aow_teamswitch (void) NET {
+script aow_ccmd_teamswitch (void) NET {
 	// You sorta need a team first
 	if (!PlayerInGame (PlayerNumber())) {
 		DisplayCross();
@@ -240,6 +240,6 @@ function int GetSpeedFactor (void) {
 	return f;
 }
 
-script aow_showspeed (void) NET CLIENTSIDE {
+script aow_ccmd_showspeed (void) NET CLIENTSIDE {
 	Log (s:"My speed is ", f:GetSpeedFactor ());
 }

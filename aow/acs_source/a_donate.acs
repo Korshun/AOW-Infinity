@@ -67,7 +67,7 @@ script aow_script333 (void) NET
 	
 }
 
-script aow_donationnamegive (int Which) NET {
+script aow_ccmd_donationnamegive (int Which) NET {
 	int CheckValid = 1;
 
 	if(CheckInventory("InGame") == 0)
@@ -118,7 +118,7 @@ script aow_donationnamegive (int Which) NET {
 	}
 }
 
-script aow_donationmenu (void) NET
+script aow_ccmd_donationmenu (void) NET
 {
 	int CheckValid = 1;
 
