@@ -19,9 +19,9 @@ script aow_script999 OPEN {
 	RankTitles[7] = "Commando";
 	
 	if (GetCVar("aowr_disablemechs") == 0)
-		ConsoleCommand("set aow_mechs 1");
+		ConsoleCommand("set aowr_mechs 1");
 	else
-		ConsoleCommand("set aow_mechs 0");
+		ConsoleCommand("set aowr_mechs 0");
 
 	//Red
 	GotBuilding[BUILDING_REFINERY][0] = True;
@@ -41,9 +41,9 @@ script aow_script999 OPEN {
 	BaseLeft[1] = 5;
 
 	if(GetCVAR("aowr_tickets") <= 1 && GetCVar("aowr_ticketpool") == False)
-		ConsoleCommand("set aow_tickets 75");
+		ConsoleCommand("set aowr_tickets 75");
 	else if(GetCVAR("aowr_tickets") <= 100 && GetCVar("aowr_ticketpool") == True)
-		ConsoleCommand("set aow_tickets 250");
+		ConsoleCommand("set aowr_tickets 250");
 	StartingTickets = GetCVAR("aowr_tickets");
 	
 	Tickets[0] = StartingTickets;
@@ -114,56 +114,56 @@ function void ReloadSettings (void) {
 	// ==================================
 	// CUSTOM CVARS
 	// w/ sanity checks
-	if (!GetCVAR ("aowr_credflow")) ConsoleCommand ("set aow_credflow 4");
-	if (GetCVAR ("aowr_startcredits") <= 0) ConsoleCommand ("set aow_startcredits 300");
-	if (GetCVAR ("aowr_creditfrag") <= 0) ConsoleCommand ("set aow_creditfrag 50");	
-	if (GetCVAR ("aowr_bonusamount") <= 0) ConsoleCommand ("set aow_bonusamount 300");	
-	if (GetCVAR ("aowr_bonustime") <= 0) ConsoleCommand ("set aow_bonustime 5");
-	if (GetCVAR ("aowr_medicbonusneed") <= 0) ConsoleCommand ("set aow_medicbonusneed 175");
-	if (GetCVAR ("aowr_repairbonus") <= 0) ConsoleCommand ("set aow_repairbonus 1");	
-	if (GetCVAR ("aowr_guardianlimit") <= 0) ConsoleCommand ("set aow_guardianlimit 2");
-	if (GetCVAR ("aowr_ticketpool") <= 0) ConsoleCommand ("set aow_ticketpool 0");
+	if (!GetCVAR ("aowr_credflow")) ConsoleCommand ("set aowr_credflow 4");
+	if (GetCVAR ("aowr_startcredits") <= 0) ConsoleCommand ("set aowr_startcredits 300");
+	if (GetCVAR ("aowr_creditfrag") <= 0) ConsoleCommand ("set aowr_creditfrag 50");	
+	if (GetCVAR ("aowr_bonusamount") <= 0) ConsoleCommand ("set aowr_bonusamount 300");	
+	if (GetCVAR ("aowr_bonustime") <= 0) ConsoleCommand ("set aowr_bonustime 5");
+	if (GetCVAR ("aowr_medicbonusneed") <= 0) ConsoleCommand ("set aowr_medicbonusneed 175");
+	if (GetCVAR ("aowr_repairbonus") <= 0) ConsoleCommand ("set aowr_repairbonus 1");	
+	if (GetCVAR ("aowr_guardianlimit") <= 0) ConsoleCommand ("set aowr_guardianlimit 2");
+	if (GetCVAR ("aowr_ticketpool") <= 0) ConsoleCommand ("set aowr_ticketpool 0");
 	//[SP]How long you can stay on a team before you are never switched.
-	if (GetCVAR ("aowr_teamstaytime") <= 0) ConsoleCommand("set aow_teamstaytime 2");
+	if (GetCVAR ("aowr_teamstaytime") <= 0) ConsoleCommand("set aowr_teamstaytime 2");
 	
 	// Plasma Cannon initial delay
-	if (!GetCVAR ("aowr_plasmapurchasedelay")) ConsoleCommand("set aow_plasmapurchasedelay 5");
+	if (!GetCVAR ("aowr_plasmapurchasedelay")) ConsoleCommand("set aowr_plasmapurchasedelay 5");
 	//[SP]Maximum number of plasma cannons per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aowr_maxcannonsperteam")) ConsoleCommand("set aow_maxcannonsperteam 4");
+	if (!GetCVAR ("aowr_maxcannonsperteam")) ConsoleCommand("set aowr_maxcannonsperteam 4");
 	// [Dusk] Time (in minutes) to determine plasma cannon cooldown. Use -1 to disable
-	if (!GetCVAR ("aowr_plasmacooldown")) ConsoleCommand("set aow_plasmacooldown 3");
+	if (!GetCVAR ("aowr_plasmacooldown")) ConsoleCommand("set aowr_plasmacooldown 3");
 	
 	//[SP]How long you have to wait to buy a new superweapon beacon. (Minutes) (Set to -1 to disable wait)
-	if (!GetCVAR ("aowr_beaconpurchasedelay"))ConsoleCommand("set aow_beaconpurchasedelay 5");
+	if (!GetCVAR ("aowr_beaconpurchasedelay"))ConsoleCommand("set aowr_beaconpurchasedelay 5");
 	
 	// [SP]Maximum number of time cops per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aowr_maxtimecopsperteam")) ConsoleCommand("set aow_maxtimecopsperteam 1");
+	if (!GetCVAR ("aowr_maxtimecopsperteam")) ConsoleCommand("set aowr_maxtimecopsperteam 1");
 	
 	// [Dusk] How many minutes until Timed C4 can be used. (-1 to disable)
-	if (!GetCVAR ("aowr_c4delay")) ConsoleCommand("set aow_c4delay 5");
+	if (!GetCVAR ("aowr_c4delay")) ConsoleCommand("set aowr_c4delay 5");
 	
 	//[SP] Time (in minutes) before sudden death.
 	// [Dusk] changed default to 45, -1 means immediate
-	if (GetCVAR ("aowr_suddendeathtime") == 0) ConsoleCommand("set aow_suddendeathtime 45");
+	if (GetCVAR ("aowr_suddendeathtime") == 0) ConsoleCommand("set aowr_suddendeathtime 45");
 	
 	// [Dusk] Sudden death degeneration
-	if (GetCVAR ("aowr_degeneration") <= 0) ConsoleCommand("set aow_degeneration 0");
-	if (GetCVAR ("aowr_degenerationinterval") <= 0) ConsoleCommand("set aow_degenerationinterval 10");
+	if (GetCVAR ("aowr_degeneration") <= 0) ConsoleCommand("set aowr_degeneration 0");
+	if (GetCVAR ("aowr_degenerationinterval") <= 0) ConsoleCommand("set aowr_degenerationinterval 10");
 	
-	if (GetCVAR ("aowr_tournamentmode") <= 0) ConsoleCommand("set aow_tournamentmode 0");
-	if (GetCVAR ("aowr_disablemechs") <= 0) ConsoleCommand("set aow_disablemechs 0");
-	if (GetCVAR ("aowr_surrendermode") <= 0) ConsoleCommand("set aow_surrendermode 0");
+	if (GetCVAR ("aowr_tournamentmode") <= 0) ConsoleCommand("set aowr_tournamentmode 0");
+	if (GetCVAR ("aowr_disablemechs") <= 0) ConsoleCommand("set aowr_disablemechs 0");
+	if (GetCVAR ("aowr_surrendermode") <= 0) ConsoleCommand("set aowr_surrendermode 0");
 	
 	// [Dusk] How much score does destroying a building award you, in addition to difference?
-	if (GetCVAR ("aowr_buildingpoints") <= 0) ConsoleCommand ("set aow_buildingpoints 125");
+	if (GetCVAR ("aowr_buildingpoints") <= 0) ConsoleCommand ("set aowr_buildingpoints 125");
 	
 	// [Dusk] Tiberium amounts
 	if (!GetCVAR ("aowr_tiberium_self"))
-		ConsoleCommand ("set aow_tiberium_self 225");
+		ConsoleCommand ("set aowr_tiberium_self 225");
 	if (!GetCVAR ("aowr_tiberium_other"))
-		ConsoleCommand ("set aow_tiberium_other 75");
+		ConsoleCommand ("set aowr_tiberium_other 75");
 	if (!GetCVAR ("aowr_tiberium_advperc"))
-		ConsoleCommand ("set aow_tiberium_advperc 300");
+		ConsoleCommand ("set aowr_tiberium_advperc 300");
 }
 
 // Server settings

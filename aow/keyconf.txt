@@ -46,7 +46,7 @@ alias forcered "puke 401 %1 2"
 alias teamshuffle "puke 403"
 alias addaowmaps "puke 797"
 
-alias tournamentmode "set aow_tournamentmode 1;set aow_maxcannonsperteam 1;set aow_jugglimit 1;set aow_suddendeathtime 30;set aow_tickets 40;echo Tournament set-up complete - please restart the map."
+alias tournamentmode "set aowr_tournamentmode 1;set aowr_maxcannonsperteam 1;set aowr_jugglimit 1;set aowr_suddendeathtime 30;set aowr_tickets 40;echo Tournament set-up complete - please restart the map."
 
 // DEVELOPER MODE. DO NOT USE IN PUBLIC GAMES.
 alias activatedeveloper "puke -404"

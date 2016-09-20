@@ -23,7 +23,7 @@ script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
 	if (ConsolePlayerNumber() == -1) terminate;
 	
-	// if (GetCVAR ("aowr_nofriendinfo") <= 0) ConsoleCommand ("set aow_nofriendinfo 0");
+	// if (GetCVAR ("aowr_nofriendinfo") <= 0) ConsoleCommand ("set aowr_nofriendinfo 0");
 	
 	int teammate, i;
 	while (1) {
