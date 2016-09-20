@@ -38,9 +38,9 @@ server int aowr_suddendeathtime = 45;
 server int aowr_degeneration = 0;
 server int aowr_degenerationinterval = 10;
 
-server int aowr_tournamentmode = 0;
+server bool aowr_tournamentmode = false;
 server bool aowr_mechs = true;
-server int aowr_disablemechs = 0;
+server bool aowr_disablemechs = false;
 server int aowr_surrendermode = 0;
 
 // [Dusk] How much score does destroying a building award you, in addition to difference?
