@@ -244,7 +244,7 @@ script aow_script214 (VOID)
 
 script aow_script97 (int Structure, int Team) CLIENTSIDE {
 	// stfu during degeneration
-	if (SuddenDeath && GetCVar ("aow_degeneration")) terminate;
+	if (SuddenDeath && GetCVar ("aowr_degeneration")) terminate;
 	
 	if ( Timer() > LastAttackMessage+35*15 ) {
 		if(Structure == 1 && Team == 0)
@@ -331,7 +331,7 @@ script aow_script653 (int team, int small) {
 		if (d < 0)
 			points = 0;
 		else
-			points = (ratio * (d+GetCVAR ("aow_buildingpoints"))) >> 16;
+			points = (ratio * (d+GetCVAR ("aowr_buildingpoints"))) >> 16;
 	} else {
 		points = 40;
 	}

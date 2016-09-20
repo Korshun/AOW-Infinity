@@ -186,7 +186,7 @@ function void DisplayBuildingHud (void) {
 	
 	int bluelives = GetActorSpeed (TID_TICKETCOUNTER_BLUE);
 	int redlives = GetActorSpeed (TID_TICKETCOUNTER_RED);
-	if (GetCVar ("aow_forcelivehud") || bluelives || redlives) {
+	if (GetCVar ("aowr_forcelivehud") || bluelives || redlives) {
 		int startlives = GetActorAngle (TID_TICKETCOUNTER_BLUE);	
 		SetFont ("SMALLFONT");
 		HudMessageBold (

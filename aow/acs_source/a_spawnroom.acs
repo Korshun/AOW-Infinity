@@ -175,7 +175,7 @@ script aow_script96 (int type) {
 		if (type == 2)
 			dest = 210;
 		
-		if (!GetCVar("aow_mechs")) {
+		if (!GetCVar("aowr_mechs")) {
 			DisplayCross();
 			SETFONT("BigFont");
 			HudMessage(s:"Mechs have been disabled for this map!";

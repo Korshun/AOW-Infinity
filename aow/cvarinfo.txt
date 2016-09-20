@@ -1,5 +1,7 @@
 server bool aowinf_tracers = true;
 
+server bool aowr_debug = false;
+
 server int aowr_credflow = 4;
 server int aowr_startcredits = 300;
 server int aowr_creditfrag = 50;
@@ -37,6 +39,7 @@ server int aowr_degeneration = 0;
 server int aowr_degenerationinterval = 10;
 
 server int aowr_tournamentmode = 0;
+server bool aowr_mechs = true;
 server int aowr_disablemechs = 0;
 server int aowr_surrendermode = 0;
 
@@ -47,6 +50,3 @@ server int aowr_buildingpoints = 125;
 server int aowr_tiberium_self = 225;
 server int aowr_tiberium_other = 75;
 server int aowr_tiberium_advperc = 300;
-
-//server int aowr_powercredflow;
-//server bool aowr_mechs;

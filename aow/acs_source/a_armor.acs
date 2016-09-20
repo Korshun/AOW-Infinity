@@ -37,7 +37,7 @@ function int GetArmorModifier (void) {
 }
 
 function void SetArmorGrade (int n, int mod) {
-	int debug = GetCVar ("aow_debugarmor");
+	int debug = GetCVar ("aowr_debugarmor");
 	if (debug) {
 		Log (s:"SetArmorGrade called with arguments ", d:n, s:" and ", d:mod);
 		if (mod & AGF_ADDITIVE) Log (s:"AGF_ADDITIVE set");

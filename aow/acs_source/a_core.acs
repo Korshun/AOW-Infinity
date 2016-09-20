@@ -18,7 +18,7 @@ script aow_script999 OPEN {
 	RankTitles[6] = "Major";
 	RankTitles[7] = "Commando";
 	
-	if (GetCVar("aow_disablemechs") == 0)
+	if (GetCVar("aowr_disablemechs") == 0)
 		ConsoleCommand("set aow_mechs 1");
 	else
 		ConsoleCommand("set aow_mechs 0");
@@ -40,11 +40,11 @@ script aow_script999 OPEN {
 	GotBuilding[BUILDING_OBELISK][1] = True;
 	BaseLeft[1] = 5;
 
-	if(GetCVAR("aow_tickets") <= 1 && GetCVar("aow_ticketpool") == False)
+	if(GetCVAR("aowr_tickets") <= 1 && GetCVar("aowr_ticketpool") == False)
 		ConsoleCommand("set aow_tickets 75");
-	else if(GetCVAR("aow_tickets") <= 100 && GetCVar("aow_ticketpool") == True)
+	else if(GetCVAR("aowr_tickets") <= 100 && GetCVar("aowr_ticketpool") == True)
 		ConsoleCommand("set aow_tickets 250");
-	StartingTickets = GetCVAR("aow_tickets");
+	StartingTickets = GetCVAR("aowr_tickets");
 	
 	Tickets[0] = StartingTickets;
 	Tickets[1] = StartingTickets;
@@ -78,7 +78,7 @@ script aow_script999 OPEN {
 	SpawnSpotForced ("MapSpot", TID_REPAIR_RED, TID_TICKETCOUNTER_RED, 0);
 	SetActorAngle (TID_TICKETCOUNTER_BLUE, StartingTickets);
 	SetActorAngle (TID_TICKETCOUNTER_RED, StartingTickets);
-	if (GetCVar("aow_ticketpool")) {
+	if (GetCVar("aowr_ticketpool")) {
 		SetActorSpeed (TID_TICKETCOUNTER_BLUE, StartingTickets);
 		SetActorSpeed (TID_TICKETCOUNTER_RED, StartingTickets);
 	} else {
@@ -87,7 +87,7 @@ script aow_script999 OPEN {
 	}
 	
 	// Activate developer mode if the proper cvar is set.
-	if (GetCVAR ("aow_developer")) {
+	if (GetCVAR ("aowr_developer")) {
 		DeveloperSafetyLock = 0x7FFFFFFF;
 		ACS_ExecuteAlways (aow_activatedeveloper, 0);
 	}
@@ -114,55 +114,55 @@ function void ReloadSettings (void) {
 	// ==================================
 	// CUSTOM CVARS
 	// w/ sanity checks
-	if (!GetCVAR ("aow_credflow")) ConsoleCommand ("set aow_credflow 4");
-	if (GetCVAR ("aow_startcredits") <= 0) ConsoleCommand ("set aow_startcredits 300");
-	if (GetCVAR ("aow_creditfrag") <= 0) ConsoleCommand ("set aow_creditfrag 50");	
-	if (GetCVAR ("aow_bonusamount") <= 0) ConsoleCommand ("set aow_bonusamount 300");	
-	if (GetCVAR ("aow_bonustime") <= 0) ConsoleCommand ("set aow_bonustime 5");
-	if (GetCVAR ("aow_medicbonusneed") <= 0) ConsoleCommand ("set aow_medicbonusneed 175");
-	if (GetCVAR ("aow_repairbonus") <= 0) ConsoleCommand ("set aow_repairbonus 1");	
-	if (GetCVAR ("aow_guardianlimit") <= 0) ConsoleCommand ("set aow_guardianlimit 2");
-	if (GetCVAR ("aow_ticketpool") <= 0) ConsoleCommand ("set aow_ticketpool 0");
+	if (!GetCVAR ("aowr_credflow")) ConsoleCommand ("set aow_credflow 4");
+	if (GetCVAR ("aowr_startcredits") <= 0) ConsoleCommand ("set aow_startcredits 300");
+	if (GetCVAR ("aowr_creditfrag") <= 0) ConsoleCommand ("set aow_creditfrag 50");	
+	if (GetCVAR ("aowr_bonusamount") <= 0) ConsoleCommand ("set aow_bonusamount 300");	
+	if (GetCVAR ("aowr_bonustime") <= 0) ConsoleCommand ("set aow_bonustime 5");
+	if (GetCVAR ("aowr_medicbonusneed") <= 0) ConsoleCommand ("set aow_medicbonusneed 175");
+	if (GetCVAR ("aowr_repairbonus") <= 0) ConsoleCommand ("set aow_repairbonus 1");	
+	if (GetCVAR ("aowr_guardianlimit") <= 0) ConsoleCommand ("set aow_guardianlimit 2");
+	if (GetCVAR ("aowr_ticketpool") <= 0) ConsoleCommand ("set aow_ticketpool 0");
 	//[SP]How long you can stay on a team before you are never switched.
-	if (GetCVAR ("aow_teamstaytime") <= 0) ConsoleCommand("set aow_teamstaytime 2");
+	if (GetCVAR ("aowr_teamstaytime") <= 0) ConsoleCommand("set aow_teamstaytime 2");
 	
 	// Plasma Cannon initial delay
-	if (!GetCVAR ("aow_plasmapurchasedelay")) ConsoleCommand("set aow_plasmapurchasedelay 5");
+	if (!GetCVAR ("aowr_plasmapurchasedelay")) ConsoleCommand("set aow_plasmapurchasedelay 5");
 	//[SP]Maximum number of plasma cannons per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aow_maxcannonsperteam")) ConsoleCommand("set aow_maxcannonsperteam 4");
+	if (!GetCVAR ("aowr_maxcannonsperteam")) ConsoleCommand("set aow_maxcannonsperteam 4");
 	// [Dusk] Time (in minutes) to determine plasma cannon cooldown. Use -1 to disable
-	if (!GetCVAR ("aow_plasmacooldown")) ConsoleCommand("set aow_plasmacooldown 3");
+	if (!GetCVAR ("aowr_plasmacooldown")) ConsoleCommand("set aow_plasmacooldown 3");
 	
 	//[SP]How long you have to wait to buy a new superweapon beacon. (Minutes) (Set to -1 to disable wait)
-	if (!GetCVAR ("aow_beaconpurchasedelay"))ConsoleCommand("set aow_beaconpurchasedelay 5");
+	if (!GetCVAR ("aowr_beaconpurchasedelay"))ConsoleCommand("set aow_beaconpurchasedelay 5");
 	
 	// [SP]Maximum number of time cops per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aow_maxtimecopsperteam")) ConsoleCommand("set aow_maxtimecopsperteam 1");
+	if (!GetCVAR ("aowr_maxtimecopsperteam")) ConsoleCommand("set aow_maxtimecopsperteam 1");
 	
 	// [Dusk] How many minutes until Timed C4 can be used. (-1 to disable)
-	if (!GetCVAR ("aow_c4delay")) ConsoleCommand("set aow_c4delay 5");
+	if (!GetCVAR ("aowr_c4delay")) ConsoleCommand("set aow_c4delay 5");
 	
 	//[SP] Time (in minutes) before sudden death.
 	// [Dusk] changed default to 45, -1 means immediate
-	if (GetCVAR ("aow_suddendeathtime") == 0) ConsoleCommand("set aow_suddendeathtime 45");
+	if (GetCVAR ("aowr_suddendeathtime") == 0) ConsoleCommand("set aow_suddendeathtime 45");
 	
 	// [Dusk] Sudden death degeneration
-	if (GetCVAR ("aow_degeneration") <= 0) ConsoleCommand("set aow_degeneration 0");
-	if (GetCVAR ("aow_degenerationinterval") <= 0) ConsoleCommand("set aow_degenerationinterval 10");
+	if (GetCVAR ("aowr_degeneration") <= 0) ConsoleCommand("set aow_degeneration 0");
+	if (GetCVAR ("aowr_degenerationinterval") <= 0) ConsoleCommand("set aow_degenerationinterval 10");
 	
-	if (GetCVAR ("aow_tournamentmode") <= 0) ConsoleCommand("set aow_tournamentmode 0");
-	if (GetCVAR ("aow_disablemechs") <= 0) ConsoleCommand("set aow_disablemechs 0");
-	if (GetCVAR ("aow_surrendermode") <= 0) ConsoleCommand("set aow_surrendermode 0");
+	if (GetCVAR ("aowr_tournamentmode") <= 0) ConsoleCommand("set aow_tournamentmode 0");
+	if (GetCVAR ("aowr_disablemechs") <= 0) ConsoleCommand("set aow_disablemechs 0");
+	if (GetCVAR ("aowr_surrendermode") <= 0) ConsoleCommand("set aow_surrendermode 0");
 	
 	// [Dusk] How much score does destroying a building award you, in addition to difference?
-	if (GetCVAR ("aow_buildingpoints") <= 0) ConsoleCommand ("set aow_buildingpoints 125");
+	if (GetCVAR ("aowr_buildingpoints") <= 0) ConsoleCommand ("set aow_buildingpoints 125");
 	
 	// [Dusk] Tiberium amounts
-	if (!GetCVAR ("aow_tiberium_self"))
+	if (!GetCVAR ("aowr_tiberium_self"))
 		ConsoleCommand ("set aow_tiberium_self 225");
-	if (!GetCVAR ("aow_tiberium_other"))
+	if (!GetCVAR ("aowr_tiberium_other"))
 		ConsoleCommand ("set aow_tiberium_other 75");
-	if (!GetCVAR ("aow_tiberium_advperc"))
+	if (!GetCVAR ("aowr_tiberium_advperc"))
 		ConsoleCommand ("set aow_tiberium_advperc 300");
 }
 
@@ -185,14 +185,14 @@ script aow_creditflow OPEN {
 		if (GotBuilding[BUILDING_RESCENTRE][0] == 1) p += 25;
 		if (GotBuilding[BUILDING_REFINERY][0] == 1) p += 50;
 		if (MiniRefinery[0] == 1) p += 75;
-		redflow = (GetCVar("aow_credflow") * p) / 100;
+		redflow = (GetCVar("aowr_credflow") * p) / 100;
 		if (!redflow) redflow = 1;
 		
 		p = 25;
 		if (GotBuilding[BUILDING_RESCENTRE][1] == 1) p += 25;
 		if (GotBuilding[BUILDING_REFINERY][1] == 1) p += 50;
 		if (MiniRefinery[1] == 1) p += 75;
-		blueflow = (GetCVar("aow_credflow") * p) / 100;
+		blueflow = (GetCVar("aowr_credflow") * p) / 100;
 		if (!blueflow) blueflow = 1;
 		
 		for (i = 0; i < MAX_PLAYERS; i++) {
@@ -336,7 +336,7 @@ script aow_script303 OPEN {
 }
 
 function void InitPlayer (void) {
-	SetCreditsSilent(Credits[PlayerNumber()+1], GetCVar("aow_startcredits"));
+	SetCreditsSilent(Credits[PlayerNumber()+1], GetCVar("aowr_startcredits"));
 	Experience[PlayerNumber()] = 0;
 	Rank[PlayerNumber()] = RANK_PRIVATE;
 	Surrender[PlayerNumber()] = False;

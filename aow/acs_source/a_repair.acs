@@ -64,7 +64,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 			GivePoints (1);
 		}
 		
-		if (!(RepairBonus[pn] % 10)) GiveCredits (-1, GetCVar("aow_repairbonus"));
+		if (!(RepairBonus[pn] % 10)) GiveCredits (-1, GetCVar("aowr_repairbonus"));
 		
 	} else if (tid >= 3800 && tid <= 3831 || CheckInventory ("IsAIMarine")) {
 		if (repairtype == REPAIRTYPE_REPAIR) amount = 1;
@@ -95,7 +95,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 		// MEDIC AWARDS
 		if (!CheckInventory ("PowerNoHealXP")) {
 			SetActivator (3800+pn);
-			if (MedicBonus[pn] < GetCVAR("aow_medicbonusneed")) {
+			if (MedicBonus[pn] < GetCVAR("aowr_medicbonusneed")) {
 				MedicBonus[pn] += bonus;
 			} else {
 				MedicBonus[pn] = 0;
@@ -104,7 +104,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 				GivePoints (1);
 			}
 			
-			if (!(MedicBonus[pn] % 6)) GiveCredits (-1, GetCVar("aow_repairbonus"));
+			if (!(MedicBonus[pn] % 6)) GiveCredits (-1, GetCVar("aowr_repairbonus"));
 		}
 	}
 }

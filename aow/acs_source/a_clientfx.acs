@@ -23,7 +23,7 @@ script aow_rehashclientfx1 (void) NET CLIENTSIDE {
 	if (PlayerIsBot(PlayerNumber())) terminate;
 	if (ConsolePlayerNumber() == -1) terminate;
 	
-	// if (GetCVAR ("aow_nofriendinfo") <= 0) ConsoleCommand ("set aow_nofriendinfo 0");
+	// if (GetCVAR ("aowr_nofriendinfo") <= 0) ConsoleCommand ("set aow_nofriendinfo 0");
 	
 	int teammate, i;
 	while (1) {
@@ -173,7 +173,7 @@ function bool SpawnTrail (int src, int dest, int type, int interval, int rand,
 	if (n > 128)
 		n = 128;
 	
-	if (GetCVar ("aow_lowfx"))
+	if (GetCVar ("aowr_lowfx"))
 		n /= 2;
 	
 	// Nothing to spawn!

@@ -99,7 +99,7 @@ script aow_marine_init (void) {
 // put on on compensation and give them AI marines. We keep doing this until teams are
 // balanced out.
 function void AI_ManageCompensation (void) {
-	if (Timer() <= 5*30*35 || GetCVar ("aow_nocompensation")) return;
+	if (Timer() <= 5*30*35 || GetCVar ("aowr_nocompensation")) return;
 	int n;
 	
 	// recalculate AI marine needs
@@ -232,7 +232,7 @@ script aow_marine_death (int i) {
 	
 	LocalAmbientSound ("game/boink", 127);
 	AddExperience (50);
-	AddCredits (Credits[PlayerNumber()+1], GetCVar("aow_creditfrag"));
+	AddCredits (Credits[PlayerNumber()+1], GetCVar("aowr_creditfrag"));
 	TakeTickets (AITeam, 1);
 	
 	Team_GivePoints (PlayerTeam(), 2, false);
