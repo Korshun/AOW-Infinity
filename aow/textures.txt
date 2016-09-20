@@ -296,14 +296,6 @@ WorldPanning
 Patch MREF4, 0, 0
 }
 
-texture SPWLAVA, 64, 64 {
-	//XScale 0.125
-	//YScale 0.125
-	XScale 0.03125
-	YScale 0.03125
-	Patch SPWLAVA, 0, 0
-}
-
 texture mp_mer_u, 512, 512
 {
 	patch mp_mer_u,0,0
