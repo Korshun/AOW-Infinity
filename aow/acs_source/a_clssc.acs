@@ -1457,7 +1457,7 @@ script aow_class_artillerysoldier (int Team) {
 	SetArmorGrade (2, ARMOD_EXPLO);
 	GiveInventory("HasClass",1);
 	GiveInventory("Refunds",cost/2);
-	GiveInventory("IsArtillerySoldier",1);
+	GiveInventory("ArtilleryCannonSpeedBonus",1);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
