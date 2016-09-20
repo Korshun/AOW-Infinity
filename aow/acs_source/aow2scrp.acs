@@ -619,3 +619,4 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #include "a_wchk.acs"
 #include "a_tracers.acs"
 #include "a_addaowmaps.acs"
+#include "a_teams.acs"
