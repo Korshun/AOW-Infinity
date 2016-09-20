@@ -1,7 +1,6 @@
 Actor ClassID : Inventory {Inventory.MaxAmount 29}
 
 Actor SelfHealCooldown : Boolean {}
-Actor Ingame : Boolean {} // DEPRECATED
 Actor IsRed : Boolean {}
 Actor IsBlue : Boolean {}
 Actor IsFemale : Boolean {}
