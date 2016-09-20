@@ -385,18 +385,12 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 // script 1 used on DEFUNCT EMERALD HELLMRCH OASIS
 // script 2 used on DEFUNCT EMERALD HELLMRCH OASIS
 // script 3 used on HELLMRCH
-#define aow_creditflow 4
-#define aow_playerstatushud_serverside 5
-#define aow_playerstatushud_clientside 6
-#define aow_script7 7
-#define aow_script8 8
-#define aow_script10 10
-#define aow_script11 11
+
 // script 14 used on EMERALD
 // script 15 used on EMERALD
 // script 16 used on EMERALD
 // scripts 20-29 are used for classes
-#define aow_script32 32
+
 // scripts 33-73 are used for classes and stuff
 #define aow_script80 80 // executed by maps
 #define aow_script84 84 // executed by maps
@@ -404,33 +398,15 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script86 86 // executed by maps
 #define aow_script88 88 // executed by maps
 #define aow_script89 89 // executed by maps
-#define aow_script90 90
-#define aow_script91 91
-#define aow_script92 92
-#define aow_script93 93
+
 #define aow_script94 94 // executed by maps
 #define aow_script95 95 // executed by maps
 #define aow_script96 96 // executed by maps
-#define aow_script97 97
-#define aow_script99 99
-#define aow_script101 101
-#define aow_script102 102
-#define aow_script103 103
-#define aow_script104 104
-#define aow_script105 105
-#define aow_script106 106
-#define aow_script107 107
-#define aow_script108 108
+
 #define aow_script110 110 // executed by maps
-#define aow_script111 111
-#define aow_script114 114
-#define aow_script150 150
+
 // script 200 used on FLOATCIT
-#define aow_script201 201
-#define aow_script202 202
-#define aow_script203 203
-#define aow_script204 204
-#define aow_script205 205
+
 // script 206 used on RENE2030
 // script 207 used on RENE2030 and RENE2032
 // script 208 used on RENE2030 and RENE2032
@@ -439,7 +415,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 // script 211 used on RENE2032
 // script 212 used on RENE2032
 // script 213 used on RENE2032
-#define aow_script214 214
+
 // script 215 used on RENE2032
 // script 216 used on RENE2032
 // script 218 used on RENE2032
@@ -464,122 +440,159 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_ccmd_marine_stats 264
 #define aow_ccmd_showarmor 265
 
-#define aow_script301 301
-#define aow_script303 303
-#define aow_script309 309
-#define aow_stealth 310
-#define aow_script311 311
-#define aow_script312 312
-#define aow_script314 314
-#define aow_script315 315
-#define aow_script317 317
-#define aow_script318 318
-#define aow_script319 319
-#define aow_script320 320
-#define aow_script321 321
-#define aow_script324 324
-#define aow_script326 326
-#define aow_script328 328
-#define aow_selfheal 329
-#define aow_script330 330
-#define aow_jumpjetfueldrain 331
-#define aow_script332 332
-#define aow_script333 333
-#define aow_isblueteam 336
-#define aow_script343 343
-#define aow_script344 344
-#define aow_script345 345
-#define aow_script346 346
-#define aow_script347 347
-#define aow_script349 349
 // script 350 used on INFECTED and MINESITE
-#define aow_beacondisarmbonus 351 
-#define aow_script352 352
-#define aow_script353 353
-#define aow_script354 354
-#define aow_script355 355
-#define aow_script357 357
-#define aow_script359 359
-#define aow_script360 360
-#define aow_script361 361
-#define aow_script370 370
-#define aow_script400 400
+
+#define aow_creditflow 351
+#define aow_playerstatushud_serverside 352
+#define aow_playerstatushud_clientside 353
+#define aow_script7 354
+#define aow_script8 355
+#define aow_script10 356
+#define aow_script11 357
+#define aow_script32 358
+#define aow_script90 359
+#define aow_script91 360
+#define aow_script92 361
+#define aow_script93 362
+#define aow_script97 363
+#define aow_script99 364
+#define aow_script101 365
+#define aow_script102 366
+#define aow_script103 367
+#define aow_script104 368
+#define aow_script105 369
+#define aow_script106 370
+#define aow_script107 371
+#define aow_script108 372
+#define aow_script111 373
+#define aow_script114 374
+#define aow_script150 375
+#define aow_script201 376
+#define aow_script202 377
+#define aow_script203 378
+#define aow_script204 379
+#define aow_script205 380
+#define aow_script214 381
+#define aow_script301 382
+#define aow_script303 383
+#define aow_script309 384
+#define aow_stealth 385
+#define aow_script311 386
+#define aow_script312 387
+#define aow_script314 388
+#define aow_script315 389
+#define aow_script317 390
+#define aow_script318 391
+#define aow_script319 392
+#define aow_script320 393
+#define aow_script321 394
+#define aow_script324 395
+#define aow_script326 396
+#define aow_script328 397
+#define aow_selfheal 398
+#define aow_script330 399
+#define aow_jumpjetfueldrain 400
+#define aow_script332 401
+#define aow_script333 402
+#define aow_isblueteam 403
+#define aow_script343 404
+#define aow_script344 405
+#define aow_script345 406
+#define aow_script346 407
+#define aow_script347 408
+#define aow_script349 409
+#define aow_beacondisarmbonus 410
+#define aow_script352 411
+#define aow_script353 412
+#define aow_script354 413
+#define aow_script355 414
+#define aow_script357 415
+#define aow_script359 416
+#define aow_script360 417
+#define aow_script361 418
+#define aow_script370 419
+#define aow_script400 420
+#define aow_script556 421
+#define aow_script599 422
+#define aow_script650 423
+#define aow_script651 424
+#define aow_script652 425
+#define aow_script653 426
+#define aow_script654 427
+#define aow_script694 428
+#define aow_script695 429
+#define aow_script697 430
+#define aow_script699 431
+#define aow_script750 432
+#define aow_script751 433
+#define aow_traceroffset 434
+#define aow_spawntracer 435
+#define aow_script888 436
+#define aow_script889 437
+#define aow_script905 438
+#define aow_script906 439
+#define aow_script907 440
+#define aow_script910 441
+#define aow_script920 442
+#define aow_script922 443
+#define aow_script923 444
+#define aow_basehud_serverside 445
+#define aow_portal_tidrequest 446
+#define aow_portal_init 447
+#define aow_portal_function 448
+#define aow_marine_init 449
+#define aow_marine_compensation 450
+#define aow_script941 451
+#define aow_script943 452
+#define aow_basehud_clientside 453
+#define aow_script947 454
+#define aow_script948 455
+#define aow_script949 456
+#define aow_sellweapon 457
+#define aow_script951 458
+#define aow_script952 459
+#define aow_script953 460
+#define aow_script954 461
+#define aow_script955 462
+#define aow_script956 463
+#define aow_script957 464
+#define aow_script958 465
+#define aow_script959 466
+#define aow_script961 467
+#define aow_script963 468
+#define aow_script964 469
+#define aow_script965 470
+#define aow_script966 471
+#define aow_marine_death 472
+#define aow_script969 473
+#define aow_script970 474
+#define aow_script971 475
+#define aow_script978 476
+#define aow_script979 477
+#define aow_script985 478
+#define aow_script986 479
+#define aow_script992 480
+#define aow_script994 481
+#define aow_script995 482
+#define aow_script996 483
+#define aow_script997 484
+#define aow_script998 485
+#define aow_script999 486
+
 // script 507 used on FLOATCIT
-#define aow_script556 556
-#define aow_script599 599
+
 // script 600 used on HELLMRCH
 // script 601 used on CANYON
 // script 602 used on CANYON
 // script 603 used on CANYON
-#define aow_script650 650
-#define aow_script651 651
-#define aow_script652 652
-#define aow_script653 653
-#define aow_script654 654
-#define aow_script694 694
-#define aow_script695 695
-#define aow_script697 697
-#define aow_script699 699
-#define aow_script750 750
-#define aow_script751 751
+
 // script 754 used on FLOATCIT
-#define aow_traceroffset 798
-#define aow_spawntracer 799
+
 // script 893 used on HELLMRCH
 // script 894 used on HELLMRCH
 // script 895 used on HELLMRCH and OASIS
-#define aow_script888 888
-#define aow_script889 889
-#define aow_script905 905
-#define aow_script906 906
-#define aow_script907 907
-#define aow_script910 910
-#define aow_script920 920
-#define aow_script922 922
-#define aow_script923 923
-#define aow_basehud_serverside 930
-#define aow_portal_tidrequest 935
-#define aow_portal_init 936
-#define aow_portal_function 937
-#define aow_marine_init 938
-#define aow_marine_compensation 939
-#define aow_script941 941
-#define aow_script943 943
-#define aow_basehud_clientside 945
-#define aow_script947 947
-#define aow_script948 948
-#define aow_script949 949
-#define aow_sellweapon 950
-#define aow_script951 951
-#define aow_script952 952
-#define aow_script953 953
-#define aow_script954 954
-#define aow_script955 955
-#define aow_script956 956
-#define aow_script957 957
-#define aow_script958 958
-#define aow_script959 959
+
 #define aow_eventscript 960 // Provided by maps (EMERALD and RENE2032)
-#define aow_script961 961
-#define aow_script963 963
-#define aow_script964 964
-#define aow_script965 965
-#define aow_script966 966
-#define aow_marine_death 968
-#define aow_script969 969
-#define aow_script970 970
-#define aow_script971 971
-#define aow_script978 978
-#define aow_script979 979
-#define aow_script985 985
-#define aow_script986 986
-#define aow_script992 992
-#define aow_script994 994
-#define aow_script995 995
-#define aow_script996 996
-#define aow_script997 997
-#define aow_script998 998
-#define aow_script999 999
 
 #include "a_functions.acs"
 #include "a_armor.acs"

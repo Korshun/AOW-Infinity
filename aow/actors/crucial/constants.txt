@@ -25,12 +25,6 @@ const int BUILDING_HEALTHREGEN = 7;
 const int BUILDING_AMMOREGEN = 8;
 const int BUILDING_PORTAL = 9;
 
-const int aow_marine_init = 938;
-const int aow_marine_compensation = 939;
-const int aow_portal_tidrequest = 935;
-const int aow_portal_init = 936;
-const int aow_portal_function = 937;
-const int aow_marine_death = 968;
 const int SC_SETPITCH = 979;
 
 // Class scripts 
@@ -88,157 +82,212 @@ const int aow_res_advancedturrets = 72;
 const int aow_res_moreturrets = 73;
 
 
-const int aow_creditflow = 4;
-const int aow_playerstatushud_serverside = 5;
-const int aow_playerstatushud_clientside = 6;
-const int aow_script7 = 7;
-const int aow_script8 = 8;
-const int aow_script10 = 10;
-const int aow_script11 = 11;
-const int aow_script32 = 32;
-const int aow_script80 = 80;
-const int aow_script84 = 84;
-const int aow_script85 = 85;
-const int aow_script86 = 86;
-const int aow_script88 = 88;
-const int aow_script89 = 89;
-const int aow_script90 = 90;
-const int aow_script91 = 91;
-const int aow_script92 = 92;
-const int aow_script93 = 93;
-const int aow_script94 = 94;
-const int aow_script95 = 95;
-const int aow_script96 = 96;
-const int aow_script97 = 97;
-const int aow_script99 = 99;
-const int aow_script101 = 101;
-const int aow_script102 = 102;
-const int aow_script103 = 103;
-const int aow_script104 = 104;
-const int aow_script105 = 105;
-const int aow_script106 = 106;
-const int aow_script107 = 107;
-const int aow_script108 = 108;
-const int aow_script110 = 110;
-const int aow_script111 = 111;
-const int aow_script114 = 114;
-const int aow_script150 = 150;
-const int aow_script201 = 201;
-const int aow_script202 = 202;
-const int aow_script203 = 203;
-const int aow_script204 = 204;
-const int aow_script205 = 205;
-const int aow_script214 = 214;
-const int aow_script301 = 301;
-const int aow_script303 = 303;
-const int aow_script309 = 309;
-const int aow_stealth = 310;
-const int aow_script311 = 311;
-const int aow_script312 = 312;
-const int aow_script314 = 314;
-const int aow_script315 = 315;
-const int aow_script317 = 317;
-const int aow_script318 = 318;
-const int aow_script319 = 319;
-const int aow_script320 = 320;
-const int aow_script321 = 321;
-const int aow_script324 = 324;
-const int aow_script326 = 326;
-const int aow_script328 = 328;
-const int aow_selfheal = 329;
-const int aow_script330 = 330;
-const int aow_jumpjetfueldrain = 331;
-const int aow_script332 = 332;
-const int aow_script333 = 333;
-const int aow_ccmd_donationnamegive = 334;
-const int aow_ccmd_donationmenu = 335;
-const int aow_isblueteam = 336;
-const int aow_ccmd_surrender = 342;
-const int aow_script343 = 343;
-const int aow_script344 = 344;
-const int aow_script345 = 345;
-const int aow_script346 = 346;
-const int aow_script347 = 347;
-const int aow_script349 = 349;
-const int aow_beacondisarmbonus = 351;
-const int aow_script352 = 352;
-const int aow_script353 = 353;
-const int aow_script354 = 354;
-const int aow_script355 = 355;
-const int aow_script357 = 357;
-const int aow_script359 = 359;
-const int aow_script360 = 360;
-const int aow_script361 = 361;
-const int aow_ccmd_rehashclientfx1 = 366;
-const int aow_script370 = 370;
-const int aow_script400 = 400;
-const int aow_ccmd_gamemaster = 401;
-const int aow_ccmd_gamemastercommand = 402;
-const int aow_ccmd_teamshuffle = 403;
-const int aow_ccmd_activatedeveloper = 404;
-const int aow_script556 = 556;
-const int aow_script599 = 599;
-const int aow_script650 = 650;
-const int aow_script651 = 651;
-const int aow_script652 = 652;
-const int aow_script653 = 653;
-const int aow_script654 = 654;
-const int aow_script694 = 694;
-const int aow_script695 = 695;
-const int aow_script697 = 697;
-const int aow_script699 = 699;
-const int aow_script750 = 750;
-const int aow_script751 = 751;
-const int aow_traceroffset = 798;
-const int aow_spawntracer = 799;
-const int aow_script888 = 888;
-const int aow_script889 = 889;
-const int aow_script905 = 905;
-const int aow_script906 = 906;
-const int aow_script907 = 907;
-const int aow_script910 = 910;
-const int aow_script920 = 920;
-const int aow_ccmd_showspeed = 921;
-const int aow_script922 = 922;
-const int aow_script923 = 923;
-const int aow_basehud_serverside = 930;
-const int aow_spectatorteleport = 940;
-const int aow_script941 = 941;
-const int aow_ccmd_teamswitch = 942;
-const int aow_script943 = 943;
-const int aow_basehud_clientside = 945;
-const int aow_ccmd_whoami = 946;
-const int aow_script947 = 947;
-const int aow_script948 = 948;
-const int aow_script949 = 949;
-const int aow_sellweapon = 950;
-const int aow_script951 = 951;
-const int aow_script952 = 952;
-const int aow_script953 = 953;
-const int aow_script954 = 954;
-const int aow_script955 = 955;
-const int aow_script956 = 956;
-const int aow_script957 = 957;
-const int aow_script958 = 958;
-const int aow_script959 = 959;
-const int aow_eventscript = 960; // Provided by maps
-const int aow_script961 = 961;
-const int aow_script963 = 963;
-const int aow_script964 = 964;
-const int aow_script965 = 965;
-const int aow_script966 = 966;
-const int aow_script969 = 969;
-const int aow_script970 = 970;
-const int aow_script971 = 971;
-const int aow_script978 = 978;
-const int aow_script979 = 979;
-const int aow_ccmd_showarmor = 981;
-const int aow_script985 = 985;
-const int aow_script986 = 986;
-const int aow_script992 = 992;
-const int aow_script994 = 994;
-const int aow_script995 = 995;
-const int aow_script996 = 996;
-const int aow_script997 = 997;
-const int aow_script998 = 998;
-const int aow_script999 = 999;
+// script 1 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 2 used on DEFUNCT EMERALD HELLMRCH OASIS
+// script 3 used on HELLMRCH
+
+// script 14 used on EMERALD
+// script 15 used on EMERALD
+// script 16 used on EMERALD
+// scripts 20-29 are used for classes
+
+// scripts 33-73 are used for classes and stuff
+const int aow_script80 = 80; // executed by maps
+const int aow_script84 = 84; // executed by maps
+const int aow_script85 = 85; // executed by maps
+const int aow_script86 = 86; // executed by maps
+const int aow_script88 = 88; // executed by maps
+const int aow_script89 = 89; // executed by maps
+
+const int aow_script94 = 94; // executed by maps
+const int aow_script95 = 95; // executed by maps
+const int aow_script96 = 96; // executed by maps
+
+const int aow_script110 = 110; // executed by maps
+
+// script 200 used on FLOATCIT
+
+// script 206 used on RENE2030
+// script 207 used on RENE2030 and RENE2032
+// script 208 used on RENE2030 and RENE2032
+// script 209 used on RENE2030 and RENE2032
+// script 210 used on RENE2030 and RENE2032
+// script 211 used on RENE2032
+// script 212 used on RENE2032
+// script 213 used on RENE2032
+
+// script 215 used on RENE2032
+// script 216 used on RENE2032
+// script 218 used on RENE2032
+// script 220 used on RENE2032
+// script 221 used on RENE2032
+// script 222 used on RENE2032
+// script 223 used on RENE2032
+
+const int aow_ccmd_donationnamegive = 251;
+const int aow_ccmd_donationmenu = 252;
+const int aow_ccmd_surrender = 253;
+const int aow_ccmd_rehashclientfx1 = 254;
+const int aow_ccmd_gamemaster = 255;
+const int aow_ccmd_gamemastercommand = 256;
+const int aow_ccmd_teamshuffle = 257;
+const int aow_ccmd_activatedeveloper = 258;
+const int aow_ccmd_addaowmaps = 259;
+const int aow_ccmd_showspeed = 260;
+const int aow_ccmd_spectatorteleport = 261;
+const int aow_ccmd_teamswitch = 262;
+const int aow_ccmd_whoami = 263;
+const int aow_ccmd_marine_stats = 264;
+const int aow_ccmd_showarmor = 265;
+
+// script 350 used on INFECTED and MINESITE
+
+const int aow_creditflow = 351;
+const int aow_playerstatushud_serverside = 352;
+const int aow_playerstatushud_clientside = 353;
+const int aow_script7 = 354;
+const int aow_script8 = 355;
+const int aow_script10 = 356;
+const int aow_script11 = 357;
+const int aow_script32 = 358;
+const int aow_script90 = 359;
+const int aow_script91 = 360;
+const int aow_script92 = 361;
+const int aow_script93 = 362;
+const int aow_script97 = 363;
+const int aow_script99 = 364;
+const int aow_script101 = 365;
+const int aow_script102 = 366;
+const int aow_script103 = 367;
+const int aow_script104 = 368;
+const int aow_script105 = 369;
+const int aow_script106 = 370;
+const int aow_script107 = 371;
+const int aow_script108 = 372;
+const int aow_script111 = 373;
+const int aow_script114 = 374;
+const int aow_script150 = 375;
+const int aow_script201 = 376;
+const int aow_script202 = 377;
+const int aow_script203 = 378;
+const int aow_script204 = 379;
+const int aow_script205 = 380;
+const int aow_script214 = 381;
+const int aow_script301 = 382;
+const int aow_script303 = 383;
+const int aow_script309 = 384;
+const int aow_stealth = 385;
+const int aow_script311 = 386;
+const int aow_script312 = 387;
+const int aow_script314 = 388;
+const int aow_script315 = 389;
+const int aow_script317 = 390;
+const int aow_script318 = 391;
+const int aow_script319 = 392;
+const int aow_script320 = 393;
+const int aow_script321 = 394;
+const int aow_script324 = 395;
+const int aow_script326 = 396;
+const int aow_script328 = 397;
+const int aow_selfheal = 398;
+const int aow_script330 = 399;
+const int aow_jumpjetfueldrain = 400;
+const int aow_script332 = 401;
+const int aow_script333 = 402;
+const int aow_isblueteam = 403;
+const int aow_script343 = 404;
+const int aow_script344 = 405;
+const int aow_script345 = 406;
+const int aow_script346 = 407;
+const int aow_script347 = 408;
+const int aow_script349 = 409;
+const int aow_beacondisarmbonus = 410;
+const int aow_script352 = 411;
+const int aow_script353 = 412;
+const int aow_script354 = 413;
+const int aow_script355 = 414;
+const int aow_script357 = 415;
+const int aow_script359 = 416;
+const int aow_script360 = 417;
+const int aow_script361 = 418;
+const int aow_script370 = 419;
+const int aow_script400 = 420;
+const int aow_script556 = 421;
+const int aow_script599 = 422;
+const int aow_script650 = 423;
+const int aow_script651 = 424;
+const int aow_script652 = 425;
+const int aow_script653 = 426;
+const int aow_script654 = 427;
+const int aow_script694 = 428;
+const int aow_script695 = 429;
+const int aow_script697 = 430;
+const int aow_script699 = 431;
+const int aow_script750 = 432;
+const int aow_script751 = 433;
+const int aow_traceroffset = 434;
+const int aow_spawntracer = 435;
+const int aow_script888 = 436;
+const int aow_script889 = 437;
+const int aow_script905 = 438;
+const int aow_script906 = 439;
+const int aow_script907 = 440;
+const int aow_script910 = 441;
+const int aow_script920 = 442;
+const int aow_script922 = 443;
+const int aow_script923 = 444;
+const int aow_basehud_serverside = 445;
+const int aow_portal_tidrequest = 446;
+const int aow_portal_init = 447;
+const int aow_portal_function = 448;
+const int aow_marine_init = 449;
+const int aow_marine_compensation = 450;
+const int aow_script941 = 451;
+const int aow_script943 = 452;
+const int aow_basehud_clientside = 453;
+const int aow_script947 = 454;
+const int aow_script948 = 455;
+const int aow_script949 = 456;
+const int aow_sellweapon = 457;
+const int aow_script951 = 458;
+const int aow_script952 = 459;
+const int aow_script953 = 460;
+const int aow_script954 = 461;
+const int aow_script955 = 462;
+const int aow_script956 = 463;
+const int aow_script957 = 464;
+const int aow_script958 = 465;
+const int aow_script959 = 466;
+const int aow_script961 = 467;
+const int aow_script963 = 468;
+const int aow_script964 = 469;
+const int aow_script965 = 470;
+const int aow_script966 = 471;
+const int aow_marine_death = 472;
+const int aow_script969 = 473;
+const int aow_script970 = 474;
+const int aow_script971 = 475;
+const int aow_script978 = 476;
+const int aow_script979 = 477;
+const int aow_script985 = 478;
+const int aow_script986 = 479;
+const int aow_script992 = 480;
+const int aow_script994 = 481;
+const int aow_script995 = 482;
+const int aow_script996 = 483;
+const int aow_script997 = 484;
+const int aow_script998 = 485;
+const int aow_script999 = 486;
+
+// script 507 used on FLOATCIT
+
+// script 600 used on HELLMRCH
+// script 601 used on CANYON
+// script 602 used on CANYON
+// script 603 used on CANYON
+
+// script 754 used on FLOATCIT
+
+// script 893 used on HELLMRCH
+// script 894 used on HELLMRCH
+// script 895 used on HELLMRCH and OASIS
