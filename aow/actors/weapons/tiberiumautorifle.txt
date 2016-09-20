@@ -33,7 +33,7 @@
 		wait
 	Fire:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfNoAmmo("Reload")
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlaySound("toxin/fire")
@@ -47,7 +47,7 @@
 		goto Ready
 	Hold:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfNoAmmo("Reload")
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlaySound("toxin/fire")
@@ -145,7 +145,7 @@ actor TiberiumAutorifle : AOWWeapon 21084
 		wait
 	Fire:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfNoAmmo("Reload")
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlaySound("toxin/fire")
@@ -159,7 +159,7 @@ actor TiberiumAutorifle : AOWWeapon 21084
 		goto Ready
 	Hold:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfNoAmmo("Reload")
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlaySound("toxin/fire")
@@ -167,7 +167,7 @@ actor TiberiumAutorifle : AOWWeapon 21084
 		goto Fire+6
 	AltFire:
 		NULL A 0 A_JumpIfInventory("IsInSpawnRoom", 1, "Ready")
-		NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready")
+		//NULL A 0 A_JumpIfInventory("InMenu", 1, "Ready") -- InMenu is not added yet
 		NULL A 0 A_JumpIfNoAmmo("Reload")
 		E21C A 1 A_JumpIfInventory("TE21Cooldown",1,"Ready")
 		NULL A 0 A_JumpIfInventory("TE21Burst6",1,1)

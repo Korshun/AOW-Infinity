@@ -195,6 +195,7 @@ const int aow_script888 = 888;
 const int aow_script889 = 889;
 const int aow_script905 = 905;
 const int aow_script906 = 906;
+const int aow_script907 = 907;
 const int aow_script910 = 910;
 const int aow_script920 = 920;
 const int aow_showspeed = 921;

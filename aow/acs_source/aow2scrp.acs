@@ -524,6 +524,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script889 889
 #define aow_script905 905
 #define aow_script906 906
+#define aow_script907 907
 #define aow_script910 910
 #define aow_script920 920
 #define aow_showspeed 921
