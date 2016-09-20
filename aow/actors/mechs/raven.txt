@@ -67,7 +67,7 @@ Actor Raven : MechPlayer_Base
 		NULL A 0 A_JumpIfInventory("IsKamikaze", 1, "Death.IonExplosion")
 		NULL A 0 A_JumpIfInventory("IsBombCrate", 1, "Death.BombExplosion")
 	DeathGo:
-		RAVN J 4 A_TakeInventory("Ingame", 1)
+		RAVN J 4
 		RAVN K 4 A_NoBlocking
 		RAVN LMNOPQRS 4
 		RAVN T 8
