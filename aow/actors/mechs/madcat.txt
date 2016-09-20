@@ -70,7 +70,6 @@ Actor MadCat : MechPlayer_Base
 		NULL A 0 A_JumpIfInventory("IsKamikaze", 1, "Death.IonExplosion")
 		NULL A 0 A_JumpIfInventory("IsBombCrate", 1, "Death.BombExplosion")
 	DeathGo:
-		NULL A 0 A_TakeInventory("Ingame", 1)
 		NULL A 0 A_NoBlocking
 		MADC LM 4
 		MADC NOPQRSTUUU 4 A_SpawnItemEx("EjectedMechSmokePuff", random(-32, 32), random(-32, 32), random(32, 64), 0, 0, 3)
