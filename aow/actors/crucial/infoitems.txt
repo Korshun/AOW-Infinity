@@ -13,7 +13,6 @@ Actor TournamentMode : Boolean {}
 Actor Refunds : Inventory {Inventory.MaxAmount 10000}
 Actor PlayerRank : Inventory {Inventory.MaxAmount 8}
 Actor IsCommando : Boolean {}
-Actor IsSniper : Boolean {}
 Actor IsMedic : Boolean {}
 Actor IsKamikaze : Boolean {}
 Actor IsHarvester : Boolean {}
