@@ -110,60 +110,6 @@ function void ReloadSettings (void) {
 	// to end the game when needed. We don't want this script to conflict it at any
 	// given time.
 	if (!GameOver && GetCVAR("pointlimit") != 0) ConsoleCommand("pointlimit 0");
-	
-	// ==================================
-	// CUSTOM CVARS
-	// w/ sanity checks
-	if (!GetCVAR ("aowr_credflow")) ConsoleCommand ("set aowr_credflow 4");
-	if (GetCVAR ("aowr_startcredits") <= 0) ConsoleCommand ("set aowr_startcredits 300");
-	if (GetCVAR ("aowr_creditfrag") <= 0) ConsoleCommand ("set aowr_creditfrag 50");	
-	if (GetCVAR ("aowr_bonusamount") <= 0) ConsoleCommand ("set aowr_bonusamount 300");	
-	if (GetCVAR ("aowr_bonustime") <= 0) ConsoleCommand ("set aowr_bonustime 5");
-	if (GetCVAR ("aowr_medicbonusneed") <= 0) ConsoleCommand ("set aowr_medicbonusneed 175");
-	if (GetCVAR ("aowr_repairbonus") <= 0) ConsoleCommand ("set aowr_repairbonus 1");	
-	if (GetCVAR ("aowr_guardianlimit") <= 0) ConsoleCommand ("set aowr_guardianlimit 2");
-	if (GetCVAR ("aowr_ticketpool") <= 0) ConsoleCommand ("set aowr_ticketpool 0");
-	//[SP]How long you can stay on a team before you are never switched.
-	if (GetCVAR ("aowr_teamstaytime") <= 0) ConsoleCommand("set aowr_teamstaytime 2");
-	
-	// Plasma Cannon initial delay
-	if (!GetCVAR ("aowr_plasmapurchasedelay")) ConsoleCommand("set aowr_plasmapurchasedelay 5");
-	//[SP]Maximum number of plasma cannons per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aowr_maxcannonsperteam")) ConsoleCommand("set aowr_maxcannonsperteam 4");
-	// [Dusk] Time (in minutes) to determine plasma cannon cooldown. Use -1 to disable
-	if (!GetCVAR ("aowr_plasmacooldown")) ConsoleCommand("set aowr_plasmacooldown 3");
-	
-	//[SP]How long you have to wait to buy a new superweapon beacon. (Minutes) (Set to -1 to disable wait)
-	if (!GetCVAR ("aowr_beaconpurchasedelay"))ConsoleCommand("set aowr_beaconpurchasedelay 5");
-	
-	// [SP]Maximum number of time cops per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aowr_maxtimecopsperteam")) ConsoleCommand("set aowr_maxtimecopsperteam 1");
-	
-	// [Dusk] How many minutes until Timed C4 can be used. (-1 to disable)
-	if (!GetCVAR ("aowr_c4delay")) ConsoleCommand("set aowr_c4delay 5");
-	
-	//[SP] Time (in minutes) before sudden death.
-	// [Dusk] changed default to 45, -1 means immediate
-	if (GetCVAR ("aowr_suddendeathtime") == 0) ConsoleCommand("set aowr_suddendeathtime 45");
-	
-	// [Dusk] Sudden death degeneration
-	if (GetCVAR ("aowr_degeneration") <= 0) ConsoleCommand("set aowr_degeneration 0");
-	if (GetCVAR ("aowr_degenerationinterval") <= 0) ConsoleCommand("set aowr_degenerationinterval 10");
-	
-	if (GetCVAR ("aowr_tournamentmode") <= 0) ConsoleCommand("set aowr_tournamentmode 0");
-	if (GetCVAR ("aowr_disablemechs") <= 0) ConsoleCommand("set aowr_disablemechs 0");
-	if (GetCVAR ("aowr_surrendermode") <= 0) ConsoleCommand("set aowr_surrendermode 0");
-	
-	// [Dusk] How much score does destroying a building award you, in addition to difference?
-	if (GetCVAR ("aowr_buildingpoints") <= 0) ConsoleCommand ("set aowr_buildingpoints 125");
-	
-	// [Dusk] Tiberium amounts
-	if (!GetCVAR ("aowr_tiberium_self"))
-		ConsoleCommand ("set aowr_tiberium_self 225");
-	if (!GetCVAR ("aowr_tiberium_other"))
-		ConsoleCommand ("set aowr_tiberium_other 75");
-	if (!GetCVAR ("aowr_tiberium_advperc"))
-		ConsoleCommand ("set aowr_tiberium_advperc 300");
 }
 
 // Server settings
