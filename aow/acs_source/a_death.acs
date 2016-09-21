@@ -78,69 +78,76 @@ script aow_script994 DEATH {
 	int n0 = PlayerNumber();
 	int t0 = PlayerTeam();
 	SetActivatorToTarget (0);
-	if ((ActivatorTID () < 3800 || ActivatorTID () > 3831) && ActivatorTID () != 9999) terminate;
-	
-	int n1 = PlayerNumber();
-	int t1 = PlayerTeam();
+	//if ((ActivatorTID () < 3800 || ActivatorTID () > 3831) && ActivatorTID () != 9999) terminate;
 	
 	// remove tickets from the victim team
 	TakeTickets (t0, points);
 	
-	// no points for suicides
-	if (n0 != n1 && n1 != -1) {
-		GivePoints (2*points);
-		
-		LocalAmbientSound ("game/boink", 127);
-		GiveCredits (-1, GetCVar("aowr_creditfrag"));
-		AddExperience (50);
-		
-		delay (5);
-		
-		if (!FirstBlood) {
-			// we got first blood!
-			FirstBlood = true;
-			
-			HudMessageBold (n:0, s:"\c- gets first blood!";
-				HUDMSG_FADEOUT, 15000, CR_WHITE,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-		}
-		
-		// check sprees
-		GiveInventory ("SpreeCount", 1);
-		SetFont ("SMALLFONT");
-		switch (CheckInventory ("SpreeCount")) {
-		case 5:
-			HudMessageBold (n:0, s:"\c- is on a killing spree!";
-				HUDMSG_FADEOUT, 15000, CR_WHITE,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		case 10:
-			HudMessageBold (n:0, s:"\c- is on a rampage!";
-				HUDMSG_FADEOUT, 15000, CR_WHITE,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		case 15:
-			HudMessageBold (n:0, s:"\c- is dominating!";
-				HUDMSG_FADEOUT, 15000, CR_TAN,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		case 20:
-			HudMessageBold (n:0, s:"\c- is unstoppable!";
-				HUDMSG_FADEOUT, 15000, CR_YELLOW,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		case 25:
-			HudMessageBold (n:0, s:"\c- is Godlike!";
-				HUDMSG_FADEOUT, 15000, CR_ORANGE,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		case 30:
-			HudMessageBold (n:0, s:"\c- is Wicked Sick!";
-				HUDMSG_FADEOUT, 15000, CR_RED,
-				INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
-			break;
-		}
-	}
+        if(PlayerNumber() != -1)
+        {
+            // If the kill was done with a blood revolver, give a new clip.
+            if (CheckWeapon ("BloodRevolver"))
+		GiveInventory ("BloodRevolverAmmo", 1);
+            
+            int n1 = PlayerNumber();
+            int t1 = PlayerTeam();
+                
+            // no points for suicides
+            if (n0 != n1 && n1 != -1) {
+                    GivePoints (2*points);
+                    
+                    LocalAmbientSound ("game/boink", 127);
+                    GiveCredits (-1, GetCVar("aowr_creditfrag"));
+                    AddExperience (50);
+                    
+                    delay (5);
+                    
+                    if (!FirstBlood) {
+                            // we got first blood!
+                            FirstBlood = true;
+                            
+                            HudMessageBold (n:0, s:"\c- gets first blood!";
+                                    HUDMSG_FADEOUT, 15000, CR_WHITE,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                    }
+                    
+                    // check sprees
+                    GiveInventory ("SpreeCount", 1);
+                    SetFont ("SMALLFONT");
+                    switch (CheckInventory ("SpreeCount")) {
+                    case 5:
+                            HudMessageBold (n:0, s:"\c- is on a killing spree!";
+                                    HUDMSG_FADEOUT, 15000, CR_WHITE,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    case 10:
+                            HudMessageBold (n:0, s:"\c- is on a rampage!";
+                                    HUDMSG_FADEOUT, 15000, CR_WHITE,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    case 15:
+                            HudMessageBold (n:0, s:"\c- is dominating!";
+                                    HUDMSG_FADEOUT, 15000, CR_TAN,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    case 20:
+                            HudMessageBold (n:0, s:"\c- is unstoppable!";
+                                    HUDMSG_FADEOUT, 15000, CR_YELLOW,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    case 25:
+                            HudMessageBold (n:0, s:"\c- is Godlike!";
+                                    HUDMSG_FADEOUT, 15000, CR_ORANGE,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    case 30:
+                            HudMessageBold (n:0, s:"\c- is Wicked Sick!";
+                                    HUDMSG_FADEOUT, 15000, CR_RED,
+                                    INTEL_XPOS, INTEL_YPOS2, 2.0, 1.0);
+                            break;
+                    }
+            }
+        }
 	
 	ACS_ExecuteAlways (aow_script992, 0);
 }
