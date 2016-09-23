@@ -1,6 +1,8 @@
 // Flamethrower
 Actor Flamer : AOWWeapon 21047
 {
+        //$Category Weapons
+	Tag "Flamethrower"
 	+ALT_AMMO_OPTIONAL
 	Obituary "$OB_FLAMER"
 	Inventory.PickupMessage "You got the flamethrower!"
