@@ -57,7 +57,6 @@
 #include "actors/weapons/grenadelauncher.txt"
 #include "actors/weapons/handgun.txt"
 #include "actors/weapons/bloodrevolver.txt"
-#include "actors/weapons/knife.txt"
 #include "actors/weapons/laserchaingun.txt"
 #include "actors/weapons/laserrifle.txt"
 #include "actors/weapons/machinegun.txt"
