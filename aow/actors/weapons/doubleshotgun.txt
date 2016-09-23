@@ -27,7 +27,7 @@ Actor DoubleShotgun : AOWWeapon
 		SHT2 A 3
 		NULL A 0 BRIGHT A_GunFlash
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 0, 0)
-		SHT2 A 7 BRIGHT A_FireBullets(15.7, 11.7, 20, 10, "HandgunPuff", FBF_USEAMMO | FBF_NORANDOM, 512)
+		SHT2 A 7 BRIGHT A_FireBullets(15.7, 11.7, 20, 10, "AOWBulletPuff", FBF_USEAMMO | FBF_NORANDOM, 512)
 		Goto Reload
 	Reload:
 		SHT2 B 7

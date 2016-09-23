@@ -681,7 +681,7 @@ Actor BlueSuperShotgunner	//Blue SSGer
 		PLA9 E 1 A_Recoil(-0.368856)
 		NULL A 0 ThrustThing(angle*256/360-192, 1, 0, 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomBulletAttack(15.7, 11.7, 20, 5, "HandgunPuff", 1, 512)
+		NULL A 0 A_CustomBulletAttack(15.7, 11.7, 20, 5, "AOWBulletPuff", 1, 512)
 		NULL A 0 A_PlayWeaponSound("weapons/sshotf")
 		NULL A 0 A_GiveInventory("SSGFireCooldown")
 		NULL A 0 NoiseAlert(0, 0)
@@ -919,7 +919,7 @@ Actor BlueSuperShotgunner	//Blue SSGer
 		PLA9 E 1 A_Recoil(-0.368856)
 		NULL A 0 ThrustThing(angle*256/360-64, 1, 0, 0)
 		NULL A 0 A_FaceTarget
-		NULL A 0 A_CustomBulletAttack(11.2, 7.1, 20, 5, "HandgunPuff", 768)
+		NULL A 0 A_CustomBulletAttack(11.2, 7.1, 20, 5, "AOWBulletPuff", 768)
 		NULL A 0 A_PlayWeaponSound("weapons/sshotf")
 		NULL A 0 A_GiveInventory("SSGFireCooldown")
 		NULL A 0 NoiseAlert(0, 0)

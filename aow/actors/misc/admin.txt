@@ -29,19 +29,19 @@ Actor AdminPistol : AOWWeapon
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlayWeaponSound("pistol/fire")
 		NULL A 0 A_FireBullets(0, 0, 1, 10000, "ExplosionPuff")
-		NULL A 0 A_FireBullets(0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets(0, 0, 1, 100000, "AOWBulletPuff")
 		NULL A 0 A_FireBullets(0, 0, 1, 10000, "ExplosionPuff")
-		NULL A 0 A_FireBullets(0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets(0, 0, 1, 100000, "AOWBulletPuff")
 		GPIS C 2 
 		NULL A 0 A_GunFlash
 		NULL A 0 A_PlayWeaponSound("pistol/fire")
 		NULL A 0 A_FireBullets(0, 0, 1, 10000, "ExplosionPuff")
 		NULL A 0
-		NULL A 0 A_FireBullets(0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets(0, 0, 1, 100000, "AOWBulletPuff")
 		GPIS B 2
 		NULL A 0 A_FireBullets(0, 0, 1, 10000, "ExplosionPuff")
 		NULL A 0
-		NULL A 0 A_FireBullets(0, 0, 1, 100000, "HandgunPuff")
+		NULL A 0 A_FireBullets(0, 0, 1, 100000, "AOWBulletPuff")
 		GPIS C 2
 		NULL A 0 A_Refire
 		Goto Ready

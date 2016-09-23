@@ -77,12 +77,6 @@ Object AOWBulletPuff
     frame PUFFB { light BPUFF2 }
 }
 
-Object HandgunPuff
-{
-    frame PUFFA { light BPUFF1 }
-    frame PUFFB { light BPUFF2 }
-}
-
 Object RiflePuff
 {
     frame PUFFA { light BPUFF1 }
