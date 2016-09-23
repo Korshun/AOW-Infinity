@@ -272,8 +272,8 @@ Actor GuardianWeapons : AOWWeapon
 		JUGS A 10 
 		Goto Ready
 	Flash:
-		TNT1 A 4 BRIGHT A_Light1
-		TNT1 A 3 BRIGHT A_Light2
+		TNT1 A 4 A_Light1
+		TNT1 A 3 A_Light2
 		Goto LightDone
 	Spawn:
 		NULL A 0
@@ -291,12 +291,12 @@ Actor GuardianShell : ArtilleryShell80mm
 	States
 	{
 	Death:
-		NULL A 0 BRIGHT A_NoGravity
+		NULL A 0 A_NoGravity
 		NULL A 0 A_StopSound(CHAN_BODY)
 		NULL A 0 A_SpawnItemEx("FlameDecay", random(-32, 32), random(-32, 32), 4)
 		NULL A 0 A_SpawnItemEx("ExplosionMain")
-		TNT1 A 1 BRIGHT A_Explode(60, 32, 1)
-		TNT1 A 5 BRIGHT A_Explode(60, 128, 1)
+		TNT1 A 1 A_Explode(60, 32, 1)
+		TNT1 A 5 A_Explode(60, 128, 1)
 		Stop
 	}
 }
@@ -308,12 +308,12 @@ Actor GuardianShellBlue : GuardianShell
 	States
 	{
 	Death:
-		NULL A 0 BRIGHT A_NoGravity
+		NULL A 0 A_NoGravity
 		NULL A 0 A_StopSound(CHAN_BODY)
 		NULL A 0 A_SpawnItemEx("FlameDecayBlue", random(-32, 32), random(-32, 32), 4)
 		NULL A 0 A_SpawnItemEx("ExplosionMain")
-		TNT1 A 1 BRIGHT A_Explode(60, 32, 1)
-		TNT1 A 5 BRIGHT A_Explode(60, 128, 1)
+		TNT1 A 1 A_Explode(60, 32, 1)
+		TNT1 A 5 A_Explode(60, 128, 1)
 		Stop
 	}
 }

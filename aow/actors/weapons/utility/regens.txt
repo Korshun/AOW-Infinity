@@ -70,8 +70,8 @@ Actor Utility_GlobalMedicCacheRed
 		NULL A 0 A_NoBlocking
 		NULL A 0 A_SpawnItemEx("ExplosionMain", 0, 0, 32, 0, 0, 0, 0, 128, 0)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 0 BRIGHT A_Explode(64, 128)
-		TNT1 A 4 BRIGHT 
+		NULL A 0 A_Explode(64, 128)
+		TNT1 A 4 
 		Stop
 	Disapproved:
 	Death.Deconstruction:
@@ -253,8 +253,8 @@ Actor Utility_PowerGeneratorRed : Utility_GlobalMedicCacheRed
 		NULL A 0 A_SpawnItemEx("VoltageDecayCluster")
 		NULL A 0 ACS_Execute(aow_script345, 0, 20)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 0 BRIGHT A_Explode(64, 128)
-		TNT1 A 4 BRIGHT 
+		NULL A 0 A_Explode(64, 128)
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -289,8 +289,8 @@ Actor Utility_PowerGeneratorBlue : Utility_GlobalMedicCacheBlue
 		NULL A 0 A_SpawnItemEx("VoltageDecayCluster")
 		NULL A 0 ACS_Execute(aow_script345, 0, 20)
 		NULL A 0 A_PlaySound("weapons/rocklx")
-		NULL A 0 BRIGHT A_Explode(64, 128)
-		TNT1 A 4 BRIGHT 
+		NULL A 0 A_Explode(64, 128)
+		TNT1 A 4 
 		Stop
 	}
 }

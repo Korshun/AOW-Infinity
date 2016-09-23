@@ -134,7 +134,7 @@ Actor HeavyMissile
 	{
 	Spawn:
 		MISR A 2 BRIGHT
-		NULL A 0 BRIGHT A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
+		NULL A 0 A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
 		MISR A 1 BRIGHT A_SpawnItemEx("HeavyMissileSmoke", -16)
 		Wait
 	Death:
@@ -155,7 +155,7 @@ Actor HeavyMissileBlue : HeavyMissile
 	{
 	Spawn:
 		MISB A 2 BRIGHT
-		NULL A 0 BRIGHT A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
+		NULL A 0 A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
 		MISB A 1 BRIGHT A_SpawnItemEx("HeavyMissileSmoke", -16)
 		Wait
 	Death:
@@ -172,8 +172,8 @@ Actor HeavyHomingMissile : HeavyMissile
 	{
 	Spawn:
 		MISR A 2 BRIGHT
-		NULL A 0 BRIGHT A_PlaySound("seeker/beep", CHAN_ITEM, 1.0, true)
-		NULL A 0 BRIGHT A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
+		NULL A 0 A_PlaySound("seeker/beep", CHAN_ITEM, 1.0, true)
+		NULL A 0 A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
 	Idle:
 		NULL A 0 A_SpawnItemEx("HeavyMissileSmoke", -16)
 		MISR A 2 BRIGHT A_SeekerMissile(4, 10)
@@ -193,8 +193,8 @@ Actor HeavyHomingMissileBlue : HeavyMissile
 	{
 	Spawn:
 		MISB A 2 BRIGHT
-		NULL A 0 BRIGHT A_PlaySound("seeker/beep", CHAN_ITEM, 1.0, true)
-		NULL A 0 BRIGHT A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
+		NULL A 0 A_PlaySound("seeker/beep", CHAN_ITEM, 1.0, true)
+		NULL A 0 A_PlaySound("ambient/rocket", CHAN_BODY, 1.0, true)
 	Idle:
 		NULL A 0 A_SpawnItemEx("HeavyMissileSmoke", -16)
 		MISB A 2 BRIGHT A_SeekerMissile(4, 10)

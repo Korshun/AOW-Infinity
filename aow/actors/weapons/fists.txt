@@ -130,17 +130,17 @@ Actor FistPuff : BulletPuff
 	States
 	{
 	Crash:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistWall")
 		PUFF B 4 
 		PUFF CD 4
 		Stop
 	Melee:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistHit")
 		Stop
 	Spawn:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistHit")
 		Stop
 	}
@@ -153,7 +153,7 @@ Actor BerserkPuff : FistPuff
 	{
 	Melee:
 		NULL A 0
-		NULL A 0 BRIGHT A_SpawnItem("FistHit")
+		NULL A 0 A_SpawnItem("FistHit")
 		Stop
 	}
 }

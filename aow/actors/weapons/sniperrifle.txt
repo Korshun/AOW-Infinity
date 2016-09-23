@@ -48,7 +48,7 @@ Actor SniperRifle : AOWWeapon
 	FireZoomed:
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
 		NULL A 0 A_RailAttack(75, 0, 0, none, none, 1, 0, "RiflePuff")
-		TNT1 A 1 BRIGHT A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
+		TNT1 A 1 A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff", FBF_USEAMMO | FBF_NORANDOM)
 		Goto ReloadZoomed
 	ReloadZoomed:
 		TNT1 A 30
@@ -123,7 +123,7 @@ Actor SniperRifleWeak : SniperRifle 21081
 	FireZoomed:
 		NULL A 0 ACS_ExecuteWithResult(aow_traceroffset, 8, 0)
 		NULL A 0 A_RailAttack(50, 0, 0, none, none, 1, 0, "RiflePuff")
-		TNT1 A 1 BRIGHT A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff")
+		TNT1 A 1 A_FireBullets(0.0, 0.0, 1, 0, "RiflePuff")
 		Goto ReloadZoomed
 	Spawn:
 		SNIP X -1

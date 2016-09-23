@@ -188,19 +188,19 @@ Actor BombPackKamikaze
 	States
 	{
 	Spawn:
-		NULL A 0 BRIGHT
+		NULL A 0
 		Goto Death
-		NULL A 0 BRIGHT A_SetShootable
-		NULL A 0 BRIGHT A_Die
+		NULL A 0 A_SetShootable
+		NULL A 0 A_Die
 		Stop
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("ExplosionMainLarge", 0, 0, 0, 0, 0, 0, 0, 128, 0)
 		NULL A 0 A_PlaySound("weapons/rocklx")
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
-		NULL A 0 BRIGHT A_Explode(100, 512, 0)
-		NULL A 0 BRIGHT A_Explode(700, 128, 0)
-		TNT1 A 1 BRIGHT A_Explode(700, 256, 0)
+		NULL A 0 A_Explode(100, 512, 0)
+		NULL A 0 A_Explode(700, 128, 0)
+		TNT1 A 1 A_Explode(700, 256, 0)
 		NULL AAAAA 0 A_SpawnItemEx("FlameWallDecay", random(-48, 48), random(-48, 48), 4, 0, 0, 0, 0, 0, 0)
 		NULL A 0 A_SpawnItemEx("BombPackKamikazeSuicide", -1, 0, 0, 0, 0, 0, 0, 0, 0)
 		Stop
@@ -221,7 +221,7 @@ Actor BombPackKamikazeSuicide
 	{
 	Spawn:
 		NULL A 0
-		TNT1 A 5 BRIGHT A_Explode(250, 16, 1)
+		TNT1 A 5 A_Explode(250, 16, 1)
 		Stop
 	}  
 }

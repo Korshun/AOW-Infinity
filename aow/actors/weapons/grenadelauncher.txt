@@ -89,9 +89,9 @@ Actor GrenadeGrenade
 		SGRN A 2 BRIGHT A_SpawnItemEx("PulseBallSmokePuff", -25)
 		Loop
 	Death:
-		NULL A 0 BRIGHT A_NoGravity
-		NULL A 0 BRIGHT A_Explode(55, 128, 1)
-		NULL A 0 BRIGHT A_RadiusThrust(384, 128, 1) //Weeee
+		NULL A 0 A_NoGravity
+		NULL A 0 A_Explode(55, 128, 1)
+		NULL A 0 A_RadiusThrust(384, 128, 1) //Weeee
 		TNT1 A 5 A_SpawnItemEx("ExplosionMain")
 		Stop
 	}
@@ -107,9 +107,9 @@ Actor GrenadeBounce : GrenadeGrenade
 	States
 	{
 	Death:
-		NULL A 0 BRIGHT A_NoGravity
-		NULL A 0 BRIGHT A_Explode(40, 96, 1)
-		NULL A 0 BRIGHT A_RadiusThrust(384, 128, 1) //Wee
+		NULL A 0 A_NoGravity
+		NULL A 0 A_Explode(40, 96, 1)
+		NULL A 0 A_RadiusThrust(384, 128, 1) //Wee
 		TNT1 A 5 A_SpawnItemEx("ExplosionMain")
 		Stop
 	}

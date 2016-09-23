@@ -176,7 +176,7 @@ Actor BlueFlare : BlueStrike
  States
 	{
 	Spawn:
-	 NULL A 0 BRIGHT
+	 NULL A 0
 	 FBLU A 1 BRIGHT A_FadeOut(0.01)
 	 Wait
  }
@@ -411,7 +411,7 @@ Actor IonFx
 	{
 	Spawn:
 		ION1 ABCD 10 BRIGHT A_SpawnitemEx("IonFx2", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-		NULL A 0 BRIGHT A_Countdown
+		NULL A 0 A_Countdown
 		Loop
 	Death:
 		Stop
@@ -451,7 +451,7 @@ States
 	{
 Spawn:
 ION1 ABCD 4 BRIGHT A_SpawnitemEx("IonFx4", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-NULL A 0 BRIGHT A_Countdown
+NULL A 0 A_Countdown
 Loop
 Death:
 Stop
@@ -657,7 +657,7 @@ States
 	{
 Spawn:
 ION1 ABCD 4 BRIGHT A_SpawnitemEx("IonFx4Small", 0, 0, 0, 0, 0, 0, 0, (128|32), 0)
-NULL A 0 BRIGHT A_Countdown
+NULL A 0 A_Countdown
 Loop
 Death:
 Stop

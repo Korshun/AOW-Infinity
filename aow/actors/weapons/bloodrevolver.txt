@@ -30,7 +30,7 @@ actor BloodRevolver : AOWWeapon
 		NULL A 0 A_JumpIfInventory ("IsInSpawnRoom", 1, "Ready")
 		NULL A 0 A_JumpIfInventory ("InMenu", 1, "Ready")
 		NULL A 0 A_PlayWeaponSound ("revolver/fire")
-		NULL A 0 bright A_RailAttack (300, 0, true, none, none, true, 0, "RevolverPuff")
+		NULL A 0 A_RailAttack (300, 0, true, none, none, true, 0, "RevolverPuff")
 		goto Fire.End
 	Fire.End:
 		REVF A 1 bright offset (0, 33)

@@ -26,15 +26,15 @@ Actor ShockRifle : AOWWeapon 21068
 		Loop
 	Fire:
 		VOLF ABC 3 BRIGHT
-		NULL A 0 BRIGHT A_ReFire
+		NULL A 0 A_ReFire
 		VOLF CBA 3 BRIGHT
 		Goto Ready
 	Hold:
 		// broken
-		// NULL A 0 BRIGHT A_FireBullets(0, 0, 1, 0, "VoltageTrailPuff", 0, 1100)
+		// NULL A 0 A_FireBullets(0, 0, 1, 0, "VoltageTrailPuff", 0, 1100)
 		VOLF E 1 BRIGHT A_FireBullets(3.2, 3.2, 3, 5, "VoltagePuff", FBF_NORANDOM | FBF_USEAMMO, 1100)
 		VOLF D 2 BRIGHT
-		NULL A 0 BRIGHT A_ReFire
+		NULL A 0 A_ReFire
 		VOLF CBA 3 BRIGHT
 		Goto Ready
 	Spawn:

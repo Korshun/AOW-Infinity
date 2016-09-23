@@ -5,7 +5,7 @@ Actor Flash
 	States
 	{
 	Spawn:
-		TNT1 A 5 BRIGHT
+		TNT1 A 5
 		Stop
 	}
 }
