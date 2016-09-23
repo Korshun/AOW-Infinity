@@ -399,6 +399,10 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script88 88 // executed by maps
 #define aow_script89 89 // executed by maps
 
+#define aow_script90 90 // executed by maps
+
+#define aow_script92 92 // executed by maps
+
 #define aow_script94 94 // executed by maps
 #define aow_script95 95 // executed by maps
 #define aow_script96 96 // executed by maps
@@ -450,9 +454,9 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #define aow_script10 356
 #define aow_script11 357
 #define aow_script32 358
-#define aow_script90 359
+
 #define aow_script91 360
-#define aow_script92 361
+
 #define aow_script93 362
 #define aow_script97 363
 #define aow_script99 364
