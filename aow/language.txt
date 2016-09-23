@@ -6,6 +6,8 @@ OB_FRIENDLY3 = "%o is killing friendlies for money!";
 OB_FRIENDLY4 = "%o is LOSING HIS F#%@ING MIND!!!";
 OB_CRUSH = "%o was flattened.";
 
+TAG_HANDGUN = "Handgun";
+
 OB_ARTILLERYCANNON = "%o was demolished by %k's artillery cannon.";
 OB_BOMBPACK = "%o \cIwas wiped off the face of Earth by %k.";
 OB_DOUBLESHOTGUN = "%o was splattered by %k's double shotgun.";
@@ -17,6 +19,7 @@ OB_GATLING = "%o was drilled by %k's gatling gun.";
 OB_GAUSS = "%o had %p torso busted by %k's gauss rifle.";
 OB_GRENADE = "%o ate %k's grenade.";
 OB_GRENADE_ALT = "%o played catch with %k's grenade.";
+OB_HANDGUN = "%o was capped by %k's handgun.";
 OB_IONCANNON = "%o was obliterated by %k's \chIon Cannon.";
 OB_LASERCHAINGUN = "%o was incinerated by %k's laser chaingun.";
 OB_KAMIKAZE = "%k make %o go boom!";

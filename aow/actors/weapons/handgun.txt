@@ -1,15 +1,21 @@
 Actor Handgun : AOWWeapon replaces Pistol 21041
 {
-	+WIMPY_WEAPON
-	+NOAUTOFIRE
+	//$Category Weapons
+	Tag "$TAG_HANDGUN"
+	Inventory.PickupMessage "$TAG_HANDGUN"
+	Obituary "$OB_HANDGUN"
+	Weapon.PreferredSkin "MarinePistol"
+
+	+WEAPON.WIMPY_WEAPON
+	+WEAPON.NOAUTOFIRE
+	
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 10
 	Weapon.AmmoType "NewClipAmmo"
 	Weapon.SelectionOrder 19
-	Weapon.PreferredSkin "MarinePistol"
-	Inventory.PickupMessage "You got the handgun!"
-	Obituary "%o was capped by %k's handgun."
+	
 	AttackSound "pistol/fire"
+	
 	States
 	{
 	Ready:
@@ -35,7 +41,7 @@ Actor Handgun : AOWWeapon replaces Pistol 21041
 	Flash:
 		PISF A 1 BRIGHT A_Light2
 		PISF A 1 BRIGHT A_Light1
-				Goto LightDone
+		Goto LightDone
 	Spawn:
 		PIST A -1
 		Stop
