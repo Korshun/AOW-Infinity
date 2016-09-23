@@ -1,12 +1,12 @@
 // AOW Keyconf
 weaponsection AOW2
-setslot 0 RepairGun HealGun BombSquadGun
-setslot 1 Unarmed EagerBeaver FragGrenade RemoteC4 Knife
-setslot 2 Handgun Rifle SniperRifleWeak SniperRifle
+setslot 0 RepairGun HealGun BombSquadGun RemoverGun
+setslot 1 Unarmed EagerBeaver FragGrenade RemoteC4
+setslot 2 Handgun BloodRevolver Rifle SniperRifleWeak SniperRifle
 setslot 3 Boomstick DoubleShotgun
-setslot 4 SubMachineGun MachineGun GatlingGun JumpjetGatlingGun
+setslot 4 SubMachineGun MachineGun GatlingGun
 setslot 5 Grenade_Launcher MissileLauncher ArtilleryCannon
-setslot 6 Flamer ChemicalSprayer TiberiumAutorifleWeak TiberiumAutorifle
+setslot 6 Flamer ChemicalSprayer TiberiumAutorifle
 setslot 7 LaserRifle LaserChaingun GaussRifle ShockRifle PlasmaGun StealthLaserRifle
 setslot 8 PlasmaCannon TimeGun UtilityGun CrateChooser
 
