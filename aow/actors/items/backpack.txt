@@ -51,7 +51,6 @@ Actor MedicPack : CustomInventory 21082
 		Stop
 	Pickup:
 		NULL A 0 HealThing(130)
-		NULL A 0 A_GiveInventory("Refunds", 50)
 		Stop
 	}
 }

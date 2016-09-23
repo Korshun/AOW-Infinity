@@ -1,14 +1,19 @@
 // Fists
 Actor Unarmed : AOWWeapon
 {
+	//$Category Weapons
+	Tag "$TAG_UNARMED"
+	Inventory.PickupMessage "$TAG_UNARMED"
+	Obituary "$OB_UNARMED"
+	Weapon.PreferredSkin "MarineFist"
+
 	+WIMPY_WEAPON
 	+MELEEWEAPON
-	Obituary "%k knocked %o out hard."
-	Inventory.PickupMessage "You got a fist."
+	
 	DropItem "Nothing"
 	Weapon.Kickback 165
 	Weapon.SelectionOrder 20
-	Weapon.PreferredSkin "MarineFist"
+
 	States
 	{
 	Ready:
