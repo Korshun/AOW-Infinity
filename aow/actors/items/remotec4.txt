@@ -9,7 +9,9 @@ Actor RemoteC4Ammo : Ammo
 	Ammo.BackpackMaxAmount 4
 }
 
-actor RemoteC4 : AOWWeapon {
+actor RemoteC4 : AOWWeapon
+{
+        Tag "Remote C4"
 	+NOALERT
 	Obituary "%o bonks %k with a 100kg Remote C4."
 	Weapon.AmmoType "RemoteC4Ammo"

@@ -1,6 +1,8 @@
 // Shock rifle
 Actor ShockRifle : AOWWeapon 21068
 {
+        //$Category Weapons
+	Tag "Shock Rifle"
 	Obituary "%o felt %k's surge."
 	Inventory.PickupMessage "You got the shock rifle!"
 	Weapon.SelectionOrder 4

@@ -1,6 +1,8 @@
 // Grenade launcher
 Actor Grenade_Launcher : AOWWeapon replaces GrenadeLauncher 21046
 {
+        //$Category Weapons
+	Tag "Grenade Launcher"
 	+WEAPON.NOAUTOAIM
 	Obituary "$OB_GRENADE" // "%o ate %k's grenade."
 	Inventory.PickupMessage "You got the grenade launcher!"

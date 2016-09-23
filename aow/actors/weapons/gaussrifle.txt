@@ -1,6 +1,8 @@
 // Gauss Rifle
 Actor GaussRifle : AOWWeapon replaces Railgun 21049
 {
+        //$Category Weapons
+	Tag "Gauss Rifle"
 	Inventory.PickupMessage "You got the gauss rifle!"
 	Obituary "$OB_GAUSS" // "%o got %p torso busted by %k's gauss rifle."
 	AttackSound "gauss/fire"

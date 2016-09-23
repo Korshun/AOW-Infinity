@@ -11,6 +11,8 @@ Actor ArtilleryCannonSpeedBonus : Boolean {}
 
 Actor ArtilleryCannon : AOWWeapon 21085
 {
+        //$Category Weapons
+	Tag "Artillery Cannon"
 	Obituary "$OB_ARTILLERYCANNON" // "%o was demolished by %k's artillery cannon."
 	Inventory.PickupMessage "You got the artillery cannnon!"
 	Weapon.AmmoType "ArtilleryShellAmmo"

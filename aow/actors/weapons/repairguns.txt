@@ -1,6 +1,7 @@
 // Repair gun
 Actor RepairGun : AOWWeapon
 {
+        Tag "Repair Gun"
 	Weapon.Kickback 0
 	Inventory.pickupsound "misc/w_pkup"
 	Obituary "%o was repaired to death by %k."
@@ -60,6 +61,7 @@ Actor RepairGunUpgrade : Boolean {}
 
 Actor HealGun : RepairGun
 {
+        Tag "Heal Gun"
 	Inventory.PickupMessage "Picked up the Healing Gun."
 	Obituary "%o suffers from medicophobia."
 	Weapon.PreferredSkin "MarineMedic"
@@ -93,6 +95,7 @@ Actor HealGun : RepairGun
 
 Actor BombSquadGun : RepairGun
 {
+        Tag "Bomb-Squad Gun"
 	Inventory.PickupMessage "Picked up the Bomb-Squad Gun."
 	AttackSound "repairgun/fire"
 	Obituary "%o was disarmed by %k."
@@ -124,7 +127,9 @@ actor RemoverGunHeat : Ammo
 	+IGNORESKILL
 }
 
-actor RemoverGun : RepairGun {
+actor RemoverGun : RepairGun
+{
+        Tag "Remover Gun"
 	AttackSound "repairgun/fire"
 	Weapon.Ammotype "RemoverGunHeat"
 	+AMMO_OPTIONAL

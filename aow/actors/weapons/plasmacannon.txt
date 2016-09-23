@@ -1,6 +1,7 @@
 // PLASMA CANNON
 Actor PlasmaCannon : AOWWeapon
 {
+        Tag "Plasma Cannon"
 	Weapon.SelectionOrder 1
 	Weapon.Kickback 100
 	Weapon.AmmoType "PlasmaCannonAmmo"

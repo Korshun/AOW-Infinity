@@ -1,7 +1,8 @@
 // TIME GUN
 Actor TimeGun : AOWWeapon
 {
-    +WEAPON.NOAUTOFIRE
+        Tag "Time Gun"
+        +WEAPON.NOAUTOFIRE
 	+BLOODLESSIMPACT
 	DropItem "NewBackpack"
 	Obituary "%o was sucked in a time-space continuum vortex."

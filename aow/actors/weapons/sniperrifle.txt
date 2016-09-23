@@ -1,6 +1,7 @@
 // Sniper rifle
 Actor SniperRifle : AOWWeapon
 {
+        Tag "Sniper Rifle"
 	Obituary "$OB_SNIPER" // "%o found %k's bullet in %p head."
 	AttackSound "rc50/fire"
 	Weapon.SelectionOrder 3
@@ -109,6 +110,8 @@ Actor IsZoomed : Boolean {}
 
 Actor SniperRifleWeak : SniperRifle 21081
 {
+        //$Category Weapons
+        Tag "Sniper Rifle (Weak)"
 	States
 	{
 	Fire:

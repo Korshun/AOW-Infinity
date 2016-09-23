@@ -108,6 +108,8 @@
 
 actor TiberiumAutorifle : AOWWeapon 21084
 {
+        //$Category Weapons
+	Tag "Tiberium Autorifle"
 	+AMMO_OPTIONAL
 	+ALT_AMMO_OPTIONAL
 	inventory.pickupmessage "You got the Tiberium Autorifle!"

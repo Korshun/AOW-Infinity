@@ -1,6 +1,7 @@
 // MACHINE GUN
 Actor MachineGun : AOWWeapon
 {
+        Tag "Machine Gun"
 	Obituary "$OB_MACHINEGUN"
 	AttackSound "ak47/fire"
 	Weapon.SelectionOrder 14

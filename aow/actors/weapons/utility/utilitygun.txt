@@ -11,6 +11,7 @@ Actor PortalsEnabled : Inventory {Inventory.MaxAmount 1}
 
 Actor UtilityGun : AOWWeapon
 {
+        Tag "Utility Gun"
 	Inventory.PickupSound "misc/w_pkup"
 	DropItem "EngineerPack"
 	Weapon.AmmoType "Utility_Percent"

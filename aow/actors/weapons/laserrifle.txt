@@ -1,6 +1,7 @@
 // LASER RIFLE
 Actor StealthLaserRifle : AOWWeapon
 {
+        Tag "Laser Rifle (Stealth)"
 	+NOEXTREMEDEATH
 	+ALT_AMMO_OPTIONAL
 	DropItem "LaserRifle"
@@ -157,6 +158,7 @@ Actor StealthLaserRifle : AOWWeapon
 
 Actor LaserRifle : StealthLaserRifle 21050
 {
+        Tag "Laser Rfile"
 	Weapon.AmmoType2 ""
 	Weapon.SelectionOrder 9
 	States

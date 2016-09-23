@@ -1,6 +1,7 @@
 // OPEN DECK
 Actor CrateChooser : AOWWeapon
 {
+        Tag "Open Deck"
 	+AMMO_OPTIONAL
 	Inventory.PickupMessage "You got the Open Deck Crate!"
 	Obituary "$OB_DEFAULT"

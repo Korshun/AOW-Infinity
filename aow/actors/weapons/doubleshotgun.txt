@@ -1,6 +1,7 @@
 // Double-barreled Shotgun
 Actor DoubleShotgun : AOWWeapon
 {
+        Tag "Double Barrel Shotgun"
 	Inventory.PickupMessage "You got the double shotgun!"
 	Obituary "$OB_DOUBLESHOTGUN" // "%o was splattered by %k's double shotgun."
 	AttackSound "weapons/sshotf"

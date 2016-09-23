@@ -1,6 +1,7 @@
 // Frag grenade
 Actor FragGrenade : AOWWeapon
 {
+        Tag "Fragmentation Grenade"
 	+NOALERT
 	Inventory.PickupMessage "Fragmentation Grenade"  
 	Inventory.pickupsound "misc/ammo_pkup"

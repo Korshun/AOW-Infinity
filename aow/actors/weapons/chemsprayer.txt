@@ -1,6 +1,8 @@
 // Chemical sprayer
 Actor ChemicalSprayer : AOWWeapon 21066
 {
+        //$Category Weapons
+	Tag "Chemical Sprayer"
 	+ALT_AMMO_OPTIONAL
 	Inventory.PickupMessage "You got the chemical sprayer!"
 	AttackSound "Chem/fire"

@@ -1,6 +1,8 @@
 // Gatling gun
 Actor GatlingGun : AOWWeapon replaces Minigun 21045
 {
+        //$Category Weapons
+	Tag "Gatling Gun"
 	Obituary "$OB_GATLING" // "%o was perforated by %k's gatling gun."
 	Inventory.PickupMessage "You got the gatling gun!"
 	Weapon.SelectionOrder 7

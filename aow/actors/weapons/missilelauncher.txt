@@ -1,6 +1,7 @@
 // Missile Launcher
 Actor MissileLauncher : AOWWeapon
 {
+        Tag "Missile Launcher"
 	+NOAUTOFIRE
 	Inventory.PickupMessage "You got the missile laucher!"
 	Obituary "$OB_MISSILELAUNCHER"

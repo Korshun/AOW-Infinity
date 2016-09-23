@@ -1,6 +1,7 @@
 // Laser Chaingun
 Actor LaserChaingun : AOWWeapon
 {
+        Tag "Laser Chaingun"
 	Obituary "$OB_LASERCHAINGUN" // "%o was incinerated by %k's laser chaingun."
 	AttackSound "lchaingun/fire"
 	Inventory.PickupMessage "You got the laser chaingun!"

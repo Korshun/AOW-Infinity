@@ -1,5 +1,7 @@
 Actor PlasmaGun : AOWWeapon replaces PlasmaRifle 21087
 {
+        //$Category Weapons
+	Tag "Plasma Rifle"
 	Inventory.PickupMessage "You got the plasma gun!"
 	Obituary "%o was incinerated by %k's plasma gun."
 	Weapon.AmmoType "PlasmaRifleAmmo"
