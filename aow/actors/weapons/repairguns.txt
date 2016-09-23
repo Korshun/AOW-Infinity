@@ -225,6 +225,7 @@ Actor MedicPuff : DisarmPuff
 }
 
 actor DeconstructionPuff : DisarmPuff {
+        Translation "0:255=0:255"
 	DamageType "Deconstruction"
 	States {
 	Spawn:
