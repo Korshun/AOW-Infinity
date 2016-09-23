@@ -81,19 +81,19 @@ actor TiberiumAutorifle : AOWWeapon 21084
 		NULL A 0 A_SetAngle(Angle-2.5)
 		NULL A 0 A_TakeInventory("TE21Burst6", 1)
 		NULL A 0 A_JumpIfInventory("TE21Burst6", 1, 1)
-		goto AltFireLoop+22
+		goto AltFireLoopDelay
 		NULL A 0 A_SetAngle(Angle+5)
 		NULL A 0 A_FireCustomMissile("TiberiumDartWeak", 0, 0, 10)
 		NULL A 0 A_SetAngle(Angle-5)
 		NULL A 0 A_TakeInventory("TE21Burst6", 1)
 		NULL A 0 A_JumpIfInventory("TE21Burst6", 1, 1)
-		goto AltFireLoop+22
+		goto AltFireLoopDelay
 		NULL A 0 A_SetAngle(Angle-2.5)
 		NULL A 0 A_FireCustomMissile("TiberiumDartWeak", 0, 0, 10)
 		NULL A 0 A_SetAngle(Angle+2.5)
 		NULL A 0 A_TakeInventory("TE21Burst6", 1)
 		NULL A 0 A_JumpIfInventory("TE21Burst6", 1, 1)
-		goto AltFireLoop+22
+		goto AltFireLoopDelay
 		NULL A 0 A_SetAngle(Angle-5)
 		NULL A 0 A_FireCustomMissile("TiberiumDartWeak", 0, 0, 10)
 		NULL A 0 A_SetAngle(Angle+5)
@@ -101,6 +101,7 @@ actor TiberiumAutorifle : AOWWeapon 21084
 		NULL A 0 A_JumpIfInventory("TE21Burst6", 1, 1)
 		E21C A 1 bright offset(2,33)
 		E21C A 1 bright offset(3,36)
+        AltFireLoopDelay:
 		E21C A 1 bright offset(2,34)
 		E21C A 1 bright offset(1,32)
 		E21C A 25
