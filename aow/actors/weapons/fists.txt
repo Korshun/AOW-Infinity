@@ -1,14 +1,19 @@
 // Fists
 Actor Unarmed : AOWWeapon
 {
+	//$Category Weapons
+	Tag "$TAG_UNARMED"
+	Inventory.PickupMessage "$TAG_UNARMED"
+	Obituary "$OB_UNARMED"
+	Weapon.PreferredSkin "MarineFist"
+
 	+WIMPY_WEAPON
 	+MELEEWEAPON
-	Obituary "%k knocked %o out hard."
-	Inventory.PickupMessage "You got a fist."
+	
 	DropItem "Nothing"
 	Weapon.Kickback 165
 	Weapon.SelectionOrder 20
-	Weapon.PreferredSkin "MarineFist"
+
 	States
 	{
 	Ready:
@@ -125,17 +130,17 @@ Actor FistPuff : BulletPuff
 	States
 	{
 	Crash:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistWall")
 		PUFF B 4 
 		PUFF CD 4
 		Stop
 	Melee:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistHit")
 		Stop
 	Spawn:
-		NULL A 0 BRIGHT
+		NULL A 0
 		PUFF A 4 BRIGHT A_SpawnItem("FistHit")
 		Stop
 	}
@@ -148,7 +153,7 @@ Actor BerserkPuff : FistPuff
 	{
 	Melee:
 		NULL A 0
-		NULL A 0 BRIGHT A_SpawnItem("FistHit")
+		NULL A 0 A_SpawnItem("FistHit")
 		Stop
 	}
 }

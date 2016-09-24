@@ -47,7 +47,7 @@ Actor TimeGun : AOWWeapon
 		Goto OutOfAmmo
 		NULL A 0 A_TakeInventory("TimeGunAmmo", 25)
 		NULL A 0 A_PlayWeaponSound("mech/gauss")
-		NULL A 0 BRIGHT A_JumpIfInventory("IsBlue", 1, "Fire.BoostBlue")
+		NULL A 0 A_JumpIfInventory("IsBlue", 1, "Fire.BoostBlue")
 		NULL A 0 A_FireBullets(0, 0, 1, 0, "BoostPuffRed", 0)
 		NULL A 0 A_ChangeFlag("PICKUP", 0)
 		NULL A 0 ACS_ExecuteAlways(aow_script958, 0, 2) // reward
@@ -57,7 +57,7 @@ Actor TimeGun : AOWWeapon
 		TMGN A 20 A_PlayWeaponSound("80mm/reload")
 		Goto Ready
 	Fire.BoostBlue:
-		NULL A 0 bright
+		NULL A 0
 		NULL A 0 A_FireBullets(0, 0, 1, 0, "BoostPuffBlue", 0)
 		NULL A 0 A_ChangeFlag("PICKUP", 0)
 		NULL A 0 ACS_ExecuteAlways(aow_script958, 0, 2)
@@ -122,7 +122,7 @@ Actor TimeGun : AOWWeapon
 	HyperspeedLoop:
 		// NULL A 0 A_JumpIfInventory("InMenu", 1, "HyperspeedEnd") -- InMenu is not added yet
 		TMGN H 1 bright DamageThing (1)
-		NULL A 0 bright A_ReFire
+		NULL A 0 A_ReFire
 	HyperspeedEnd:
 		NULL A 0 A_TakeInventory("PowerTimeGunSpeed", 1)
 		NULL A 0 A_GiveInventory("GoldHue", 1)

@@ -94,7 +94,6 @@ script aow_class_minigunner (int Team) {
 	//Set Statistics
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("NewClipAmmo",90);
 	GiveInventory("Handgun",1);
@@ -134,7 +133,6 @@ script aow_class_technician (int Team) {
 	SetActorProperty(0, APROP_SPEED, 0.8);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("NewClipAmmo",90);
 	GiveInventory("Handgun",1);
 	GiveInventory("EnhancedTimedC4",1);
@@ -176,7 +174,6 @@ script aow_class_flamer (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_FIRE);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("NewClipAmmo",120);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
@@ -215,7 +212,6 @@ script aow_class_rifleman (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("NewClipAmmo", 90);
 	GiveInventory("Handgun", 1);
 	GiveInventory("TimedC4", 1);
@@ -255,7 +251,6 @@ script aow_class_machinegunner (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass", 1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("NewClipAmmo", 90);
 	GiveInventory("Handgun", 1);
 	GiveInventory("SubMachineGun", 1);
@@ -297,7 +292,6 @@ script aow_class_grenadier (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_EXPLO);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("Handgun",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("TimedC4",1);
@@ -341,7 +335,6 @@ script aow_class_rocketsoldier (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_EXPLO);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
@@ -386,7 +379,6 @@ script aow_class_stealthtrooper (int Team) {
 	//Set Statistics
 	SetArmorGrade (-1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetActorProperty(0,APROP_DeathSound,"stealth/death");
 	GiveInventory("NewClipAmmo",60);
@@ -439,7 +431,6 @@ script aow_class_gaussgunner (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_LASER);
 	GiveInventory("HasClass", 1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
@@ -475,7 +466,6 @@ script aow_class_chemwarrior (int Team) {
 	if (!CheckCredits(cost)) terminate;
 
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",275);
 	TakeInventory("PurchaseToken",1);
 	SpendCredits(Credits[PlayerNumber()+1], cost);
 	DisplayTick();
@@ -521,7 +511,6 @@ script aow_class_shocktrooper (int Team) {
 	if (!CheckCredits(cost)) terminate;
 
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",300);
 	TakeInventory("PurchaseToken",1);
 	SpendCredits(Credits[PlayerNumber()+1], cost);
 	
@@ -592,7 +581,6 @@ script aow_class_commando (int Team) {
 	CheckAndRemove ("HasArmorUpgrade");
 	GiveInventory ("HighUpgrade", 1);
 	GiveInventory("IsCommando",1);
-	GiveInventory("Refunds",cost/2);
 	SetArmorGrade (2, ARMOD_NOCHANGE);
 	GiveInventory("NewClipAmmo",120);
 	GiveInventory("Handgun",1);
@@ -756,7 +744,6 @@ script aow_class_suicidebomber (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	GiveInventory("HasClass", 1);
 	GiveInventory("HighUpgrade", 1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("BombPack",1);
 	SetWeapon("BombPack");
 	ACS_ExecuteAlways(aow_script91, 0);
@@ -797,7 +784,6 @@ script aow_class_sniper (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass", 1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
@@ -844,7 +830,6 @@ script aow_class_utilityguy (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_NOCHANGE);
 	GiveInventory("HasClass", 1);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
@@ -892,7 +877,6 @@ script aow_class_demoexpert (int Team) {
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
 	GiveInventory("HasClass", 1);
-	GiveInventory("Refunds", 275);
 	GiveInventory ("EnhancedTimedC4", 1);
 	GiveInventory ("TimedC4", 4);
 	GiveInventory ("TimedC4Count", 4);
@@ -941,7 +925,6 @@ script aow_class_fieldmedic (int Team) {
 	SetArmorGrade (2, ARMOD_CHEM);
 	GiveInventory("HasClass",1);
 	GiveInventory ("ClassID", CLASS_MEDIC);
-	GiveInventory("Refunds", cost/2);
 	GiveInventory("IsMedic",1);
 	GiveInventory("Grade0Damage",1);
 	GiveInventory("NewClipAmmo",60);
@@ -986,7 +969,6 @@ script aow_class_laserchaingunner (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_LASER);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("NewClipAmmo",60);
 	GiveInventory("Handgun",1);
@@ -1031,7 +1013,7 @@ script aow_addon_tiberiumautorifle (int Team)
 	HudMessage(s:"You got the \cqTiberium Autorifle!";
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 	
-	// GiveInventory("Refunds", 100);
+	//
 	GiveInventory("TiberiumAutorifle", 1);
 	GiveInventory("TE21CalAmmo", 200);
 	SetWeapon("TiberiumAutorifle");
@@ -1092,7 +1074,7 @@ script aow_addon_artillerycannon (int Team) {
 	HudMessage(s:"Use Alt-Fire for \cFAnti-Mech shells!";
 		HUDMSG_FADEOUT, 1840+PlayerNumber(), CR_GREEN, 0.5, 0.5, 2.0, 1.0);
 	
-	// GiveInventory("Refunds", 200);
+	//
 	GiveInventory ("ArtilleryCannon", 1);
 	GiveInventory ("ArtilleryShellAmmo", 40);
 	SetWeapon ("ArtilleryCannon");
@@ -1109,7 +1091,6 @@ script aow_class_jumpjet (int Team) {
 	if (!CheckCredits(cost)) terminate;
 
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	TakeInventory("PurchaseToken",1);
 	SpendCredits(Credits[PlayerNumber()+1], cost);
 	DisplayTick();
@@ -1162,7 +1143,6 @@ script aow_class_tiberiumrifleman (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_CHEM);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("NewClipAmmo",90);
 	GiveInventory("Handgun",1);
 	GiveInventory("TimedC4",1);
@@ -1199,7 +1179,6 @@ script aow_class_supershotgunner (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (1, ARMOD_NOCHANGE);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("NewClipAmmo",90);
 	GiveInventory("Handgun",1);
 	GiveInventory("ShotgunAmmo",50);
@@ -1382,8 +1361,6 @@ script aow_addon_armor (int Team) {
 		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_GREEN, 0.5, 0.45, 2.0, 1.0);
 	HudMessage(s:"You can no longer pilot mechs.";
 		HUDMSG_FADEOUT, 1840+PlayerNumber(), CR_GREEN, 0.5, 0.5, 2.0, 1.0);
-	
-	GiveInventory("Refunds", 200);
 	GiveInventory("HasArmorUpgrade", 1);
 	GiveInventory("HighUpgrade", 1);
 	SetArmorGrade (1, AGF_ADDITIVE);
@@ -1401,7 +1378,6 @@ script aow_class_plasmagunner (int Team) {
 	if (!CheckCredits(cost)) terminate;
 
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	TakeInventory("PurchaseToken",1);
 	SpendCredits(Credits[PlayerNumber()+1], 800);
 	DisplayTick();
@@ -1455,7 +1431,6 @@ script aow_class_artillerysoldier (int Team) {
 	SetActorProperty(0,APROP_SPEED,speed);
 	SetArmorGrade (2, ARMOD_EXPLO);
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds",cost/2);
 	GiveInventory("ArtilleryCannonSpeedBonus",1);
 	GiveInventory("HighUpgrade",1);
 	GiveInventory("NewClipAmmo",60);
@@ -1563,7 +1538,6 @@ script aow_class_advtiberiumharvester (int Team) {
 	if (!CheckCredits(cost)) terminate;
 
 	GiveInventory("HasClass",1);
-	GiveInventory("Refunds", cost/2);
 	TakeInventory("PurchaseToken",1);
 	SpendCredits(Credits[PlayerNumber()+1], 750);
 	DisplayTick();

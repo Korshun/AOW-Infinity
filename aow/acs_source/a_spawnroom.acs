@@ -55,8 +55,6 @@ script aow_script95 (int unused, int force) {
 	SetActorProperty(0,APROP_RenderStyle,STYLE_Normal);
 	SetActorProperty(0,APROP_Alpha,1.0);
 	
-	RefundCredits(Credits[PlayerNumber()+1], CheckInventory("Refunds"));
-	TakeInventory("Refunds", 10000);
 	bool HasPlasma = false;
 	bool HasArtillery = false;
 	bool HasTiberiumAutorifle = false;

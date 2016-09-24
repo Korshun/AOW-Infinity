@@ -38,8 +38,8 @@ Actor PlasmaCannon : AOWWeapon
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "FireBlue")
 		PC2G A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PC2G EFG 6 BRIGHT
-		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 BRIGHT A_LightInverse
+		NULL A 0 A_GunFlash
+		NULL A 0 A_LightInverse
 		PC2G H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBall")
 		PC2G H 3 BRIGHT A_Light2
 		PC2G I 2 BRIGHT A_Light1
@@ -52,8 +52,8 @@ Actor PlasmaCannon : AOWWeapon
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "AltFireBlue")
 		PC2G A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PC2G EFG 5 BRIGHT
-		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 BRIGHT A_LightInverse
+		NULL A 0 A_GunFlash
+		NULL A 0 A_LightInverse
 		PC2G H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallSmall")
 		PC2G H 2 BRIGHT A_Light2
 		PC2G I 2 BRIGHT A_Light1
@@ -65,8 +65,8 @@ Actor PlasmaCannon : AOWWeapon
 	FireBlue:
 		PLCG A 8 A_PlayWeaponSound("plasmacannon/fire")
 		PLCG EFG 6 BRIGHT
-		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 BRIGHT A_LightInverse
+		NULL A 0 A_GunFlash
+		NULL A 0 A_LightInverse
 		PLCG H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallBlue")
 		PLCG H 3 BRIGHT A_Light2
 		PLCG I 2 BRIGHT A_Light1
@@ -78,8 +78,8 @@ Actor PlasmaCannon : AOWWeapon
 	AltFireBlue:
 		PLCG A 5 A_PlayWeaponSound("plasmacannon/altfire")
 		PLCG EFG 5 BRIGHT
-		NULL A 0 BRIGHT A_GunFlash
-		NULL A 0 BRIGHT A_LightInverse
+		NULL A 0 A_GunFlash
+		NULL A 0 A_LightInverse
 		PLCG H 2 BRIGHT A_FireCustomMissile("PlasmaCannonBallSmallBlue")
 		PLCG H 2 BRIGHT A_Light2
 		PLCG I 2 BRIGHT A_Light1
@@ -160,9 +160,9 @@ Actor PlasmaCannonBallSmall : PlasmaCannonBall
 	States
 	{
 	Spawn:
-		NULL A 0 BRIGHT A_Tracer2
+		NULL A 0 A_Tracer2
 		PLS1 ABA 1 BRIGHT A_SpawnItemEx("PlasmaFlameTailSmall", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
-		NULL A 0 BRIGHT A_Tracer2
+		NULL A 0 A_Tracer2
 		PLS1 BAB 1 BRIGHT A_SpawnItemEx("PlasmaFlameTailSmall", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERTRANSLATION)
 		Loop
 	Death:

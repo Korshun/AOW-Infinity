@@ -91,7 +91,7 @@ Actor MechStepDamageWeak
 		NULL A 0
 		NULL A 0 Radius_Quake(2, 8, 0, 2, 0)
 		NULL A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
-		TNT1 A 10 BRIGHT A_Explode(72, 128, 0)
+		TNT1 A 10 A_Explode(72, 128, 0)
 		Stop
 	}  
 }
@@ -105,7 +105,7 @@ Actor MechStepDamageStrong : MechStepDamageWeak
 		NULL A 0
 		NULL A 0 Radius_Quake(3, 10, 0, 4, 0)
 		NULL A 0 A_SpawnItemEx("StepSound", 0, 0, 0, 0, 0, 0, 0, 128, 0)
-		TNT1 A 10 BRIGHT A_Explode(256, 128, 0)
+		TNT1 A 10 A_Explode(256, 128, 0)
 		Stop
 	}  
 }
@@ -120,7 +120,7 @@ Actor MechStepGuardian : MechStepDamageWeak
 	Spawn:
 		NULL A 0
 		NULL A 0 Radius_Quake(3, 10, 0, 4, 0)
-		TNT1 A 10 BRIGHT A_Explode(384, 192, 0)
+		TNT1 A 10 A_Explode(384, 192, 0)
 		Stop
 	}  
 }
@@ -132,7 +132,7 @@ Actor MechStepDamageOrca : MechStepDamageWeak
 	{
 	Spawn:
 		NULL A 0
-		TNT1 A 10 BRIGHT A_Explode(60, 64, 0)
+		TNT1 A 10 A_Explode(60, 64, 0)
 		Stop
 	}
 }

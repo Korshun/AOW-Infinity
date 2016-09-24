@@ -53,7 +53,7 @@ Actor TimedC4Thrown
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("TimedC4Armed", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	Water:
 		TC4T A 35 A_PlaySound("c4/disarm")
@@ -140,7 +140,7 @@ Actor TimedC4Armed
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL AAAAA 0 A_SpawnItemEx("FlameWallDecay", random(-48, 48), random(-48, 48), 4)
 		NULL A 0 A_SpawnItemEx("C4Boom", 0, 0, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	Death.Disarm:  
 		TC4T A 35 A_PlaySound("c4/disarm")
@@ -158,10 +158,10 @@ Actor C4Boom
 	{
 	Spawn:
 		NULL A 0
-		NULL A 0 BRIGHT A_Explode(400, 256)
-		NULL A 0 BRIGHT A_Explode(700, 64)
-		NULL A 0 BRIGHT A_Explode(700, 128)
-		TNT1 A 1 BRIGHT A_Explode(700, 256)
+		NULL A 0 A_Explode(400, 256)
+		NULL A 0 A_Explode(700, 64)
+		NULL A 0 A_Explode(700, 128)
+		TNT1 A 1 A_Explode(700, 256)
 		NULL AAAAAAAAAAAAAAAAAAAA 0 BRIGHT A_Explode(5, 16)
 		Stop
 	}
@@ -174,10 +174,10 @@ Actor C4BoomE : C4Boom { //Enhanced
 	{
 	Spawn:
 		NULL A 0
-		NULL A 0 BRIGHT A_Explode(500, 256)
-		NULL A 0 BRIGHT A_Explode(800, 64)
-		NULL A 0 BRIGHT A_Explode(800, 128)
-		TNT1 A 1 BRIGHT A_Explode(800, 256)
+		NULL A 0 A_Explode(500, 256)
+		NULL A 0 A_Explode(800, 64)
+		NULL A 0 A_Explode(800, 128)
+		TNT1 A 1 A_Explode(800, 256)
 		NULL AAAAAAAAAAAAAAAAAAAA 0 BRIGHT A_Explode(5, 16)
 		Stop
 	}
@@ -193,7 +193,7 @@ Actor TimedC4ThrownBlue : TimedC4Thrown
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("TimedC4ArmedBlue", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -217,7 +217,7 @@ Actor TimedC4ArmedBlue : TimedC4Armed
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL AAAAA 0 A_SpawnItemEx("FlameWallDecayBlue", random(-48, 48), random(-48, 48), 4)
 		NULL A 0 A_SpawnItemEx("C4BoomBlue", 0, 0, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -234,7 +234,7 @@ Actor TimedC4ThrownE : TimedC4Thrown
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("TimedC4ArmedE", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_SETMASTER, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -253,7 +253,7 @@ Actor TimedC4ArmedE : TimedC4Armed
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL AAAAAAA 0 A_SpawnItemEx("FlameWallDecay", random(-64, 64), random(-64, 64), 4, 0, 0, 0, 0, 0, 0)
 		NULL A 0 A_SpawnItemEx("C4BoomE", 0, 0, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -267,7 +267,7 @@ Actor TimedC4ThrownEBlue : TimedC4ThrownE
 	Death:
 		NULL A 0
 		NULL A 0 A_SpawnItemEx("TimedC4ArmedEBlue", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_SETMASTER, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }
@@ -291,7 +291,7 @@ Actor TimedC4ArmedEBlue : TimedC4ArmedE
 		NULL A 0 A_PlayWeaponSound("weapons/rocklx")
 		NULL AAAAAAA 0 A_SpawnItemEx("FlameWallDecayBlue", random(-64, 64), random(-64, 64), 4, 0, 0, 0, 0, 0, 0)
 		NULL A 0 A_SpawnItemEx("C4BoomEBlue", 0, 0, 0)
-		TNT1 A 4 BRIGHT 
+		TNT1 A 4 
 		Stop
 	}
 }

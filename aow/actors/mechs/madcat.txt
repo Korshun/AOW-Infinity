@@ -207,12 +207,12 @@ Actor MadCatWeapons : AOWWeapon
 		NULL A 0 Radius_Quake(2, 70, 0, 1, 0)
 		NULL A 0 ACS_ExecuteAlways(aow_script319, 0, 1, 5) // reload
 		NULL A 0 A_TakeInventory("MechRocketAmmo", 20)
-		NULL A 0 BRIGHT A_GunFlash
+		NULL A 0 A_GunFlash
 		NULL A 0 A_JumpIfInventory("IsBlue", 1, "FireMissilesBlue")
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile("LongRangeMissile", 0, 0, random(22, 48), random(64, 72))
 		MHUD A 10
 		MHUD A 2 A_PlayWeaponSound("lrm/fire")
-		NULL A 0 BRIGHT A_GunFlash
+		NULL A 0 A_GunFlash
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile("LongRangeMissile", 0, 0, random(-48, -22), random(64, 72))
 		MHUD C 20
 		MHUD A 2 A_Refire
@@ -221,14 +221,14 @@ Actor MadCatWeapons : AOWWeapon
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile("LongRangeMissileBlue", 0, 0, random(22, 48), random(64, 72))
 		MHUD A 10
 		MHUD A 2 A_PlayWeaponSound("lrm/fire")
-		NULL A 0 BRIGHT A_GunFlash
+		NULL A 0 A_GunFlash
 		MHUD BBBBBBBBBB 2 A_FireCustomMissile("LongRangeMissileBlue", 0, 0, random(-48, -22), random(64, 72))
 		MHUD C 20
 		MHUD A 2 A_Refire
 		Goto Ready
 	Flash:
-		TNT1 A 1 BRIGHT A_Light2
-		TNT1 A 2 BRIGHT A_Light1
+		TNT1 A 1 A_Light2
+		TNT1 A 2 A_Light1
 		Goto LightDone
 	AltFire:
 		NULL A 0
@@ -261,7 +261,7 @@ Actor ShockCannonBallRed
 	Spawn:
 		PPCX A 1 BRIGHT
 		NULL A 0 A_SpawnItemEx("ShockCannonBallFX")
-		NULL A 0 BRIGHT A_Explode(4, 256)
+		NULL A 0 A_Explode(4, 256)
 		Loop
 	Death:
 		NULL A 0
@@ -373,7 +373,7 @@ Actor ShockCannonTrail
 		VOLX AAAAAAAAA 2 BRIGHT A_FadeOut(0.07)
 		Stop
 	Death:
-		NULL A 0 BRIGHT A_SpawnItemEx("VoltageDecay", random(-16, 16), random(-16, 16), random(-16, 16), 0, 0, 0, 0, 128, 128)
+		NULL A 0 A_SpawnItemEx("VoltageDecay", random(-16, 16), random(-16, 16), random(-16, 16), 0, 0, 0, 0, 128, 128)
 		Stop
 	}
 }

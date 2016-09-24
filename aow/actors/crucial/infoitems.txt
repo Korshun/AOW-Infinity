@@ -9,7 +9,6 @@ Actor InRepairs : Boolean {}
 Actor HasClass : Boolean {}
 Actor IsMech : Boolean {}
 Actor TournamentMode : Boolean {}
-Actor Refunds : Inventory {Inventory.MaxAmount 10000}
 Actor PlayerRank : Inventory {Inventory.MaxAmount 8}
 Actor IsCommando : Boolean {}
 Actor IsMedic : Boolean {}

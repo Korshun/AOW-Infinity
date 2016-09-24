@@ -702,8 +702,6 @@ script aow_script309 (int Crate, int Override) {
 		SetActorSpeed (0, 1.0);
 		PlayerSpeeds[PlayerNumber()] = 1.0;
 		
-		GiveCredits (-1, CheckInventory ("Refunds"));
-		TakeInventory ("Refunds", CheckInventory ("Refunds"));
 		SpawnSpotForced ("TeleportFog", 0, 0, 0);
 		delay (15);
 		ActivatorSound ("heavy/argh", 127);
