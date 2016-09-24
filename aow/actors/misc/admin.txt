@@ -84,8 +84,8 @@ Actor AdminPistol : AOWWeapon
 }
 
 Actor AdminPistolRotation : Inventory {Inventory.MaxAmount 2}
-Actor TimePuff : AOWBulletPuff {DamageType "TimeRed"}
-Actor TimePuffBlue : AOWBulletPuff {DamageType "TimeBlue"}
+Actor TimePuff : AOWBulletPuff {DamageType "Time"}
+Actor TimePuffBlue : AOWBulletPuff {DamageType "Time"}
 
 Actor Administrator : Player
 {

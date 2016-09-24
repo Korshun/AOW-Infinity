@@ -149,8 +149,8 @@ Actor RemoteC4Armed
 	DamageFactor "Laser", 0.0
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Artillery", 0.0
 	DamageFactor "Mechstomp", 0.0
 	DamageFactor "Monster", 0.0

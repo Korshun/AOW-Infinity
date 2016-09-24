@@ -57,8 +57,8 @@ Actor BlueSuperShotgunner	//Blue SSGer
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.1
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Repair", 0.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Deconstruction", 0.0
@@ -89,8 +89,8 @@ Actor BlueSuperShotgunner	//Blue SSGer
 	DamageFactor "RazorWire", 1.0
 	DamageFactor "ExplosionMech", 0.1
 	DamageFactor "ExplosionMech", 0.1
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 1.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 1.0
 	DamageFactor "Repair", 0.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Deconstruction", 0.0

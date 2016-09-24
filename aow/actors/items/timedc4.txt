@@ -98,8 +98,8 @@ Actor TimedC4Armed
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 0.0
 	// For some reason, C4 stops working without these old damagefactors.
 	DamageFactor "Fist", 0.0 
 	DamageFactor "Fire", 0.0

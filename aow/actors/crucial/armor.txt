@@ -8,7 +8,7 @@ Actor PowerGrade1Armor : PowerProtection
 	DamageFactor "Fire",		0.92	DamageFactor "Fire",	0.92
 	DamageFactor "Chemical",	0.92	DamageFactor "Chemical",	0.92
 	DamageFactor "Laser",	0.92	DamageFactor "Laser",	0.92
-	DamageFactor "TimeRed",		0.92	DamageFactor "TimeBlue",	0.92
+	DamageFactor "Time",		0.92	DamageFactor "Time",	0.92
 	DamageFactor "Artillery",	0.92	DamageFactor "Artillery",	0.92
 	DamageFactor "ExplosionMech", 0.92	DamageFactor "ExplosionMech", 0.92
 	DamageFactor "RazorWire",	0.92	DamageFactor "RazorWire",	0.92
@@ -28,7 +28,7 @@ Actor PowerGrade2Armor : PowerProtection
 	DamageFactor "Fire",		0.84	DamageFactor "Fire",	0.84
 	DamageFactor "Chemical",	0.84	DamageFactor "Chemical",	0.84
 	DamageFactor "Laser",	0.84	DamageFactor "Laser",	0.84
-	DamageFactor "TimeRed",		0.84	DamageFactor "TimeBlue",	0.84
+	DamageFactor "Time",		0.84	DamageFactor "Time",	0.84
 	DamageFactor "Artillery",	0.84	DamageFactor "Artillery",	0.84
 	DamageFactor "ExplosionMech", 0.84	DamageFactor "ExplosionMech", 0.84
 	DamageFactor "RazorWire",	0.84	DamageFactor "RazorWire",	0.84
@@ -48,7 +48,7 @@ Actor PowerGrade3Armor : PowerProtection
 	DamageFactor "Fire",		0.76	DamageFactor "Fire",	0.76
 	DamageFactor "Chemical",	0.76	DamageFactor "Chemical",	0.76
 	DamageFactor "Laser",	0.76	DamageFactor "Laser",	0.76
-	DamageFactor "TimeRed",		0.76	DamageFactor "TimeBlue",	0.76
+	DamageFactor "Time",		0.76	DamageFactor "Time",	0.76
 	DamageFactor "Artillery",	0.76	DamageFactor "Artillery",	0.76
 	DamageFactor "ExplosionMech", 0.76	DamageFactor "ExplosionMech", 0.76
 	DamageFactor "RazorWire",	0.76	DamageFactor "RazorWire",	0.76
@@ -68,7 +68,7 @@ Actor PowerGrade4Armor : PowerProtection
 	DamageFactor "Fire",		0.68	DamageFactor "Fire",	0.68
 	DamageFactor "Chemical",	0.68	DamageFactor "Chemical",	0.68
 	DamageFactor "Laser",	0.68	DamageFactor "Laser",	0.68
-	DamageFactor "TimeRed",		0.68	DamageFactor "TimeBlue",	0.68
+	DamageFactor "Time",		0.68	DamageFactor "Time",	0.68
 	DamageFactor "Artillery",	0.68	DamageFactor "Artillery",	0.68
 	DamageFactor "ExplosionMech", 0.68	DamageFactor "ExplosionMech", 0.68
 	DamageFactor "RazorWire",	0.68	DamageFactor "RazorWire",	0.68
@@ -89,7 +89,7 @@ Actor PowerGrade5Armor : PowerProtection
 	DamageFactor "Fire",		0.6	DamageFactor "Fire",	0.6
 	DamageFactor "Chemical",	0.6	DamageFactor "Chemical",	0.6
 	DamageFactor "Laser",	0.6	DamageFactor "Laser",	0.6
-	DamageFactor "TimeRed",		0.6	DamageFactor "TimeBlue",	0.6
+	DamageFactor "Time",		0.6	DamageFactor "Time",	0.6
 	DamageFactor "Artillery",	0.6	DamageFactor "Artillery",	0.6
 	DamageFactor "ExplosionMech", 0.6	DamageFactor "ExplosionMech", 0.6
 	DamageFactor "RazorWire",	0.6	DamageFactor "RazorWire",	0.6
@@ -109,7 +109,7 @@ Actor PowerGrade-1Armor : PowerProtection
 	DamageFactor "Fire",		1.2	DamageFactor "Fire",	1.2
 	DamageFactor "Chemical",	1.2	DamageFactor "Chemical",	1.2
 	DamageFactor "Laser",	1.2	DamageFactor "Laser",	1.2
-	DamageFactor "TimeRed",		1.2	DamageFactor "TimeBlue",	1.2
+	DamageFactor "Time",		1.2	DamageFactor "Time",	1.2
 	DamageFactor "Artillery",	1.2	DamageFactor "Artillery",	1.2
 	DamageFactor "ExplosionMech", 1.2	DamageFactor "ExplosionMech", 1.2
 	DamageFactor "RazorWire",	1.2	DamageFactor "RazorWire",	1.2
@@ -206,7 +206,7 @@ Actor TiberiumProof : PermanentPowerup {Powerup.Type "TiberiumProof"}
 	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
 	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
 	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
-	DamageFactor "TimeRed",			1.0	DamageFactor "TimeBlue",		1.0
+	DamageFactor "Time",			1.0	DamageFactor "Time",		1.0
 	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
 	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
 	DamageFactor "RazorWire",		1.0	DamageFactor "RazorWire",		1.0
@@ -243,7 +243,7 @@ Actor PowerSuddenDeathVulnerability : PowerProtection
 	DamageFactor "Fire",			4.0	DamageFactor "Fire",		4.0
 	DamageFactor "Chemical",		4.0	DamageFactor "Chemical",		4.0
 	DamageFactor "Laser",		4.0	DamageFactor "Laser",		4.0
-	DamageFactor "TimeRed",			4.0	DamageFactor "TimeBlue",		4.0
+	DamageFactor "Time",			4.0	DamageFactor "Time",		4.0
 	DamageFactor "Artillery",		2.5	DamageFactor "Artillery",		2.5
 	DamageFactor "ExplosionMech",	4.0	DamageFactor "ExplosionMech",	4.0
 	DamageFactor "RazorWire",		0.0	DamageFactor "RazorWire",		0.0
@@ -268,7 +268,7 @@ Actor PowerRedTeamArmor : PowerProtection
 	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
 	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
 	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
-	DamageFactor "TimeRed",			0.0	DamageFactor "TimeBlue",		1.0
+	DamageFactor "Time",			0.0	DamageFactor "Time",		1.0
 	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
 	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
 	DamageFactor "RazorWire",		0.0	DamageFactor "RazorWire",		1.0
@@ -293,7 +293,7 @@ Actor PowerBlueTeamArmor : PowerProtection
 	DamageFactor "Fire",			1.0	DamageFactor "Fire",		1.0
 	DamageFactor "Chemical",		1.0	DamageFactor "Chemical",		1.0
 	DamageFactor "Laser",		1.0	DamageFactor "Laser",		1.0
-	DamageFactor "TimeRed",			1.0	DamageFactor "TimeBlue",		0.0
+	DamageFactor "Time",			1.0	DamageFactor "Time",		0.0
 	DamageFactor "Artillery",		1.0	DamageFactor "Artillery",		1.0
 	DamageFactor "ExplosionMech",	1.0	DamageFactor "ExplosionMech",	1.0
 	DamageFactor "RazorWire",		1.0	DamageFactor "RazorWire",		0.0
@@ -328,8 +328,8 @@ Actor PowerGrade0DamagePower : PowerDamage
 	DamageFactor "RazorWire", 0.8
 	DamageFactor "ExplosionMech", 0.8
 	DamageFactor "ExplosionMech", 0.8
-	DamageFactor "TimeRed", 0.8
-	DamageFactor "TimeBlue", 0.8
+	DamageFactor "Time", 0.8
+	DamageFactor "Time", 0.8
 	DamageFactor "Disarm", 1.0
 	DamageFactor "Flash", 1.0
 	DamageFactor "Superweapon", 1.0
@@ -375,8 +375,8 @@ Actor PowerGrade2DamageArtillery : PowerDamage
 	DamageFactor "RazorWire", 1.1
 	DamageFactor "ExplosionMech", 1.25
 	DamageFactor "ExplosionMech", 1.25
-	DamageFactor "TimeRed", 1.1
-	DamageFactor "TimeBlue", 1.1
+	DamageFactor "Time", 1.1
+	DamageFactor "Time", 1.1
 	DamageFactor "Artillery", 1.25
 	DamageFactor "Artillery", 1.25
 	DamageFactor "Mechstomp", 1.1
@@ -402,8 +402,8 @@ Actor PowerFirepowerUpgrade : PowerDamage
 	DamageFactor "Laser", 1.3
 	DamageFactor "ExplosionMech", 1.3
 	DamageFactor "ExplosionMech", 1.3
-	DamageFactor "TimeRed", 1.3
-	DamageFactor "TimeBlue", 1.3
+	DamageFactor "Time", 1.3
+	DamageFactor "Time", 1.3
 	DamageFactor "Artillery", 1.3
 	DamageFactor "Artillery", 1.3
 	DamageFactor "Mechstomp", 1.3
@@ -431,8 +431,8 @@ Actor PowerGrade2ArmorFactoryPower : PowerProtection
 	DamageFactor "Laser", 0.9
 	DamageFactor "ExplosionMech", 0.9
 	DamageFactor "ExplosionMech", 0.9
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 1.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 1.0
 	DamageFactor "Artillery", 0.9
 	DamageFactor "Artillery", 0.9
 	DamageFactor "Mechstomp", 0.9

@@ -32,7 +32,7 @@ Actor Utility_MiniRefCacheRed
 	DamageFactor "Laser", 0.0		DamageFactor "Laser", 1.0
 	DamageFactor "RazorWire", 0.0	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0	DamageFactor "ExplosionMech", 0.25
-	DamageFactor "TimeRed", 0.0		DamageFactor "TimeBlue", 1.0
+	DamageFactor "Time", 0.0		DamageFactor "Time", 1.0
 	DamageFactor "Disarm", 0.0		DamageFactor "Flash", 0.0
 	DamageFactor "Superweapon", 0.0		DamageFactor "SuperweaponIon", 1.0
 	DamageFactor "Artillery", 0.0	DamageFactor "Artillery", 0.75
@@ -90,7 +90,7 @@ Actor Utility_MiniRefCacheBlue : Utility_MiniRefCacheRed
 	DamageFactor "Laser", 1.0		DamageFactor "Laser", 0.0
 	DamageFactor "RazorWire", 0.0	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.25	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 1.0		DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 1.0		DamageFactor "Time", 0.0
 	DamageFactor "Superweapon", 1.0		DamageFactor "SuperweaponIon", 0.0
 	DamageFactor "Artillery", 0.75	DamageFactor "Artillery", 0.0
 	States

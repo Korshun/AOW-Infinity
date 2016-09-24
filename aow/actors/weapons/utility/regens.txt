@@ -24,8 +24,8 @@ Actor Utility_GlobalMedicCacheRed
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
 	DamageFactor "ExplosionMech", 0.25
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 1.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 1.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Flash", 0.0
 	DamageFactor "Superweapon", 0.0
@@ -100,8 +100,8 @@ Actor Utility_GlobalMedicCacheBlue : Utility_GlobalMedicCacheRed
 	DamageFactor "Laser", 0.0
 	DamageFactor "ExplosionMech", 0.25
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Superweapon", 1.0
 	DamageFactor "SuperweaponIon", 0.0
 	DamageFactor "Artillery", 0.75
@@ -166,8 +166,8 @@ Actor Utility_GlobalAmmoCacheBlue : Utility_GlobalAmmoCacheRed
 	DamageFactor "Laser", 0.0
 	DamageFactor "ExplosionMech", 0.25
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Superweapon", 1.0
 	DamageFactor "SuperweaponIon", 0.0
 	DamageFactor "Artillery", 0.75

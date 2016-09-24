@@ -16,8 +16,8 @@ Actor BaseTerminalOutside
 	DamageFactor "Laser", 0.0
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Flash", 0.0
 	DamageFactor "Superweapon", 0.0

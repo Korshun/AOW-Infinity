@@ -20,8 +20,8 @@ Actor MechPlayer_Base : PlayerPawn
 	DamageFactor "RazorWire", 1.0
 	DamageFactor "ExplosionMech", 2.0
 	DamageFactor "ExplosionMech", 2.0
-	DamageFactor "TimeRed", 1.0
-	DamageFactor "TimeBlue", 1.0
+	DamageFactor "Time", 1.0
+	DamageFactor "Time", 1.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Deconstruction", 0.0
 	DamageFactor "Flash", 1.0

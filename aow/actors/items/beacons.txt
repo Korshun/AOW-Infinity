@@ -80,8 +80,8 @@ Actor IonCannonPlaced
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Fist", 0.0
 	DamageFactor "Fire", 0.0
 	DamageFactor "Bullet", 0.0
@@ -249,8 +249,8 @@ Actor NuclearStrikePlaced
 	DamageFactor "RazorWire", 0.0
 	DamageFactor "ExplosionMech", 0.0
 	DamageFactor "ExplosionMech", 0.0
-	DamageFactor "TimeRed", 0.0
-	DamageFactor "TimeBlue", 0.0
+	DamageFactor "Time", 0.0
+	DamageFactor "Time", 0.0
 	DamageFactor "Fist", 0.0
 	DamageFactor "Fire", 0.0
 	DamageFactor "Bullet", 0.0
