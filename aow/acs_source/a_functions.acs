@@ -170,7 +170,7 @@ function int CheckPlasmaCooldown (void) {
 }
 
 function void GiveInventoryBold (str what, int amount) {
-	for (int i = 3800; i < PlayerTid(PlayerCount)(); i++) {
+	for (int i = 3800; i < PlayerTid(PlayerCount()); i++) {
 		GiveActorInventory (i, what, amount);
 	}
 }

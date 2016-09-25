@@ -169,7 +169,7 @@ script aow_script654 (void) CLIENTSIDE {
 	
 	int tid = ActivatorTID ();
 	if (PlayerNumber() == -1) terminate;
-	if (tid == PlayerTid(ConsolePlayerNumber)()) terminate;
+	if (tid == PlayerTid(ConsolePlayerNumber())) terminate;
 	if (GetPlayerInfo (tid-3800, PLAYERINFO_TEAM) != myteam) terminate;
 	
 	int shp = GetSpawnHealth ();

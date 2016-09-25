@@ -177,8 +177,8 @@ script aow_script979 (int d, int n) NET CLIENTSIDE {
 
 // Missile launcher targeter
 script aow_script963 (void) CLIENTSIDE {
-	if (ActivatorTID () != PlayerTid(ConsolePlayerNumber)()) terminate;
-	int mytid = PlayerTid(ConsolePlayerNumber)();
+	if (ActivatorTID () != PlayerTid(ConsolePlayerNumber())) terminate;
+	int mytid = PlayerTid(ConsolePlayerNumber());
 	int t;
 	int team = PlayerTeam ();
 	while (CheckWeapon ("MissileLauncher") && GetActorProperty (0, APROP_Health) > 0) {

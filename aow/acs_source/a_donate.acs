@@ -25,7 +25,7 @@ Function int DonateCredits (int Player, int NewCredits) {
 		HUDMSG_FADEOUT, 480+PlayerNumber(), CR_Green, 0.5, 0.55, 2.0, 1.0);
 	
 	Donor[CheckInventory("DonationName")] = PlayerNumber(); // used in the message to the donatee
-	GiveActorInventory (PlayerTid(CheckInventory)("DonationName"), "DonationMessage", 1);
+	GiveActorInventory (PlayerTid(CheckInventory("DonationName")), "DonationMessage", 1);
 
 	return NewCredits;
 }
