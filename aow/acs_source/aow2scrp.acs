@@ -622,6 +622,7 @@ str NormalWeaponNames[MAX_NORMAL_WEAPONS] = {
 #include "a_misc.acs"
 #include "a_netscripts.acs"
 #include "a_opendeck.acs"
+#include "a_player.acs"
 #include "a_portal.acs"
 #include "a_regen.acs"
 #include "a_repfac.acs"
