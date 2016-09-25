@@ -40,7 +40,7 @@ Actor SniperRifle : AOWWeapon
 		SNIE A 8
 		SNIR ABCDEFGHIJ 2
 		SNIR C 5 offset(0, 40) A_PlaySound("rc50/boltopen")
-		SNIR C 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		SNIR C 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, frandom(1, 3), frandom(0, 1), frandom(1, 3), frandom(45, 60), 128)
 		SNIR C 10 offset(0, 33) A_PlaySound("rc50/boltclose")
 		SNIR BA 3
 		SNIE A 1 A_ReFire
@@ -53,7 +53,7 @@ Actor SniperRifle : AOWWeapon
 	ReloadZoomed:
 		TNT1 A 30
 		TNT1 A 5 offset(0, 40) A_PlaySound("rc50/boltopen")
-		TNT1 A 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, random(1, 3), random(0, 1), random(1, 3), random(45, 60), 128)
+		TNT1 A 5 offset(0, 35) A_SpawnItemEx("RifleShellCasing", 0, 8, 32, frandom(1, 3), frandom(0, 1), frandom(1, 3), frandom(45, 60), 128)
 		TNT1 A 10 offset(0, 33) A_PlaySound("rc50/boltclose")
 		TNT1 A 6
 		TNT1 A 1 A_ReFire
