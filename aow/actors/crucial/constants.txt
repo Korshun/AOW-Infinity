@@ -99,6 +99,10 @@ const int aow_script86 = 86; // executed by maps
 const int aow_script88 = 88; // executed by maps
 const int aow_script89 = 89; // executed by maps
 
+const int aow_script90 = 90; // executed by maps
+
+const int aow_script92 = 92; // executed by maps
+
 const int aow_script94 = 94; // executed by maps
 const int aow_script95 = 95; // executed by maps
 const int aow_script96 = 96; // executed by maps
@@ -150,9 +154,9 @@ const int aow_script8 = 355;
 const int aow_script10 = 356;
 const int aow_script11 = 357;
 const int aow_script32 = 358;
-const int aow_script90 = 359;
+const int aow_casingheight = 359;
 const int aow_script91 = 360;
-const int aow_script92 = 361;
+
 const int aow_script93 = 362;
 const int aow_script97 = 363;
 const int aow_script99 = 364;
