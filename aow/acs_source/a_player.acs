@@ -1,5 +1,5 @@
 function int PlayerTid(int player)
 {
-	return 3800 + player;
+	return PlayerTid(player);
 }
 

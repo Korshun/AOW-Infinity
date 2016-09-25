@@ -94,7 +94,7 @@ script aow_script650 (int amount, int repairtype, int turret) {
 		
 		// MEDIC AWARDS
 		if (!CheckInventory ("PowerNoHealXP")) {
-			SetActivator (3800+pn);
+			SetActivator (PlayerTid(pn));
 			if (MedicBonus[pn] < GetCVAR("aowr_medicbonusneed")) {
 				MedicBonus[pn] += bonus;
 			} else {
@@ -169,7 +169,7 @@ script aow_script654 (void) CLIENTSIDE {
 	
 	int tid = ActivatorTID ();
 	if (PlayerNumber() == -1) terminate;
-	if (tid == 3800+ConsolePlayerNumber()) terminate;
+	if (tid == PlayerTid(ConsolePlayerNumber)()) terminate;
 	if (GetPlayerInfo (tid-3800, PLAYERINFO_TEAM) != myteam) terminate;
 	
 	int shp = GetSpawnHealth ();

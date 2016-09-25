@@ -291,7 +291,7 @@ function void AwardBuildingDestruction (int team, int small) {
 	int activator = ActivatorTID();
 	for (int k = 0; k < MAX_PLAYERS; k++) {
 		if (PlayerInGame(k) && GetPlayerInfo(k,PLAYERINFO_TEAM) == Team) {
-			SetActivator(3800+k);
+			SetActivator(PlayerTid(k));
 			ACS_ExecuteAlways (aow_script318,0);
 			GiveCredits (-1, 500);
 		}

@@ -129,8 +129,8 @@ script aow_script952 (int action, int i) {
 	switch (action) {
 	case 0:
 		for (i = 0; i < MAX_PLAYERS; i++) {
-			if (GetActorHealth (3800+i) < GetActorSpawnHealth (3800+i) && !CheckActorInventory (3800+i, "IsMech")) {
-				if (CheckActorDistance (0, 3800+i, HEALRAD_RANGE))
+			if (GetActorHealth (PlayerTid(i)) < GetActorSpawnHealth (PlayerTid(i)) && !CheckActorInventory (PlayerTid(i), "IsMech")) {
+				if (CheckActorDistance (0, PlayerTid(i), HEALRAD_RANGE))
 					ACS_ExecuteAlways (aow_script952, 0, 1, i);
 			}
 		}
@@ -138,13 +138,13 @@ script aow_script952 (int action, int i) {
 	case 1:
 		if (IsBeingHealed[i]) terminate;
 		IsBeingHealed[i] = true;
-		shp = GetActorSpawnHealth (3800+i);
-		n = GetActorHealth (3800+i);
-		while (n < shp && n > 0 && CheckActorDistance (0, 3800+i, HEALRAD_RANGE)) {
+		shp = GetActorSpawnHealth (PlayerTid(i));
+		n = GetActorHealth (PlayerTid(i));
+		while (n < shp && n > 0 && CheckActorDistance (0, PlayerTid(i), HEALRAD_RANGE)) {
 			n += HEALRAD_AMOUNT; if (n > shp) n = shp;
-			SetActorHealth (3800+i, n);
+			SetActorHealth (PlayerTid(i), n);
 			delay (HEALRAD_DELAY);
-			n = GetActorHealth (3800+i);
+			n = GetActorHealth (PlayerTid(i));
 		}
 		IsBeingHealed[i] = false;
 		break;

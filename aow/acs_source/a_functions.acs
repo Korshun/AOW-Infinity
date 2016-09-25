@@ -170,7 +170,7 @@ function int CheckPlasmaCooldown (void) {
 }
 
 function void GiveInventoryBold (str what, int amount) {
-	for (int i = 3800; i < 3800+PlayerCount(); i++) {
+	for (int i = 3800; i < PlayerTid(PlayerCount)(); i++) {
 		GiveActorInventory (i, what, amount);
 	}
 }
@@ -203,7 +203,7 @@ function void FreezeBold (void) {
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (PlayerInGame(i) && !IsAdmin[i]) {
 			SetPlayerProperty (i, PROP_TOTALLYFROZEN, true);
-			SetActorProperty (3800+i, APROP_Invulnerable, true);
+			SetActorProperty (PlayerTid(i), APROP_Invulnerable, true);
 		}
 	}
 }
@@ -213,7 +213,7 @@ function void DefrostBold (void) {
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (PlayerInGame(i) && !IsAdmin[i]) {
 			SetPlayerProperty (i, PROP_TOTALLYFROZEN, false);
-			SetActorProperty (3800+i, APROP_Invulnerable, false);
+			SetActorProperty (PlayerTid(i), APROP_Invulnerable, false);
 		}
 	}
 }
@@ -223,7 +223,7 @@ function void RecountTimeCops (void) {
 	NumTimeCops[0] = 0; NumTimeCops[1] = 0;
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (!PlayerInGame(i)) continue;
-		if (CheckActorInventory(3800+i, "TimeGun")) {
+		if (CheckActorInventory(PlayerTid(i), "TimeGun")) {
 			if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_RED)
 				NumTimeCops[0]++;
 			else if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)
@@ -237,7 +237,7 @@ function void RecountPlasma (void) {
 	NumPlasmaCannons[0] = 0; NumPlasmaCannons[1] = 0;
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (!PlayerInGame(i)) continue;
-		if (CheckActorInventory(3800+i, "PlasmaCannon")) {
+		if (CheckActorInventory(PlayerTid(i), "PlasmaCannon")) {
 			if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_RED)
 				NumPlasmaCannons[0]++;
 			else if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)
@@ -329,7 +329,7 @@ function void GivePoints (int p) {Team_GivePoints (PlayerTeam(), p, false);}
 // returns the `display name` of the player with id pn
 // NOTE: this function must cater for client-side acs!
 function str DisplayName (int pn) {
-	int tid = 3800+pn;
+	int tid = PlayerTid(pn);
 	if (pn < 0 || pn >= MAX_PLAYERS) tid = ActivatorTID();
 	
 	if (CheckActorInventory (tid, "IsMech")) {
@@ -386,7 +386,7 @@ function int GuardianCount (void) {
 	int n;
 	for (int i = 0; i < MAX_PLAYERS; i++) {
 		if (GetPlayerInfo (i, PLAYERINFO_TEAM) == PlayerTeam() &&
-		CheckActorInventory (3800+i, "PowerGuardian"))
+		CheckActorInventory (PlayerTid(i), "PowerGuardian"))
 			n++;
 	}
 	return n;

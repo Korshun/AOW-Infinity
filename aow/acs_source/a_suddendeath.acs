@@ -56,9 +56,9 @@ script aow_script997 (void) {
 		for (int n = 0; n < MAX_PLAYERS; n++) {
 			if (!PlayerInGame(n)) continue;
 			if (GetPlayerInfo (n, PLAYERINFO_TEAM) == TEAM_RED)
-				GiveActorInventory (3800+n, "NuclearStrikeBeacon", 1);
+				GiveActorInventory (PlayerTid(n), "NuclearStrikeBeacon", 1);
 			else 
-				GiveActorInventory (3800+n, "IonCannonBeacon", 1);
+				GiveActorInventory (PlayerTid(n), "IonCannonBeacon", 1);
 		}
 	}
 

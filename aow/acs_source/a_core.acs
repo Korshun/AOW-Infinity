@@ -142,7 +142,7 @@ script aow_creditflow OPEN {
 		if (!blueflow) blueflow = 1;
 		
 		for (i = 0; i < MAX_PLAYERS; i++) {
-			if (PlayerInGame(i) && GetActorProperty (3800+i, APROP_HEALTH) > 0 && !IsAdmin[i]) {
+			if (PlayerInGame(i) && GetActorProperty (PlayerTid(i), APROP_HEALTH) > 0 && !IsAdmin[i]) {
 				if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_RED)
 					GiveCredits (i, redflow);
 				else if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)

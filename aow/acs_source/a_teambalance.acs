@@ -28,7 +28,7 @@ script aow_script996 OPEN {
 			CurTimeMax = 0;
 			Counter = 0;
 			while(Counter < MAX_PLAYERS) {
-				if (CheckActorInventory(3800+Counter,"IsBlue") && !IsAdmin[Counter]) {
+				if (CheckActorInventory(PlayerTid(Counter),"IsBlue") && !IsAdmin[Counter]) {
 					if ( ( StartTime[Counter] > CurTimeMax ) && ( Timer() - StartTime[Counter] < PlayerStayTics ) ) {
 						CurTimeMax = StartTime[Counter];
 						PlayerNeedsSwitched = Counter;
@@ -46,7 +46,7 @@ script aow_script996 OPEN {
 			CurTimeMax = 0;
 			Counter = 0;
 			while(Counter < MAX_PLAYERS) {
-				if (CheckActorInventory(3800+Counter,"IsRed") && !IsAdmin[Counter]) {
+				if (CheckActorInventory(PlayerTid(Counter),"IsRed") && !IsAdmin[Counter]) {
 					if ( ( StartTime[Counter] > CurTimeMax ) && ( Timer() - StartTime[Counter] < PlayerStayTics ) ) {
 						CurTimeMax = StartTime[Counter];
 						PlayerNeedsSwitched = Counter;
@@ -69,7 +69,7 @@ script aow_script996 OPEN {
 script aow_script992 (void)
 {
 	//Log(s:"Changing team for player #",d:PlayerNeedsSwitched,s:" who was in the game since ",d:StartTime[PlayerNeedsSwitched]);
-	SetActivator(3800+PlayerNeedsSwitched);
+	SetActivator(PlayerTid(PlayerNeedsSwitched));
 	//Log(s:"SetActivator Successful for ",n:0);
 	delay(1);
 	if(BlueCount() < RedCount()-1 && PlayerTeam() == TEAM_RED && CheckInventory("InGame") == 1)

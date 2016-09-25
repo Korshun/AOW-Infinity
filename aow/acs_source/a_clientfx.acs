@@ -32,7 +32,7 @@ script aow_ccmd_rehashclientfx1 (void) NET CLIENTSIDE {
 		
 		// display smoke on tib-carrying players
 		for (i = 0; i < MAX_PLAYERS; i++) {
-			if (CheckActorInventory (3800+i, "TiberiumCrystal") && !ChemSmokers[i])
+			if (CheckActorInventory (PlayerTid(i), "TiberiumCrystal") && !ChemSmokers[i])
 				ACS_ExecuteAlways (aow_script355, 0, i, 0);
 		}
 		
@@ -40,13 +40,13 @@ script aow_ccmd_rehashclientfx1 (void) NET CLIENTSIDE {
 		for (i = 0; i < MAX_PLAYERS; i++) {
 			teammate = GetPlayerInfo (i, PLAYERINFO_TEAM) == GetPlayerInfo (ConsolePlayerNumber(), PLAYERINFO_TEAM);
 			if (!PlayerInGame (ConsolePlayerNumber())) teammate = 1; // spects
-			if (CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayerNumber())
+			if (CheckActorProperty (PlayerTid(i), APROP_RenderStyle, STYLE_None) && teammate && i != ConsolePlayerNumber())
 				ACS_ExecuteAlways (aow_script355, 0, i, 1);
 		}
 		
 		// jumpjet fire
 		for (i = 0; i < MAX_PLAYERS; i++) {
-			if (CheckActorInventory (3800+i, "JumpjetSwitch") && !ChemSmokers[i])
+			if (CheckActorInventory (PlayerTid(i), "JumpjetSwitch") && !ChemSmokers[i])
 				ACS_ExecuteAlways (aow_script355, 0, i, 2);
 		}
 	}
@@ -63,24 +63,24 @@ script aow_script355 (int i, int what) CLIENTSIDE {
 		ChemSmokers[i] = 1;
 		
 		for (x = 0; x < 5; x++) {
-			if (!CheckActorInventory (3800+i, "TiberiumCrystal")) {ChemSmokers[i] = 0; terminate;}
-			SpawnSpotForced ("TiberiumChemSmokePlayer", 3800+i, 0, GetActorAngle(3800+i)>>8);
+			if (!CheckActorInventory (PlayerTid(i), "TiberiumCrystal")) {ChemSmokers[i] = 0; terminate;}
+			SpawnSpotForced ("TiberiumChemSmokePlayer", PlayerTid(i), 0, GetActorAngle(PlayerTid(i))>>8);
 			delay (6);
 		}
 		ChemSmokers[i] = 0;
 		break;
 	case 1:
 		// visible friendly stealths
-		SetActorProperty (3800+i, APROP_RenderStyle, STYLE_Translucent);
-		SetActorProperty (3800+i, APROP_Alpha, 0.4);
+		SetActorProperty (PlayerTid(i), APROP_RenderStyle, STYLE_Translucent);
+		SetActorProperty (PlayerTid(i), APROP_Alpha, 0.4);
 		for (x = 0; x < 6; x++) {
-			if (!CheckActorProperty (3800+i, APROP_RenderStyle, STYLE_Translucent)) terminate;
-			if (CheckActorInventory (3800+i, "StealthMode") != 1) terminate;
-			SetActorProperty (3800+i, APROP_Alpha, 0.4 + (random(0,10) << 16)/10); // flicker a bit :P
+			if (!CheckActorProperty (PlayerTid(i), APROP_RenderStyle, STYLE_Translucent)) terminate;
+			if (CheckActorInventory (PlayerTid(i), "StealthMode") != 1) terminate;
+			SetActorProperty (PlayerTid(i), APROP_Alpha, 0.4 + (random(0,10) << 16)/10); // flicker a bit :P
 			delay (5);
 		}
-		SetActorProperty (3800+i, APROP_RenderStyle, STYLE_None);
-		SetActorProperty (3800+i, APROP_Alpha, 0.0);
+		SetActorProperty (PlayerTid(i), APROP_RenderStyle, STYLE_None);
+		SetActorProperty (PlayerTid(i), APROP_Alpha, 0.0);
 		break;
 	case 2:
 		// jumpjet fire
@@ -90,8 +90,8 @@ script aow_script355 (int i, int what) CLIENTSIDE {
 		ChemSmokers[i] = 1;
 		
 		for (x = 0; x < 10; x++) {
-			if (!CheckActorInventory (3800+i, "JumpjetSwitch")) {ChemSmokers[i] = 0; terminate;}
-			SpawnSpotForced ("JumpjetFire", 3800+i, 0, GetActorAngle(3800+i)>>8);
+			if (!CheckActorInventory (PlayerTid(i), "JumpjetSwitch")) {ChemSmokers[i] = 0; terminate;}
+			SpawnSpotForced ("JumpjetFire", PlayerTid(i), 0, GetActorAngle(PlayerTid(i))>>8);
 			delay (3);
 		}
 		ChemSmokers[i] = 0;

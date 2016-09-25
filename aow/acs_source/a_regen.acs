@@ -5,16 +5,16 @@ script aow_script343 OPEN {
 		if (!PlayerInGame (n))
 			continue;
 		
-		if (CheckActorInventory (3800+n, "PlayerRank") < 3) continue;
-		if (CheckActorInventory (3800+n, "IsMech"))
+		if (CheckActorInventory (PlayerTid(n), "PlayerRank") < 3) continue;
+		if (CheckActorInventory (PlayerTid(n), "IsMech"))
 			r = 20;
 		else
 			r = 5;
 		
-		if (GetActorHealth (3800+n)+r >= GetActorSpawnHealth (3800+n))
-			SetActorHealth (3800+n, GetActorSpawnHealth (3800+n));
+		if (GetActorHealth (PlayerTid(n))+r >= GetActorSpawnHealth (PlayerTid(n)))
+			SetActorHealth (PlayerTid(n), GetActorSpawnHealth (PlayerTid(n)));
 		else
-			SetActorHealth (3800+n, GetActorHealth (3800+n)+r);
+			SetActorHealth (PlayerTid(n), GetActorHealth (PlayerTid(n))+r);
 	}
 
 	delay (35 * 5);
@@ -46,12 +46,12 @@ script aow_script354 OPEN {
 		if (Researches[RESERACH_GlobalMedic][0] || Researches[RESERACH_GlobalMedic][1]) {
 			for (i = 0; i < MAX_PLAYERS; i++) {
 				if (Researches[RESERACH_GlobalMedic][1-GetPlayerInfo(i, PLAYERINFO_TEAM)]) {
-					hp = GetActorHealth (3800+i);
-					shp = GetActorSpawnHealth (3800+i);
+					hp = GetActorHealth (PlayerTid(i));
+					shp = GetActorSpawnHealth (PlayerTid(i));
 					if (hp == shp) continue;
-					if (CheckActorInventory (3800+i, "IsMech")) hp += 2; else hp++;
+					if (CheckActorInventory (PlayerTid(i), "IsMech")) hp += 2; else hp++;
 					if (hp > shp) {hp = shp;}
-					SetActorHealth (3800+i, hp);
+					SetActorHealth (PlayerTid(i), hp);
 				}
 			}
 		}
@@ -59,7 +59,7 @@ script aow_script354 OPEN {
 		if (!counter && (Researches[RESERACH_GlobalAmmo][0] || Researches[RESERACH_GlobalAmmo][1])) {
 			for (i = 0; i < MAX_PLAYERS; i++) {
 				if (Researches[RESERACH_GlobalAmmo][1-GetPlayerInfo(i, PLAYERINFO_TEAM)])
-					GiveActorInventory (3800+i, "AmmoRegenerationPack", 1);
+					GiveActorInventory (PlayerTid(i), "AmmoRegenerationPack", 1);
 			}
 		}
 		

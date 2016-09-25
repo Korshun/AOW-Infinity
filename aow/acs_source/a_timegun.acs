@@ -22,7 +22,7 @@ script aow_script958 (int action, int type) {
 		// Boosting teammates gives you 1 bonus,
 		// weakening enemies gets you 2 bonus.
 		int ttid = GetTargetInfo (5);
-		if (ttid == ActivatorTID() || ttid < 3800 || ttid >= 3800 + MAX_PLAYERS) {
+		if (ttid == ActivatorTID() || ttid < 3800 || ttid >= PlayerTid(MAX_PLAYERS)) {
 			// No valid target
 			terminate;
 		}

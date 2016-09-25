@@ -1,11 +1,11 @@
 // [SP] NOTICE: This is an administrator 'puke' script. USE WITH CARE! This can be abused very easily.
 script aow_ccmd_gamemaster (int Player,int Action)
 {
-	SetActivator(3800 + Player);
+	SetActivator(PlayerTid(Player));
 	switch(Action)
 	{
 	case 3:
-		if ( ThingCount(T_NONE,3800 + Player) == 0 ) {
+		if ( ThingCount(T_NONE,PlayerTid(Player)) == 0 ) {
 			Log(s:"Error: Player #",d:Player,s:" not found!");
 			terminate;
 		}
@@ -28,7 +28,7 @@ script aow_ccmd_gamemaster (int Player,int Action)
 		GiveInventory ("IsAdmin", 1);
 		break;
 	case 1:
-		if ( ThingCount(T_NONE,3800 + Player) == 0 )
+		if ( ThingCount(T_NONE,PlayerTid(Player)) == 0 )
 		{
 			Log(s:"Player ",d:Player,s:" not found!");
 			terminate;
@@ -52,7 +52,7 @@ script aow_ccmd_gamemaster (int Player,int Action)
 		StartTime[Player] = -0x7FFFFFFF;
 		break;
 	case 2:
-		if ( ThingCount(T_NONE,3800 + Player) == 0 )
+		if ( ThingCount(T_NONE,PlayerTid(Player)) == 0 )
 		{
 			Log(s:"Player ",d:Player,s:" not found!");
 			terminate;
@@ -289,7 +289,7 @@ script aow_ccmd_teamshuffle (void) {
 		
 		if (t) {name="Red"; r++;} else {name="Blue"; b++;}
 		
-		SetActivator (3800+i);
+		SetActivator (PlayerTid(i));
 		if (GetPlayerInfo (i, PLAYERINFO_TEAM) == t) {
 			log (s:"[SHUFFLE] Player ", d:0, s:" \"", n:0, s:"\c-\" remains on ", s:name, s:".");
 			c = 0;

@@ -146,7 +146,7 @@ script aow_script309 (int Crate, int Override) {
 		break;
 	case 8:
 	case 24:
-		if (!Override && (CheckInventory("StealthLaserRifle") || CheckInventory ("Knife"))) {
+		if (!Override && (CheckInventory("StealthLaserRifle"))) {
 			crate = 0; restart;
 		}
 		
@@ -280,7 +280,7 @@ script aow_script309 (int Crate, int Override) {
 			if (CheckInventory ("PowerSpeedUpgrade")) {crate = 0; restart;}
 		
 			// this crate ruins stealth due to speed trails
-			if (CheckInventory ("StealthLaserRifle") || CheckInventory ("Knife")) {crate = 0; restart;}
+			if (CheckInventory ("StealthLaserRifle")) {crate = 0; restart;}
 			
 			// also blurspheres
 			if (CheckInventory ("PowerInvisibility")) {crate = 0; restart;}
@@ -556,8 +556,8 @@ script aow_script309 (int Crate, int Override) {
 		for (int k = 0; k<MAX_PLAYERS; k++) {
 			if ( PlayerInGame(k) && GetPlayerInfo(k,PLAYERINFO_TEAM) == PlayerTeam() )
 			{
-				if ( GetActorProperty(3800+k,APROP_Health) < GetActorProperty(3800+k,APROP_SpawnHealth) )
-					SetActorProperty(3800+k,APROP_Health,GetActorProperty(3800+k,APROP_SpawnHealth));
+				if ( GetActorProperty(PlayerTid(k),APROP_Health) < GetActorProperty(PlayerTid(k),APROP_SpawnHealth) )
+					SetActorProperty(PlayerTid(k),APROP_Health,GetActorProperty(PlayerTid(k),APROP_SpawnHealth));
 			}
 		}
 		
@@ -694,10 +694,7 @@ script aow_script309 (int Crate, int Override) {
 			GiveInventory ("Unarmed", 1);
 		}
 		
-		if (CheckInventory ("Knife"))
-			SetWeapon ("Knife");
-		else
-			SetWeapon ("Handgun");
+		SetWeapon ("Handgun");
 		
 		SetActorSpeed (0, 1.0);
 		PlayerSpeeds[PlayerNumber()] = 1.0;

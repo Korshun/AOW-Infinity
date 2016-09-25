@@ -444,10 +444,10 @@ script aow_script697 (void) {
 	}
 	
 	//Orca
-	if(MechType == 5) SpawnSpotFacing ("EjectedOrcaSpawner", 3800+PlayerNumber(), 0);
+	if(MechType == 5) SpawnSpotFacing ("EjectedOrcaSpawner", PlayerTid(PlayerNumber)(), 0);
 	
 	// Guardian
-	if (MechType == 6) SpawnSpotFacing ("EjectedGuardian", 3800+PlayerNumber(), 0);
+	if (MechType == 6) SpawnSpotFacing ("EjectedGuardian", PlayerTid(PlayerNumber)(), 0);
 	
 	UnMorphActor(0,0);
 	
