@@ -6,6 +6,7 @@ OB_FRIENDLY3 = "%o is killing friendlies for money!";
 OB_FRIENDLY4 = "%o is LOSING HIS F#%@ING MIND!!!";
 OB_CRUSH = "%o was flattened.";
 
+TAG_UNARMED = "Unarmed";
 TAG_HANDGUN = "Handgun";
 
 OB_ARTILLERYCANNON = "%o was demolished by %k's artillery cannon.";
