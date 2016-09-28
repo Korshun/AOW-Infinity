@@ -54,16 +54,9 @@ map INFECTED "Infected" {
 }
 
 map DEFRAG "Disk Defrag" {
-	next = "HELLMRCH"
+	next = "EMERALD"
 	music = "drill"
 	levelnum = 11
-}
-
-map HELLMRCH "Hell's March" {
-	next = "EMERALD"
-	sky1 = "STSKY5"
-	music = "hellmrch"
-	levelnum = 12
 }
 
 map EMERALD "Emerald Wasteland" {
