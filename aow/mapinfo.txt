@@ -67,17 +67,10 @@ map EMERALD "Emerald Wasteland" {
 }
 
 map OASIS "Oasis" {
-	next = "DEFUNCT"
+	next = "REDZONE"
 	sky1 = "SKY04", 0.1
 	music = "ut2k4l15"
 	levelnum = 15
-}
-
-map DEFUNCT "Defunct Commission" {
-	next = "REDZONE"
-	sky1 = "SKYFOG0", 0.1
-	music = "defunct"
-	levelnum = 17
 }
 
 map REDZONE "Red Zone" {
